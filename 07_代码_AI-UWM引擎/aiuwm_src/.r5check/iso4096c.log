@@ -1,0 +1,11 @@
+[verify] ha: 种子前缀 1024 样本逐位一致
+[verify] co: 种子前缀 1024 样本逐位一致
+[seed] ha: 已从 1024 批次继承 checkpoint
+[seed] co: 已从 1024 批次继承 checkpoint
+[ha] 4096 samples x 41 capacities, workers=8, restored=1024
+   1100/4096   252.1s
+   1200/4096   554.8s
+   1300/4096   867.2s
+   1400/4096  1182.7s
+   1500/4096  1525.5s
+   1600/4096  1880.8s

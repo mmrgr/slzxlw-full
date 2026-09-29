@@ -1,0 +1,8 @@
+[verify] ha: 种子前缀 1024 样本逐位一致
+[verify] co: 种子前缀 1024 样本逐位一致
+[seed] ha: 已从 1024 批次继承 checkpoint
+[seed] co: 已从 1024 批次继承 checkpoint
+[ha] 4096 samples x 41 capacities, workers=24, restored=1024
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.

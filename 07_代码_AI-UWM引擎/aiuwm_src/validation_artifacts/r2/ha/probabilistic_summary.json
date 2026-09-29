@@ -1,0 +1,8 @@
+{
+  "samples": 40,
+  "p05": 750.0,
+  "p50": 1000.0,
+  "p95": 1000.0,
+  "proposed_mw": 1000.0,
+  "exceedance_probability": 0.175
+}

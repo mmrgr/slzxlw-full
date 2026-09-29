@@ -1,0 +1,11 @@
+constraint,operator,target,first_failed_capacity_mw,maximum_safe_capacity_mw,first_failure_margin,reentrant_feasibility
+max_source_abstraction_ratio,<=,0.95,1200.0,1150.0,0.004953200783991307,False
+max_wtw_utilization,<=,0.95,1200.0,1150.0,0.0015360168979424715,False
+reclaimed_water_substitution_ratio,>=,0.65,1350.0,1300.0,0.015552726878701795,False
+max_daily_average_grid_connection_ratio,<=,1.0,1450.0,1400.0,0.006087957799999932,False
+max_local_connection_ratio,<=,1.0,1550.0,1500.0,0.03290988102310766,False
+peak_capacity_ratio,<=,1.0,1750.0,1700.0,0.0010267619356036928,False
+domestic_unmet_ml,<=,0.0,1850.0,1800.0,167.7812957657183,False
+max_wwtw_utilization,<=,0.95,,2000.0,,False
+system_reliability_fraction,>=,0.99,,2000.0,,False
+unmet_cooling_water_ml,<=,0.0,,2000.0,,False

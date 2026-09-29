@@ -1,0 +1,7 @@
+﻿parameter,mu,mu_star,sigma,input_scale
+components.AI_DC1.base_pue,5414.74859015998,5414.74859015998,478.97736178405466,0–1 parameter range
+components.AI_DC1.cooling.heat_to_cooling_fraction,4539.125608747243,4539.125608747243,331.31926284610097,0–1 parameter range
+components.AI_DC1.cooling.cycles_of_concentration,-2251.108248879973,2251.108248879973,6088.370023570021,0–1 parameter range
+components.AI_DC1.cooling.internal_recovery_fraction,-2097.1640862162335,2097.1640862162335,313.2587651231364,0–1 parameter range
+components.AI_DC1.temperature_coefficient,-859.4324096640595,859.4324096640595,277.37908303300895,0–1 parameter range
+components.AI_DC1.cooling.drift_fraction,1.626961423742917,1.626961423742917,1.1077754175174037,0–1 parameter range

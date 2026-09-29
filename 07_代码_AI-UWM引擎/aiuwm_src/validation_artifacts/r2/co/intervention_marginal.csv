@@ -1,0 +1,11 @@
+intervention,maximum_safe_ai_capacity_mw,first_failed_capacity_mw,limiting_constraint,capacity_gain_mw
+baseline,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+wtw_plus_10pct,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+wtw_plus_20pct,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+reuse_plus_50pct,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+reuse_plus_100pct,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+wwtw_plus_20pct,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+local_connection_plus_50pct,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+grid_plus_50pct,1500.0,1600.0,max_local_connection_ratio,100.0
+leakage_minus_30pct,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0
+combined_upgrade,1400.0,1500.0,max_daily_average_grid_connection_ratio,0.0

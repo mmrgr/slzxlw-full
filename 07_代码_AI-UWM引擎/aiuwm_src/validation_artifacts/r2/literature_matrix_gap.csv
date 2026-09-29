@@ -1,0 +1,18 @@
+﻿维度,外部建议是否要求,现有覆盖状态,现有证据产物,缺口性质,补齐所需文献类型,受影响的主张,是否阻断
+WUE/PUE 定义,是,完整,WUE 466 行 + PUE 8 行，且 _caliber.csv 已处理口径冲突,literature_benchmark.csv; literature_benchmark_model.csv; literature_benchmark_sources.csv; literature_benchmark_caliber.csv,无,,,否
+取水与耗水（withdrawal vs consumption）分离,是,缺失,现有全部为对单一 WUE 标量的对标，未区分取水与耗水,无,**关键缺口**：这也是内部 M1 论断（毛替代率高估）的测量学前提,数据中心水报告的取水/耗水口径定义； withdrawal vs consumption 的行业统计口径,M1,是（方法节需标注）
+直接与间接水足迹（scope）分离,是,模型内部已有但无外部基准,模型可输出 external_withdrawal_ml（现场）与 offsite_electricity_water_ml（源端电力间接）,"intervention_water_energy_carbon.csv（本轮新增）",无外部真值对照→这两个数目前无法判对错,水足迹 LCA 的 scope 划分方法；电力源端耗水因子,M1; P1,部分
+库容可靠性,是,缺失,仅模型内部产物，无任何可靠性准则类外部基准,reservoir_multiyear_ensemble.json（20 条，hydrology_validation=NONE）,**关键缺口**：可靠性目标（如供水保证率准则）无外部参照,水库可靠性规划准则（hedging rule / yield-reliability）；城市供水可靠性标准,M2; R5,是
+气候集合与干旱/湿润/复合事件识别,是,缺失,20 条均为同一合成驱动规则的不同种子，非独立气候假设,reservoir_multiyear_ensemble.json,**关键缺口**：无正常/干旱/湿润/高温—干旱复合状态的显式分层,多集合气候—水文产品；干旱指数与复合事件定义,R5,是
+城市规模外推方法,是,部分,"city.csv 52 行：漏损率、人均综合生活用水、再生水利用率",literature_benchmark_city.csv,参数对照已有，但缺"如何由样本城市外推到城市类型"的方法基准,城市尺度外推/代表性样本选择方法；多城市比较研究,R1; R3,部分
+社会影响（居民供水可靠度、公平性）,是,缺失,模型内有 居民未满足量_ML（单位可靠度指标），无 inequity/公平性指标，亦无外部基准,"intervention_cost_benefit.csv; intervention_water_energy_carbon.csv",缺外部公平性/可接受度参照,城市水服务公平性与可接受风险度的实证研究,P1; P,部分
+能源强度与 PUE 的分项能耗（IT vs 制冷 vs 水泵）,否（建议7隐含要求）,模型已有但无外部基准,模型输出 facility_energy_mwh / it_energy_mwh / system electricity_kwh / ghg_net_kg_co2e,"intervention_water_energy_carbon.csv（本轮新增）",未与外部 PUE 分项或电网排放因子对标,数据中心分项能耗公开 disclosure；区域电网排放因子,P1,部分
+Open data / reproducibility 基准,否（建议9隐含要求）,部分,代码已 git 化且 .gitignore 刻意排除大产物（可重算优先）,本轮评审决策见外部建议评审_2026-09-27.md,尚无 environment.lock / 产物哈希 / DOI 存档,zotero-like 可复现包；开源许可与数据许可说明,—（属建议9）,否
+
+# ⚠️ 本表已被 `01_方案与设计文档/文献基准矩阵_R6.md` 取代（2026-09-27 完成真实文献核实）。# 该 CSV 保留作为历史缺口清单，勿再作为"当前覆盖状态"引用。
+# 核实后：取水/耗水与直接/间接水足迹维度已闭合并暴露出一处数量级级模型偏差；
+# 社会影响维度已闭合；仅"库容可靠性"与"可用气候集合"两项仍为阻断性缺口。
+# 2. "是否阻断"列：是 = 该维度缺失会使对应主张无法达到建议要求的 evidence 强度。
+# 3. 所有 DOI / 页码均未落表：补齐需要网络检索核实，本项目当前列为受限待办。
+#    在未经核实前写入具体引文，等于制造不可追溯的引用——比留缺口更糟。
+# 4. 标注"模型已有但无外部基准"的行：内部一致性可验证，绝对正确性无法验证。

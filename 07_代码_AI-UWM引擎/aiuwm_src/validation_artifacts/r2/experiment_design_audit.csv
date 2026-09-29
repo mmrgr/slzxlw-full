@@ -1,0 +1,35 @@
+﻿检查类别,检查项,判定,实测值,参照/预期,说明
+A 实验设计自洽,入流/取水能力,WARN,0.694,若长期实际取水超过入流，需检验库容趋势（能力是上限，不是日均取水）,年均入流 263.7 ML/d，取水能力 380.0 ML/d；此处是稳态诊断，不是现实性判否
+A 实验设计自洽,库容/年取水能力,PASS,0.865,"(0.8, 3.0)（文档 15 节声称 1.3–1.4）","库容 120,000 ML，年取水能力 138,700 ML"
+C 现实性,人均综合供水量 L/(人·d),PASS,247.0,150–550,"人口 1,000,000，配水干管进水 247.0 ML/d（无 AI 负荷）"
+C 现实性,基线城市供水保证率,PASS,未满足 5.06e-12 ML,≈0,0 MW 基线不应有任何缺水（V12）
+C 现实性,城市用水需求结构（工业占比）,PASS,居民生活 65.5%; 工业 24.0%; 市政杂用 7.9%; 灌溉 2.6%,工业 20–40 %（中国设区城市典型）,总需求 249.7 ML/d。工业占比过低会**高估**留给 AI 的水量余量，从而高估 CAWCC
+C 现实性,城市非 AI 用电是否被建模,PASS,均值 684.9 MW；峰值 817.9 MW,存在正值城市基线负荷序列,来源列 city_non_ai_electricity_mw；用于 AI 占城市负荷和节点余量诊断
+C 现实性,AI 峰值日均功率/电网接入容量 @300 MW,PASS,0.208（均值 266 MW，峰值 312 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1000 MW,PASS,0.694（均值 887 MW，峰值 1041 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1450 MW,FAIL,1.006（均值 1286 MW，峰值 1509 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1500 MW,FAIL,1.041（均值 1331 MW，峰值 1561 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1750 MW,FAIL,1.214（均值 1552 MW，峰值 1821 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @2000 MW,FAIL,1.388（均值 1774 MW，峰值 2082 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,压力测试容量是否有公开部署尺度参照,PASS,50–2000 MW；公开项目已出现约 1 GW 级 AI 园区,参照项目和电网条件应逐项目注明,50–300 MW 可代表中型园区；1 GW 级项目已进入公开规划，容量本身不能判定为失真
+A 实验设计自洽,降漏损节水量可支撑的 AI 装机（推算）,PASS,244 MW（节水 9.71 ML/d，AI 单耗 0.0398 ML/d/MW）,与实测增益 +150 MW 应同量级,若相差数倍，说明增益来自网格分辨率或约束切换，而非水量收支
+B 数据口径,technology_comparison[dry_first] WUE 口径,PASS,WUE=0.4340,反算应≈0.4340,annual_withdrawal_ml 是年化值；WUE 使用同一期的全期取水与 IT 能耗
+A 实验设计自洽,0–300 MW 现实区间内各约束最大取值,WARN,system_reliability_fraction=1.000; domestic_unmet_ml=0.000; unmet_cooling_water_ml=0.000; max_wtw_utilization=0.827; max_wwtw_utilization=0.835; max_source_abstraction_ratio=0.830; reclaimed_water_substitution_ratio=0.700; peak_capacity_ratio=0.820; max_local_connection_ratio=0.323; max_daily_average_grid_connection_ratio=0.208,<0.95 表示现实区间内无约束触发,若都在 0.95 以下，说明**现实尺度下承载约束根本不生效**，主结论必须折算后才能引用
+A 实验设计自洽,末库容不低于初始值的最大容量,WARN,150.0 MW（首次下降 200.0 MW）,与设施吞吐 CAWCC 分开报告,两年合成驱动诊断；不等同多年可靠供水能力
+A 实验设计自洽,入流/取水能力,WARN,0.732,若长期实际取水超过入流，需检验库容趋势（能力是上限，不是日均取水）,年均入流 292.9 ML/d，取水能力 400.0 ML/d；此处是稳态诊断，不是现实性判否
+A 实验设计自洽,库容/年取水能力,PASS,0.822,"(0.8, 3.0)（文档 15 节声称 1.3–1.4）","库容 120,000 ML，年取水能力 146,000 ML"
+C 现实性,人均综合供水量 L/(人·d),PASS,242.7,150–550,"人口 1,000,000，配水干管进水 242.7 ML/d（无 AI 负荷）"
+C 现实性,基线城市供水保证率,PASS,未满足 4.46e-12 ML,≈0,0 MW 基线不应有任何缺水（V12）
+C 现实性,城市用水需求结构（工业占比）,PASS,居民生活 65.4%; 工业 24.7%; 市政杂用 7.7%; 灌溉 2.2%,工业 20–40 %（中国设区城市典型）,总需求 243.3 ML/d。工业占比过低会**高估**留给 AI 的水量余量，从而高估 CAWCC
+C 现实性,城市非 AI 用电是否被建模,PASS,均值 684.9 MW；峰值 817.9 MW,存在正值城市基线负荷序列,来源列 city_non_ai_electricity_mw；用于 AI 占城市负荷和节点余量诊断
+C 现实性,AI 峰值日均功率/电网接入容量 @300 MW,PASS,0.205（均值 263 MW，峰值 308 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1000 MW,PASS,0.685（均值 877 MW，峰值 1027 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1450 MW,FAIL,0.993（均值 1271 MW，峰值 1490 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1500 MW,FAIL,1.027（均值 1315 MW，峰值 1541 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @1750 MW,FAIL,1.199（均值 1534 MW，峰值 1798 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,AI 峰值日均功率/电网接入容量 @2000 MW,FAIL,1.370（均值 1753 MW，峰值 2055 MW）,≤0.95（规划裕度）,列 facility_energy_mwh（MWh/d ÷24；约束采用逐日峰值），电网接入 1500 MW
+C 现实性,压力测试容量是否有公开部署尺度参照,PASS,50–2000 MW；公开项目已出现约 1 GW 级 AI 园区,参照项目和电网条件应逐项目注明,50–300 MW 可代表中型园区；1 GW 级项目已进入公开规划，容量本身不能判定为失真
+A 实验设计自洽,降漏损节水量可支撑的 AI 装机（推算）,PASS,252 MW（节水 9.54 ML/d，AI 单耗 0.0379 ML/d/MW）,与实测增益 +150 MW 应同量级,若相差数倍，说明增益来自网格分辨率或约束切换，而非水量收支
+B 数据口径,technology_comparison[dry_first] WUE 口径,PASS,WUE=0.0198,反算应≈0.0198,annual_withdrawal_ml 是年化值；WUE 使用同一期的全期取水与 IT 能耗
+A 实验设计自洽,0–300 MW 现实区间内各约束最大取值,WARN,system_reliability_fraction=1.000; domestic_unmet_ml=0.000; unmet_cooling_water_ml=0.000; max_wtw_utilization=0.781; max_wwtw_utilization=0.809; max_source_abstraction_ratio=0.765; reclaimed_water_substitution_ratio=0.450; peak_capacity_ratio=0.769; max_local_connection_ratio=0.317; max_daily_average_grid_connection_ratio=0.205,<0.95 表示现实区间内无约束触发,若都在 0.95 以下，说明**现实尺度下承载约束根本不生效**，主结论必须折算后才能引用
+A 实验设计自洽,末库容不低于初始值的最大容量,WARN,900.0 MW（首次下降 950.0 MW）,与设施吞吐 CAWCC 分开报告,两年合成驱动诊断；不等同多年可靠供水能力

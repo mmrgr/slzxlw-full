@@ -1,0 +1,13 @@
+[ha] 64 samples x 41 capacities, workers=8, restored=0
+     64/64   268.1s
+[ha] P05=950 P50=1050 P95=1200 | 超限概率=0.125 | 用时 268s
+[co] 64 samples x 41 capacities, workers=8, restored=0
+     64/64   196.9s
+[co] P05=1250 P50=1350 P95=1500 | 超限概率=0.000 | 用时 197s
+
+样本量对照 -> C:\Users\mmrgr\Desktop\论文\算力中心\07_代码_AI-UWM引擎\aiuwm_src\validation_artifacts\r2\probabilistic_sample_size_comparison.csv
+ 域    版本    P05    P50    P95  超限概率
+ha 40 样本  750.0 1000.0 1000.0 0.175
+ha 64 样本  950.0 1050.0 1200.0 0.125
+co 40 样本 1250.0 1500.0 1500.0 0.000
+co 64 样本 1250.0 1350.0 1500.0 0.000

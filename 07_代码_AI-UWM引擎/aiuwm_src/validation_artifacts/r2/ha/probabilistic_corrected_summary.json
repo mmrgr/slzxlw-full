@@ -1,0 +1,100 @@
+{
+  "samples": 1024,
+  "workers": 24,
+  "elapsed_seconds": 1584.3,
+  "seed": 20260918,
+  "proposed_mw": 1000.0,
+  "bootstrap_iterations": 2000,
+  "capacity_grid_strategy": "250 MW anchors with 50 MW refinement at detected constraint transitions",
+  "p05": 950.0,
+  "p05_ci95": [
+    950.0,
+    1000.0
+  ],
+  "p50": 1050.0,
+  "p50_ci95": [
+    1050.0,
+    1100.0
+  ],
+  "p95": 1200.0,
+  "p95_ci95": [
+    1200.0,
+    1200.0
+  ],
+  "exceedance_probability": 0.0625,
+  "exceedance_probability_ci95": [
+    0.048828125,
+    0.078125
+  ],
+  "mean": 1077.294921875,
+  "std": 72.75211957619304,
+  "distinct_thresholds": [
+    850.0,
+    900.0,
+    950.0,
+    1000.0,
+    1050.0,
+    1100.0,
+    1150.0,
+    1200.0,
+    1250.0
+  ],
+  "right_censored_at_grid_max_fraction": 0.0,
+  "limiting_constraint_share": {
+    "max_source_abstraction_ratio": 1.0
+  },
+  "policy_threshold": {
+    "p05": 1150.0,
+    "p05_ci95": [
+      1100.0,
+      1150.0
+    ],
+    "p50": 1250.0,
+    "p50_ci95": [
+      1250.0,
+      1250.0
+    ],
+    "p95": 1350.0,
+    "p95_ci95": [
+      1350.0,
+      1350.0
+    ],
+    "distinct_thresholds": [
+      1000.0,
+      1050.0,
+      1100.0,
+      1150.0,
+      1200.0,
+      1250.0,
+      1300.0,
+      1350.0,
+      1400.0
+    ],
+    "right_censored_at_grid_max_fraction": 0.0,
+    "grid_max_mw": 2000.0,
+    "limiting_constraint_share": {
+      "reclaimed_water_substitution_ratio": 1.0
+    },
+    "exceedance_probability_at_proposed_mw": 0.0,
+    "exceedance_probability_ci95_at_proposed_mw": [
+      0.0,
+      0.0
+    ],
+    "exceedance_count_at_proposed_mw": 0,
+    "exceedance_n_at_proposed_mw": 1024,
+    "exceedance_probability_exact_ci95_at_proposed_mw": [
+      0.0,
+      0.0035959404068352553
+    ],
+    "exceedance_probability_exact_upper95_at_proposed_mw": 0.0029212446353880095,
+    "exceedance_interpretation_at_proposed_mw": "在 1024 次抽样中观察到 0 次越过 1000 MW 的容量不足；bootstrap 区间退化为 [0, 0] 不等于风险为零——精确二项（Clopper-Pearson）单侧 95% 上界为 0.29%，这才是可引用的检出限。"
+  },
+  "exceedance_count": 64,
+  "exceedance_n": 1024,
+  "exceedance_probability_exact_ci95": [
+    0.04846174045925608,
+    0.07911366017826194
+  ],
+  "exceedance_probability_exact_upper95": 0.07639582331653522,
+  "exceedance_interpretation": "在 1024 次抽样中观察到 64 次越过 1000 MW 的容量不足（点估计 0.0625）；精确二项单侧 95% 上界为 7.64%。"
+}

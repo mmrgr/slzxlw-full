@@ -1,0 +1,13 @@
+[ha] 256 samples x 41 capacities, workers=8, restored=0
+    100/256   324.9s
+    200/256   635.0s
+    256/256   806.5s
+[ha] P05=950 P50=1100 P95=1200 | 超限概率=0.055 | 用时 807s
+[done] ha: samples=256 p05/p50/p95=950.0/1100.0/1200.0 exceed=0.0547
+[co] 256 samples x 41 capacities, workers=8, restored=0
+    100/256   328.4s
+    200/256   691.1s
+    256/256   888.3s
+[co] P05=1250 P50=1350 P95=1500 | 超限概率=0.000 | 用时 888s
+[done] co: samples=256 p05/p50/p95=1250.0/1350.0/1500.0 exceed=0.0000
+输出目录: C:\Users\mmrgr\Desktop\论文\算力中心\07_代码_AI-UWM引擎\aiuwm_src\.r5check\iso256b

@@ -1,0 +1,36 @@
+{
+  "artifact": "R9 reclaimed-water compatibility evidence gates",
+  "scope": "single active data centre; 1000 MW; zero cooling-storage volume; fixed TDS/chloride point values",
+  "gates": [
+    {
+      "id": "G0_fixed_point",
+      "status": "PASS",
+      "evidence": {
+        "positive_target_rows": 18,
+        "all_status_converged": true,
+        "max_abs_residual": 9.983547322178765e-11,
+        "root_count": 1
+      }
+    },
+    {
+      "id": "G1_storage_quality_state",
+      "status": "NOT_READY",
+      "evidence": "Cooling-storage volume and initial inventory are zero; storage TDS/chloride mass state is not modelled."
+    },
+    {
+      "id": "G2_shared_pool_joint_solver",
+      "status": "NOT_READY",
+      "evidence": "The quality fixed point is enabled only for one active data centre sharing the central reuse pool."
+    },
+    {
+      "id": "G3_estimand_separation",
+      "status": "PASS",
+      "evidence": "The CSV reports B0 no-AI deltas separately from B2-to-B1 same-AI counterfactual differences."
+    },
+    {
+      "id": "G4_internal_optimum",
+      "status": "NOT_TESTED",
+      "evidence": "No claim of a universal or robust interior reclaimed-water optimum is made in R9."
+    }
+  ]
+}

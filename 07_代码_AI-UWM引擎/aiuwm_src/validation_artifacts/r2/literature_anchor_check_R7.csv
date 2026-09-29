@@ -1,0 +1,21 @@
+﻿域签,衍生指标,模型计算值,锚点编号,锚点名,文献值,相对偏差百分比,判定,说明
+D-HA,补水中蒸发份额,0.768636,A03,基准情景淡水中蒸发份额,0.8,-3.92,偏离,evaporation /(evaporation+blowdown+drift)；来源：Wang et al. ESE 2026 §3.2：1 m3 淡水中 80% 蒸发、20% 变废水
+D-HA,补水中排污份额,0.231164,A04,基准情景淡水中排污水份额,0.2,15.58,偏离,blowdown /(evaporation+blowdown+drift)；来源：同上（与 A03 互补，飘水忽略）
+D-HA,补水中飘水份额,0.0002,A04,飘水份额（Wang 视为可忽略）,0.0,,符合,drift /(evaporation+blowdown+drift)，Wang 设为可忽略；来源：同上（与 A03 互补，飘水忽略）
+D-HA,厂外电力水强度_L_per_kWh,1.8,A01,厂外电力水强度 offsite grid water intensity,1.8,-0.0,边界命中,sum(offsite_electricity_water_ml)*1e6 / sum(facility_energy_mwh)*1e3；来源：Green Grid White Paper #35 美国平均 EWIF=1.8；LBNL 2024 间接~4.52（见文献基准矩阵 R6 §III）
+D-HA,间接水占总足迹比,0.550497,A22,间接水占数据中心总水足迹份额,0.548,0.46,量级相近（交叉检查；非率定/验证）,offsite / total_water_footprint；与 LBNL 2024 反演 0.548 仅作量级交叉检查，不是率定或外部验证；来源：由 LBNL 2024 反演：美国数据中心**直接**取水约 660 亿升、**间接**（电厂侧）约 800 亿升，→ 间接/(直接+间接) = 800/1460 = 0.548
+D-HA,平均WUE_L_per_kWh,2.20466,A18,数据中心 Site WUE,0.58,280.11,偏离,mean(wue_l_kwh)，对照 EU Annex I 成员国区间；来源：EU 数据中心能效方案 Annex I（2026-09-21）：A 级 ≤0.10、G 级 >1.00，2024 年欧盟均值 0.58，成员国区间 0.07–1.28
+D-HA,WWTW占已造成GHG比,0.559841,A08,污水厂 GHG 占 UWS 总 GHG 份额,0.77,-27.29,偏离,component_annual 按组件汇总 ghg_caused_kg_co2e 后取 WWTW1 占比；来源：WaterMet2 北欧案 §S4：WWTW >77% GHG、>88% 酸化
+D-HA,WWTW占已造成酸化比,0.401429,A09,污水厂酸化占 UWS 总酸化份额,0.88,-54.38,偏离,component_annual 按组件汇总 acidification_caused_kg_so2e 后取 WWTW1 占比；来源：WaterMet2 北欧案 §S4 Table 8
+D-HA,冷却占设施用电比,0.154469,A02,数据中心冷却占总用电比例,0.3,-48.51,偏离,(facility_energy - it_energy) / facility_energy（对照 ~30% 用于冷却）；来源：Wang et al. ESE 2026 §1：现代数据中心约 30% 电力用于冷却
+D-HA,有效PUE,1.182689,—,PUE（仅登记）,1.2,-1.44,参考,base_pue=1.2，动态温度修正后的年度有效值
+D-CO,补水中蒸发份额,0.8,A03,基准情景淡水中蒸发份额,0.8,0.0,边界命中,evaporation /(evaporation+blowdown+drift)；来源：Wang et al. ESE 2026 §3.2：1 m3 淡水中 80% 蒸发、20% 变废水
+D-CO,补水中排污份额,0.1998,A04,基准情景淡水中排污水份额,0.2,-0.1,偏离,blowdown /(evaporation+blowdown+drift)；来源：同上（与 A03 互补，飘水忽略）
+D-CO,补水中飘水份额,0.0002,A04,飘水份额（Wang 视为可忽略）,0.0,,符合,drift /(evaporation+blowdown+drift)，Wang 设为可忽略；来源：同上（与 A03 互补，飘水忽略）
+D-CO,厂外电力水强度_L_per_kWh,1.8,A01,厂外电力水强度 offsite grid water intensity,1.8,-0.0,边界命中,sum(offsite_electricity_water_ml)*1e6 / sum(facility_energy_mwh)*1e3；来源：Green Grid White Paper #35 美国平均 EWIF=1.8；LBNL 2024 间接~4.52（见文献基准矩阵 R6 §III）
+D-CO,间接水占总足迹比,0.5505,A22,间接水占数据中心总水足迹份额,0.548,0.46,量级相近（交叉检查；非率定/验证）,offsite / total_water_footprint；与 LBNL 2024 反演 0.548 仅作量级交叉检查，不是率定或外部验证；来源：由 LBNL 2024 反演：美国数据中心**直接**取水约 660 亿升、**间接**（电厂侧）约 800 亿升，→ 间接/(直接+间接) = 800/1460 = 0.548
+D-CO,平均WUE_L_per_kWh,2.100874,A18,数据中心 Site WUE,0.58,262.22,偏离,mean(wue_l_kwh)，对照 EU Annex I 成员国区间；来源：EU 数据中心能效方案 Annex I（2026-09-21）：A 级 ≤0.10、G 级 >1.00，2024 年欧盟均值 0.58，成员国区间 0.07–1.28
+D-CO,WWTW占已造成GHG比,0.559882,A08,污水厂 GHG 占 UWS 总 GHG 份额,0.77,-27.29,偏离,component_annual 按组件汇总 ghg_caused_kg_co2e 后取 WWTW1 占比；来源：WaterMet2 北欧案 §S4：WWTW >77% GHG、>88% 酸化
+D-CO,WWTW占已造成酸化比,0.401469,A09,污水厂酸化占 UWS 总酸化份额,0.88,-54.38,偏离,component_annual 按组件汇总 acidification_caused_kg_so2e 后取 WWTW1 占比；来源：WaterMet2 北欧案 §S4 Table 8
+D-CO,冷却占设施用电比,0.144373,A02,数据中心冷却占总用电比例,0.3,-51.88,偏离,(facility_energy - it_energy) / facility_energy（对照 ~30% 用于冷却）；来源：Wang et al. ESE 2026 §1：现代数据中心约 30% 电力用于冷却
+D-CO,有效PUE,1.168734,—,PUE（仅登记）,1.2,-2.61,参考,base_pue=1.2，动态温度修正后的年度有效值

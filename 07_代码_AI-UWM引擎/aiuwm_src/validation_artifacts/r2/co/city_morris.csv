@@ -1,0 +1,15 @@
+metric,parameter,mu,mu_star,sigma,metric_desc
+max_source_abstraction_ratio,components.DM1.leakage_fraction,0.7249023791529284,0.7249023791529284,0.4306452632782361,年尺度头号约束（水源取水占用率）
+max_source_abstraction_ratio,local_areas.LA1.demand_profiles.0.base_value,0.002074188941527584,0.002074188941527584,0.001254705187790574,年尺度头号约束（水源取水占用率）
+max_source_abstraction_ratio,components.RES1.abstraction_capacity_ml_day,-0.0017047705748858921,0.0017047705748858921,0.000721111211197987,年尺度头号约束（水源取水占用率）
+max_source_abstraction_ratio,components.CENTRAL_REUSE.treatment_capacity_ml_day,-0.0005130712628781272,0.0005130712628781272,0.0011780135400715833,年尺度头号约束（水源取水占用率）
+max_source_abstraction_ratio,components.WTW1.daily_capacity_ml,-5.3381203901376546e-05,5.3381203901376546e-05,0.00018482341481365508,年尺度头号约束（水源取水占用率）
+max_source_abstraction_ratio,components.WWTW1.daily_capacity_ml,-3.2014634168120925e-05,3.2014634168120925e-05,0.00010893037833861481,年尺度头号约束（水源取水占用率）
+max_source_abstraction_ratio,components.RES1.capacity_ml,0.0,0.0,0.0,年尺度头号约束（水源取水占用率）
+max_wtw_utilization,components.DM1.leakage_fraction,0.606508798219061,0.606508798219061,0.4727422081108822,日尺度头号约束（给水处理峰值利用率）
+max_wtw_utilization,local_areas.LA1.demand_profiles.0.base_value,0.0017112852232949946,0.0017112852232949946,0.0013791957671229333,日尺度头号约束（给水处理峰值利用率）
+max_wtw_utilization,components.WTW1.daily_capacity_ml,-0.001644338059033145,0.0016443380590331457,0.0008061885904191826,日尺度头号约束（给水处理峰值利用率）
+max_wtw_utilization,components.CENTRAL_REUSE.treatment_capacity_ml_day,-0.00032103787584451273,0.00032103787584451273,0.0008683383694965821,日尺度头号约束（给水处理峰值利用率）
+max_wtw_utilization,components.RES1.abstraction_capacity_ml_day,0.00023719218900738258,0.00023719218900738258,0.0006522389923053065,日尺度头号约束（给水处理峰值利用率）
+max_wtw_utilization,components.WWTW1.daily_capacity_ml,-3.621770689687668e-05,3.621770689687668e-05,0.00012270482781960007,日尺度头号约束（给水处理峰值利用率）
+max_wtw_utilization,components.RES1.capacity_ml,0.0,0.0,0.0,日尺度头号约束（给水处理峰值利用率）

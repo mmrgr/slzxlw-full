@@ -1,0 +1,11 @@
+constraint,informative,first_violated_capacity_mw,min_value,max_value,target
+system_reliability_fraction,False,,0.9922541906294724,1.0,0.99
+domestic_unmet_ml,True,1850.0,0.0,992.1972727431985,0.0
+unmet_cooling_water_ml,False,,0.0,0.0,0.0
+max_wtw_utilization,True,1200.0,0.7927562150839568,0.9799999999999999,0.95
+max_wwtw_utilization,False,,0.825864605467944,0.8920894862975918,0.95
+max_source_abstraction_ratio,True,1200.0,0.7956031843164838,1.0,0.95
+reclaimed_water_substitution_ratio,True,1350.0,0.43695893704377914,0.7000000000000001,0.65
+peak_capacity_ratio,True,1750.0,0.7885243939703608,1.0440020093693563,1.0
+max_local_connection_ratio,True,1550.0,0.19663861689157436,1.4033000330654424,1.0
+max_daily_average_grid_connection_ratio,True,1450.0,0.0346926882,1.387707528,1.0

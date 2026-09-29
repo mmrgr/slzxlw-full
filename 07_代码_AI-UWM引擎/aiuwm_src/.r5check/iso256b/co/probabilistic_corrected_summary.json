@@ -1,0 +1,84 @@
+{
+  "samples": 256,
+  "workers": 8,
+  "elapsed_seconds": 888.5,
+  "seed": 20260918,
+  "proposed_mw": 1000.0,
+  "bootstrap_iterations": 2000,
+  "capacity_grid_strategy": "250 MW anchors with 50 MW refinement at detected constraint transitions",
+  "p05": 1250.0,
+  "p05_ci95": [
+    1250.0,
+    1250.0
+  ],
+  "p50": 1350.0,
+  "p50_ci95": [
+    1350.0,
+    1400.0
+  ],
+  "p95": 1500.0,
+  "p95_ci95": [
+    1500.0,
+    1550.0
+  ],
+  "exceedance_probability": 0.0,
+  "exceedance_probability_ci95": [
+    0.0,
+    0.0
+  ],
+  "mean": 1375.78125,
+  "std": 81.1641703525614,
+  "distinct_thresholds": [
+    1150.0,
+    1200.0,
+    1250.0,
+    1300.0,
+    1350.0,
+    1400.0,
+    1450.0,
+    1500.0,
+    1550.0
+  ],
+  "right_censored_at_grid_max_fraction": 0.0,
+  "limiting_constraint_share": {
+    "max_daily_average_grid_connection_ratio": 0.9062,
+    "max_local_connection_ratio": 0.0938
+  },
+  "policy_threshold": {
+    "p05": 1800.0,
+    "p05_ci95": [
+      1750.0,
+      1850.0
+    ],
+    "p50": 2000.0,
+    "p50_ci95": [
+      2000.0,
+      2000.0
+    ],
+    "p95": 2000.0,
+    "p95_ci95": [
+      2000.0,
+      2000.0
+    ],
+    "distinct_thresholds": [
+      1650.0,
+      1700.0,
+      1750.0,
+      1800.0,
+      1850.0,
+      1900.0,
+      1950.0,
+      2000.0
+    ],
+    "right_censored_at_grid_max_fraction": 0.6171875,
+    "grid_max_mw": 2000.0,
+    "limiting_constraint_share": {
+      "reclaimed_water_substitution_ratio": 0.3828
+    },
+    "exceedance_probability_at_proposed_mw": 0.0,
+    "exceedance_probability_ci95_at_proposed_mw": [
+      0.0,
+      0.0
+    ]
+  }
+}

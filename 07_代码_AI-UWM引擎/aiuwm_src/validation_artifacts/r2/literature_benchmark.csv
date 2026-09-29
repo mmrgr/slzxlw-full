@@ -1,0 +1,421 @@
+﻿模型对象,模型来源,指标,模型值,对标主体,对标年份,对标区间低,对标区间高,判定,偏差,相对偏差,对标来源性质,对标来源说明
+dry,模型-D-HA,WUE_L_per_kWh,0.0,Google,2024,1.2,1.2,可比,-1.2,-1.0,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+dry,模型-D-HA,WUE_L_per_kWh,0.0,Google,2024,0.64,0.64,可比,-0.64,-1.0,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+dry,模型-D-HA,WUE_L_per_kWh,0.0,Meta,2024,0.2,0.2,可比,-0.2,-1.0,DISCLOSURE,FY24 WUE；券商摘录
+dry,模型-D-HA,WUE_L_per_kWh,0.0,Meta,2024,0.26,0.26,可比,-0.26,-1.0,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+dry,模型-D-HA,WUE_L_per_kWh,0.0,Amazon/AWS,2023,0.18,0.18,可比,-0.18,-1.0,DISCLOSURE,2023 WUE；券商摘录
+dry,模型-D-HA,WUE_L_per_kWh,0.0,Microsoft,2024,0.3,0.49,可比,-0.395,-1.0,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+dry,模型-D-HA,WUE_L_per_kWh,0.0,阿里巴巴,2025,1.144,1.8,可比,-1.472,-1.0,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+dry,模型-D-HA,WUE_L_per_kWh,0.0,百度,2024,1.61,1.61,可比,-1.61,-1.0,DISCLOSURE,2024 WUE
+dry,模型-D-HA,WUE_L_per_kWh,0.0,Equinix,2024,0.95,1.55,可比,-1.25,-1.0,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+dry,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-无水冷却,2025,0.0,0.0,在区间内,0.0,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+dry,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-领先超大规模,2025,0.2,0.5,在区间外,0.2,0.5714,INDUSTRY,领先超大规模运营商区间
+dry,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-平均托管型,2025,1.0,1.8,在区间外,1.0,0.7143,INDUSTRY,一般 colocation 设施区间
+dry,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-老旧低效,2025,2.0,4.0,在区间外,2.0,0.6667,INDUSTRY,老旧或低效设施区间
+dry,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.8,0.6207,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,Google,2024,1.2,1.2,可比,-0.766,-0.6383,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,Google,2024,0.64,0.64,可比,-0.206,-0.3219,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,Meta,2024,0.2,0.2,可比,0.234,1.17,DISCLOSURE,FY24 WUE；券商摘录
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,Meta,2024,0.26,0.26,可比,0.174,0.6693,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,Amazon/AWS,2023,0.18,0.18,可比,0.254,1.4111,DISCLOSURE,2023 WUE；券商摘录
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,Microsoft,2024,0.3,0.49,可比,0.039,0.0987,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,阿里巴巴,2025,1.144,1.8,可比,-1.038,-0.7052,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,百度,2024,1.61,1.61,可比,-1.176,-0.7304,DISCLOSURE,2024 WUE
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,Equinix,2024,0.95,1.55,可比,-0.816,-0.6528,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,行业基准-无水冷却,2025,0.0,0.0,在区间外,0.434,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,行业基准-领先超大规模,2025,0.2,0.5,在区间内,0.0,0.0,INDUSTRY,领先超大规模运营商区间
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.566,0.4043,INDUSTRY,一般 colocation 设施区间
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,行业基准-老旧低效,2025,2.0,4.0,在区间外,1.566,0.522,INDUSTRY,老旧或低效设施区间
+dry_first,模型-D-HA,WUE_L_per_kWh,0.434,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.366,0.471,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,Google,2024,1.2,1.2,可比,0.9219,0.7682,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,Google,2024,0.64,0.64,可比,1.4819,2.3155,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,Meta,2024,0.2,0.2,可比,1.9219,9.6095,DISCLOSURE,FY24 WUE；券商摘录
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,Meta,2024,0.26,0.26,可比,1.8619,7.1611,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,Amazon/AWS,2023,0.18,0.18,可比,1.9419,10.7883,DISCLOSURE,2023 WUE；券商摘录
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,Microsoft,2024,0.3,0.49,可比,1.7269,4.3719,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,阿里巴巴,2025,1.144,1.8,可比,0.6499,0.4415,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,百度,2024,1.61,1.61,可比,0.5119,0.3179,DISCLOSURE,2024 WUE
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,Equinix,2024,0.95,1.55,可比,0.8719,0.6975,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1219,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6219,4.634,INDUSTRY,领先超大规模运营商区间
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3219,0.2299,INDUSTRY,一般 colocation 设施区间
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+efficient_evaporative,模型-D-HA,WUE_L_per_kWh,2.1219,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,Google,2024,1.2,1.2,可比,1.0099,0.8416,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,Google,2024,0.64,0.64,可比,1.5699,2.4529,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,Meta,2024,0.2,0.2,可比,2.0099,10.0494,DISCLOSURE,FY24 WUE；券商摘录
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,Meta,2024,0.26,0.26,可比,1.9499,7.4995,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,Amazon/AWS,2023,0.18,0.18,可比,2.0299,11.2771,DISCLOSURE,2023 WUE；券商摘录
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,Microsoft,2024,0.3,0.49,可比,1.8149,4.5946,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,阿里巴巴,2025,1.144,1.8,可比,0.7379,0.5013,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,百度,2024,1.61,1.61,可比,0.5999,0.3726,DISCLOSURE,2024 WUE
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,Equinix,2024,0.95,1.55,可比,0.9599,0.7679,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2099,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7099,4.8854,INDUSTRY,领先超大规模运营商区间
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4099,0.2928,INDUSTRY,一般 colocation 设施区间
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+evaporative,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,Google,2024,1.2,1.2,可比,-0.5432,-0.4527,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,Google,2024,0.64,0.64,可比,0.0168,0.0262,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,Meta,2024,0.2,0.2,可比,0.4568,2.2839,DISCLOSURE,FY24 WUE；券商摘录
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,Meta,2024,0.26,0.26,可比,0.3968,1.5261,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,Amazon/AWS,2023,0.18,0.18,可比,0.4768,2.6487,DISCLOSURE,2023 WUE；券商摘录
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,Microsoft,2024,0.3,0.49,可比,0.2618,0.6627,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,阿里巴巴,2025,1.144,1.8,可比,-0.8152,-0.5538,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,百度,2024,1.61,1.61,可比,-0.9532,-0.5921,DISCLOSURE,2024 WUE
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,Equinix,2024,0.95,1.55,可比,-0.5932,-0.4746,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,行业基准-无水冷却,2025,0.0,0.0,在区间外,0.6568,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,行业基准-领先超大规模,2025,0.2,0.5,在区间外,0.1568,0.4479,INDUSTRY,领先超大规模运营商区间
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3432,0.2452,INDUSTRY,一般 colocation 设施区间
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,行业基准-老旧低效,2025,2.0,4.0,在区间外,1.3432,0.4477,INDUSTRY,老旧或低效设施区间
+hybrid,模型-D-HA,WUE_L_per_kWh,0.6568,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.1432,0.3942,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,Google,2024,1.2,1.2,可比,-1.2,-1.0,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,Google,2024,0.64,0.64,可比,-0.64,-1.0,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,Meta,2024,0.2,0.2,可比,-0.2,-1.0,DISCLOSURE,FY24 WUE；券商摘录
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,Meta,2024,0.26,0.26,可比,-0.26,-1.0,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,Amazon/AWS,2023,0.18,0.18,可比,-0.18,-1.0,DISCLOSURE,2023 WUE；券商摘录
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,Microsoft,2024,0.3,0.49,可比,-0.395,-1.0,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,阿里巴巴,2025,1.144,1.8,可比,-1.472,-1.0,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,百度,2024,1.61,1.61,可比,-1.61,-1.0,DISCLOSURE,2024 WUE
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,Equinix,2024,0.95,1.55,可比,-1.25,-1.0,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-无水冷却,2025,0.0,0.0,在区间内,0.0,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-领先超大规模,2025,0.2,0.5,在区间外,0.2,0.5714,INDUSTRY,领先超大规模运营商区间
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-平均托管型,2025,1.0,1.8,在区间外,1.0,0.7143,INDUSTRY,一般 colocation 设施区间
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-老旧低效,2025,2.0,4.0,在区间外,2.0,0.6667,INDUSTRY,老旧或低效设施区间
+liquid_to_air,模型-D-HA,WUE_L_per_kWh,0.0,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.8,0.6207,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,Google,2024,1.2,1.2,可比,0.7169,0.5974,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,Google,2024,0.64,0.64,可比,1.2769,1.9952,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,Meta,2024,0.2,0.2,可比,1.7169,8.5847,DISCLOSURE,FY24 WUE；券商摘录
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,Meta,2024,0.26,0.26,可比,1.6569,6.3728,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,Amazon/AWS,2023,0.18,0.18,可比,1.7369,9.6496,DISCLOSURE,2023 WUE；券商摘录
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,Microsoft,2024,0.3,0.49,可比,1.5219,3.853,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,阿里巴巴,2025,1.144,1.8,可比,0.4449,0.3023,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,百度,2024,1.61,1.61,可比,0.3069,0.1906,DISCLOSURE,2024 WUE
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,Equinix,2024,0.95,1.55,可比,0.6669,0.5335,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,行业基准-无水冷却,2025,0.0,0.0,在区间外,1.9169,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.4169,4.0484,INDUSTRY,领先超大规模运营商区间
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.1169,0.0835,INDUSTRY,一般 colocation 设施区间
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,行业基准-老旧低效,2025,2.0,4.0,在区间外,0.0831,0.0277,INDUSTRY,老旧或低效设施区间
+liquid_to_water,模型-D-HA,WUE_L_per_kWh,1.9169,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+dry,模型-D-CO,WUE_L_per_kWh,0.0,Google,2024,1.2,1.2,可比,-1.2,-1.0,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+dry,模型-D-CO,WUE_L_per_kWh,0.0,Google,2024,0.64,0.64,可比,-0.64,-1.0,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+dry,模型-D-CO,WUE_L_per_kWh,0.0,Meta,2024,0.2,0.2,可比,-0.2,-1.0,DISCLOSURE,FY24 WUE；券商摘录
+dry,模型-D-CO,WUE_L_per_kWh,0.0,Meta,2024,0.26,0.26,可比,-0.26,-1.0,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+dry,模型-D-CO,WUE_L_per_kWh,0.0,Amazon/AWS,2023,0.18,0.18,可比,-0.18,-1.0,DISCLOSURE,2023 WUE；券商摘录
+dry,模型-D-CO,WUE_L_per_kWh,0.0,Microsoft,2024,0.3,0.49,可比,-0.395,-1.0,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+dry,模型-D-CO,WUE_L_per_kWh,0.0,阿里巴巴,2025,1.144,1.8,可比,-1.472,-1.0,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+dry,模型-D-CO,WUE_L_per_kWh,0.0,百度,2024,1.61,1.61,可比,-1.61,-1.0,DISCLOSURE,2024 WUE
+dry,模型-D-CO,WUE_L_per_kWh,0.0,Equinix,2024,0.95,1.55,可比,-1.25,-1.0,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+dry,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-无水冷却,2025,0.0,0.0,在区间内,0.0,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+dry,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-领先超大规模,2025,0.2,0.5,在区间外,0.2,0.5714,INDUSTRY,领先超大规模运营商区间
+dry,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-平均托管型,2025,1.0,1.8,在区间外,1.0,0.7143,INDUSTRY,一般 colocation 设施区间
+dry,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-老旧低效,2025,2.0,4.0,在区间外,2.0,0.6667,INDUSTRY,老旧或低效设施区间
+dry,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.8,0.6207,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,Google,2024,1.2,1.2,可比,-1.1802,-0.9835,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,Google,2024,0.64,0.64,可比,-0.6202,-0.9691,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,Meta,2024,0.2,0.2,可比,-0.1802,-0.9011,DISCLOSURE,FY24 WUE；券商摘录
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,Meta,2024,0.26,0.26,可比,-0.2402,-0.9239,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,Amazon/AWS,2023,0.18,0.18,可比,-0.1602,-0.8901,DISCLOSURE,2023 WUE；券商摘录
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,Microsoft,2024,0.3,0.49,可比,-0.3752,-0.9499,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,阿里巴巴,2025,1.144,1.8,可比,-1.4522,-0.9866,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,百度,2024,1.61,1.61,可比,-1.5902,-0.9877,DISCLOSURE,2024 WUE
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,Equinix,2024,0.95,1.55,可比,-1.2302,-0.9842,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,行业基准-无水冷却,2025,0.0,0.0,在区间外,0.0198,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,行业基准-领先超大规模,2025,0.2,0.5,在区间外,0.1802,0.5149,INDUSTRY,领先超大规模运营商区间
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.9802,0.7002,INDUSTRY,一般 colocation 设施区间
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,行业基准-老旧低效,2025,2.0,4.0,在区间外,1.9802,0.6601,INDUSTRY,老旧或低效设施区间
+dry_first,模型-D-CO,WUE_L_per_kWh,0.0198,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.7802,0.6139,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,Google,2024,1.2,1.2,可比,0.7745,0.6454,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,Google,2024,0.64,0.64,可比,1.3345,2.0852,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,Meta,2024,0.2,0.2,可比,1.7745,8.8727,DISCLOSURE,FY24 WUE；券商摘录
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,Meta,2024,0.26,0.26,可比,1.7145,6.5944,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,Amazon/AWS,2023,0.18,0.18,可比,1.7945,9.9696,DISCLOSURE,2023 WUE；券商摘录
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,Microsoft,2024,0.3,0.49,可比,1.5795,3.9988,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,阿里巴巴,2025,1.144,1.8,可比,0.5025,0.3414,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,百度,2024,1.61,1.61,可比,0.3645,0.2264,DISCLOSURE,2024 WUE
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,Equinix,2024,0.95,1.55,可比,0.7245,0.5796,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,行业基准-无水冷却,2025,0.0,0.0,在区间外,1.9745,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.4745,4.213,INDUSTRY,领先超大规模运营商区间
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.1745,0.1247,INDUSTRY,一般 colocation 设施区间
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,行业基准-老旧低效,2025,2.0,4.0,在区间外,0.0255,0.0085,INDUSTRY,老旧或低效设施区间
+efficient_evaporative,模型-D-CO,WUE_L_per_kWh,1.9745,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,Google,2024,1.2,1.2,可比,0.905,0.7542,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,Google,2024,0.64,0.64,可比,1.465,2.289,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,Meta,2024,0.2,0.2,可比,1.905,9.5249,DISCLOSURE,FY24 WUE；券商摘录
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,Meta,2024,0.26,0.26,可比,1.845,7.0961,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,Amazon/AWS,2023,0.18,0.18,可比,1.925,10.6943,DISCLOSURE,2023 WUE；券商摘录
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,Microsoft,2024,0.3,0.49,可比,1.71,4.3291,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,阿里巴巴,2025,1.144,1.8,可比,0.633,0.43,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,百度,2024,1.61,1.61,可比,0.495,0.3074,DISCLOSURE,2024 WUE
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,Equinix,2024,0.95,1.55,可比,0.855,0.684,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.105,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.605,4.5857,INDUSTRY,领先超大规模运营商区间
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.305,0.2178,INDUSTRY,一般 colocation 设施区间
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+evaporative,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,Google,2024,1.2,1.2,可比,-1.0552,-0.8794,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,Google,2024,0.64,0.64,可比,-0.4952,-0.7738,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,Meta,2024,0.2,0.2,可比,-0.0552,-0.2762,DISCLOSURE,FY24 WUE；券商摘录
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,Meta,2024,0.26,0.26,可比,-0.1152,-0.4433,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,Amazon/AWS,2023,0.18,0.18,可比,-0.0352,-0.1958,DISCLOSURE,2023 WUE；券商摘录
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,Microsoft,2024,0.3,0.49,可比,-0.2502,-0.6335,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,阿里巴巴,2025,1.144,1.8,可比,-1.3272,-0.9017,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,百度,2024,1.61,1.61,可比,-1.4652,-0.9101,DISCLOSURE,2024 WUE
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,Equinix,2024,0.95,1.55,可比,-1.1052,-0.8842,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,行业基准-无水冷却,2025,0.0,0.0,在区间外,0.1448,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,行业基准-领先超大规模,2025,0.2,0.5,在区间外,0.0552,0.1578,INDUSTRY,领先超大规模运营商区间
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.8552,0.6109,INDUSTRY,一般 colocation 设施区间
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,行业基准-老旧低效,2025,2.0,4.0,在区间外,1.8552,0.6184,INDUSTRY,老旧或低效设施区间
+hybrid,模型-D-CO,WUE_L_per_kWh,0.1448,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.6552,0.5708,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,Google,2024,1.2,1.2,可比,-1.2,-1.0,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,Google,2024,0.64,0.64,可比,-0.64,-1.0,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,Meta,2024,0.2,0.2,可比,-0.2,-1.0,DISCLOSURE,FY24 WUE；券商摘录
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,Meta,2024,0.26,0.26,可比,-0.26,-1.0,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,Amazon/AWS,2023,0.18,0.18,可比,-0.18,-1.0,DISCLOSURE,2023 WUE；券商摘录
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,Microsoft,2024,0.3,0.49,可比,-0.395,-1.0,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,阿里巴巴,2025,1.144,1.8,可比,-1.472,-1.0,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,百度,2024,1.61,1.61,可比,-1.61,-1.0,DISCLOSURE,2024 WUE
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,Equinix,2024,0.95,1.55,可比,-1.25,-1.0,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-无水冷却,2025,0.0,0.0,在区间内,0.0,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-领先超大规模,2025,0.2,0.5,在区间外,0.2,0.5714,INDUSTRY,领先超大规模运营商区间
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-平均托管型,2025,1.0,1.8,在区间外,1.0,0.7143,INDUSTRY,一般 colocation 设施区间
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-老旧低效,2025,2.0,4.0,在区间外,2.0,0.6667,INDUSTRY,老旧或低效设施区间
+liquid_to_air,模型-D-CO,WUE_L_per_kWh,0.0,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,1.8,0.6207,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,Google,2024,1.2,1.2,可比,0.5765,0.4804,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,Google,2024,0.64,0.64,可比,1.1365,1.7758,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,Meta,2024,0.2,0.2,可比,1.5765,7.8827,DISCLOSURE,FY24 WUE；券商摘录
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,Meta,2024,0.26,0.26,可比,1.5165,5.8328,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,Amazon/AWS,2023,0.18,0.18,可比,1.5965,8.8696,DISCLOSURE,2023 WUE；券商摘录
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,Microsoft,2024,0.3,0.49,可比,1.3815,3.4976,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,阿里巴巴,2025,1.144,1.8,可比,0.3045,0.2069,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,百度,2024,1.61,1.61,可比,0.1665,0.1034,DISCLOSURE,2024 WUE
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,Equinix,2024,0.95,1.55,可比,0.5265,0.4212,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,行业基准-无水冷却,2025,0.0,0.0,在区间外,1.7765,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.2765,3.6472,INDUSTRY,领先超大规模运营商区间
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,行业基准-平均托管型,2025,1.0,1.8,在区间内,0.0,0.0,INDUSTRY,一般 colocation 设施区间
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,行业基准-老旧低效,2025,2.0,4.0,在区间外,0.2235,0.0745,INDUSTRY,老旧或低效设施区间
+liquid_to_water,模型-D-CO,WUE_L_per_kWh,1.7765,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间外,0.0235,0.0081,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,Google,2024,1.2,1.2,可比,0.9074,0.7562,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,Google,2024,0.64,0.64,可比,1.4674,2.2928,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,Meta,2024,0.2,0.2,可比,1.9074,9.5371,DISCLOSURE,FY24 WUE；券商摘录
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,Meta,2024,0.26,0.26,可比,1.8474,7.1054,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,Amazon/AWS,2023,0.18,0.18,可比,1.9274,10.7079,DISCLOSURE,2023 WUE；券商摘录
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,Microsoft,2024,0.3,0.49,可比,1.7124,4.3352,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,阿里巴巴,2025,1.144,1.8,可比,0.6354,0.4317,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,百度,2024,1.61,1.61,可比,0.4974,0.309,DISCLOSURE,2024 WUE
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,Equinix,2024,0.95,1.55,可比,0.8574,0.6859,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1074,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6074,4.5926,INDUSTRY,领先超大规模运营商区间
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3074,0.2196,INDUSTRY,一般 colocation 设施区间
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 250 MW,模型-D-CO,WUE_L_per_kWh,2.1074,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,Google,2024,1.2,1.2,可比,0.9056,0.7547,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,Google,2024,0.64,0.64,可比,1.4656,2.29,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,Meta,2024,0.2,0.2,可比,1.9056,9.528,DISCLOSURE,FY24 WUE；券商摘录
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,Meta,2024,0.26,0.26,可比,1.8456,7.0984,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,Amazon/AWS,2023,0.18,0.18,可比,1.9256,10.6977,DISCLOSURE,2023 WUE；券商摘录
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,Microsoft,2024,0.3,0.49,可比,1.7106,4.3306,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,阿里巴巴,2025,1.144,1.8,可比,0.6336,0.4304,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,百度,2024,1.61,1.61,可比,0.4956,0.3078,DISCLOSURE,2024 WUE
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,Equinix,2024,0.95,1.55,可比,0.8556,0.6845,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1056,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6056,4.5874,INDUSTRY,领先超大规模运营商区间
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3056,0.2183,INDUSTRY,一般 colocation 设施区间
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 500 MW,模型-D-CO,WUE_L_per_kWh,2.1056,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,Google,2024,1.2,1.2,可比,0.905,0.7542,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,Google,2024,0.64,0.64,可比,1.465,2.289,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,Meta,2024,0.2,0.2,可比,1.905,9.5249,DISCLOSURE,FY24 WUE；券商摘录
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,Meta,2024,0.26,0.26,可比,1.845,7.0961,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,Amazon/AWS,2023,0.18,0.18,可比,1.925,10.6943,DISCLOSURE,2023 WUE；券商摘录
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,Microsoft,2024,0.3,0.49,可比,1.71,4.3291,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,阿里巴巴,2025,1.144,1.8,可比,0.633,0.43,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,百度,2024,1.61,1.61,可比,0.495,0.3074,DISCLOSURE,2024 WUE
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,Equinix,2024,0.95,1.55,可比,0.855,0.684,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.105,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.605,4.5857,INDUSTRY,领先超大规模运营商区间
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.305,0.2178,INDUSTRY,一般 colocation 设施区间
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 750 MW,模型-D-CO,WUE_L_per_kWh,2.105,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,Google,2024,1.2,1.2,可比,0.9047,0.7539,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,Google,2024,0.64,0.64,可比,1.4647,2.2886,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,Meta,2024,0.2,0.2,可比,1.9047,9.5234,DISCLOSURE,FY24 WUE；券商摘录
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,Meta,2024,0.26,0.26,可比,1.8447,7.0949,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,Amazon/AWS,2023,0.18,0.18,可比,1.9247,10.6927,DISCLOSURE,2023 WUE；券商摘录
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,Microsoft,2024,0.3,0.49,可比,1.7097,4.3283,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,阿里巴巴,2025,1.144,1.8,可比,0.6327,0.4298,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,百度,2024,1.61,1.61,可比,0.4947,0.3073,DISCLOSURE,2024 WUE
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,Equinix,2024,0.95,1.55,可比,0.8547,0.6837,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1047,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6047,4.5848,INDUSTRY,领先超大规模运营商区间
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3047,0.2176,INDUSTRY,一般 colocation 设施区间
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1000 MW,模型-D-CO,WUE_L_per_kWh,2.1047,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,Google,2024,1.2,1.2,可比,0.9045,0.7537,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,Google,2024,0.64,0.64,可比,1.4645,2.2883,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,Meta,2024,0.2,0.2,可比,1.9045,9.5225,DISCLOSURE,FY24 WUE；券商摘录
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,Meta,2024,0.26,0.26,可比,1.8445,7.0942,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,Amazon/AWS,2023,0.18,0.18,可比,1.9245,10.6916,DISCLOSURE,2023 WUE；券商摘录
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,Microsoft,2024,0.3,0.49,可比,1.7095,4.3278,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,阿里巴巴,2025,1.144,1.8,可比,0.6325,0.4297,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,百度,2024,1.61,1.61,可比,0.4945,0.3071,DISCLOSURE,2024 WUE
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,Equinix,2024,0.95,1.55,可比,0.8545,0.6836,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1045,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6045,4.5843,INDUSTRY,领先超大规模运营商区间
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3045,0.2175,INDUSTRY,一般 colocation 设施区间
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1250 MW,模型-D-CO,WUE_L_per_kWh,2.1045,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,Google,2024,1.2,1.2,可比,0.9044,0.7536,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,Google,2024,0.64,0.64,可比,1.4644,2.2881,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,Meta,2024,0.2,0.2,可比,1.9044,9.5219,DISCLOSURE,FY24 WUE；券商摘录
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,Meta,2024,0.26,0.26,可比,1.8444,7.0937,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,Amazon/AWS,2023,0.18,0.18,可比,1.9244,10.691,DISCLOSURE,2023 WUE；券商摘录
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,Microsoft,2024,0.3,0.49,可比,1.7094,4.3275,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,阿里巴巴,2025,1.144,1.8,可比,0.6324,0.4296,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,百度,2024,1.61,1.61,可比,0.4944,0.3071,DISCLOSURE,2024 WUE
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,Equinix,2024,0.95,1.55,可比,0.8544,0.6835,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1044,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6044,4.5839,INDUSTRY,领先超大规模运营商区间
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3044,0.2174,INDUSTRY,一般 colocation 设施区间
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1500 MW,模型-D-CO,WUE_L_per_kWh,2.1044,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,Google,2024,1.2,1.2,可比,0.9043,0.7536,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,Google,2024,0.64,0.64,可比,1.4643,2.2879,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,Meta,2024,0.2,0.2,可比,1.9043,9.5214,DISCLOSURE,FY24 WUE；券商摘录
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,Meta,2024,0.26,0.26,可比,1.8443,7.0934,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,Amazon/AWS,2023,0.18,0.18,可比,1.9243,10.6905,DISCLOSURE,2023 WUE；券商摘录
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,Microsoft,2024,0.3,0.49,可比,1.7093,4.3273,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,阿里巴巴,2025,1.144,1.8,可比,0.6323,0.4295,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,百度,2024,1.61,1.61,可比,0.4943,0.307,DISCLOSURE,2024 WUE
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,Equinix,2024,0.95,1.55,可比,0.8543,0.6834,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1043,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6043,4.5837,INDUSTRY,领先超大规模运营商区间
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3043,0.2173,INDUSTRY,一般 colocation 设施区间
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1750 MW,模型-D-CO,WUE_L_per_kWh,2.1043,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,Google,2024,1.2,1.2,可比,0.9042,0.7535,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,Google,2024,0.64,0.64,可比,1.4642,2.2878,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,Meta,2024,0.2,0.2,可比,1.9042,9.5211,DISCLOSURE,FY24 WUE；券商摘录
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,Meta,2024,0.26,0.26,可比,1.8442,7.0932,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,Amazon/AWS,2023,0.18,0.18,可比,1.9242,10.6901,DISCLOSURE,2023 WUE；券商摘录
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,Microsoft,2024,0.3,0.49,可比,1.7092,4.3271,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,阿里巴巴,2025,1.144,1.8,可比,0.6322,0.4295,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,百度,2024,1.61,1.61,可比,0.4942,0.307,DISCLOSURE,2024 WUE
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,Equinix,2024,0.95,1.55,可比,0.8542,0.6834,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.1042,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.6042,4.5835,INDUSTRY,领先超大规模运营商区间
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.3042,0.2173,INDUSTRY,一般 colocation 设施区间
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 2000 MW,模型-D-CO,WUE_L_per_kWh,2.1042,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,Google,2024,1.2,1.2,可比,1.0123,0.8436,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,Google,2024,0.64,0.64,可比,1.5723,2.4567,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,Meta,2024,0.2,0.2,可比,2.0123,10.0616,DISCLOSURE,FY24 WUE；券商摘录
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,Meta,2024,0.26,0.26,可比,1.9523,7.5089,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,Amazon/AWS,2023,0.18,0.18,可比,2.0323,11.2906,DISCLOSURE,2023 WUE；券商摘录
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,Microsoft,2024,0.3,0.49,可比,1.8173,4.6008,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,阿里巴巴,2025,1.144,1.8,可比,0.7403,0.5029,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,百度,2024,1.61,1.61,可比,0.6023,0.3741,DISCLOSURE,2024 WUE
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,Equinix,2024,0.95,1.55,可比,0.9623,0.7699,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2123,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7123,4.8923,INDUSTRY,领先超大规模运营商区间
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4123,0.2945,INDUSTRY,一般 colocation 设施区间
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 250 MW,模型-D-HA,WUE_L_per_kWh,2.2123,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,Google,2024,1.2,1.2,可比,1.0105,0.8421,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,Google,2024,0.64,0.64,可比,1.5705,2.4539,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,Meta,2024,0.2,0.2,可比,2.0105,10.0524,DISCLOSURE,FY24 WUE；券商摘录
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,Meta,2024,0.26,0.26,可比,1.9505,7.5019,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,Amazon/AWS,2023,0.18,0.18,可比,2.0305,11.2805,DISCLOSURE,2023 WUE；券商摘录
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,Microsoft,2024,0.3,0.49,可比,1.8155,4.5962,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,阿里巴巴,2025,1.144,1.8,可比,0.7385,0.5017,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,百度,2024,1.61,1.61,可比,0.6005,0.373,DISCLOSURE,2024 WUE
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,Equinix,2024,0.95,1.55,可比,0.9605,0.7684,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2105,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7105,4.8871,INDUSTRY,领先超大规模运营商区间
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4105,0.2932,INDUSTRY,一般 colocation 设施区间
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 500 MW,模型-D-HA,WUE_L_per_kWh,2.2105,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,Google,2024,1.2,1.2,可比,1.0099,0.8416,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,Google,2024,0.64,0.64,可比,1.5699,2.4529,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,Meta,2024,0.2,0.2,可比,2.0099,10.0494,DISCLOSURE,FY24 WUE；券商摘录
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,Meta,2024,0.26,0.26,可比,1.9499,7.4995,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,Amazon/AWS,2023,0.18,0.18,可比,2.0299,11.2771,DISCLOSURE,2023 WUE；券商摘录
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,Microsoft,2024,0.3,0.49,可比,1.8149,4.5946,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,阿里巴巴,2025,1.144,1.8,可比,0.7379,0.5013,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,百度,2024,1.61,1.61,可比,0.5999,0.3726,DISCLOSURE,2024 WUE
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,Equinix,2024,0.95,1.55,可比,0.9599,0.7679,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2099,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7099,4.8854,INDUSTRY,领先超大规模运营商区间
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4099,0.2928,INDUSTRY,一般 colocation 设施区间
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 750 MW,模型-D-HA,WUE_L_per_kWh,2.2099,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,Google,2024,1.2,1.2,可比,1.0096,0.8413,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,Google,2024,0.64,0.64,可比,1.5696,2.4525,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,Meta,2024,0.2,0.2,可比,2.0096,10.0479,DISCLOSURE,FY24 WUE；券商摘录
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,Meta,2024,0.26,0.26,可比,1.9496,7.4984,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,Amazon/AWS,2023,0.18,0.18,可比,2.0296,11.2754,DISCLOSURE,2023 WUE；券商摘录
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,Microsoft,2024,0.3,0.49,可比,1.8146,4.5939,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,阿里巴巴,2025,1.144,1.8,可比,0.7376,0.5011,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,百度,2024,1.61,1.61,可比,0.5996,0.3724,DISCLOSURE,2024 WUE
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,Equinix,2024,0.95,1.55,可比,0.9596,0.7677,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2096,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7096,4.8845,INDUSTRY,领先超大规模运营商区间
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4096,0.2926,INDUSTRY,一般 colocation 设施区间
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1000 MW,模型-D-HA,WUE_L_per_kWh,2.2096,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,Google,2024,1.2,1.2,可比,1.0094,0.8412,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,Google,2024,0.64,0.64,可比,1.5694,2.4522,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,Meta,2024,0.2,0.2,可比,2.0094,10.047,DISCLOSURE,FY24 WUE；券商摘录
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,Meta,2024,0.26,0.26,可比,1.9494,7.4977,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,Amazon/AWS,2023,0.18,0.18,可比,2.0294,11.2744,DISCLOSURE,2023 WUE；券商摘录
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,Microsoft,2024,0.3,0.49,可比,1.8144,4.5934,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,阿里巴巴,2025,1.144,1.8,可比,0.7374,0.5009,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,百度,2024,1.61,1.61,可比,0.5994,0.3723,DISCLOSURE,2024 WUE
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,Equinix,2024,0.95,1.55,可比,0.9594,0.7675,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2094,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7094,4.884,INDUSTRY,领先超大规模运营商区间
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4094,0.2924,INDUSTRY,一般 colocation 设施区间
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1250 MW,模型-D-HA,WUE_L_per_kWh,2.2094,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,Google,2024,1.2,1.2,可比,1.0093,0.8411,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,Google,2024,0.64,0.64,可比,1.5693,2.452,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,Meta,2024,0.2,0.2,可比,2.0093,10.0463,DISCLOSURE,FY24 WUE；券商摘录
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,Meta,2024,0.26,0.26,可比,1.9493,7.4972,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,Amazon/AWS,2023,0.18,0.18,可比,2.0293,11.2737,DISCLOSURE,2023 WUE；券商摘录
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,Microsoft,2024,0.3,0.49,可比,1.8143,4.5931,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,阿里巴巴,2025,1.144,1.8,可比,0.7373,0.5009,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,百度,2024,1.61,1.61,可比,0.5993,0.3722,DISCLOSURE,2024 WUE
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,Equinix,2024,0.95,1.55,可比,0.9593,0.7674,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2093,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7093,4.8836,INDUSTRY,领先超大规模运营商区间
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4093,0.2923,INDUSTRY,一般 colocation 设施区间
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1500 MW,模型-D-HA,WUE_L_per_kWh,2.2093,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,Google,2024,1.2,1.2,可比,1.0092,0.841,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,Google,2024,0.64,0.64,可比,1.5692,2.4518,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,Meta,2024,0.2,0.2,可比,2.0092,10.0459,DISCLOSURE,FY24 WUE；券商摘录
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,Meta,2024,0.26,0.26,可比,1.9492,7.4969,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,Amazon/AWS,2023,0.18,0.18,可比,2.0292,11.2732,DISCLOSURE,2023 WUE；券商摘录
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,Microsoft,2024,0.3,0.49,可比,1.8142,4.5929,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,阿里巴巴,2025,1.144,1.8,可比,0.7372,0.5008,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,百度,2024,1.61,1.61,可比,0.5992,0.3722,DISCLOSURE,2024 WUE
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,Equinix,2024,0.95,1.55,可比,0.9592,0.7673,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2092,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7092,4.8834,INDUSTRY,领先超大规模运营商区间
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4092,0.2923,INDUSTRY,一般 colocation 设施区间
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 1750 MW,模型-D-HA,WUE_L_per_kWh,2.2092,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,Google,2024,1.2,1.2,可比,1.0091,0.8409,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,Google,2024,0.64,0.64,可比,1.5691,2.4517,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,Meta,2024,0.2,0.2,可比,2.0091,10.0456,DISCLOSURE,FY24 WUE；券商摘录
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,Meta,2024,0.26,0.26,可比,1.9491,7.4966,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,Amazon/AWS,2023,0.18,0.18,可比,2.0291,11.2729,DISCLOSURE,2023 WUE；券商摘录
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,Microsoft,2024,0.3,0.49,可比,1.8141,4.5927,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,阿里巴巴,2025,1.144,1.8,可比,0.7371,0.5008,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,百度,2024,1.61,1.61,可比,0.5991,0.3721,DISCLOSURE,2024 WUE
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,Equinix,2024,0.95,1.55,可比,0.9591,0.7673,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,行业基准-无水冷却,2025,0.0,0.0,在区间外,2.2091,,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,行业基准-领先超大规模,2025,0.2,0.5,在区间外,1.7091,4.8832,INDUSTRY,领先超大规模运营商区间
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,行业基准-平均托管型,2025,1.0,1.8,在区间外,0.4091,0.2922,INDUSTRY,一般 colocation 设施区间
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,行业基准-老旧低效,2025,2.0,4.0,在区间内,0.0,0.0,INDUSTRY,老旧或低效设施区间
+容量 2000 MW,模型-D-HA,WUE_L_per_kWh,2.2091,行业基准-蒸发冷却消耗率,2025,1.8,4.0,在区间内,0.0,0.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）

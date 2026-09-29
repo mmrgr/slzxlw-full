@@ -1,0 +1,227 @@
+{
+  "domain": "ha",
+  "grid_mw": 50,
+  "daily": {
+    "maximum_safe_ai_capacity_mw": 1150.0,
+    "first_failed_capacity_mw": 1200.0,
+    "limiting_constraint": "max_source_abstraction_ratio",
+    "constraint_margin": 0.004953200783991196,
+    "failed_constraints": [
+      {
+        "constraint": "max_source_abstraction_ratio",
+        "actual": 0.9549532007839912,
+        "target": 0.95,
+        "operator": "<=",
+        "violation": 0.004953200783991196,
+        "scaled_violation": 0.005213895562095996
+      },
+      {
+        "constraint": "max_wtw_utilization",
+        "actual": 0.9515360168979424,
+        "target": 0.95,
+        "operator": "<=",
+        "violation": 0.0015360168979424715,
+        "scaled_violation": 0.0016168598925710227
+      }
+    ],
+    "limiting_constraint_basis": "maximum scale-free violation at first failed capacity",
+    "threshold_interval_mw": [
+      1150.0,
+      1200.0
+    ],
+    "feasible_intervals_mw": [
+      [
+        50.0,
+        1150.0
+      ]
+    ],
+    "reentrant_feasibility": false
+  },
+  "annual": {
+    "maximum_safe_ai_capacity_mw": 1300.0,
+    "first_failed_capacity_mw": 1350.0,
+    "limiting_constraint": "reclaimed_water_substitution_ratio",
+    "constraint_margin": 0.015552726878701795,
+    "failed_constraints": [
+      {
+        "constraint": "reclaimed_water_substitution_ratio",
+        "actual": 0.6344472731212982,
+        "target": 0.65,
+        "operator": ">=",
+        "violation": 0.015552726878701795,
+        "scaled_violation": 0.023927272121079684
+      }
+    ],
+    "limiting_constraint_basis": "maximum scale-free violation at first failed capacity",
+    "threshold_interval_mw": [
+      1300.0,
+      1350.0
+    ],
+    "feasible_intervals_mw": [
+      [
+        50.0,
+        1300.0
+      ]
+    ],
+    "reentrant_feasibility": false
+  },
+  "physical_daily": {
+    "maximum_safe_ai_capacity_mw": 1150.0,
+    "first_failed_capacity_mw": 1200.0,
+    "limiting_constraint": "max_source_abstraction_ratio",
+    "constraint_margin": 0.004953200783991196,
+    "failed_constraints": [
+      {
+        "constraint": "max_source_abstraction_ratio",
+        "actual": 0.9549532007839912,
+        "target": 0.95,
+        "operator": "<=",
+        "violation": 0.004953200783991196,
+        "scaled_violation": 0.005213895562095996
+      },
+      {
+        "constraint": "max_wtw_utilization",
+        "actual": 0.9515360168979424,
+        "target": 0.95,
+        "operator": "<=",
+        "violation": 0.0015360168979424715,
+        "scaled_violation": 0.0016168598925710227
+      }
+    ],
+    "limiting_constraint_basis": "maximum scale-free violation at first failed capacity",
+    "threshold_interval_mw": [
+      1150.0,
+      1200.0
+    ],
+    "feasible_intervals_mw": [
+      [
+        50.0,
+        1150.0
+      ]
+    ],
+    "reentrant_feasibility": false
+  },
+  "physical_annual": {
+    "maximum_safe_ai_capacity_mw": 1650.0,
+    "first_failed_capacity_mw": 1700.0,
+    "limiting_constraint": "mean_daily_average_grid_connection_ratio",
+    "constraint_margin": 0.00528391887835622,
+    "failed_constraints": [
+      {
+        "constraint": "mean_daily_average_grid_connection_ratio",
+        "actual": 1.0052839188783562,
+        "target": 1.0,
+        "operator": "<=",
+        "violation": 0.00528391887835622,
+        "scaled_violation": 0.00528391887835622
+      }
+    ],
+    "limiting_constraint_basis": "maximum scale-free violation at first failed capacity",
+    "threshold_interval_mw": [
+      1650.0,
+      1700.0
+    ],
+    "feasible_intervals_mw": [
+      [
+        50.0,
+        1650.0
+      ]
+    ],
+    "reentrant_feasibility": false
+  },
+  "physical_hourly": {
+    "intra_day_peak_factor": 1.0577149587750294,
+    "hourly_constraints": {
+      "system_reliability_fraction": {
+        "operator": ">=",
+        "value": 0.99
+      },
+      "domestic_unmet_ml": {
+        "operator": "<=",
+        "value": 0.0
+      },
+      "unmet_cooling_water_ml": {
+        "operator": "<=",
+        "value": 0.0
+      },
+      "hourly_max_wtw_utilization": {
+        "operator": "<=",
+        "value": 0.95
+      },
+      "max_wwtw_utilization": {
+        "operator": "<=",
+        "value": 0.95
+      },
+      "max_source_abstraction_ratio": {
+        "operator": "<=",
+        "value": 0.95
+      },
+      "hourly_peak_capacity_ratio": {
+        "operator": "<=",
+        "value": 1.0
+      },
+      "hourly_max_local_connection_ratio": {
+        "operator": "<=",
+        "value": 1.0
+      },
+      "hourly_max_daily_average_grid_connection_ratio": {
+        "operator": "<=",
+        "value": 1.0
+      }
+    },
+    "maximum_safe_ai_capacity_mw": 1100.0,
+    "first_failed_capacity_mw": 1150.0,
+    "limiting_constraint": "hourly_max_wtw_utilization",
+    "constraint_margin": 0.0037965169698576107,
+    "failed_constraints": [
+      {
+        "constraint": "hourly_max_wtw_utilization",
+        "actual": 0.9537965169698576,
+        "target": 0.95,
+        "operator": "<=",
+        "violation": 0.0037965169698576107,
+        "scaled_violation": 0.003996333652481696
+      }
+    ],
+    "limiting_constraint_basis": "maximum scale-free violation at first failed capacity",
+    "threshold_interval_mw": [
+      1100.0,
+      1150.0
+    ],
+    "feasible_intervals_mw": [
+      [
+        50.0,
+        1100.0
+      ]
+    ],
+    "reentrant_feasibility": false
+  },
+  "reclaimed_target": {
+    "maximum_safe_ai_capacity_mw": 1300.0,
+    "first_failed_capacity_mw": 1350.0,
+    "limiting_constraint": "reclaimed_water_substitution_ratio",
+    "constraint_margin": 0.015552726878701795,
+    "failed_constraints": [
+      {
+        "constraint": "reclaimed_water_substitution_ratio",
+        "actual": 0.6344472731212982,
+        "target": 0.65,
+        "operator": ">=",
+        "violation": 0.015552726878701795,
+        "scaled_violation": 0.023927272121079684
+      }
+    ],
+    "limiting_constraint_basis": "maximum scale-free violation at first failed capacity",
+    "threshold_interval_mw": [
+      1300.0,
+      1350.0
+    ],
+    "feasible_intervals_mw": [
+      [
+        50.0,
+        1300.0
+      ]
+    ],
+    "reentrant_feasibility": false
+  }
+}

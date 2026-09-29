@@ -1,0 +1,55 @@
+﻿域签,参数路径,模型取值,锚点编号,锚点名,观测下界,观测上界,单位,典型值,是否落在包络内,偏离说明,锚点来源
+HA,components.AI_DC1.offsite_electricity_water_intensity_l_kwh,1.8,A01,厂外电力水强度 offsite grid water intensity,1.8,4.52,L/kWh,1.8,边界命中,落在区间内，相对典型值 1.8 偏低 0.0%,Green Grid White Paper #35 美国平均 EWIF=1.8；LBNL 2024 间接~4.52（见文献基准矩阵 R6 §III）
+HA,components.AI_DC1.cooling.cycles_of_concentration,5.0,—,—,,,—,,无锚点,,—
+HA,components.AI_DC1.cooling.drift_fraction,0.0002,—,—,,,—,,无锚点,,—
+HA,components.AI_DC1.cooling.internal_recovery_fraction,0.1,—,—,,,—,,无锚点,,—
+HA,components.AI_DC1.base_pue,1.2,—,—,,,—,,无锚点,,—
+HA,components.WWTW1.central_reuse_fraction,0.16,A15,再生水/内部化占供水比,0.05,0.446,—,0.246,是,落在区间内，相对典型值 0.246 偏低 35.0%,南非 2010 回用<5%（Saldías 2016，经开普敦论文引）；Paju 内部化 24.6%、S5-2 达 44.5%
+HA,components.DM1.leakage_fraction,0.12,A07,配水干管漏损率,0.025,0.54,—,0.108,是,落在区间内，相对典型值 0.108 偏高 11.1%,Paju 5.6%、韩国均值 10.8%、北欧案 22%、巴西案 54%、墨西哥案 40–50%、首尔 2.5%；注意：仅适用于配水干管 DM，不适用于输水干管/原水渠
+HA,components.SC1.leakage_fraction,0.01,—,—,,,—,,无锚点,,—
+HA,components.TM1.leakage_fraction,0.005,—,—,,,—,,无锚点,,—
+HA,components.WTW1.loss_fraction,0.02,—,—,,,—,,无锚点,,—
+HA,components.WTW1.electricity_kwh_m3,0.34,—,—,,,—,,无锚点,,—
+HA,components.WWTW1.electricity_kwh_m3,0.462,A11,污水厂单位电耗,0.3,0.462,kWh/m3,0.462,边界命中,落在区间内，相对典型值 0.462 偏低 0.0%,WaterMet2 北欧案 WWTW 电耗 0.462 kWh/m3；墨西哥案处理能耗另有值
+HA,components.DM1.electricity_kwh_m3,0.18,—,—,,,—,,无锚点,,—
+HA,energy_sources.electricity.ghg_kg_co2e_unit,0.35,A12,电网排放因子,0.35,0.458,kgCO2e/kWh,0.458,边界命中,落在区间内，相对典型值 0.458 偏低 23.6%,SEMARNAT 2016 墨西哥电网 0.458 kg CO2/kWh（Behzadian WEP nexus §KPI）
+HA,finance.discount_rate,0.03,A13,折现率（实际）,0.03,0.03,—,0.03,边界命中,落在区间内，相对典型值 0.03 偏低 0.0%,Wang et al. ESE 2026 §2.3 取 3% 实际折现率；WaterMet2 §S2.4.8 支持折现
+HA,city_context.electricity_kwh_per_capita_year,6000.0,—,—,,,—,,无锚点,,—
+HA,local_areas.LA1.demand_profiles.domestic.base_value,165.0,A14,人均生活用水,90.0,263.0,L/cap/d,180.0,是,落在区间内，相对典型值 180 偏低 8.3%,墨西哥 90–180；北欧案 180；开普敦 197–263（含水务口径）；Paju 777 m3/cap/a 含工业
+HA,local_areas.LA1.demand_profiles.domestic.return_fraction,0.92,A06,生活用水回流系数,0.85,0.95,—,0.9,是,落在区间内，相对典型值 0.9 偏高 2.2%,Metcalf & Eddy (2003) 经 WaterMet2 §S2.5：生活 90%，非生活 85–95%
+HA,local_areas.LA1.demand_profiles.industrial.base_value,60.0,—,—,,,—,,无锚点,,—
+HA,local_areas.LA1.demand_profiles.industrial.return_fraction,0.8,A06b,工业用水回流系数,0.85,0.95,—,0.9,否,越界：低于下界 0.05,Metcalf & Eddy (2003) 经 WaterMet2 §S2.5：非生活 85–95%
+HA,local_areas.LA1.demand_profiles.irrigation.base_value,12.0,—,—,,,—,,无锚点,,—
+HA,local_areas.LA1.demand_profiles.irrigation.return_fraction,0.0,A06c,灌溉回流系数（ET 消耗型）,0.0,0.05,—,0.0,边界命中,落在区间内,定义性约束：灌溉水量经蒸腾蒸发消耗，回流近零；墨西哥案 unique 灌溉 quota If=5 L/m2
+HA,local_areas.LA1.demand_profiles.municipal_misc.base_value,20.0,—,—,,,—,,无锚点,,—
+HA,local_areas.LA1.demand_profiles.municipal_misc.return_fraction,0.15,—,—,,,—,,无锚点,,—
+HA,components.WWTW1.pollutant_removal_fraction.BOD,0.9,A10,污水厂 BOD 去除率,0.87,0.91,—,0.91,是,落在区间内，相对典型值 0.91 偏低 1.1%,北京 ABM-SD Table 5 取 87%；墨西哥 SITRATA 2017 为 91%
+HA,components.WWTW1.pollutant_removal_fraction.TSS,0.92,—,—,,,—,,无锚点,,—
+HA,components.WWTW1.pollutant_removal_fraction.TDS,0.05,—,—,,,—,,无锚点,,—
+CO,components.AI_DC1.offsite_electricity_water_intensity_l_kwh,1.8,A01,厂外电力水强度 offsite grid water intensity,1.8,4.52,L/kWh,1.8,边界命中,落在区间内，相对典型值 1.8 偏低 0.0%,Green Grid White Paper #35 美国平均 EWIF=1.8；LBNL 2024 间接~4.52（见文献基准矩阵 R6 §III）
+CO,components.AI_DC1.cooling.cycles_of_concentration,5.0,—,—,,,—,,无锚点,,—
+CO,components.AI_DC1.cooling.drift_fraction,0.0002,—,—,,,—,,无锚点,,—
+CO,components.AI_DC1.cooling.internal_recovery_fraction,0.1,—,—,,,—,,无锚点,,—
+CO,components.AI_DC1.base_pue,1.2,—,—,,,—,,无锚点,,—
+CO,components.WWTW1.central_reuse_fraction,0.15,A15,再生水/内部化占供水比,0.05,0.446,—,0.246,是,落在区间内，相对典型值 0.246 偏低 39.0%,南非 2010 回用<5%（Saldías 2016，经开普敦论文引）；Paju 内部化 24.6%、S5-2 达 44.5%
+CO,components.DM1.leakage_fraction,0.12,A07,配水干管漏损率,0.025,0.54,—,0.108,是,落在区间内，相对典型值 0.108 偏高 11.1%,Paju 5.6%、韩国均值 10.8%、北欧案 22%、巴西案 54%、墨西哥案 40–50%、首尔 2.5%；注意：仅适用于配水干管 DM，不适用于输水干管/原水渠
+CO,components.SC1.leakage_fraction,0.01,—,—,,,—,,无锚点,,—
+CO,components.TM1.leakage_fraction,0.005,—,—,,,—,,无锚点,,—
+CO,components.WTW1.loss_fraction,0.02,—,—,,,—,,无锚点,,—
+CO,components.WTW1.electricity_kwh_m3,0.34,—,—,,,—,,无锚点,,—
+CO,components.WWTW1.electricity_kwh_m3,0.462,A11,污水厂单位电耗,0.3,0.462,kWh/m3,0.462,边界命中,落在区间内，相对典型值 0.462 偏低 0.0%,WaterMet2 北欧案 WWTW 电耗 0.462 kWh/m3；墨西哥案处理能耗另有值
+CO,components.DM1.electricity_kwh_m3,0.18,—,—,,,—,,无锚点,,—
+CO,energy_sources.electricity.ghg_kg_co2e_unit,0.35,A12,电网排放因子,0.35,0.458,kgCO2e/kWh,0.458,边界命中,落在区间内，相对典型值 0.458 偏低 23.6%,SEMARNAT 2016 墨西哥电网 0.458 kg CO2/kWh（Behzadian WEP nexus §KPI）
+CO,finance.discount_rate,0.03,A13,折现率（实际）,0.03,0.03,—,0.03,边界命中,落在区间内，相对典型值 0.03 偏低 0.0%,Wang et al. ESE 2026 §2.3 取 3% 实际折现率；WaterMet2 §S2.4.8 支持折现
+CO,city_context.electricity_kwh_per_capita_year,6000.0,—,—,,,—,,无锚点,,—
+CO,local_areas.LA1.demand_profiles.domestic.base_value,165.0,A14,人均生活用水,90.0,263.0,L/cap/d,180.0,是,落在区间内，相对典型值 180 偏低 8.3%,墨西哥 90–180；北欧案 180；开普敦 197–263（含水务口径）；Paju 777 m3/cap/a 含工业
+CO,local_areas.LA1.demand_profiles.domestic.return_fraction,0.92,A06,生活用水回流系数,0.85,0.95,—,0.9,是,落在区间内，相对典型值 0.9 偏高 2.2%,Metcalf & Eddy (2003) 经 WaterMet2 §S2.5：生活 90%，非生活 85–95%
+CO,local_areas.LA1.demand_profiles.industrial.base_value,60.0,—,—,,,—,,无锚点,,—
+CO,local_areas.LA1.demand_profiles.industrial.return_fraction,0.8,A06b,工业用水回流系数,0.85,0.95,—,0.9,否,越界：低于下界 0.05,Metcalf & Eddy (2003) 经 WaterMet2 §S2.5：非生活 85–95%
+CO,local_areas.LA1.demand_profiles.irrigation.base_value,12.0,—,—,,,—,,无锚点,,—
+CO,local_areas.LA1.demand_profiles.irrigation.return_fraction,0.0,A06c,灌溉回流系数（ET 消耗型）,0.0,0.05,—,0.0,边界命中,落在区间内,定义性约束：灌溉水量经蒸腾蒸发消耗，回流近零；墨西哥案 unique 灌溉 quota If=5 L/m2
+CO,local_areas.LA1.demand_profiles.municipal_misc.base_value,20.0,—,—,,,—,,无锚点,,—
+CO,local_areas.LA1.demand_profiles.municipal_misc.return_fraction,0.15,—,—,,,—,,无锚点,,—
+CO,components.WWTW1.pollutant_removal_fraction.BOD,0.9,A10,污水厂 BOD 去除率,0.87,0.91,—,0.91,是,落在区间内，相对典型值 0.91 偏低 1.1%,北京 ABM-SD Table 5 取 87%；墨西哥 SITRATA 2017 为 91%
+CO,components.WWTW1.pollutant_removal_fraction.TSS,0.92,—,—,,,—,,无锚点,,—
+CO,components.WWTW1.pollutant_removal_fraction.TDS,0.05,—,—,,,—,,无锚点,,—

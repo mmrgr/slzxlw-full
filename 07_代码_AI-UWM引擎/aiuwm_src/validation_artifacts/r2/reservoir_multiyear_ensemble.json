@@ -1,0 +1,414 @@
+{
+  "ha": {
+    "domain": "ha",
+    "years": 10,
+    "sequences": 20,
+    "base_seed": 20260918,
+    "stride": 100003,
+    "grid": {
+      "max_mw": 1200.0,
+      "step_mw": 100.0,
+      "note": "与原 12 条 run 完全一致"
+    },
+    "hydrology_basis": "independent synthetic sequences from build_r2_domains driver rules; same endpoint parameters, different driver seed；并扩展到 20 条独立序列",
+    "hydrology_validation": "NONE",
+    "hydrology_validation_note": "合成驱动规则的不同种子抽样，非观测水文；序列条数增加提高的是采样精度，不提高证据等级——序列生成器本身未经任何外部观测验证",
+    "joint_gate_mw_values": [
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      300.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0
+    ],
+    "last_terminal_ge_100pct_mw_values": [
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0
+    ],
+    "joint_gate_mw_min": 200.0,
+    "joint_gate_mw_max": 300.0,
+    "joint_gate_mw_median": 200.0,
+    "joint_gate_mw_stdev": 22.360679774997898,
+    "censored_sequences": 0,
+    "per_sequence": [
+      {
+        "sequence_index": 0,
+        "seed": 20260918,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 1,
+        "seed": 20360921,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 2,
+        "seed": 20460924,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 3,
+        "seed": 20560927,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 4,
+        "seed": 20660930,
+        "last_joint_gate_mw": 300.0,
+        "first_joint_gate_failure_mw": 400.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 5,
+        "seed": 20760933,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 6,
+        "seed": 20860936,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 7,
+        "seed": 20960939,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 8,
+        "seed": 21060942,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 9,
+        "seed": 21160945,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 10,
+        "seed": 21260948,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 11,
+        "seed": 21360951,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 12,
+        "seed": 1220954,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 13,
+        "seed": 1320957,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 14,
+        "seed": 1420960,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 15,
+        "seed": 1520963,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 16,
+        "seed": 1620966,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 17,
+        "seed": 1720969,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 18,
+        "seed": 1820972,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 19,
+        "seed": 1920975,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      }
+    ]
+  },
+  "co": {
+    "domain": "co",
+    "years": 10,
+    "sequences": 20,
+    "base_seed": 20260918,
+    "stride": 100003,
+    "grid": {
+      "max_mw": 1200.0,
+      "step_mw": 100.0,
+      "note": "与原 12 条 run 完全一致"
+    },
+    "hydrology_basis": "independent synthetic sequences from build_r2_domains driver rules; same endpoint parameters, different driver seed；并扩展到 20 条独立序列",
+    "hydrology_validation": "NONE",
+    "hydrology_validation_note": "合成驱动规则的不同种子抽样，非观测水文；序列条数增加提高的是采样精度，不提高证据等级——序列生成器本身未经任何外部观测验证",
+    "joint_gate_mw_values": [
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0
+    ],
+    "last_terminal_ge_100pct_mw_values": [
+      800.0,
+      900.0,
+      800.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      800.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0
+    ],
+    "joint_gate_mw_min": 900.0,
+    "joint_gate_mw_max": 900.0,
+    "joint_gate_mw_median": 900.0,
+    "joint_gate_mw_stdev": 0.0,
+    "censored_sequences": 0,
+    "per_sequence": [
+      {
+        "sequence_index": 0,
+        "seed": 20260918,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 800.0
+      },
+      {
+        "sequence_index": 1,
+        "seed": 20360921,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 2,
+        "seed": 20460924,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 800.0
+      },
+      {
+        "sequence_index": 3,
+        "seed": 20560927,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 4,
+        "seed": 20660930,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 5,
+        "seed": 20760933,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 6,
+        "seed": 20860936,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 7,
+        "seed": 20960939,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 8,
+        "seed": 21060942,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 9,
+        "seed": 21160945,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 10,
+        "seed": 21260948,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 11,
+        "seed": 21360951,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 12,
+        "seed": 1220954,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 13,
+        "seed": 1320957,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 14,
+        "seed": 1420960,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 15,
+        "seed": 1520963,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 800.0
+      },
+      {
+        "sequence_index": 16,
+        "seed": 1620966,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 17,
+        "seed": 1720969,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 18,
+        "seed": 1820972,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 19,
+        "seed": 1920975,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      }
+    ]
+  }
+}

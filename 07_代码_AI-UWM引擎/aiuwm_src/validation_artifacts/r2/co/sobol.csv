@@ -1,0 +1,7 @@
+parameter,S1,ST
+components.AI_DC1.cooling.cycles_of_concentration,3.5727945829185233,0.4566154226648896
+components.AI_DC1.base_pue,-0.6679314802418406,0.43057402862317734
+components.AI_DC1.cooling.heat_to_cooling_fraction,-1.543034277067817,0.2559351541776479
+components.AI_DC1.cooling.internal_recovery_fraction,-0.6681340979919392,0.030918550722121598
+components.AI_DC1.temperature_coefficient,-0.6534909020242209,0.025677468710324326
+components.AI_DC1.cooling.drift_fraction,2.357180843408557e-05,5.750013999068083e-08

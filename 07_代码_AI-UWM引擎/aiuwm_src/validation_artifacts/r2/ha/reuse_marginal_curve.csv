@@ -1,0 +1,8 @@
+reuse_treatment_capacity_ml_day,cawcc_mw,limiting_constraint,marginal_gain_mw_per_ml_day
+40.0,1100.0,max_source_abstraction_ratio,
+45.0,1100.0,max_source_abstraction_ratio,0.0
+60.0,1100.0,max_source_abstraction_ratio,0.0
+75.0,1100.0,max_source_abstraction_ratio,0.0
+90.0,1100.0,max_source_abstraction_ratio,0.0
+120.0,1100.0,max_source_abstraction_ratio,0.0
+160.0,1100.0,max_source_abstraction_ratio,0.0

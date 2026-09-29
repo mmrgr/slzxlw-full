@@ -1,0 +1,24 @@
+risk_code,description,indicator,unit,mean_value,maximum_value,assessed_days,exceedance_days,probability,cumulative_risk_score,maximum_severity,assessment_status
+R01HZ01,Reduced resource availability,resource_cost_exposure_eur,EUR/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R01HZ02,Required sustainability investment,regulatory_investment_eur,EUR/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R01HZ03,Ageing asset renewal,asset_renewal_exposure_eur,EUR/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R01HZ04,Demand exceeds capacity,capacity_shortfall_ml,ML/day,7.267246165573765e-15,4.440892098500626e-14,0,0,0.0,0.0,0.0,unconfigured
+R01HZ05,Energy cost increase,energy_cost_exposure_eur,EUR/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R02HZ01,Renewable production shortfall,renewable_energy_shortfall_kwh,kWh/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R03HZ01,Combined sewer overflow,cso_volume_ml,ML/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R03HZ02,Insufficient wastewater treatment,untreated_wastewater_ml,ML/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R05HZ01,Low tap-water quality,tap_quality_proxy,index,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R07HZ01,Urban flooding,flooded_area_m2,m2/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R07HZ02,Property flooding,flooded_area_m2,m2/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R08HZ03,Industrial demand shortfall,industrial_unmet_ml,ML/day,1.2556166152473003e-15,7.105427357601002e-15,0,0,0.0,0.0,0.0,unconfigured
+R08HZ04,Prolonged supply interruption,supply_outage_hours,hours/day,4.241095890410959,24.0,0,0,0.0,0.0,0.0,unconfigured
+R08HZ05,High-consumption habits,per_capita_demand_l_day,L/capita/day,269.5567233546247,312.56675769033524,0,0,0.0,0.0,0.0,unconfigured
+R08HZ06,Pipe bursts and outages,expected_pipe_failures,failures/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R08HZ07,Insufficient storage,storage_deficit_fraction,fraction,0.5406741723905756,0.60435076297811,0,0,0.0,0.0,0.0,unconfigured
+R08HZ08,Reservoir under-capacity,storage_deficit_fraction,fraction,0.42857142857142727,0.4285714285714288,0,0,0.0,0.0,0.0,unconfigured
+R08HZ09,Reduced aquifer recharge,recharge_deficit_ml,ML/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R08HZ11,Low pressure,low_pressure_proxy_ml,ML/day,7.267246165573765e-15,4.440892098500626e-14,0,0,0.0,0.0,0.0,unconfigured
+R08HZ12,Temperature-driven demand,temperature_demand_excess_ml,ML/day,12.650961367441726,48.832122982752765,0,0,0.0,0.0,0.0,unconfigured
+R08HZ13,Drought supply shortfall,drought_shortfall_ml,ML/day,7.267246165573765e-15,4.440892098500626e-14,0,0,0.0,0.0,0.0,unconfigured
+R09HZ01,Public injury exposure,injury_exposure_index,index,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured
+R09HZ02,High-velocity street runoff,high_velocity_flood_area_m2,m2/day,0.0,0.0,0,0,0.0,0.0,0.0,unconfigured

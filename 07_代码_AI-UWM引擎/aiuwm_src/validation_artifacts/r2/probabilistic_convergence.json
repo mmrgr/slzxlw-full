@@ -1,0 +1,74 @@
+{
+  "gate": {
+    "quantile_tolerance_mw": 50.0,
+    "min_abs_log_log_slope": 0.3,
+    "note": "阈值在看数之前预先声明；未达标则只能表述为条件于最大批次的估计"
+  },
+  "domains": {
+    "ha": {
+      "status": "CONVERGED_PARTIAL",
+      "available_sample_sizes": [
+        256,
+        1024,
+        1699
+      ],
+      "partial_batch_sizes": [
+        1699
+      ],
+      "points": [
+        {
+          "samples": 256,
+          "partial_batch": false,
+          "p05": 950.0,
+          "p50": 1100.0,
+          "p95": 1200.0,
+          "mean": 1080.2734375,
+          "std": 72.02616244102134,
+          "mean_standard_error": 4.501635152563834,
+          "exceedance_probability": 0.0546875,
+          "exceedance_standard_error": 0.014210578330913328
+        },
+        {
+          "samples": 1024,
+          "partial_batch": false,
+          "p05": 950.0,
+          "p50": 1050.0,
+          "p95": 1200.0,
+          "mean": 1077.294921875,
+          "std": 72.75211957619304,
+          "mean_standard_error": 2.2735037367560325,
+          "exceedance_probability": 0.0625,
+          "exceedance_standard_error": 0.007564420598061361
+        },
+        {
+          "samples": 1699,
+          "partial_batch": true,
+          "p05": 950.0,
+          "p50": 1100.0,
+          "p95": 1200.0,
+          "mean": 1080.017657445556,
+          "std": 74.4595742141566,
+          "mean_standard_error": 1.8064413216242992,
+          "exceedance_probability": 0.06121247792819305,
+          "exceedance_standard_error": 0.005815766279565456
+        }
+      ],
+      "mean_se_log_log_slope": -0.4846299272912047,
+      "checks": {
+        "quantiles_within_tolerance": true,
+        "mean_se_monotone_decreasing": true,
+        "abs_slope_ge_threshold": true
+      },
+      "statement": "预声明门槛已通过，但最大批次为部分完成批次（1699），只能表述为'在已完成样本量范围内稳定'"
+    },
+    "co": {
+      "status": "INSUFFICIENT_BATCHES",
+      "available_sample_sizes": [
+        256,
+        1024
+      ],
+      "note": "至少需要 3 个样本量点才能做收敛判定",
+      "statement": "批次不足，暂不能作收敛判定；只能表述为'条件于现有批次的估计'"
+    }
+  }
+}

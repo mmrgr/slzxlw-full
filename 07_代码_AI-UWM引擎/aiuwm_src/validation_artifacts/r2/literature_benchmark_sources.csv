@@ -1,0 +1,23 @@
+﻿主体,年份,指标,值_低,值_高,来源性质,来源说明,备注
+Google,2024,PUE,1.09,1.09,DISCLOSURE,FY24 PUE；转述自券商研究报告摘录（高盛 Exhibit 9）,待回溯至 Google 可持续发展报告
+Google,2024,WUE_L_per_kWh,1.2,1.2,DISCLOSURE,FY24 WUE 1.2 L/kWh；转述自券商研究报告摘录,待回溯
+Google,2024,WUE_L_per_kWh,0.64,0.64,DISCLOSURE,同一年另一来源报 fleet-wide 0.64 L/kWh——口径差异示例,与上一行同一公司同一年相差近 1 倍，说明 WUE 口径不统一
+Meta,2024,PUE,1.07,1.07,DISCLOSURE,FY24 PUE；券商摘录,待回溯
+Meta,2024,WUE_L_per_kWh,0.2,0.2,DISCLOSURE,FY24 WUE；券商摘录,待回溯
+Meta,2024,WUE_L_per_kWh,0.26,0.26,INDUSTRY,行业来源报 fleet-wide 0.26 L/kWh（2024，空气侧自然冷却占比高）,同一年不同来源小差异
+Amazon/AWS,2024,PUE,1.14,1.14,DISCLOSURE,FY24 PUE；券商摘录,待回溯
+Amazon/AWS,2023,WUE_L_per_kWh,0.18,0.18,DISCLOSURE,2023 WUE；券商摘录,待回溯
+Microsoft,2024,PUE,1.16,1.18,DISCLOSURE,FY24 PUE；两来源分别给 1.16 / 1.18,待回溯
+Microsoft,2024,WUE_L_per_kWh,0.3,0.49,DISCLOSURE,FY24 WUE：券商摘录 0.30；行业来源报 fleet-wide 0.49,口径差异示例
+腾讯,2024,PUE,1.269,1.269,DISCLOSURE,2024 PUE；券商摘录表,待回溯至腾讯 ESG 报告
+阿里巴巴,2025,PUE,1.19,1.253,DISCLOSURE,2025 PUE 1.19（自建）/ 1.253（租赁 IDC）,待回溯
+阿里巴巴,2025,WUE_L_per_kWh,1.144,1.8,DISCLOSURE,2025 WUE 1.144 全站均值；蒸发冷却站点 1.8，风冷站点 0.329,该来源同时给出分技术值，最适合与本文技术对照比
+百度,2024,PUE,1.2,1.2,DISCLOSURE,2024 PUE,待回溯
+百度,2024,WUE_L_per_kWh,1.61,1.61,DISCLOSURE,2024 WUE,待回溯
+Equinix,2024,PUE,1.39,1.39,DISCLOSURE,2024 PUE（托管型）,待回溯
+Equinix,2024,WUE_L_per_kWh,0.95,1.55,DISCLOSURE,2024 WUE 0.95 全站；蒸发冷却站点 1.55,待回溯
+行业基准-无水冷却,2025,WUE_L_per_kWh,0.0,0.0,INDUSTRY,风冷/自然冷却：蒸发量为零时 WUE = 0,理论下界
+行业基准-领先超大规模,2025,WUE_L_per_kWh,0.2,0.5,INDUSTRY,领先超大规模运营商区间,行业网站基准
+行业基准-平均托管型,2025,WUE_L_per_kWh,1.0,1.8,INDUSTRY,一般 colocation 设施区间,行业网站基准
+行业基准-老旧低效,2025,WUE_L_per_kWh,2.0,4.0,INDUSTRY,老旧或低效设施区间,行业网站基准
+行业基准-蒸发冷却消耗率,2025,WUE_L_per_kWh,1.8,4.0,INDUSTRY,蒸发冷却的出现实消耗率（依气候与系统效率）,行业网站基准

@@ -1,0 +1,19 @@
+﻿域,统计量,参考批次,独立种子,一致,判据
+ha,p50,1050.0,1050.0,True,必须相等
+ha,p95,1200.0,1200.0,True,必须相等
+ha,p05,950.0,967.5,True,允许 ≤1 个 50 MW 网格步
+ha,exceedance_probability,0.0625,0.0546875,True,须落在参考批次 95% 区间内（容差 0.02）
+ha,limiting_constraint_share,"{""max_source_abstraction_ratio"": 1.0}","{""max_source_abstraction_ratio"": 1.0}",True,主导约束不得改变（比例允许抽样波动）
+ha,policy_threshold.p05,1150.0,1150.0,True,必须相等
+ha,policy_threshold.p50,1250.0,1250.0,True,必须相等
+ha,policy_threshold.p95,1350.0,1350.0,True,必须相等
+ha,policy_threshold.right_censored_at_grid_max_fraction,0.0,0.0,True,删失率为有限样本比例，容差 0.05
+co,p50,1350.0,1350.0,True,必须相等
+co,p95,1500.0,1500.0,True,必须相等
+co,p05,1250.0,1250.0,True,允许 ≤1 个 50 MW 网格步
+co,exceedance_probability,0.0,0.0,True,须落在参考批次 95% 区间内（容差 0.02）
+co,limiting_constraint_share,"{""max_daily_average_grid_connection_ratio"": 0.8809, ""max_local_connection_ratio"": 0.1191}","{""max_daily_average_grid_connection_ratio"": 0.9141, ""max_local_connection_ratio"": 0.0859}",True,主导约束不得改变（比例允许抽样波动）
+co,policy_threshold.p05,1800.0,1800.0,True,必须相等
+co,policy_threshold.p50,2000.0,2000.0,True,必须相等
+co,policy_threshold.p95,2000.0,2000.0,True,必须相等
+co,policy_threshold.right_censored_at_grid_max_fraction,0.5849609375,0.5859375,True,删失率为有限样本比例，容差 0.05

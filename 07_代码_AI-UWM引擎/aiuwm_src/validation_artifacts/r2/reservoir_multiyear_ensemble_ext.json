@@ -1,0 +1,184 @@
+{
+  "ha": {
+    "domain": "ha",
+    "years": 10,
+    "sequences": 8,
+    "base_seed": 1220954,
+    "stride": 100003,
+    "hydrology_basis": "independent synthetic sequences from build_r2_domains driver rules; same endpoint parameters, different driver seed",
+    "joint_gate_mw_values": [
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0
+    ],
+    "last_terminal_ge_100pct_mw_values": [
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0
+    ],
+    "joint_gate_mw_min": 200.0,
+    "joint_gate_mw_max": 200.0,
+    "joint_gate_mw_median": 200.0,
+    "joint_gate_mw_stdev": 0.0,
+    "censored_sequences": 0,
+    "per_sequence": [
+      {
+        "sequence_index": 0,
+        "seed": 1220954,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 1,
+        "seed": 1320957,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 2,
+        "seed": 1420960,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 3,
+        "seed": 1520963,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 4,
+        "seed": 1620966,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 5,
+        "seed": 1720969,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 6,
+        "seed": 1820972,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      },
+      {
+        "sequence_index": 7,
+        "seed": 1920975,
+        "last_joint_gate_mw": 200.0,
+        "first_joint_gate_failure_mw": 300.0,
+        "last_terminal_ge_100pct_mw": 200.0
+      }
+    ]
+  },
+  "co": {
+    "domain": "co",
+    "years": 10,
+    "sequences": 8,
+    "base_seed": 1220954,
+    "stride": 100003,
+    "hydrology_basis": "independent synthetic sequences from build_r2_domains driver rules; same endpoint parameters, different driver seed",
+    "joint_gate_mw_values": [
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0
+    ],
+    "last_terminal_ge_100pct_mw_values": [
+      900.0,
+      900.0,
+      900.0,
+      800.0,
+      900.0,
+      900.0,
+      900.0,
+      900.0
+    ],
+    "joint_gate_mw_min": 900.0,
+    "joint_gate_mw_max": 900.0,
+    "joint_gate_mw_median": 900.0,
+    "joint_gate_mw_stdev": 0.0,
+    "censored_sequences": 0,
+    "per_sequence": [
+      {
+        "sequence_index": 0,
+        "seed": 1220954,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 1,
+        "seed": 1320957,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 2,
+        "seed": 1420960,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 3,
+        "seed": 1520963,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 800.0
+      },
+      {
+        "sequence_index": 4,
+        "seed": 1620966,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 5,
+        "seed": 1720969,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 6,
+        "seed": 1820972,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      },
+      {
+        "sequence_index": 7,
+        "seed": 1920975,
+        "last_joint_gate_mw": 900.0,
+        "first_joint_gate_failure_mw": 1000.0,
+        "last_terminal_ge_100pct_mw": 900.0
+      }
+    ]
+  }
+}

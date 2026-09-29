@@ -1,0 +1,2260 @@
+{
+  "ha": {
+    "domain": "ha",
+    "simulation_years": 2.0,
+    "checks": {
+      "V1_water_balance": {
+        "max_residual_ml": 1.0658141036401503e-14,
+        "passed": true
+      },
+      "V2_monotone_withdrawal": {
+        "min_diff": 1451.0871748875943,
+        "passed": true
+      },
+      "V3_constraints_informative": {
+        "uninformative_in_G0_S0": [
+          "system_reliability_fraction",
+          "unmet_cooling_water_ml",
+          "max_wwtw_utilization"
+        ],
+        "passed": true,
+        "note": "diagnostic: 不失效约束需靠压力情景激活"
+      },
+      "V4_scale_ordering": {
+        "annual": 1300.0,
+        "daily": 1150.0,
+        "hourly": 1100.0,
+        "passed": true
+      },
+      "V5_pue_wue_ordering": {
+        "pue_dry_gt_evaporative": true,
+        "wue_dry_lt_evaporative": true,
+        "passed": true
+      },
+      "V6_peak_factor_mechanism": {
+        "daily_peak_factors": {
+          "dry_first": 7.483043522757726,
+          "hybrid": 4.313612908622845,
+          "evaporative": 1.289517088891147,
+          "efficient_evaporative": 1.3108532845916812,
+          "liquid_to_water": 1.3434561709299728
+        },
+        "annual_withdrawal_ml": {
+          "dry_first": 2138.5602294812943,
+          "hybrid": 3236.2459939953524,
+          "evaporative": 10889.153811657005,
+          "efficient_evaporative": 10455.601245983611,
+          "liquid_to_water": 9445.670282011863
+        },
+        "evaluated": {
+          "dry_first": 7.483043522757726,
+          "hybrid": 4.313612908622845,
+          "evaporative": 1.289517088891147,
+          "efficient_evaporative": 1.3108532845916812,
+          "liquid_to_water": 1.3434561709299728
+        },
+        "degenerate_excluded": [],
+        "direction_dry_first_gt_evaporative": true,
+        "literature_band_dry_first_6p5_10": true,
+        "literature_band_evaporative_1p7_3p0": false,
+        "note": "退化组合(年取水 < 同域最大值的 5%)不参与量级校核",
+        "passed": true
+      },
+      "V7_intervention_monotone": {
+        "min_gain_mw": 0.0,
+        "passed": true
+      },
+      "V8_policy_resident_first": {
+        "domestic_unmet_by_policy": {
+          "policy_a": {
+            "1000.0": 0.0,
+            "1500.0": 0.0,
+            "2000.0": 0.0
+          },
+          "policy_b": {
+            "1000.0": 3.922195901395753e-12,
+            "1500.0": 3.467448550509289e-12,
+            "2000.0": 992.1972727431985
+          },
+          "policy_c": {
+            "1000.0": 0.0,
+            "1500.0": 0.0,
+            "2000.0": 0.0
+          }
+        },
+        "passed": true
+      },
+      "V9_climate_sensitivity": {
+        "heat_signal_metric": "summer_withdrawal_ml (6-8月 AI 取水)",
+        "summer_G0_ml": 8201.898157516254,
+        "summer_G1_ml": 8282.500318088762,
+        "delta_summer_G1_percent": 0.9827256937912977,
+        "drought_signal_metric": "max_source_abstraction_ratio",
+        "abstraction_ratio_G0": 0.9272401544418161,
+        "abstraction_ratio_G2": 1.0,
+        "delta_abstraction_ratio_G2": 0.07275984555818393,
+        "reclaimed_drought_response_percent": 0.3902290382458429,
+        "passed": true
+      },
+      "V11_net_le_gross_substitution": {
+        "rows": 3,
+        "violations": 0,
+        "gross_at_1000mw": 0.7000000000000001,
+        "net_at_1000mw": 0.034019961215730816,
+        "net_at_1000mw_reuse_x3": 1.720466819225382,
+        "note": "仅校核再生水配置不变的行; 扩产能行可出现净节省 > 园区取水量",
+        "passed": true
+      },
+      "V12_baseline_city_self_consistent": {
+        "baseline_unmet_ml": 5.059064278611913e-12,
+        "baseline_min_storage_ml": 57112.73939758098,
+        "reservoir_capacity_ml": 120000.0,
+        "min_storage_fraction": 0.4759394949798415,
+        "passed": true
+      },
+      "V10_uninformative_constraints_activated_by_pressure": {
+        "source_abstraction_max_over_SxG": 1.0,
+        "reliability_min_over_SxG": 0.6012611336156393,
+        "passed": true
+      }
+    },
+    "baseline_delta": {
+      "coincident_city_ai_peak": 0.0,
+      "consumption_fraction": 0.7863793175886566,
+      "consumption_ml": 11420.485975308697,
+      "domestic_unmet_ml": 0.0,
+      "facility_energy_mwh": 7770253.349448,
+      "freshwater_dependency_ratio": 0.30000000000000004,
+      "freshwater_withdrawal_ml": 4356.861524662803,
+      "internal_cooling_recovery_ratio": 0.023116363636363636,
+      "it_energy_mwh": 6569989.2,
+      "max_daily_average_grid_connection_ratio": NaN,
+      "max_local_connection_ratio": NaN,
+      "max_reuse_utilization": 0.0,
+      "max_source_abstraction_ratio": 0.06928261585543805,
+      "max_wtw_utilization": 0.06903469644086357,
+      "max_wwtw_utilization": 0.018240721346106326,
+      "maximum_7day_average_ml": 29.64703182410205,
+      "maximum_daily_withdrawal_ml": 29.64703182410205,
+      "mean_daily_average_grid_connection_ratio": NaN,
+      "mean_local_connection_ratio": NaN,
+      "mean_source_abstraction_ratio": 0.059592006014547505,
+      "mean_total_demand_to_wtw_capacity": 0.05376849962560559,
+      "min_source_storage_ml": -9880.922023123523,
+      "offsite_electricity_water_ml": 13986.4560290064,
+      "p95_daily_withdrawal_ml": 22.960640577218246,
+      "peak_capacity_ratio": 0.06250069646036538,
+      "peak_total_demand_to_wtw_capacity": 0.06250069646036538,
+      "process_wue_l_kwh_it": 2.2086599090415566,
+      "reclaimed_water_substitution_ratio": 0.7,
+      "reclaimed_water_use_ml": 10166.010224213205,
+      "return_flow_ml": 3090.3857735673105,
+      "return_ratio": 0.21279439955162377,
+      "site_wue_l_kwh_it": 2.2104863960622656,
+      "summer_peak_withdrawal_ml": 23.323771506973394,
+      "system_carbon_kg_co2e": 2723531459.6160464,
+      "system_energy_kwh": 7780238418.258436,
+      "system_reliability_fraction": -1.1102230246251565e-16,
+      "total_withdrawal_ml": 14522.871748876008,
+      "unmet_cooling_water_ml": 0.0,
+      "urban_water_circularity_ratio": 0.7,
+      "wastewater_ml": 3090.385773567308,
+      "wue_l_kwh_it": 2.2104863960622656
+    },
+    "cawcc_daily": {
+      "maximum_safe_ai_capacity_mw": 1150.0,
+      "first_failed_capacity_mw": 1200.0,
+      "limiting_constraint": "max_source_abstraction_ratio",
+      "threshold_interval_mw": [
+        1150.0,
+        1200.0
+      ],
+      "reentrant_feasibility": false
+    },
+    "cawcc_annual": {
+      "maximum_safe_ai_capacity_mw": 1300.0,
+      "first_failed_capacity_mw": 1350.0,
+      "limiting_constraint": "reclaimed_water_substitution_ratio"
+    },
+    "cawcc_hourly": {
+      "maximum_safe_ai_capacity_mw": 1100.0,
+      "first_failed_capacity_mw": 1150.0,
+      "limiting_constraint": "hourly_max_wtw_utilization",
+      "intra_day_peak_factor": 1.0577149587750294
+    },
+    "cawcc_physical_daily": {
+      "maximum_safe_ai_capacity_mw": 1150.0,
+      "first_failed_capacity_mw": 1200.0,
+      "limiting_constraint": "max_source_abstraction_ratio"
+    },
+    "cawcc_physical_annual": {
+      "maximum_safe_ai_capacity_mw": 1650.0,
+      "first_failed_capacity_mw": 1700.0,
+      "limiting_constraint": "mean_daily_average_grid_connection_ratio"
+    },
+    "cawcc_physical_hourly": {
+      "maximum_safe_ai_capacity_mw": 1100.0,
+      "first_failed_capacity_mw": 1150.0,
+      "limiting_constraint": "hourly_max_wtw_utilization"
+    },
+    "reclaimed_target_threshold": {
+      "maximum_safe_ai_capacity_mw": 1300.0,
+      "first_failed_capacity_mw": 1350.0,
+      "limiting_constraint": "reclaimed_water_substitution_ratio"
+    },
+    "bottleneck_chain": [
+      {
+        "constraint": "max_source_abstraction_ratio",
+        "operator": "<=",
+        "target": 0.95,
+        "first_failed_capacity_mw": 1200.0,
+        "maximum_safe_capacity_mw": 1150.0,
+        "first_failure_margin": 0.004953200783991307,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_wtw_utilization",
+        "operator": "<=",
+        "target": 0.95,
+        "first_failed_capacity_mw": 1200.0,
+        "maximum_safe_capacity_mw": 1150.0,
+        "first_failure_margin": 0.0015360168979424715,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "reclaimed_water_substitution_ratio",
+        "operator": ">=",
+        "target": 0.65,
+        "first_failed_capacity_mw": 1350.0,
+        "maximum_safe_capacity_mw": 1300.0,
+        "first_failure_margin": 0.015552726878701795,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_daily_average_grid_connection_ratio",
+        "operator": "<=",
+        "target": 1.0,
+        "first_failed_capacity_mw": 1450.0,
+        "maximum_safe_capacity_mw": 1400.0,
+        "first_failure_margin": 0.006087957799999932,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_local_connection_ratio",
+        "operator": "<=",
+        "target": 1.0,
+        "first_failed_capacity_mw": 1550.0,
+        "maximum_safe_capacity_mw": 1500.0,
+        "first_failure_margin": 0.03290988102310766,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "peak_capacity_ratio",
+        "operator": "<=",
+        "target": 1.0,
+        "first_failed_capacity_mw": 1750.0,
+        "maximum_safe_capacity_mw": 1700.0,
+        "first_failure_margin": 0.0010267619356036928,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "domestic_unmet_ml",
+        "operator": "<=",
+        "target": 0.0,
+        "first_failed_capacity_mw": 1850.0,
+        "maximum_safe_capacity_mw": 1800.0,
+        "first_failure_margin": 167.7812957657183,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_wwtw_utilization",
+        "operator": "<=",
+        "target": 0.95,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "system_reliability_fraction",
+        "operator": ">=",
+        "target": 0.99,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "unmet_cooling_water_ml",
+        "operator": "<=",
+        "target": 0.0,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      }
+    ],
+    "interventions": [
+      {
+        "intervention": "baseline",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "wtw_plus_10pct",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "wtw_plus_20pct",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "reuse_plus_50pct",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "reuse_plus_100pct",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "wwtw_plus_20pct",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "local_connection_plus_50pct",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "grid_plus_50pct",
+        "maximum_safe_ai_capacity_mw": 1100.0,
+        "first_failed_capacity_mw": 1200.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "leakage_minus_30pct",
+        "maximum_safe_ai_capacity_mw": 1300.0,
+        "first_failed_capacity_mw": 1400.0,
+        "limiting_constraint": "reclaimed_water_substitution_ratio",
+        "capacity_gain_mw": 200.0
+      },
+      {
+        "intervention": "combined_upgrade",
+        "maximum_safe_ai_capacity_mw": 1300.0,
+        "first_failed_capacity_mw": 1400.0,
+        "limiting_constraint": "reclaimed_water_substitution_ratio",
+        "capacity_gain_mw": 200.0
+      }
+    ],
+    "intervention_grid": {
+      "capacities_mw": [
+        0,
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900,
+        1000,
+        1100,
+        1200,
+        1300,
+        1400,
+        1500,
+        1600,
+        1700,
+        1800,
+        1900,
+        2000
+      ],
+      "same_grid_baseline_mw": 1100.0
+    },
+    "reuse_marginal_curve": [
+      {
+        "reuse_treatment_capacity_ml_day": 40.0,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": NaN
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 45.0,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 60.0,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 75.0,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 90.0,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 120.0,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 160.0,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      }
+    ],
+    "reclaimed_coc_feedback": [
+      {
+        "reclaimed_target_fraction": 0.0,
+        "achieved_coc": 5.0,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 27973.482933769086,
+        "period_blowdown_ml": 5703.048805296895,
+        "period_evaporation_ml": 22835.03025143902,
+        "annual_makeup_ml": 13986.741466884543,
+        "annual_blowdown_ml": 2851.5244026484474,
+        "annual_evaporation_ml": 11417.51512571951,
+        "actual_reclaimed_fraction": 0.0,
+        "freshwater_withdrawal_ml": 27985.482933769086,
+        "reclaimed_water_use_ml": 0.0
+      },
+      {
+        "reclaimed_target_fraction": 0.2,
+        "achieved_coc": 5.0,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 27973.482933769086,
+        "period_blowdown_ml": 5703.048805296895,
+        "period_evaporation_ml": 22835.03025143902,
+        "annual_makeup_ml": 13986.741466884543,
+        "annual_blowdown_ml": 2851.5244026484474,
+        "annual_evaporation_ml": 11417.51512571951,
+        "actual_reclaimed_fraction": 0.19999999999999998,
+        "freshwater_withdrawal_ml": 22388.386347015265,
+        "reclaimed_water_use_ml": 5597.096586753817
+      },
+      {
+        "reclaimed_target_fraction": 0.4,
+        "achieved_coc": 5.0,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 27973.482933769086,
+        "period_blowdown_ml": 5703.048805296895,
+        "period_evaporation_ml": 22835.03025143902,
+        "annual_makeup_ml": 13986.741466884543,
+        "annual_blowdown_ml": 2851.5244026484474,
+        "annual_evaporation_ml": 11417.51512571951,
+        "actual_reclaimed_fraction": 0.4000000000000001,
+        "freshwater_withdrawal_ml": 16791.28976026145,
+        "reclaimed_water_use_ml": 11194.193173507636
+      },
+      {
+        "reclaimed_target_fraction": 0.6,
+        "achieved_coc": 4.761904761904761,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 28298.672552865606,
+        "period_blowdown_ml": 6064.290312344186,
+        "period_evaporation_ml": 22835.03025143902,
+        "annual_makeup_ml": 14149.336276432803,
+        "annual_blowdown_ml": 3032.145156172093,
+        "annual_evaporation_ml": 11417.51512571951,
+        "actual_reclaimed_fraction": 0.6,
+        "freshwater_withdrawal_ml": 11324.269021146243,
+        "reclaimed_water_use_ml": 16986.403531719363
+      },
+      {
+        "reclaimed_target_fraction": 0.8,
+        "achieved_coc": 3.956834532374101,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 29786.157915156262,
+        "period_blowdown_ml": 7716.684553825708,
+        "period_evaporation_ml": 22835.03025143902,
+        "annual_makeup_ml": 14893.078957578131,
+        "annual_blowdown_ml": 3858.342276912854,
+        "annual_evaporation_ml": 11417.51512571951,
+        "actual_reclaimed_fraction": 0.7927724563328178,
+        "freshwater_withdrawal_ml": 6174.999070564636,
+        "reclaimed_water_use_ml": 23623.158844591628
+      },
+      {
+        "reclaimed_target_fraction": 1.0,
+        "achieved_coc": 3.384615384615384,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 31454.06085687314,
+        "period_blowdown_ml": 9569.498225886922,
+        "period_evaporation_ml": 22835.03025143902,
+        "annual_makeup_ml": 15727.03042843657,
+        "annual_blowdown_ml": 4784.749112943461,
+        "annual_evaporation_ml": 11417.51512571951,
+        "actual_reclaimed_fraction": 0.7927837222820917,
+        "freshwater_withdrawal_ml": 6520.280005206429,
+        "reclaimed_water_use_ml": 24945.780851666714
+      }
+    ],
+    "reuse_production_marginal_curve": [
+      {
+        "central_reuse_fraction": 0.16,
+        "estimated_production_ml_day": 32.224577269479454,
+        "reuse_treatment_capacity_ml_day": 40.3,
+        "cawcc_mw": 1100.0,
+        "limiting_constraint": "max_source_abstraction_ratio",
+        "marginal_gain_mw_per_ml_day": NaN
+      },
+      {
+        "central_reuse_fraction": 0.25,
+        "estimated_production_ml_day": 50.35090198356165,
+        "reuse_treatment_capacity_ml_day": 62.9,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 16.550514499331044
+      },
+      {
+        "central_reuse_fraction": 0.35,
+        "estimated_production_ml_day": 70.4912627769863,
+        "reuse_treatment_capacity_ml_day": 88.1,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "central_reuse_fraction": 0.45,
+        "estimated_production_ml_day": 90.63162357041097,
+        "reuse_treatment_capacity_ml_day": 113.3,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "central_reuse_fraction": 0.6,
+        "estimated_production_ml_day": 120.84216476054794,
+        "reuse_treatment_capacity_ml_day": 151.1,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      }
+    ],
+    "reclaimed_net_substitution": [
+      {
+        "capacity_mw": 500.0,
+        "reuse_treatment_capacity_ml_day": 40.0,
+        "baseline_city_abstraction_ml": 186965.07044844696,
+        "city_abstraction_ml": 203495.8929168824,
+        "city_abstraction_increase_ml": 16530.82246843545,
+        "conveyance_efficiency": 0.84865761288,
+        "ai_withdrawal_ml": 14522.871748876008,
+        "ai_reclaimed_ml": 10166.010224213205,
+        "gross_substitution_ratio": 0.7,
+        "net_freshwater_saving_ml": 493.86341387051107,
+        "net_substitution_ratio": 0.03400590616031113,
+        "tag": NaN
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 40.0,
+        "baseline_city_abstraction_ml": 186965.07044844696,
+        "city_abstraction_ml": 220012.5754072892,
+        "city_abstraction_increase_ml": 33047.50495884224,
+        "conveyance_efficiency": 0.84865761288,
+        "ai_withdrawal_ml": 29033.743497752017,
+        "ai_reclaimed_ml": 20323.620448426413,
+        "gross_substitution_ratio": 0.7000000000000001,
+        "net_freshwater_saving_ml": 987.7268277410003,
+        "net_substitution_ratio": 0.034019961215730816,
+        "tag": NaN
+      },
+      {
+        "capacity_mw": 1500.0,
+        "reuse_treatment_capacity_ml_day": 40.0,
+        "baseline_city_abstraction_ml": 186965.07044844696,
+        "city_abstraction_ml": 236529.25789769593,
+        "city_abstraction_increase_ml": 49564.18744924897,
+        "conveyance_efficiency": 0.84865761288,
+        "ai_withdrawal_ml": 43544.61524662802,
+        "ai_reclaimed_ml": 25044.004427198583,
+        "gross_substitution_ratio": 0.5751343601351013,
+        "net_freshwater_saving_ml": 1481.5902416115277,
+        "net_substitution_ratio": 0.03402464881639431,
+        "tag": NaN
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 40.0,
+        "baseline_city_abstraction_ml": 186965.07044844696,
+        "city_abstraction_ml": 220012.5754072892,
+        "city_abstraction_increase_ml": 33047.50495884224,
+        "conveyance_efficiency": 0.84865761288,
+        "ai_withdrawal_ml": 29033.743497752017,
+        "ai_reclaimed_ml": 20323.620448426413,
+        "gross_substitution_ratio": 0.7000000000000001,
+        "net_freshwater_saving_ml": 987.7268277410003,
+        "net_substitution_ratio": 0.034019961215730816,
+        "tag": "reuse_capacity_x1"
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 60.0,
+        "baseline_city_abstraction_ml": 186965.07044844696,
+        "city_abstraction_ml": 205588.65910850101,
+        "city_abstraction_increase_ml": 18623.588660054054,
+        "conveyance_efficiency": 0.84865761288,
+        "ai_withdrawal_ml": 29033.743497752017,
+        "ai_reclaimed_ml": 20323.620448426413,
+        "gross_substitution_ratio": 0.7000000000000001,
+        "net_freshwater_saving_ml": 13228.693202251507,
+        "net_substitution_ratio": 0.45563167571814356,
+        "tag": "reuse_capacity_x1.5"
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 80.0,
+        "baseline_city_abstraction_ml": 186965.07044844696,
+        "city_abstraction_ml": 191164.74280971283,
+        "city_abstraction_increase_ml": 4199.672361265868,
+        "conveyance_efficiency": 0.84865761288,
+        "ai_withdrawal_ml": 29033.743497752017,
+        "ai_reclaimed_ml": 20323.620448426413,
+        "gross_substitution_ratio": 0.7000000000000001,
+        "net_freshwater_saving_ml": 25469.659576762013,
+        "net_substitution_ratio": 0.8772433902205563,
+        "tag": "reuse_capacity_x2"
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 120.0,
+        "baseline_city_abstraction_ml": 186965.07044844696,
+        "city_abstraction_ml": 162316.91021213646,
+        "city_abstraction_increase_ml": -24648.160236310505,
+        "conveyance_efficiency": 0.84865761288,
+        "ai_withdrawal_ml": 29033.743497752017,
+        "ai_reclaimed_ml": 20323.620448426413,
+        "gross_substitution_ratio": 0.7000000000000001,
+        "net_freshwater_saving_ml": 49951.59232578303,
+        "net_substitution_ratio": 1.720466819225382,
+        "tag": "reuse_capacity_x3"
+      }
+    ],
+    "technology": [
+      {
+        "technology": "dry",
+        "site_wue_l_kwh_it": 0.0,
+        "process_wue_l_kwh_it": 0.0,
+        "wue_l_kwh": 0.0,
+        "mean_pue": 1.3557046164383562,
+        "mean_wet_fraction": 0.0,
+        "period_withdrawal_ml": 0.0,
+        "annual_withdrawal_ml": 0.0,
+        "annual_consumption_ml": 0.0,
+        "daily_peak_factor": NaN,
+        "facility_energy_mwh": 13451907.683412,
+        "cawcc_mw": NaN,
+        "limiting_constraint": "reclaimed_water_substitution_ratio"
+      },
+      {
+        "technology": "dry_first",
+        "site_wue_l_kwh_it": 0.4340058335725106,
+        "process_wue_l_kwh_it": 0.43278817555870447,
+        "wue_l_kwh": 0.4340058335725106,
+        "mean_pue": 1.3286731369863014,
+        "mean_wet_fraction": 0.1423534270925813,
+        "period_withdrawal_ml": 4277.120458962589,
+        "annual_withdrawal_ml": 2138.5602294812943,
+        "annual_consumption_ml": 1678.3880812797283,
+        "daily_peak_factor": 7.483043522757726,
+        "facility_energy_mwh": 13171442.021964002,
+        "cawcc_mw": 500.0,
+        "limiting_constraint": "max_source_abstraction_ratio"
+      },
+      {
+        "technology": "efficient_evaporative",
+        "site_wue_l_kwh_it": 2.12189110772229,
+        "process_wue_l_kwh_it": 2.120673449708484,
+        "wue_l_kwh": 2.12189110772229,
+        "mean_pue": 1.1337893493150684,
+        "mean_wet_fraction": 1.0,
+        "period_withdrawal_ml": 20911.202491967222,
+        "annual_withdrawal_ml": 10455.601245983611,
+        "annual_consumption_ml": 8224.145767573751,
+        "daily_peak_factor": 1.3108532845916812,
+        "facility_energy_mwh": 11191064.25681,
+        "cawcc_mw": 1000.0,
+        "limiting_constraint": "reclaimed_water_substitution_ratio"
+      },
+      {
+        "technology": "evaporative",
+        "site_wue_l_kwh_it": 2.209877567055362,
+        "process_wue_l_kwh_it": 2.2086599090415557,
+        "wue_l_kwh": 2.209877567055362,
+        "mean_pue": 1.1805472191780821,
+        "mean_wet_fraction": 1.0,
+        "period_withdrawal_ml": 21778.30762331401,
+        "annual_withdrawal_ml": 10889.153811657005,
+        "annual_consumption_ml": 8565.364481481523,
+        "daily_peak_factor": 1.289517088891147,
+        "facility_energy_mwh": 11655380.024172,
+        "cawcc_mw": 1000.0,
+        "limiting_constraint": "reclaimed_water_substitution_ratio"
+      },
+      {
+        "technology": "hybrid",
+        "site_wue_l_kwh_it": 0.6567734782060934,
+        "process_wue_l_kwh_it": 0.6555558201922873,
+        "wue_l_kwh": 0.6567734782060934,
+        "mean_pue": 1.2443365684931507,
+        "mean_wet_fraction": 0.2459440925871664,
+        "period_withdrawal_ml": 6472.491987990705,
+        "annual_withdrawal_ml": 3236.2459939953524,
+        "annual_consumption_ml": 2542.2992987363805,
+        "daily_peak_factor": 4.313612908622845,
+        "facility_energy_mwh": 12301611.614982,
+        "cawcc_mw": 1000.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio"
+      },
+      {
+        "technology": "liquid_to_air",
+        "site_wue_l_kwh_it": 0.0,
+        "process_wue_l_kwh_it": 0.0,
+        "wue_l_kwh": 0.0,
+        "mean_pue": 1.2546101780821919,
+        "mean_wet_fraction": 0.0,
+        "period_withdrawal_ml": 0.0,
+        "annual_withdrawal_ml": 0.0,
+        "annual_consumption_ml": 0.0,
+        "daily_peak_factor": NaN,
+        "facility_energy_mwh": 12413411.023068001,
+        "cawcc_mw": NaN,
+        "limiting_constraint": "reclaimed_water_substitution_ratio"
+      },
+      {
+        "technology": "liquid_to_water",
+        "site_wue_l_kwh_it": 1.9169326857770912,
+        "process_wue_l_kwh_it": 1.915715027763285,
+        "wue_l_kwh": 1.9169326857770912,
+        "mean_pue": 1.1373050890410956,
+        "mean_wet_fraction": 1.0,
+        "period_withdrawal_ml": 18891.340564023725,
+        "annual_withdrawal_ml": 9445.670282011863,
+        "annual_consumption_ml": 7429.300178027226,
+        "daily_peak_factor": 1.3434561709299728,
+        "facility_energy_mwh": 11232747.249534,
+        "cawcc_mw": 1000.0,
+        "limiting_constraint": "max_source_abstraction_ratio"
+      }
+    ],
+    "policy": [
+      {
+        "policy": "policy_a",
+        "capacity_mw": 1000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 29033.743497752013
+      },
+      {
+        "policy": "policy_a",
+        "capacity_mw": 1500.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 43544.615246628025
+      },
+      {
+        "policy": "policy_a",
+        "capacity_mw": 2000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 0.9814409022248446,
+        "unmet_cooling_water_ml": 1307.7094229091126,
+        "ai_withdrawal_ml": 56747.77757259492
+      },
+      {
+        "policy": "policy_b",
+        "capacity_mw": 1000.0,
+        "domestic_unmet_ml": 3.922195901395753e-12,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 0.9999999999999999,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 29033.743497752017
+      },
+      {
+        "policy": "policy_b",
+        "capacity_mw": 1500.0,
+        "domestic_unmet_ml": 3.467448550509289e-12,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 43544.61524662802
+      },
+      {
+        "policy": "policy_b",
+        "capacity_mw": 2000.0,
+        "domestic_unmet_ml": 992.1972727431985,
+        "domestic_unmet_residual_kpi": 992.1972727431985,
+        "system_reliability_fraction": 0.9922541906294724,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 58055.486995504034
+      },
+      {
+        "policy": "policy_c",
+        "capacity_mw": 1000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 0.9999999999999999,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 29033.743497752017
+      },
+      {
+        "policy": "policy_c",
+        "capacity_mw": 1500.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 43544.61524662802
+      },
+      {
+        "policy": "policy_c",
+        "capacity_mw": 2000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 0.9941832013205247,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 58055.486995504034
+      }
+    ],
+    "state_pressure": [
+      {
+        "state": "S0",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 8201.898157516254,
+        "total_withdrawal_ml": 29033.743497752017,
+        "freshwater_withdrawal_ml": 8710.123049325606,
+        "reclaimed_water_use_ml": 20323.620448426413,
+        "system_reliability_fraction": 0.9999999999999999,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.9239221383215972,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.9272401544418161,
+        "reclaimed_water_substitution_ratio": 0.7000000000000001,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S0",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 8282.500318088762,
+        "total_withdrawal_ml": 29114.34565832452,
+        "freshwater_withdrawal_ml": 8734.303697497358,
+        "reclaimed_water_use_ml": 20380.041960827162,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.942545801810079,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.9459306997735931,
+        "reclaimed_water_substitution_ratio": 0.7,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S0",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 8221.381929263584,
+        "total_withdrawal_ml": 29053.89403789514,
+        "freshwater_withdrawal_ml": 8650.9649208561,
+        "reclaimed_water_use_ml": 20402.929117039042,
+        "system_reliability_fraction": 0.9906727013555542,
+        "domestic_unmet_ml": 1217.2097954075846,
+        "max_wtw_utilization": 0.8469583783783784,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.7022442186382107,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S0",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 8281.391956512758,
+        "total_withdrawal_ml": 29114.34565832452,
+        "freshwater_withdrawal_ml": 8354.588374613628,
+        "reclaimed_water_use_ml": 20759.757283710896,
+        "system_reliability_fraction": 0.9427584234831601,
+        "domestic_unmet_ml": 8323.977385034486,
+        "max_wtw_utilization": 0.8469583783783784,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.7130422070047506,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 8201.258780023913,
+        "total_withdrawal_ml": 29033.743497752017,
+        "freshwater_withdrawal_ml": 9033.095283138326,
+        "reclaimed_water_use_ml": 20000.64821461369,
+        "system_reliability_fraction": 0.9204520635782594,
+        "domestic_unmet_ml": 10252.822919932258,
+        "max_wtw_utilization": 0.98,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.7717837838050408,
+        "reclaimed_water_substitution_ratio": 0.6888759699954735,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 8280.662659494494,
+        "total_withdrawal_ml": 29114.34565832452,
+        "freshwater_withdrawal_ml": 9149.90762109387,
+        "reclaimed_water_use_ml": 19964.43803723065,
+        "system_reliability_fraction": 0.9145000695956557,
+        "domestic_unmet_ml": 11059.211847469596,
+        "max_wtw_utilization": 0.98,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.7903694542256569,
+        "reclaimed_water_substitution_ratio": 0.6857251154302456,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 8221.117611370799,
+        "total_withdrawal_ml": 29053.89403789514,
+        "freshwater_withdrawal_ml": 9062.430532206858,
+        "reclaimed_water_use_ml": 19991.463505688283,
+        "system_reliability_fraction": 0.9189593537717279,
+        "domestic_unmet_ml": 10454.518135298267,
+        "max_wtw_utilization": 0.98,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.9134391061416784,
+        "reclaimed_water_substitution_ratio": 0.6880820684350716,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 8008.158550725686,
+        "total_withdrawal_ml": 28849.798226336883,
+        "freshwater_withdrawal_ml": 9508.951694210637,
+        "reclaimed_water_use_ml": 19340.846532126245,
+        "system_reliability_fraction": 0.7941195793206811,
+        "domestic_unmet_ml": 29303.185177608662,
+        "max_wtw_utilization": 0.98,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.664361818860573,
+        "unmet_cooling_water_ml": 262.1193809951421
+      },
+      {
+        "state": "S2",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 8200.754018259078,
+        "total_withdrawal_ml": 29032.715928855294,
+        "freshwater_withdrawal_ml": 10094.175429068133,
+        "reclaimed_water_use_ml": 18938.54049978716,
+        "system_reliability_fraction": 0.8091872833472598,
+        "domestic_unmet_ml": 24651.959500035962,
+        "max_wtw_utilization": 0.6476740540540541,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.652317218485383,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S2",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 8279.42076158658,
+        "total_withdrawal_ml": 29113.318089427798,
+        "freshwater_withdrawal_ml": 10206.931188913146,
+        "reclaimed_water_use_ml": 18906.386900514655,
+        "system_reliability_fraction": 0.8037520828462907,
+        "domestic_unmet_ml": 25455.34098296023,
+        "max_wtw_utilization": 0.6476740540540541,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.6494068055877257,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S2",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 8218.89352483543,
+        "total_withdrawal_ml": 29049.900603429796,
+        "freshwater_withdrawal_ml": 12865.626053430336,
+        "reclaimed_water_use_ml": 16184.274549999462,
+        "system_reliability_fraction": 0.670522525151566,
+        "domestic_unmet_ml": 42100.45280234613,
+        "max_wtw_utilization": 0.5505229459459459,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.5571197909051935,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S2",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 8118.852890744403,
+        "total_withdrawal_ml": 28950.21573533833,
+        "freshwater_withdrawal_ml": 12772.613480709235,
+        "reclaimed_water_use_ml": 16177.602254629091,
+        "system_reliability_fraction": 0.6012611336156393,
+        "domestic_unmet_ml": 57000.838134657264,
+        "max_wtw_utilization": 0.5505229459459459,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.5557688544654825,
+        "unmet_cooling_water_ml": 158.2924594724378
+      },
+      {
+        "state": "S3",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 8201.898157516254,
+        "total_withdrawal_ml": 29033.743497752017,
+        "freshwater_withdrawal_ml": 8710.123049325606,
+        "reclaimed_water_use_ml": 20323.620448426413,
+        "system_reliability_fraction": 0.9999999999999999,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.8034105550622586,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.8062957864711445,
+        "reclaimed_water_substitution_ratio": 0.7000000000000001,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S3",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 8282.500318088762,
+        "total_withdrawal_ml": 29114.34565832452,
+        "freshwater_withdrawal_ml": 8734.303697497358,
+        "reclaimed_water_use_ml": 20380.041960827162,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.8196050450522426,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.8225484345857332,
+        "reclaimed_water_substitution_ratio": 0.7,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S3",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 8222.048697659382,
+        "total_withdrawal_ml": 29053.89403789514,
+        "freshwater_withdrawal_ml": 8716.168211368544,
+        "reclaimed_water_use_ml": 20337.7258265266,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.8074591775597547,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.9533634688232845,
+        "reclaimed_water_substitution_ratio": 0.7000000000000001,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S3",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 8204.444594305078,
+        "total_withdrawal_ml": 29051.181074696586,
+        "freshwater_withdrawal_ml": 9372.879587310259,
+        "reclaimed_water_use_ml": 19678.30148738632,
+        "system_reliability_fraction": 0.9455060856324916,
+        "domestic_unmet_ml": 7269.013048159639,
+        "max_wtw_utilization": 0.8469583783783783,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.6758970893017409,
+        "unmet_cooling_water_ml": 63.164583627937176
+      }
+    ],
+    "heatwave": [
+      {
+        "capacity_mw": 500.0,
+        "total_withdrawal_ml": 14528.089159347,
+        "maximum_daily_withdrawal_ml": 29.64703182410205,
+        "unmet_cooling_water_ml": 0.0,
+        "system_reliability_fraction": 1.0,
+        "max_wtw_utilization": 0.8846530905812288,
+        "max_local_connection_ratio": 0.42352902605860077
+      },
+      {
+        "capacity_mw": 1000.0,
+        "total_withdrawal_ml": 29044.178318694,
+        "maximum_daily_withdrawal_ml": 47.29406364820411,
+        "unmet_cooling_water_ml": 0.0,
+        "system_reliability_fraction": 0.9999999999999999,
+        "max_wtw_utilization": 0.9547185163181041,
+        "max_local_connection_ratio": 0.6756294806886302
+      },
+      {
+        "capacity_mw": 1500.0,
+        "total_withdrawal_ml": 43560.267478041,
+        "maximum_daily_withdrawal_ml": 70.37655358317377,
+        "unmet_cooling_water_ml": 0.0,
+        "system_reliability_fraction": 1.0,
+        "max_wtw_utilization": 0.9799999999999999,
+        "max_local_connection_ratio": 1.0053793369024824
+      }
+    ]
+  },
+  "co": {
+    "domain": "co",
+    "simulation_years": 2.0,
+    "checks": {
+      "V1_water_balance": {
+        "max_residual_ml": 1.0658141036401503e-14,
+        "passed": true
+      },
+      "V2_monotone_withdrawal": {
+        "min_diff": 1382.1706615704607,
+        "passed": true
+      },
+      "V3_constraints_informative": {
+        "uninformative_in_G0_S0": [
+          "system_reliability_fraction",
+          "domestic_unmet_ml",
+          "unmet_cooling_water_ml",
+          "max_wwtw_utilization",
+          "reclaimed_water_substitution_ratio",
+          "peak_capacity_ratio"
+        ],
+        "passed": true,
+        "note": "diagnostic: 不失效约束需靠压力情景激活"
+      },
+      "V4_scale_ordering": {
+        "annual": 1700.0,
+        "daily": 1450.0,
+        "hourly": 1350.0,
+        "passed": true
+      },
+      "V5_pue_wue_ordering": {
+        "pue_dry_gt_evaporative": true,
+        "wue_dry_lt_evaporative": true,
+        "passed": true
+      },
+      "V6_peak_factor_mechanism": {
+        "daily_peak_factors": {
+          "dry_first": 83.53377617266679,
+          "hybrid": 16.725931509854302,
+          "evaporative": 1.3192784614288722,
+          "efficient_evaporative": 1.3505679190394655,
+          "liquid_to_water": 1.3917713692060059
+        },
+        "annual_withdrawal_ml": {
+          "dry_first": 97.49134261236912,
+          "hybrid": 713.272136657258,
+          "evaporative": 10372.279961778517,
+          "efficient_evaporative": 9729.493269037433,
+          "liquid_to_water": 8753.857985897048
+        },
+        "evaluated": {
+          "hybrid": 16.725931509854302,
+          "evaporative": 1.3192784614288722,
+          "efficient_evaporative": 1.3505679190394655,
+          "liquid_to_water": 1.3917713692060059
+        },
+        "degenerate_excluded": [
+          "dry_first"
+        ],
+        "direction_dry_first_gt_evaporative": null,
+        "literature_band_dry_first_6p5_10": null,
+        "literature_band_evaporative_1p7_3p0": false,
+        "note": "退化组合(年取水 < 同域最大值的 5%)不参与量级校核",
+        "passed": true
+      },
+      "V7_intervention_monotone": {
+        "min_gain_mw": 0.0,
+        "passed": true
+      },
+      "V8_policy_resident_first": {
+        "domestic_unmet_by_policy": {
+          "policy_a": {
+            "1000.0": 0.0,
+            "1500.0": 0.0,
+            "2000.0": 0.0
+          },
+          "policy_b": {
+            "1000.0": 4.973799150320701e-12,
+            "1500.0": 3.694822225952521e-12,
+            "2000.0": 2.2453150450019166e-12
+          },
+          "policy_c": {
+            "1000.0": 0.0,
+            "1500.0": 0.0,
+            "2000.0": 0.0
+          }
+        },
+        "passed": true
+      },
+      "V9_climate_sensitivity": {
+        "heat_signal_metric": "summer_withdrawal_ml (6-8月 AI 取水)",
+        "summer_G0_ml": 7751.742299238751,
+        "summer_G1_ml": 7829.433123133414,
+        "delta_summer_G1_percent": 1.0022369281070151,
+        "drought_signal_metric": "max_source_abstraction_ratio",
+        "abstraction_ratio_G0": 0.8542494142374499,
+        "abstraction_ratio_G2": 1.0,
+        "delta_abstraction_ratio_G2": 0.14575058576255007,
+        "reclaimed_drought_response_percent": 0.07023111826659205,
+        "passed": true
+      },
+      "V11_net_le_gross_substitution": {
+        "rows": 3,
+        "violations": 0,
+        "gross_at_1000mw": 0.45,
+        "net_at_1000mw": 0.0274766890552267,
+        "net_at_1000mw_reuse_x3": 1.6419148032034518,
+        "note": "仅校核再生水配置不变的行; 扩产能行可出现净节省 > 园区取水量",
+        "passed": true
+      },
+      "V12_baseline_city_self_consistent": {
+        "baseline_unmet_ml": 4.455102953215828e-12,
+        "baseline_min_storage_ml": 63971.87230832755,
+        "reservoir_capacity_ml": 120000.0,
+        "min_storage_fraction": 0.5330989359027296,
+        "passed": true
+      },
+      "V10_uninformative_constraints_activated_by_pressure": {
+        "source_abstraction_max_over_SxG": 1.0,
+        "reliability_min_over_SxG": 0.6514239842967063,
+        "passed": true
+      }
+    },
+    "baseline_delta": {
+      "coincident_city_ai_peak": 0.0,
+      "consumption_fraction": 0.8158056665507002,
+      "consumption_ml": 11285.616246491798,
+      "domestic_unmet_ml": 0.0,
+      "facility_energy_mwh": 7678569.19212,
+      "freshwater_dependency_ratio": 0.5499999999999998,
+      "freshwater_withdrawal_ml": 7608.5386386375785,
+      "internal_cooling_recovery_ratio": 0.019980000000000005,
+      "it_energy_mwh": 6569989.2,
+      "max_daily_average_grid_connection_ratio": NaN,
+      "max_local_connection_ratio": NaN,
+      "max_reuse_utilization": 0.0,
+      "max_source_abstraction_ratio": 0.06358725889739558,
+      "max_wtw_utilization": 0.06493932482342446,
+      "max_wwtw_utilization": 0.015080952637028577,
+      "maximum_7day_average_ml": 28.99347132325969,
+      "maximum_daily_withdrawal_ml": 28.99347132325969,
+      "mean_daily_average_grid_connection_ratio": NaN,
+      "mean_local_connection_ratio": NaN,
+      "mean_source_abstraction_ratio": 0.05429108735029764,
+      "mean_total_demand_to_wtw_capacity": 0.049869165882136524,
+      "min_source_storage_ml": -3819.370198626908,
+      "offsite_electricity_water_ml": 13821.424545816,
+      "p95_daily_withdrawal_ml": 21.64789033186423,
+      "peak_capacity_ratio": 0.05839906434068576,
+      "peak_total_demand_to_wtw_capacity": 0.05839906434068576,
+      "process_wue_l_kwh_it": 2.103763978136325,
+      "reclaimed_water_substitution_ratio": 0.44999999999999996,
+      "reclaimed_water_use_ml": 6225.167977067111,
+      "return_flow_ml": 2536.090369212891,
+      "return_ratio": 0.18332688697718938,
+      "site_wue_l_kwh_it": 2.1055904651570345,
+      "summer_peak_withdrawal_ml": 22.19164444946058,
+      "system_carbon_kg_co2e": 2691141013.838014,
+      "system_energy_kwh": 7687923876.620543,
+      "system_reliability_fraction": 1.1102230246251565e-16,
+      "total_withdrawal_ml": 13833.706615704692,
+      "unmet_cooling_water_ml": 0.0,
+      "urban_water_circularity_ratio": 0.44999999999999996,
+      "wastewater_ml": 2536.0903692128777,
+      "wue_l_kwh_it": 2.1055904651570345
+    },
+    "cawcc_daily": {
+      "maximum_safe_ai_capacity_mw": 1450.0,
+      "first_failed_capacity_mw": 1500.0,
+      "limiting_constraint": "max_daily_average_grid_connection_ratio",
+      "threshold_interval_mw": [
+        1450.0,
+        1500.0
+      ],
+      "reentrant_feasibility": false
+    },
+    "cawcc_annual": {
+      "maximum_safe_ai_capacity_mw": 1700.0,
+      "first_failed_capacity_mw": 1750.0,
+      "limiting_constraint": "mean_daily_average_grid_connection_ratio"
+    },
+    "cawcc_hourly": {
+      "maximum_safe_ai_capacity_mw": 1350.0,
+      "first_failed_capacity_mw": 1400.0,
+      "limiting_constraint": "hourly_max_daily_average_grid_connection_ratio",
+      "intra_day_peak_factor": 1.0577149587750294
+    },
+    "cawcc_physical_daily": {
+      "maximum_safe_ai_capacity_mw": 1450.0,
+      "first_failed_capacity_mw": 1500.0,
+      "limiting_constraint": "max_daily_average_grid_connection_ratio"
+    },
+    "cawcc_physical_annual": {
+      "maximum_safe_ai_capacity_mw": 1700.0,
+      "first_failed_capacity_mw": 1750.0,
+      "limiting_constraint": "mean_daily_average_grid_connection_ratio"
+    },
+    "cawcc_physical_hourly": {
+      "maximum_safe_ai_capacity_mw": 1350.0,
+      "first_failed_capacity_mw": 1400.0,
+      "limiting_constraint": "hourly_max_daily_average_grid_connection_ratio"
+    },
+    "reclaimed_target_threshold": {
+      "maximum_safe_ai_capacity_mw": 2000.0,
+      "first_failed_capacity_mw": null,
+      "limiting_constraint": null
+    },
+    "bottleneck_chain": [
+      {
+        "constraint": "max_daily_average_grid_connection_ratio",
+        "operator": "<=",
+        "target": 1.0,
+        "first_failed_capacity_mw": 1500.0,
+        "maximum_safe_capacity_mw": 1450.0,
+        "first_failure_margin": 0.027369980000000016,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_local_connection_ratio",
+        "operator": "<=",
+        "target": 1.0,
+        "first_failed_capacity_mw": 1600.0,
+        "maximum_safe_capacity_mw": 1550.0,
+        "first_failure_margin": 0.014475174832483173,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_wtw_utilization",
+        "operator": "<=",
+        "target": 0.95,
+        "first_failed_capacity_mw": 1600.0,
+        "maximum_safe_capacity_mw": 1550.0,
+        "first_failure_margin": 0.00034064420197643663,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_source_abstraction_ratio",
+        "operator": "<=",
+        "target": 0.95,
+        "first_failed_capacity_mw": 1800.0,
+        "maximum_safe_capacity_mw": 1750.0,
+        "first_failure_margin": 0.005989028473282754,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "domestic_unmet_ml",
+        "operator": "<=",
+        "target": 0.0,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "max_wwtw_utilization",
+        "operator": "<=",
+        "target": 0.95,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "peak_capacity_ratio",
+        "operator": "<=",
+        "target": 1.0,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "reclaimed_water_substitution_ratio",
+        "operator": ">=",
+        "target": 0.4,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "system_reliability_fraction",
+        "operator": ">=",
+        "target": 0.99,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      },
+      {
+        "constraint": "unmet_cooling_water_ml",
+        "operator": "<=",
+        "target": 0.0,
+        "first_failed_capacity_mw": NaN,
+        "maximum_safe_capacity_mw": 2000.0,
+        "first_failure_margin": NaN,
+        "reentrant_feasibility": false
+      }
+    ],
+    "interventions": [
+      {
+        "intervention": "baseline",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "wtw_plus_10pct",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "wtw_plus_20pct",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "reuse_plus_50pct",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "reuse_plus_100pct",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "wwtw_plus_20pct",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "local_connection_plus_50pct",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "grid_plus_50pct",
+        "maximum_safe_ai_capacity_mw": 1500.0,
+        "first_failed_capacity_mw": 1600.0,
+        "limiting_constraint": "max_local_connection_ratio",
+        "capacity_gain_mw": 100.0
+      },
+      {
+        "intervention": "leakage_minus_30pct",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      },
+      {
+        "intervention": "combined_upgrade",
+        "maximum_safe_ai_capacity_mw": 1400.0,
+        "first_failed_capacity_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "capacity_gain_mw": 0.0
+      }
+    ],
+    "intervention_grid": {
+      "capacities_mw": [
+        0,
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900,
+        1000,
+        1100,
+        1200,
+        1300,
+        1400,
+        1500,
+        1600,
+        1700,
+        1800,
+        1900,
+        2000
+      ],
+      "same_grid_baseline_mw": 1400.0
+    },
+    "reuse_marginal_curve": [
+      {
+        "reuse_treatment_capacity_ml_day": 36.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": NaN
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 45.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 60.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 75.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 90.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 120.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "reuse_treatment_capacity_ml_day": 160.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      }
+    ],
+    "reclaimed_coc_feedback": [
+      {
+        "reclaimed_target_fraction": 0.0,
+        "achieved_coc": 5.0,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 27643.41323140938,
+        "period_blowdown_ml": 5635.756376028647,
+        "period_evaporation_ml": 22565.591095209795,
+        "annual_makeup_ml": 13821.70661570469,
+        "annual_blowdown_ml": 2817.8781880143233,
+        "annual_evaporation_ml": 11282.795547604897,
+        "actual_reclaimed_fraction": 0.0,
+        "freshwater_withdrawal_ml": 27655.41323140938,
+        "reclaimed_water_use_ml": 0.0
+      },
+      {
+        "reclaimed_target_fraction": 0.2,
+        "achieved_coc": 5.0,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 27643.41323140938,
+        "period_blowdown_ml": 5635.756376028647,
+        "period_evaporation_ml": 22565.591095209795,
+        "annual_makeup_ml": 13821.70661570469,
+        "annual_blowdown_ml": 2817.8781880143233,
+        "annual_evaporation_ml": 11282.795547604897,
+        "actual_reclaimed_fraction": 0.20000000000000004,
+        "freshwater_withdrawal_ml": 22124.3305851275,
+        "reclaimed_water_use_ml": 5531.082646281877
+      },
+      {
+        "reclaimed_target_fraction": 0.4,
+        "achieved_coc": 5.0,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 27643.41323140938,
+        "period_blowdown_ml": 5635.756376028647,
+        "period_evaporation_ml": 22565.591095209795,
+        "annual_makeup_ml": 13821.70661570469,
+        "annual_blowdown_ml": 2817.8781880143233,
+        "annual_evaporation_ml": 11282.795547604897,
+        "actual_reclaimed_fraction": 0.4000000000000001,
+        "freshwater_withdrawal_ml": 16593.247938845627,
+        "reclaimed_water_use_ml": 11062.165292563754
+      },
+      {
+        "reclaimed_target_fraction": 0.6,
+        "achieved_coc": 4.761904761904761,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 27964.76581523075,
+        "period_blowdown_ml": 5992.735457943058,
+        "period_evaporation_ml": 22565.591095209795,
+        "annual_makeup_ml": 13982.382907615374,
+        "annual_blowdown_ml": 2996.367728971529,
+        "annual_evaporation_ml": 11282.795547604897,
+        "actual_reclaimed_fraction": 0.6,
+        "freshwater_withdrawal_ml": 11190.7063260923,
+        "reclaimed_water_use_ml": 16786.05948913845
+      },
+      {
+        "reclaimed_target_fraction": 0.8,
+        "achieved_coc": 3.956834532374101,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 29434.699775289584,
+        "period_blowdown_ml": 7625.632474972479,
+        "period_evaporation_ml": 22565.591095209795,
+        "annual_makeup_ml": 14717.349887644792,
+        "annual_blowdown_ml": 3812.8162374862395,
+        "annual_evaporation_ml": 11282.795547604897,
+        "actual_reclaimed_fraction": 0.7617090527144379,
+        "freshwater_withdrawal_ml": 7016.881983887301,
+        "reclaimed_water_use_ml": 22429.81779140228
+      },
+      {
+        "reclaimed_target_fraction": 1.0,
+        "achieved_coc": 3.384615384615384,
+        "quality_coc_fallback_days": 0,
+        "period_makeup_ml": 31082.922499536195,
+        "period_blowdown_ml": 9456.584097938372,
+        "period_evaporation_ml": 22565.591095209795,
+        "annual_makeup_ml": 15541.461249768097,
+        "annual_blowdown_ml": 4728.292048969186,
+        "annual_evaporation_ml": 11282.795547604897,
+        "actual_reclaimed_fraction": 0.7373720477972766,
+        "freshwater_withdrawal_ml": 8166.395819955578,
+        "reclaimed_water_use_ml": 22928.526679580616
+      }
+    ],
+    "reuse_production_marginal_curve": [
+      {
+        "central_reuse_fraction": 0.15,
+        "estimated_production_ml_day": 29.579323029041095,
+        "reuse_treatment_capacity_ml_day": 37.0,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": NaN
+      },
+      {
+        "central_reuse_fraction": 0.25,
+        "estimated_production_ml_day": 49.29887171506849,
+        "reuse_treatment_capacity_ml_day": 61.6,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "central_reuse_fraction": 0.35,
+        "estimated_production_ml_day": 69.01842040109588,
+        "reuse_treatment_capacity_ml_day": 86.3,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "central_reuse_fraction": 0.45,
+        "estimated_production_ml_day": 88.73796908712329,
+        "reuse_treatment_capacity_ml_day": 110.9,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      },
+      {
+        "central_reuse_fraction": 0.6,
+        "estimated_production_ml_day": 118.31729211616438,
+        "reuse_treatment_capacity_ml_day": 147.9,
+        "cawcc_mw": 1400.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio",
+        "marginal_gain_mw_per_ml_day": 0.0
+      }
+    ],
+    "reclaimed_net_substitution": [
+      {
+        "capacity_mw": 500.0,
+        "reuse_treatment_capacity_ml_day": 36.0,
+        "baseline_city_abstraction_ml": 183730.5094916384,
+        "city_abstraction_ml": 199583.50699792532,
+        "city_abstraction_increase_ml": 15852.99750628692,
+        "conveyance_efficiency": 0.8486576128799999,
+        "ai_withdrawal_ml": 13833.706615704692,
+        "ai_reclaimed_ml": 6225.167977067111,
+        "gross_substitution_ratio": 0.44999999999999996,
+        "net_freshwater_saving_ml": 379.9395950266444,
+        "net_substitution_ratio": 0.02746477177673543,
+        "tag": NaN
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 36.0,
+        "baseline_city_abstraction_ml": 183730.5094916384,
+        "city_abstraction_ml": 215422.3645261836,
+        "city_abstraction_increase_ml": 31691.85503454521,
+        "conveyance_efficiency": 0.8486576128799999,
+        "ai_withdrawal_ml": 27655.41323140938,
+        "ai_reclaimed_ml": 12444.935954134222,
+        "gross_substitution_ratio": 0.45,
+        "net_freshwater_saving_ml": 759.8791900532378,
+        "net_substitution_ratio": 0.0274766890552267,
+        "tag": NaN
+      },
+      {
+        "capacity_mw": 1500.0,
+        "reuse_treatment_capacity_ml_day": 36.0,
+        "baseline_city_abstraction_ml": 183730.5094916384,
+        "city_abstraction_ml": 231261.22205444187,
+        "city_abstraction_increase_ml": 47530.71256280347,
+        "conveyance_efficiency": 0.8486576128799999,
+        "ai_withdrawal_ml": 41477.11984711407,
+        "ai_reclaimed_ml": 18664.70393120133,
+        "gross_substitution_ratio": 0.44999999999999996,
+        "net_freshwater_saving_ml": 1139.8187850798568,
+        "net_substitution_ratio": 0.027480663779965043,
+        "tag": NaN
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 36.0,
+        "baseline_city_abstraction_ml": 183730.5094916384,
+        "city_abstraction_ml": 215422.3645261836,
+        "city_abstraction_increase_ml": 31691.85503454521,
+        "conveyance_efficiency": 0.8486576128799999,
+        "ai_withdrawal_ml": 27655.41323140938,
+        "ai_reclaimed_ml": 12444.935954134222,
+        "gross_substitution_ratio": 0.45,
+        "net_freshwater_saving_ml": 759.8791900532378,
+        "net_substitution_ratio": 0.0274766890552267,
+        "tag": "reuse_capacity_x1"
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 54.0,
+        "baseline_city_abstraction_ml": 183730.5094916384,
+        "city_abstraction_ml": 202269.8420878974,
+        "city_abstraction_increase_ml": 18539.332596259017,
+        "conveyance_efficiency": 0.8486576128799999,
+        "ai_withdrawal_ml": 27655.41323140938,
+        "ai_reclaimed_ml": 12444.935954134222,
+        "gross_substitution_ratio": 0.45,
+        "net_freshwater_saving_ml": 11921.867485879833,
+        "net_substitution_ratio": 0.4310862175922825,
+        "tag": "reuse_capacity_x1.5"
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 72.0,
+        "baseline_city_abstraction_ml": 183730.5094916384,
+        "city_abstraction_ml": 189117.3196496112,
+        "city_abstraction_increase_ml": 5386.810157972795,
+        "conveyance_efficiency": 0.8486576128799999,
+        "ai_withdrawal_ml": 27655.41323140938,
+        "ai_reclaimed_ml": 12444.935954134222,
+        "gross_substitution_ratio": 0.45,
+        "net_freshwater_saving_ml": 23083.855781706454,
+        "net_substitution_ratio": 0.8346957461293393,
+        "tag": "reuse_capacity_x2"
+      },
+      {
+        "capacity_mw": 1000.0,
+        "reuse_treatment_capacity_ml_day": 108.0,
+        "baseline_city_abstraction_ml": 183730.5094916384,
+        "city_abstraction_ml": 162812.27477303878,
+        "city_abstraction_increase_ml": -20918.23471859962,
+        "conveyance_efficiency": 0.8486576128799999,
+        "ai_withdrawal_ml": 27655.41323140938,
+        "ai_reclaimed_ml": 12444.935954134222,
+        "gross_substitution_ratio": 0.45,
+        "net_freshwater_saving_ml": 45407.83237335967,
+        "net_substitution_ratio": 1.6419148032034518,
+        "tag": "reuse_capacity_x3"
+      }
+    ],
+    "technology": [
+      {
+        "technology": "dry",
+        "site_wue_l_kwh_it": 0.0,
+        "process_wue_l_kwh_it": 0.0,
+        "wue_l_kwh": 0.0,
+        "mean_pue": 1.297556684931507,
+        "mean_wet_fraction": 0.0,
+        "period_withdrawal_ml": 0.0,
+        "annual_withdrawal_ml": 0.0,
+        "annual_consumption_ml": 0.0,
+        "daily_peak_factor": NaN,
+        "facility_energy_mwh": 12855960.660780001,
+        "cawcc_mw": NaN,
+        "limiting_constraint": "reclaimed_water_substitution_ratio"
+      },
+      {
+        "technology": "dry_first",
+        "site_wue_l_kwh_it": 0.019785185768112397,
+        "process_wue_l_kwh_it": 0.018567527754306225,
+        "wue_l_kwh": 0.019785185768112397,
+        "mean_pue": 1.2794710410958905,
+        "mean_wet_fraction": 0.006600003748282305,
+        "period_withdrawal_ml": 194.98268522473825,
+        "annual_withdrawal_ml": 97.49134261236912,
+        "annual_consumption_ml": 76.58975836168688,
+        "daily_peak_factor": 83.53377617266679,
+        "facility_energy_mwh": 12667179.156660002,
+        "cawcc_mw": 1000.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio"
+      },
+      {
+        "technology": "efficient_evaporative",
+        "site_wue_l_kwh_it": 1.9745325748861062,
+        "process_wue_l_kwh_it": 1.9733149168723,
+        "wue_l_kwh": 1.9745325748861062,
+        "mean_pue": 1.1226070547945204,
+        "mean_wet_fraction": 1.0,
+        "period_withdrawal_ml": 19458.986538074867,
+        "annual_withdrawal_ml": 9729.493269037433,
+        "annual_consumption_ml": 8139.786548573218,
+        "daily_peak_factor": 1.3505679190394655,
+        "facility_energy_mwh": 11076459.06015,
+        "cawcc_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio"
+      },
+      {
+        "technology": "evaporative",
+        "site_wue_l_kwh_it": 2.1049816361501303,
+        "process_wue_l_kwh_it": 2.103763978136324,
+        "wue_l_kwh": 2.1049816361501303,
+        "mean_pue": 1.1671284657534247,
+        "mean_wet_fraction": 1.0,
+        "period_withdrawal_ml": 20744.559923557033,
+        "annual_withdrawal_ml": 10372.279961778517,
+        "annual_consumption_ml": 8464.212184868848,
+        "daily_peak_factor": 1.3192784614288722,
+        "facility_energy_mwh": 11517853.788180001,
+        "cawcc_mw": 1000.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio"
+      },
+      {
+        "technology": "hybrid",
+        "site_wue_l_kwh_it": 0.1447535888708935,
+        "process_wue_l_kwh_it": 0.14353593085708735,
+        "wue_l_kwh": 0.1447535888708935,
+        "mean_pue": 1.2197355205479454,
+        "mean_wet_fraction": 0.05675583617932617,
+        "period_withdrawal_ml": 1426.544273314516,
+        "annual_withdrawal_ml": 713.272136657258,
+        "annual_consumption_ml": 577.497565103914,
+        "daily_peak_factor": 16.725931509854302,
+        "facility_energy_mwh": 12049480.18233,
+        "cawcc_mw": 1000.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio"
+      },
+      {
+        "technology": "liquid_to_air",
+        "site_wue_l_kwh_it": 0.0,
+        "process_wue_l_kwh_it": 0.0,
+        "wue_l_kwh": 0.0,
+        "mean_pue": 1.2232997534246575,
+        "mean_wet_fraction": 0.0,
+        "period_withdrawal_ml": 0.0,
+        "annual_withdrawal_ml": 0.0,
+        "annual_consumption_ml": 0.0,
+        "daily_peak_factor": NaN,
+        "facility_energy_mwh": 12092516.472420001,
+        "cawcc_mw": NaN,
+        "limiting_constraint": "reclaimed_water_substitution_ratio"
+      },
+      {
+        "technology": "liquid_to_water",
+        "site_wue_l_kwh_it": 1.7765342213747823,
+        "process_wue_l_kwh_it": 1.7753165633609762,
+        "wue_l_kwh": 1.7765342213747823,
+        "mean_pue": 1.1216498767123286,
+        "mean_wet_fraction": 1.0,
+        "period_withdrawal_ml": 17507.715971794096,
+        "annual_withdrawal_ml": 8753.857985897048,
+        "annual_consumption_ml": 7323.057135152674,
+        "daily_peak_factor": 1.3917713692060059,
+        "facility_energy_mwh": 11072299.97421,
+        "cawcc_mw": 1500.0,
+        "limiting_constraint": "max_daily_average_grid_connection_ratio"
+      }
+    ],
+    "policy": [
+      {
+        "policy": "policy_a",
+        "capacity_mw": 1000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 27655.41323140938
+      },
+      {
+        "policy": "policy_a",
+        "capacity_mw": 1500.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 41477.11984711407
+      },
+      {
+        "policy": "policy_a",
+        "capacity_mw": 2000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 55298.82646281875
+      },
+      {
+        "policy": "policy_b",
+        "capacity_mw": 1000.0,
+        "domestic_unmet_ml": 4.973799150320701e-12,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 27655.41323140938
+      },
+      {
+        "policy": "policy_b",
+        "capacity_mw": 1500.0,
+        "domestic_unmet_ml": 3.694822225952521e-12,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 41477.11984711407
+      },
+      {
+        "policy": "policy_b",
+        "capacity_mw": 2000.0,
+        "domestic_unmet_ml": 2.2453150450019166e-12,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 55298.82646281876
+      },
+      {
+        "policy": "policy_c",
+        "capacity_mw": 1000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 27655.41323140938
+      },
+      {
+        "policy": "policy_c",
+        "capacity_mw": 1500.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 0.9999999999999999,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 41477.11984711407
+      },
+      {
+        "policy": "policy_c",
+        "capacity_mw": 2000.0,
+        "domestic_unmet_ml": 0.0,
+        "domestic_unmet_residual_kpi": 0.0,
+        "system_reliability_fraction": 1.0,
+        "unmet_cooling_water_ml": 0.0,
+        "ai_withdrawal_ml": 55298.82646281876
+      }
+    ],
+    "state_pressure": [
+      {
+        "state": "S0",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 7751.742299238751,
+        "total_withdrawal_ml": 27655.41323140938,
+        "freshwater_withdrawal_ml": 15210.477277275158,
+        "reclaimed_water_use_ml": 12444.935954134222,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.8724134544138674,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.8542494142374499,
+        "reclaimed_water_substitution_ratio": 0.45,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S0",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 7829.433123133414,
+        "total_withdrawal_ml": 27733.104055304044,
+        "freshwater_withdrawal_ml": 15253.207230417222,
+        "reclaimed_water_use_ml": 12479.896824886819,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.890637504328196,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.8720940312428224,
+        "reclaimed_water_substitution_ratio": 0.44999999999999996,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S0",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 7771.165005212417,
+        "total_withdrawal_ml": 27674.835937383046,
+        "freshwater_withdrawal_ml": 15221.159765560675,
+        "reclaimed_water_use_ml": 12453.676171822372,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.8680736842105263,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.45,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S0",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 7825.70821647914,
+        "total_withdrawal_ml": 27733.104055304044,
+        "freshwater_withdrawal_ml": 15106.05916734396,
+        "reclaimed_water_use_ml": 12627.04488796008,
+        "system_reliability_fraction": 0.9816691222651871,
+        "domestic_unmet_ml": 2596.099388277273,
+        "max_wtw_utilization": 0.8680736842105263,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.4553058634467972,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 7747.1410066551625,
+        "total_withdrawal_ml": 27655.41323140938,
+        "freshwater_withdrawal_ml": 14847.567794625968,
+        "reclaimed_water_use_ml": 12807.845436783413,
+        "system_reliability_fraction": 0.9556575560014843,
+        "domestic_unmet_ml": 5532.402062322975,
+        "max_wtw_utilization": 0.9800000000000001,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.7065175660477295,
+        "reclaimed_water_substitution_ratio": 0.4631225478213799,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 7823.547770783449,
+        "total_withdrawal_ml": 27733.104055304044,
+        "freshwater_withdrawal_ml": 14836.093071491785,
+        "reclaimed_water_use_ml": 12897.010983812255,
+        "system_reliability_fraction": 0.9493072989186349,
+        "domestic_unmet_ml": 6347.588442728891,
+        "max_wtw_utilization": 0.9800000000000001,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.7241316837527314,
+        "reclaimed_water_substitution_ratio": 0.46504029834142063,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 7766.2419132034265,
+        "total_withdrawal_ml": 27674.835937383046,
+        "freshwater_withdrawal_ml": 14844.662421019266,
+        "reclaimed_water_use_ml": 12830.173516363779,
+        "system_reliability_fraction": 0.9540611884737871,
+        "domestic_unmet_ml": 5736.742084890044,
+        "max_wtw_utilization": 0.9800000000000001,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.8363808580325361,
+        "reclaimed_water_substitution_ratio": 0.4636043207408083,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S1",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 7825.171443468708,
+        "total_withdrawal_ml": 27731.66098691253,
+        "freshwater_withdrawal_ml": 14173.073175132384,
+        "reclaimed_water_use_ml": 13558.587811780151,
+        "system_reliability_fraction": 0.8725953792327638,
+        "domestic_unmet_ml": 18024.166675335917,
+        "max_wtw_utilization": 0.9800000000000001,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.9543750648178918,
+        "reclaimed_water_substitution_ratio": 0.48892086983822886,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S2",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 7748.811387526522,
+        "total_withdrawal_ml": 27653.873409989275,
+        "freshwater_withdrawal_ml": 14142.808362316084,
+        "reclaimed_water_use_ml": 13511.065047673188,
+        "system_reliability_fraction": 0.8733480529119781,
+        "domestic_unmet_ml": 15901.781692598113,
+        "max_wtw_utilization": 0.6638210526315789,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.48857767038134525,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S2",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 7825.185137440113,
+        "total_withdrawal_ml": 27731.564233883935,
+        "freshwater_withdrawal_ml": 14130.127717448855,
+        "reclaimed_water_use_ml": 13601.436516435078,
+        "system_reliability_fraction": 0.8675779691524731,
+        "domestic_unmet_ml": 16693.098813404846,
+        "max_wtw_utilization": 0.6638210526315789,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.49046769961198594,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S2",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 7765.298361725787,
+        "total_withdrawal_ml": 27669.574091535247,
+        "freshwater_withdrawal_ml": 13516.757106825935,
+        "reclaimed_water_use_ml": 14152.816984709312,
+        "system_reliability_fraction": 0.7276110985191839,
+        "domestic_unmet_ml": 33993.4513795108,
+        "max_wtw_utilization": 0.5642478947368421,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.5114938501723806,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S2",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 7820.164805122569,
+        "total_withdrawal_ml": 27725.703564907235,
+        "freshwater_withdrawal_ml": 13166.253000634744,
+        "reclaimed_water_use_ml": 14559.450564272489,
+        "system_reliability_fraction": 0.6514239842967063,
+        "domestic_unmet_ml": 48628.862640547966,
+        "max_wtw_utilization": 0.5642478947368421,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 1.0,
+        "reclaimed_water_substitution_ratio": 0.5251246566273097,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S3",
+        "pressure": "G0",
+        "summer_withdrawal_ml": 7751.742299238751,
+        "total_withdrawal_ml": 27655.41323140938,
+        "freshwater_withdrawal_ml": 15210.477277275158,
+        "reclaimed_water_use_ml": 12444.935954134222,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.7586203951424935,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.7428255775977827,
+        "reclaimed_water_substitution_ratio": 0.45,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S3",
+        "pressure": "G1",
+        "summer_withdrawal_ml": 7829.433123133414,
+        "total_withdrawal_ml": 27733.104055304044,
+        "freshwater_withdrawal_ml": 15253.207230417222,
+        "reclaimed_water_use_ml": 12479.896824886819,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.7744673950679966,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.7583426358633238,
+        "reclaimed_water_substitution_ratio": 0.44999999999999996,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S3",
+        "pressure": "G2",
+        "summer_withdrawal_ml": 7771.165005212417,
+        "total_withdrawal_ml": 27674.835937383046,
+        "freshwater_withdrawal_ml": 15221.159765560675,
+        "reclaimed_water_use_ml": 12453.676171822372,
+        "system_reliability_fraction": 1.0,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.7625821451238692,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.8784762848990212,
+        "reclaimed_water_substitution_ratio": 0.45,
+        "unmet_cooling_water_ml": 0.0
+      },
+      {
+        "state": "S3",
+        "pressure": "G3",
+        "summer_withdrawal_ml": 7829.433123133414,
+        "total_withdrawal_ml": 27733.104055304044,
+        "freshwater_withdrawal_ml": 15253.207230417222,
+        "reclaimed_water_use_ml": 12479.896824886819,
+        "system_reliability_fraction": 0.9999999999999999,
+        "domestic_unmet_ml": 0.0,
+        "max_wtw_utilization": 0.8537184292115712,
+        "max_reuse_utilization": 1.0,
+        "max_source_abstraction_ratio": 0.9834630916014803,
+        "reclaimed_water_substitution_ratio": 0.44999999999999996,
+        "unmet_cooling_water_ml": 0.0
+      }
+    ],
+    "heatwave": [
+      {
+        "capacity_mw": 500.0,
+        "total_withdrawal_ml": 13838.821928416699,
+        "maximum_daily_withdrawal_ml": 28.99347132325969,
+        "unmet_cooling_water_ml": 0.0,
+        "system_reliability_fraction": 1.0,
+        "max_wtw_utilization": 0.8364321528048214,
+        "max_local_connection_ratio": 0.41419244747513845
+      },
+      {
+        "capacity_mw": 1000.0,
+        "total_withdrawal_ml": 27665.64385683339,
+        "maximum_daily_withdrawal_ml": 45.98694264651938,
+        "unmet_cooling_water_ml": 0.0,
+        "system_reliability_fraction": 1.0,
+        "max_wtw_utilization": 0.9023507635277328,
+        "max_local_connection_ratio": 0.6569563235217054
+      },
+      {
+        "capacity_mw": 1500.0,
+        "total_withdrawal_ml": 41492.46578525009,
+        "maximum_daily_withdrawal_ml": 67.55146335715887,
+        "unmet_cooling_water_ml": 0.0,
+        "system_reliability_fraction": 1.0,
+        "max_wtw_utilization": 0.9682693742506442,
+        "max_local_connection_ratio": 0.9650209051022696
+      }
+    ]
+  }
+}
