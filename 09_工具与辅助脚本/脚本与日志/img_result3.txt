@@ -1,0 +1,4 @@
+error: 连接超时（editor_sdk 是否在 http://127.0.0.1:39099/mcp 运行？）: timed out
+{"ok": false, "exit_code": 1, "error": "连接超时（editor_sdk 是否在 http://127.0.0.1:39099/mcp 运行？）: timed out"}
+error: 连接超时（editor_sdk 是否在 http://127.0.0.1:39099/mcp 运行？）: timed out
+{"ok": false, "exit_code": 1, "error": "连接超时（editor_sdk 是否在 http://127.0.0.1:39099/mcp 运行？）: timed out"}

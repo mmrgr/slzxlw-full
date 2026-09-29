@@ -1,0 +1,388 @@
+﻿=== LOCAL MARKETPLACE: C:\Users\mmrgr\.workbuddy\skills-marketplace\skills ===
+12306
+12306-train-assistant
+academic-translation
+academic-tutor
+admapix
+agent-browser-core
+agent-mail
+agent-mbti
+agent-team-orchestration
+agentmail
+agents
+aihot
+airbnb
+airchina-travel-assistant
+aminer-data-search
+aminer-data-search-2
+andonq
+android-native-dev
+anti-distill
+api-gateway
+apple-notes
+apple-reminders
+arxiv-reader
+arxiv-watcher
+autoglm-browser-agent
+autoglm-deepresearch
+autoresearch
+aviation-weather
+aviationstack-flight-tracker
+awesome-design-md
+baidu-drive
+blogwatcher
+boss-skills
+brand-guidelines
+browser
+browser-cash
+browser-use
+browserwing
+caldav-calendar
+cangjie-skill
+canvas-design
+capability-evolver
+caveman
+charity-finance-assistant
+charity-writing-assistant
+citation-manager
+clawbrowser
+cli-anything-hub
+cloudbase
+cloudflare
+cloudflare-worker-builder
+cloudq
+cn-ecommerce-search
+cnb-skill
+colleague-skill
+content-factory
+content-ops
+content-repurposer
+context-compression
+conversion-ops
+cos-vectors
+crash-expert-skill
+ctrip-wendao
+darwin-skill
+deck-generator
+deep-research
+diagnose
+dingtalk-unified
+earnings-tracker
+ecommerce-copywriter
+ecomseer
+edgeone
+edgeone-pages-deploy
+education
+email-daily-summary
+email-skill
+english-exam-writing-reviewer
+english-intensive-reader
+excalidraw-diagram
+fadada-document-sign
+FBS-BookWriter
+finance-ops
+find-skills-3
+fintech-engineer
+flight-tracker
+flights-search
+flutter-dev
+flyai
+football-bayes
+frontend-dev
+fullstack-dev
+futuapi
+gif-sticker-maker
+gifgrep
+github
+github-ai-trends
+github-pages-auto-deploy
+github-trending-cn
+globepilot-ai-agent-2
+gmail
+goal-tracker
+gog
+grill-me
+growth-engine
+guizang-ppt-skill
+habit-tracker
+handoff
+healthcheck
+himalaya
+html-deploy
+humanizer
+idea-validator
+ima-skills
+image-inpainting
+image-outpainting
+imap-smtp-email
+impeccable
+imsg
+infographic-maker
+install-futu-opend
+ios-application-dev
+jiaozhen-factcheck
+jinshuju
+karpathy-guidelines
+kdocs
+khazix-writer
+knowledge-framework-builder
+landing-page-generator
+lark-unified
+learning-coach
+legal-logic-analysis
+lexiang-knowledge-base
+libtv-skill
+lingxi-financialsearch-skill
+literature-deep-reader
+llm-wiki
+macro-monitor
+market-researcher
+marketing-skills
+markitdown-skill
+material-organizer
+mcp-builder
+mcporter
+md-to-pdf-cjk
+meituan-coupon-workbuddy
+meituan-huisheng-coupon
+migraq
+minimax-docx
+minimax-pdf
+minimax-xlsx
+model-usage
+multi-search-engine
+my-novel-writer
+nano-banana-pro
+nano-pdf
+nature-academic-search
+nature-citation
+nature-data
+nature-figure
+nature-paper2ppt
+nature-polishing
+nature-reader
+nature-response
+nature-writing
+neodata-financial-search
+netlify-deploy
+news-summary
+note-organizer
+notebooklm-studio
+novel
+novel-writer
+novel-writing
+nuwa-skill
+obsidian
+open-lesson
+open-novel-writing
+open-source-reuse-advisor
+openai-image-gen
+openai-whisper
+openai-whisper-api
+openclaw-assets-to-workbuddy
+oracle
+outbound-engine
+ozon-1688-uploader
+paper-quick-reader
+pdfkit-py
+peekaboo
+perplexity
+plan-tracker
+playwright-browser-automation
+playwright-scraper-skill
+podcast-ops
+ponytail
+porteden-email
+pptx
+pptx-generator
+product-showcase-site
+promo-creator-skills
+prompt-engineering-expert
+qcc-company
+qmd
+qq-email
+react-native-dev
+remotion-video-toolkit
+responsiveness-check
+resume-assistant
+revenue-intelligence
+sag
+sales-pipeline
+sales-playbook
+seo-ops
+setup-pre-commit
+shader-dev
+shippage
+shopify-admin-api
+sino-drug-instructions-search
+skill-creator
+skill-scanner
+skill-vetter
+skills-security-check
+skyline
+smart-page
+smooth-browser
+songsee
+stagehand-browser-cli
+static-app
+stealth-browser
+stock-analysis
+stock-analyzer
+study-planner
+summarize
+taobao
+tapd-openapi
+task-alignment
+task-implement
+tavily
+tdd
+tdesign-miniprogram
+teachany
+team-ops
+tencent-campus-recruit
+tencent-docs
+tencent-esign-contract
+tencent-meeting-mcp
+tencent-meeting-skill
+tencent-musician-skills
+tencent-news
+tencent-ssv-techforgood
+tencent-survey
+tencent-weather
+tencent-yuanbao-standard-search
+tencent-yunzhi
+tencentcloud-cls
+tencentcloud-cos
+tencentmap-lbs-skill
+tencentos-expert
+the-entrepreneurship-handbook
+things-mac
+tmux
+travel-cn
+travel-planning
+trello
+tutor-skills
+us-stock-analysis
+vercel-deploy
+video-frames
+vip-skill
+wacli
+weather
+web-access
+web-deploy
+web-deploy-github
+web-performance-audit
+web-scraper
+web-search-exa
+wechat-article-pro
+wechat-article-search
+wechat-miniprogram
+wechat-publisher
+wechatpay-basic-payment
+wechatpay-product-coupon
+wecom-unified
+wecom-weisheng-scrm
+weiyun
+weread-skills
+westock-data
+workrally
+x-longform-post
+xurl
+yingmi-skill
+yourself-skill
+yt-competitive-analysis
+zoom-out
+
+=== QUERY: batch download academic paper PDF ===
+- score=0.05 slug=self-improving-agent name=self-improving agent | dl=1199152 inst=86140 stars=4490
+   记录自身发现以实现自我改进的技能
+- score=0.0492981836702497 slug=tencent-docs name=腾讯文档 TENCENT DOCS | dl=985256 inst=8107 stars=294
+   腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及"新建/创建/编辑/读取/查看/搜索文档"、"保存文件"、"云文档"、"腾讯文档"、"docs.qq.com"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）(8) 网页剪藏、本地文件/html/文档上云。
+- score=0.0492245811117236 slug=find-skills name=Find Skills | dl=965163 inst=75956 stars=1753
+   帮助用户发现和安装智能体技能，当用户询问如「如何做X」、「找X的技能」、「有能做...的吗」等问题时
+- score=0.04878400185862825 slug=dev-expert name=编程专家.Skill | dl=853171 inst=0 stars=217
+   编程专家.Skill P8级编程助手,25年实战经验技能Skill，全栈：Java/Php网站/软件项目、API设计、Bug诊断、代码生成、代码审查、重构、测试用例、性能基准、技术选型、文档生成、任务拆解、Spec驱动、Karpathy规范、CMS二次开发、前端设计、MySQL/Mariadb、项目知识图谱，以及工程纪律层（根因调试硬闭环、阶段导航、事故复盘/SLO、威胁建模/供应链安全、生产就绪/渐进式发布、AI编码治理、面向Agent代码可读性、LLM应用安全）。支持 @标识 显式调用跳过路由。
+- score=0.048538773215104344 slug=agent-browser name=Agent Browser | dl=796566 inst=36434 stars=984
+   用于 AI 代理的浏览器自动化 CLI。当用户需要与网站交互（包括浏览页面、填写表单、点击按钮、截图等）时使用。
+- score=0.04760079104385361 slug=summarize name=Summarize | dl=612610 inst=45959 stars=1034
+   智能摘要工具，自动为长文本、文档、网页生成摘要，提取要点与关键词，支持自定义摘要长度。
+- score=0.0468555409938728 slug=multi-search-engine name=搜索引擎 | dl=497254 inst=0 stars=38
+   多搜索引擎集成,16引擎(7国内+9全球)。Multi search engine integration with 16 engines (7 CN + 9 Global)。核心能力: -
+- score=0.04610465959117011 slug=self-improving name=Self-Improving + Proactive Agent | dl=402984 inst=57561 stars=1595
+   自我反思+自我批评+自我学习+自组织记忆。智能体评估自身工作、发现错误并持续改进。
+- score=0.04556572986332161 slug=smart-charts name=smart-charts | dl=346550 inst=8 stars=92
+   32种图表，3 个主题，2步生成：
+1.上传数据 — 将 CSV / Excel / JSON 等格式的数据文件拖入对话框;
+2.查看结果 — 交互式图表（HTML），可保存图表为图片.
+- score=0.0454496223779758 slug=ima-skills name=ima-skills | dl=335467 inst=11831 stars=525
+   ima skills，支持对笔记、知识库的读取、写入和检索等操作，可以帮你随时记录，收入ima智能管理，随时调用，龙虾输出精准懂你，友好的接入了OpenClaw生态，构建你的第二大脑。
+
+=== QUERY: paper download ===
+- score=0.05 slug=self-improving-agent name=self-improving agent | dl=1199152 inst=86140 stars=4490
+   记录自身发现以实现自我改进的技能
+- score=0.0492981836702497 slug=tencent-docs name=腾讯文档 TENCENT DOCS | dl=985256 inst=8107 stars=294
+   腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及"新建/创建/编辑/读取/查看/搜索文档"、"保存文件"、"云文档"、"腾讯文档"、"docs.qq.com"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）(8) 网页剪藏、本地文件/html/文档上云。
+- score=0.0492245811117236 slug=find-skills name=Find Skills | dl=965163 inst=75956 stars=1753
+   帮助用户发现和安装智能体技能，当用户询问如「如何做X」、「找X的技能」、「有能做...的吗」等问题时
+- score=0.04878400185862825 slug=dev-expert name=编程专家.Skill | dl=853171 inst=0 stars=217
+   编程专家.Skill P8级编程助手,25年实战经验技能Skill，全栈：Java/Php网站/软件项目、API设计、Bug诊断、代码生成、代码审查、重构、测试用例、性能基准、技术选型、文档生成、任务拆解、Spec驱动、Karpathy规范、CMS二次开发、前端设计、MySQL/Mariadb、项目知识图谱，以及工程纪律层（根因调试硬闭环、阶段导航、事故复盘/SLO、威胁建模/供应链安全、生产就绪/渐进式发布、AI编码治理、面向Agent代码可读性、LLM应用安全）。支持 @标识 显式调用跳过路由。
+- score=0.048538773215104344 slug=agent-browser name=Agent Browser | dl=796566 inst=36434 stars=984
+   用于 AI 代理的浏览器自动化 CLI。当用户需要与网站交互（包括浏览页面、填写表单、点击按钮、截图等）时使用。
+- score=0.04760079104385361 slug=summarize name=Summarize | dl=612610 inst=45959 stars=1034
+   智能摘要工具，自动为长文本、文档、网页生成摘要，提取要点与关键词，支持自定义摘要长度。
+- score=0.0468555409938728 slug=multi-search-engine name=搜索引擎 | dl=497254 inst=0 stars=38
+   多搜索引擎集成,16引擎(7国内+9全球)。Multi search engine integration with 16 engines (7 CN + 9 Global)。核心能力: -
+- score=0.04610465959117011 slug=self-improving name=Self-Improving + Proactive Agent | dl=402984 inst=57561 stars=1595
+   自我反思+自我批评+自我学习+自组织记忆。智能体评估自身工作、发现错误并持续改进。
+- score=0.04556572986332161 slug=smart-charts name=smart-charts | dl=346550 inst=8 stars=92
+   32种图表，3 个主题，2步生成：
+1.上传数据 — 将 CSV / Excel / JSON 等格式的数据文件拖入对话框;
+2.查看结果 — 交互式图表（HTML），可保存图表为图片.
+- score=0.0454496223779758 slug=ima-skills name=ima-skills | dl=335467 inst=11831 stars=525
+   ima skills，支持对笔记、知识库的读取、写入和检索等操作，可以帮你随时记录，收入ima智能管理，随时调用，龙虾输出精准懂你，友好的接入了OpenClaw生态，构建你的第二大脑。
+
+=== QUERY: scihub ===
+- score=0.0840140884730536 slug=scihub-paper-downloader name=Scihub Paper Downloader | dl=1848 inst=94 stars=4
+   根据DOI从Sci-Hub获取PDF链接。
+- score=0.08197229267286815 slug=scihub-downloader name=scihub-downloader | dl=1043 inst=16 stars=0
+   SciHub下载器的自动化技能
+- score=0.05 slug=self-improving-agent name=self-improving agent | dl=1199152 inst=86140 stars=4490
+   记录自身发现以实现自我改进的技能
+- score=0.0492981836702497 slug=tencent-docs name=腾讯文档 TENCENT DOCS | dl=985256 inst=8107 stars=294
+   腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及"新建/创建/编辑/读取/查看/搜索文档"、"保存文件"、"云文档"、"腾讯文档"、"docs.qq.com"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）(8) 网页剪藏、本地文件/html/文档上云。
+- score=0.0492245811117236 slug=find-skills name=Find Skills | dl=965163 inst=75956 stars=1753
+   帮助用户发现和安装智能体技能，当用户询问如「如何做X」、「找X的技能」、「有能做...的吗」等问题时
+- score=0.04878400185862825 slug=dev-expert name=编程专家.Skill | dl=853171 inst=0 stars=217
+   编程专家.Skill P8级编程助手,25年实战经验技能Skill，全栈：Java/Php网站/软件项目、API设计、Bug诊断、代码生成、代码审查、重构、测试用例、性能基准、技术选型、文档生成、任务拆解、Spec驱动、Karpathy规范、CMS二次开发、前端设计、MySQL/Mariadb、项目知识图谱，以及工程纪律层（根因调试硬闭环、阶段导航、事故复盘/SLO、威胁建模/供应链安全、生产就绪/渐进式发布、AI编码治理、面向Agent代码可读性、LLM应用安全）。支持 @标识 显式调用跳过路由。
+- score=0.048538773215104344 slug=agent-browser name=Agent Browser | dl=796566 inst=36434 stars=984
+   用于 AI 代理的浏览器自动化 CLI。当用户需要与网站交互（包括浏览页面、填写表单、点击按钮、截图等）时使用。
+- score=0.04760079104385361 slug=summarize name=Summarize | dl=612610 inst=45959 stars=1034
+   智能摘要工具，自动为长文本、文档、网页生成摘要，提取要点与关键词，支持自定义摘要长度。
+- score=0.0468555409938728 slug=multi-search-engine name=搜索引擎 | dl=497254 inst=0 stars=38
+   多搜索引擎集成,16引擎(7国内+9全球)。Multi search engine integration with 16 engines (7 CN + 9 Global)。核心能力: -
+- score=0.04610465959117011 slug=self-improving name=Self-Improving + Proactive Agent | dl=402984 inst=57561 stars=1595
+   自我反思+自我批评+自我学习+自组织记忆。智能体评估自身工作、发现错误并持续改进。
+
+=== QUERY: arxiv pdf download ===
+- score=0.05 slug=self-improving-agent name=self-improving agent | dl=1199152 inst=86140 stars=4490
+   记录自身发现以实现自我改进的技能
+- score=0.0492981836702497 slug=tencent-docs name=腾讯文档 TENCENT DOCS | dl=985256 inst=8107 stars=294
+   腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及"新建/创建/编辑/读取/查看/搜索文档"、"保存文件"、"云文档"、"腾讯文档"、"docs.qq.com"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Excel/幻灯片/思维导图/流程图/智能表格/收集表）(2) 管理知识库空间（创建空间、查询空间列表）(3) 管理空间节点、文件夹结构 (4) 读取/搜索文档内容 (5) 编辑操作智能表 (6) 编辑操作在线文档 (7) 文件管理（重命名、移动、删除、复制、导入导出）(8) 网页剪藏、本地文件/html/文档上云。
+- score=0.0492245811117236 slug=find-skills name=Find Skills | dl=965163 inst=75956 stars=1753
+   帮助用户发现和安装智能体技能，当用户询问如「如何做X」、「找X的技能」、「有能做...的吗」等问题时
+- score=0.04878400185862825 slug=dev-expert name=编程专家.Skill | dl=853171 inst=0 stars=217
+   编程专家.Skill P8级编程助手,25年实战经验技能Skill，全栈：Java/Php网站/软件项目、API设计、Bug诊断、代码生成、代码审查、重构、测试用例、性能基准、技术选型、文档生成、任务拆解、Spec驱动、Karpathy规范、CMS二次开发、前端设计、MySQL/Mariadb、项目知识图谱，以及工程纪律层（根因调试硬闭环、阶段导航、事故复盘/SLO、威胁建模/供应链安全、生产就绪/渐进式发布、AI编码治理、面向Agent代码可读性、LLM应用安全）。支持 @标识 显式调用跳过路由。
+- score=0.048538773215104344 slug=agent-browser name=Agent Browser | dl=796566 inst=36434 stars=984
+   用于 AI 代理的浏览器自动化 CLI。当用户需要与网站交互（包括浏览页面、填写表单、点击按钮、截图等）时使用。
+- score=0.04760079104385361 slug=summarize name=Summarize | dl=612610 inst=45959 stars=1034
+   智能摘要工具，自动为长文本、文档、网页生成摘要，提取要点与关键词，支持自定义摘要长度。
+- score=0.0468555409938728 slug=multi-search-engine name=搜索引擎 | dl=497254 inst=0 stars=38
+   多搜索引擎集成,16引擎(7国内+9全球)。Multi search engine integration with 16 engines (7 CN + 9 Global)。核心能力: -
+- score=0.04610465959117011 slug=self-improving name=Self-Improving + Proactive Agent | dl=402984 inst=57561 stars=1595
+   自我反思+自我批评+自我学习+自组织记忆。智能体评估自身工作、发现错误并持续改进。
+- score=0.04556572986332161 slug=smart-charts name=smart-charts | dl=346550 inst=8 stars=92
+   32种图表，3 个主题，2步生成：
+1.上传数据 — 将 CSV / Excel / JSON 等格式的数据文件拖入对话框;
+2.查看结果 — 交互式图表（HTML），可保存图表为图片.
+- score=0.0454496223779758 slug=ima-skills name=ima-skills | dl=335467 inst=11831 stars=525
+   ima skills，支持对笔记、知识库的读取、写入和检索等操作，可以帮你随时记录，收入ima智能管理，随时调用，龙虾输出精准懂你，友好的接入了OpenClaw生态，构建你的第二大脑。

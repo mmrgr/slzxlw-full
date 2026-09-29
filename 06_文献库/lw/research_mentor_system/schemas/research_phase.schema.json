@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "research_phase.schema.json",
+  "title": "研究阶段 Schema",
+  "description": "Nature子刊研究导师系统中研究阶段的定义与状态记录。系统跨越 Phase 0-7 共8个阶段。",
+  "type": "object",
+  "properties": {
+    "phase_id": {
+      "description": "阶段编号，取值范围 0-7",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 7
+    },
+    "phase_name": {
+      "description": "阶段名称",
+      "type": "string"
+    },
+    "duration_weeks": {
+      "description": "预计持续时间（周）",
+      "type": "number",
+      "minimum": 0
+    },
+    "lead_agent": {
+      "description": "主导该阶段的Agent角色",
+      "type": "string"
+    },
+    "support_agents": {
+      "description": "辅助该阶段的Agent角色列表",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "objectives": {
+      "description": "阶段目标列表",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tasks": {
+      "description": "阶段任务列表",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "description": "任务唯一标识",
+            "type": "string"
+          },
+          "description": {
+            "description": "任务描述",
+            "type": "string"
+          },
+          "deliverable": {
+            "description": "交付物",
+            "type": "string"
+          },
+          "deadline_days": {
+            "description": "截止天数",
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "task_id",
+          "description",
+          "deliverable",
+          "deadline_days"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "checkpoints": {
+      "description": "阶段检查点列表",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "description": "阶段状态",
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "completed",
+        "blocked"
+      ]
+    },
+    "transition_criteria": {
+      "description": "进入下一阶段的过渡条件",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "phase_id",
+    "phase_name",
+    "duration_weeks",
+    "lead_agent",
+    "support_agents",
+    "objectives",
+    "tasks",
+    "checkpoints",
+    "status",
+    "transition_criteria"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "draft_review.schema.json",
+  "title": "草稿审阅 Schema",
+  "description": "对论文草稿的结构化审阅记录，支持多维度评分与问题追踪。",
+  "type": "object",
+  "properties": {
+    "review_id": {
+      "description": "审阅唯一标识",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "审阅时间戳（ISO 8601格式）",
+      "type": "string",
+      "format": "date-time"
+    },
+    "section": {
+      "description": "被审阅的章节",
+      "type": "string"
+    },
+    "reviewer_agent": {
+      "description": "审阅Agent角色",
+      "type": "string"
+    },
+    "overall_score": {
+      "description": "总体评分（1-10分，10分为最高）",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "dimensions": {
+      "description": "各维度评分对象",
+      "type": "object",
+      "properties": {
+        "novelty": {
+          "description": "创新性（1-10分）",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "importance": {
+          "description": "重要性（1-10分）",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "rigor": {
+          "description": "严谨性（1-10分）",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "clarity": {
+          "description": "清晰度（1-10分）",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "completeness": {
+          "description": "完整性（1-10分）",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        }
+      },
+      "required": [
+        "novelty",
+        "importance",
+        "rigor",
+        "clarity",
+        "completeness"
+      ],
+      "additionalProperties": false
+    },
+    "major_issues": {
+      "description": "主要问题列表",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "issue_id": {
+            "description": "问题唯一标识",
+            "type": "string"
+          },
+          "description": {
+            "description": "问题描述",
+            "type": "string"
+          },
+          "location": {
+            "description": "问题位置",
+            "type": "string"
+          },
+          "suggestion": {
+            "description": "修改建议",
+            "type": "string"
+          }
+        },
+        "required": [
+          "issue_id",
+          "description",
+          "location",
+          "suggestion"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "minor_issues": {
+      "description": "次要问题列表",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "positive_aspects": {
+      "description": "积极方面列表",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendation": {
+      "description": "审阅建议",
+      "type": "string",
+      "enum": [
+        "accept",
+        "minor_revision",
+        "major_revision",
+        "reject"
+      ]
+    }
+  },
+  "required": [
+    "review_id",
+    "timestamp",
+    "section",
+    "reviewer_agent",
+    "overall_score",
+    "dimensions",
+    "major_issues",
+    "minor_issues",
+    "positive_aspects",
+    "recommendation"
+  ],
+  "additionalProperties": false
+}

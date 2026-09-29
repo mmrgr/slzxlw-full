@@ -1,0 +1,573 @@
+[
+  {
+    "num": 1,
+    "author": "Xiao",
+    "year": 2025,
+    "jshort": "NatSustain",
+    "doi": "10.1038/s41893-025-01681-y",
+    "file": "01_Xiao2025_NatSustain.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA",
+      "first_author": "Xiao",
+      "year": "2025",
+      "journal": "Nature Sustainability"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA",
+      "crossref_author": "Xiao",
+      "crossref_year": "2025"
+    },
+    "oa": {
+      "status": "hybrid",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 2,
+    "author": "Masanet",
+    "year": 2020,
+    "jshort": "Science",
+    "doi": "10.1126/science.aba3758",
+    "file": "02_Masanet2020_Science.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Recalibrating global data center energy-use estimates",
+      "first_author": "Masanet",
+      "year": "2020",
+      "journal": "Science"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Recalibrating global data center energy-use estimates",
+      "crossref_author": "Masanet",
+      "crossref_year": "2020"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 3,
+    "author": "de Vries",
+    "year": 2023,
+    "jshort": "Joule",
+    "doi": "10.1016/j.joule.2023.09.004",
+    "file": "03_deVries2023_Joule.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "The growing energy footprint of artificial intelligence",
+      "first_author": "de Vries",
+      "year": "2023",
+      "journal": "Joule"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "The growing energy footprint of artificial intelligence",
+      "crossref_author": "de Vries",
+      "crossref_year": "2023"
+    },
+    "oa": {
+      "status": "bronze",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 4,
+    "author": "Ebrahimi",
+    "year": 2014,
+    "jshort": "RSER",
+    "doi": "10.1016/j.rser.2013.12.007",
+    "file": "04_Ebrahimi2014_RSER.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "A review of data center cooling technology, operating conditions and the corresponding low-grade waste heat recovery opportunities",
+      "first_author": "Ebrahimi",
+      "year": "2014",
+      "journal": "Renewable and Sustainable Energy Reviews"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "A review of data center cooling technology, operating conditions and the corresponding low-grade waste heat recovery opportunities",
+      "crossref_author": "Ebrahimi",
+      "crossref_year": "2014"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 5,
+    "author": "Zhang",
+    "year": 2014,
+    "jshort": "RSER",
+    "doi": "10.1016/j.rser.2014.04.017",
+    "file": "05_Zhang2014_RSER.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Free cooling of data centers: A review",
+      "first_author": "Zhang",
+      "year": "2014",
+      "journal": "Renewable and Sustainable Energy Reviews"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Free cooling of data centers: A review",
+      "crossref_author": "Zhang",
+      "crossref_year": "2014"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 6,
+    "author": "Chen",
+    "year": 2022,
+    "jshort": "FrontEnergy",
+    "doi": "10.3389/fenrg.2022.952680",
+    "file": "06_Chen2022_FrontEnergy.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Current Status and Challenges for Liquid-Cooled Data Centers",
+      "first_author": "Chen",
+      "year": "2022",
+      "journal": "Frontiers in Energy Research"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Current Status and Challenges for Liquid-Cooled Data Centers",
+      "crossref_author": "Chen",
+      "crossref_year": "2022"
+    },
+    "oa": {
+      "status": "gold",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 7,
+    "author": "Kenway",
+    "year": 2011,
+    "jshort": "WST",
+    "doi": "10.2166/wst.2011.070",
+    "file": "07_Kenway2011_WST.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "The connection between water and energy in cities: a review",
+      "first_author": "Kenway",
+      "year": "2011",
+      "journal": "Water Science and Technology"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "The connection between water and energy in cities: a review",
+      "crossref_author": "Kenway",
+      "crossref_year": "2011"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 8,
+    "author": "Urich",
+    "year": 2014,
+    "jshort": "WST",
+    "doi": "10.2166/wst.2014.363",
+    "file": "08_Urich2014_WST.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Modelling the urban water cycle as an integrated part of the city: a review",
+      "first_author": "Urich",
+      "year": "2014",
+      "journal": "Water Science and Technology"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Modelling the urban water cycle as an integrated part of the city: a review",
+      "crossref_author": "Urich",
+      "crossref_year": "2014"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 9,
+    "author": "Cai",
+    "year": 2025,
+    "jshort": "EcolModel",
+    "doi": "10.1016/j.ecolmodel.2024.110972",
+    "file": "09_Cai2025_EcolModel.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Ecological network analysis for urban physical-virtual water cycle: A case study of Beijing",
+      "first_author": "Cai",
+      "year": "2025",
+      "journal": "Ecological Modelling"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Ecological network analysis for urban physical-virtual water cycle: A case study of Beijing",
+      "crossref_author": "Cai",
+      "crossref_year": "2025"
+    },
+    "oa": {
+      "status": "green",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 10,
+    "author": "Voskamp",
+    "year": 2020,
+    "jshort": "JCLP",
+    "doi": "10.1016/j.jclepro.2020.120310",
+    "file": "10_Voskamp2020_JCLP.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "A systematic review of factors influencing spatiotemporal variability in urban water and energy consumption",
+      "first_author": "Voskamp",
+      "year": "2020",
+      "journal": "Journal of Cleaner Production"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "A systematic review of factors influencing spatiotemporal variability in urban water and energy consumption",
+      "crossref_author": "Voskamp",
+      "crossref_year": "2020"
+    },
+    "oa": {
+      "status": "hybrid",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 11,
+    "author": "Nezami",
+    "year": 2022,
+    "jshort": "SustCitiesSoc",
+    "doi": "10.1016/j.scs.2022.104065",
+    "file": "11_Nezami2022_SCS.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "A novel hybrid systemic modeling into sustainable dynamic urban water metabolism management: Case study",
+      "first_author": "Nezami",
+      "year": "2022",
+      "journal": "Sustainable Cities and Society"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "A novel hybrid systemic modeling into sustainable dynamic urban water metabolism management: Case study",
+      "crossref_author": "Nezami",
+      "crossref_year": "2022"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 12,
+    "author": "Hsieh",
+    "year": 2010,
+    "jshort": "EST",
+    "doi": "10.1021/es101379r",
+    "file": "12_Hsieh2010_EST.pdf",
+    "crossref": {
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    "verified": false,
+    "oa": {
+      "status": "err",
+      "pdf": "",
+      "error": "HTTP Error 404: Not Found"
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 13,
+    "author": "Walker",
+    "year": 2012,
+    "jshort": "WaterRes",
+    "doi": "10.1016/j.watres.2012.04.015",
+    "file": "13_Walker2012_WaterRes.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Simultaneous nitrogen and phosphate removal in aerobic granular sludge reactors operated at different temperatures",
+      "first_author": "Bassin",
+      "year": "2012",
+      "journal": "Water Research"
+    },
+    "verified": false,
+    "verified_detail": {
+      "author_match": false,
+      "year_match": true,
+      "crossref_title": "Simultaneous nitrogen and phosphate removal in aerobic granular sludge reactors operated at different temperatures",
+      "crossref_author": "Bassin",
+      "crossref_year": "2012"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 14,
+    "author": "Wang",
+    "year": 2020,
+    "jshort": "JCLP",
+    "doi": "10.1016/j.jclepro.2020.120789",
+    "file": "14_Wang2020_JCLP.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Resource Dynamo: A GIS model to match urban nutrient supply with agricultural demand",
+      "first_author": "Wielemaker",
+      "year": "2020",
+      "journal": "Journal of Cleaner Production"
+    },
+    "verified": false,
+    "verified_detail": {
+      "author_match": false,
+      "year_match": true,
+      "crossref_title": "Resource Dynamo: A GIS model to match urban nutrient supply with agricultural demand",
+      "crossref_author": "Wielemaker",
+      "crossref_year": "2020"
+    },
+    "oa": {
+      "status": "hybrid",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 15,
+    "author": "Vakilifard",
+    "year": 2019,
+    "jshort": "ApplEnergy",
+    "doi": "10.1016/j.apenergy.2018.10.128",
+    "file": "15_Vakilifard2019_ApplEnergy.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "An interactive planning model for sustainable urban water and energy supply",
+      "first_author": "Vakilifard",
+      "year": "2019",
+      "journal": "Applied Energy"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "An interactive planning model for sustainable urban water and energy supply",
+      "crossref_author": "Vakilifard",
+      "crossref_year": "2019"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 16,
+    "author": "Qin",
+    "year": 2016,
+    "jshort": "Water",
+    "doi": "10.3390/w8040157",
+    "file": "16_Qin2016_Water.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Research on Water Resources Design Carrying Capacity",
+      "first_author": "Qin",
+      "year": "2016",
+      "journal": "Water"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Research on Water Resources Design Carrying Capacity",
+      "crossref_author": "Qin",
+      "crossref_year": "2016"
+    },
+    "oa": {
+      "status": "gold",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 17,
+    "author": "Wang",
+    "year": 2021,
+    "jshort": "EcolIndic",
+    "doi": "10.1016/j.ecolind.2020.107232",
+    "file": "17_Wang2021_EcolIndic.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Development tendency analysis for the water resource carrying capacity based on system dynamics model and the improved fuzzy comprehensive evaluation method in the Changchun city, China",
+      "first_author": "Wang",
+      "year": "2021",
+      "journal": "Ecological Indicators"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Development tendency analysis for the water resource carrying capacity based on system dynamics model and the improved fuzzy comprehensive evaluation method in the Changchun city, China",
+      "crossref_author": "Wang",
+      "crossref_year": "2021"
+    },
+    "oa": {
+      "status": "hybrid",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 18,
+    "author": "Blokker",
+    "year": 2010,
+    "jshort": "JWRPM",
+    "doi": "10.1061/(ASCE)WR.1943-5452.0000002",
+    "file": "18_Blokker2010_JWRPM.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Simulating Residential Water Demand with a Stochastic End-Use Model",
+      "first_author": "Blokker",
+      "year": "2010",
+      "journal": "Journal of Water Resources Planning and Management"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Simulating Residential Water Demand with a Stochastic End-Use Model",
+      "crossref_author": "Blokker",
+      "crossref_year": "2010"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 19,
+    "author": "Haasnoot",
+    "year": 2013,
+    "jshort": "GlobEnvChange",
+    "doi": "10.1016/j.gloenvcha.2012.12.006",
+    "file": "19_Haasnoot2013_GEC.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Dynamic adaptive policy pathways: A method for crafting robust decisions for a deeply uncertain world",
+      "first_author": "Haasnoot",
+      "year": "2013",
+      "journal": "Global Environmental Change"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Dynamic adaptive policy pathways: A method for crafting robust decisions for a deeply uncertain world",
+      "crossref_author": "Haasnoot",
+      "crossref_year": "2013"
+    },
+    "oa": {
+      "status": "hybrid",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  },
+  {
+    "num": 20,
+    "author": "Mortazavi-Naeini",
+    "year": 2015,
+    "jshort": "EnvModSoft",
+    "doi": "10.1016/j.envsoft.2015.02.021",
+    "file": "20_Mortazavi2015_EnvModSoft.pdf",
+    "crossref": {
+      "ok": true,
+      "title": "Robust optimization to secure urban bulk water supply against extreme drought and uncertain climate change",
+      "first_author": "Mortazavi-Naeini",
+      "year": "2015",
+      "journal": "Environmental Modelling &amp; Software"
+    },
+    "verified": true,
+    "verified_detail": {
+      "author_match": true,
+      "year_match": true,
+      "crossref_title": "Robust optimization to secure urban bulk water supply against extreme drought and uncertain climate change",
+      "crossref_author": "Mortazavi-Naeini",
+      "crossref_year": "2015"
+    },
+    "oa": {
+      "status": "closed",
+      "pdf": ""
+    },
+    "downloaded": false,
+    "dl_msg": "no-oa-url"
+  }
+]

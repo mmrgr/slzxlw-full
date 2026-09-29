@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "learning_progress.schema.json",
+  "title": "学习进度 Schema",
+  "description": "用户在研究导师系统中的学习进度记录，覆盖8个阶段（Phase 0-7）的完成情况。",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "description": "用户唯一标识",
+      "type": "string"
+    },
+    "current_phase": {
+      "description": "当前所处阶段（0-7）",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 7
+    },
+    "phase_progress": {
+      "description": "各阶段完成进度，key为阶段id（0-7），value为完成百分比",
+      "type": "object",
+      "patternProperties": {
+        "^[0-7]$": {
+          "description": "完成百分比（0-100）",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "additionalProperties": false
+    },
+    "completed_tasks": {
+      "description": "已完成任务列表",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "current_task": {
+      "description": "当前正在进行的任务，无任务时为null",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pending_questions": {
+      "description": "待解答问题列表",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "knowledge_gaps": {
+      "description": "知识盲区列表",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "concept": {
+            "description": "概念名称",
+            "type": "string"
+          },
+          "identified_at": {
+            "description": "识别时间（ISO 8601格式）",
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "description": "盲区状态",
+            "type": "string",
+            "enum": [
+              "open",
+              "addressed"
+            ]
+          },
+          "attempts": {
+            "description": "尝试解决次数",
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "concept",
+          "identified_at",
+          "status",
+          "attempts"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "session_count": {
+      "description": "累计会话次数",
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_session_date": {
+      "description": "上次会话日期（ISO 8601格式），无会话记录时为null",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "total_time_spent_hours": {
+      "description": "累计花费时间（小时）",
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "user_id",
+    "current_phase",
+    "phase_progress",
+    "completed_tasks",
+    "current_task",
+    "pending_questions",
+    "knowledge_gaps",
+    "session_count",
+    "last_session_date",
+    "total_time_spent_hours"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,63 @@
+{
+  "document_type": "assumptions",
+  "task_id": "task_20260731_001",
+  "description": "Requirement Analyst在缺失信息时所做的合理假设。首次对话时需逐条与用户确认，确认结果回写至memory/user_profile.json。",
+  "assumptions": [
+    {
+      "id": "A1",
+      "assumption": "用户具备基础英文阅读能力，能借助工具阅读Nature子刊英文文献。",
+      "basis": "Nature子刊为英文期刊，文献阅读与论文撰写为必需环节。",
+      "impact_if_wrong": "需增加翻译辅助与逐句讲解环节，延长Phase 1/2周期。",
+      "verification": "首次对话确认英文水平。"
+    },
+    {
+      "id": "A2",
+      "assumption": "用户有稳定的网络访问，可使用Web of Science/Scopus/Google Scholar等学术数据库。",
+      "basis": "文献检索是Phase 0/2/6的核心动作。",
+      "impact_if_wrong": "降级为基于本地已有文献与AI知识库的有限检索。",
+      "verification": "首次对话确认网络与数据库访问条件。"
+    },
+    {
+      "id": "A3",
+      "assumption": "用户每周可投入至少10小时用于研究与学习。",
+      "basis": "20-40周的总周期需要持续投入才能保证进度与知识内化。",
+      "impact_if_wrong": "需延长总周期或触发降级策略（减少文献量/简化方法）。",
+      "verification": "首次对话确认可投入时间。"
+    },
+    {
+      "id": "A4",
+      "assumption": "用户具备基本计算机操作能力，能使用文字处理软件，并愿意学习R/Python。",
+      "basis": "论文写作与数据分析需要工具支持。",
+      "impact_if_wrong": "需在Phase 1/4增加工具入门教学投入。",
+      "verification": "首次对话确认工具基础。"
+    },
+    {
+      "id": "A5",
+      "assumption": "用户为零基础或跨界背景，概念需从零讲起。",
+      "basis": "系统定位为'零基础友好'。",
+      "impact_if_wrong": "若用户已有基础，可跳过部分概念教学，加快Phase 1。",
+      "verification": "首次对话确认学历/专业背景。"
+    },
+    {
+      "id": "A6",
+      "assumption": "用户有获取研究数据的途径（公开数据集/可野外采样/可实验室实验之一）。",
+      "basis": "实证研究需要数据来源。",
+      "impact_if_wrong": "若无条件，强制采用公开数据集二次分析路线。",
+      "verification": "Phase 0方向可行性分析及Phase 3研究设计中确认。"
+    },
+    {
+      "id": "A7",
+      "assumption": "AI Coding Agent具备联网检索与文件处理（PDF解析、文档生成）能力。",
+      "basis": "系统需检索文献并处理论文文件。",
+      "impact_if_wrong": "降级为纯本地知识模式，文献覆盖度受限。",
+      "verification": "系统运行环境检查（agent_factory工具链可用性）。"
+    },
+    {
+      "id": "A8",
+      "assumption": "用户接受Nature子刊标准不因零基础而降低，仅允许在范围/规模上降级。",
+      "basis": "系统核心特性之一为'Nature级标准'，不可降级项含科学严谨性与数据准确性。",
+      "impact_if_wrong": "需重新对齐用户预期，明确降级边界。",
+      "verification": "首次对话告知并取得用户认可。"
+    }
+  ]
+}

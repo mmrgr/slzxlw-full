@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-UWM 研究深化路线</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; color:#1f2328;
+       background:#ffffff; margin:0; padding:48px 24px; line-height:1.75; }
+.wrap { max-width: 960px; margin:0 auto; }
+h1 { font-size: 28px; border-bottom: 3px solid #2f6f4e; padding-bottom: 12px; margin-top: 8px; }
+h2 { font-size: 22px; margin-top: 40px; padding-left: 12px; border-left: 5px solid #2f6f4e; color:#14432c; }
+h3 { font-size: 18px; margin-top: 28px; color:#1c5a3a; }
+blockquote { margin: 20px 0; padding: 12px 20px; background:#f3f8f5; border-left:4px solid #4a9d6f; color:#2a4a3a; border-radius:0 6px 6px 0; }
+table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 14px; }
+th, td { border: 1px solid #d8e0da; padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #eaf3ed; font-weight: 600; color:#14432c; }
+tr:nth-child(even) td { background: #fafcfb; }
+code { background:#f0f2f1; padding:2px 6px; border-radius:4px; font-family: Consolas, monospace; font-size: 13px; }
+pre { background:#f6f8f7; padding:14px; border-radius:8px; overflow:auto; border:1px solid #e2e8e4; }
+hr { border:none; border-top:1px solid #e2e8e4; margin:36px 0; }
+strong { color:#111; }
+li { margin: 4px 0; }
+a { color:#1c7a4b; }
+</style></head>
+<body><div class="wrap">
+<h1 id="ai-uwm">AI-UWM 研究深化路线：文献映射 · 实验设计 · 发表路径</h1>
+<blockquote>
+<p>交付对象：邵敬哲（哈尔滨工业大学 环境学院，资源与环境，24S129122）
+依据材料：开题报告《AI算力设施驱动下城市水代谢响应与承载边界的系统模拟研究》3.3 版；论文库 <code>C:\Users\mmrgr\Desktop\论文9.15</code>（33 篇）+ <code>论文9.15补充</code>（1 篇）= 34 篇
+说明：本文是<strong>过程型研究指导</strong>，不是代写。文中"关系/启示"基于各 PDF 首页（标题+摘要，M2 级）与开题报告原文；凡属推断一律标注"推断"，凡需你确认的一律标 <code>待作者确认</code>。不预测录用概率、不承诺实验结果。</p>
+</blockquote>
+<hr />
+<h2 id="0">0. 一页速览</h2>
+<p><strong>我读到的课题内核</strong>：你要解决的是"钱德拉塞卡式"的错位——现有研究一头能把算力换算成设施水耗，另一头能描述城市供水/污水/再生水的循环，但中间<strong>没有一个以 AI IT 容量为驱动、可在日尺度闭合验证的过程接口</strong>，因而无法回答"AI 扩张是把城市水系统压到总量上限，还是先改变了瓶颈位置"。你的 AI-UWM 正是补这个接口，并用<strong>条件化承载容量 CAWCC + 多时间尺度 + 瓶颈迁移</strong>三件套把结论从"总量阈值"升级为"条件化可行域与路径"。这个定位<strong>足够新、切口足够准</strong>，是能冲击高影响力期刊的骨架。</p>
+<p><strong>三个最高杠杆动作（按投入产出排序）</strong>：
+1. <strong>把"单一参数域算例"升级为"多城市/多气候带泛化"</strong>。这是从"硕士级算例"跨到 Nature 子刊的<strong>唯一硬门槛</strong>。你的参数域（缺水—高冷负荷端 / 凉爽端）已经是泛化的雏形，只需外扩到 15–40 个真实城市（对齐 Lei 2022 的 15 个美国气候区 / Jiang 2025 的中国区域），把结论从"某城市"变成"哪类城市在什么条件下"。
+2. <strong>把"瓶颈迁移"做成一条可检验的、可量化的普适规律</strong>（例如：主导约束迁移的临界 AI 容量随"供水侧余量/污水侧余量"之比单调变化的标度关系）。Nature 系要的是<strong>机制</strong>，不是"某案例算出来的数"。
+3. <strong>量化"时间聚合高估系数"</strong>（年→日→小时尺度的 CAWCC 提前量），并给出它由哪些城市状态与气候条件控制。这直接对应你 H2，且是<strong>可被其他城市复用</strong>的通用量，卖点清晰。</p>
+<p><strong>目标期刊判断（条件化，非承诺）</strong>：当前设计"如能完成多城市泛化 + 一个可量化机制"，最匹配的是 <strong>Nature Water / Nature Sustainability / Nature Communications</strong>；若停留在单参数域，落点更可能是 <strong>Environmental Science &amp; Technology、Water Research、Applied Energy、Nature Cities</strong> 一级。详见第 5 节。</p>
+<p><strong>必须先处理的两处风险（详见 6.1）</strong>：
+- <strong>P1 引用准确性</strong>：开题报告参考文献 <strong>[58] Wang Z. 2020, JCLP 258:120789</strong> 的 DOI 经 Crossref 核验<strong>指向 Wielemaker 2020，而非 Wang 等</strong>（张冠李戴）。该条若不修正，属于正式材料的硬伤。
+- <strong>P1 关键论断缺证据链</strong>：报告 3.3 节"AI 排水在城市污水总量中占比很小、不足以显著改变再生水可利用源量"是一个<strong>会削弱你再生水故事线</strong>的强论断，目前无来源支撑，需补数据或降级为条件化表述。</p>
+<hr />
+<h2 id="1">1. 开题报告理解确认（结构复核）</h2>
+<p><strong>题目</strong>：AI算力设施驱动下城市水代谢响应与承载边界的系统模拟研究
+<strong>总问题</strong>：AI 负荷如何改变城市人工水系统</p>
+<table>
+<thead>
+<tr>
+<th>科学问题</th>
+<th>假设（方向）</th>
+<th>对应研究内容</th>
+<th>方法内核</th>
+<th>产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 代谢响应："何时由总量增加转为结构变化"</td>
+<td>H1 低规模→总量响应；接近关键设施能力→结构调整</td>
+<td>内容一（模型）+ 内容二（响应）</td>
+<td>AI-UWM 闭合水量递推</td>
+<td>结构指标转折临界规模</td>
+</tr>
+<tr>
+<td>Q2 时间尺度："年均为何高估"</td>
+<td>H2 年≥日≥极端小时承载边界；差异由峰值重合/气候/余量决定</td>
+<td>内容三（CAWCC 多尺度）</td>
+<td>参数化规划 式(5-32) + 日/小时演算</td>
+<td>边界提前量</td>
+</tr>
+<tr>
+<td>Q3 瓶颈转换："谁先失效、如何迁移、干预何时有效"</td>
+<td>H3 一级约束间先迁移；供水侧有余量时向二级迁移；干预有边际转折</td>
+<td>内容四（瓶颈/干预）</td>
+<td>首次失效规模 + 逐级扩容</td>
+<td>瓶颈图谱/有效区间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>模型 AI-UWM</strong>：集总式节点网络，逐日核算外部水量、排放、不可恢复消耗、储量变化；AI 作为独立高强度点源节点 + 单独"局部接入"约束；AI 侧按"IT 容量→负载→能耗→排热→冷却补水→消耗/排污"逐级计算；冷却方程 (5-11)~(5-26)；承载边界 (5-32)；守恒校验 (5-34)。
+<strong>已完成</strong>：方程体系推导 + 水量守恒闭合 + 后端/前端构建 + 算例守恒校核。</p>
+<p><strong>我注意到的问题（P0/P1/P2）</strong>：
+- <strong>P1</strong> 参考文献 [58] DOI 错误（见上）。
+- <strong>P1</strong> "AI 排水占比很小"论断缺来源（见上）。
+- <strong>P1</strong> 小时尺度依赖"典型日内曲线把日总量分解为小时序列"——这会削弱 H2 的极端小时结论可信度。建议至少对 <strong>1–2 个城市用真实小时序列</strong>做定点核验，其余城市用曲线（并在论文中明说边界）。
+- <strong>P1</strong> 8 篇关键文献 PDF 缺失（见 2.5），其中 <strong>de Vries 2023 Joule [5]、Ebrahimi 2014 [36]、Zhang 2014 [37]、Kenway 2011 [23]、Urich 2014 [12]</strong> 是机制一的直接支撑，建议补齐后再定稿综述。
+- <strong>P2</strong> 术语/符号：（CAWCC）与"条件化承载容量"建议全文统一为一种中文表述并在首次出现时给缩写。
+- <strong>P2</strong> H1–H3 的<strong>否证条件</strong>未显式写出（"观察到什么就推翻它"）。建议在方法章逐条补上，这在审稿中对"可检验性"加分很大。</p>
+<hr />
+<h2 id="2-34">2. 文献—研究映射（34 篇，按四大机制分组）</h2>
+<blockquote>
+<p>阅读口径：以下"内容/方向"基于各 PDF 首页摘要（M2）；"启示"是从摘要与题名可支持的<strong>可操作用法</strong>，标注为推断的建议已注明。</p>
+</blockquote>
+<h3 id="21-ai-15">2.1 机制一：AI 算力负荷、冷却排热与能—水—碳权衡（15 篇）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>文件</th>
+<th>内容与方向</th>
+<th>与本研究的关系</th>
+<th>启示 / 用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>B1-01 Wang2026 ESE</td>
+<td>构建全球 98 国 4775 座数据中心 + 57547 座市政污水厂的<strong>地理数据库</strong>，论证"数据中心—污水厂共生"可同时减碳节水</td>
+<td><strong>与你课题主题最接近的一篇</strong>：它证明"数据中心接入城市水务系统"是全球性议题，也给出了"共生/协同"的上界参照</td>
+<td>① 你的 AI-UWM 是它的<strong>机理深化</strong>（它给全球潜力，你给城市内部水流结构）；② 借其"DC+WWTP 空间叠加"思路做<strong>多城市泛化</strong>；③ 写作时用它做"议题重要性"引证</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B1-02 Lei2025 RCR</td>
+<td>综述数据中心工作负载用水，评估关键决定因素（服务器效率、电网水耗因子、利用率、冷却技术、气候）</td>
+<td>直接决定你 α(t)、WUE、κ_cool 的<strong>参数依据</strong></td>
+<td>把它的"决定因素清单"做成本研究的<strong>参数敏感性候选集</strong>（对应 3.5 不确定性）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>B1-03 Jiang2025 ApplEnergy</td>
+<td>中国自下而上设施级水足迹 + 21 情景外推；<strong>72% 算力位于严重缺水区</strong></td>
+<td>给你"区域水风险"背景与中国情景参数；支撑参数域的必要性</td>
+<td>① "72%"直接作为研究背景的硬数字；② 21 情景可对齐你的 G 层压力情景；③ 其 PUE/WUE/电网脱碳三改进使 WF 降 51.5–58.3% 可作为你干预分析的对照锚点</td>
+</tr>
+<tr>
+<td>4</td>
+<td>B1-04 Lei2022 RCR</td>
+<td>10 类数据中心原型 × 15 个美国气候区的 <strong>PUE/WUE 区间</strong>（混合物理-统计法，真实数据验证）</td>
+<td><strong>κ_cool 与 PUE 的先验分布核心来源</strong></td>
+<td>直接把这些区间作为你 κ_cool、WUE 的<strong>参数区间/条件分布</strong>；其"PUE/WUE 相对差可达 62%/100%"支撑你把冷却技术设为高敏感参数</td>
+</tr>
+<tr>
+<td>5</td>
+<td>B1-05 Li2025 CACM</td>
+<td>"Making AI Less Thirsty"：AI 模型水足迹的时空差异与"秘密水足迹"</td>
+<td>提供 AI 水足迹的<strong>叙事与公众影响</strong>；时空差异支撑你的时序实验动机</td>
+<td>用作引言"为什么需要时序/城市尺度"的引证；其 2027 电力预测可作为你 AI 规模梯度的上限标定</td>
+</tr>
+<tr>
+<td>6</td>
+<td>B1-06 Siddik2021 ERL</td>
+<td>美国数据中心<strong>环境足迹</strong>系统核算（直接+间接）</td>
+<td>设施足迹核算方法学参照</td>
+<td>作为"设施足迹 vs 城市代谢"两类边界的<strong>对照起点</strong>，帮你论证为什么要外扩到城市边界</td>
+</tr>
+<tr>
+<td>7</td>
+<td>B1-07 Karimi2022 RCR</td>
+<td>Phoenix 两座共置 DC 实测：不同冷却系统下的 <strong>PUE–WUE 权衡</strong>（风冷 PUE 高 13% 但 WUE 低 66%）</td>
+<td><strong>你"干式替代=把水约束转为电力约束"论断的直接实测证据</strong></td>
+<td>用它做你模型的<strong>行为验证算例</strong>（能否复现其 PUE/WUE 权衡方向）；把"干湿混合比例 f_wet"的代价曲线对齐它的实测范围</td>
+</tr>
+<tr>
+<td>8</td>
+<td>B1-08 Privette2026 AGU Adv</td>
+<td>评论：数据中心水足迹<strong>透明度缺口</strong>（冷却+发电+供应链）</td>
+<td>为你的"数据不可得→区间参数/条件剖面"策略提供正当性</td>
+<td>用作方法局限的引证；其"局部影响显著"支撑你"点源局部接入约束"的动机</td>
+</tr>
+<tr>
+<td>9</td>
+<td>B1-09 Barnett2026 WaterRes</td>
+<td>AI 全球水足迹 2027 或达 42–66 亿 m³；2/3 数据中心在缺水区；提出"数字节水/digital water sobriety"治理框架</td>
+<td>政策与治理层面的对标；"缺水区占比"呼应 Jiang2025</td>
+<td>为你的"实践意义/政策建议"章节提供治理话语；避免只谈物理不谈治理</td>
+</tr>
+<tr>
+<td>10</td>
+<td>B1-14 Alissa2025 Nature</td>
+<td><strong>Nature 正刊</strong>：云基础设施的 LCA，高级冷却（冷板/浸没）降低 GHG 15–20% 等</td>
+<td>证明"冷却技术选择"是 Nature 级议题；给你服务器侧冷却方式的 LCA 依据</td>
+<td>① 证明你的"服务器侧热捕集区分风冷/冷板/浸没"是<strong>上得了顶刊维度</strong>的变量；② 其 LCA 边界可支撑你的能—碳后评估</td>
+</tr>
+<tr>
+<td>11</td>
+<td>B1-15 Mytton2021 npj CW</td>
+<td>数据中心用水 Perspective：直接冷却 + 间接发电用水；透明度低（&lt;1/3 运营商计量）</td>
+<td>用水口径与透明度的经典参照</td>
+<td>作为 WUE/消耗口径的引证；其"美国 17 亿 L/日 vs 总量 12180 亿 L/日"支撑你"总量小、局部大"的叙事</td>
+</tr>
+<tr>
+<td>12</td>
+<td>B2-01 Xiao2025 NatSust</td>
+<td><strong>Nature 子刊</strong>：美国 AI 服务器 2024–2030 年水足迹 731–1125 百万 m³、碳 24–44 Mt；最佳实践可减 73%/86%</td>
+<td>权威的 AI 服务器"能—水—碳"核算，是你<strong>能—碳后评估的标杆</strong></td>
+<td>① 对齐它的核算边界做交叉验证；② 其"空间分布驱动深度不确定性"支撑你做多城市泛化；③ 其"净零难达成"叙事可作为你的高层立意补充</td>
+</tr>
+<tr>
+<td>13</td>
+<td>B2-02 Masanet2020 Science</td>
+<td><strong>Science</strong>：重估全球数据中心能耗，指出效率趋势使增长远低于"翻倍/翻三倍"的流行预测</td>
+<td>你设定 IT 容量梯度与效率情景的<strong>宏观标定基准</strong></td>
+<td>用它校准"效率提升 vs 负载增长"的两难；在情景中设"效率追赶"与"效率停滞"两支</td>
+</tr>
+<tr>
+<td>14</td>
+<td>B2-06 Chen2022 FrontEnergy</td>
+<td>液冷数据中心现状与挑战（冷板/浸没/喷雾）</td>
+<td>服务器侧热捕集方式的技术依据</td>
+<td>直接支撑你"风冷/冷板/浸没"三分类的物理参数（热流密度、捕集效率、二次换热需求）</td>
+</tr>
+<tr>
+<td>15</td>
+<td>EX-Sim2023 JCLP</td>
+<td>半导体废水处理综述（CMP 废水、氟氮、回用）</td>
+<td>芯片制造端用水/废水（供应链水足迹），非核心但可扩展边界</td>
+<td>若你后续要把"供应链水足迹"纳入边界，这是入口；否则可仅引用说明"本模型不含上游半导体用水"的边界</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-10">2.2 机制二：城市水代谢与综合水系统建模（10 篇）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>文件</th>
+<th>内容与方向</th>
+<th>与本研究的关系</th>
+<th>启示 / 用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>B1-10 Behzadian2014 DWES</td>
+<td><strong>WaterMet²</strong>：30 年逐日质量平衡，量化水、材料、化学、能源、GHG</td>
+<td><strong>你 AI-UWM 的直接母体</strong></td>
+<td>① 你的方程体系（5-1)~(5-10) 可逐项对应它的模块；② 用它做<strong>结构验证基准</strong>；③ 它的 KPI 体系可对齐你的代谢结构指标</td>
+</tr>
+<tr>
+<td>17</td>
+<td>B1-11 Dobson2024 GMD</td>
+<td><strong>WSIMOD</strong>：节点—弧线结构，水量水质守恒 + 模块复用</td>
+<td>建模架构参照；你 3.3 节"集总式节点网络"的方法学出处</td>
+<td>借其"节点-弧线 + 编排"思想，把你 AI 节点标准化为可复用的过程节点；其水质扩展为你"CoC 水质限制"提供接口</td>
+</tr>
+<tr>
+<td>18</td>
+<td>B1-12 LandaCansigno2020 ESPR</td>
+<td>水回用策略的城市水代谢性能评估（水-能-污染 nexus KPI，WaterMet², 6 分散+3 集中）</td>
+<td>再生水策略评价框架</td>
+<td>你的"再生水模块 + 水源份额"指标可复用其 KPI 体系；其"分散式更优"结论可作为你干预比选的对照</td>
+</tr>
+<tr>
+<td>19</td>
+<td>B1-13 Renouf2018 WaterRes</td>
+<td>城市水代谢评价框架（3 个澳洲城市区域的用水效率与水文响应）</td>
+<td>城市水代谢<strong>评价指标体系</strong>的来源</td>
+<td>对齐你的结构指标（水源份额/消耗率/回流率/内部循环率）定义，避免与其他文献口径冲突</td>
+</tr>
+<tr>
+<td>20</td>
+<td>B1-16 Zou2025 ApplEnergy</td>
+<td>生态网络分析（ENA）+ NSGA-II 双目标优化北京水代谢网络（省水 7.2%、省能 5.5%）</td>
+<td>你 2.2 节已引用；"瓶颈识别+干预"的方法近邻</td>
+<td>① 其"优化-韧性"双目标可升级为你的"承载边界-干预边际收益"；② 可借鉴其 ENA 指标做瓶颈的<strong>网络视角</strong>补充</td>
+</tr>
+<tr>
+<td>21</td>
+<td>B1-17 Radini2021 ApplEnergy</td>
+<td>污水-再生水综合系统的水-能-食-气候 nexus 与信息物理框架</td>
+<td>你 3.3 节再生水/污水耦合框架的引证</td>
+<td>支撑你把"再生水处理与输配能耗"纳入系统边界（对应能—碳后评估）</td>
+</tr>
+<tr>
+<td>22</td>
+<td>B2-09 Cai2025 EcolModel</td>
+<td>北京"物理—虚拟水循环"网络 ENA，含地表/地下/调水/再生水多水源</td>
+<td>你 2.2 节已用；北方缺水参数域的背景与基础流参数</td>
+<td>① 直接为你的"北京型"参数域提供水源结构与通量量级；② 其"再生水对韧性贡献"支撑你的再生水故事</td>
+</tr>
+<tr>
+<td>23</td>
+<td>B2-10 Voskamp2020 JCLP</td>
+<td>城市水与能耗时空变异驱动因子的系统综述</td>
+<td>支撑你"峰值来自气候 vs 来自用户行为"的分解</td>
+<td>用它归纳的驱动因子清单设计你的<strong>相位差实验</strong>（错峰/重合）与季节因子</td>
+</tr>
+<tr>
+<td>24</td>
+<td>B2-11 Nezami2022 SCS</td>
+<td>系统动力学 + 城市水代谢混合模型（Isfahan 至 2041）</td>
+<td>你 2.2 节的混合建模参照</td>
+<td>其 SD 反馈结构可对照你的"差分递推体系 + 未满足需求记账"；用于讨论"模块化 vs 反馈"的取舍</td>
+</tr>
+<tr>
+<td>25</td>
+<td>B2-15 Vakilifard2019 ApplEnergy</td>
+<td>城市水-能多周期规划 MILP（含光伏、海水淡化、约束与预算）</td>
+<td>你 3.5/表 3-2"再生水深度处理能力 C_rec 与输配能力 C_rec,dist"的规划形式来源</td>
+<td>借其"容量-调度两阶段"结构，形式化你的 CAWCC 规划（式 5-32 的工程对照）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-4">2.3 机制三：时间尺度、需水峰值与不确定性决策（4 篇）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>文件</th>
+<th>内容与方向</th>
+<th>与本研究的关系</th>
+<th>启示 / 用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26</td>
+<td>B1-20 HousePeters2011 WRR</td>
+<td>城市需水建模综述：尺度交互、不确定性、阈值/非线性、从统计到动态集成</td>
+<td><strong>H2 的时间尺度理论依据</strong></td>
+<td>用它论证"年均掩盖峰值"的合理性；其"阈值/非线性"呼应你 H1 的"结构转折点"</td>
+</tr>
+<tr>
+<td>27</td>
+<td>B2-18 Blokker2010 JWRPM</td>
+<td>随机末端用水模型（Simulate residential water demand）</td>
+<td><strong>H2"时间聚合平滑峰值"的直接方法来源</strong></td>
+<td>用它生成小时级城市需水序列，检验 H2；其随机模型可校准你"典型日内曲线"的可信区间</td>
+</tr>
+<tr>
+<td>28</td>
+<td>B2-19 Haasnoot2013 GEC</td>
+<td>动态适应路径（DAPP）与<strong>适应性临界点（ATP）</strong></td>
+<td><strong>H3"瓶颈迁移/路径转移"的理论支柱</strong></td>
+<td>把"主导瓶颈迁移"映射为 ATP：定义"在何种 AI 规模/压力下必须切换策略"，让你的瓶颈迁移有理论名分</td>
+</tr>
+<tr>
+<td>29</td>
+<td>B2-20 MortazaviNaeini2015 EMS</td>
+<td>极端干旱下城市骨干供水稳健优化（多目标进化、失效与服务可靠性）</td>
+<td>支撑你 CAWCC 的<strong>失效判据与服务可靠性</strong>形式化</td>
+<td>借其"供货未满足/可靠性指标"定义你的 Unmet^dom=0 硬判据；其"深度不确定性"话术可用于审稿防御</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-4">2.4 机制四：承载边界与瓶颈迁移（4 篇）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>文件</th>
+<th>内容与方向</th>
+<th>与本研究的关系</th>
+<th>启示 / 用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>B1-18 Dai2022 JCLP</td>
+<td>空间系统动力学（SD+CA+GIS）评估永定河流域水环境承载力，阈值随状态/压力变化</td>
+<td><strong>"条件化承载边界"的直接依据</strong></td>
+<td>用其"阈值随系统状态变化"支撑你 CAWCC 的<strong>条件化</strong>定位；GIS 空间化可为你未来"局部接入"的深化提供路径</td>
+</tr>
+<tr>
+<td>31</td>
+<td>B1-19 Zhou2019 STOTEN</td>
+<td>验证"承载力极限"假说，指出 WECC 极限是<strong>动态值</strong></td>
+<td>支撑 H1/H3 的动态观</td>
+<td>用它反驳"单一阈值"式承载力研究，为你的多约束/迁移框架立论</td>
+</tr>
+<tr>
+<td>32</td>
+<td>B2-16 Qin2016 Water</td>
+<td>提出<strong>工程设计水资源承载力（WRDCC）</strong>：不以自然总量、而以工程设计供/用水平为边界</td>
+<td><strong>你 CAWCC 的直系概念渊源</strong>（报告 2.2 已引）</td>
+<td>明确写清 CAWCC = WRDCC 思想在"AI 节点 + 多设施 + 多时间尺度"上的推广，这是<strong>理论创新点的定位句</strong></td>
+</tr>
+<tr>
+<td>33</td>
+<td>B2-17 Wang2021 EcolInd</td>
+<td>SD + 改进模糊综合评价长春水资源承载力，多子系统非线性拐点</td>
+<td>方法参照（多子系统非线性）</td>
+<td>对照其"拐点/情景"分析，支撑你"结构响应阶段"的可检验性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25">2.5 缺口对照：三处研究空白 ↔ 支撑文献 ↔ 缺口</h3>
+<table>
+<thead>
+<tr>
+<th>报告识别的空白</th>
+<th>直接支撑的文献</th>
+<th>缺口（你的增量空间）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 以年均/总量口径描述 AI 用水，缺"负荷→城市水循环路径变化"</td>
+<td>B1-02, B1-04, B1-07, B2-01（设施/区域）</td>
+<td>无人把<strong>负荷时序</strong>接到<strong>城市水流路径比例</strong>上 → 你的 H1</td>
+</tr>
+<tr>
+<td>② 冷却高温敏感性与传统需水峰值叠加主要在设施尺度，多尺度承载差异未量化</td>
+<td>B1-20, B2-18（需水尺度）、B1-04（气候）、B1-07（实测权衡）</td>
+<td>无人量化<strong>年→日→小时 CAWCC 高估</strong> → 你的 H2（<strong>最可能独立成文</strong>）</td>
+</tr>
+<tr>
+<td>③ 承载力多为单一阈值结论，无主导瓶颈及迁移条件</td>
+<td>B2-16, B1-19, B1-18, B2-19（ATP）、B1-16（优化）</td>
+<td>无人给<strong>多设施主导瓶颈迁移的可量化条件</strong> → 你的 H3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>缺口期的 PDF 缺件（建议补齐后定稿综述）</strong>：de Vries 2023 <em>Joule</em> [5]、Ebrahimi 2014 <em>RSER</em> [36]、Zhang 2014 <em>RSER</em> [37]、Kenway 2011 <em>WST</em> [23]、Urich 2014 <em>WST</em> [12]（这 5 篇是机制一/二的核心引证，且均为真实文献，仅尚未下载）。</p>
+<hr />
+<h2 id="3">3. 后续研究路径（从"模型已建"到"高水平论文"）</h2>
+<h3 id="30-elevator-pitch">3.0 定位与卖点（Elevator pitch）</h3>
+<p><strong>一句话主论点（建议）</strong>：</p>
+<blockquote>
+<p>在 AI 算力成为城市水系统新型驱动力的背景下，<strong>系统承载力的真正约束不是"总水量"，而是"峰值时刻最先失效的那个设施环节"；而该瓶颈的位置会随 AI 规模与气候压力发生可预测的迁移</strong>。</p>
+</blockquote>
+<p><strong>三条候选"headline finding"（用于定位论文卖点，需实验证实，属假设）</strong>：
+- <strong>F1（时间维度）</strong>：在年总负荷可比条件下，按年均口径评估会把可承载 AI 规模<strong>高估 Δ%</strong>，且 Δ 与"AI 负荷峰值—传统需水峰值相位差""设施可用裕度"存在定量关系。
+- <strong>F2（空间/系统维度）</strong>：AI 扩张首先使<strong>一级约束（水源/给水/接入）</strong>成为瓶颈；当供水侧余量充足时，主导瓶颈<strong>迁移</strong>到污水/再生水侧，存在可量化的迁移临界规模。
+- <strong>F3（干预维度）</strong>：针对主导瓶颈的干预存在<strong>边际有效性转折点</strong>；越过转折点后，节水型干预（提高 CoC、干式化）会把约束<strong>转移到电力侧</strong>，形成"水—电负担转移"。</p>
+<blockquote>
+<p>这三条如果成立，分别对应可独立成文的 3 篇（见 5.3）。<strong>F1 最易做、最适合先发。</strong></p>
+</blockquote>
+<h3 id="31-1-202611">3.1 第 1 步｜模型验证与基准（当前—2026.11）</h3>
+<p>目标是让审稿人相信模型"可信"，这是所有 Nature 系论文的隐含门槛。需补四类验证：
+1. <strong>守恒验证（已有）</strong>：式(5-1) 顶层、式(5-24) 节点残差 → 扩展到<strong>多情景全时段</strong>零违规。
+2. <strong>单元行为验证（需补）</strong>：极端参数下模型行为符合物理——(a) α=const 退化；(b) 100% 干式时补水→0、电耗↑；(c) 无 AI 时退化为传统城市水代谢。
+3. <strong>结构/交叉验证（需补）</strong>：与 <strong>WaterMet²（B1-10）/ WSIMOD（B1-11）</strong> 对接，在同一简化城市上比对水量路径；与 <strong>Karimi2022（B1-07）的 Phoenix 双 DC</strong> 实测 PUE/WUE 权衡方向比对。
+4. <strong>历史重现（需补）</strong>：用北京（或你选定城市）近年水资源公报数据（报告 [59][60][63]）做量级重现，报告相对误差。</p>
+<p><strong>产物</strong>：模型方法论文初稿 + 版本化代码 + 数据字典 + 守恒/行为测试报告（对应进度表第一阶段）。</p>
+<h3 id="32-2-202611202701">3.2 第 2 步｜代谢响应实验（内容二，2026.11—2027.01）</h3>
+<ul>
+<li><strong>纵向主线</strong>：固定城市状态与外部条件，AI IT 容量阶梯递增 <code>C_AI ∈ {0, 0.25, 0.5, 1, 2, 4}×C_base</code>，记录规模指标与<strong>结构指标</strong>，用分段回归/变点检测锁定"规模→结构"的<strong>转折临界规模</strong>。</li>
+<li><strong>横向主线</strong>：同一 AI 规模下比较不同系统状态（S0–S3）差异。</li>
+<li><strong>分离对照（关键）</strong>：设<strong>等效普通工业对照</strong>两支——(a) 等<strong>年用水量</strong>；(b) 等<strong>峰值热负荷/接入规模</strong>——以区分"AI 连续负荷效应"与"高密度工业一般效应"。</li>
+<li><strong>峰值机制分离</strong>：α(t) 取常值 vs 日分布；改变"城市用电峰值—用水峰值"的<strong>相位差</strong>（错峰/重合），分离"峰值来自气候"与"来自用户行为"。</li>
+<li><strong>产出</strong>：代谢响应规律 + <strong>论文 1</strong>。</li>
+</ul>
+<h3 id="33-3-202701202705">3.3 第 3 步｜多时间尺度承载边界（内容三，2027.01—2027.05）</h3>
+<ul>
+<li><strong>CAWCC 求解</strong>：式(5-32) 参数化规划，网格扫描 + 二分细化；报告可行域<strong>不连续</strong>时的全部可行区间。</li>
+<li><strong>三尺度</strong>：年 / 日 / 极端小时，边界均含储量逐日（逐时）演算；定义并输出<strong>边界提前量</strong> <code>Δ_scale = (CAWCC_year − CAWCC_scale)/CAWCC_year</code>。</li>
+<li><strong>复合压力</strong>：G0–G3 × S0–S3 全交叉；极端小时序列从高温期连续时段提取并标注持续天数。</li>
+<li><strong>小时序列可信度</strong>：<strong>至少 1–2 个城市用真实小时序列定点核验</strong>，其余用典型曲线（并在论文显式声明边界）。</li>
+<li><strong>产出</strong>：CAWCC 响应面 + 提前量热图 + <strong>论文 2（最有独立发表价值）</strong>。</li>
+</ul>
+<h3 id="34-4-202705202709">3.4 第 4 步｜瓶颈迁移与干预（内容四，2027.05—2027.09）</h3>
+<ul>
+<li><strong>瓶颈识别</strong>：对每类约束求<strong>首次失效 AI 规模</strong> <code>f_k</code>；主导瓶颈 = <code>argmin_k f_k</code>；<code>f_k</code> 相近记为共同主导。</li>
+<li><strong>迁移轨迹</strong>：在 S0–S3 × G0–G3 下绘制主导瓶颈随 <code>C_AI</code> 的迁移路径，检验 H3（一级间先迁移 → 供水有余量时向二级迁移）。</li>
+<li><strong>干预边际收益</strong>：对主导瓶颈<strong>逐级扩容</strong>，输出 <code>d(CAWCC)/d(能力)</code> 曲线，识别<strong>边际有效性转折点</strong>与<strong>新主导约束</strong>的出现。</li>
+<li><strong>负担转移核算</strong>：提高 CoC（→水质风险）、干式替代（→峰值电力）、再生水扩容（→能耗）三条路径，同步做能—碳后评估。</li>
+<li><strong>产出</strong>：瓶颈图谱 + 干预有效区间 + <strong>论文 3</strong>。</li>
+</ul>
+<h3 id="35-5-202709202804">3.5 第 5 步｜能—碳后评估（2027.09—2028.04，与学位论文并行）</h3>
+<p>按报告 3.5/表 3-2 的"扩展约束"定位：能源/碳不进入失效判据，而在<strong>求得边界后于固定 AI 容量下与水耗并列核算</strong>。对齐 <strong>B2-01 Xiao2025（Nature Sustainability）</strong> 的核算边界做交叉验证，识别"节水措施造成的能耗/碳转移"。</p>
+<h3 id="36-6-nature">3.6 第 6 步｜多城市/参数域泛化（冲击 Nature 的关键一步）</h3>
+<blockquote>
+<p><strong>这一步决定你落在"ES&amp;T/Water Research"还是"Nature Water/Nature Sustainability"。</strong></p>
+</blockquote>
+<p>把 3.1–3.4 的流程跑在 <strong>15–40 个真实城市</strong>上（覆盖缺水—高冷负荷端到凉爽端），输出：
+- <strong>普适标度关系</strong>：临界 AI 容量 / 主导瓶颈类型 / 时间聚合高估系数 Δ 作为"城市系统状态向量"的函数；
+- <strong>条件化分型</strong>：哪类城市属"水源主导型/给水主导型/污水-再生水主导型/局部接入主导型"；
+- <strong>全球/区域含义</strong>：叠加真实数据中心扩张热点（对齐 B1-01/B1-03/B2-01 的地理数据）给出风险排序。</p>
+<p>这正是把"单案例模拟"升格为"机制性通用结论"的动作。</p>
+<hr />
+<h2 id="4">4. 实验设计细节（可执行）</h2>
+<h3 id="41">4.1 实验矩阵（四因子）</h3>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th>水平</th>
+<th>对应/来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 规模 C_AI</td>
+<td>{0, 0.25, 0.5, 1, 2, 4}×C_base（可细化到 8–10 级）</td>
+<td>报告 3.4；对齐 B2-02 效率情景</td>
+</tr>
+<tr>
+<td>系统状态 S</td>
+<td>S0 均衡 / S1 水源足-给水受限 / S2 淡水受限-再生水强 / S3 总量足-输配受限</td>
+<td>报告表 3-3</td>
+</tr>
+<tr>
+<td>外部压力 G</td>
+<td>G0 常规 / G1 高温 / G2 干旱 / G3 复合</td>
+<td>报告表 3-4</td>
+</tr>
+<tr>
+<td>冷却技术 a</td>
+<td>服务器侧 {风冷/冷板/浸没} × 末端 {干式/湿式/干湿混合}</td>
+<td>B1-04, B1-07, B2-06, B1-14</td>
+</tr>
+</tbody>
+</table>
+<p><strong>主实验 = S×G 全交叉（4×4=16）× C_AI 梯度 × 3 冷却路径</strong>；对照实验单列（AI vs 等效工业；α 相位差）。</p>
+<h3 id="42">4.2 变量与对照原则</h3>
+<ul>
+<li><strong>自变量</strong>：C_AI、S、G、a、α(t) 形态、相位差、CoC、f_wet。</li>
+<li><strong>因变量</strong>：见 4.3 指标清单。</li>
+<li><strong>对照（每次只改一个条件）</strong>：</li>
+<li>等效工业对照 A：等年用水总量；对照 B：等峰值热负荷/接入规模。</li>
+<li>负荷对照：α=const vs α(t) 日分布；错峰 vs 重合。</li>
+<li>时间对照：同一年总负荷，年/日/小时三种时间分辨率。</li>
+<li><strong>数值工况</strong>：每个 (S,G,a) 组合做 <strong>C_AI 二分扫描</strong>求 CAWCC。</li>
+</ul>
+<h3 id="43-12">4.3 指标与输出清单（12 类）</h3>
+<ul>
+<li><strong>规模（3）</strong>：城市总取水、AI 边际取水/耗水、回流量、污水处理量、再生水供给量（可细分为 5 个）。</li>
+<li><strong>结构（5）</strong>：水源份额、淡水依赖率、消耗率、回流率、内部循环率（报告式 5-27~5-31）。<strong>内部一致性</strong>：消耗率 + 回流率 = 1（式 5-24）。</li>
+<li><strong>承载（4）</strong>：CAWCC、剩余裕度、首次失效规模 <code>f_k</code>、边界提前量 <code>Δ_scale</code>。</li>
+<li><strong>干预（附加）</strong>：<code>d(CAWCC)/d(能力)</code>、有效性区间、负担转移量（能耗/碳增量）。</li>
+</ul>
+<blockquote>
+<p>输出统一为"条件化"形式：<code>CAWCC(S, G, a, 服务水平)</code>，绝不输出无条件的单一数字。</p>
+</blockquote>
+<h3 id="44">4.4 求解算法与数值方案</h3>
+<ol>
+<li><strong>CAWCC（式 5-32）</strong>：单目标参数化规划。外层对 C_AI 做<strong>对数网格扫描 + 二分细化</strong>（每区间 ≤ δ 相对精度）；内层对时间步 t 递推求解（显式代入上一步 AI 回流量）。</li>
+<li><strong>截断/溢流（式 5-6）</strong>：用 min() 截断；溢流与未满足需求独立记账。</li>
+<li><strong>可行域非单调处理</strong>：先全局扫描，报告<strong>全部可行区间</strong>与首次/最终失效规模（不放假设单调）。</li>
+<li><strong>数值收敛性检验</strong>：显式递推 vs 迭代收敛的差异列为检验项（报告 5.1 已提）。</li>
+</ol>
+<h3 id="45">4.5 不确定性与全局敏感性</h3>
+<ul>
+<li><strong>参数</strong>：负载率、α 波动系数、κ_cool、κ_aux、CoC、蒸发损失率、回流比例、再生水回收率 η_rec、关键设施能力 → 用<strong>有工程依据的区间/条件分布</strong>表达（先验来源：B1-04、B1-02、B1-03）。</li>
+<li><strong>方法</strong>：先 <strong>Morris 筛选</strong>降维，再对关键参数做 <strong>Sobol 方差分解</strong>（主效应+交互），回答三个问题：谁决定转折/边界；相关关系是否改变敏感排序；结论是否稳健。</li>
+<li><strong>结构稳健性</strong>：改变压力时间排列、替换关键冷却关系（如 B1-07 的实测关系）、调整约束优先级。</li>
+</ul>
+<h3 id="46">4.6 验证与基准</h3>
+<table>
+<thead>
+<tr>
+<th>验证类型</th>
+<th>做法</th>
+<th>通过标准（建议）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>守恒</td>
+<td>式(5-1)(5-24) 全时段残差</td>
+<td>相对残差 &lt; ε（如 1e-6）</td>
+</tr>
+<tr>
+<td>行为</td>
+<td>极端参数极限</td>
+<td>方向与量级符合物理</td>
+</tr>
+<tr>
+<td>交叉</td>
+<td>与 WaterMet²/WSIMOD 简化城市对比</td>
+<td>水量路径一致、差异可解释</td>
+</tr>
+<tr>
+<td>实测</td>
+<td>Karimi2022 Phoenix 双 DC PUE/WUE 权衡；某城市水资源公报量级</td>
+<td>方向一致、量级 ±X%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="47">4.7 可复现与过程留痕</h3>
+<ul>
+<li>采用 Python/NumPy，<strong>版本控制</strong>（git）+ 情景配置文件 + 参数证据表（来源/年份/适用工况/上下界）。</li>
+<li>按"选题—开题—资料回填—提纲—初稿—导师修改—定稿"分阶段留存（诚信要求）；AI 辅助按学校规定在相应位置披露。</li>
+</ul>
+<hr />
+<h2 id="5-nature">5. 发表策略（Nature 及子刊）</h2>
+<blockquote>
+<p>以下期刊适配为<strong>基于公开知道的判断</strong>，具体范围/文章类型/格式/费用须以<strong>官方页面</strong>核验后才可写入投稿材料；未核验的指标一律标"待核验"。</p>
+</blockquote>
+<h3 id="51">5.1 期刊匹配矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>目标期刊</th>
+<th>适配度</th>
+<th>需要补强</th>
+<th>备注（须官方核验）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nature Water</strong></td>
+<td>高（城市水系统+新驱动力+机制）</td>
+<td>多城市泛化 + 一个通用机制（Δ 或瓶颈迁移律）</td>
+<td>需核验范围/文章类型/字数/开放获取</td>
+</tr>
+<tr>
+<td><strong>Nature Sustainability</strong></td>
+<td>高（可持续性+政策相关性）</td>
+<td>更强的"社会-技术"含义与政策落点</td>
+<td>用于 AI 可持续主题（B2-01 已在该刊）</td>
+</tr>
+<tr>
+<td><strong>Nature Communications</strong></td>
+<td>中高（多学科、可机制可方法）</td>
+<td>结果广度与统计严谨</td>
+<td>体量接受度较宽</td>
+</tr>
+<tr>
+<td><strong>Nature Cities</strong></td>
+<td>中高（城市系统，较新刊）</td>
+<td>紧扣"城市"叙事</td>
+<td>须核验是否适合本主题</td>
+</tr>
+<tr>
+<td><strong>ES&amp;T / Water Research / Applied Energy</strong></td>
+<td>高（保底且仍高水平）</td>
+<td>相对少</td>
+<td>单参数域+机制即可</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-nature">5.2 冲击 Nature 级需要什么（与现状差距）</h3>
+<table>
+<thead>
+<tr>
+<th>Nature 系偏好</th>
+<th>你现状</th>
+<th>差距/动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>广泛意义（不止一城一例）</td>
+<td>参数域算例</td>
+<td>→ 3.6 多城市泛化</td>
+</tr>
+<tr>
+<td>新颖<strong>机制</strong>而非"更多数据"</td>
+<td>已有 H1–H3 机制假设</td>
+<td>→ 把假设做成<strong>可量化的普适规律</strong>（F1/F2/F3）</td>
+</tr>
+<tr>
+<td>严谨不确定性与可复现</td>
+<td>已有敏感性设计</td>
+<td>→ 补全局敏感性 + 版本化代码 + 数据字典</td>
+</tr>
+<tr>
+<td>政策/实践落点</td>
+<td>已具"算力布局-水务协同"</td>
+<td>→ 明确"谁在什么条件下该做什么"</td>
+</tr>
+<tr>
+<td>强叙事与图</td>
+<td>待建</td>
+<td>→ 主图 3–4 张：CAWCC 响应面、Δ 热图、瓶颈迁移路径、负担转移</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53">5.3 三篇系列论文规划（题目草案）</h3>
+<ul>
+<li><strong>论文 1（方法+代谢响应）</strong>：<em>AI 算力设施接入下城市人工水系统的代谢响应：何时由总量增长转为结构变化</em>。目标 <strong>Water Research / ES&amp;T</strong>，若能泛化则冲 <strong>Nature Water</strong>。</li>
+<li><strong>论文 2（时间尺度边界，最易独立）</strong>：<em>时间聚合如何高估 AI 水系统承载边界：年、日与极端小时尺度的比较</em>。目标 <strong>Nature Water / Nature Communications</strong>。</li>
+<li><strong>论文 3（瓶颈与干预）</strong>：<em>多约束下城市水系统承载瓶颈的迁移与干预的边际有效性转折</em>。目标 <strong>Nature Sustainability / Applied Energy</strong>。</li>
+</ul>
+<blockquote>
+<p>建议：<strong>论文 2 优先投</strong>（卖点最锐、结论最可复用），论文 1 作方法与引用基石，论文 3 收口机制。</p>
+</blockquote>
+<h3 id="54">5.4 预计审稿质疑与预备证据</h3>
+<table>
+<thead>
+<tr>
+<th>可能的质疑</th>
+<th>预备回应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"只有参数域算例，结论能泛化吗？"</td>
+<td>多城市泛化 + 无量纲裕度表达（3.6）</td>
+</tr>
+<tr>
+<td>"小时序列是造出来的"</td>
+<td>1–2 城真实小时序列定点核验 + 显式声明边界</td>
+</tr>
+<tr>
+<td>"AI 排水占比小，再生水反馈不重要"</td>
+<td>用数据支撑或<strong>降级为条件化表述</strong>（这是当前 P1 缺口）</td>
+</tr>
+<tr>
+<td>"缺少经济/碳目标"</td>
+<td>明确边界：水物理承载力为主，能-碳为后评估（已声明）</td>
+</tr>
+<tr>
+<td>"设施参数来自二手区间"</td>
+<td>参数证据表 + 区间/条件分布 + 结构稳健性检验</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55">5.5 时间线与里程碑（对齐开题进度表）</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>里程碑（可检查产出）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一</td>
+<td>2026.06–11</td>
+<td>模型验证（4 类）+ 方法论文初稿</td>
+</tr>
+<tr>
+<td>二</td>
+<td>2026.11–2027.01</td>
+<td>代谢响应实验 + <strong>论文 1 投出</strong></td>
+</tr>
+<tr>
+<td>三</td>
+<td>2027.01–05</td>
+<td>三尺度 CAWCC + <strong>论文 2 投出</strong></td>
+</tr>
+<tr>
+<td>四</td>
+<td>2027.05–09</td>
+<td>瓶颈/干预 + <strong>论文 3 投出</strong></td>
+</tr>
+<tr>
+<td>五</td>
+<td>2027.09–2028.04</td>
+<td>多城市泛化 + 能-碳后评估 + 学位论文</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6">6. 风险、待确认与下一步</h2>
+<h3 id="61-p0-p1-p2">6.1 P0 / P1 / P2 汇总</h3>
+<ul>
+<li><strong>P0（可能影响诚信/核心结论）</strong>：暂无。若把"参数域/情景结论"写成"现实预测"，会升级为 P0——务必保持条件化表述。</li>
+<li><strong>P1（影响论证与完整性）</strong>：
+  1. 参考文献 [58] DOI 张冠李戴（Wang 2020 → 实为 Wielemaker 2020）——须修正或替换。
+  2. "AI 排水占比很小"论断缺证据链——须补数据或降级。
+  3. 小时尺度依赖生成序列——须真实序列定点核验。
+  4. 5 篇核心 PDF 缺件（de Vries/Ebrahimi/Zhang/Kenway/Urich）。
+  5. H1–H3 缺显式<strong>否证条件</strong>。</li>
+<li><strong>P2</strong>：术语统一（CAWCC）；主图规划。</li>
+</ul>
+<h3 id="62-author_input_needed">6.2 待作者确认（AUTHOR_INPUT_NEEDED）</h3>
+<ul>
+<li>目标城市清单与气候带覆盖范围（决定 3.6 泛化规模）。</li>
+<li>是否有真实小时级需水/负荷序列可用（决定 H2 结论强度）。</li>
+<li>学校/学院对 AI 辅助的披露要求（决定 4.7 留痕方式）。</li>
+<li>课题组服务器/集群可用于多城市 × 多情景的计算预算（决定实验分辨率）。</li>
+<li>导师白舜文老师对"先投高质量期刊 vs 稳妥期刊"的倾向（决定投稿顺序）。</li>
+</ul>
+<h3 id="63">6.3 低负担的下一步（三件事，按顺序）</h3>
+<ol>
+<li><strong>修正 [58] 的 DOI 并核验 [10][14][15][18][20][24][25][26][29][30][31][32][40][43][47][48][49][54]</strong>（用 Crossref/知网逐条比对），把综述参考文献做到"零张冠李戴"。</li>
+<li><strong>补做"行为验证 + Phoenix 双 DC 实测对比"两个算例</strong>（用现有模型即可），这是论文 2 的第一批图。</li>
+<li><strong>确定 15–40 个泛化城市清单并接入其水资源公报量级</strong>，把 3.6 从"设想"变成"数据可用性核查表"。</li>
+</ol>
+<hr />
+<p><em>本文依据开题报告 3.3 版与论文库 34 篇首页摘要撰写；所有指向 Nature 系的可能性均为"条件化目标"，非录用承诺。下一步建议先落地 6.3 的三件事，再据实验结果迭代本路线图。</em></p>
+</div></body></html>

@@ -1,0 +1,43 @@
+{
+  "samples": 1024,
+  "workers": 24,
+  "elapsed_seconds": 922.6,
+  "seed": 20260918,
+  "proposed_mw": 1000.0,
+  "bootstrap_iterations": 2000,
+  "p05": 750.0,
+  "p05_ci95": [
+    750.0,
+    1000.0
+  ],
+  "p50": 1000.0,
+  "p50_ci95": [
+    1000.0,
+    1000.0
+  ],
+  "p95": 1000.0,
+  "p95_ci95": [
+    1000.0,
+    1000.0
+  ],
+  "exceedance_probability": 0.0625,
+  "exceedance_probability_ci95": [
+    0.048828125,
+    0.078125
+  ],
+  "mean": 989.990234375,
+  "std": 72.21465167311652,
+  "distinct_thresholds": [
+    750.0,
+    1000.0,
+    1250.0
+  ],
+  "limiting_constraint_share": {
+    "reclaimed_water_substitution_ratio": 1.0
+  },
+  "threshold_distribution": {
+    "750": 0.0625,
+    "1000": 0.915,
+    "1250": 0.0225
+  }
+}

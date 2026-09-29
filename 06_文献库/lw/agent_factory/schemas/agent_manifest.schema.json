@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-factory.local/schemas/agent_manifest.schema.json",
+  "title": "Agent 清单 Schema",
+  "description": "Agent Factory 生成的多Agent系统的 Agent 清单文件（agent_manifest.json）的 Schema。由 Agent Designer（Phase 4a）与 Contract Designer（Phase 4b）协作产出，描述系统中所有 Agent 的角色、职责、输入输出契约、文件读写范围、完成条件、错误处理与禁止行为。Integration Reviewer（Phase 7）据此校验 Agent 间接口一致性。",
+  "type": "object",
+  "properties": {
+    "system_name": {
+      "type": "string",
+      "description": "生成的多Agent系统名称。应反映系统用途，如 '论文综述生成系统'、'申论写作辅助系统'。",
+      "minLength": 1,
+      "examples": ["论文综述生成系统"]
+    },
+    "version": {
+      "type": "string",
+      "description": "系统版本号，遵循语义化版本规范（Semantic Versioning）。",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "examples": ["1.0.0"]
+    },
+    "description": {
+      "type": "string",
+      "description": "系统的整体说明，概述系统完成什么任务、采用何种架构。"
+    },
+    "agents": {
+      "type": "array",
+      "description": "系统中所有 Agent 的定义列表。每个 Agent 必须有明确且互斥的职责。至少包含一个 Agent。",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "description": "单个 Agent 的完整定义。",
+        "properties": {
+          "agent_name": {
+            "type": "string",
+            "description": "Agent 的唯一标识名称，使用小写蛇形命名（snake_case）。对应 agents/ 目录下的 {agent_name}.md 定义文件。",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "examples": ["translator", "consistency_checker", "fact_extractor"]
+          },
+          "role": {
+            "type": "string",
+            "description": "Agent 的中文角色名，简明描述其职能。如 '翻译Agent'、'一致性检查Agent'。",
+            "minLength": 1
+          },
+          "responsibilities": {
+            "type": "string",
+            "description": "Agent 的详细职责描述。必须明确'做什么'与'不做什么'，与其他 Agent 职责互斥。必须包含动词（提取/翻译/检查/生成）、对象（处理什么数据）、边界（仅负责X，不负责Y）。",
+            "minLength": 10
+          },
+          "input_schema_ref": {
+            "type": "string",
+            "description": "Agent 输入数据的 JSON Schema 引用路径。指向 schemas/ 目录下的文件。若 Agent 有多个输入，此处引用包含所有输入定义的复合 Schema。",
+            "examples": ["schemas/extracted_text.schema.json"]
+          },
+          "output_schema_ref": {
+            "type": "string",
+            "description": "Agent 输出数据的 JSON Schema 引用路径。指向 schemas/ 目录下的文件。",
+            "examples": ["schemas/translated_text.schema.json"]
+          },
+          "read_scope": {
+            "type": "array",
+            "description": "Agent 可读取的文件/目录列表，遵循最小权限原则。使用 glob 模式。不得包含与该 Agent 职责无关的目录。不得包含 memory/semantic/ 等正式记忆目录的写权限。",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "examples": ["intermediate/extracted_texts/*.json", "intermediate/terminology_table.json"]
+          },
+          "write_scope": {
+            "type": "array",
+            "description": "Agent 可写入的文件/目录列表，遵循最小权限与单写者原则。不得与任何并行 Agent 的 write_scope 重叠。原始输入目录（input/）永远不在此列。不得包含 requirements/、agents/、config/、memory/semantic/ 等受保护目录。",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "examples": ["intermediate/translated_texts/*.json"]
+          },
+          "max_retries": {
+            "type": "integer",
+            "description": "整个 Agent 执行的总重试次数上限（非每种错误分别上限）。根据 risk_level 设定：high risk 建议 1，medium risk 建议 3，low risk 建议 5。各错误类型的重试次数之和不得超过此值。",
+            "minimum": 0,
+            "maximum": 10,
+            "default": 2
+          },
+          "completion_condition": {
+            "type": "string",
+            "description": "Agent 完成工作的判据，必须可验证（能通过文件存在性、Schema 校验、内容检查确认）、明确（无模糊表述）、充分（条件满足时输出一定可用于下游任务）。",
+            "minLength": 10
+          },
+          "forbidden_actions": {
+            "type": "array",
+            "description": "Agent 严格禁止的行为列表。防御性设计的核心。至少应包含通用禁止项：不得修改原始输入文件、不得访问 write_scope 之外路径、不得自行决定跳过任务、不得修改其他 Agent 输出。还应包含角色特定禁止项。",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "error_types": {
+            "type": "array",
+            "description": "Agent 可能遇到的错误类型枚举及其处理策略。每种错误包含类型名、触发条件、重试策略。错误类型应遵循 protocols/error_handling.md 的分类。",
+            "items": {
+              "type": "object",
+              "properties": {
+                "error_type": {
+                  "type": "string",
+                  "description": "错误类型标识。建议使用 SCREAMING_SNAKE_CASE。",
+                  "examples": ["INPUT_NOT_FOUND", "INPUT_SCHEMA_INVALID", "OUTPUT_WRITE_FAILED"]
+                },
+                "trigger": {
+                  "type": "string",
+                  "description": "该错误的触发条件描述。"
+                },
+                "retry_policy": {
+                  "type": "string",
+                  "description": "处理策略，如重试次数、是否跳过、是否报告等。",
+                  "enum": ["retry", "skip", "abort", "degrade", "escalate"],
+                  "enumDescriptions": [
+                    "retry: 重试执行",
+                    "skip: 跳过该任务并标记",
+                    "abort: 立即停止整个工作流",
+                    "degrade: 降级处理，输出部分结果",
+                    "escalate: 上报 Orchestrator 或人工介入"
+                  ]
+                },
+                "retry_count": {
+                  "type": "integer",
+                  "description": "该错误的专属重试次数。所有错误重试次数之和不得超过 max_retries。",
+                  "minimum": 0
+                }
+              },
+              "required": ["error_type", "trigger", "retry_policy"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "agent_name",
+          "role",
+          "responsibilities",
+          "input_schema_ref",
+          "output_schema_ref",
+          "read_scope",
+          "write_scope",
+          "max_retries",
+          "completion_condition",
+          "forbidden_actions"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "total_agents": {
+      "type": "integer",
+      "description": "系统中 Agent 的总数。应等于 agents 数组的长度。用于快速校验一致性。",
+      "minimum": 1
+    },
+    "max_parallel": {
+      "type": "integer",
+      "description": "系统允许的最大并行 Agent 数。受 AI Coding Agent 子代理并发能力限制。默认值参考 core/parallel_rules.md，通常为 4-6。",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 4
+    }
+  },
+  "required": [
+    "system_name",
+    "version",
+    "agents",
+    "total_agents",
+    "max_parallel"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+﻿Requirement already satisfied: pypdf in C:\Users\mmrgr\.workbuddy\binaries\python\envs\default\Lib\site-packages (6.18.0)
+pip.exe : 
+所在位置 行:446 字符: 1
++ & "$venv\Scripts\pip.exe" install pypdf 2>&1 | Out-File -FilePath "C: ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\mmrgr\.workbuddy\binaries\python\envs\default
+\Scripts\python.exe -m pip install --upgrade pip

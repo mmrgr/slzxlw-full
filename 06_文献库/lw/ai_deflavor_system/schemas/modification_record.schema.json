@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "modification_record.schema.json",
+  "title": "修改记录 Schema",
+  "description": "记录每次文本修改的详细信息，包括修改者Agent、使用的技术、原文与修改后文本对比、修改位置、修改理由及是否经质量把控师验证。",
+  "type": "object",
+  "properties": {
+    "modification_id": {
+      "description": "修改记录唯一标识",
+      "type": "string"
+    },
+    "round": {
+      "description": "所属迭代轮次",
+      "type": "integer",
+      "minimum": 1
+    },
+    "agent": {
+      "description": "执行修改的Agent",
+      "type": "string",
+      "enum": [
+        "structure_reorganizer",
+        "language_humanizer",
+        "logic_enhancer",
+        "quality_controller"
+      ]
+    },
+    "technique_used": {
+      "description": "使用的人性化技术名称（对应humanization_techniques.md中的T1-T7编号+技术名）",
+      "type": "string"
+    },
+    "original_text": {
+      "description": "修改前的原文片段",
+      "type": "string"
+    },
+    "modified_text": {
+      "description": "修改后的文本片段",
+      "type": "string"
+    },
+    "location": {
+      "description": "修改位置（段落号/句子号）",
+      "type": "string"
+    },
+    "reason": {
+      "description": "修改理由，说明针对的AI味特征及修改逻辑",
+      "type": "string"
+    },
+    "verified": {
+      "description": "是否经质量把控师验证通过",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "modification_id",
+    "round",
+    "agent",
+    "technique_used",
+    "original_text",
+    "modified_text",
+    "location",
+    "reason",
+    "verified"
+  ],
+  "additionalProperties": false
+}

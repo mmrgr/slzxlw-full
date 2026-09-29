@@ -1,0 +1,8 @@
+metric,parameter,S1,ST
+max_source_abstraction_ratio,components.RES1.abstraction_capacity_ml_day,1.2778044783995235,0.6930571074412625
+max_source_abstraction_ratio,local_areas.LA1.demand_profiles.0.base_value,-0.012993747649188432,0.2997723216242158
+max_source_abstraction_ratio,components.DM1.leakage_fraction,-0.4132027524670181,0.047783372063798235
+max_source_abstraction_ratio,components.WTW1.daily_capacity_ml,0.199888459856493,0.004353915526770355
+max_source_abstraction_ratio,components.CENTRAL_REUSE.treatment_capacity_ml_day,-0.01563532051149617,0.0015831060601302447
+max_source_abstraction_ratio,components.WWTW1.daily_capacity_ml,-0.04074300402351662,0.000568765314670244
+max_source_abstraction_ratio,components.RES1.capacity_ml,0.0,0.0

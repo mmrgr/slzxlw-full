@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "simulation_report.schema.json",
+  "title": "模拟检测报告 Schema",
+  "description": "检测模拟员在Phase 3模拟GPTZero/Turnitin/知网等检测工具后生成的报告，按7个维度评分并估算AI率，判断是否达标。",
+  "type": "object",
+  "properties": {
+    "round": {
+      "description": "当前迭代轮次",
+      "type": "integer",
+      "minimum": 1
+    },
+    "scores": {
+      "description": "7个检测维度评分，每项1-10（1=高度人类特征，10=高度AI特征）",
+      "type": "object",
+      "properties": {
+        "perplexity": {
+          "description": "困惑度：词汇可预测性，1=大量罕见词汇和意外表达，10=词汇高度可预测",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "burstiness": {
+          "description": "突发性：句子长度/结构变化，1=长短句大幅交错，10=句子长度均匀",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "vocabulary_pattern": {
+          "description": "词汇模式：AI高频词密度，1=无AI标记词，10=AI标记词密集",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "structure_pattern": {
+          "description": "结构模式：段落和论证结构，1=结构自然多变，10=三明治/三段式结构",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "logic_pattern": {
+          "description": "逻辑模式：逻辑链平滑度，1=有矛盾/跳跃/反例，10=逻辑过于完美",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "emotion_pattern": {
+          "description": "情感模式：个人化程度，1=丰富个人视角和感官细节，10=全程客观平铺",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "punctuation_pattern": {
+          "description": "标点模式：标点使用规范性，1=有个性化标点使用，10=标点完全规范",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        }
+      },
+      "required": [
+        "perplexity",
+        "burstiness",
+        "vocabulary_pattern",
+        "structure_pattern",
+        "logic_pattern",
+        "emotion_pattern",
+        "punctuation_pattern"
+      ],
+      "additionalProperties": false
+    },
+    "average_score": {
+      "description": "7项维度评分的算术平均值（保留1位小数）",
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "estimated_ai_rate": {
+      "description": "基于评分估算的AI率，范围0-1",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "target_ai_rate": {
+      "description": "目标AI率，由文体类型和用户指定决定",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "passed": {
+      "description": "是否通过检测（estimated_ai_rate <= target_ai_rate）",
+      "type": "boolean"
+    },
+    "high_risk_paragraphs": {
+      "description": "高风险段落列表，仍存在明显AI味的段落",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "high_risk_sentences": {
+      "description": "高风险句子列表，低困惑度+低突发性的句子",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "specific_issues": {
+      "description": "具体问题清单，描述残留的AI味问题",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendation": {
+      "description": "修改建议：是否需要继续迭代，重点处理哪些部分",
+      "type": "string"
+    }
+  },
+  "required": [
+    "round",
+    "scores",
+    "average_score",
+    "estimated_ai_rate",
+    "target_ai_rate",
+    "passed",
+    "high_risk_paragraphs",
+    "high_risk_sentences",
+    "specific_issues",
+    "recommendation"
+  ],
+  "additionalProperties": false
+}

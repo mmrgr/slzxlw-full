@@ -1,0 +1,20 @@
+=== 06 === start loaded: Radware Bot Manager Captcha
+  candidates: ['https://iopscience.iop.org/article/10.1088/1748-9326/abfba1/pdf', 'https://iopscience.iop.org/article/10.1088/1748-9326/abfba1/ampdf']
+  trying: https://iopscience.iop.org/article/10.1088/1748-9326/abfba1/pdf
+    no pdf from this url
+  trying: https://iopscience.iop.org/article/10.1088/1748-9326/abfba1/ampdf
+    no pdf from this url
+=== 08 === start loaded: Data Centers Water Footprint: The Need for More Transparency
+  candidates: ['https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2025AV002140', 'https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2025AV002140', 'https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0001-Original+Version+of+Manuscript-S01.pdf', 'https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0002-Peer+Review+History-S02.pdf', 'https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0003-Author+Response+to+Peer+Review+Comments-S03.pdf', 'https://www.cbwaterworks.com/wp-content/uploads/2024/09/2023-Annual-Report.pdf']
+  trying: https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2025AV002140
+    no pdf from this url
+  trying: https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2025AV002140
+    no pdf from this url
+  trying: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0001-Original+Version+of+Manuscript-S01.pdf
+    no pdf from this url
+  trying: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0002-Peer+Review+History-S02.pdf
+    no pdf from this url
+  trying: https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0003-Author+Response+to+Peer+Review+Comments-S03.pdf
+    no pdf from this url
+  trying: https://www.cbwaterworks.com/wp-content/uploads/2024/09/2023-Annual-Report.pdf
+    no pdf from this url

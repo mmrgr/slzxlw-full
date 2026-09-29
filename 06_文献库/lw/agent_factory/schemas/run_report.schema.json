@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-factory.local/schemas/run_report.schema.json",
+  "title": "运行报告 Schema",
+  "description": "Agent Factory 生成的多Agent系统每次运行后产出的报告文件（run_report.json）的 Schema。记录本次运行的完整信息：创建与执行的 Agent、并行任务、各阶段耗时、缓存命中率、失败记录、记忆使用与候选、最终质量评分、待解决问题、Token 消耗，以及关键的追溯性信息（每个输出项的来源任务、来源 Agent、输入引用、审核者、指令版本、记忆版本）。追溯性信息确保任何输出可追溯到其产生过程，是严格模式（strict）的必需能力。",
+  "type": "object",
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "description": "本次运行的唯一标识符。建议格式为 run_YYYYMMDD_HHmmss_NNN。",
+      "pattern": "^run_\\d{8}_\\d{6}_\\d{3}$",
+      "examples": ["run_20260727_100000_001"]
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "运行开始时间，ISO 8601 格式（UTC）。",
+      "format": "date-time",
+      "examples": ["2026-07-27T10:00:00Z"]
+    },
+    "mode": {
+      "type": "string",
+      "description": "本次运行使用的模式。与 requirements.json 中的 mode 一致。",
+      "enum": ["fast", "standard", "strict"],
+      "enumDescriptions": [
+        "fast: 快速模式",
+        "standard: 标准模式",
+        "strict: 严格模式"
+      ]
+    },
+    "agents_created": {
+      "type": "array",
+      "description": "本次运行中创建的 Agent 列表。对应 agent_manifest.json 中的 agent_name。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "agents_executed": {
+      "type": "array",
+      "description": "本次运行中实际执行的 Agent 列表。可能少于 agents_created（因缓存命中或跳过）。每项为 Agent 名称。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "parallel_tasks": {
+      "type": "array",
+      "description": "本次运行中并行执行的任务组列表。每个子数组为一组同时执行的任务 ID。反映实际并行调度情况。",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "default": [],
+      "examples": [["T4", "T5"], ["T1"], ["T2", "T3", "T6"]]
+    },
+    "phase_timings": {
+      "type": "object",
+      "description": "各阶段耗时记录。键为阶段名，值为耗时秒数（数字）或时长字符串。反映性能瓶颈所在。",
+      "additionalProperties": {
+        "type": "number",
+        "description": "该阶段的耗时，单位秒。",
+        "minimum": 0
+      },
+      "examples": [
+        {
+          "requirement_analysis": 45,
+          "architecture_decision": 120,
+          "workflow_planning": 60,
+          "agent_design": 180,
+          "contract_design": 150,
+          "tool_architecture": 90,
+          "scaffold_building": 30,
+          "testing": 200,
+          "security_audit": 100,
+          "efficiency_optimization": 80,
+          "integration_review": 150,
+          "memory_update": 40
+        }
+      ]
+    },
+    "cache_hit_rate": {
+      "type": "number",
+      "description": "缓存命中率，范围 0 到 1。命中缓存的子任务数除以总子任务数。高命中率表示增量执行效果好，Token 消耗低。",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0
+    },
+    "failures": {
+      "type": "array",
+      "description": "本次运行中发生的失败记录列表。每项记录一个失败任务的详情，包括错误类型、重试次数与最终状态。遵循失败隔离原则，一个失败不导致整份报告丢失。",
+      "items": {
+        "type": "object",
+        "description": "单个失败记录。",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "失败任务的 ID。对应 workflow.json 中的 task_id。",
+            "pattern": "^T\\d+$",
+            "examples": ["T4"]
+          },
+          "error_type": {
+            "type": "string",
+            "description": "错误类型标识。应与 agent_manifest.json 中 error_types 定义一致，或为 error_handling.md 中的标准分类（schema_error/retryable_error/quality_error/permission_error/security_error）。",
+            "minLength": 1,
+            "examples": ["schema_error", "INPUT_NOT_FOUND", "OUTPUT_WRITE_FAILED"]
+          },
+          "retry_count": {
+            "type": "integer",
+            "description": "该任务失败前的重试次数。不应超过 agent_manifest.json 中对应 Agent 的 max_retries。",
+            "minimum": 0
+          },
+          "final_status": {
+            "type": "string",
+            "description": "该任务的最终状态。重试耗尽后可能为 failed（失败放弃）、skipped（跳过）、degraded（降级完成）、escalated（转人工）。",
+            "enum": ["failed", "skipped", "degraded", "escalated"]
+          },
+          "error_message": {
+            "type": "string",
+            "description": "错误的详细消息，便于诊断。"
+          },
+          "partial_output": {
+            "type": "string",
+            "description": "部分输出的路径引用（若有）。降级模式下可能保留已完成的部分。"
+          }
+        },
+        "required": ["task_id", "error_type", "retry_count", "final_status"],
+        "additionalProperties": false
+      },
+      "default": []
+    },
+    "memory_used": {
+      "type": "array",
+      "description": "本次运行中引用使用的记忆条目 ID 列表。每项为 memory_entry 的 memory_id。反映记忆体系的实际贡献。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "memory_candidates_generated": {
+      "type": "array",
+      "description": "本次运行中产生的候选记忆条目 ID 列表。由 Memory Curator（Phase 8）从运行中提取，写入 memory/candidates/，状态为 candidate 等待后续验证。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "final_quality_score": {
+      "type": "number",
+      "description": "最终交付物的质量评分，范围 0 到 1。由 Integration Reviewer 综合结构校验、语义审核、验收标准达成度计算。strict 模式要求 >= 0.9，standard 模式要求 >= 0.7，fast 模式无强制下限。",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "open_issues": {
+      "type": "array",
+      "description": "运行结束后仍未解决的问题列表。每项为问题描述。这些问题不影响交付但在后续运行中应被关注或修复。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "total_tokens_consumed": {
+      "type": "integer",
+      "description": "本次运行消耗的总 Token 数。包括所有 Agent 执行、Schema 校验、审核环节的 Token 消耗。用于评估效率与优化方向。",
+      "minimum": 0,
+      "default": 0
+    },
+    "traceability": {
+      "type": "array",
+      "description": "追溯性记录列表。每个最终输出项（或关键中间产物）对应一条记录，完整记录其产生过程：来源任务、来源 Agent、使用的输入引用、审核者、生成时所用的指令版本与记忆版本。这是 strict 模式的核心能力，确保任何输出可被审计追溯。",
+      "items": {
+        "type": "object",
+        "description": "单个输出项的追溯性记录。",
+        "properties": {
+          "output_item": {
+            "type": "string",
+            "description": "输出项的路径引用。指向上游任务输出或最终交付物文件。",
+            "minLength": 1,
+            "examples": ["output/final/summary.docx", "output/T3/draft.md"]
+          },
+          "source_task": {
+            "type": "string",
+            "description": "产生该输出项的任务 ID。对应 workflow.json 中的 task_id。",
+            "pattern": "^T\\d+$",
+            "examples": ["T3"]
+          },
+          "source_agent": {
+            "type": "string",
+            "description": "产生该输出项的 Agent 名称或程序名称。对应 agent_manifest.json 中的 agent_name 或程序标识。",
+            "minLength": 1,
+            "examples": ["drafter", "merge_reviews"]
+          },
+          "inputs_used": {
+            "type": "array",
+            "description": "产生该输出项时使用的输入引用路径列表。完整记录输入来源，支持链式追溯。",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "default": [],
+            "examples": ["output/T1/facts.json", "output/T2/outline.json"]
+          },
+          "reviewer": {
+            "type": "string",
+            "description": "审核该输出项的 Agent 或人工审核者标识。若未经审核则留空或标注 'unreviewed'。",
+            "default": "unreviewed"
+          },
+          "instruction_version": {
+            "type": "string",
+            "description": "生成该输出项时所用的 Agent 指令版本号。对应 agents/{agent_name}.md 中的 version。支持指令变更后的影响分析。",
+            "examples": ["1.0", "1.2"]
+          },
+          "memory_version": {
+            "type": "string",
+            "description": "生成该输出项时引用的记忆版本标识。若未引用记忆则留空。支持记忆更新后的影响分析与回滚。",
+            "examples": ["mem_sem_20260720_002@v3"]
+          }
+        },
+        "required": [
+          "output_item",
+          "source_task",
+          "source_agent",
+          "inputs_used",
+          "reviewer",
+          "instruction_version"
+        ],
+        "additionalProperties": false
+      },
+      "default": []
+    }
+  },
+  "required": [
+    "run_id",
+    "timestamp",
+    "mode",
+    "agents_created",
+    "agents_executed",
+    "parallel_tasks",
+    "phase_timings",
+    "cache_hit_rate",
+    "failures",
+    "memory_used",
+    "memory_candidates_generated",
+    "final_quality_score",
+    "open_issues",
+    "total_tokens_consumed",
+    "traceability"
+  ],
+  "additionalProperties": false
+}

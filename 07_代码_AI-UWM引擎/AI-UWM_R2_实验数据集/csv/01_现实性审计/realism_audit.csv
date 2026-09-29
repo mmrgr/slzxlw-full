@@ -1,0 +1,39 @@
+﻿domain,metric,value,unit,reference,verdict,note
+ha,per_capita_delivered_l_d,249.66237849315064,L/cap/d,150 - 400,PASS,GB/T 50331 综合用水量(含工业/市政杂用)量级
+ha,per_capita_abstraction_l_d,256.11653486088625,L/cap/d,200 - 450,PASS,取水口径应高于配水口径(漏损+厂自用)
+ha,reuse_over_sewage,0.16040989399535086,-,0.15 - 0.7,PASS,"全国目标 ~25%, 缺水城市 ~35%, 北京 57.5% (v2 下限由 0.20 放宽至 0.15)"
+ha,reuse_plant_utilization,0.8076782849753424,-,0.6 - 1.0,PASS,现实再生水厂产能利用率 70-95%; 低于 60% 属闲置资产
+ha,wwtw_inflow_ml_d,201.4036079342466,ML/d,120 - 320,PASS,旱流污水 ~ 配水量 x 0.85
+ha,leakage_plus_loss_fraction,0.15134238712000003,-,0.08 - 0.25,PASS,配水漏损 12% + 输水漏损 + 厂自用(v2 修正口径)
+ha,reservoir_spill_fraction,0.0,-,0.0 - 0.15,PASS,弃水量/取水量: 常年大量弃水说明入流被高估、水库不构成约束
+ha,reservoir_storage_max_fraction,0.5877239304183692,-,0.55 - 0.98,PASS,库容峰值: 常年贴顶(=1.0)说明水库永远满蓄
+ha,reservoir_storage_min_fraction,0.4759394949798415,-,0.1 - 0.7,PASS,库容谷值: 应有真实年内消落
+ha,mean_pue,1.1805472191780821,-,1.05 - 1.6,PASS,LBNL 2024 / 运营商报告
+ha,wue_l_per_kwh_it,2.2095731525519113,L/kWh_IT,0.3 - 2.5,PASS,"源水 WUE(按 IT 电量); 领跑者 0.2-0.6, 行业上限 ~2; 本端点为全年纯蒸发冷却, 取值偏高属设定必然"
+ha,achieved_coc,4.322200392927308,-,2.5 - 10.0,PASS,DOE FEMP 3-7; ASHRAE 上限 ~10
+ha,mean_load_factor,0.7499987671232877,-,0.3 - 0.95,PASS,LBNL 2024 利用率
+ha,withdrawal_ml_d,39.772251366783586,ML/d,5 - 80,PASS,1000 MW IT @ LF 0.75 纯蒸发冷却的补水量级
+ha,evaporation_ml_d,31.280863358135644,ML/d,4 - 60,PASS,物理上限 = 排热量 / 汽化潜热
+ha,reclaimed_ml_d,27.84057595674851,ML/d,0 - 32.3071313990137,PASS,AI 再生水用量不得超过城市再生水产量
+ha,offsite_share_of_onsite,0.21410269330373122,-,0.05 - 0.6,PASS,电厂侧间接水足迹/场址取水量; 报告 WUE 时必须说明是否含间接
+ha,cooling_storage_hours,14.482459006106339,h,12 - 72,PASS,园区内冷却水调蓄小时数(现实超大规模园区 12-72 h)
+ha,ai_electricity_share_of_city,1.2950420954037902,-,0.05 - 0.5,NOTE,"园区设施电量/城市全社会用电量; 50-300 MW 表示中型园区情景, 公开规划已有约 1 GW 级项目。本扫描网格 0-2000 MW 是压力测试上界, 结论按项目规模和电源条件解释。"
+co,per_capita_delivered_l_d,243.2580726027397,L/cap/d,150 - 400,PASS,GB/T 50331 综合用水量(含工业/市政杂用)量级
+co,per_capita_abstraction_l_d,251.68562944060054,L/cap/d,200 - 450,PASS,取水口径应高于配水口径(漏损+厂自用)
+co,reuse_over_sewage,0.15042508121140596,-,0.15 - 0.7,PASS,"全国目标 ~25%, 缺水城市 ~35%, 北京 57.5% (v2 下限由 0.20 放宽至 0.15)"
+co,reuse_plant_utilization,0.8239763090410958,-,0.6 - 1.0,PASS,现实再生水厂产能利用率 70-95%; 低于 60% 属闲置资产
+co,wwtw_inflow_ml_d,197.19548686027397,ML/d,120 - 320,PASS,旱流污水 ~ 配水量 x 0.85
+co,leakage_plus_loss_fraction,0.15134238712000014,-,0.08 - 0.25,PASS,配水漏损 12% + 输水漏损 + 厂自用(v2 修正口径)
+co,reservoir_spill_fraction,0.0,-,0.0 - 0.15,PASS,弃水量/取水量: 常年大量弃水说明入流被高估、水库不构成约束
+co,reservoir_storage_max_fraction,0.7923976709030128,-,0.55 - 0.98,PASS,库容峰值: 常年贴顶(=1.0)说明水库永远满蓄
+co,reservoir_storage_min_fraction,0.5330989359027296,-,0.1 - 0.7,PASS,库容谷值: 应有真实年内消落
+co,mean_pue,1.1671284657534247,-,1.05 - 1.6,PASS,LBNL 2024 / 运营商报告
+co,wue_l_per_kwh_it,2.1046772216466794,L/kWh_IT,0.3 - 2.5,PASS,"源水 WUE(按 IT 电量); 领跑者 0.2-0.6, 行业上限 ~2; 本端点为全年纯蒸发冷却, 取值偏高属设定必然"
+co,achieved_coc,5.0,-,2.5 - 10.0,PASS,DOE FEMP 3-7; ASHRAE 上限 ~10
+co,mean_load_factor,0.7499987671232877,-,0.3 - 0.95,PASS,LBNL 2024 利用率
+co,withdrawal_ml_d,37.88412771425943,ML/d,5 - 80,PASS,1000 MW IT @ LF 0.75 纯蒸发冷却的补水量级
+co,evaporation_ml_d,30.91176862357506,ML/d,4 - 60,PASS,物理上限 = 排热量 / 汽化潜热
+co,reclaimed_ml_d,17.04785747141674,ML/d,0 - 29.663147125479448,PASS,AI 再生水用量不得超过城市再生水产量
+co,offsite_share_of_onsite,0.09995456896748477,-,0.05 - 0.6,PASS,电厂侧间接水足迹/场址取水量; 报告 WUE 时必须说明是否含间接
+co,cooling_storage_hours,15.204256630757689,h,12 - 72,PASS,园区内冷却水调蓄小时数(现实超大规模园区 12-72 h)
+co,ai_electricity_share_of_city,1.2797614040438592,-,0.05 - 0.5,NOTE,"园区设施电量/城市全社会用电量; 50-300 MW 表示中型园区情景, 公开规划已有约 1 GW 级项目。本扫描网格 0-2000 MW 是压力测试上界, 结论按项目规模和电源条件解释。"

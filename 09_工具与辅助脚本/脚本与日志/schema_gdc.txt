@@ -1,0 +1,4 @@
+error: 未找到工具 get_document_content（用 `list` 确认工具名）
+{"ok": false, "exit_code": 1, "error": "未找到工具 get_document_content（用 `list` 确认工具名）"}
+error: 未找到工具 get_document_content（用 `list` 确认工具名）
+{"ok": false, "exit_code": 1, "error": "未找到工具 get_document_content（用 `list` 确认工具名）"}

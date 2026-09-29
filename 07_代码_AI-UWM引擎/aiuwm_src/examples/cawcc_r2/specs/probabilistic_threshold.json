@@ -1,0 +1,79 @@
+{
+  "parameter_ranges": {
+    "components.AI_DC1.base_pue": [
+      1.12,
+      1.36
+    ],
+    "components.AI_DC1.cooling.cycles_of_concentration": [
+      3.0,
+      9.0
+    ],
+    "components.AI_DC1.temperature_coefficient": [
+      0.0005,
+      0.008
+    ]
+  },
+  "capacities_mw": [
+    0,
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400,
+    450,
+    500,
+    550,
+    600,
+    650,
+    700,
+    750,
+    800,
+    850,
+    900,
+    950,
+    1000,
+    1050,
+    1100,
+    1150,
+    1200,
+    1250,
+    1300,
+    1350,
+    1400,
+    1450,
+    1500,
+    1550,
+    1600,
+    1650,
+    1700,
+    1750,
+    1800,
+    1850,
+    1900,
+    1950,
+    2000
+  ],
+  "constraints": {
+    "system_reliability_fraction": {
+      "operator": ">=",
+      "value": 0.99
+    },
+    "domestic_unmet_ml": {
+      "operator": "<=",
+      "value": 0.0
+    },
+    "max_wtw_utilization": {
+      "operator": "<=",
+      "value": 1.0
+    },
+    "max_reuse_utilization": {
+      "operator": "<=",
+      "value": 1.0
+    }
+  },
+  "samples": 40,
+  "seed": 20260918
+}

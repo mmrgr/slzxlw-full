@@ -1,0 +1,18 @@
+=== 05 === start loaded: Making AI Less 'Thirsty' | Communications of the ACM
+  candidates: ['https://dl.acm.org/doi/pdf/10.1145/3724499', 'https://dl.acm.org/doi/epdf/10.1145/3724499', 'https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf', 'https://onlinelibrary.wiley.com/doi/pdf/10.1111/jiec.12086', 'https://dl.acm.org/doi/pdf/10.1145/3724499?download=true']
+  trying: https://dl.acm.org/doi/pdf/10.1145/3724499
+    no pdf from this url
+  trying: https://dl.acm.org/doi/epdf/10.1145/3724499
+    no pdf from this url
+  trying: https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
+    no pdf from this url
+  trying: https://onlinelibrary.wiley.com/doi/pdf/10.1111/jiec.12086
+    no pdf from this url
+  trying: https://dl.acm.org/doi/pdf/10.1145/3724499?download=true
+    goto err: Page.goto: Download is starting
+Call log:
+  - navigating to "https://dl.acm.org/doi/pdf/10.1145/3724499?download=true", waiting until "domcontentloaded"
+
+    no pdf from this url
+=== 01 === start loaded: Just a moment...
+  candidates: []

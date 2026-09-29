@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "detection_report.schema.json",
+  "title": "AI味检测报告 Schema",
+  "description": "AI特征检测员在Phase 1对文本进行全面扫描后生成的检测报告，记录文体类型、估算AI率、严重程度及六大类AI味特征清单。",
+  "type": "object",
+  "properties": {
+    "text_type": {
+      "description": "文本类型，影响后续修改策略与目标AI率阈值",
+      "type": "string",
+      "enum": [
+        "academic_paper",
+        "novel",
+        "news",
+        "blog",
+        "other"
+      ]
+    },
+    "estimated_ai_rate": {
+      "description": "基于特征密度估算的初始AI率，范围0-1",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "severity": {
+      "description": "整体AI味严重程度",
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "features": {
+      "description": "检测到的AI味特征清单，按六大类别逐项标注",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "description": "特征类别",
+            "type": "string",
+            "enum": [
+              "structural",
+              "lexical",
+              "statistical",
+              "logical",
+              "emotional",
+              "stylistic"
+            ]
+          },
+          "feature": {
+            "description": "特征名称，如'三明治结构''高频AI标记词'",
+            "type": "string"
+          },
+          "severity": {
+            "description": "该特征的严重程度",
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "locations": {
+            "description": "特征在文本中的具体位置（段落号/句子号）",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "description": "原文中的证据片段",
+            "type": "string"
+          }
+        },
+        "required": [
+          "category",
+          "feature",
+          "severity",
+          "locations",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "high_risk_paragraphs": {
+      "description": "高风险段落列表，AI味最集中的段落",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "total_issues": {
+      "description": "检测到的AI味特征总数",
+      "type": "integer",
+      "minimum": 0
+    },
+    "high_severity_count": {
+      "description": "高严重度特征数量",
+      "type": "integer",
+      "minimum": 0
+    },
+    "medium_severity_count": {
+      "description": "中严重度特征数量",
+      "type": "integer",
+      "minimum": 0
+    },
+    "low_severity_count": {
+      "description": "低严重度特征数量",
+      "type": "integer",
+      "minimum": 0
+    },
+    "round_number": {
+      "description": "当前迭代轮次（第1轮为初始检测）",
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "text_type",
+    "estimated_ai_rate",
+    "severity",
+    "features",
+    "high_risk_paragraphs",
+    "total_issues",
+    "high_severity_count",
+    "medium_severity_count",
+    "low_severity_count",
+    "round_number"
+  ],
+  "additionalProperties": false
+}

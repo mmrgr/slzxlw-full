@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-factory.local/schemas/requirements.schema.json",
+  "title": "需求文档 Schema",
+  "description": "Agent Factory 第一阶段（Phase 1: 需求理解）的产物。Requirement Analyst 根据用户自然语言需求分析后输出结构化需求文档，作为后续架构决策、工作流规划、Agent 设计的输入依据。本 Schema 约束 requirements/requirements.json 的结构与字段。",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "任务的唯一标识符。建议格式为 task_YYYYMMDD_NNN，例如 task_20260727_001。全流程中所有文件通过此 ID 关联。",
+      "pattern": "^task_\\d{8}_\\d{3}$",
+      "examples": ["task_20260727_001"]
+    },
+    "task_description": {
+      "type": "string",
+      "description": "用户原始需求的自然语言描述，尽量保留用户原话。由 Requirement Analyst 在不改变语义的前提下做最小整理。长度不少于 10 个字符。",
+      "minLength": 10,
+      "examples": ["阅读10篇关于数字经济的论文，提取核心论点，生成一份中文综述报告"]
+    },
+    "deliverable_type": {
+      "type": "string",
+      "description": "最终交付物的类型。决定后续生成系统的输出路径与渲染方式。",
+      "enum": ["document", "code", "data", "analysis", "other"],
+      "enumDescriptions": [
+        "document: 文档类交付物，如 Word/Markdown/PDF 报告",
+        "code: 代码类交付物，如脚本、工程项目",
+        "data: 数据类交付物，如清洗后的数据集、表格",
+        "analysis: 分析类交付物，如调研报告、对比分析",
+        "other: 其他类型，需在 deliverable_detail 中说明"
+      ]
+    },
+    "deliverable_detail": {
+      "type": "string",
+      "description": "交付物的详细说明，包括格式、结构、语言、篇幅等具体要求。当 deliverable_type 为 other 时必填。"
+    },
+    "inputs": {
+      "type": "array",
+      "description": "任务的所有输入项列表。每个输入项描述一个数据来源（文件、文本、URL 或结构化数据）。至少包含一个输入项。",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "description": "单个输入项的定义。",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "输入项的类型。",
+            "enum": ["file", "text", "url", "data"],
+            "enumDescriptions": [
+              "file: 本地文件，需提供 path",
+              "text: 直接嵌入的文本内容，需提供 content",
+              "url: 网络资源，需提供 path(URL)",
+              "data: 结构化数据（JSON/CSV 等），需提供 path 或 content"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "description": "输入项的路径或 URL。type 为 file/url/data 时填写。使用相对路径，相对于生成工程根目录。",
+            "examples": ["input/papers/*.pdf", "https://example.com/data.json"]
+          },
+          "content": {
+            "type": "string",
+            "description": "输入项的内联文本内容。type 为 text 时填写，或 data 时直接嵌入。"
+          },
+          "description": {
+            "type": "string",
+            "description": "该输入项的用途说明，帮助 Agent 理解输入的作用。不能为空。",
+            "minLength": 1
+          }
+        },
+        "required": ["type", "description"],
+        "additionalProperties": false
+      }
+    },
+    "needs_internet": {
+      "type": "boolean",
+      "description": "任务是否需要联网能力（检索、抓取、下载）。若为 true，Tool Architect 会安排网络请求工具；若为 false 但实际需要联网，会在降级模式下仅用本地资料。默认 false。",
+      "default": false
+    },
+    "needs_file_processing": {
+      "type": "boolean",
+      "description": "任务是否需要文件处理能力（PDF解析、格式转换、图像识别等）。若为 true，Tool Architect 会安排对应的确定性脚本工具。默认 false。",
+      "default": false
+    },
+    "accuracy_critical_steps": {
+      "type": "array",
+      "description": "必须保证准确性的步骤列表。这些步骤在执行时启用严格校验，不允许近似。例如数字核对、引用校验、事实核查等。每项为步骤的简要描述。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "approximate_ok_steps": {
+      "type": "array",
+      "description": "允许近似处理的步骤列表。这些步骤可以接受合理误差，优先速度。例如摘要生成、初稿撰写等。每项为步骤的简要描述。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "allow_human_confirmation": {
+      "type": "boolean",
+      "description": "是否允许在关键节点插入人工确认。若为 true，Workflow Planner 可在 high risk 节点后插入人工检查点；若为 false，系统需自主完成全流程。默认 false。",
+      "default": false
+    },
+    "long_running": {
+      "type": "boolean",
+      "description": "任务是否属于长期运行（预计执行时间超过单次会话）。若为 true，系统必须支持断点续跑与状态持久化。默认 false。",
+      "default": false
+    },
+    "involves_sensitive_data": {
+      "type": "boolean",
+      "description": "任务是否涉及敏感数据（个人隐私、商业机密、密钥凭证等）。若为 true，Security Auditor 会加强审查，敏感数据不写入记忆层。默认 false。",
+      "default": false
+    },
+    "user_priority": {
+      "type": "string",
+      "description": "用户最关注的维度，影响资源分配与质量把控力度。",
+      "enum": ["speed", "quality", "resource"],
+      "enumDescriptions": [
+        "speed: 优先速度，可减少审核环节、降低并发精度",
+        "quality: 优先质量，启用全量审核与冲突裁决",
+        "resource: 优先节省资源（Token/计算），最小化 Agent 数量"
+      ],
+      "default": "quality"
+    },
+    "risk_level": {
+      "type": "string",
+      "description": "任务整体风险等级。影响审核力度、重试次数、人工确认节点设置。",
+      "enum": ["high", "medium", "low"],
+      "enumDescriptions": [
+        "high: 高风险，涉及正式交付、敏感数据或不可逆操作，启用全量审核与冲突裁决",
+        "medium: 中风险，日常任务，启用结构校验与一次语义审核",
+        "low: 低风险，简单任务，最少审核，优先速度"
+      ],
+      "default": "medium"
+    },
+    "mode": {
+      "type": "string",
+      "description": "运行模式。与 risk_level 共同决定系统的严格程度。",
+      "enum": ["fast", "standard", "strict"],
+      "enumDescriptions": [
+        "fast: 快速模式，少量Agent、最少审核、优先速度，适用于低风险简单任务",
+        "standard: 标准模式，合理并发、全部结构校验、一次语义审核，适用于日常任务",
+        "strict: 严格模式，全量审核、冲突裁决、完整追踪、回归评估，适用于高风险正式交付"
+      ],
+      "default": "standard"
+    },
+    "assumptions": {
+      "type": "array",
+      "description": "Requirement Analyst 在缺失信息时所做的假设列表。每项为假设的描述。这些假设会同步写入 assumptions.json 供用户确认。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": []
+    },
+    "open_questions": {
+      "type": "array",
+      "description": "需要用户确认的开放问题列表。只有缺失信息会显著改变系统架构时才提问。可为空数组。",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string",
+            "description": "问题内容。",
+            "minLength": 1
+          },
+          "impact": {
+            "type": "string",
+            "description": "该问题对架构的影响说明，帮助用户理解为何需要确认。",
+            "minLength": 1
+          },
+          "default_assumption": {
+            "type": "string",
+            "description": "若用户不回答，采用的默认假设。"
+          }
+        },
+        "required": ["question", "impact"],
+        "additionalProperties": false
+      },
+      "default": []
+    }
+  },
+  "required": [
+    "task_id",
+    "task_description",
+    "deliverable_type",
+    "inputs",
+    "needs_internet",
+    "needs_file_processing",
+    "accuracy_critical_steps",
+    "approximate_ok_steps",
+    "allow_human_confirmation",
+    "long_running",
+    "involves_sensitive_data",
+    "user_priority",
+    "risk_level",
+    "mode"
+  ],
+  "additionalProperties": false
+}

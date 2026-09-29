@@ -1,0 +1,275 @@
+﻿python.exe : fontTools is required to fully parse the encoding of a CFF Type1 f
+ont in font dictionary {'/BaseFont': '/KCHLGF+FckrgwAdvTTc488b0e6', '/Encoding'
+: '/WinAnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(780, 
+0, 3024674005392), '/LastChar': 121, '/Subtype': '/Type1', '/Type': '/Font', '/
+Widths': [0, 0, 0, 0, 0, 0, 0, 0, 270, 270, 0, 0, 197, 291, 197, 322, 468, 468,
+ 468, 468, 468, 468, 468, 468, 468, 468, 197, 0, 0, 0, 0, 0, 0, 552, 0, 0, 593,
+ 447, 0, 572, 593, 0, 0, 0, 0, 739, 593, 0, 489, 0, 500, 447, 0, 0, 510, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 437, 510, 395, 510, 458, 270, 510, 500, 218, 0, 0, 218,
+ 760, 500, 489, 510, 0, 302, 354, 302, 500, 437, 0, 0, 427]}, but is not instal
+led. Consider installing fontTools if you encounter encoding problems.
+所在位置 行:446 字符: 1
++ & $venvPy "C:\Users\mmrgr\WorkBuddy\2026-09-15-10-49-54\identify_pdfs ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fontTools is re...oding problems. 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/KCHLHL+FvmsfsAdvTTc488b0e6+20', '/Encoding': '/WinAns
+iEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(781, 0, 3024674
+005392), '/LastChar': 150, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 500]}, but is not installed. Consider ins
+talling fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/KCHLGF+HnpbvtAdvTTc488b0e6', '/Encoding': '/WinAnsiEn
+coding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(797, 0, 3024674005
+392), '/LastChar': 121, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [0, 
+0, 0, 0, 0, 0, 0, 0, 270, 270, 0, 0, 197, 291, 197, 322, 468, 468, 468, 468, 46
+8, 468, 468, 468, 468, 468, 197, 0, 0, 0, 0, 0, 0, 552, 0, 0, 593, 447, 0, 572,
+ 593, 0, 333, 0, 0, 739, 593, 0, 489, 0, 500, 447, 0, 0, 510, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 437, 510, 395, 510, 458, 270, 510, 500, 218, 0, 0, 218, 760, 500, 
+489, 510, 0, 302, 354, 302, 500, 437, 0, 0, 427]}, but is not installed. Consid
+er installing fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOFOLL+RcpgpfPjkmxyAdvTT99c4c969', '/Encoding': '/Win
+AnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(754, 0, 3024
+674005392), '/LastChar': 122, '/Subtype': '/Type1', '/Type': '/Font', '/Widths'
+: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 229, 312, 229, 0, 0, 531, 531, 531, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 635, 572, 583, 677, 510, 500, 656, 0, 260, 0
+, 572, 489, 0, 666, 697, 552, 0, 562, 510, 520, 0, 0, 864, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 500, 0, 447, 572, 510, 0, 572, 562, 250, 0, 0, 250, 843, 562, 562, 583, 
+0, 354, 416, 0, 562, 500, 0, 0, 0, 447]}, but is not installed. Consider instal
+ling fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOFPMF+WlfgtmQrwwpnAdvTT577c760c', '/Encoding': '/Win
+AnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(762, 0, 3024
+674005392), '/LastChar': 121, '/Subtype': '/Type1', '/Type': '/Font', '/Widths'
+: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 291, 229, 0, 0, 489, 489, 489, 489, 4
+89, 489, 489, 0, 0, 0, 0, 0, 0, 0, 0, 0, 572, 0, 520, 0, 0, 458, 0, 0, 0, 0, 53
+1, 0, 760, 0, 0, 510, 0, 0, 0, 479, 0, 0, 802, 0, 0, 0, 0, 0, 0, 0, 0, 0, 468, 
+531, 406, 531, 468, 291, 520, 520, 239, 0, 468, 239, 781, 520, 510, 531, 0, 322
+, 375, 322, 520, 0, 697, 447, 458]}, but is not installed. Consider installing 
+fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOFPMG+LmwnffGppwkcAdvP0005', '/Encoding': '/WinAnsiE
+ncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(763, 0, 302467400
+5392), '/LastChar': 94, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [0, 
+0, 0, 0, 0, 0, 354, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 500]}, but is not installed. Consider installing fon
+tTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOGAAG+FrqldbVtqycwAdvTTc488b0e6', '/Encoding': '/Win
+AnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(799, 0, 3024
+674005392), '/LastChar': 121, '/Subtype': '/Type1', '/Type': '/Font', '/Widths'
+: [0, 0, 0, 0, 0, 0, 0, 0, 270, 270, 0, 0, 0, 291, 197, 322, 468, 468, 468, 468
+, 468, 468, 468, 468, 468, 468, 197, 0, 0, 0, 0, 0, 0, 552, 0, 0, 0, 447, 437, 
+0, 0, 0, 0, 0, 0, 739, 0, 0, 489, 0, 500, 447, 447, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 437, 510, 395, 510, 458, 0, 510, 500, 218, 0, 0, 218, 760, 500, 489, 5
+10, 0, 302, 354, 302, 500, 437, 0, 0, 427]}, but is not installed. Consider ins
+talling fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOGAAH+SkwbyrLtpdhnAdvPi3', '/Encoding': '/WinAnsiEnc
+oding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(801, 0, 30246740053
+92), '/LastChar': 35, '/Subtype': '/Type1', '/Type': '/Font', '/Widths': [0, 0,
+ 0, 1000]}, but is not installed. Consider installing fontTools if you encounte
+r encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOGABH+PttdcgYylxxkAdvTTaf7f9f4f.B', '/Encoding': '/W
+inAnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(770, 0, 30
+24674005392), '/LastChar': 121, '/Subtype': '/Type1', '/Type': '/Font', '/Width
+s': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0, 645, 0, 593, 0, 0, 0, 0, 0, 281, 0, 0, 0, 843, 0, 0, 0
+, 0, 583, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 520, 593, 447, 593, 520, 33
+3, 583, 583, 270, 0, 0, 270, 0, 583, 572, 0, 0, 375, 427, 364, 572, 0, 0, 0, 52
+0]}, but is not installed. Consider installing fontTools if you encounter encod
+ing problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOGABI+HvdfxrQyslhwAdvTT3713a231', '/Encoding': '/Win
+AnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(769, 0, 3024
+674005392), '/LastChar': 248, '/Subtype': '/Type1', '/Type': '/Font', '/Widths'
+: [0, 0, 0, 0, 0, 822, 0, 0, 322, 322, 500, 0, 250, 322, 250, 270, 500, 500, 50
+0, 500, 500, 500, 500, 500, 500, 500, 270, 270, 562, 562, 0, 437, 916, 718, 666
+, 666, 718, 604, 552, 718, 718, 322, 385, 718, 604, 885, 718, 718, 552, 718, 66
+6, 552, 604, 718, 718, 937, 718, 718, 604, 322, 0, 322, 0, 500, 0, 437, 500, 43
+7, 500, 437, 322, 500, 500, 270, 270, 500, 270, 770, 500, 500, 500, 500, 322, 3
+85, 270, 500, 500, 718, 500, 500, 437, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 322, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 562, 0, 0, 0, 0, 0, 0, 0, 0, 437, 437, 0, 0, 0, 0, 666, 0, 437, 437, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 500, 0, 0, 500, 0, 500]}, but is not installed. Consider inst
+alling fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOGADJ+PnjhllTrysykAdvTT4ff65459', '/Encoding': '/Win
+AnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(803, 0, 3024
+674005392), '/LastChar': 42, '/Subtype': '/Type1', '/Type': '/Font', '/Widths':
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1125]}, but is not installed. Consider installi
+ng fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/BaseFont': '/GOGADK+FpfjcjLfbkywAdvTT3713a231+20', '/Encoding': '/
+WinAnsiEncoding', '/FirstChar': 32, '/FontDescriptor': IndirectObject(782, 0, 3
+024674005392), '/LastChar': 150, '/Subtype': '/Type1', '/Type': '/Font', '/Widt
+hs': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 322, 322, 0, 0, 0, 500]}, but is not installed. Co
+nsider installing fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 40, '/Subtype': '/Type1', '/BaseFont': '/GKFFMD+AdvOT3
+b30f6db.B', '/FontDescriptor': IndirectObject(747, 0, 3024674334896), '/Type': 
+'/Font', '/Encoding': '/WinAnsiEncoding', '/LastChar': 121, '/Widths': [312, 31
+2, 0, 0, 250, 0, 250, 322, 552, 552, 552, 552, 552, 0, 552, 552, 552, 552, 0, 0
+, 0, 0, 0, 0, 0, 645, 0, 593, 687, 531, 520, 677, 0, 281, 0, 0, 510, 843, 687, 
+708, 572, 0, 583, 531, 541, 677, 635, 885, 0, 593, 0, 0, 0, 0, 0, 0, 0, 520, 59
+3, 447, 593, 520, 333, 583, 583, 270, 281, 0, 270, 854, 583, 572, 593, 0, 375, 
+427, 364, 572, 520, 750, 0, 520]}, but is not installed. Consider installing fo
+ntTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 146, '/Subtype': '/Type1', '/BaseFont': '/GKFFME+AdvOT
+46dcae81+20', '/FontDescriptor': IndirectObject(749, 0, 3024674334896), '/Type'
+: '/Font', '/Encoding': '/WinAnsiEncoding', '/LastChar': 151, '/Widths': [197, 
+343, 343, 0, 500, 1000]}, but is not installed. Consider installing fontTools i
+f you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 67, '/Subtype': '/Type1', '/BaseFont': '/GKFFMB+AdvMyr
+iad_I', '/FontDescriptor': IndirectObject(759, 0, 3024674334896), '/Type': '/Fo
+nt', '/Encoding': '/WinAnsiEncoding', '/LastChar': 116, '/Widths': [552, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 833, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 520, 0, 0, 0, 447, 0, 0, 0, 0, 229, 0, 229, 0, 531, 0, 531, 0, 322, 0, 312]
+}, but is not installed. Consider installing fontTools if you encounter encodin
+g problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 35, '/Subtype': '/Type1', '/BaseFont': '/GKFFMC+AdvMyr
+iad_R', '/FontDescriptor': IndirectObject(755, 0, 3024674334896), '/Type': '/Fo
+nt', '/Encoding': '/WinAnsiEncoding', '/LastChar': 121, '/Widths': [500, 0, 0, 
+604, 0, 281, 281, 0, 0, 208, 302, 208, 343, 510, 510, 510, 510, 510, 510, 510, 
+510, 510, 510, 208, 208, 0, 0, 0, 0, 0, 0, 0, 583, 0, 0, 489, 0, 0, 0, 0, 541, 
+0, 802, 0, 0, 531, 0, 0, 0, 0, 645, 0, 843, 0, 0, 0, 0, 0, 0, 0, 500, 0, 479, 5
+72, 0, 562, 500, 291, 562, 552, 229, 239, 0, 229, 833, 552, 552, 572, 0, 322, 3
+95, 333, 552, 479, 739, 0, 468]}, but is not installed. Consider installing fon
+tTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 67, '/Subtype': '/Type1', '/BaseFont': '/GKFFAO+AdvTT5
+afe5d37.B', '/FontDescriptor': IndirectObject(735, 0, 3024674334896), '/Type': 
+'/Font', '/Encoding': '/WinAnsiEncoding', '/LastChar': 86, '/Widths': [614, 0, 
+541, 0, 0, 0, 281, 0, 0, 0, 0, 0, 0, 593, 0, 604, 552, 562, 0, 656]}, but is no
+t installed. Consider installing fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 0, '/Subtype': '/Type1', '/BaseFont': '/Arial-BoldMT',
+ '/FontDescriptor': IndirectObject(737, 0, 3024674334896), '/Type': '/Font', '/
+Encoding': '/WinAnsiEncoding', '/LastChar': 255, '/Widths': [750, 750, 750, 750
+, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 75
+0, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 667, 0, 0, 0, 0, 0, 0, 0, 0, 722, 778, 667, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 750, 750, 750, 750, 750, 750, 750, 750,
+ 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750
+, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 0, 0, 750, 750, 750, 7
+50, 750, 0, 750, 750, 750, 750, 750, 750, 750, 0, 750, 750, 750, 0, 750, 750, 7
+50, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 
+750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750,
+ 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750
+, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 75
+0, 750, 750, 750, 750, 750, 750, 750, 750]}, but is not installed. Consider ins
+talling fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 48, '/Subtype': '/Type1', '/BaseFont': '/GKFFIN+AdvOTa
+20b42a7', '/FontDescriptor': IndirectObject(745, 0, 3024674334896), '/Type': '/
+Font', '/Encoding': '/WinAnsiEncoding', '/LastChar': 121, '/Widths': [500, 500,
+ 500, 0, 0, 0, 0, 0, 0, 0, 270, 270, 0, 0, 0, 0, 0, 770, 0, 0, 822, 0, 0, 0, 0,
+ 0, 437, 0, 0, 0, 822, 0, 0, 0, 770, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+500, 541, 437, 541, 437, 0, 0, 0, 270, 0, 0, 0, 822, 541, 541, 541, 0, 375, 375
+, 322, 541, 500, 718, 0, 500]}, but is not installed. Consider installing fontT
+ools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 37, '/Subtype': '/Type1', '/BaseFont': '/GKFFIO+AdvTT6
+780a46b', '/FontDescriptor': IndirectObject(740, 0, 3024674334896), '/Type': '/
+Font', '/Encoding': '/WinAnsiEncoding', '/LastChar': 122, '/Widths': [812, 0, 0
+, 281, 281, 0, 0, 208, 0, 208, 0, 520, 520, 520, 0, 520, 520, 520, 520, 520, 52
+0, 0, 0, 0, 0, 0, 0, 0, 635, 0, 604, 687, 0, 500, 666, 0, 0, 0, 0, 0, 822, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 562, 0, 0, 0, 281, 0, 0, 0, 489, 583, 458, 583, 51
+0, 302, 572, 572, 239, 0, 0, 239, 854, 572, 562, 583, 0, 333, 406, 333, 562, 50
+0, 750, 0, 479, 437]}, but is not installed. Consider installing fontTools if y
+ou encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 43, '/Subtype': '/Type1', '/BaseFont': '/GKFFNE+AdvTTa
+b7e17fd', '/FontDescriptor': IndirectObject(757, 0, 3024674334896), '/Type': '/
+Font', '/Encoding': '/WinAnsiEncoding', '/LastChar': 61, '/Widths': [770, 0, 0,
+ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 770]}, but is not installed. Cons
+ider installing fontTools if you encounter encoding problems.
+fontTools is required to fully parse the encoding of a CFF Type1 font in font d
+ictionary {'/FirstChar': 35, '/Subtype': '/Type1', '/BaseFont': '/GKFFLP+AdvOT4
+6dcae81', '/FontDescriptor': IndirectObject(738, 0, 3024674334896), '/Type': '/
+Font', '/Encoding': '/WinAnsiEncoding', '/LastChar': 176, '/Widths': [489, 510,
+ 791, 604, 0, 281, 281, 0, 0, 197, 302, 197, 333, 510, 510, 510, 510, 510, 510,
+ 510, 510, 510, 510, 197, 197, 0, 0, 0, 395, 729, 604, 541, 572, 656, 489, 479,
+ 645, 645, 229, 364, 541, 468, 802, 656, 687, 531, 687, 531, 489, 489, 645, 552
+, 843, 562, 531, 552, 0, 0, 281, 0, 500, 0, 479, 562, 447, 562, 500, 291, 552, 
+552, 229, 239, 468, 229, 833, 552, 541, 562, 562, 322, 395, 322, 541, 479, 729,
+ 458, 468, 427, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 666,
+ 0, 0, 0, 302, 0, 0, 312]}, but is not installed. Consider installing fontTools
+ if you encounter encoding problems.
+FILE: 02_Lei2025_RCR.pdf
+  size=7693965 pages=60
+  title=''
+  snippet=Lawrence Berkeley National Laboratory LBL Publications Title The water use of data center workloads: A review and assessment of key determinants Permalink https://escholarship.org/uc/item/1vx545q7 Journal Resources Conservation and Recycling, 219 ISSN 0921-3449 Authors Lei, Nuoa Lu, Jun Shehabi, Arm
+
+FILE: 1-s2.0-S0043135426005488-main.pdf
+  size=1020450 pages=7
+  title='The water footprint of artificial intelligence: Emerging solutions and governance imperatives'
+  snippet=Making Waves The water footprint of artificial intelligence: Emerging solutions and governance imperatives Zohar Barnett-Itzhaki a,b,* a Ruppin Research Group in Environmental and Social Sustainability, Ruppin Academic Center, 4025000, Emek Hefer, Israel b Faculty of Engineering, Ruppin Academic Cen
+
+FILE: 10_Behzadian2014_DWES.pdf
+  size=2272575 pages=10
+  title=''
+  snippet=Drink. Water Eng. Sci., 7, 63鈥?2, 2014 www.drink-water-eng-sci.net/7/63/2014/ doi:10.5194/dwes-7-63-2014 漏 Author(s) 2014. CC Attribution 3.0 License. WaterMet2: a tool for integrated analysis of sustainability-based performance of urban water systems K. Behzadian1,2, Z. Kapelan1, G. Venkatesh3, H. 
+
+FILE: 11_Dobson2024_GMD.pdf
+  size=4574453 pages=19
+  title=''
+  snippet=Geosci. Model Dev., 17, 4495鈥?513, 2024 https://doi.org/10.5194/gmd-17-4495-2024 漏 Author(s) 2024. This work is distributed under the Creative Commons Attribution 4.0 License. Model description paper Modelling water quantity and quality for integrated water cycle management with the Water Systems In
+
+FILE: 12_Landa-Cansigno2020_ESPR.pdf
+  size=2953254 pages=16
+  title='Performance assessment of water reuse strategies using integrated framework of urban water metabolism and water-energy-pollution nexus'
+  snippet=LOCAL, REGIONAL AND GLOBAL BEST PRACTICE FOR WATER Performance assessment of water reuse strategies using integrated framework of urban water metabolism and water-energy-pollution nexus Oriana Landa-Cansigno1 & Kourosh Behzadian2 & Diego I. Davila-Cano3 & Luiza C. Campos 1 Received: 7 February 2019 
+
+FILE: 13_Renouf2018_WaterRes.pdf
+  size=1756056 pages=45
+  title=''
+  snippet=This may be the author鈥檚 version of a work that was submitted/accepted for publication in the following source: Renouf, Marguerite A., Kenway, Steven J., Lam, Ka Leung, Weber, Tony, Roux, Estelle, Serrao-Neumann, Silvia, Choy, Darryl Low, & Morgan, Ed- ward A. (2018) Understanding urban water perfor
+
+FILE: 14_Alissa2025_Nature.pdf
+  size=7512626 pages=13
+  title='Using life cycle assessment to drive innovation for sustainable cool clouds'
+  snippet=Nature | Vol 641 | 8 May 2025 | 331 Analysis Using life cycle assessment to drive innovation for sustainable cool clouds Husam Alissa1 鉁? Teresa Nick1, Ashish Raniwala1, Alberto Arribas Herranz1, Kali Frost1, Ioannis Manousakis1, Kari Lio1, Brijesh Warrier1, Vaidehi Oruganti1, T . J. DiCaprio1, Kath
+
+FILE: 15_Mytton2021_npjCW.pdf
+  size=658727 pages=6
+  title='Data centre water consumption'
+  snippet=PERSPECTIVE OPEN Data centre water consumption David Mytton 1 鉁?The information communication technology sector will experience huge growth over the coming years, with 29.3 billion devices expected online by 2030, up from 18.4 billion in 2018. To reliably support the online services used by these bi
+
+FILE: 17_Radini2021_ApplEnergy.pdf
+  size=998848 pages=58
+  title=''
+  snippet=1 Urban water-energy-food-climate nexus in integrated wastewater and reuse systems: cyber- physical framework and innovations Serena Radinia, Enrico Marinellia, 脟a臒r谋 Akyola,*, Anna Laura Eusebia,*, Vasileia Vasilakib, Adriano Mancinic, Emanuele Frontonic, Gian Battista Bischettid, Claudio Gandolfid
+
+FILE: Siddik_2021_Environ._Res._Lett._16_064017.pdf
+  size=1628916 pages=12
+  title='The environmental footprint of data centers in the United States'
+  snippet=LETTER 鈥?OPEN ACCESS The environmental footprint of data centers in the United States To cite this article: Md Abu Bakar Siddik et al 2021 Environ. Res. Lett. 16 064017 View the article online for updates and enhancements. You may also like Geospatial assessment of water footprints for hyperscale da
+
+FILE: main.pdf
+  size=6053166 pages=14
+  title='Climate- and technology-specific PUE and WUE estimations for U.S. data centers using a hybrid statistical and thermodynamics-based approach'
+  snippet=Resources, Conservation & Recycling 182 (2022) 106323 Available online 4 April 2022 0921-3449/漏 2022 Elsevier B.V. All rights reserved. Full length article Climate- and technology-specific PUE and WUE estimations for U.S. data centers using a hybrid statistical and thermodynamics-based approach Nuoa
+

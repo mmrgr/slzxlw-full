@@ -1,0 +1,49 @@
+{
+  "document_type": "open_questions",
+  "task_id": "task_20260731_001",
+  "description": "首次对话需向用户确认的开放问题。这些问题会显著改变学习路径定制与降级策略，须在Phase 0启动前完成确认并写入memory/user_profile.json。",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "你的学历/专业背景是什么？（完全跨界也没关系）",
+      "impact": "决定知识起点、概念教学深度与Phase 1是否可加速。",
+      "default_assumption": "零基础/跨界，概念需从零讲起。"
+    },
+    {
+      "id": "Q2",
+      "question": "你对环境科学的哪个方向最感兴趣？（不确定也可以，我会帮你探索）",
+      "impact": "决定Phase 0探索重点与文献检索范围。",
+      "default_assumption": "无明确偏好，由文献研究员基于前沿推荐候选方向。"
+    },
+    {
+      "id": "Q3",
+      "question": "你每周能投入多少时间做这件事？",
+      "impact": "决定总周期与是否触发降级策略。",
+      "default_assumption": "每周10小时。"
+    },
+    {
+      "id": "Q4",
+      "question": "你有特定的资源限制吗？（比如无法做野外采样、没有实验室等）",
+      "impact": "决定研究方法路线（野外/实验/二次数据分析），直接影响Phase 3设计。",
+      "default_assumption": "采用公开数据集二次分析路线。"
+    },
+    {
+      "id": "Q5",
+      "question": "你的英文阅读和写作水平如何？",
+      "impact": "决定文献阅读辅助力度与论文润色投入。",
+      "default_assumption": "具备基础阅读能力，写作需大量指导与润色。"
+    },
+    {
+      "id": "Q6",
+      "question": "你有目标期刊偏好吗？（如Nature Climate Change、Nature Sustainability等）",
+      "impact": "决定Phase 7投稿格式调整与scope匹配评估。",
+      "default_assumption": "由主导师根据论文质量推荐，候选含Nature Sustainability、Communications Earth & Environment等。"
+    },
+    {
+      "id": "Q7",
+      "question": "你是否有数据分析工具的基础（R/Python/Excel）？",
+      "impact": "决定Phase 4工具教学投入与可复现分析的技术栈选择。",
+      "default_assumption": "仅Excel基础，需从R或Python入门教起。"
+    }
+  ]
+}

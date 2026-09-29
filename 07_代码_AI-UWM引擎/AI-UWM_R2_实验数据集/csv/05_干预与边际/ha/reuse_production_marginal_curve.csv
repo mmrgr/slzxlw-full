@@ -1,0 +1,6 @@
+central_reuse_fraction,estimated_production_ml_day,reuse_treatment_capacity_ml_day,cawcc_mw,limiting_constraint,marginal_gain_mw_per_ml_day
+0.16,32.224577269479454,40.3,1100.0,max_source_abstraction_ratio,
+0.25,50.35090198356165,62.9,1400.0,max_daily_average_grid_connection_ratio,16.550514499331044
+0.35,70.4912627769863,88.1,1400.0,max_daily_average_grid_connection_ratio,0.0
+0.45,90.63162357041097,113.3,1400.0,max_daily_average_grid_connection_ratio,0.0
+0.6,120.84216476054794,151.1,1400.0,max_daily_average_grid_connection_ratio,0.0

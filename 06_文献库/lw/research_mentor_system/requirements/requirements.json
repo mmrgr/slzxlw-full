@@ -1,0 +1,35 @@
+{
+  "task_id": "task_20260731_001",
+  "task_description": "零基础用户从研究方向选择到Nature子刊论文投稿的完整指导：引导用户完成环境科学方向探索、知识基础建立、文献综述、研究设计、数据收集与分析、论文撰写、审稿模拟与投稿准备全流程，最终产出一篇Nature子刊水平的研究论文及完整投稿材料。",
+  "deliverable_type": "research_paper",
+  "deliverable_detail": "Nature子刊水平研究论文（含标题、摘要、引言、结果、讨论、方法、图表、参考文献）及投稿材料（Cover Letter、补充材料、数据可用性声明、利益冲突声明）。",
+  "inputs": [
+    {
+      "type": "text",
+      "content": "用户背景信息：学历/专业背景、兴趣方向、每周可投入时间、资源限制（能否野外采样/有无实验室）、英文阅读与写作水平、目标期刊偏好、数据分析工具基础。",
+      "description": "首次对话收集的用户画像，作为个性化学习路径定制与降级策略的依据。"
+    }
+  ],
+  "needs_internet": true,
+  "needs_file_processing": true,
+  "accuracy_critical_steps": [
+    "研究设计（Phase 3）：研究问题精炼、假说可证伪性、方法选择",
+    "假说构建与可证伪性验证",
+    "数据收集与质量控制（Phase 4）",
+    "统计分析方法选择与执行，结果须可复现",
+    "结果解读与假说检验，避免过度推断",
+    "引用文献真实性核对，杜绝虚构文献"
+  ],
+  "approximate_ok_steps": [
+    "方向探索与方向选择理由书初稿",
+    "文献综述初稿（后续迭代精修）",
+    "论文各章节初稿撰写",
+    "教学用语的日常化表达与类比"
+  ],
+  "allow_human_confirmation": true,
+  "long_running": true,
+  "involves_sensitive_data": false,
+  "user_priority": "quality",
+  "risk_level": "high",
+  "mode": "strict"
+}

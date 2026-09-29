@@ -1,0 +1,3 @@
+﻿域,情景,接网容量_MW,电网间接水强度_L_per_kWh,CAWCC_年_MW,年尺度限制约束,CAWCC_日_MW,日尺度限制约束
+HA,常规,1500.0,0.4,1150.0,max_source_abstraction_ratio,1150.0,max_wtw_utilization
+HA,能源富集,2600.0,0.08,1150.0,max_source_abstraction_ratio,1150.0,max_wtw_utilization

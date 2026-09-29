@@ -1,0 +1,43 @@
+=== 核验 + 下载报告 ===
+01 | 01_Xiao2025_NatSustain.pdf | 真实:True | OA:hybrid | 下载:False | no-oa-url
+02 | 02_Masanet2020_Science.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+03 | 03_deVries2023_Joule.pdf | 真实:True | OA:bronze | 下载:False | no-oa-url
+04 | 04_Ebrahimi2014_RSER.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+05 | 05_Zhang2014_RSER.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+06 | 06_Chen2022_FrontEnergy.pdf | 真实:True | OA:gold | 下载:False | no-oa-url
+07 | 07_Kenway2011_WST.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+08 | 08_Urich2014_WST.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+09 | 09_Cai2025_EcolModel.pdf | 真实:True | OA:green | 下载:False | no-oa-url
+10 | 10_Voskamp2020_JCLP.pdf | 真实:True | OA:hybrid | 下载:False | no-oa-url
+11 | 11_Nezami2022_SCS.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+12 | 12_Hsieh2010_EST.pdf | 真实:False | OA:err | 下载:False | no-oa-url
+13 | 13_Walker2012_WaterRes.pdf | 真实:False | OA:closed | 下载:False | no-oa-url
+14 | 14_Wang2020_JCLP.pdf | 真实:False | OA:hybrid | 下载:False | no-oa-url
+15 | 15_Vakilifard2019_ApplEnergy.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+16 | 16_Qin2016_Water.pdf | 真实:True | OA:gold | 下载:False | no-oa-url
+17 | 17_Wang2021_EcolIndic.pdf | 真实:True | OA:hybrid | 下载:False | no-oa-url
+18 | 18_Blokker2010_JWRPM.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+19 | 19_Haasnoot2013_GEC.pdf | 真实:True | OA:hybrid | 下载:False | no-oa-url
+20 | 20_Mortazavi2015_EnvModSoft.pdf | 真实:True | OA:closed | 下载:False | no-oa-url
+
+=== 未能下载（需机构权限/机器人墙）===
+01. Xiao et al. (2025) — DOI 10.1038/s41893-025-01681-y  [NatSustain]
+02. Masanet et al. (2020) — DOI 10.1126/science.aba3758  [Science]
+03. de Vries et al. (2023) — DOI 10.1016/j.joule.2023.09.004  [Joule]
+04. Ebrahimi et al. (2014) — DOI 10.1016/j.rser.2013.12.007  [RSER]
+05. Zhang et al. (2014) — DOI 10.1016/j.rser.2014.04.017  [RSER]
+06. Chen et al. (2022) — DOI 10.3389/fenrg.2022.952680  [FrontEnergy]
+07. Kenway et al. (2011) — DOI 10.2166/wst.2011.070  [WST]
+08. Urich et al. (2014) — DOI 10.2166/wst.2014.363  [WST]
+09. Cai et al. (2025) — DOI 10.1016/j.ecolmodel.2024.110972  [EcolModel]
+10. Voskamp et al. (2020) — DOI 10.1016/j.jclepro.2020.120310  [JCLP]
+11. Nezami et al. (2022) — DOI 10.1016/j.scs.2022.104065  [SustCitiesSoc]
+12. Hsieh et al. (2010) — DOI 10.1021/es101379r  [EST]
+13. Walker et al. (2012) — DOI 10.1016/j.watres.2012.04.015  [WaterRes]
+14. Wang et al. (2020) — DOI 10.1016/j.jclepro.2020.120789  [JCLP]
+15. Vakilifard et al. (2019) — DOI 10.1016/j.apenergy.2018.10.128  [ApplEnergy]
+16. Qin et al. (2016) — DOI 10.3390/w8040157  [Water]
+17. Wang et al. (2021) — DOI 10.1016/j.ecolind.2020.107232  [EcolIndic]
+18. Blokker et al. (2010) — DOI 10.1061/(ASCE)WR.1943-5452.0000002  [JWRPM]
+19. Haasnoot et al. (2013) — DOI 10.1016/j.gloenvcha.2012.12.006  [GlobEnvChange]
+20. Mortazavi-Naeini et al. (2015) — DOI 10.1016/j.envsoft.2015.02.021  [EnvModSoft]

@@ -1,0 +1,10 @@
+﻿AB_DIR_EXISTS=True
+AB_TOP=bin
+scripts
+skill-data
+skills
+LICENSE
+package.json
+README.md
+
+PLAYWRIGHT_DIRS=

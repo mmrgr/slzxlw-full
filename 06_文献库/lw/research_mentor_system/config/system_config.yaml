@@ -1,0 +1,140 @@
+# Nature子刊研究导师系统 - 系统配置文件
+# AI Coding Agent 扮演6种角色，指导零基础用户完成环境科学研究
+# 系统跨越8个阶段（Phase 0-7），支持长期记忆与结构化数据管理
+
+system_name: "Nature子刊研究导师系统"
+version: "1.0"
+default_mode: strict
+
+# ===== 8个研究阶段配置 =====
+phases:
+  - phase_id: 0
+    name: "方向探索"
+    default_duration_weeks: 2
+    lead_agent: "principal_mentor"
+    support_agents:
+      - "literature_researcher"
+  - phase_id: 1
+    name: "基础建立"
+    default_duration_weeks: 4
+    lead_agent: "methodology_mentor"
+    support_agents:
+      - "literature_researcher"
+  - phase_id: 2
+    name: "文献综述"
+    default_duration_weeks: 6
+    lead_agent: "literature_researcher"
+    support_agents:
+      - "writing_coach"
+  - phase_id: 3
+    name: "研究设计"
+    default_duration_weeks: 4
+    lead_agent: "methodology_mentor"
+    support_agents:
+      - "principal_mentor"
+    deep_thinking: true
+  - phase_id: 4
+    name: "数据收集与分析"
+    default_duration_weeks: 12
+    lead_agent: "methodology_mentor"
+    support_agents: []
+  - phase_id: 5
+    name: "论文撰写"
+    default_duration_weeks: 8
+    lead_agent: "writing_coach"
+    support_agents:
+      - "peer_reviewer"
+    deep_thinking: true
+  - phase_id: 6
+    name: "审稿与修改"
+    default_duration_weeks: 4
+    lead_agent: "peer_reviewer"
+    support_agents:
+      - "writing_coach"
+  - phase_id: 7
+    name: "投稿准备"
+    default_duration_weeks: 2
+    lead_agent: "writing_coach"
+    support_agents:
+      - "principal_mentor"
+
+# ===== 6个Agent角色配置 =====
+agents:
+  - name: "principal_mentor"
+    role: "主导师"
+    phases_active: [0, 1, 2, 3, 4, 5, 6, 7]
+    is_orchestrator: true
+  - name: "literature_researcher"
+    role: "文献研究员"
+    phases_active: [0, 2, 6]
+  - name: "methodology_mentor"
+    role: "方法论导师"
+    phases_active: [1, 3, 4]
+  - name: "writing_coach"
+    role: "写作教练"
+    phases_active: [2, 5, 7]
+  - name: "peer_reviewer"
+    role: "审稿模拟员"
+    phases_active: [5, 6]
+  - name: "memory_curator"
+    role: "记忆管家"
+    phases_active: [0, 1, 2, 3, 4, 5, 6, 7]
+    background: true
+
+# ===== 记忆配置 =====
+memory:
+  auto_save: true
+  max_episodic_entries: 100
+  max_knowledge_gaps: 50
+  candidate_validation_required: true
+  sensitive_data_protection: true
+
+# ===== 教学配置 =====
+teaching:
+  socratic_method: true
+  scaffold_level: high          # 初期高脚手架，逐步撤去
+  immediate_feedback: true
+  max_task_iterations: 3
+  concept_explanation_layers: 4  # 类比→简单描述→专业定义→应用示例
+  encouraging_but_rigorous: true
+
+# ===== 深度思考配置 =====
+deep_thinking:
+  trigger_phases: [3, 5]         # Phase 3研究设计 + Phase 5论文撰写
+  max_iterations: 2
+  max_token_ratio: 0.30
+  protocol_ref: "../agent_factory/thinking/deep_thinking_protocol.md"
+  scaffolds:
+    phase_3: "研究设计推理脚手架（7步）"
+    phase_5: "讨论撰写推理脚手架（7步）"
+  verification_checklist: true
+
+# ===== 质量配置 =====
+quality:
+  checkpoint_required: true
+  standard: "nature_subjournal"
+  review_rounds: 2
+  four_layer_check: true         # 结构→科学→写作→Nature标准
+  no_standard_lowering: true     # 不因零基础降低标准
+
+# ===== 降级策略 =====
+degradation:
+  level_1:
+    condition: "时间紧张"
+    action: "减少文献阅读量（30篇→15篇）"
+  level_2:
+    condition: "资源受限"
+    action: "简化研究方法（实验法→二次数据分析）"
+  level_3:
+    condition: "数据不足"
+    action: "缩短论文（Article→Letter）"
+  level_4:
+    condition: "竞争激烈"
+    action: "降低目标期刊（Nature子刊→专业顶刊）"
+  level_5:
+    condition: "投稿困难"
+    action: "转为预印本发表（preprint先行）"
+  non_degradable:
+    - "科学严谨性"
+    - "数据准确性"
+    - "写作基本质量"

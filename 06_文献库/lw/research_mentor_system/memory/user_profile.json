@@ -1,0 +1,48 @@
+{
+  "user_id": "user_001",
+  "background": {
+    "education": "环境工程博士一年级",
+    "major": "环境工程",
+    "research_experience": "博士新生，有一定环境工程基础"
+  },
+  "interests": {
+    "environmental_topics": ["城市水代谢", "AI基础设施水足迹", "系统建模"],
+    "specific_direction": "将AI基础设施（数据中心）的水足迹纳入城市水代谢框架，构建新的核算框架并进行分析"
+  },
+  "resources": {
+    "weekly_hours": "充足（投入时间越多越好）",
+    "field_access": "无需野外采样",
+    "lab_access": "无需实验室",
+    "computing": "具备较强编程能力",
+    "data_preference": "网络公开数据、论文已用数据、模拟数据"
+  },
+  "skills": {
+    "english_reading": "较强",
+    "english_writing": "较强",
+    "statistics": "较强（博士级）",
+    "programming": "较强"
+  },
+  "preferences": {
+    "target_journal": "Nature子刊 或 Water Research，不低于此层次",
+    "paper_type": "Article (研究论文)",
+    "communication_style": "逻辑性、全面性、易懂性"
+  },
+  "provided_resources": {
+    "papers": 11,
+    "paper_topics": [
+      "UWM混合系统动力学建模",
+      "水量平衡框架跨期评估",
+      "循环水策略分析",
+      "UWU决策支持工具",
+      "生态网络分析(ENA)-物理虚拟水",
+      "ENA-整合代谢过程",
+      "水-食物-能源-生态系统服务纽带",
+      "水-能源-污染纽带",
+      "WaterMet2建模工具",
+      "ABM-SD耦合模型",
+      "AI基础设施-水共生"
+    ]
+  },
+  "created_at": "2026-07-31",
+  "last_updated": "2026-07-31"
+}

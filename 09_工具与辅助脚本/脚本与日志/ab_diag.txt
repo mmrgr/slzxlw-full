@@ -1,0 +1,3 @@
+﻿AB_FILE_EXISTS=True
+VERSION_OUT=agent-browser 0.27.0
+

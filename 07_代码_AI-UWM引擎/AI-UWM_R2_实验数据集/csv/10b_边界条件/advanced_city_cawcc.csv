@@ -1,0 +1,5 @@
+﻿域,域标签,变体,变体说明,CAWCC_年_MW,年尺度限制约束,CAWCC_日_MW,日尺度限制约束
+co,D-CO 气候凉爽端,baseline,现状城市（漏损 12 %、再生水利用率 ~15–16 %）,1750.0,max_source_abstraction_ratio,1450.0,max_daily_average_grid_connection_ratio
+co,D-CO 气候凉爽端,leakage_09,仅漏损达标（0.12 → 0.09，2025 政策目标）,2000.0,,1450.0,max_daily_average_grid_connection_ratio
+co,D-CO 气候凉爽端,reuse_25,仅再生水达标（政策口径利用率 → 25 %）,2000.0,,1450.0,max_daily_average_grid_connection_ratio
+co,D-CO 气候凉爽端,both,两项同时达标,2000.0,,1450.0,max_daily_average_grid_connection_ratio

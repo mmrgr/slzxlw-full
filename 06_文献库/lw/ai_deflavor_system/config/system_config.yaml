@@ -1,0 +1,195 @@
+# 去AI味系统 - 系统配置文件
+# AI Coding Agent 扮演6种角色，通过检测-修改-模拟检测的迭代流程去除文本AI味
+# 系统支持学术论文/小说/新闻/博客四种文体，每种文体有不同的人性化策略和AI率阈值
+
+system_name: "去AI味系统"
+version: "1.0"
+max_iterations: 3
+
+# ===== 默认目标AI率（按文体类型） =====
+default_target_ai_rate:
+  academic_paper: 0.15
+  novel: 0.05
+  news: 0.10
+  blog: 0.10
+  other: 0.10
+
+# ===== 文体AI率阈值 =====
+text_type_thresholds:
+  academic_paper:
+    target: 0.15
+    hard_limit: 0.20
+    key_dimensions: ["vocabulary_pattern", "logic_pattern"]
+    allowed_features: "适度结构化表达、被动语态（方法部分）"
+    notes: "方法部分容忍较高结构化，讨论部分是重点人性化对象"
+  novel:
+    target: 0.05
+    hard_limit: 0.08
+    key_dimensions: ["emotion_pattern", "burstiness"]
+    allowed_features: "极少，需要最大化人性化"
+    notes: "对话必须口语化，描写必须有感官细节，允许碎片化和不完美语法"
+  news:
+    target: 0.10
+    hard_limit: 0.15
+    key_dimensions: ["structure_pattern", "emotion_pattern"]
+    allowed_features: "基本新闻结构（倒金字塔）"
+    notes: "导语可保留基本结构，正文必须有现场感和具体来源"
+  blog:
+    target: 0.10
+    hard_limit: 0.15
+    key_dimensions: ["vocabulary_pattern", "structure_pattern"]
+    allowed_features: "适度结构化"
+    notes: "需要强烈个人风格，语言可更口语化，结构可更灵活"
+  other:
+    target: 0.10
+    hard_limit: 0.15
+    key_dimensions: ["vocabulary_pattern", "structure_pattern"]
+    allowed_features: "适度结构化"
+    notes: "无法确定文体时默认按此标准处理"
+
+# ===== 6个Agent配置 =====
+agents:
+  - name: "ai_detector"
+    role: "AI特征检测员"
+    phase: 1
+    responsibility: "扫描文本，识别AI味特征，生成检测报告"
+  - name: "structure_reorganizer"
+    role: "结构重组师"
+    phase: 2
+    responsibility: "打破AI结构模式（三明治/三段式/均匀段落）"
+  - name: "language_humanizer"
+    role: "语言人性化师"
+    phase: 2
+    responsibility: "词汇替换+句式变化+情感注入"
+  - name: "logic_enhancer"
+    role: "逻辑深化师"
+    phase: 2
+    responsibility: "打破完美逻辑链，引入矛盾/反例/不确定性"
+  - name: "detection_simulator"
+    role: "检测模拟员"
+    phase: 3
+    responsibility: "模拟GPTZero/Turnitin/知网检测，给出AI率评分"
+  - name: "quality_controller"
+    role: "质量把控师"
+    phase: "2+3"
+    responsibility: "确保修改不破坏原意/逻辑/数据，整合各Agent输出，终审"
+
+# ===== 3个阶段配置 =====
+phases:
+  - phase_id: 1
+    name: "AI味检测"
+    description: "AI特征检测员对文本进行六大类特征扫描，输出检测报告"
+    agent: "ai_detector"
+    mode: "serial"
+    input: "原始文本 + 文体类型 + 目标AI率"
+    output: "detection_report.json"
+    deep_thinking: true
+  - phase_id: 2
+    name: "人性化修改"
+    description: "三个修改Agent并行处理文本不同方面，质量把控师合并结果"
+    agents: ["structure_reorganizer", "language_humanizer", "logic_enhancer"]
+    merge_agent: "quality_controller"
+    mode: "parallel"
+    input: "检测报告 + 原始文本"
+    output: "修改后的文本 + modification_record"
+    deep_thinking: true
+  - phase_id: 3
+    name: "检测模拟"
+    description: "检测模拟员模拟主流AI检测工具评分，判断是否达标"
+    agent: "detection_simulator"
+    mode: "serial"
+    input: "修改后的文本 + 目标AI率"
+    output: "simulation_report.json"
+    deep_thinking: true
+
+# ===== 知识库文件引用 =====
+knowledge_refs:
+  - file: "knowledge/ai_signatures.md"
+    description: "AI味特征知识库：六大类AI味特征定义与检测清单"
+    used_by: ["ai_detector", "detection_simulator"]
+  - file: "knowledge/detection_rules.md"
+    description: "AI检测规则手册：主流检测工具原理与绕过策略"
+    used_by: ["detection_simulator", "ai_detector"]
+  - file: "knowledge/humanization_techniques.md"
+    description: "人性化技术手册：七大人性化技术（T1-T7）详解与操作示例"
+    used_by: ["structure_reorganizer", "language_humanizer", "logic_enhancer"]
+
+# ===== 质量保障 =====
+quality:
+  # 不可修改的内容清单
+  unmodifiable_content:
+    - type: "数据和统计结果"
+      reason: "修改数据是学术不端"
+      rule: "所有数字、百分比、统计结果保持原样，不得修改"
+    - type: "引用和参考文献"
+      reason: "必须保留原始引用"
+      rule: "引用格式、作者名、年份、页码不得修改"
+    - type: "专有名词和术语"
+      reason: "修改会导致不准确"
+      rule: "专业术语、人名、地名、机构名保持原样"
+    - type: "核心论点"
+      reason: "可以调整表达，不能改变意思"
+      rule: "修改不得增加、删除或歪曲作者的核心主张"
+  # 质量检查清单
+  checklist:
+    - "原意完整保留"
+    - "逻辑链条通顺"
+    - "语言自然流畅"
+    - "无过度修改痕迹"
+    - "学术规范保留（如适用）"
+    - "文体风格一致"
+    - "目标AI率达标"
+    - "无语法错误"
+    - "无事实错误"
+    - "修改对照表完整"
+  # 过度修改检测
+  over_modification_guard:
+    max_modification_ratio: 0.70
+    description: "单轮修改比例不超过原文70%，超出则标记为过度修改风险"
+
+# ===== 记忆配置 =====
+memory:
+  auto_save: true
+  max_strategy_records: 200
+  files:
+    effective_strategies: "memory/effective_strategies.json"
+    failed_strategies: "memory/failed_strategies.json"
+    text_patterns: "memory/text_patterns.json"
+    user_preferences: "memory/user_preferences.json"
+  update_rules:
+    after_each_run: "每次处理后记录策略效果与新发现的AI味模式"
+    effective_strategy_threshold: "AI率下降幅度≥0.05视为有效策略"
+    failed_strategy_threshold: "AI率不降反升或文本质量下降视为失败策略"
+
+# ===== 迭代控制 =====
+iteration:
+  max_iterations: 3
+  modification_density:
+    round_1: "全面修改，处理所有高/中/低严重度特征"
+    round_2: "重点修改，仅处理高严重度和上轮残留的高风险段落"
+    round_3: "微调，仅处理上轮检测模拟标记的具体问题"
+  termination_condition: "AI率达标 或 迭代用尽"
+  not_passed_output: "输出当前最佳版本 + 未能解决的问题清单"
+
+# ===== 降级策略 =====
+degradation:
+  level_1:
+    condition: "文本很长（>5000字）"
+    action: "分段处理，每段独立迭代"
+  level_2:
+    condition: "迭代3轮未达标"
+    action: "输出当前最佳 + 未解决问题清单"
+  level_3:
+    condition: "文本极短（<500字）"
+    action: "简化流程，只做检测+一轮修改"
+  level_4:
+    condition: "用户时间紧迫"
+    action: "只执行第1轮，跳过迭代"
+  level_5:
+    condition: "文体无法确定"
+    action: "默认按'other'处理，目标AI率10%"
+  non_degradable:
+    - "原意保留"
+    - "数据准确性"
+    - "引用完整性"
+    - "语言基本通顺"

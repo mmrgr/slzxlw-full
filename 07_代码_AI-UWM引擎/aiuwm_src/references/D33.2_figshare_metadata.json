@@ -1,0 +1,34 @@
+{
+  "record_type": "curated_provenance",
+  "source_note": "本文件是策展型出处记录，不是上游元数据原文照录：为去标识化，上游题名、引文串、摘要与页面链接中包含商标字样的字段已裁剪。定位来源请使用 record_id / download_url。",
+  "record_id": 29706515,
+  "repository": "University of Exeter institutional repository (figshare)",
+  "published_date": "2025-08-06T14:31:29Z",
+  "version": 1,
+  "license": {
+    "value": 287,
+    "name": "All rights reserved",
+    "url": "https://www.rioxx.net/licenses/all-rights-reserved"
+  },
+  "authors": [
+    "Kourosh Behzadian",
+    "Zoran Kapelan",
+    "Venkatesh Govindarajan",
+    "H. Brattebø",
+    "S. Sægrov",
+    "Evangelos Rozos",
+    "C. Makropoulos"
+  ],
+  "summary": "TRUST 项目 D33.2 最终报告：城市水系统定量绩效模型的方法学说明与软件/工具包描述。许可为 All rights reserved，故本仓库不随附 PDF；请按 download_url 获取。",
+  "files": [
+    {
+      "name": "d332-Final.pdf",
+      "size": 7375989,
+      "mimetype": "application/pdf",
+      "supplied_md5": "fbb8bf547e7de295ae6d3e066f987963",
+      "computed_md5": "fbb8bf547e7de295ae6d3e066f987963",
+      "download_url": "https://ndownloader.figshare.com/files/56954804"
+    }
+  ],
+  "project": "TRUST"
+}

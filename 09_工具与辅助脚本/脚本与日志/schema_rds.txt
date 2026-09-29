@@ -1,0 +1,19 @@
+# doc_resolve_document_structure
+
+获取文档结构树（DOC），返回扁平节点列表，用于在调用需要 idx/index/ranges 的写类工具前定位位置。DOC 的 idx/begin/end 是 UTF-16 code unit 坐标，包含段落结束符、表格、图片、字段等结构占位；不要按肉眼字符数、段落序号或行号手算。节点 type：Paragraph / Heading（heading_level 1..9）/ Title / Subtitle / Table；编号段的 numbering_type 与写接口一致，可为 bullet / decimal_comma / task / decimal / bullet_arrow / bullet_hollow_circle / multilevel_decimal / chinese_numbering / upper_letter；文字下划线/删除线/高亮通过 has_highlights 标志位 + highlight_spans 嵌入在 Paragraph 内.
+paragraph_index（全局 1-based 节点序号）标注第几段（含标题）。paragraph_id 在段属性携带 ID 时返回；没有或为空时省略。该 ID 只保证在当前打开的 editor 实例内用于定位，不保证保存后或重新打开文档仍保持不变；重开后必须重新调用本工具获取。
+Table 节点额外输出 table_index / table_id / table_start / table_end / first_row_texts；其中 table_start 与 table_end 均为闭区间（inclusive），即表格占据 [table_start, table_end] 整段坐标。
+三档 mode（默认 compact）：outline=只给 Heading / (Sub)Title 节点出 preview，骨架级；compact=每节点 10 字符 preview + has_highlights / row_count×col_count / children_count / is_numbering 等轻量信号位；full=highlight_spans / table cells / numbering 详情全部回填。
+定位单段传 idx（自动按 full 回包，跳过分页）；超长文档用 offset/limit 分页（默认 limit=150）。
+注意：如果只需要查找/操作表格，请优先使用 doc_list_tables（更精准、更轻量）；本工具适用于需要了解整体文档布局或定位非表格元素的场景。
+
+参数（✓=必填）：
+  [ ] file_id (string): The file_id of the editor to operate on
+  [ ] idx (integer): 字符位置索引（GCP 坐标，同 doc_insert_text / doc_find 等）。传入则只返回包含该位置的单块，自动按 full 回填，跳过分页。注意这是查询接口返回的 DOC 坐标，不是段落序号、行号或肉眼字符序号。
+  [ ] include_highlights (boolean): compact/outline 下回填 highlight_spans 详情（has_highlights 信号位始终输出）。
+  [ ] include_table_cells (boolean): compact/outline 下回填 Table.table_rows[].cells[]（row_count/col_count 始终输出）。
+  [ ] include_textbox_children (boolean): compact/outline 下回填 TextBox/CodeBlock/HighlightBlock.children[]（children_count 始终输出）。
+  [ ] limit (integer): 顶层 nodes 最大数量，默认 150；0=不分页。idx 模式忽略。
+  [ ] mode (string): 信息密度档位，默认 compact。
+  [ ] offset (integer): 顶层 nodes 起始下标，默认 0。idx 模式忽略。
+  [ ] text_preview_length (integer): text_preview 字符上限。不传走 mode 默认（outline=20 / compact=10 / full=50）；0=关闭；上限 200。

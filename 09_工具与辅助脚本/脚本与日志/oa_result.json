@@ -1,0 +1,202 @@
+[
+  {
+    "name": "01_Wang2026_ESE",
+    "doi": "10.1016/j.ese.2026.100702",
+    "oa_status": "gold",
+    "oa_status_reason": null,
+    "best_oa_url": "https://doi.org/10.1016/j.ese.2026.100702",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "02_Lei2025_RCR",
+    "doi": "10.1016/j.resconrec.2025.108310",
+    "oa_status": "green",
+    "oa_status_reason": null,
+    "best_oa_url": "https://escholarship.org/content/qt1vx545q7/qt1vx545q7.pdf",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "03_Jiang2025_ApplEnergy",
+    "doi": "10.1016/j.apenergy.2025.126522",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "04_Lei2022_RCR",
+    "doi": "10.1016/j.resconrec.2022.106323",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "05_Li2025_CACM",
+    "doi": "10.1145/3724499",
+    "oa_status": "hybrid",
+    "oa_status_reason": null,
+    "best_oa_url": "https://dl.acm.org/doi/pdf/10.1145/3724499",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "06_Siddik2021_ERL",
+    "doi": "10.1088/1748-9326/abfba1",
+    "oa_status": "gold",
+    "oa_status_reason": null,
+    "best_oa_url": "https://iopscience.iop.org/article/10.1088/1748-9326/abfba1/pdf",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "07_Karimi2022_RCR",
+    "doi": "10.1016/j.resconrec.2022.106194",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "08_Privette2026_AGUAdv",
+    "doi": "10.1029/2025AV002140",
+    "oa_status": "gold",
+    "oa_status_reason": null,
+    "best_oa_url": "https://doi.org/10.1029/2025av002140",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "09_Barnett2026_WaterRes",
+    "doi": "10.1016/j.watres.2026.125866",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "10_Behzadian2014_DWES",
+    "doi": "10.5194/dwes-7-63-2014",
+    "oa_status": "gold",
+    "oa_status_reason": null,
+    "best_oa_url": "https://doi.org/10.5194/dwes-7-63-2014",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "11_Dobson2024_GMD",
+    "doi": "10.5194/gmd-17-4495-2024",
+    "oa_status": "gold",
+    "oa_status_reason": null,
+    "best_oa_url": "https://doi.org/10.5194/gmd-17-4495-2024",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "12_Landa2020_ESPR",
+    "doi": "10.1007/s11356-019-05465-8",
+    "oa_status": "hybrid",
+    "oa_status_reason": null,
+    "best_oa_url": "https://link.springer.com/content/pdf/10.1007/s11356-019-05465-8.pdf",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "13_Renouf2018_WaterRes",
+    "doi": "10.1016/j.watres.2018.01.070",
+    "oa_status": "green",
+    "oa_status_reason": null,
+    "best_oa_url": "https://eprints.qut.edu.au/205145/1/68911651.pdf",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "14_Alissa2025_Nature",
+    "doi": "10.1038/s41586-025-08832-3",
+    "oa_status": "hybrid",
+    "oa_status_reason": null,
+    "best_oa_url": "https://www.nature.com/articles/s41586-025-08832-3.pdf",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "15_Mytton2021_npjCW",
+    "doi": "10.1038/s41545-021-00101-w",
+    "oa_status": "gold",
+    "oa_status_reason": null,
+    "best_oa_url": "https://www.nature.com/articles/s41545-021-00101-w.pdf",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "16_Zou2025_ApplEnergy",
+    "doi": "10.1016/j.apenergy.2025.125700",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "17_Radini2021_ApplEnergy",
+    "doi": "10.1016/j.apenergy.2021.117268",
+    "oa_status": "green",
+    "oa_status_reason": null,
+    "best_oa_url": "https://zenodo.org/records/7561635/files/Radini_2021.pdf",
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "18_Dai2022_JCLP",
+    "doi": "10.1016/j.jclepro.2022.131137",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "19_Zhou2019_STOTEN",
+    "doi": "10.1016/j.scitotenv.2019.02.146",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  },
+  {
+    "name": "20_HousePeters2011_WRR",
+    "doi": "10.1029/2010WR009624",
+    "oa_status": "closed",
+    "oa_status_reason": null,
+    "best_oa_url": null,
+    "best_oa_pdf": null,
+    "best_oa_repo": null,
+    "all_pdf_locs": []
+  }
+]

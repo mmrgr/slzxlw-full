@@ -1,0 +1,16 @@
+﻿COUNT=15
+__pycache__  1
+_manifest.txt  1919
+02_Lei2025_RCR.pdf  7693965
+10_Behzadian2014_DWES.pdf  2272575
+11_Dobson2024_GMD.pdf  4574453
+12_Landa-Cansigno2020_ESPR.pdf  2953254
+13_Renouf2018_WaterRes.pdf  1756056
+14_Alissa2025_Nature.pdf  7512626
+15_Mytton2021_npjCW.pdf  658727
+17_Radini2021_ApplEnergy.pdf  998848
+1-s2.0-S0043135426005488-main.pdf  1020450
+download_all_papers.py  9274
+main.pdf  6053166
+Siddik_2021_Environ._Res._Lett._16_064017.pdf  1628916
+下载助手.html  9086

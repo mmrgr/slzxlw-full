@@ -1,0 +1,2 @@
+﻿PW_CORE_EXISTS=False
+CHROME_EXE=C:\Users\mmrgr\.agent-browser\browsers\chrome-153.0.8010.36\chrome.exe

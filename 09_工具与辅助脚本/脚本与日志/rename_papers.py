@@ -1,0 +1,102 @@
+import os, shutil, re
+
+F1 = r"C:\Users\mmrgr\Desktop\论文9.15"
+F2 = r"C:\Users\mmrgr\Desktop\论文9.15补充"
+DUP = os.path.join(F1, "_duplicates")
+
+def san(s):
+    s = s.replace("–", "_").replace("—", "_").replace("‐", "_").replace("-", "_")
+    s = re.sub(r'[\\/:*?"<>|]', "_", s)
+    s = re.sub(r'\s+', "_", s)
+    s = re.sub(r'_+', "_", s).strip("_")
+    return s
+
+# (old_name, new_name)  old is inside F1 unless noted
+renames = [
+    # ---- Batch 1 (data-center water footprint) ----
+    ("02_Lei2025_RCR.pdf", "B1-02_Lei2025_Water_use_data_center_workloads.pdf"),
+    ("1-s2.0-S2666498426000475-main.pdf", "B1-01_Wang2026_Global_data_water_symbiosis.pdf"),
+    ("1-s2.0-S0306261925012528-main.pdf", "B1-03_Jiang2025_Chinese_data_centers_water_footprint.pdf"),
+    ("main.pdf", "B1-04_Lei2022_PUE_WUE_estimations_data_centers.pdf"),
+    ("3724499.pdf", "B1-05_Li2025_Making_AI_less_thirsty.pdf"),
+    ("Siddik_2021_Environ._Res._Lett._16_064017.pdf", "B1-06_Siddik2021_Data_center_footprint_US.pdf"),
+    ("1-s2.0-S0921344922000428-main.pdf", "B1-07_Karimi2022_Data_center_water_energy_hot_arid.pdf"),
+    ("AGU Advances - 2026 - Privette - Data Centers Water Footprint  The Need for More Transparency (1).pdf",
+     "B1-08_Privette2026_Data_centers_water_transparency.pdf"),
+    ("1-s2.0-S0043135426005488-main.pdf", "B1-09_Barnett2026_Water_footprint_AI.pdf"),
+    ("10_Behzadian2014_DWES.pdf", "B1-10_Behzadian2014_WaterMet2_urban_water.pdf"),
+    ("11_Dobson2024_GMD.pdf", "B1-11_Dobson2024_WSIMOD_water_quantity_quality.pdf"),
+    ("12_Landa-Cansigno2020_ESPR.pdf", "B1-12_LandaCansigno2020_Water_reuse_metabolism.pdf"),
+    ("13_Renouf2018_WaterRes.pdf", "B1-13_Renouf2018_Urban_water_performance.pdf"),
+    ("14_Alissa2025_Nature.pdf", "B1-14_Alissa2025_LCA_sustainable_cool_clouds.pdf"),
+    ("15_Mytton2021_npjCW.pdf", "B1-15_Mytton2021_Data_centre_water_consumption.pdf"),
+    ("1-s2.0-S0306261925004301-main.pdf", "B1-16_Zou2025_Urban_water_metabolic_optimization.pdf"),
+    ("17_Radini2021_ApplEnergy.pdf", "B1-17_Radini2021_WEF_nexus_wastewater.pdf"),
+    ("1-s2.0-S0959652622007697-main.pdf", "B1-18_Dai2022_Water_environment_carrying_capacity.pdf"),
+    ("1-s2.0-S0048969719306345-main.pdf", "B1-19_Zhou2019_Carrying_capacity_limits.pdf"),
+    ("Water Resources Research - 2011 - House‐Peters - Urban water demand modeling  Review of concepts  methods  and organizing.pdf",
+     "B1-20_HousePeters2011_Urban_water_demand_modeling.pdf"),
+    # ---- Batch 2 (opening-report mechanisms) present in F1 ----
+    ("s41893-025-01681-y (1).pdf", "B2-01_Xiao2025_AI_servers_net_zero.pdf"),
+    ("Masanet_et_al_Science_2020.full_.pdf", "B2-02_Masanet2020_Recalibrating_data_center_energy.pdf"),
+    ("1-s2.0-S0304380024003600-main.pdf", "B2-09_Cai2025_Physical_virtual_water_cycle_Beijing.pdf"),
+    ("1-s2.0-S0959652620303577-main.pdf", "B2-10_Voskamp2020_Spatiotemporal_variability_water_energy.pdf"),
+    ("1-s2.0-S2210670722003833-main.pdf", "B2-11_Nezami2022_Hybrid_urban_water_metabolism.pdf"),
+    ("1-s2.0-S0306261918316969-main.pdf", "B2-15_Vakilifard2019_Urban_water_energy_supply.pdf"),
+    ("Research_on_Water_Resources_Design_Carrying_Capaci.pdf", "B2-16_Qin2016_Water_resources_design_carrying_capacity.pdf"),
+    ("1-s2.0-S1470160X20311717-main.pdf", "B2-17_Wang2021_Water_resource_carrying_capacity.pdf"),
+    ("Blokker2fPieterse-Quirijns2fVreeburg2fvanDijkSimulatingNonresidentialWaterDemandwithaStochasticEnd-UseModel.JournalofWaterResourcesPlanningandManagement13720116p.511-520.pdf",
+     "B2-18_Blokker2010_Stochastic_end_use_water_demand.pdf"),
+    ("1-s2.0-S095937801200146X-main.pdf", "B2-19_Haasnoot2013_Dynamic_adaptive_policy_pathways.pdf"),
+    ("1-s2.0-S1364815215000791-main.pdf", "B2-20_MortazaviNaeini2015_Robust_optimization_bulk_water.pdf"),
+    # ---- Extras (not in either 40-paper list) ----
+    ("1-s2.0-S0959652623037289-main.pdf", "EX-Sim2023_Semiconductor_wastewater_review.pdf"),
+    ("1-s2.0-S2666498420300429-main.pdf", "EX-Wang2020_Electrochemistry_bioremediation.pdf"),
+]
+
+# Batch2 #06 lives in F2
+rename_f2 = [("06_Chen2022_FrontEnergy.pdf", "B2-06_Chen2022_Liquid_cooled_data_centers.pdf")]
+
+# Duplicate copies -> move to _duplicates (reversible)
+dups = [
+    "1-s2.0-S0306261925004301-main (1).pdf",
+    "1-s2.0-S0306261925012528-main (1).pdf",
+    "1-s2.0-S0921344922000428-main (1).pdf",
+    "2304.03271v5.pdf",
+]
+
+log = []
+os.makedirs(DUP, exist_ok=True)
+
+for old, new in renames:
+    oldp = os.path.join(F1, old)
+    newp = os.path.join(F1, san(new))
+    if os.path.exists(oldp):
+        if os.path.exists(newp) and os.path.abspath(oldp) != os.path.abspath(newp):
+            log.append(f"SKIP (target exists): {old} -> {new}")
+            continue
+        os.rename(oldp, newp)
+        log.append(f"RENAMED: {old} -> {new}")
+    else:
+        log.append(f"MISSING: {old}")
+
+for old, new in rename_f2:
+    oldp = os.path.join(F2, old)
+    newp = os.path.join(F2, san(new))
+    if os.path.exists(oldp):
+        os.rename(oldp, newp)
+        log.append(f"RENAMED(F2): {old} -> {new}")
+    else:
+        log.append(f"MISSING(F2): {old}")
+
+for d in dups:
+    oldp = os.path.join(F1, d)
+    if os.path.exists(oldp):
+        shutil.move(oldp, os.path.join(DUP, d))
+        log.append(f"DUP->_duplicates: {d}")
+    else:
+        log.append(f"DUP_MISSING: {d}")
+
+with open(r"C:\Users\mmrgr\WorkBuddy\2026-09-15-10-49-54\rename.log", "w", encoding="utf-8") as f:
+    f.write("\n".join(log) + "\n")
+print("DONE", len(log), "actions")

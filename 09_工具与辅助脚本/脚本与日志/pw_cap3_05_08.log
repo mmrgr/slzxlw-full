@@ -1,0 +1,61 @@
+=== 05 === start: Making AI Less 'Thirsty' | Communications of the A
+  cands: ['https://dl.acm.org/doi/pdf/10.1145/3724499?download=true', 'https://dl.acm.org/doi/pdf/10.1145/3724499', 'https://dl.acm.org/doi/epdf/10.1145/3724499', 'https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf', 'https://onlinelibrary.wiley.com/doi/pdf/10.1111/jiec.12086']
+  -> https://dl.acm.org/doi/pdf/10.1145/3724499?download=true
+    no download within 45s
+  -> https://dl.acm.org/doi/pdf/10.1145/3724499
+    no download within 45s
+  -> https://dl.acm.org/doi/epdf/10.1145/3724499
+    no download within 45s
+  -> https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf
+    no download within 45s
+  -> https://onlinelibrary.wiley.com/doi/pdf/10.1111/jiec.12086
+    no download within 45s
+    click text=Download PDF: Timeout 8000ms exceeded while waiting for event "download"
+=====================
+    click text=Download article PDF: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("text=Dow
+    click a#downloadPdf: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("a#downlo
+    click [data-action='download']: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("[data-ac
+    click text=PDF: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("text=PDF
+  >>> 05 NOT captured
+=== 08 === start: Data Centers Water Footprint: The Need for More Tr
+  cands: ['https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2025AV002140', 'https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2025AV002140', 'https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0001-Original+Version+of+Manuscript-S01.pdf', 'https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0002-Peer+Review+History-S02.pdf', 'https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0003-Author+Response+to+Peer+Review+Comments-S03.pdf', 'https://www.cbwaterworks.com/wp-content/uploads/2024/09/2023-Annual-Report.pdf']
+  -> https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2025AV002140
+    no download within 45s
+  -> https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2025AV002140
+    no download within 45s
+  -> https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0001-Original+Version+of+Manuscript-S01.pdf
+    no download within 45s
+  -> https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0002-Peer+Review+History-S02.pdf
+    no download within 45s
+  -> https://agupubs.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1029%2F2025AV002140&file=2025AV002140-sup-0003-Author+Response+to+Peer+Review+Comments-S03.pdf
+    no download within 45s
+  -> https://www.cbwaterworks.com/wp-content/uploads/2024/09/2023-Annual-Report.pdf
+    no download within 45s
+  -> https://agupubs.onlinelibrary.wiley.com/action/getFTRLinkout?url=http%3A%2F%2Fscholar.google.com%2Fscholar%3Fhl%3Den%26q%3D%2BCBWW.%2B%25282023%2529.%2BCouncil%2BBluffs%2BWater%2BWorks%2Bannual%2B2023%2Breport.%2BRetrieved%2Bfrom%2Bhttps%253A%252F%252Fwww.cbwaterworks.com%252Fwp%25E2%2580%2590content%252Fuploads%252F2024%252F09%252F2023%25E2%2580%2590Annual%25E2%2580%2590Report.pdf&doi=10.1029%2F2025AV002140&linkType=gs&linkLocation=Reference&linkSource=FULL_TEXT
+    no download within 45s
+  -> https://www.fairfaxcounty.gov/planning-development/sites/planning-development/files/Assets/Documents/PDF/data-centers-report.pdf
+    no download within 45s
+    click text=Download PDF: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("text=Dow
+    click text=Download article PDF: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("text=Dow
+    click a#downloadPdf: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("a#downlo
+    click [data-action='download']: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("[data-ac
+    click text=PDF: Page.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("text=PDF
+  >>> 08 NOT captured

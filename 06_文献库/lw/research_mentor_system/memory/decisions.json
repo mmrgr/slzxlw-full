@@ -1,0 +1,42 @@
+{
+  "decisions": [
+    {
+      "id": "D001",
+      "timestamp": "2026-07-31",
+      "phase": 0,
+      "type": "方向选择",
+      "decision": "城市水代谢 (UWM) — 将AI基础设施水足迹纳入UWM框架",
+      "rationale": "用户明确表达兴趣且方向具有Nature子刊潜力：AI水足迹+UWM的交叉是全新前沿",
+      "status": "confirmed_by_user"
+    },
+    {
+      "id": "D002",
+      "timestamp": "2026-07-31",
+      "phase": 0,
+      "type": "文献基础",
+      "decision": "已建立11篇核心文献库，覆盖UWM框架、ENA方法、Nexus方法、建模工具四大主题",
+      "rationale": "文献分析显示该领域存在明确研究空白",
+      "status": "completed"
+    },
+    {
+      "id": "D003",
+      "timestamp": "2026-07-31",
+      "phase": 0,
+      "type": "研究方向精炼",
+      "decision": "将AI基础设施（数据中心）的水足迹纳入城市水代谢框架，构建新的核算框架，进行情景分析和结论推导",
+      "rationale": "用户博士背景+强编程能力+充足时间，支持该方向；AI水足迹与UWM的交叉是全新研究空白；与附件中Wang et al.(2026)全球尺度研究形成互补（城市尺度）",
+      "status": "confirmed_by_user"
+    },
+    {
+      "id": "D004",
+      "timestamp": "2026-07-31",
+      "phase": 0,
+      "type": "目标期刊确认",
+      "decision": "Nature子刊或Water Research，不低于此层次",
+      "rationale": "用户明确要求",
+      "status": "confirmed_by_user"
+    }
+  ],
+  "version": "2.0",
+  "last_updated": "2026-07-31"
+}

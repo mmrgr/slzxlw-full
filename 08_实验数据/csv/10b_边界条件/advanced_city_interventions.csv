@@ -1,0 +1,13 @@
+﻿域,域标签,变体,干预,CAWCC_日_MW,限制约束,增益_MW,备注
+co,D-CO 气候凉爽端,baseline,baseline,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,baseline,leakage_minus_30pct,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,baseline,grid_plus_50pct,1550.0,max_wtw_utilization,100.0,
+co,D-CO 气候凉爽端,leakage_09,baseline,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,leakage_09,leakage_minus_30pct,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,leakage_09,grid_plus_50pct,1550.0,max_local_connection_ratio,100.0,
+co,D-CO 气候凉爽端,reuse_25,baseline,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,reuse_25,leakage_minus_30pct,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,reuse_25,grid_plus_50pct,1550.0,max_local_connection_ratio,100.0,
+co,D-CO 气候凉爽端,both,baseline,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,both,leakage_minus_30pct,1450.0,max_daily_average_grid_connection_ratio,0.0,
+co,D-CO 气候凉爽端,both,grid_plus_50pct,1550.0,max_local_connection_ratio,100.0,

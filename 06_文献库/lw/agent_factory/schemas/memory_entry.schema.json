@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-factory.local/schemas/memory_entry.schema.json",
+  "title": "记忆条目 Schema",
+  "description": "Agent Factory 五层记忆体系中每一条记忆的结构定义。记忆体系遵循 P6 受控进化原则：新发现的记忆先以 candidate 状态写入 memory/candidates/，经 Memory Curator 审查与多次验证后逐步升级为 validated/approved，淘汰的记忆标记为 deprecated/rejected。每条记忆必须可追溯来源、可评估置信度、可追踪使用效果。涉及敏感数据的记忆不写入正式记忆层。",
+  "type": "object",
+  "properties": {
+    "memory_id": {
+      "type": "string",
+      "description": "记忆条目的唯一标识符。建议格式为 mem_类型缩写_YYYYMMDD_NNN，如 mem_pref_20260727_001、mem_epi_20260727_002。",
+      "pattern": "^mem_(pref|epi|sem|pro|eva)_\\d{8}_\\d{3}$",
+      "examples": ["mem_pref_20260727_001", "mem_pro_20260727_003"]
+    },
+    "type": {
+      "type": "string",
+      "description": "记忆类型，对应五层记忆体系的不同层级。决定记忆的存储位置与使用方式。",
+      "enum": ["user_preference", "episodic", "semantic", "procedural", "evaluation"],
+      "enumDescriptions": [
+        "user_preference: 用户偏好记忆，存储用户的使用习惯、风格偏好、格式要求等。位于 memory/user_preferences.json。",
+        "episodic: 情景记忆，记录具体任务的执行过程与结果。位于 memory/episodic/。用于回顾与复用历史经验。",
+        "semantic: 语义记忆，存储可复用的领域知识、事实、模式。位于 memory/semantic/。由多次验证后从 candidate 升级而来。",
+        "procedural: 程序性记忆，存储已验证有效的执行方式、工作流模板、Agent 定义模式。位于 memory/procedural/。",
+        "evaluation: 评估记忆，存储方案效果对比、A/B 测试结果。位于 memory/evaluation/。用于指导后续决策。"
+      ]
+    },
+    "content": {
+      "type": "string",
+      "description": "记忆的核心内容。根据 type 不同，内容形式不同：user_preference 为偏好描述；episodic 为任务执行记录；semantic 为知识点陈述；procedural 为执行步骤或模板引用；evaluation 为对比结论。内容必须清晰、自包含、可被后续任务理解使用。",
+      "minLength": 1
+    },
+    "source_runs": {
+      "type": "array",
+      "description": "产生该记忆的运行记录列表。每项为运行 ID 或任务 ID，用于追溯记忆来源。candidate 状态至少 1 个来源；validated 状态至少 2 个独立来源；approved 状态至少 3 个独立来源（遵循 P6 单次不构成规律原则）。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "examples": ["run_20260727_001", "task_20260727_003"]
+    },
+    "confidence": {
+      "type": "number",
+      "description": "记忆的置信度，范围 0 到 1。基于来源数量、验证次数、成功率综合计算。candidate 通常 < 0.5，validated 在 0.5-0.8，approved >= 0.8。",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.3
+    },
+    "scope": {
+      "type": "string",
+      "description": "记忆的适用范围。限定记忆在何种任务类型或领域中有效，避免过度泛化。",
+      "examples": ["all", "document_writing", "paper_translation", "data_analysis"]
+    },
+    "status": {
+      "type": "string",
+      "description": "记忆的当前状态，反映受控进化的生命周期阶段。",
+      "enum": ["candidate", "validated", "approved", "deprecated", "rejected"],
+      "enumDescriptions": [
+        "candidate: 候选状态，刚发现尚未验证。存储于 memory/candidates/，执行 Agent 可追加写入。",
+        "validated: 已验证状态，经过多次独立任务验证。存储于对应类型目录，由 Memory Curator 审批升级。",
+        "approved: 已批准状态，经过 A/B 测试确认有效，正式纳入记忆库。存储于对应类型目录，可被后续任务直接引用。",
+        "deprecated: 已废弃状态，因过时或有更好替代而被停用。保留记录以支持回滚，不再被新任务引用。",
+        "rejected: 已拒绝状态，经验证发现无效或有害。保留记录以避免重复提出，不被任何任务引用。"
+      ],
+      "default": "candidate"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "记忆创建时间，ISO 8601 格式（UTC）。",
+      "format": "date-time",
+      "examples": ["2026-07-27T10:00:00Z"]
+    },
+    "last_validated_at": {
+      "type": "string",
+      "description": "最近一次验证时间，ISO 8601 格式（UTC）。candidate 状态可留空。",
+      "format": "date-time"
+    },
+    "usage_count": {
+      "type": "integer",
+      "description": "该记忆被后续任务引用使用的次数。用于评估记忆的实际价值。",
+      "minimum": 0,
+      "default": 0
+    },
+    "success_rate": {
+      "type": "number",
+      "description": "使用该记忆后的任务成功率，范围 0 到 1。基于 usage_count 次使用中成功的比例计算。低成功率的 approved 记忆应被降级为 deprecated。",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0
+    },
+    "expiry_date": {
+      "type": "string",
+      "description": "记忆的过期日期，ISO 8601 日期格式。过期后记忆自动降级为 deprecated，需重新验证。时效性强的记忆（如政策法规、工具版本）必须设置。长期稳定的记忆可留空。",
+      "format": "date",
+      "examples": ["2027-07-27"]
+    },
+    "contains_sensitive_data": {
+      "type": "boolean",
+      "description": "记忆内容是否包含敏感数据（个人隐私、商业机密、密钥凭证等）。若为 true，该记忆不得写入正式记忆层（memory/semantic/ 等），只能在 memory/candidates/ 中标记待脱敏处理或直接拒绝。遵循 P5 状态与记忆分离及安全规则。",
+      "default": false
+    },
+    "tags": {
+      "type": "array",
+      "description": "记忆的标签列表，用于分类检索。标签应简洁，使用小写中横线命名（kebab-case）。",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": [],
+      "examples": ["writing-style", "translation-workflow", "error-pattern"]
+    },
+    "approval_record": {
+      "type": "object",
+      "description": "审批记录。当 status 升级为 validated 或 approved 时必须填写。遵循 P6 审批留痕原则。",
+      "properties": {
+        "approver": {
+          "type": "string",
+          "description": "审批者标识（Memory Curator 角色或用户）。",
+          "minLength": 1
+        },
+        "approved_at": {
+          "type": "string",
+          "description": "审批时间，ISO 8601 格式（UTC）。",
+          "format": "date-time"
+        },
+        "evidence": {
+          "type": "string",
+          "description": "审批依据，说明基于什么证据批准（如 A/B 测试结果、验证任务列表）。",
+          "minLength": 1
+        },
+        "ab_test_result": {
+          "type": "string",
+          "description": "若经过 A/B 测试，记录测试结论。"
+        }
+      },
+      "required": ["approver", "approved_at", "evidence"],
+      "additionalProperties": false
+    },
+    "previous_version_id": {
+      "type": "string",
+      "description": "前一版本的记忆 ID。当记忆内容更新时，新版本指向旧版本以支持回滚（遵循 P6 必须可回滚原则）。首次创建时留空。",
+      "pattern": "^mem_(pref|epi|sem|pro|eva)_\\d{8}_\\d{3}$"
+    }
+  },
+  "required": [
+    "memory_id",
+    "type",
+    "content",
+    "source_runs",
+    "confidence",
+    "scope",
+    "status",
+    "created_at",
+    "usage_count",
+    "success_rate",
+    "contains_sensitive_data",
+    "tags"
+  ],
+  "additionalProperties": false
+}

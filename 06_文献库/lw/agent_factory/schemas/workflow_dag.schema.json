@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-factory.local/schemas/workflow_dag.schema.json",
+  "title": "DAG 工作流 Schema",
+  "description": "Agent Factory 第三阶段（Phase 3: 工作流规划）的产物。Workflow Planner 输出的 workflow.json 必须符合本 Schema。定义任务依赖图（DAG），每个任务节点包含执行者、依赖关系、并行分组、输入输出引用路径、风险等级、工具类型与缓存键。执行引擎据此调度并行与串行任务，并支持断点续跑与缓存复用。",
+  "type": "object",
+  "properties": {
+    "workflow_id": {
+      "type": "string",
+      "description": "工作流的唯一标识符。建议格式为 WF-YYYYMMDD-NNN。",
+      "pattern": "^WF-\\d{8}-\\d{3}$",
+      "examples": ["WF-20260727-001"]
+    },
+    "version": {
+      "type": "string",
+      "description": "工作流定义的版本号，遵循语义化版本规范。",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "default": "1.0.0"
+    },
+    "description": {
+      "type": "string",
+      "description": "工作流的简要说明，描述整体执行流程。"
+    },
+    "tasks": {
+      "type": "array",
+      "description": "工作流中的所有任务节点列表，构成 DAG。每个任务要么由 Agent 执行（tool_type=agent），要么由确定性程序执行（tool_type=program）。depends_on 形成的图必须无环。至少包含一个任务。",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "description": "单个任务节点的定义。",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "任务的唯一标识符，格式为 T+数字，如 T1、T2、T001。全流程中通过此 ID 引用任务。",
+            "pattern": "^T\\d+$",
+            "examples": ["T1", "T2", "T003"]
+          },
+          "agent": {
+            "type": "string",
+            "description": "执行该任务的 Agent 名称或程序名称。当 tool_type 为 agent 时，对应 agent_manifest.json 中的 agent_name；当 tool_type 为 program 时，为程序标识名。",
+            "minLength": 1,
+            "examples": ["translator", "merge_reviews"]
+          },
+          "depends_on": {
+            "type": "array",
+            "description": "该任务依赖的前置任务 ID 列表。所有前置任务完成后本任务才能开始。为空数组表示无依赖（可最先执行）。依赖关系形成的图必须是无环的（DAG）。",
+            "items": {
+              "type": "string",
+              "pattern": "^T\\d+$"
+            },
+            "default": []
+          },
+          "parallel_group": {
+            "type": "integer",
+            "description": "并行分组编号。同一 parallel_group 内的任务若无依赖且无读写冲突，可并行执行。不同分组的任务按依赖顺序执行。",
+            "minimum": 1,
+            "examples": [1, 2, 4]
+          },
+          "inputs": {
+            "type": "array",
+            "description": "任务的输入引用路径列表。遵循引用路径而非复制内容原则（P4），此处只记录路径，不内联文件内容。路径指向上游任务输出或原始输入文件。",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "default": [],
+            "examples": ["output/T1/facts.json", "input/papers/*.pdf"]
+          },
+          "outputs": {
+            "type": "array",
+            "description": "任务的输出引用路径列表。输出路径必须在执行者的 write_scope 内。同一 parallel_group 内不同任务的 outputs 路径不得重叠（单写者原则）。",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "default": [],
+            "examples": ["output/T2/outline.json"]
+          },
+          "risk_level": {
+            "type": "string",
+            "description": "任务的风险等级。影响审核力度、重试次数与人工确认节点设置。",
+            "enum": ["high", "medium", "low"],
+            "enumDescriptions": [
+              "high: 高风险，输出直接影响最终交付物质量或涉及敏感操作",
+              "medium: 中风险，常规处理任务",
+              "low: 低风险，确定性或可重做任务"
+            ],
+            "default": "medium"
+          },
+          "tool_type": {
+            "type": "string",
+            "description": "任务执行者类型。program 表示由确定性脚本/命令行工具执行（遵循 P2 确定性优先原则）；agent 表示由语言 Agent 执行（涉及语义理解、模糊判断、创造性生成等）。",
+            "enum": ["program", "agent"],
+            "enumDescriptions": [
+              "program: 确定性程序执行，如格式转换、JSON校验、哈希比较、文件合并等",
+              "agent: 语言 Agent 执行，如内容理解、翻译、规划、审校等非确定性任务"
+            ]
+          },
+          "cache_key": {
+            "type": "string",
+            "description": "缓存键。基于输入内容哈希生成，用于判断输入未变化时是否可直接复用上次输出。当输入哈希与上次执行一致时，跳过执行直接复用 outputs 路径中的文件。建议格式为 task_id + ':' + inputs哈希前16位。",
+            "examples": ["T1:a3f5e8d9c2b10467"]
+          },
+          "timeout": {
+            "type": "string",
+            "description": "任务超时时间。格式为数字+单位（s/m/h）。超时后触发重试或隔离。参考 core/parallel_rules.md 中的默认值。",
+            "pattern": "^\\d+[smh]$",
+            "examples": ["5m", "15m", "2m"]
+          },
+          "priority": {
+            "type": "string",
+            "description": "任务优先级，影响调度顺序。P0 为紧急（阻塞后续所有任务），P1 为高（关键路径），P2 为中（普通），P3 为低（非关键路径）。",
+            "enum": ["P0", "P1", "P2", "P3"],
+            "default": "P2"
+          },
+          "max_retries": {
+            "type": "integer",
+            "description": "该任务的最大重试次数上限。重试耗尽后触发隔离或降级。参考 agent_manifest.json 中对应 Agent 的 max_retries。",
+            "minimum": 0,
+            "maximum": 10,
+            "default": 2
+          }
+        },
+        "required": [
+          "task_id",
+          "agent",
+          "depends_on",
+          "parallel_group",
+          "inputs",
+          "outputs",
+          "risk_level",
+          "tool_type"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "max_parallel_groups": {
+      "type": "integer",
+      "description": "工作流中并行分组的总数。应等于 tasks 中出现的不同 parallel_group 值的数量。用于校验完整性。",
+      "minimum": 1
+    },
+    "critical_path": {
+      "type": "array",
+      "description": "关键路径上的任务 ID 列表，按执行顺序排列。关键路径是 DAG 中从起点到终点的最长路径，决定了工作流的最短完成时间。关键路径上的任务优先级应设为 P0 或 P1。",
+      "items": {
+        "type": "string",
+        "pattern": "^T\\d+$"
+      },
+      "default": []
+    },
+    "parallel_groups": {
+      "type": "object",
+      "description": "并行分组映射表。键为 parallel_group 编号（字符串形式），值为该组内的任务 ID 数列。用于快速查询每组可并行执行的任务。",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^T\\d+$"
+        }
+      },
+      "examples": [
+        {
+          "1": ["T1"],
+          "2": ["T2"],
+          "4": ["T4", "T5"]
+        }
+      ]
+    },
+    "conflict_check": {
+      "type": "object",
+      "description": "并行冲突检测结果。Workflow Planner 输出 workflow.json 前必须完成冲突检测，记录检测结果。",
+      "properties": {
+        "passed": {
+          "type": "boolean",
+          "description": "冲突检测是否通过。true 表示无冲突，false 表示存在未解决冲突（不应输出）。",
+          "default": true
+        },
+        "checked_pairs": {
+          "type": "integer",
+          "description": "检查的任务对数量。",
+          "minimum": 0
+        },
+        "conflicts": {
+          "type": "array",
+          "description": "检测到的冲突列表。通过检测时应为空数组。",
+          "items": {
+            "type": "object",
+            "properties": {
+              "task_a": {
+                "type": "string",
+                "description": "冲突的任务 A 的 ID。",
+                "pattern": "^T\\d+$"
+              },
+              "task_b": {
+                "type": "string",
+                "description": "冲突的任务 B 的 ID。",
+                "pattern": "^T\\d+$"
+              },
+              "conflict_type": {
+                "type": "string",
+                "description": "冲突类型。",
+                "enum": ["write_write", "read_write", "dependency_cycle"]
+              },
+              "detail": {
+                "type": "string",
+                "description": "冲突详情说明。"
+              }
+            },
+            "required": ["task_a", "task_b", "conflict_type", "detail"],
+            "additionalProperties": false
+          },
+          "default": []
+        }
+      },
+      "required": ["passed"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "workflow_id",
+    "tasks",
+    "max_parallel_groups",
+    "critical_path"
+  ],
+  "additionalProperties": false
+}

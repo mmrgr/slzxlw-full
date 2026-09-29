@@ -1,0 +1,160 @@
+{
+  "workflow_id": "ai_deflavor",
+  "description": "去AI味系统DAG工作流：Phase 1检测（串行）→ Phase 2三路并行修改+合并（并行）→ Phase 3模拟检测（串行），未达标则回到Phase 1迭代（最多3轮）。",
+  "tasks": [
+    {
+      "task_id": "phase1_detection",
+      "agent": "ai_detector",
+      "depends_on": [],
+      "parallel_group": 1,
+      "inputs": [
+        "原始文本",
+        "文体类型",
+        "目标AI率",
+        "knowledge/ai_signatures.md",
+        "knowledge/detection_rules.md",
+        "memory/text_patterns.json"
+      ],
+      "outputs": [
+        "detection_report.json"
+      ],
+      "risk_level": "medium",
+      "description": "AI特征检测员对文本进行六大类特征扫描，输出检测报告（含特征清单、严重程度、位置标注、估算AI率）"
+    },
+    {
+      "task_id": "phase2a_structure",
+      "agent": "structure_reorganizer",
+      "depends_on": ["phase1_detection"],
+      "parallel_group": 2,
+      "inputs": [
+        "detection_report.json",
+        "原始文本",
+        "knowledge/humanization_techniques.md",
+        "memory/effective_strategies.json"
+      ],
+      "outputs": [
+        "structure_modifications"
+      ],
+      "risk_level": "medium",
+      "description": "结构重组师处理structural类别特征，打破三明治/三段式/均匀段落等AI结构模式"
+    },
+    {
+      "task_id": "phase2b_language",
+      "agent": "language_humanizer",
+      "depends_on": ["phase1_detection"],
+      "parallel_group": 2,
+      "inputs": [
+        "detection_report.json",
+        "原始文本",
+        "knowledge/humanization_techniques.md",
+        "memory/effective_strategies.json"
+      ],
+      "outputs": [
+        "language_modifications"
+      ],
+      "risk_level": "medium",
+      "description": "语言人性化师处理lexical和statistical类别特征，词汇替换+句式变化+情感注入+标点个性化"
+    },
+    {
+      "task_id": "phase2c_logic",
+      "agent": "logic_enhancer",
+      "depends_on": ["phase1_detection"],
+      "parallel_group": 2,
+      "inputs": [
+        "detection_report.json",
+        "原始文本",
+        "knowledge/humanization_techniques.md",
+        "memory/effective_strategies.json"
+      ],
+      "outputs": [
+        "logic_modifications"
+      ],
+      "risk_level": "medium",
+      "description": "逻辑深化师处理logical和emotional类别特征，引入矛盾/反例/不确定性，打破完美逻辑链"
+    },
+    {
+      "task_id": "phase2d_merge",
+      "agent": "quality_controller",
+      "depends_on": ["phase2a_structure", "phase2b_language", "phase2c_logic"],
+      "parallel_group": 3,
+      "inputs": [
+        "structure_modifications",
+        "language_modifications",
+        "logic_modifications",
+        "原始文本",
+        "config/system_config.yaml"
+      ],
+      "outputs": [
+        "modified_text",
+        "modification_records"
+      ],
+      "risk_level": "high",
+      "description": "质量把控师合并3路修改结果，解决冲突，检查原意保留/逻辑通顺/不可修改内容，生成修改后完整文本和修改对照表"
+    },
+    {
+      "task_id": "phase3_simulation",
+      "agent": "detection_simulator",
+      "depends_on": ["phase2d_merge"],
+      "parallel_group": 4,
+      "inputs": [
+        "modified_text",
+        "目标AI率",
+        "knowledge/detection_rules.md",
+        "memory/text_patterns.json"
+      ],
+      "outputs": [
+        "simulation_report.json"
+      ],
+      "risk_level": "medium",
+      "description": "检测模拟员按7个维度评分，估算AI率，标记高风险段落/句子，判断是否达标"
+    },
+    {
+      "task_id": "phase3_final_review",
+      "agent": "quality_controller",
+      "depends_on": ["phase3_simulation"],
+      "parallel_group": 5,
+      "inputs": [
+        "simulation_report.json",
+        "modified_text",
+        "原始文本",
+        "config/system_config.yaml",
+        "memory/effective_strategies.json",
+        "memory/failed_strategies.json"
+      ],
+      "outputs": [
+        "final_text",
+        "processing_summary",
+        "updated_memory"
+      ],
+      "risk_level": "high",
+      "description": "质量把控师终审：通过检测则执行最终质量检查并输出；未通过且迭代未用尽则回到phase1_detection；未通过且迭代用尽则输出当前最佳+未解决问题清单"
+    }
+  ],
+  "max_parallel_groups": 5,
+  "critical_path": [
+    "phase1_detection",
+    "phase2d_merge",
+    "phase3_simulation",
+    "phase3_final_review"
+  ],
+  "parallel_opportunities": [
+    {
+      "phase": 2,
+      "parallel_tasks": ["phase2a_structure", "phase2b_language", "phase2c_logic"],
+      "description": "Phase 2中结构重组师、语言人性化师、逻辑深化师三路并行修改。三个Agent分别处理structural/lexical+statistical/logical+emotional不同类别的特征，互不冲突，可完全并行执行。max_parallel=3正好覆盖三路并行。",
+      "sync_point": "phase2d_merge",
+      "sync_description": "三路修改完成后由质量把控师在phase2d_merge合并结果，解决冲突"
+    }
+  ],
+  "iteration_config": {
+    "max_iterations": 3,
+    "iteration_loop": "phase3_final_review → phase1_detection（当simulation_report.passed=false且round<3时）",
+    "termination_condition": "simulation_report.passed=true（AI率达标） 或 round=3（迭代用尽）",
+    "modification_density_by_round": {
+      "round_1": "全面修改，处理所有高/中/低严重度特征",
+      "round_2": "重点修改，仅处理高严重度和上轮残留高风险段落",
+      "round_3": "微调，仅处理上轮检测模拟标记的具体问题"
+    },
+    "not_passed_action": "输出当前最佳版本 + 未能解决的AI味问题清单"
+  }
+}

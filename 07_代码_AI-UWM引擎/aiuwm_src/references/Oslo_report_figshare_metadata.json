@@ -1,0 +1,29 @@
+{
+  "record_type": "curated_provenance",
+  "source_note": "本文件是策展型出处记录，不是上游元数据原文照录：为去标识化，上游题名、引文串、摘要与页面链接中包含商标字样的字段已裁剪。定位来源请使用 record_id / download_url。",
+  "record_id": 29701109,
+  "repository": "University of Exeter institutional repository (figshare)",
+  "published_date": "2025-07-30T22:17:31Z",
+  "version": 1,
+  "license": {
+    "value": 287,
+    "name": "All rights reserved",
+    "url": "https://www.rioxx.net/licenses/all-rights-reserved"
+  },
+  "authors": [
+    "Kourosh Behzadian",
+    "Zoran Kapelan"
+  ],
+  "summary": "TRUST 项目 Oslo 案例研究报告：30 年规划期缺水情景下的城市水系统案例设定与绩效评估。许可为 All rights reserved，故本仓库不随附 PDF；请按 download_url 获取。",
+  "files": [
+    {
+      "name": "Oslo Case Study Report-28-1-13.pdf",
+      "size": 2555891,
+      "mimetype": "application/pdf",
+      "supplied_md5": "e98c350b4999cadd241d1f1ef5ad265c",
+      "computed_md5": "e98c350b4999cadd241d1f1ef5ad265c",
+      "download_url": "https://ndownloader.figshare.com/files/56710166"
+    }
+  ],
+  "project": "TRUST"
+}

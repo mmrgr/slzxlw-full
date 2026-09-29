@@ -1,0 +1,177 @@
+{
+  "workflow_id": "research_mentor",
+  "description": "零基础到Nature子刊的完整研究路线：8个阶段串联构成关键路径，Phase 2与Phase 5内含并行机会，全程由主导师Orchestrate、记忆管家后台支撑。",
+  "tasks": [
+    {
+      "task_id": "phase_0",
+      "agent": "principal_mentor",
+      "depends_on": [],
+      "parallel_group": 1,
+      "objectives": [
+        "向用户介绍环境科学主要分支，用易懂语言建立全景认知",
+        "通过苏格拉底式提问探索用户兴趣，缩小到2-3个候选方向",
+        "对候选方向检索近3年Nature子刊文献，验证可行性与研究空白",
+        "推荐1个主方向+1个备选，产出1页方向选择理由书"
+      ],
+      "checkpoints": [
+        "用户已选择一个明确的研究方向",
+        "方向选择理由书已通过主导师审阅",
+        "方向可行性已获文献支撑且可操作"
+      ],
+      "estimated_weeks": "1-2",
+      "risk_level": "medium"
+    },
+    {
+      "task_id": "phase_1",
+      "agent": "methodology_mentor",
+      "depends_on": ["phase_0"],
+      "parallel_group": 2,
+      "objectives": [
+        "为选定方向绘制知识图谱（10-15个核心概念及依赖关系）",
+        "循环教授核心概念，采用引入-解释-类比-示例-提问-总结模式",
+        "推荐3-5篇奠基性论文并教授结构化阅读法（三遍阅读法）",
+        "苏格拉底式知识检查，识别并记录知识盲区"
+      ],
+      "checkpoints": [
+        "核心概念全部掌握（能用自己话解释）",
+        "至少3篇seminal论文已阅读并做笔记",
+        "知识图谱主要节点已覆盖"
+      ],
+      "estimated_weeks": "2-4",
+      "risk_level": "medium"
+    },
+    {
+      "task_id": "phase_2",
+      "agent": "literature_researcher",
+      "depends_on": ["phase_1"],
+      "parallel_group": 3,
+      "objectives": [
+        "教学检索策略构建（关键词+同义词+数据库+筛选标准）",
+        "结构化分析15-30篇核心文献，提取问题/方法/发现/局限",
+        "强制使用推理脚手架识别研究空白，生成至少3个候选研究问题",
+        "撰写2000-3000字文献综述初稿并迭代2-3轮"
+      ],
+      "checkpoints": [
+        "文献综述初稿完成并通过审阅",
+        "至少识别出1个明确的研究空白",
+        "研究问题已初步形成"
+      ],
+      "estimated_weeks": "3-6",
+      "risk_level": "medium"
+    },
+    {
+      "task_id": "phase_3",
+      "agent": "methodology_mentor",
+      "depends_on": ["phase_2"],
+      "parallel_group": 4,
+      "objectives": [
+        "精炼研究问题，强制生成至少2个版本比较多维价值",
+        "构建可证伪的科学假说（主假说+备择假说）",
+        "强制使用7步推理脚手架设计研究方法并预判失败模式",
+        "主导师反事实思考审核方案，写作教练撰写2-3页研究计划书"
+      ],
+      "checkpoints": [
+        "研究问题明确且通过审核",
+        "假说已构建且可证伪",
+        "研究方法详细可行且失败模式已有应对方案",
+        "研究计划书已通过审阅"
+      ],
+      "estimated_weeks": "2-4",
+      "risk_level": "high"
+    },
+    {
+      "task_id": "phase_4",
+      "agent": "methodology_mentor",
+      "depends_on": ["phase_3"],
+      "parallel_group": 5,
+      "objectives": [
+        "执行前检查并制定分步骤执行计划与里程碑",
+        "指导数据收集（野外采样/实验室/二次数据）与质量控制",
+        "教学数据分析方法选择与工具使用，生成结果图表",
+        "反事实思考解读结果，评估证据是否足以支撑Nature子刊论文"
+      ],
+      "checkpoints": [
+        "数据收集完成且质控记录完整",
+        "数据分析完成且代码可复现",
+        "主要结果图表已生成达Nature标准",
+        "结果已正确解读，证据充分或有补充计划"
+      ],
+      "estimated_weeks": "4-12",
+      "risk_level": "high"
+    },
+    {
+      "task_id": "phase_5",
+      "agent": "writing_coach",
+      "depends_on": ["phase_4"],
+      "parallel_group": 6,
+      "objectives": [
+        "规划论文结构，确定类型并产出大纲",
+        "多方案比较生成标题，撰写150-200字摘要",
+        "分章节撰写引言(漏斗结构)/结果/方法",
+        "强制使用7步推理脚手架撰写讨论，审稿模拟员每节并行即时审核",
+        "全文整合润色2-3轮"
+      ],
+      "checkpoints": [
+        "所有章节完成且每节审稿意见已回应",
+        "全文逻辑连贯、前后一致",
+        "图表达到Nature子刊标准",
+        "审稿模拟员无重大问题"
+      ],
+      "estimated_weeks": "4-8",
+      "risk_level": "high"
+    },
+    {
+      "task_id": "phase_6",
+      "agent": "peer_reviewer",
+      "depends_on": ["phase_5"],
+      "parallel_group": 7,
+      "objectives": [
+        "审稿模拟员以Nature子刊标准全文模拟审稿，生成Reviewer Comments",
+        "逐条讨论审稿意见，分类为Major/Minor/Rebuttal并制定修改计划",
+        "写作教练执行文字修改，方法论导师补充分析，建立修改对照表",
+        "二审验证修改到位，主导师终审定稿"
+      ],
+      "checkpoints": [
+        "审稿意见全部处理完毕",
+        "二审通过或仅剩minor issues",
+        "修改对照表完整",
+        "主导师终审通过"
+      ],
+      "estimated_weeks": "2-4",
+      "risk_level": "medium"
+    },
+    {
+      "task_id": "phase_7",
+      "agent": "writing_coach",
+      "depends_on": ["phase_6"],
+      "parallel_group": 8,
+      "objectives": [
+        "主导师推荐2-3个目标期刊并评估scope匹配度",
+        "按目标期刊格式调整字数/图表/参考文献/补充材料",
+        "撰写Cover Letter，整理补充材料",
+        "完成最终检查清单，告知投稿后流程与应对策略"
+      ],
+      "checkpoints": [
+        "投稿材料准备完成",
+        "格式符合目标期刊要求",
+        "最终检查清单全部通过",
+        "主导师终审通过"
+      ],
+      "estimated_weeks": "1-2",
+      "risk_level": "low"
+    }
+  ],
+  "phases": 8,
+  "total_estimated_weeks": "20-40",
+  "critical_path": ["phase_0", "phase_1", "phase_2", "phase_3", "phase_4", "phase_5", "phase_6", "phase_7"],
+  "parallel_opportunities": [
+    {
+      "phases": [2],
+      "description": "Phase 2中文献研究员主导检索与空白识别，写作教练并行启动综述写作教学与论文大纲准备，两者无写冲突可并行推进。"
+    },
+    {
+      "phases": [5],
+      "description": "Phase 5中写作教练主导分章节撰写，审稿模拟员每节完成后即时并行审核，形成撰写-审稿流水线，受max_parallel=2约束。"
+    }
+  ]
+}

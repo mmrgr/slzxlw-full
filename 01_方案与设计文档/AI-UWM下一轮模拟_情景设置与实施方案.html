@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-UWM下一轮模拟：情景设置与实施方案</title>
+<style>
+  :root { --ink:#1c1e21; --muted:#5b6470; --line:#dfe3e8; --accent:#1f5f8b; --bg:#ffffff; --soft:#f6f8fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Segoe UI","PingFang SC","Microsoft YaHei",-apple-system,Helvetica,Arial,sans-serif;
+    font-size:15px; line-height:1.75; }
+  .wrap { display:flex; max-width:1180px; margin:0 auto; gap:36px; padding:36px 24px 80px; }
+  nav { position:sticky; top:24px; align-self:flex-start; width:250px; flex:0 0 250px;
+    max-height:calc(100vh - 60px); overflow:auto; border-right:1px solid var(--line); padding-right:16px; }
+  nav .toc-h1 { display:block; font-weight:700; margin:10px 0 4px; color:var(--ink); text-decoration:none; }
+  nav .toc-h2 { display:block; font-size:13px; color:var(--muted); margin:2px 0 2px 12px; text-decoration:none; }
+  nav a:hover { color:var(--accent); }
+  main { flex:1 1 auto; min-width:0; }
+  h1 { font-size:26px; margin:0 0 6px; padding-bottom:10px; border-bottom:2px solid var(--accent); }
+  h2 { font-size:20px; margin:34px 0 10px; padding-left:10px; border-left:4px solid var(--accent); }
+  h3 { font-size:16.5px; margin:22px 0 6px; color:#20303d; }
+  h4 { font-size:15px; margin:16px 0 4px; color:var(--muted); }
+  p { margin:8px 0; }
+  ul, ol { margin:8px 0 8px 22px; padding:0; }
+  li { margin:3px 0; }
+  code { background:var(--soft); border:1px solid var(--line); border-radius:3px;
+    padding:1px 5px; font-family:"Cascadia Mono",Consolas,Monaco,monospace; font-size:13px; }
+  pre { background:var(--soft); border:1px solid var(--line); border-radius:6px;
+    padding:12px 14px; overflow:auto; font-size:12.5px; line-height:1.6; }
+  pre code { background:none; border:none; padding:0; }
+  table { border-collapse:collapse; width:100%; margin:12px 0; font-size:13.5px; }
+  th, td { border:1px solid var(--line); padding:6px 9px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); font-weight:600; }
+  tr:nth-child(even) td { background:#fbfcfd; }
+  blockquote { margin:12px 0; padding:10px 14px; background:#f2f6f9;
+    border-left:4px solid var(--accent); color:#33404d; font-size:14px; }
+  hr { border:none; border-top:1px solid var(--line); margin:26px 0; }
+  a { color:var(--accent); }
+  @media print { nav { display:none; } .wrap { display:block; max-width:none; padding:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="toc-h1" href="#ai-uwm-下一轮-r2-模拟-情景设置与实施方案-v4-nature-skills-审查版">AI-UWM 下一轮（R2）模拟：情景设置与实施方案 v4（nature-skills 审查版）</a>
+<a class="toc-h2" href="#0-版本沿革-v1-v2-v3-v4">0. 版本沿革：v1 → v2 → v3 → v4</a>
+<a class="toc-h2" href="#1-设计总纲">1. 设计总纲</a>
+<a class="toc-h2" href="#2-代码基准与本次改动">2. 代码基准与本次改动</a>
+<a class="toc-h2" href="#3-现实性审计-判据-失真与修复-v3-新增">3. 现实性审计：判据、失真与修复（v3 新增）</a>
+<a class="toc-h2" href="#4-参数域端点定义">4. 参数域端点定义</a>
+<a class="toc-h2" href="#5-城市水系统结构">5. 城市水系统结构</a>
+<a class="toc-h2" href="#6-ai-数据中心-组件链与冷却技术工程包">6. AI 数据中心：组件链与冷却技术工程包</a>
+<a class="toc-h2" href="#7-情景矩阵">7. 情景矩阵</a>
+<a class="toc-h2" href="#8-承载约束集与-可失效性">8. 承载约束集与"可失效性"</a>
+<a class="toc-h2" href="#9-多时间尺度-cawcc">9. 多时间尺度 CAWCC</a>
+<a class="toc-h2" href="#10-干预方案集与边际有效性">10. 干预方案集与边际有效性</a>
+<a class="toc-h2" href="#11-机制实验">11. 机制实验</a>
+<a class="toc-h2" href="#12-不确定性与稳健性">12. 不确定性与稳健性</a>
+<a class="toc-h2" href="#13-执行方案">13. 执行方案</a>
+<a class="toc-h2" href="#14-自检结果-v1-v12-计算-两域各-12-12-通过">14. 自检结果 V1–V12【计算】（两域各 12/12 通过）</a>
+<a class="toc-h2" href="#15-参数证据表">15. 参数证据表</a>
+<a class="toc-h2" href="#16-已知局限与-r3-改进项">16. 已知局限与 R3 改进项</a>
+<a class="toc-h2" href="#17-需要你补充-确认的项-待补">17. 需要你补充/确认的项【待补】</a>
+<a class="toc-h2" href="#附-本轮结论-v4-要点-17-条-历史审计版">附：本轮结论（v4 要点，17 条；历史审计版）</a></nav>
+<main>
+<h1 id="ai-uwm-下一轮-r2-模拟-情景设置与实施方案-v4-nature-skills-审查版">AI-UWM 下一轮（R2）模拟：情景设置与实施方案 v4（nature-skills 审查版）</h1>
+<blockquote>作者：邵敬哲（哈工大环境学院） · 代码基准：&lt;https://github.com/mmrgr/AI-UWM&gt;<br>生成时间：2026-09-25 · 工作目录：<code>aiuwm_src/</code>（<code>src/aiuwm/</code> 为引擎）<br>定位：本文件<strong>只设计下一轮模拟怎么做</strong>，不改开题报告；开题报告视为可变的初始构想。<br>标注约定：<code>【文献】</code>有已发表来源；<code>【计算】</code>由本次代码运行得出（可一键复跑）；<code>【设定】</code>参数域设定；<code>【待补】</code>需你或导师提供/决定。<br>所有 <code>【计算】</code> 数字由 <code>scripts/run_r2.py</code> 产出，并通过 <strong>12 项机器自检（V1–V12，两域各 12/12 通过）</strong>。2026-09-27 设计审计为 20 PASS、6 WARN、8 FAIL；FAIL 来自压力情景接网超限，城市非 AI 负荷已加入合成驱动，WARN 还包括末库容可持续性边界，详见 <code>Nature级研究审查与修正计划_R3.md</code>。<br><br><strong>R4 当前口径覆盖本文件的历史结果段（2026-09-27）</strong>：以下六组数字是<strong>不同 estimand，不得合并引用</strong>，全部可追溯到 <code>validation_artifacts/r2/</code>。<br><br>| estimand | D-HA | D-CO | 机器产物 |<br>|---|---|---|---|<br>| 物理 CAWCC（日/年/小时代理） | 1150/1650/1100 MW | 1450/1700/1350 MW | <code>{ha,co}/capacity_threshold_corrected.json</code> |<br>| 综合口径（含再生水政策目标） | 1150/1300/1100 MW | 1450/1700/1350 MW | 同上 |<br>| 再生水政策目标阈值 | 1300 MW | 2000 MW（右删失 58.5%，仅下界） | 同上 |<br>| 两年末库容边界（期末≥初值） | 150/200 MW | 900/950 MW | <code>reservoir_sustainability_corrected.json</code> |<br>| 10 年合成联合边界（末库容≥90%初值 且可靠性≥99%） | 250/300 MW | 900/950 MW | <code>reservoir_multiyear_10y.json</code> |<br>| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1200 MW | 1250/1350/1500 MW | <code>{ha,co}/probabilistic_corrected_summary.json</code> |<br><br>小时代理只对 AI 增量施加日内峰值系数，不替代小时遥测。HA 的综合年边界 1300 MW 是"物理约束 + 再生水政策目标"的联合口径，其纯物理子集为 1650 MW。两类库容边界来自合成水文，不可外推为可靠供水能力。本文下方 v2–v4.3 的历史数值段为研究过程记录；当前结论及证据以 <code>Nature级研究审查与修正计划_R3.md</code> 为准。</blockquote>
+<hr>
+<h2 id="0-版本沿革-v1-v2-v3-v4">0. 版本沿革：v1 → v2 → v3 → v4</h2>
+<p>v1（同目录旧版）是"纸面设计"：规定了 P1/P2/P3 三段顺序，但情景只写到"北京型城市 + 若干验证实验"的描述层，没有落到可运行对象上，因此<strong>无法自检、无法复跑</strong>。</p>
+<p>v2 的每个情景都是真实工程文件（<code>examples/cawcc_r2/{ha,co}/*.json</code> + <code>timeseries.csv</code>），由 <code>scripts/build_r2_domains.py</code> 生成、<code>scripts/run_r2.py</code> 执行。任何装好依赖的机器用第 13 节的命令都能逐位复现。</p>
+<table>
+<thead><tr><th>维度</th><th>v1</th><th>v2</th></tr></thead>
+<tbody>
+<tr><td>情景载体</td><td>文字描述</td><td><code>project.json</code> + <code>timeseries.csv</code>（逐技术、逐策略、逐状态一个工程）</td></tr>
+<tr><td>判据</td><td>人工判断</td><td>12 项机器自检 V1–V12 + 19 项现实性审计判据，写入 <code>r2_verification.json</code> / <code>realism_audit.csv</code></td></tr>
+<tr><td>单位与量纲</td><td>未统一</td><td>全引擎 ML；年尺度年化、日尺度日最大、小时尺度用<strong>日内峰值系数</strong></td></tr>
+<tr><td>约束</td><td>直接引用开题表 3-2</td><td>逐条做"可失效性"检验，恒真者改写成规划裕度</td></tr>
+<tr><td>冷却技术对照</td><td>只换 <code>technology</code></td><td>"一技术一工程"（同时换 <code>base_pue</code>/温度系数/CoC/切换阈值）</td></tr>
+<tr><td>干预增益</td><td>与细网格 CAWCC 比</td><td>与<strong>同网格 baseline</strong> 比（否则网格差被误读为物理效应）</td></tr>
+</tbody></table>
+<p>v1 确立的 <strong>P1（建基准）→ P2（验证）→ P3（主扫描）</strong>顺序仍然有效，本版把它固化成脚本的 A–I 九个实验段。</p>
+<p><strong>v3 只做一件事</strong>：在 v2 的可执行骨架上补一层<strong>现实性审计</strong>（第 3 节）。v2 的情景"能跑通、能自检"，但跑出来的量里有 7 类脱离实际的设定——最严重的一类是<strong>伪约束</strong>（水库库容只有年取水量的 0.48 倍，1000 MW 下 730 天被抽干，制造出 13 641 ML 的假缺水）和<strong>闲置资产</strong>（再生水厂只跑 19 % 产能）。v3 把这 7 类全部修掉，并把审计做成 19 项判据的常驻脚本（<code>scripts/audit_realism.py</code>），以后任何一次参数改动都必须先过这一关。<strong>v3 的所有结论数字都是审计通过之后的数字，与 v2 不可混用。</strong></p>
+<p><strong>v4 只做一件事</strong>：用 <code>nature-skills</code>（<code>nature-proposal-writer</code> 的 8 维评分 + <code>nature-statistics</code> 的统计严谨性核查 + <code>nature-reviewer</code> 的 12 轴技术关切）<strong>审查 v3 的方案本身</strong>，把审查定位的方法学缺口补掉。审查给出 8 维综合 <strong>7.75 分</strong>（"可给导师看"上沿），定位 5 个问题并按优先级修完：</p>
+<table>
+<thead><tr><th>编号</th><th>审查定位的问题</th><th>性质</th><th>v4 的处理</th><th>位置</th></tr></thead>
+<tbody>
+<tr><td>M1</td><td>只做了 AI 侧参数敏感性，<strong>城市侧参数（设施能力、漏损率、居民定额）的敏感性完全空白</strong></td><td>P0，阻塞性</td><td>补跑城市侧 Morris + Sobol（7 参数 × 2 观测指标 × 2 域）</td><td>12.4 节</td></tr>
+<tr><td>M2</td><td>能源富集情景只在 D-HA 上定义，而 D-HA 瓶颈在水侧——<strong>该对照在那里本就不会有反应，会误报"无效"</strong></td><td>P0，设计缺陷</td><td>扩展到两端点；实测证实 D-CO 有效（1450 → 1550 MW）</td><td>4.3 + 4.3.1 节</td></tr>
+<tr><td>M3</td><td>缺"研究缺口—科学张力"的显式陈述（已知 A、已知 B 分别是什么，缺口在哪里）</td><td>P1</td><td>新增 1.4 节</td><td>1.4 节</td></tr>
+<tr><td>M4</td><td>数值过度精确（如 <code>0.7000000000000001</code>、<code>16530.82246843545 ML</code>），像实测值而非模型值</td><td>P1</td><td>新增 1.5 节数值报告口径</td><td>1.5 节</td></tr>
+<tr><td>M5</td><td>文档内的包名、测试计数、Git 状态已过时</td><td>P1</td><td>全部更新（<code>src/watermet2_repro/</code>→<code>src/aiuwm/</code>、58 passed / 0 failed、commit <code>efa78e2</code>）</td><td>全文</td></tr>
+</tbody></table>
+<p>v4 另外补了三块 v3 未写进正文的<strong>已完成实验</strong>的结果：7.3.1 热浪、7.5 S×G 矩阵、4.3.1 能源富集。附录结论由 7 条扩为 11 条（第 8–11 条为 v4 新增）。<strong>v4 未改动 v3 的任何实验设计与判据，只做增补与文档修正，因此 v3 的数字在 v4 中依然有效（本轮完整重跑已逐位复核：CAWCC 与 v3 记录一致）。</strong></p>
+<h3 id="v4-1-数据扩充阶段-在-v4-基础上继续-未改动任何设计与判据">v4.1 数据扩充阶段（在 v4 基础上继续，未改动任何设计与判据）</h3>
+<p>v4 定稿后审查交付物发现：<strong>聚合后的数据行太少</strong>（两端全部产物只有约 600 行 CSV），而单次情景 dump 实际有 <strong>69 833 行 / 9.69 MB</strong>——此前所有脚本只提取 <code>.max()</code>/<code>.mean()</code> 标量，<strong>丢弃了全部逐日过程数据</strong>。同时概率分析只有 40 样本，不足以支撑分位数结论。因此按 A→B→C→D→E→F 六项扩充（见 13.2 与 13.3 节）：</p>
+<table>
+<thead><tr><th>任务</th><th>内容</th><th>关键结果</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>逐日过程全量落盘（13 张表 × 四級聚合）</td><td>45 情景 / <strong>1 563 174 行 / 293.4 MB</strong></td></tr>
+<tr><td>B</td><td>概率样本 64 → <strong>1024</strong></td><td>HA 物理阈值分位数不变；1,000 MW 超限概率 <strong>0.125 → 0.0625</strong>，尾部概率仍受样本量影响</td></tr>
+<tr><td>C</td><td><strong>25 城</strong>合成梯度（5×5 混合谱 × 41 容量点）</td><td>CAWCC 沿两轴单调不减（1150 → 1450 MW），证明结论非端点伪影</td></tr>
+<tr><td>D</td><td>干预<strong>成本效益与 Pareto</strong></td><td>每域只剩一项有效干预，单位成本相差 <strong>32.5 倍</strong>；8/10 干预零增益仍需投资</td></tr>
+<tr><td>E</td><td><strong>文献 / 官方标准定量对标</strong></td><td>PUE 与人均用水落在真实量级内；发现 <strong>4 例口径冲突</strong></td></tr>
+<tr><td>F</td><td>分册导出（三册 xlsx + CSV + README）</td><td>避开 Excel 1 048 576 行上限，逐日按每 3 日抽样</td></tr>
+</tbody></table>
+<p>本阶段新增了结论，并修正了 12.3 节的最终概率结果。早期 40 样本与旧口径 1024 样本的对照不再作为样本量证据；当前比较使用同一修订口径的 64 与 1024 样本结果。附录结论由 11 条扩为 <strong>16 条</strong>。</p>
+<h3 id="v4-2-对抗性复核-用户质疑-感觉还是不太对劲-查证属实">v4.2 对抗性复核（用户质疑"感觉还是不太对劲"→ 查证属实）</h3>
+<p>对前两阶段的全部结论做<strong>对抗性自检</strong>（不复用任何已有结论，全部从 <code>project.json</code> + 逐日 dump 反算）。查出 <strong>5 个真问题</strong>，其中 1 个<strong>推翻了 12.3 / 12.5 的核心论断</strong>，详见 12.8 节：</p>
+<table>
+<thead><tr><th>#</th><th>问题</th><th>严重度</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>"限制约束"报告取字典序首个越界者而非余量最小者</strong>；配合 250 MW 粗网格，产出了"政策约束主导"这一<strong>伪结论</strong>。50 MW 逐点诊断显示真相相反：D-HA 由<strong>物理约束</strong>决定（1200 MW 时 <code>max_wtw_utilization</code> 与 <code>max_source_abstraction_ratio</code> 同时越界），政策指标要到 <strong>1350 MW</strong> 才越界</td><td><strong>高（推翻结论）</strong></td></tr>
+<tr><td>2</td><td><strong>概率分析用 250 MW 步长、主实验用 50 MW</strong> → 概率 CAWCC 系统性低估 <strong>13 %</strong>，两套数字不可混用</td><td><strong>高</strong></td></tr>
+<tr><td>3</td><td><strong>现实园区尺度（50–300 MW）下日尺度物理约束未越过 0.95 判定阈值</strong>，但给水厂利用率与水源取水率已从 0.80 单调升至 0.87，首破阈值在 600 MW（50 万人口城市）→ 属高位运行、余量在消耗，<strong>不等于无约束</strong>；CAWCC 仍须重新定位为"<strong>理论上限</strong>"，不能表述为"城市水系统会拦住 AI"</td><td><strong>高</strong></td></tr>
+<tr><td>4</td><td><code>reclaimed_water_substitution_ratio</code> 在 50–1100 MW <strong>恒定不变</strong>，阈值与配置值只差 7.7 %，<strong>不携带容量信息</strong>，应从"承载约束"中分离</td><td>中</td></tr>
+<tr><td>5</td><td><strong>合成城市非 AI 用电已建模</strong>；<code>grid_connection_capacity_mw</code> 定义为 AI 园区接入容量，真实节点容量仍待率定</td><td>中</td></tr>
+</tbody></table>
+<p>复核中<strong>我的复核脚本自身也犯了 2 处口径错误</strong>（把 MWh/d 当 MW 用、入流比的分母用了取水能力而非实际取水），修正后相关条目 PASS——这两处与 12.6(c) 记录的 6 例跨来源口径冲突性质相同，<strong>只不过犯错的是复核者自己</strong>。</p>
+<p><strong>总体判断：模型的数值实现与水量平衡可靠</strong>（V1–V12 全通过、19 项现实性审计 0 FAIL、外部效度对标量级正确）；<strong>问题集中在（a）承载约束的报告方式 与（b）实验尺度相对现实的错位</strong>。（a）已改正，（b）需在论文中正面写成"研究边界"。</p>
+<p><strong>新增的诚实性说明（三处，都必须写进论文）</strong>：</p>
+<ol><li><strong>概率抽样下限制约束 100 % 是政策指标</strong>（<code>reclaimed_water_substitution_ratio</code>），不是物理水/电约束——不说明会被误读。</li><li><strong>模型城市的漏损率（12–13.3 %）与再生水利用率（15–16 %）都对照政策目标超标/未达标</strong>，而"降漏损是唯一有效干预"与"政策约束先触发"两条结论<strong>依赖这个落后设定</strong>。</li><li><strong>城市梯度的中间 23 个城市是线性混合的合成谱，不是真实城市</strong>，只用于连续性检验。</li></ol>
+<h3 id="v4-3-研究级修正-2026-09-24">v4.3 研究级修正（2026-09-24）</h3>
+<p>本节覆盖并替代本文后续章节中与旧概率产物、原始 Morris 单位效应或未建模城市电力负荷有关的强表述。完整审查、证据指针和 R3 实验计划见 <code>Nature级研究审查与修正计划_R3.md</code>。</p>
+<ol><li><strong>瓶颈报告已改为顺序无关</strong>：同一容量点的全部越界约束均写入 <code>failed_constraints</code>，<code>limiting_constraint</code> 按无量纲违约程度排序，不再按 JSON 字典顺序取值。</li><li><strong>概率 CAWCC 改用 50 MW 网格</strong>，并把设施吞吐约束与再生水目标阈值拆成两个 estimand。旧 <code>probabilistic_large_<em></code> 仅作历史审计；当前 <code>probabilistic_corrected_</em></code> 已完成每域 1024 样本、24 workers、bootstrap 2000 的最终估计。末库容边界是第三个独立 estimand，尚未纳入该概率抽样。</li><li><strong>Morris 效应改为输入区间归一化</strong>。原始 <code>mu*</code> 的 native-unit 排名不再支持“漏损率唯一主导”的强结论；应引用 <code>morris_normalized.csv</code> 与 <code>city_morris_normalized.csv</code>，并把城市侧水源能力、居民定额和漏损率共同作为候选主导因素。</li><li><strong><code>grid_connection_capacity_mw</code> 解释为 AI 园区接入容量</strong>。合成驱动已加入非 AI 城市负荷列；真实节点容量和备用率率定完成前，正文不报告具体城市节点余量。</li><li><strong>1150/1450 MW 统一称为参数域端点的短期设施吞吐边界</strong>。末库容约束下的两年边界分别为 HA 150 MW、CO 900 MW；现实项目判断还需要多年水文和现场率定。</li></ol>
+<hr>
+<h2 id="1-设计总纲">1. 设计总纲</h2>
+<h3 id="1-1-四层映射-研究问题-可检验命题-情景变量-判据">1.1 四层映射：研究问题 → 可检验命题 → 情景变量 → 判据</h3>
+<p>第一原则：<strong>每条结论都必须对应一个能失效的判据</strong>。下表是唯一索引。</p>
+<table>
+<thead><tr><th>假设</th><th>可检验命题</th><th>操纵的情景变量</th><th>观测量</th><th>判据</th></tr></thead>
+<tbody>
+<tr><td><strong>H1</strong> 代谢结构响应</td><td>AI 规模上升使城市水代谢从"取水—给水—排水"转向"再生水—回用—消耗"，转折由再生水能力决定</td><td>S0–S3 × 容量扫描 0–2000 MW</td><td>再生水替代率、消耗率、各类利用率</td><td>瓶颈迁移链（8.5）+ 干预边际曲线（9）</td></tr>
+<tr><td><strong>H2</strong> 时间尺度边界</td><td>同一城市承载容量存在严格序：年 ≥ 日 ≥ 小时，序差由波动决定</td><td>同一工程，三种统计口径</td><td>CAWCC(年/日/小时)</td><td><strong>V4</strong></td></tr>
+<tr><td><strong>H2b</strong> 高温敏感冷却</td><td>干式/干式优先把水需求压到少数高温日，日峰值系数显著高于湿冷；蒸发量必须随气温传导</td><td>7 种冷却技术 × 2 个参数域 × G0–G3</td><td>日峰值系数、PUE、WUE、湿冷份额</td><td><strong>V5</strong> + <strong>V6</strong> + <strong>V9</strong></td></tr>
+<tr><td><strong>H3</strong> 瓶颈迁移与干预边际转折</td><td>干预有效性呈"有效→递减→失效"三段，转折点是瓶颈迁移点</td><td>再生水能力 34→160 ML/d；10 种干预</td><td>CAWCC 与 <code>ΔCAWCC/Δ能力</code></td><td>边际曲线 + <strong>V7</strong></td></tr>
+<tr><td>分配伦理（附加）</td><td>总量短缺时分配政策决定谁缺水；"居民优先"不劣于"AI 优先"</td><td>policy_a/b/c × 容量</td><td>分区尺度居民未满足量</td><td><strong>V8</strong></td></tr>
+</tbody></table>
+<h3 id="1-2-为什么坚持参数域端点而非案例城市">1.2 为什么坚持参数域端点而非案例城市</h3>
+<ol><li>开题 3.7 已定为参数域端点法，中途换案例城市会让 3.7 的结论口径失效；</li><li>案例城市需要大量现场数据（第 17 节），现在缺一个就会让情景不可复跑；</li><li>本研究以<strong>无量纲裕度</strong>与<strong>端点对比</strong>呈现机制结论，直接比较缺水—高冷负荷端与气候凉爽端的结构差异；具体城市数值由率定数据给出。</li></ol>
+<p>因此设两个端点 <strong>D-HA</strong> 与 <strong>D-CO</strong>，外加 <strong>能源富集补充情景</strong>（D-HA 上叠加）。</p>
+<h3 id="1-3-本轮的五条硬纪律-防自欺">1.3 本轮的五条硬纪律（防自欺）</h3>
+<ol><li><strong>可失效性</strong>：0–2000 MW 全程都不可能违反的判据不是判据。容量利用率类一律写<strong>规划裕度 0.95</strong>（不是 1.00）——引擎对 WTW/WWTW/再生水/取水能力做硬截断，利用率永远 ≤ 1，<code>≤1</code> 恒真。</li><li><strong>同网格比较</strong>：干预增益 = 该干预 CAWCC − <strong>同容量网格下 baseline 的 CAWCC</strong>。用细网格 CAWCC 减粗网格干预结果会把分辨率差算成物理效应（曾算出 −100 MW 的"负增益"）。</li><li><strong>口径显式化</strong>：模拟期 730 天（2 年）。引擎 <code>*_ml</code> 全是<strong>全期累计</strong>；与文献年值比较必须先年化。日尺度用日最大，小时尺度用<strong>日内峰值系数</strong>（不是把日值除以 24）。</li><li><strong>现实性审计（v3 新增）</strong>：每次改参数后先跑 <code>scripts/audit_realism.py</code>，19 项判据必须 <strong>0 FAIL</strong>。判据优先用<strong>无量纲比值</strong>（库容/年取水量、入流/取水量、产能利用率、人均配水），因为绝对量永远可以用"这是设定"搪塞，比值不能。审计脚本自身也必须被审计——本轮先修了它自己的两处口径错误（见 3.2）。</li><li><strong>压力测试网格必须折算</strong>：0–2000 MW 是刻意设到远超现实部署的扫描上界，用于找瓶颈迁移点。<strong>结论引用时必须折算到现实装机区间（百万人口城市内 50–300 MW）</strong>，不能把"1200 MW 可行"当成规划许可依据（见 3.6）。</li></ol>
+<hr>
+<h3 id="1-4-研究缺口与科学张力-v4-新增">1.4 研究缺口与科学张力（v4 新增）</h3>
+<p>本节补上 v1–v3 一直缺失的一环：本课题相对已有工作的位置。审稿人最先问的不是"你做了什么"，而是"为什么这件事非做不可"。</p>
+<p><strong>已知 A：城市水系统侧。</strong> 战略级城市水系统性能与代谢模型已能评估取水—给水—排水—再生水全链，并用于长期规划方案的比较（【文献】Behzadian &amp; Kapelan, 2015；城市水系统定量绩效模型, 2014；TRUST D33.2 最终报告）。这类模型的共同结构是按日尺度做质量守恒，需求侧由人口、土地利用与产业用水构成。</p>
+<p><strong>已知 B：AI 基础设施侧。</strong> AI 数据中心的直接与间接水足迹已有系统测算；冷却架构的水—能权衡、浓缩倍数约束与日峰值波动也有工程手册与理论结果（【文献】LBNL 2024；ASHRAE；DOE FEMP；Han 等 2026）。</p>
+<p><strong>缺口：A 与 B 至今没有闭合。</strong> A 类模型的需求侧<strong>不存在数据中心这一类用户</strong>，组件库里没有"IT 容量 → PUE → 排热 → 冷却 → 排污 → 回流"这条链；B 类核算则是<strong>单园区、源端</strong>视角，默认城市是可无限取用的水源与无限容量的污水受纳体，不计算园区接入后对城市侧的反作用。</p>
+<p><strong>为什么这个缺口构成真实的两难，而不只是"尚无人研究"。</strong> AI 园区已进入城市级规模——单园区数百 MW，取水量数十 ML/d，与中等城市的工业用水同量级。接入后它同时改动三处：</p>
+<ol><li><strong>取水端</strong>：与居民、工业争抢水源取水能力与给水处理能力；</li><li><strong>再生水端</strong>：园区作为再生水大客户，会把原有工业、市政杂用、灌溉用户<strong>置换</strong>回自来水（本轮 3.4 机制一）；</li><li><strong>排水与水质端</strong>：再生水比例上升经水质约束压低浓缩倍数，使总补水与排污不降反升（本轮 11.1）。</li></ol>
+<p>由此产生一个可检验、也可能被证伪的具体张力：城市普遍以"提高再生水替代率、扩建再生水厂"来抵消 AI 的淡水取用，但本框架显示——</p>
+<ul><li>（i）再生水比例越高，混合水水质越差、浓缩倍数被压得越低，总取水与排污反而<strong>上升</strong>；</li><li>（ii）扩再生水<strong>处理能力</strong>的边际有效性恒为<strong>零</strong>，只有扩<strong>产水量</strong>才有效（3.4 机制二）。</li></ul>
+<p>换言之，<strong>"多建再生水厂"这一通行做法在本框架内是无效的</strong>。本方案的全部实验都围绕证实或证伪这一张力来设计，而不是罗列参数敏感性。这也是它与"给城市水模型加一个新用户"这类增量工作的分界。</p>
+<h3 id="1-5-数值报告口径-v4-新增">1.5 数值报告口径（v4 新增）</h3>
+<p>模型输出是<strong>合成驱动 + 参数域设定</strong>下的确定性结果，其位数不应被读作实测精度。统一约定：</p>
+<ul><li><strong>绝对量</strong>（取水量、蒸发量、库容等）报 <strong>3 位有效数字</strong>，如 <code>2.90e4 ML</code>、<code>31.3 ML/d</code>；</li><li><strong>无量纲比值</strong>判据（利用率、占用率、替代率）保留 <strong>3 位小数</strong>——它们用于与工程参考区间对照，降精度会直接损失判据的分辨力；</li><li><strong>边际量</strong>（MW per ML/d）报 <strong>2–3 位有效数字</strong>；</li><li>标注【设定】的参数是<strong>设计选择</strong>而非观测值，不参与精度讨论；</li><li>【计算】数字表示合成驱动与参数域设定下的模型估计；城市实测值由率定数据给出（见第 15 节末）。</li></ul>
+<hr>
+<h2 id="2-代码基准与本次改动">2. 代码基准与本次改动</h2>
+<table>
+<thead><tr><th>文件</th><th>改动</th><th>不改的后果</th></tr></thead>
+<tbody>
+<tr><td><code>src/aiuwm/data_center.py</code></td><td>排热基数新增 <code>heat_basis</code>，取 <code>"facility"</code> 时以 <strong>设施电量 = PUE × IT 电量</strong>为基数</td><td>默认以 IT 电量做基数 → PUE 与气温<strong>无法传导到蒸发量</strong>，H2b 在纯湿冷下不可检验</td></tr>
+<tr><td><code>src/aiuwm/ai_metrics.py</code></td><td>新增 <code>_max_source_abstraction_ratio()</code> 与 <code>_min_source_storage_ml()</code>，接入 <code>summarize_ai_water_kpis</code></td><td>缺"水源取水占用率"这个关键判据，干旱情景下最紧的约束看不见</td></tr>
+<tr><td><code>scripts/build_r2_domains.py</code>（新增）</td><td>生成两端点全部工程、驱动、规格、参数证据表</td><td>—</td></tr>
+<tr><td><code>scripts/run_r2.py</code>（新增）</td><td>执行 A–I 九段实验（含新增 C4 净替代、C5 产水量边际）+ V1–V12 自检</td><td>—</td></tr>
+<tr><td><code>scripts/calibrate_dry_first.py</code>（新增）</td><td>干式优先冷却切换阈值率定扫描</td><td>未率定时日峰值系数 15.3，超出文献 6.5–10×</td></tr>
+<tr><td><code>scripts/run_r2_sensitivity.py</code>（新增）</td><td>Morris / Sobol / 概率阈值（最耗时，独立可重跑）</td><td>—</td></tr>
+<tr><td><code>scripts/audit_realism.py</code>（新增）</td><td>19 项现实性判据（城市侧 9 项 + AI 侧 10 项），PASS/WARN/FAIL/NOTE 四档</td><td>无审计时，"能跑通"与"可信"是两回事；本轮的 7 类失真全部由它发现</td></tr>
+<tr><td><code>scripts/diag_city.py</code> / <code>diag_peaks.py</code> / <code>diag_constraints.py</code>（新增）</td><td>打印 <code>area_daily</code> / <code>component_daily</code> 列名与均值、日峰值、约束首失效点</td><td>口径错误只能靠看原始列发现</td></tr>
+</tbody></table>
+<p><strong>未改动</strong>：引擎守恒结构、模拟主循环、API/CLI/前端。既有测试复测 <code>58 passed, 0 failed</code>（前端 <code>dist</code> 已构建，Studio 健康检查通过）。</p>
+<hr>
+<h2 id="3-现实性审计-判据-失真与修复-v3-新增">3. 现实性审计：判据、失真与修复（v3 新增）</h2>
+<p>本节回应一个前提性问题：<strong>既然是数值模拟，为什么还要审计现实性？</strong></p>
+<p>因为本研究的产出要用于指导现实规划。模拟不需要<strong>真实数据</strong>，但必须<strong>量纲自洽、量级正确、比值落在现实区间</strong>。一条结论如果说"再生水厂是瓶颈"，而这座再生水厂在模型里常年只跑 19 % 产能，那么它就不是现实中的瓶颈，只是模型里的闲置资产。本节把这类失真全部找出来并修掉。</p>
+<h3 id="3-1-审计的三类致命失真">3.1 审计的三类致命失真</h3>
+<table>
+<thead><tr><th>类型</th><th>定义</th><th>危害</th><th>识别方法</th></tr></thead>
+<tbody>
+<tr><td><strong>伪约束</strong></td><td>因参数设定过小/过大人为造出的"缺水""缺容量"</td><td>研究对象本身没有这个约束，结论不可迁移</td><td>比值型判据：库容/年取水量、入流/取水量、能力/峰值负荷</td></tr>
+<tr><td><strong>恒真判据</strong></td><td>引擎硬截断使指标永远 ≤ 1，或恒等于边界值</td><td>判据无信息量，承载容量被压成 0</td><td>全容量网格扫描看取值区间是否退化为一个点</td></tr>
+<tr><td><strong>闲置资产</strong></td><td>设施利用率远低于现实运行区间</td><td>把虚假的余量全部腾给数据中心，低估瓶颈</td><td>利用率判据（再生水厂 0.60–1.00、峰值日 0.78–0.82）</td></tr>
+</tbody></table>
+<p><strong>方法学原则</strong>：判据优先用<strong>无量纲比值</strong>而非绝对量。绝对量（如"取水量 200 ML/d"）永远可以说"这是设定"，比值（如"库容/年取水量 = 0.48"）则能直接对照工程经验判真伪。</p>
+<h3 id="3-2-先修审计本身-审计脚本的两个口径错误">3.2 先修审计本身：审计脚本的两个口径错误</h3>
+<p>在修模型之前，先确认审计脚本自己是干净的。v1 审计有两处口径错误，会给出<strong>方向相反</strong>的结论：</p>
+<table>
+<thead><tr><th>错误</th><th>错误结果</th><th>原因</th><th>修正</th><th>修正后</th></tr></thead>
+<tbody>
+<tr><td>人均配水量虚高</td><td>330 L/(cap·d)</td><td>用 <code>startswith("delivered")</code> 求和，把无量纲的 <code>delivered_percent</code>（恒 = 100）当成 ML 加进分子</td><td>改用 <code>delivered_total_ml</code></td><td><strong>249.7 / 243.3</strong> L/(cap·d)</td></tr>
+<tr><td>漏损率为负</td><td>−0.27</td><td>分子用<strong>含再生水</strong>的总配水量，分母用<strong>只含自来水</strong>的水源取水量</td><td><code>1 − potable_delivered_ml / 水源取水量</code>（自来水口径对自来水口径）</td><td><strong>0.151 / 0.151</strong></td></tr>
+</tbody></table>
+<blockquote>教训：审计脚本自身也必须被审计。若不先修这两处，会把一个本来合理的城市模型误判为"人均用水超标 + 负漏损"，进而朝错误方向改参数。</blockquote>
+<h3 id="3-3-七类现实性失真与修复">3.3 七类现实性失真与修复</h3>
+<table>
+<thead><tr><th>#</th><th>失真</th><th>审计证据</th><th>修复</th><th>修复后</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>水源入流高估 1.5–1.8 倍</strong></td><td>入流 380 / 470 ML/d 对 ~256 ML/d 的取水需求 → 水库常年蓄满，<strong>弃水 88 / 190 ML/d（占入流 17–23 %）</strong>，"缺水端"根本不缺水，干旱情景几乎不产生压力</td><td>入流降至 <strong>265 / 290 ML/d</strong>，同时加大季节振幅（HA 0.34 / CO 0.28）制造真实的枯汛结构</td><td>弃水 <strong>0.000 / 0.000</strong></td></tr>
+<tr><td>2</td><td><strong>水库库容过小（伪约束）</strong></td><td>库容 40 000 ML 仅为年取水量（~84 000–93 000 ML）的 <strong>0.48 倍</strong>；1000 MW 下 730 天内被抽干，产生 <strong>13 641 ML 缺水量</strong>——这是库容设定造成的假象，不是研究对象的约束</td><td>库容 <strong>120 000 ML</strong>（年取水量的 1.3–1.4 倍，符合多年调节水库），起调 <strong>65 000 ML</strong></td><td>库容过程 <strong>0.476–0.588</strong>（HA）/ <strong>0.533–0.792</strong>（CO）：真实年内消落与回蓄</td></tr>
+<tr><td>3</td><td><strong>再生水厂常年闲置</strong></td><td><code>eligible_demands</code> 只写 <code>irrigation</code> → 34 ML/d 产能只送出 6.4 ML/d，<strong>利用率 19 %</strong>。现实中不存在常年闲置八成的再生水厂；它还会把"再生水产能"虚假地全部腾给数据中心</td><td>按北京 2024 真实用户结构改为 <code>industrial / municipal_misc / irrigation</code>，并新增市政杂用需求 20 ML/d</td><td>利用率 <strong>0.808 / 0.824</strong></td></tr>
+<tr><td>4</td><td><strong>建成区面积失真</strong></td><td>32 000 ha ÷ 1 000 000 人 = <strong>320 m²/人</strong>，远超现实建成区 100–150 m²/人</td><td>改为 <strong>12 000 ha</strong>（120 m²/人）</td><td>120 m²/人</td></tr>
+<tr><td>5</td><td><strong>设施能力未反算</strong></td><td>WTW 330/360 使峰值日利用率达 <strong>0.877</strong>，小时尺度 CAWCC 被压到仅 100 MW</td><td>按"峰值日利用率 0.78–0.82"<strong>反算</strong>能力：WTW <strong>370 / 380</strong>、WWTW <strong>270 / 270</strong>、取水能力 <strong>380 / 400</strong> ML/d</td><td>峰值日利用率落在规划裕度内</td></tr>
+<tr><td>6</td><td><strong>再生水产能贴着产水量 → 判据恒失效</strong></td><td>产能 34 ML/d ≈ 产水量 → 日峰值利用率<strong>恒为 1.0</strong>，<code>max_reuse_utilization ≤ 0.95</code> 在 0 MW 就失效，承载容量恒为 0，且 <code>run_r2.py</code> 直接崩溃（<code>TypeError: float() ... NoneType</code>）</td><td>产能取产水量 × <strong>1.25</strong>（<strong>40 / 36 ML/d</strong>），并把该指标从日/小时/概率约束集剔除（理由见 3.4 第 3 条）</td><td>承载容量恢复可辨识</td></tr>
+<tr><td>7</td><td><strong>干预名实不符 + 网格过粗</strong></td><td><code>wtw_plus_10pct</code> 写 440 ML/d（实为 <strong>+33 %</strong>）、<code>grid_plus_50pct</code> 写 1800 MW（实为 <strong>+20 %</strong>），且同一组固定数值同时作用于两个不同基线；200 MW 步长会把 &lt; 200 MW 的真实增益全部抹平为 0</td><td>按域生成 <code>interventions_&lt;key&gt;.json</code>，百分比以<strong>该域自身基线</strong>为分母；网格步长 200 → <strong>100 MW</strong>（扫描时仍排除 0 MW，理由见 10.1）</td><td>干预增益可分辨</td></tr>
+</tbody></table>
+<h3 id="3-4-审计过程中发现的三个新机制-可直接写进论文">3.4 审计过程中发现的三个新机制（可直接写进论文）</h3>
+<h4 id="机制一-毛替代率-城市净量-reclaimed_water_substitution_ratio-0-65-不能单独代表节水">机制一：毛替代率 ≠ 城市净量——<code>reclaimed_water_substitution_ratio ≥ 0.65</code> 不能单独代表节水</h4>
+<p>现有政策口径的"再生水替代率"是<strong>毛替代率</strong>：AI 用的再生水量 ÷ AI 总取水量。它只看 AI 自己这一笔账，不看 AI 抢走的再生水把谁挤回了自来水。</p>
+<p>旧版 C4 使用的是一个 <strong>B0 城市取水增量代理</strong>：</p>
+<pre><code>B0代理 = (AI 总取水量 − 城市取水量增量 × 输配效率) / AI 总取水量</code></pre>
+<p>它把无 AI 基线与 AI 情景相连，不能替代同一 AI 负荷下 <code>r=0</code> 与 <code>r&gt;0</code> 的直接 potable 差分，也不能把扩产水量产生的外溢收益归给 AI。R9 联合审计已将 AI potable、其他用户 potable、城市水源取水和 WWTW 负荷拆开报告；见 <code>R9_再生水兼容性联合审计.md</code> 与 <code>reclaimed_compatibility_R9.csv</code>。</p>
+<p>1000 MW 下的模型输出（<code>reclaimed_net_substitution.csv</code>；字段名 <code>net_substitution_ratio</code> 保留以兼容旧产物，但这里的估计量是 B0 城市源水增量代理）：</p>
+<table>
+<thead><tr><th>配置</th><th>毛替代率</th><th>城市取水增量 (ML/2a)</th><th>B0 代理量 (ML/2a)</th><th><strong>B0 代理比</strong></th></tr></thead>
+<tbody>
+<tr><td>D-HA 基线（产能 40 ML/d）</td><td>0.700</td><td>+33 047.5</td><td>987.7</td><td><strong>0.034</strong></td></tr>
+<tr><td>D-HA 产能 ×1.5</td><td>0.700</td><td>+18 623.6</td><td>13 228.7</td><td>0.456</td></tr>
+<tr><td>D-HA 产能 ×2</td><td>0.700</td><td>+4 199.7</td><td>25 469.7</td><td>0.877</td></tr>
+<tr><td>D-HA 产能 ×3</td><td>0.700</td><td>−24 648.2</td><td>49 951.6</td><td>1.720</td></tr>
+<tr><td>D-CO 基线（产能 36 ML/d）</td><td>0.450</td><td>+31 691.9</td><td>759.9</td><td><strong>0.027</strong></td></tr>
+<tr><td>D-CO 产能 ×1.5</td><td>0.450</td><td>+18 539.3</td><td>11 921.9</td><td>0.431</td></tr>
+<tr><td>D-CO 产能 ×2</td><td>0.450</td><td>+5 386.8</td><td>23 083.9</td><td>0.835</td></tr>
+<tr><td>D-CO 产能 ×3</td><td>0.450</td><td>−20 918.2</td><td>45 407.8</td><td>1.642</td></tr>
+</tbody></table>
+<p><strong>解释</strong>：在基线配置下，AI 毛替代率高达 <strong>0.70 / 0.45</strong>，而 B0 代理比只有 <strong>0.034 / 0.027</strong>。这说明现有回用池被 AI 占用时，城市 potable 取水增量会抵消大部分园区端的毛替代；该数值是有条件的代理量，不是已验证的普适净替代率。</p>
+<p>机理解释：城市再生水产量是固定的（由污水量与分流比例决定）。AI 拿走 27.8 ML/d（占全市产量 32.3 ML/d 的 <strong>86 %</strong>）后，原本用再生水的工业、市政杂用、灌溉用户被迫退回自来水，城市取水量反而上升。这是典型的<strong>置换/泄漏效应（displacement leakage）</strong>。</p>
+<blockquote>政策含义：以"园区再生水替代率 ≥ 0.65"作为审批或考核指标，可能高估园区的节水贡献。审批应同时报告城市尺度的源水变化和被置换用户 potable 取水；其方向和幅度需按回用分配、产水量与水质边界重算。<br><br>注：产能 ×3 时 B0 代理比 &gt; 1，是因为再生水产能扩张的外溢收益（其他用户也多用再生水）被一并计入了 AI 的账。该行只能作为扩产敏感性，不能作为 AI 单独收益。</blockquote>
+<h4 id="机制二-扩-处理能力-无效-扩-产水量-才有效-再生水有两个杠杆-只有第二个是真杠杆">机制二：扩"处理能力"无效，扩"产水量"才有效——再生水有两个杠杆，只有第二个是真杠杆</h4>
+<p><code>CENTRAL_REUSE</code> 有两个独立参数，此前被混为一谈：</p>
+<table>
+<thead><tr><th>杠杆</th><th>参数</th><th>作用</th><th>边际有效性（实测）</th></tr></thead>
+<tbody>
+<tr><td>处理能力（进水侧）</td><td><code>treatment_capacity_ml_day</code></td><td>一天最多能处理多少再生水</td><td><strong>恒为 0</strong>（40 → 160 ML/d，D-HA 的 CAWCC 始终 1100 MW、限制约束始终是 <code>max_wtw_utilization</code>；D-CO 始终 1400 MW、始终 <code>max_daily_average_grid_connection_ratio</code>）</td></tr>
+<tr><td>产水量（出水侧）</td><td><code>WWTW1.central_reuse_fraction</code></td><td>污水中有多少比例被分流去再生</td><td>显著（见 <code>reuse_production_marginal_curve.csv</code>）</td></tr>
+</tbody></table>
+<p>原因：处理能力只决定<strong>上限</strong>，而真正决定再生水送出量的是<strong>有多少污水被分流过来</strong>。处理能力闲置时，把它从 40 加到 160 ML/d 不会多产一滴水。</p>
+<blockquote>这条直接推翻了原先 H3 的"三段边际曲线"叙事——那条曲线（34→160 ML/d，边际 36.4 → 26.7 → 13.3 → 0 MW per ML/d）实际是<strong>产能闲置造成的假象</strong>，不是真实的边际递减。H3 必须用<strong>产水量</strong>杠杆重做（见 10.3）。</blockquote>
+<h4 id="机制三-max_reuse_utilization-不能当日尺度判据">机制三：<code>max_reuse_utilization</code> 不能当日尺度判据</h4>
+<p>再生水厂配的是<strong>贮池</strong>（本模型 300 ML，相当于 7–9 天产量），日处理速率达到铭牌是<strong>正常调蓄行为</strong>，不是超载。因此日峰值利用率恒为 1.0，以它作判据会让承载容量恒为 0。</p>
+<p>处理：该指标<strong>只保留在年尺度</strong>（年均利用率，判"是否闲置"），从日尺度 / 小时尺度 / 概率阈值三套约束集中剔除。日尺度改用 WTW / WWTW / 水源取水 / 局部接入等真正的输配瓶颈。</p>
+<h3 id="3-5-19-项现实性判据的审计结果-scripts-audit_realism-py-1000-mw">3.5 19 项现实性判据的审计结果（<code>scripts/audit_realism.py</code>，1000 MW）</h3>
+<p>判据参考区间来源：北京市水资源公报 2024；GB/T 50331；CJJ 92；LBNL 2024 与运营商可持续报告；DOE FEMP / ASHRAE；中国城市人均用电量 ~6000 kWh/a。</p>
+<table>
+<thead><tr><th>判据</th><th>现实参考区间</th><th>D-HA</th><th>D-CO</th><th>判定</th></tr></thead>
+<tbody>
+<tr><td>人均配水量 (L/(cap·d))</td><td>150 – 400</td><td>249.66</td><td>243.26</td><td>PASS</td></tr>
+<tr><td>人均取水量 (L/(cap·d))</td><td>200 – 450</td><td>256.12</td><td>251.69</td><td>PASS</td></tr>
+<tr><td>再生水/污水处理量</td><td>0.15 – 0.70</td><td>0.160</td><td>0.150</td><td>PASS</td></tr>
+<tr><td>再生水厂产能利用率</td><td>0.60 – 1.00</td><td>0.808</td><td>0.824</td><td>PASS</td></tr>
+<tr><td>污水处理厂入流 (ML/d)</td><td>120 – 320</td><td>201.40</td><td>197.20</td><td>PASS</td></tr>
+<tr><td>漏损 + 厂自用率</td><td>0.08 – 0.25</td><td>0.151</td><td>0.151</td><td>PASS</td></tr>
+<tr><td>弃水量/取水量</td><td>0.00 – 0.15</td><td>0.000</td><td>0.000</td><td>PASS</td></tr>
+<tr><td>库容峰值占比</td><td>0.55 – 0.98</td><td>0.588</td><td>0.792</td><td>PASS</td></tr>
+<tr><td>库容谷值占比</td><td>0.10 – 0.70</td><td>0.476</td><td>0.533</td><td>PASS</td></tr>
+<tr><td>平均 PUE</td><td>1.05 – 1.60</td><td>1.181</td><td>1.167</td><td>PASS</td></tr>
+<tr><td>源水 WUE (L/kWh\_IT)</td><td>0.30 – 2.50</td><td>2.210</td><td>2.105</td><td>PASS</td></tr>
+<tr><td>实际浓缩倍数 CoC</td><td>2.5 – 10.0</td><td>4.32</td><td>5.00</td><td>PASS</td></tr>
+<tr><td>平均负荷因子</td><td>0.30 – 0.95</td><td>0.750</td><td>0.750</td><td>PASS</td></tr>
+<tr><td>AI 取水量 (ML/d)</td><td>5 – 80</td><td>39.77</td><td>37.88</td><td>PASS</td></tr>
+<tr><td>AI 蒸发量 (ML/d)</td><td>4 – 60</td><td>31.28</td><td>30.91</td><td>PASS</td></tr>
+<tr><td>AI 再生水用量 ≤ 城市产量 (ML/d)</td><td>≤ 32.31 / ≤ 29.66</td><td>27.84</td><td>17.05</td><td>PASS</td></tr>
+<tr><td>厂外间接水足迹/场址取水</td><td>0.05 – 0.60</td><td>0.214</td><td>0.100</td><td>PASS</td></tr>
+<tr><td>园区冷却水调蓄小时数 (h)</td><td>12 – 72</td><td>14.5</td><td>15.2</td><td>PASS</td></tr>
+<tr><td>园区设施电量/城市全社会用电</td><td>0.05 – 0.50</td><td>1.293</td><td>1.278</td><td><strong>NOTE</strong></td></tr>
+</tbody></table>
+<p><strong>合计：38 项中 36 PASS / 0 WARN / 0 FAIL / 2 NOTE。</strong></p>
+<h3 id="3-6-残留偏差与处理方式-不掩饰-明确折算口径">3.6 残留偏差与处理方式（不掩饰，明确折算口径）</h3>
+<table>
+<thead><tr><th>残留偏差</th><th>数值</th><th>是否缺陷</th><th>处理方式</th></tr></thead>
+<tbody>
+<tr><td>园区电量占城市全社会用电 129 % / 128 %</td><td>1000 MW × LF 0.75 × PUE 1.18 ≈ <strong>7 750 GWh/a</strong>，而百万人口城市全社会用电约 6 000 GWh/a</td><td><strong>否（刻意压力测试）</strong></td><td>0–2000 MW 扫描网格是<strong>刻意设到远超现实部署</strong>的上界，用于找瓶颈迁移点。现实百万人口城市内的园区为 50–300 MW（占 6–38 %）。<strong>所有 CAWCC 结论必须折算到这个区间再引用</strong>：即本轮结果的有效区间是 0–300 MW，"1200 MW 可行"只能表述为"在压力测试网格下的相对排序"，不能作为规划许可依据</td></tr>
+<tr><td>源水 WUE 2.21 / 2.10 L/kWh\_IT 偏高</td><td>行业上限约 2.0，领跑者 0.2–0.6</td><td>否（设定必然）</td><td>本端点设定为<strong>全年纯蒸发冷却</strong>（<code>evaporative</code>），无自然冷却、无干湿切换。这是"最费水端"的刻意设定。论文中必须与干冷/混合技术对照报（见 11.2），并注明 WUE 按 IT 电量口径、不含厂外间接水</td></tr>
+<tr><td>Sobol 一阶指数出现负值</td><td><code>base_pue</code> −0.98、<code>heat_to_cooling_fraction</code> −1.97</td><td>是（但未修）</td><td>N = 32 未收敛，Saltelli 估计器小样本已知偏差。<strong>本轮只把 Sobol 当排序工具</strong>，Morris 与 Sobol 在"基准 PUE、排热系数、CoC 为前三"上一致。R3 需 N ≥ 256 或改用 Jansen 估计器</td></tr>
+<tr><td>湿冷日峰值系数 1.17 &lt; 文献 2.2×</td><td>合成日负荷只有季节 + 周末变化</td><td>是（未修）</td><td>缺作业排队级日间波动，属<strong>驱动局限</strong>而非结构错误。只校核相对序与 <code>dry_first</code> 量级（7.49，落在文献 6.5–10× 内）</td></tr>
+</tbody></table>
+<hr>
+<h2 id="4-参数域端点定义">4. 参数域端点定义</h2>
+<h3 id="4-1-两端点设定">4.1 两端点设定</h3>
+<table>
+<thead><tr><th>参数</th><th>D-HA（缺水—高冷负荷端）</th><th>D-CO（气候凉爽端）</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td>年均气温</td><td>15.5 ℃</td><td>9.0 ℃</td><td>【设定】</td></tr>
+<tr><td>气温年振幅</td><td>14.0 ℃</td><td>11.0 ℃</td><td>【设定】</td></tr>
+<tr><td>年均相对湿度（夏季加成）</td><td>58 %（+14）</td><td>66 %（+6）</td><td>【设定】高温日更干是 HA 的一阶特征</td></tr>
+<tr><td>年降雨量（汛期）</td><td>550 mm（6–8 月）</td><td>780 mm（6–9 月）</td><td>【设定】半干旱 / 半湿润分界量级</td></tr>
+<tr><td>水源年均入流</td><td><strong>265 ML/d</strong></td><td><strong>290 ML/d</strong></td><td>【设定】按"入流/取水 ≈ 1.05–1.15"反算（3.3 #1）</td></tr>
+<tr><td>水库库容 / 初始蓄量</td><td>120 000 / 65 000 ML</td><td>120 000 / 65 000 ML</td><td>【设定】库容 = 年取水量的 1.3–1.4 倍（多年调节，3.3 #2）</td></tr>
+<tr><td>取水能力</td><td><strong>380 ML/d</strong></td><td><strong>400 ML/d</strong></td><td>【设定】按峰值日占用率 0.78–0.82 反算（3.3 #5）</td></tr>
+<tr><td>给水处理能力</td><td><strong>370 ML/d</strong></td><td><strong>380 ML/d</strong></td><td>【设定】同上</td></tr>
+<tr><td>污水处理能力（旱流口径）</td><td><strong>270 ML/d</strong></td><td><strong>270 ML/d</strong></td><td>【设定】同上</td></tr>
+<tr><td>再生水深度处理能力</td><td><strong>40 ML/d</strong></td><td><strong>36 ML/d</strong></td><td>【设定】= 产水量 × 1.25，留日峰值裕度（3.3 #6）</td></tr>
+<tr><td>污水再生分流比例 <code>central_reuse_fraction</code></td><td>0.16</td><td>0.15</td><td>【设定】<strong>再生水的真杠杆</strong>（3.4 机制二）</td></tr>
+<tr><td>建成区面积</td><td>12 000 ha（120 m²/人）</td><td>12 000 ha</td><td>【设定】现实建成区 100–150 m²/人（3.3 #4）</td></tr>
+<tr><td>AI 再生水目标份额</td><td>0.70</td><td>0.45</td><td>【文献】北京市水资源公报 2024：再生水 362.47 万 m³/d、工业再生水占 32.6 %</td></tr>
+<tr><td>再生水替代率下限</td><td>0.65</td><td>0.40</td><td>【设定】与该端点政策目标一致</td></tr>
+<tr><td>接网容量</td><td>1500 MW（能源富集 2600 MW）</td><td>1500 MW</td><td>【设定】</td></tr>
+<tr><td>电网间接水强度</td><td>0.40 L/kWh（富集 0.08）</td><td>0.18 L/kWh</td><td>【文献】LBNL 2024 间接水足迹量级</td></tr>
+</tbody></table>
+<p><strong>标定原则（v3 改为反算）</strong>：设施能力不再拍脑袋给，一律由实际日需水过程<strong>反算</strong>——目标是"峰值日利用率落在 <strong>0.78–0.82</strong>"，即留 5–8 % 规划裕度。两个方向都必须避免：能力过小 → AI 一上来所有约束同时失效，瓶颈链退化成一个点；能力过大 → 所有约束永不失效，同样无从检验。此外还要满足<strong>比值型现实性</strong>（库容/年取水量 1–2、入流/取水 1.05–1.15、再生水厂利用率 0.6–1.0）。</p>
+<h3 id="4-2-合成驱动与诊断-计算">4.2 合成驱动与诊断【计算】</h3>
+<p>驱动由 <code>build_drivers()</code> 生成，种子固定为 <code>20260918 + 101 × 域序号</code>（不用 <code>hash(str)</code>——<code>PYTHONHASHSEED</code> 会让它不确定）。</p>
+<table>
+<thead><tr><th>诊断量</th><th>D-HA</th><th>D-CO</th></tr></thead>
+<tbody>
+<tr><td>模拟长度</td><td>730 天（2 年）</td><td>730 天（2 年）</td></tr>
+<tr><td>气温 均值/最高/最低</td><td>13.52 / 35.93 / −8.86 ℃</td><td>9.04 / 29.05 / −9.24 ℃</td></tr>
+<tr><td>夏季湿球温度均值</td><td>22.80 ℃</td><td>15.44 ℃</td></tr>
+<tr><td>湿球温度最高</td><td>28.23 ℃</td><td>23.06 ℃</td></tr>
+<tr><td>湿球 &lt; 10 ℃ 天数（自然冷却潜力）</td><td>382 天</td><td>485 天</td></tr>
+<tr><td>年降雨量（归一后）</td><td>550.0 mm</td><td>780.0 mm</td></tr>
+<tr><td>入流均值</td><td>263.7 ML/d</td><td>292.9 ML/d</td></tr>
+</tbody></table>
+<p>三个必须说明的生成细节：</p>
+<ol><li><strong>相对湿度与温度距平反向耦合</strong>（<code>rh = 季节值 − 1.8 × 温度距平 + 噪声</code>）。否则高温日仍按季节均值取湿度，湿球温度会算出 31.6 ℃ 的非物理极端值。</li><li><strong>降雨按年总量归一</strong>。先泊松发生 × Gamma 强度，再整体缩放到目标年总量（否则会算出 0.8 mm/年）。</li><li><strong>AI 日负荷系数</strong>均值 0.75（【文献】LBNL 2024 利用率区间中位），按 <code>α_city</code> 与城市用电指数耦合（a00/a30/a60/a90），另给 <code>flat</code> 恒定对照。</li></ol>
+<blockquote><strong>【待补】</strong> 这些驱动是<strong>合成的</strong>（<code>driver_series: synthetic</code>）：能检验机制与量级，不能用于任何"某城市在某年"的表述。第 17 节列出需替换的真实数据。</blockquote>
+<h3 id="4-3-能源富集补充情景-v4-修订-两端点都做">4.3 能源富集补充情景（v4 修订：两端点都做）</h3>
+<table>
+<thead><tr><th>参数</th><th>常规</th><th>能源富集</th></tr></thead>
+<tbody>
+<tr><td>接网容量</td><td>1500 MW</td><td>2600 MW</td></tr>
+<tr><td>电网间接水强度</td><td>0.40 L/kWh</td><td>0.08 L/kWh</td></tr>
+</tbody></table>
+<p>用途：把电力侧约束从瓶颈链里摘掉，单独观察水系统约束。这是<strong>对照情景</strong>，不是预测情景。</p>
+<blockquote><strong>v4 修订</strong>：v3 只把它定义在 D-HA 上叠加，但 D-HA 的瓶颈在水侧（9.5 节迁移链里电力排第 3 位、1450 MW 才失效），在那里放宽电力约束<strong>本就不会有反应</strong>。真正电力先到顶的是 <strong>D-CO</strong>（迁移链第 1 位即接网容量 1500 MW）。<strong>若只在 D-HA 上做这一对照，会得出「能源富集完全无效」的错误印象</strong>——4.3.1 的实测证实了这一点。v4 把对照扩展到两端点。</blockquote>
+<hr>
+<h4 id="4-3-1-能源富集结果-计算-v4-补">4.3.1 能源富集结果【计算】（v4 补）</h4>
+<table>
+<thead><tr><th>域</th><th>情景</th><th>接网容量 (MW)</th><th>电网间接水强度 (L/kWh)</th><th>CAWCC(年)</th><th>年尺度限制约束</th><th>CAWCC(日)</th><th>日尺度限制约束</th></tr></thead>
+<tbody>
+<tr><td>HA</td><td>常规</td><td>1500</td><td>0.40</td><td>1150 MW</td><td>max_source_abstraction_ratio</td><td>1150 MW</td><td>max_wtw_utilization</td></tr>
+<tr><td>HA</td><td><strong>能源富集</strong></td><td>2600</td><td>0.08</td><td><strong>1150 MW</strong></td><td>max_source_abstraction_ratio</td><td><strong>1150 MW</strong></td><td><strong>max_wtw_utilization</strong></td></tr>
+<tr><td>CO</td><td>常规</td><td>1500</td><td>0.18</td><td>1750 MW</td><td>max_source_abstraction_ratio</td><td>1450 MW</td><td>max_daily_average_grid_connection_ratio</td></tr>
+<tr><td>CO</td><td><strong>能源富集</strong></td><td>2600</td><td>0.08</td><td><strong>1750 MW</strong></td><td>max_source_abstraction_ratio</td><td><strong>1550 MW</strong></td><td><strong>max_wtw_utilization</strong></td></tr>
+</tbody></table>
+<p><strong>四条结论</strong>：</p>
+<ol><li><strong>D-HA 完全无反应</strong>：年尺度与日尺度 CAWCC 均为 1150 MW，限制约束不变。这<strong>正面印证</strong>了第 9.4 节的核心结论——缺水端卡在水侧（水源取水、给水处理），放宽电力接网与降低电网间接水强度都无济于事。</li><li><strong>D-CO 日尺度 CAWCC 从 1450 → 1550 MW（+100），且限制约束由 <code>max_daily_average_grid_connection_ratio</code>（接网容量）迁移为 <code>max_wtw_utilization</code>（给水处理峰值利用率）</strong>。这是「摘掉一个瓶颈，下一个瓶颈立刻接手」的直接观测，与 10.3 节 H3「边际有效性受制于下一个瓶颈的位置」是同一个机理在电力侧的重演。</li><li><strong>年尺度两端都不变</strong>（1750 / 1150 MW），因为年尺度的首失效约束本来就是水源取水占用率（9.4 节），与电力无关。这再次说明<strong>换尺度会换瓶颈</strong>（H2）。</li><li><strong>同一干预在两个端点价值不同</strong>：「扩接网 +50 %」在 D-CO 值 +100 MW，在 D-HA 值 0。这与 10.2 节结论 4（「哪个干预有效依赖端点瓶颈结构，不存在普适最优干预」）完全一致。</li></ol>
+<blockquote><strong>方法学提示（值得写进论文方法部分）</strong>：这正是 1.3 节第 1 条「可失效性」纪律的价值所在。当一个对照情景在某端点上不产生任何差异时，<strong>先要问是不是把它放错了端点</strong>，而不是急着报告「该因素无影响」。v3 若照原计划只在 D-HA 上跑这一对照，会得到「能源富集情景完全无效」的结论，而真实情况是——<strong>它在电力先到顶的端点上有效，在水先到顶的端点上无效</strong>。</blockquote>
+<h2 id="5-城市水系统结构">5. 城市水系统结构</h2>
+<h3 id="5-1-组件清单-两域共用-仅能力值不同">5.1 组件清单（两域共用，仅能力值不同）</h3>
+<table>
+<thead><tr><th>组件</th><th>类型</th><th>关键参数</th></tr></thead>
+<tbody>
+<tr><td><code>RES1</code></td><td>水源（水库）</td><td>库容 <strong>120 000 ML</strong>，初始 <strong>65 000 ML</strong>，入流取 <code>reservoir_inflow_ml</code>（库容 = 年取水量 1.3–1.4 倍；原 40 000 ML 是伪约束，见 3.3 #2）</td></tr>
+<tr><td><code>SC1</code></td><td>输水干管</td><td>620 ML/d，漏损 1 %</td></tr>
+<tr><td><code>WTW1</code></td><td>给水处理</td><td>域设定，损失 2 %，电耗 0.34 kWh/m³</td></tr>
+<tr><td><code>TM1</code> / <code>SR1</code></td><td>输配干管 / 清水池</td><td>620 ML/d（漏损 0.5 %）/ 库容 1400 ML</td></tr>
+<tr><td><code>DM1</code></td><td>配水主管</td><td>460 ML/d，<strong>漏损 12 %</strong>，电耗 0.18 kWh/m³</td></tr>
+<tr><td><code>CENTRAL_REUSE</code></td><td>集中再生水</td><td>域设定，电耗 0.25 kWh/m³，<code>eligible_demands = [industrial, municipal_misc, irrigation]</code>（按北京 2024 用户结构；只写 <code>irrigation</code> 会让产能闲置八成，见 3.3 #3）</td></tr>
+<tr><td><code>SEWER1</code></td><td><strong>污水</strong>管</td><td>600 ML/d，溢流至 <code>RIVER1</code></td></tr>
+<tr><td><code>SEWER_S</code></td><td><strong>雨水</strong>管（新增）</td><td>4000 ML/d，溢流至 <code>RIVER1</code></td></tr>
+<tr><td><code>WWTW1</code></td><td>污水处理</td><td>270 ML/d，<code>central_reuse_fraction</code> 0.16 / 0.15，BOD 去除 90 % / TSS 92 % / <strong>TDS 仅 5 %</strong></td></tr>
+<tr><td><code>AI_DC1</code></td><td>AI 数据中心</td><td>见第 6 节</td></tr>
+</tbody></table>
+<p><strong>雨污分流是硬要求</strong>：若把 <code>storm_sewer</code> 指向污水管，暴雨日径流会让 WWTW 入流放大数倍，利用率被虚假抬高到 2.000——这是建模错误，不是真实工况。</p>
+<h3 id="5-2-需求设定">5.2 需求设定</h3>
+<table>
+<thead><tr><th>需求</th><th>值</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td>人口</td><td>1 000 000</td><td>【设定】</td></tr>
+<tr><td>居民</td><td>165 L/(cap·d)</td><td>【文献】GB/T 50331 量级</td></tr>
+<tr><td>一般工业</td><td>60 ML/d（回用率 80 %）</td><td>【设定】</td></tr>
+<tr><td><strong>市政杂用</strong></td><td><strong>20 ML/d</strong>（回用率 15 %，温度敏感 0.010）</td><td>【文献】北京市水资源公报 2024：工业再生水占 32.6 %，市政杂用+绿化+景观为另两大用户</td></tr>
+<tr><td>灌溉</td><td>12 ML/d（5–9 月）</td><td>【设定】</td></tr>
+<tr><td>配水漏损</td><td>0.12</td><td>【文献】CJJ 92 漏损控制区间中位</td></tr>
+</tbody></table>
+<p><strong>为什么要新增市政杂用</strong>：再生水厂若只有灌溉一个用户，34 ML/d 产能只送出 6.4 ML/d。一座常年闲置八成的再生水厂在现实中不存在，而且它会把"再生水产能"虚假地全部腾给数据中心。补上工业/市政杂用/灌溉三类用户后，产能利用率升到 <strong>0.808 / 0.824</strong>，这才是现实水厂的运行状态。</p>
+<h3 id="5-3-分配优先级与政策">5.3 分配优先级与政策</h3>
+<p><code>demand_priority = ["domestic", "industrial", "municipal_misc", "data_center::AI_DC1", "irrigation"]</code>；<code>demand_allocation_policy</code> 默认 <code>policy_b</code>（比例分摊），另有 <code>policy_a</code>（居民优先）/ <code>policy_c</code>（AI 优先）两个工程变体。</p>
+<hr>
+<h2 id="6-ai-数据中心-组件链与冷却技术工程包">6. AI 数据中心：组件链与冷却技术工程包</h2>
+<h3 id="6-1-组件链-逐日计算-ml-d">6.1 组件链（逐日计算，ML/d）</h3>
+<pre><code>IT 容量 P_IT (MW) × 负荷因子 LF(t)
+  → IT 电量 E_IT = P_IT × LF × 24                       (MWh/d)
+  → PUE(T, RH, LF)                                      【pue_mode = dynamic】
+  → 设施电量 E_fac = E_IT × PUE
+  → 排热 Q = E_fac × heat_to_cooling_fraction           【heat_basis = facility】
+  → 湿冷份额 f_wet(T_wb)                                【湿=1 / 干=0 / 混合=阈值斜坡】
+  → 蒸发 E = Q × f_wet × 3.6e6 / h_fg / 1e6
+  → CoC = min(设计值, min_i(限值_i / 混合浓度_i))        【coc_mode = quality_limited】
+  → 排浓水 B = E/(CoC−1) − 飘散；飘散 D = E·CoC/(CoC−1) × drift
+  → 内部回收量 I = B × internal_recovery_fraction（当前仅为水量项，盐质量去除未建模）
+  → 排入下水道 R = (B − I) × blowdown_return_fraction
+  → 总补水 M = E + D + B
+  → 消耗 = E + D + (B − I) × (1 − 回流率)
+  → 外部取水 = 消耗 + R
+  → WUE = 外部取水 × 1000 / E_IT                        【仅反算，不驱动补水】</code></pre>
+<p>三个关键建模决策：</p>
+<ol><li><strong>排热基数 = 设施电量</strong>。数据中心消耗的几乎全部电力最终由冷却系统排散；用 IT 电量做基数会让 PUE 与气温完全无法影响蒸发量，H2b 不可检验。</li><li><strong>CoC 受水质约束</strong>。混合水 TDS/氯化物超标时实际 CoC 被压到设计值以下。这是"再生水比例↑→水质变差→CoC↓→补水↑排浓↑"反馈链能跑出来的前提。排浓量、内部回收后的排入下水道量是两个不同指标。</li><li><strong>WUE 只反算不驱动</strong>。补水由蒸发/排污/飘散决定；否则会出现"为压 WUE 而少补水"的非物理行为。</li></ol>
+<h3 id="6-2-七种冷却技术的工程包">6.2 七种冷却技术的工程包</h3>
+<p><code>ai_scenarios.apply_ai_scenario()</code> 只替换 <code>cooling.technology</code>，<strong>不替换</strong> <code>base_pue</code>/<code>temperature_coefficient</code>。因此技术对照必须"一技术一工程"（<code>tech_*.json</code>），否则干冷与湿冷的差别只剩一个开关，PUE 温度敏感性完全不体现。</p>
+<table>
+<thead><tr><th>技术</th><th><code>technology</code></th><th>基准 PUE</th><th>温度系数 (1/℃)</th><th>PUE 修正</th><th>CoC</th><th>湿冷份额</th></tr></thead>
+<tbody>
+<tr><td><code>evaporative</code></td><td>evaporative</td><td>1.20</td><td>0.0030</td><td>0.00</td><td>5.0</td><td>恒 1.0</td></tr>
+<tr><td><code>efficient_evaporative</code></td><td>evaporative</td><td>1.17</td><td>0.0025</td><td>−0.02</td><td>7.0</td><td>恒 1.0，飘散 5e−5</td></tr>
+<tr><td><code>hybrid</code></td><td>hybrid</td><td>1.24</td><td>0.0055</td><td>+0.04</td><td>5.0</td><td>湿球 14→24 ℃ 斜坡</td></tr>
+<tr><td><code>dry_first</code></td><td>hybrid</td><td>1.30</td><td>0.0110</td><td>+0.10</td><td>6.0</td><td>湿球 <strong>18→27 ℃</strong> 斜坡（已率定）</td></tr>
+<tr><td><code>dry</code></td><td>dry</td><td>1.32</td><td>0.0130</td><td>+0.12</td><td>5.0</td><td>恒 0.0</td></tr>
+<tr><td><code>liquid_to_air</code></td><td>liquid_to_air</td><td>1.25</td><td>0.0070</td><td>+0.05</td><td>5.0</td><td>恒 0.0，排热系数 0.90</td></tr>
+<tr><td><code>liquid_to_water</code></td><td>liquid_to_water</td><td>1.18</td><td>0.0035</td><td>−0.02</td><td>6.0</td><td>恒 1.0，排热系数 0.90</td></tr>
+</tbody></table>
+<p>温度系数方向来自文献：室外气温每升 1 ℃，冷水机组 COP 降 2–3 %、PUE 升 0.3–1.0 %（【文献】ASHRAE：干冷架构 PUE 1.05–1.15 vs 传统冷冻水 1.40–1.60；Fan et al.：EER 降 1.3–8.7 %/℃）。干式/干式优先系数最大，因为逼近度随气温恶化最明显。</p>
+<h3 id="6-3-dry_first-切换阈值的率定-计算">6.3 <code>dry_first</code> 切换阈值的率定【计算】</h3>
+<p>"干式优先 + 高温蒸发辅助"用混合冷却的湿球阈值斜坡实现。<code>scripts/calibrate_dry_first.py</code> 扫描切换带，目标是把日峰值系数落进文献 6.5–10× 区间（【文献】Han/Li/Wierman/Ren 2026, arXiv:2603.02705：纯蒸发冷却塔 ≈2.2×、干式+蒸发辅助混合 6.5–10×）。</p>
+<p>D-HA、1000 MW 下的扫描（750 MW 结果一致，见 artifacts）：</p>
+<table>
+<thead><tr><th>切换带 (start→full, ℃)</th><th>全期取水 (ML)</th><th>平均湿冷份额</th><th>开蒸发辅助天数/年</th><th><strong>日峰值系数</strong></th></tr></thead>
+<tbody>
+<tr><td>22 → 30</td><td>2163.8</td><td>0.053</td><td>109</td><td>15.33 ✗</td></tr>
+<tr><td>21 → 29</td><td>3032.8</td><td>0.075</td><td>129</td><td>12.69 ✗</td></tr>
+<tr><td>20 → 28</td><td>4063.0</td><td>0.101</td><td>154</td><td>10.50 ✗ 略超</td></tr>
+<tr><td>19 → 28</td><td>4629.6</td><td>0.115</td><td>169</td><td>9.21 ✓</td></tr>
+<tr><td>18 → 28</td><td>5159.9</td><td>0.129</td><td>184</td><td>8.27 ✓</td></tr>
+<tr><td><strong>18 → 27（采用）</strong></td><td><strong>5692.8</strong></td><td><strong>0.142</strong></td><td><strong>184</strong></td><td><strong>7.49 ✓ 区间中部</strong></td></tr>
+</tbody></table>
+<p>采用 18→27 ℃：既落在文献区间中部（留余量），又保持"全年仅 14 % 时间开蒸发辅助"的干式为主语义。</p>
+<blockquote><strong>方法学提醒</strong>：凉爽端用干式优先时全年只有 1–25 天开蒸发辅助，日峰值系数分母趋近 0（实测 86–730）。这不是"超标"，而是<strong>退化统计量</strong>，必须剔除。V6 已按"年取水 &lt; 同域最大值 5 %"自动剔除（D-CO 的 <code>dry_first</code> 被正确排除）。</blockquote>
+<hr>
+<h2 id="7-情景矩阵">7. 情景矩阵</h2>
+<h3 id="7-1-s-层-城市水系统结构状态-4-档-引擎内置倍率">7.1 S 层：城市水系统结构状态（4 档，引擎内置倍率）</h3>
+<table>
+<thead><tr><th>状态</th><th>水源</th><th>给水</th><th>污水</th><th>再生水</th><th>园区接入</th><th>语义</th></tr></thead>
+<tbody>
+<tr><td>S0</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>基线</td></tr>
+<tr><td>S1</td><td>1.25</td><td>0.75</td><td>1.00</td><td>1.00</td><td>1.00</td><td>水源充裕—给水受限</td></tr>
+<tr><td>S2</td><td>0.65</td><td>1.00</td><td>1.25</td><td>1.25</td><td>1.15</td><td>淡水受限—污水与再生水较强</td></tr>
+<tr><td>S3</td><td>1.15</td><td>1.15</td><td>1.15</td><td>1.15</td><td>0.65</td><td>整体扩容—园区接入受限</td></tr>
+</tbody></table>
+<h3 id="7-2-g-层-外部压力-4-档">7.2 G 层：外部压力（4 档）</h3>
+<p><strong>G 层没有直接用引擎内置的 <code>PRESSURE_SETTINGS</code></strong>（它对全年统一 +4 ℃，会让冬季升温也进冷却计算），而是用 <code>run_r2.apply_g()</code> 的显式物理实现：</p>
+<table>
+<thead><tr><th>压力</th><th>温度</th><th>入流</th><th>取水能力</th><th>传统需求</th><th>语义</th></tr></thead>
+<tbody>
+<tr><td>G0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>常规</td></tr>
+<tr><td>G1</td><td>夏季（6–8 月）+4 ℃</td><td>—</td><td>—</td><td>—</td><td>高温</td></tr>
+<tr><td>G2</td><td>夏季 +1 ℃</td><td>汛期（6–9 月）×0.65</td><td>×0.85</td><td>—</td><td>干旱（含取水指标压减）</td></tr>
+<tr><td>G3</td><td>夏季 +4 ℃</td><td>汛期 ×0.65</td><td>×0.85</td><td>×1.12</td><td>高温—干旱复合</td></tr>
+</tbody></table>
+<h3 id="7-3-热浪极端情景">7.3 热浪极端情景</h3>
+<p>在年度气温峰值处连续 15 天 +6 ℃（不是全年升温），容量 500/1000/1500 MW。用途：检验<strong>短历时极端</strong>下哪些平时不失效的约束会被激活。</p>
+<h4 id="7-3-1-热浪结果-计算-v4-补">7.3.1 热浪结果【计算】（v4 补）</h4>
+<p><strong>D-HA</strong></p>
+<table>
+<thead><tr><th>容量 (MW)</th><th>全期取水 (ML)</th><th>最大日取水 (ML/d)</th><th>系统可靠性</th><th>给水处理峰值利用率</th><th>园区局部接入比</th><th>冷却缺水 (ML)</th></tr></thead>
+<tbody>
+<tr><td>500</td><td>14528</td><td>29.6</td><td>1.000</td><td>0.885</td><td>0.424</td><td>0</td></tr>
+<tr><td>1000</td><td>29044</td><td>47.3</td><td>1.000</td><td>0.955</td><td>0.676</td><td>0</td></tr>
+<tr><td>1500</td><td>43560</td><td>70.4</td><td>1.000</td><td>0.980</td><td>1.005</td><td>0</td></tr>
+</tbody></table>
+<p><strong>D-CO</strong></p>
+<table>
+<thead><tr><th>容量 (MW)</th><th>全期取水 (ML)</th><th>最大日取水 (ML/d)</th><th>系统可靠性</th><th>给水处理峰值利用率</th><th>园区局部接入比</th><th>冷却缺水 (ML)</th></tr></thead>
+<tbody>
+<tr><td>500</td><td>13839</td><td>29.0</td><td>1.000</td><td>0.836</td><td>0.414</td><td>0</td></tr>
+<tr><td>1000</td><td>27666</td><td>46.0</td><td>1.000</td><td>0.902</td><td>0.657</td><td>0</td></tr>
+<tr><td>1500</td><td>41492</td><td>67.6</td><td>1.000</td><td>0.968</td><td>0.965</td><td>0</td></tr>
+</tbody></table>
+<p>读法：</p>
+<ul><li>热浪<strong>没有</strong>在 1500 MW 以内造成冷却缺水（<code>unmet_cooling_water_ml</code> 全为 0），也没有把系统可靠性压到 0.99 以下——说明短历时极端在本模型里<strong>不足以单独触发供水失效</strong>，它的作用是抬高瞬时占用率。</li><li>真正被推到边界的是两个输配指标：D-HA 在 1500 MW 时<strong>园区局部接入比达 1.005（&gt;1）</strong>，给水处理峰值利用率 0.980（逼近规划裕度 0.95 上方）。D-CO 同容量为 0.965 / 0.968，<strong>未越界</strong>。</li><li>因此热浪情景的价值在于<strong>区分两端点的输配裕度</strong>，而不是制造短缺事件。这与第 9.5 节的瓶颈迁移链一致（两域的迁移顺序结构不同）。</li></ul>
+<h3 id="7-4-分配政策-3-档">7.4 分配政策（3 档）</h3>
+<table>
+<thead><tr><th>政策</th><th>引擎值</th><th>语义</th></tr></thead>
+<tbody>
+<tr><td><code>policy_a</code></td><td><code>resident_first</code></td><td>居民优先，AI 排最后</td></tr>
+<tr><td><code>policy_b</code></td><td><code>proportional</code></td><td>按剩余需求比例分摊短缺</td></tr>
+<tr><td><code>policy_c</code></td><td><code>ai_first</code></td><td>AI 优先</td></tr>
+</tbody></table>
+<hr>
+<h3 id="7-5-s-g-矩阵结果-计算-v4-补-f-段产物">7.5 S×G 矩阵结果【计算】（v4 补，F 段产物）</h3>
+<blockquote><strong>⚠️ 口径声明（2026-09-27，R5）</strong>：本节全部结果为<strong>情景响应（scenario responses）</strong>，即"在本模型的合成驱动与结构下，人为设定压力因子组合后系统如何响应"，<strong>不是气候规律或经验定律</strong>，也不可直接外推为"某地干旱比高温更致命"。表格中的 S×G 状态是<strong>模型内部的状态组合实验</strong>；结论的强度只能是"在本模型结构内，水源侧因子比温度侧因子对可靠性影响更大"——其方向性值得报告，绝对量级与排序须经真实驱动率定后才可引用。</blockquote>
+<p>基准容量 1000 MW。三张 4×4 表（完整表见 <code>state_pressure_matrix.csv</code>）：</p>
+<p><strong>D-HA · 系统可靠性</strong></p>
+<table>
+<thead><tr><th>状态</th><th>G0</th><th>G1</th><th>G2</th><th>G3</th></tr></thead>
+<tbody>
+<tr><td>S0</td><td>1.000</td><td>1.000</td><td>0.991</td><td>0.943</td></tr>
+<tr><td>S1</td><td>0.920</td><td>0.915</td><td>0.919</td><td>0.794</td></tr>
+<tr><td>S2</td><td>0.809</td><td>0.804</td><td>0.671</td><td>0.601</td></tr>
+<tr><td>S3</td><td>1.000</td><td>1.000</td><td>1.000</td><td>0.946</td></tr>
+</tbody></table>
+<p><strong>D-HA · 居民未满足量 (ML)</strong></p>
+<table>
+<thead><tr><th>状态</th><th>G0</th><th>G1</th><th>G2</th><th>G3</th></tr></thead>
+<tbody>
+<tr><td>S0</td><td>0</td><td>0</td><td>1974</td><td>13458</td></tr>
+<tr><td>S1</td><td>16889</td><td>18267</td><td>17233</td><td>48809</td></tr>
+<tr><td>S2</td><td>40908</td><td>42350</td><td>72288</td><td>97401</td></tr>
+<tr><td>S3</td><td>0</td><td>0</td><td>0</td><td>12797</td></tr>
+</tbody></table>
+<p><strong>D-HA · 水源取水占用率</strong></p>
+<table>
+<thead><tr><th>状态</th><th>G0</th><th>G1</th><th>G2</th><th>G3</th></tr></thead>
+<tbody>
+<tr><td>S0</td><td>0.927</td><td>0.946</td><td>1.000</td><td>1.000</td></tr>
+<tr><td>S1</td><td>0.772</td><td>0.790</td><td>0.913</td><td>1.000</td></tr>
+<tr><td>S2</td><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+<tr><td>S3</td><td>0.806</td><td>0.823</td><td>0.953</td><td>1.000</td></tr>
+</tbody></table>
+<p><strong>D-CO · 系统可靠性</strong></p>
+<table>
+<thead><tr><th>状态</th><th>G0</th><th>G1</th><th>G2</th><th>G3</th></tr></thead>
+<tbody>
+<tr><td>S0</td><td>1.000</td><td>1.000</td><td>1.000</td><td>0.982</td></tr>
+<tr><td>S1</td><td>0.956</td><td>0.949</td><td>0.954</td><td>0.873</td></tr>
+<tr><td>S2</td><td>0.873</td><td>0.868</td><td>0.728</td><td>0.651</td></tr>
+<tr><td>S3</td><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+</tbody></table>
+<p><strong>D-CO · 居民未满足量 (ML)</strong></p>
+<table>
+<thead><tr><th>状态</th><th>G0</th><th>G1</th><th>G2</th><th>G3</th></tr></thead>
+<tbody>
+<tr><td>S0</td><td>0</td><td>0</td><td>0</td><td>4184</td></tr>
+<tr><td>S1</td><td>9136</td><td>10513</td><td>9481</td><td>29341</td></tr>
+<tr><td>S2</td><td>26293</td><td>27669</td><td>57582</td><td>82295</td></tr>
+<tr><td>S3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p><strong>D-CO · 水源取水占用率</strong></p>
+<table>
+<thead><tr><th>状态</th><th>G0</th><th>G1</th><th>G2</th><th>G3</th></tr></thead>
+<tbody>
+<tr><td>S0</td><td>0.854</td><td>0.872</td><td>1.000</td><td>1.000</td></tr>
+<tr><td>S1</td><td>0.707</td><td>0.724</td><td>0.836</td><td>0.954</td></tr>
+<tr><td>S2</td><td>1.000</td><td>1.000</td><td>1.000</td><td>1.000</td></tr>
+<tr><td>S3</td><td>0.743</td><td>0.758</td><td>0.878</td><td>0.983</td></tr>
+</tbody></table>
+<p><strong>三个可直接写进论文的观察</strong>：</p>
+<ol><li><strong>最不利的城市状态是 S2（淡水受限—污水与再生水较强），不是 S1（给水受限）。</strong> 两域在 S2 下系统可靠性降到 <strong>0.601（HA）/ 0.651（CO）</strong>、居民未满足量升到 <strong>97 401 / 82 295 ML</strong>，且水源取水占用率在所有压力下<strong>恒为 1.000</strong>（完全饱和）。S1 下可靠性仍有 0.79–0.92。这直接印证第 9.4 节的结论：<strong>承载上限由水源取水决定</strong>——把水源压到 0.65 倍（S2）比把给水压到 0.75 倍（S1）致命得多。</li><li><strong>S3（整体扩容—园区接入受限）在两域都是最优状态</strong>：可靠性 1.000（CO 全域）、居民缺水 0（CO 全域；HA 仅 G3 有 12 797 ML）。因为它把所有水侧能力同时放大 1.15 倍，代价只落在园区接入上——而 1000 MW 尚未触及接入瓶颈。</li><li><strong>压力的主次与直觉相反：干旱（G2）比高温（G1）更致命。</strong> G1（夏季 +4 ℃）对可靠性几乎无影响（HA 的 S0：1.000 → 1.000），而 G2（汛期入流 ×0.65 + 取水能力 ×0.85）立刻把取水占用率推到 1.000 并产生居民缺水。原因是本模型的蒸发量由排热量决定，气温只经 PUE 与湿冷份额间接传导（6.1 节），信号被稀释；而干旱直接削减水源侧可用量。<strong>这意味着"AI 园区在高温城市"不是最坏组合，"AI 园区在缺水城市"才是。</strong></li></ol>
+<blockquote>注意：G1 的弱响应与第 14 节 V9 的结论同源——气候信号必须按季节切片才看得见（夏季取水 +0.98 %/+1.00 %），全年或全状态平均会把它稀释掉。S×G 表用的是全年值，故 G1 列看起来"没有影响"，这不矛盾。</blockquote>
+<hr>
+<h2 id="8-承载约束集与-可失效性">8. 承载约束集与"可失效性"</h2>
+<h3 id="8-1-约束清单">8.1 约束清单</h3>
+<table>
+<thead><tr><th>约束</th><th>算子</th><th>阈值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><code>system_reliability_fraction</code></td><td>≥</td><td>0.99</td><td>供水可靠性</td></tr>
+<tr><td><code>domestic_unmet_ml</code></td><td>≤</td><td>0</td><td>居民零缺水（伦理底线）</td></tr>
+<tr><td><code>unmet_cooling_water_ml</code></td><td>≤</td><td>0</td><td>冷却不断水（AI 运行底线）</td></tr>
+<tr><td><code>max_wtw_utilization</code></td><td>≤</td><td><strong>0.95</strong></td><td>规划裕度（引擎硬截断使 ≤1 恒真）</td></tr>
+<tr><td><code>max_wwtw_utilization</code></td><td>≤</td><td><strong>0.95</strong></td><td>同上</td></tr>
+<tr><td><code>max_reuse_utilization</code></td><td>≤</td><td><strong>0.95</strong></td><td>同上；<strong>仅年尺度</strong>（判「是否闲置」）。日/小时/概率三套约束集已剔除它——再生水厂配贮池，日处理速率达铭牌是正常调蓄（3.4 机制三）</td></tr>
+<tr><td><code>max_source_abstraction_ratio</code></td><td>≤</td><td><strong>0.95</strong></td><td>同上（本次新增指标）</td></tr>
+<tr><td><code>reclaimed_water_substitution_ratio</code></td><td>≥</td><td>0.65 / 0.40</td><td>分域再生水政策目标</td></tr>
+<tr><td><code>peak_capacity_ratio</code></td><td>≤</td><td>1.00</td><td>软指标（可 &gt;1），直接用 1</td></tr>
+<tr><td><code>max_local_connection_ratio</code></td><td>≤</td><td>1.00</td><td>软指标</td></tr>
+<tr><td><code>max_daily_average_grid_connection_ratio</code></td><td>≤</td><td>1.00</td><td>软指标</td></tr>
+</tbody></table>
+<h3 id="8-2-可失效性诊断-计算">8.2 可失效性诊断【计算】</h3>
+<p>D-HA（0–2000 MW 细网格，按首次失效容量排序）：</p>
+<p><strong>D-HA</strong>（0–2000 MW 细网格，按首次失效容量排序）：</p>
+<table>
+<thead><tr><th>约束</th><th>可失效</th><th>首次失效容量</th><th>首次失效时的裕度</th></tr></thead>
+<tbody>
+<tr><td><code>max_wtw_utilization</code></td><td>是</td><td>1200 MW</td><td>0.0015</td></tr>
+<tr><td><code>max_source_abstraction_ratio</code></td><td>是</td><td>1200 MW</td><td>0.0050</td></tr>
+<tr><td><code>reclaimed_water_substitution_ratio</code></td><td>是</td><td>1350 MW</td><td>0.0156</td></tr>
+<tr><td><code>max_daily_average_grid_connection_ratio</code></td><td>是</td><td>1450 MW</td><td>0.0061</td></tr>
+<tr><td><code>max_local_connection_ratio</code></td><td>是</td><td>1550 MW</td><td>0.0329</td></tr>
+<tr><td><code>peak_capacity_ratio</code></td><td>是</td><td>1750 MW</td><td>0.0010</td></tr>
+<tr><td><code>domestic_unmet_ml</code></td><td>是</td><td>1850 MW</td><td>307.7 ML</td></tr>
+<tr><td><code>max_wwtw_utilization</code></td><td><strong>否</strong></td><td>—</td><td>—</td></tr>
+<tr><td><code>system_reliability_fraction</code></td><td><strong>否</strong></td><td>—</td><td>—</td></tr>
+<tr><td><code>unmet_cooling_water_ml</code></td><td><strong>否</strong></td><td>—</td><td>—</td></tr>
+</tbody></table>
+<p><strong>D-CO</strong>：</p>
+<table>
+<thead><tr><th>约束</th><th>可失效</th><th>首次失效容量</th><th>首次失效时的裕度</th></tr></thead>
+<tbody>
+<tr><td><code>max_daily_average_grid_connection_ratio</code></td><td>是</td><td>1500 MW</td><td>0.0274</td></tr>
+<tr><td><code>max_local_connection_ratio</code></td><td>是</td><td>1600 MW</td><td>0.0145</td></tr>
+<tr><td><code>max_wtw_utilization</code></td><td>是</td><td>1600 MW</td><td>0.0003</td></tr>
+<tr><td><code>max_source_abstraction_ratio</code></td><td>是</td><td>1800 MW</td><td>0.0060</td></tr>
+<tr><td><code>domestic_unmet_ml</code>、<code>max_wwtw_utilization</code>、<code>peak_capacity_ratio</code>、<code>reclaimed_water_substitution_ratio</code>、<code>system_reliability_fraction</code>、<code>unmet_cooling_water_ml</code></td><td><strong>否</strong></td><td>—</td><td>—</td></tr>
+</tbody></table>
+<p>与 v2 相比，可失效约束从 D-HA 8 条 / D-CO 5 条变为 <strong>7 条 / 4 条</strong>，且<strong>首次失效容量整体右移</strong>（v2 最早 400 MW，v3 最早 1200 MW）。原因正是审计修复：v2 里最早失效的 <code>max_reuse_utilization</code>（400 MW）是产能贴着产水量造成的假瓶颈，剔除后暴露出真正的输配瓶颈（给水处理、取水能力）。</p>
+<p>"否"的处理不变：保留为<strong>诊断项</strong>，用 V10 检验它们能否被压力情景激活。实测 S×G 中系统可靠性最低降到 <strong>0.601（HA）/ 0.651（CO）</strong>、水源取水占用率最高到 <strong>1.000</strong>；热浪下 1500 MW 时园区局部接入比达 <strong>1.005（HA）/ 0.965（CO）</strong>——压力情景确实能激活它们。</p>
+<hr>
+<h2 id="9-多时间尺度-cawcc">9. 多时间尺度 CAWCC</h2>
+<h3 id="9-1-年尺度">9.1 年尺度</h3>
+<p>统计<strong>年均利用率</strong>（<code>mean_<em></code>），约束把 <code>max_</em></code> 换成 <code>mean_*</code>，阈值不变；网格 0–2000 MW / 步长 50 MW。</p>
+<h3 id="9-2-日尺度">9.2 日尺度</h3>
+<p>统计<strong>日最大利用率</strong>（<code>max_*</code>），同一网格。</p>
+<h3 id="9-3-小时尺度-量纲修正">9.3 小时尺度（量纲修正）</h3>
+<p>引擎内置的旧版 <code>research.hourly_stress_scan</code> 把日峰值比除以 24，等于<strong>拿小时流量比日容量</strong>。修正版使用<strong>日内峰值系数</strong> <code>intra = profile.max / profile.mean</code>（训练/推理日内曲线算出，当前为 <strong>1.0577</strong>），只对 AI 相对 0 MW 城市基线的增量施加该系数；城市原有负荷不被错误放大。</p>
+<pre><code>小时判据值 = 日峰值统计 × intra   →   &quot;日峰值那天最忙的那一小时&quot;</code></pre>
+<h3 id="9-4-结果-计算">9.4 结果【计算】</h3>
+<blockquote><strong>读表口径</strong>：下表"CAWCC(年)"是<strong>综合口径</strong>（物理约束 + 再生水政策目标取更严者）。HA 的 1300 MW 由政策目标 <code>reclaimed_water_substitution_ratio</code> 控制，其<strong>纯物理年边界为 1650 MW</strong>（见 <code>ha/capacity_threshold_corrected.json</code> 的 <code>physical_annual</code>）。"CAWCC(小时)"是<strong>小时代理</strong>（日结果叠加日内峰值系数），不是小时遥测。四项 estimand 的完整对照见本文顶部 R4 块。</blockquote>
+<table>
+<thead><tr><th>端点</th><th>CAWCC(年)</th><th>限制约束（年）</th><th>CAWCC(日)</th><th>限制约束（日）</th><th>CAWCC(小时)</th><th>限制约束（小时）</th></tr></thead>
+<tbody>
+<tr><td><strong>D-HA</strong></td><td><strong>1300 MW</strong></td><td><code>reclaimed_water_substitution_ratio</code></td><td><strong>1150 MW</strong></td><td><code>max_source_abstraction_ratio</code></td><td><strong>1100 MW</strong></td><td><code>hourly_max_wtw_utilization</code></td></tr>
+<tr><td><strong>D-CO</strong></td><td><strong>1700 MW</strong></td><td><code>mean_daily_average_grid_connection_ratio</code></td><td><strong>1450 MW</strong></td><td><code>max_daily_average_grid_connection_ratio</code></td><td><strong>1350 MW</strong></td><td><code>hourly_max_daily_average_grid_connection_ratio</code></td></tr>
+</tbody></table>
+<p><strong>H2 成立</strong>（V4 通过，两域；HA 1300 ≥ 1150 ≥ 1100，CO 1700 ≥ 1450 ≥ 1350）。但读数方式必须与 v2 完全不同：</p>
+<ul><li><strong>"年 vs 日"的差异来自统计量和目标的分离</strong>。D-HA 年边界 1300 MW 由再生水替代率目标控制，日边界 1150 MW 由水源取水峰值控制；D-CO 年边界 1700 MW 由平均日接网比控制，日边界 1450 MW 由峰值日接网比控制。v2 报的"年 1200 vs 日 350，3.4 倍"里，绝大部分是<strong>假瓶颈 <code>max_reuse_utilization</code> 造成的</strong>，不是真实的统计口径效应。</li><li><strong>日 vs 小时的差包含城市基线与 AI 增量的分离</strong>：HA 1150 → 1100（<strong>−4 %</strong>）、CO 1450 → 1350（<strong>−7 %</strong>）。量级与日内峰值系数 1.0577 及日峰值过程一致；小时值是日内代理，不替代小时遥测。</li><li><strong>物理边界和政策目标边界已分开</strong>。HA 的日物理边界由水源取水控制，年边界先遇到再生水替代率目标；CO 的年/日边界均由接网统计量控制。凉爽端年边界为 1700 MW，高于 HA 的 1300 MW，主要来自总体水需求和电力统计量的差异；这不等同于真实城市的许可容量。</li></ul>
+<blockquote><strong>v3 对 v2 结论的修正</strong>：v2 的"再生水深度处理能力是主导瓶颈"是<strong>审计失真造成的错误结论</strong>。修正后的正确表述是——<strong>再生水决定的是"替代率"这类政策指标能否达标，而承载容量的上限由水源取水能力与给水处理能力决定</strong>。这两件事在 v2 里被一个恒真的 <code>max_reuse_utilization</code> 混为一谈了。</blockquote>
+<h3 id="9-5-瓶颈迁移链-计算-日尺度-按首次失效容量排序">9.5 瓶颈迁移链【计算】（日尺度，按首次失效容量排序）</h3>
+<table>
+<thead><tr><th>序</th><th>D-HA</th><th>D-CO</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1200 MW 水源取水能力 / 给水处理（并列）</td><td>1500 MW <strong>接网容量（电力）</strong></td></tr>
+<tr><td>2</td><td>1350 MW 再生水替代率</td><td>1600 MW 园区局部接入 / 给水处理（并列）</td></tr>
+<tr><td>3</td><td>1450 MW <strong>接网容量（电力）</strong></td><td>1800 MW 水源取水能力</td></tr>
+<tr><td>4</td><td>1550 MW 园区局部接入</td><td>—</td></tr>
+<tr><td>5</td><td>1750 MW 园区峰值取水</td><td>—</td></tr>
+<tr><td>6</td><td>1850 MW 居民缺水</td><td>—</td></tr>
+</tbody></table>
+<p>这条链是 H1 的直接证据，且两域的迁移顺序<strong>结构不同</strong>：</p>
+<ul><li><strong>D-HA</strong>：水侧（取水 → 给水）→ 再生水政策指标 → 电力 → 园区接入 → 峰值取水 → 居民缺水。水侧先到顶，电力侧夹在中间。</li><li><strong>D-CO</strong>：电力侧<strong>直接排第一</strong>（1500 MW 接网容量先失效），水侧第 2 位。凉爽端水宽裕到"电力先不够用"。</li></ul>
+<p>因此<strong>瓶颈迁移顺序是结构依赖的，不能只报一个端点</strong>。同时注意：D-CO 在 2000 MW 内居民不缺水、再生水替代率不失效，说明凉爽端尚未进入短缺区——政策类结论在凉爽端没有区分度（见 11.3 与 16 节）。</p>
+<hr>
+<h2 id="10-干预方案集与边际有效性">10. 干预方案集与边际有效性</h2>
+<h3 id="10-1-干预清单">10.1 干预清单</h3>
+<p>干预幅度<strong>以该域自身基线为分母</strong>生成（<code>specs/interventions_&lt;domain&gt;.json</code>），不再用一组固定数值同时作用于两个不同基线——v2 的 <code>wtw_plus_10pct</code> 写 440 ML/d，对基线 330 的 D-HA 实为 <strong>+33 %</strong>，而 <code>grid_plus_50pct</code> 写 1800 MW 实为 <strong>+20 %</strong>，名实不符。</p>
+<table>
+<thead><tr><th>干预</th><th>D-HA 取值</th><th>D-CO 取值</th><th>相对该域基线</th></tr></thead>
+<tbody>
+<tr><td><code>baseline</code></td><td>—</td><td>—</td><td>同网格基准</td></tr>
+<tr><td><code>wtw_plus_10pct</code></td><td>407 ML/d</td><td>418 ML/d</td><td>+10 %（基线 370 / 380）</td></tr>
+<tr><td><code>wtw_plus_20pct</code></td><td>444 ML/d</td><td>456 ML/d</td><td>+20 %</td></tr>
+<tr><td><code>reuse_plus_50pct</code></td><td>60 ML/d</td><td>54 ML/d</td><td>+50 %（基线 40 / 36）</td></tr>
+<tr><td><code>reuse_plus_100pct</code></td><td>80 ML/d</td><td>72 ML/d</td><td>+100 %</td></tr>
+<tr><td><code>wwtw_plus_20pct</code></td><td>324 ML/d</td><td>324 ML/d</td><td>+20 %（基线 270）</td></tr>
+<tr><td><code>local_connection_plus_50pct</code></td><td>105 ML/d</td><td>105 ML/d</td><td>+50 %（基线 70）</td></tr>
+<tr><td><code>grid_plus_50pct</code></td><td>2250 MW</td><td>2250 MW</td><td>+50 %（基线 1500）</td></tr>
+<tr><td><code>leakage_minus_30pct</code></td><td>0.084</td><td>0.084</td><td>−30 %（基线 0.12）</td></tr>
+<tr><td><code>combined_upgrade</code></td><td>407 + 60 + 0.084</td><td>418 + 54 + 0.084</td><td>给水 +10 %、再生水 +50 %、漏损 −30 %</td></tr>
+</tbody></table>
+<p>网格 <strong>0–2000 MW / 步长 100 MW</strong>（v2 是 200 MW 步长，会把 &lt; 200 MW 的真实增益全部抹平为 0）。<strong>排除 0 MW</strong>：没有数据中心时"再生水替代率"无定义（=0），会被误判为违反 ≥0.65 的约束，污染瓶颈归因。</p>
+<h3 id="10-2-结果-计算">10.2 结果【计算】</h3>
+<table>
+<thead><tr><th>干预</th><th>D-HA CAWCC</th><th>增益</th><th>D-HA 限制约束</th><th>D-CO CAWCC</th><th>增益</th><th>D-CO 限制约束</th></tr></thead>
+<tbody>
+<tr><td>baseline</td><td>1100</td><td>—</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>—</td><td><code>max_daily_average_grid_connection_ratio</code></td></tr>
+<tr><td>给水 +10 %</td><td>1100</td><td>0</td><td>水源取水占用率</td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>给水 +20 %</td><td>1100</td><td>0</td><td>水源取水占用率</td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>再生水 +50 %</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>再生水 +100 %</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>污水 +20 %</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>园区接入 +50 %</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>接网 +50 %</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td><strong>1500</strong></td><td><strong>+100</strong></td><td><code>max_wtw_utilization</code></td></tr>
+<tr><td><strong>漏损 −30 %</strong></td><td><strong>1300</strong></td><td><strong>+200</strong></td><td>再生水替代率</td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td><strong>组合升级</strong></td><td><strong>1300</strong></td><td><strong>+200</strong></td><td>再生水替代率</td><td>1400</td><td>0</td><td>接网容量</td></tr>
+</tbody></table>
+<p><strong>结论与 v2 完全相反，这是审计带来的最重要修正</strong>：</p>
+<ol><li><strong>再生水"处理能力"干预全部 0 增益</strong>（+50 % / +100 % 都是 0）。因为处理能力只决定上限，真正决定送出量的是有多少污水被分流过来（3.4 机制二）。v2 报的"+1000 MW"是假瓶颈造成的假象。</li><li><strong>真正有效的单项干预是降漏损</strong>（D-HA +200 MW）与<strong>扩接网</strong>（D-CO +100 MW），且<strong>两域不同</strong>：D-HA 的水侧瓶颈在给水/取水，降漏损直接减少取水量因而有效；D-CO 的瓶颈是电力接网，只有扩接网有效。</li><li><strong>组合升级的收益完全来自其中的降漏损项</strong>（HA +200 = 单独降漏损 +200），给水与再生水两项贡献为 0。</li><li><strong>"哪个干预有效"高度依赖端点的瓶颈结构</strong>——不存在普适最优干预。这比 v2 的"再生水万能"更弱，但更真。</li></ol>
+<blockquote>网格分辨率说明：1100 / 1400 MW 是 100 MW 步长网格在真实边界（1150 / 1450 MW）处的下界。此表用于<strong>干预间横向比较</strong>，绝对值须以 9.4 为准。</blockquote>
+<h3 id="10-3-再生水能力边际有效性曲线-计算-h3-的直接证据">10.3 再生水能力边际有效性曲线【计算】（H3 的直接证据）</h3>
+<p>H3 必须用<strong>两个杠杆分别做</strong>，因为它们的边际有效性完全不同（<code>reuse_marginal_curve.csv</code> vs <code>reuse_production_marginal_curve.csv</code>）。</p>
+<p><strong>杠杆 A：处理能力 <code>treatment_capacity_ml_day</code>（无效）</strong></p>
+<table>
+<thead><tr><th>处理能力 (ML/d)</th><th>D-HA CAWCC</th><th>边际</th><th>限制约束</th><th>D-CO CAWCC</th><th>边际</th><th>限制约束</th></tr></thead>
+<tbody>
+<tr><td>40 / 36（基线）</td><td>1100</td><td>—</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>—</td><td>接网容量</td></tr>
+<tr><td>45</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>60</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>75 / 90 / 120 / 160</td><td>1100</td><td>0</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>0</td><td>接网容量</td></tr>
+</tbody></table>
+<p><strong>边际恒为 0</strong>。这条曲线直接证伪了 v2 的 H3——v2 报的 36.4 → 26.7 → 13.3 → 0 MW per ML/d 三段递减，实际是"产能贴着产水量、产能一扩就立刻不再贴"的数值假象，不是真实的边际递减。</p>
+<p><strong>杠杆 B：产水量 <code>central_reuse_fraction</code>（有效，但有效区间很窄）</strong></p>
+<table>
+<thead><tr><th>分流比例</th><th>产水量 (ML/d)</th><th>配套处理能力</th><th>D-HA CAWCC</th><th>边际 (MW per ML/d)</th><th>限制约束</th><th>D-CO CAWCC</th><th>边际</th><th>限制约束</th></tr></thead>
+<tbody>
+<tr><td>0.16 / 0.15（基线）</td><td>32.2 / 29.6</td><td>40.3 / 37.0</td><td>1100</td><td>—</td><td><code>max_wtw_utilization</code></td><td>1400</td><td>—</td><td>接网容量</td></tr>
+<tr><td>0.25</td><td>50.4 / 49.3</td><td>62.9 / 61.6</td><td><strong>1400</strong></td><td><strong>16.6</strong></td><td>接网容量</td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>0.35</td><td>70.5 / 69.0</td><td>88.1 / 86.3</td><td>1400</td><td>0</td><td>接网容量</td><td>1400</td><td>0</td><td>接网容量</td></tr>
+<tr><td>0.45 / 0.60</td><td>90.6–120.8</td><td>113–151</td><td>1400</td><td>0</td><td>接网容量</td><td>1400</td><td>0</td><td>接网容量</td></tr>
+</tbody></table>
+<p><strong>修正后的 H3</strong>：</p>
+<ol><li><strong>有效段</strong>：D-HA 分流比例 0.16 → 0.25（产水 32 → 50 ML/d），CAWCC 1100 → 1400 MW，边际 <strong>16.6 MW per ML/d</strong>。机理是再生水顶替下来的自来水需求减少，给水处理厂不再是最紧约束。</li><li><strong>失效段（立刻到来）</strong>：再往上边际<strong>立刻归零</strong>，因为瓶颈迁移到<strong>接网容量 1500 MW</strong>。D-CO 则<strong>从基线起就无效</strong>——它的第一个瓶颈本来就是电力接网，再生水再多也用不上。</li><li><strong>转折点</strong>：D-HA 约 <strong>50 ML/d 产水量（分流 0.25）</strong>；D-CO <strong>无有效段</strong>（0 MW 增益）。</li></ol>
+<blockquote><strong>H3 的最终表述</strong>（可直接写进论文）：再生水的<strong>边际有效性受制于下一个瓶颈的位置</strong>。在缺水瓶颈为"给水处理"的城市，提高再生水产水量有明确收益，但收益在瓶颈迁移到电力/园区接入时立刻归零；在电力先到顶的城市，提高再生水产水量对承载容量<strong>毫无帮助</strong>。因此"多建再生水厂"不是普适的扩容手段，必须先诊断瓶颈链。</blockquote>
+<h3 id="10-4-干预的成本效益与-pareto-前沿-计算-v4-新增">10.4 干预的成本效益与 Pareto 前沿【计算】（v4 新增）</h3>
+<p><strong>为什么补这一块。</strong> 10.2 节只回答了"哪个干预能增加多少 MW"，没有回答"要花多少钱"。<strong>增益为 0 的干预不等于不值得做（可能有其他收益），也不等于便宜；增益为 200 MW 的干预如果造价是另一个的十倍，结论就会翻转。</strong> 不给出造价，10.2 节的排序不能用于规划。</p>
+<p><strong>造价参数</strong>（<code>cost_parameters.csv</code>，9 条，逐条标注来源与来源性质）：</p>
+<table>
+<thead><tr><th>项</th><th>单位造价</th><th>来源性质</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>给水厂扩容增量</td><td>2170–2715 元/(m³·d)</td><td>GREY</td><td>行业造价摘录，<strong>待回溯定额</strong></td></tr>
+<tr><td>污水厂扩容增量</td><td>1630–2170 元/(m³·d)</td><td>GREY</td><td>同上</td></tr>
+<tr><td>中水回用设施</td><td>5000–7000 元/(m³·d)</td><td>GREY</td><td>同上</td></tr>
+<tr><td>110 kV 变电站</td><td>625 元/kVA</td><td><strong>OFFICIAL</strong></td><td>南方电网办基建〔2022〕28 号</td></tr>
+<tr><td>数据中心专用站</td><td>369–769 元/kVA</td><td><strong>CASE</strong></td><td>呼市核准批复 + 贵安 EPC 中标</td></tr>
+<tr><td>漏损治理</td><td>5.38–10.0 元/(m³·a)</td><td><strong>CASE</strong></td><td>两个 DMA 治理案例</td></tr>
+<tr><td>本地接水造价指标</td><td>—</td><td><strong>MISSING</strong></td><td><code>AUTHOR_INPUT_NEEDED</code>，故该项投资留空</td></tr>
+</tbody></table>
+<p><strong>结果</strong>（<code>intervention_cost_benefit.csv</code>，投资为中值，工程量按各自口径折算）：</p>
+<table>
+<thead><tr><th>域</th><th>干预</th><th>CAWCC 增益</th><th>投资中值（万元）</th><th>单位成本（万元/MW）</th><th>Pareto</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td><strong>漏损 −30 %</strong></td><td><strong>+200</strong></td><td><strong>2766.6</strong></td><td><strong>13.83</strong></td><td><strong>有效</strong></td></tr>
+<tr><td>D-HA</td><td>组合升级</td><td>+200</td><td>23 803.9</td><td>119.02</td><td>被支配</td></tr>
+<tr><td>D-HA</td><td>接网 +50 %</td><td>0</td><td>44 921.1</td><td>—</td><td>被支配</td></tr>
+<tr><td>D-HA</td><td>其余 6 项</td><td>0</td><td>9 037–24 000</td><td>—</td><td>被支配</td></tr>
+<tr><td>D-CO</td><td><strong>接网 +50 %</strong></td><td><strong>+100</strong></td><td><strong>44 921.1</strong></td><td><strong>449.21</strong></td><td><strong>有效</strong></td></tr>
+<tr><td>D-CO</td><td>漏损 −30 %</td><td>0</td><td>2 718.8</td><td>—</td><td>被支配</td></tr>
+<tr><td>D-CO</td><td>组合升级</td><td>0</td><td>22 800.3</td><td>—</td><td>被支配</td></tr>
+<tr><td>D-CO</td><td>其余 6 项</td><td>0</td><td>9 282–21 600</td><td>—</td><td>被支配</td></tr>
+</tbody></table>
+<p><strong>三条结论</strong>：</p>
+<ol><li><strong>两个端点各自只有一项干预是有效且不被支配的，并且完全不同</strong>：D-HA 是<strong>降漏损</strong>（13.83 万元/MW），D-CO 是<strong>扩接网</strong>（449.21 万元/MW）。单位成本相差 <strong>32.5 倍</strong>。这把 10.2 节的"不存在普适最优干预"从定性推进到了定量。</li><li><strong>"对症"与"不对症"的代价是可量化的</strong>：把 D-CO 的方案（扩接网）用到 D-HA，花 4.49 亿元买 <strong>0 MW</strong>；把 D-HA 的方案（降漏损）用到 D-CO，花 2 719 万元买 <strong>0 MW</strong>。10 个干预里有 <strong>8 个</strong>在至少一个域是"零增益但仍需投资"的。</li><li><strong>组合升级在两个域都是劣选项</strong>：D-HA 下它与单独降漏损增益相同（+200 MW）但造价是 <strong>8.6 倍</strong>；D-CO 下增益为 0 而造价 2.28 亿元。<strong>"打包建设"在本模型中没有任何一处优于单项对症干预。</strong></li></ol>
+<blockquote><strong>实现陷阱（值得记录）</strong>：Pareto 候选集<strong>必须包含 baseline（投资 0、增益 0）</strong>。初版把投资 &gt; 0 作为候选条件，结果 D-CO 的"漏损 −30 %"（0 增益、2 719 万元）因为"没有更便宜的选项能支配它"而进入了有效集——这是纯判定伪影。纳入 baseline 后它被正确剔除。<strong>零增益且非零投资的方案在任何情况下都不应出现在 Pareto 前沿上。</strong></blockquote>
+<p><strong>局限（必须写明）</strong>：造价参数中 3 条为 GREY（行业摘录）、1 条 MISSING，投资额是<strong>量级估计</strong>不是预算。上述 32.5 倍的倍数关系在 GREY 参数的取值区间内是稳健的（两端造价参数相差不超过 1.5 倍，而倍数差 32.5 倍），但<strong>绝对值不可直接用于工程决策</strong>。R3 须把 GREY 项回溯到造价定额，并补上本地接水造价指标。</p>
+<hr>
+<h2 id="11-机制实验">11. 机制实验</h2>
+<h3 id="11-1-再生水比例-水质约束-coc-补水-排水-1000-mw-2-年累计-计算-实际份额为全期体积加权">11.1 再生水比例 → 水质约束 CoC → 补水/排水（1000 MW，2 年累计）【计算；实际份额为全期体积加权】</h3>
+<table>
+<thead><tr><th>域</th><th>目标份额</th><th>实际份额</th><th>CoC</th><th>全期毛取水 (ML)</th><th>全期排浓水（回收前，ML）</th><th>排入下水道 (ML)</th><th>AI potable (ML)</th><th>AI 再生水 (ML)</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td>0.0</td><td>0.000</td><td>5.000</td><td>27 973</td><td>5 703</td><td>5 133</td><td>27 973</td><td>0</td></tr>
+<tr><td>D-HA</td><td>0.2</td><td>0.200</td><td>5.000</td><td>27 973</td><td>5 703</td><td>5 133</td><td>22 379</td><td>5 595</td></tr>
+<tr><td>D-HA</td><td>0.4</td><td>0.400</td><td>5.000</td><td>27 973</td><td>5 703</td><td>5 133</td><td>16 784</td><td>11 189</td></tr>
+<tr><td>D-HA</td><td>0.6</td><td>0.600</td><td>4.762</td><td>28 299</td><td>6 064</td><td>5 458</td><td>11 319</td><td>16 979</td></tr>
+<tr><td>D-HA</td><td>0.8</td><td>0.794</td><td>3.975</td><td>29 738</td><td>7 663</td><td>6 897</td><td>6 130</td><td>23 607</td></tr>
+<tr><td>D-HA</td><td>0.9</td><td>0.823</td><td>3.875</td><td>29 970</td><td>7 921</td><td>7 129</td><td>5 299</td><td>24 671</td></tr>
+<tr><td>D-CO</td><td>0.8</td><td>0.767</td><td>4.064</td><td>29 182</td><td>7 345</td><td>6 610</td><td>—</td><td>—</td></tr>
+<tr><td>D-CO</td><td>0.9</td><td>0.774</td><td>4.040</td><td>29 234</td><td>7 402</td><td>6 662</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<ol><li><strong>蒸发基本恒定</strong>（D-HA 22 841 ML 的耗水量；D-CO 为 22 572 ML）——只由排热量决定，与水源无关，这是物理正确的。</li><li><strong>再生水份额↑ → 混合水 TDS/氯化物↑ → 水质约束把 CoC 压低</strong>。在 0→0.9 的当前点值扫描中，D-HA CoC 5.000→3.875、毛取水 +7.14%、排浓水 +38.89%；D-CO CoC 5.000→4.040、毛取水 +5.75%、排浓水 +31.35%。R8/R9 证据脚本将冷却储水容量和初始库存设为 0，并另报实际排入下水道量；冷却储水水质状态和内部回收流盐质量尚未建模。</li><li><strong>实际份额在 0.823（D-HA）/0.774（D-CO）附近封顶</strong>（本轮扫描到目标 0.9；全期体积加权）——现有中央回用池的当日可交付量不足以满足更高目标。质量求解使用期初可交付量；证据情景冷却储水容量和初始库存为 0。</li><li>该反馈链在两个域都通过 CoC、单位散热取水和排入下水道量的单调性检查，但目前只能作为固定水质点值、单中央回用池、零冷却储水和单活跃数据中心下的条件机制结果，不能外推为普适最优比例。</li></ol>
+<p>这条链就是"提高再生水比例不会等量减少淡水取水，还会增加总取水与排入下水道量"的机制证据，也是本课题区别于"简单用再生水替代淡水"叙事的核心结果。</p>
+<h3 id="11-2-冷却技术对照-计算-750-mw">11.2 冷却技术对照【计算】（750 MW）</h3>
+<p><strong>D-HA</strong>（750 MW；WUE 一律按 <strong>IT 电量</strong>口径，L/kWh\_IT）</p>
+<table>
+<thead><tr><th>技术</th><th>平均 PUE</th><th>WUE</th><th>湿冷份额</th><th>年取水 (ML/a)</th><th>年消耗 (ML/a)</th><th>日峰值系数</th><th>该技术下 CAWCC(日)</th></tr></thead>
+<tbody>
+<tr><td><code>dry</code></td><td>1.356</td><td>0.000</td><td>0.000</td><td>0</td><td>0</td><td>退化</td><td>—</td></tr>
+<tr><td><code>liquid_to_air</code></td><td>1.255</td><td>0.000</td><td>0.000</td><td>0</td><td>0</td><td>退化</td><td>—</td></tr>
+<tr><td><code>dry_first</code></td><td>1.329</td><td>0.434</td><td>0.142</td><td>2 139</td><td>1 678</td><td><strong>7.48</strong></td><td>500 MW</td></tr>
+<tr><td><code>hybrid</code></td><td>1.244</td><td>0.657</td><td>0.246</td><td>3 236</td><td>2 542</td><td>4.31</td><td>1000 MW</td></tr>
+<tr><td><code>liquid_to_water</code></td><td>1.137</td><td>1.917</td><td>1.000</td><td>9 446</td><td>7 429</td><td>1.34</td><td>1000 MW</td></tr>
+<tr><td><code>efficient_evaporative</code></td><td>1.134</td><td>2.122</td><td>1.000</td><td>10 456</td><td>8 224</td><td>1.31</td><td>1000 MW</td></tr>
+<tr><td><code>evaporative</code></td><td>1.181</td><td>2.210</td><td>1.000</td><td>10 889</td><td>8 565</td><td>1.29</td><td>1000 MW</td></tr>
+</tbody></table>
+<p><strong>D-CO</strong></p>
+<table>
+<thead><tr><th>技术</th><th>平均 PUE</th><th>WUE</th><th>湿冷份额</th><th>年取水 (ML/a)</th><th>年消耗 (ML/a)</th><th>日峰值系数</th><th>该技术下 CAWCC(日)</th></tr></thead>
+<tbody>
+<tr><td><code>dry</code></td><td>1.298</td><td>0.000</td><td>0.000</td><td>0</td><td>0</td><td>退化</td><td>—</td></tr>
+<tr><td><code>liquid_to_air</code></td><td>1.223</td><td>0.000</td><td>0.000</td><td>0</td><td>0</td><td>退化</td><td>—</td></tr>
+<tr><td><code>dry_first</code></td><td>1.279</td><td>0.020</td><td>0.007</td><td>97</td><td>77</td><td><strong>退化（已剔除）</strong></td><td>1000 MW</td></tr>
+<tr><td><code>hybrid</code></td><td>1.220</td><td>0.145</td><td>0.057</td><td>713</td><td>577</td><td>16.73</td><td>1000 MW</td></tr>
+<tr><td><code>liquid_to_water</code></td><td>1.122</td><td>1.777</td><td>1.000</td><td>8 754</td><td>7 323</td><td>1.39</td><td><strong>1500 MW</strong></td></tr>
+<tr><td><code>efficient_evaporative</code></td><td>1.123</td><td>1.975</td><td>1.000</td><td>9 729</td><td>8 140</td><td>1.35</td><td><strong>1500 MW</strong></td></tr>
+<tr><td><code>evaporative</code></td><td>1.167</td><td>2.105</td><td>1.000</td><td>10 372</td><td>8 464</td><td>1.32</td><td>1000 MW</td></tr>
+</tbody></table>
+<ul><li><strong>V5 成立</strong>（两域）：干冷 PUE &gt; 湿冷 PUE，干冷 WUE &lt; 湿冷 WUE。水—能权衡方向正确。</li><li><strong>V6 方向成立</strong>：<code>dry_first</code> 7.48 &gt; <code>hybrid</code> 4.31 &gt; 湿冷 1.29（D-HA），且 <code>dry_first</code> 落在文献 6.5–10× 内。</li><li><strong>换技术对 D-CO 的承载容量提升达 50 %</strong>：<code>liquid_to_water</code> 与 <code>efficient_evaporative</code> 在凉爽端能把日尺度 CAWCC 从 1000 提到 <strong>1500 MW</strong>，而 D-HA 无论换什么技术都停在 1000 MW。原因是 D-HA 的约束在<strong>水侧</strong>（给水/取水），换冷却技术减少的取水量不足以松开；D-CO 的约束在<strong>电力侧</strong>，任何降低 PUE 的技术（液冷 PUE 1.12 vs 风冷 1.18）都能直接松开接网瓶颈。<strong>这是"水—能权衡"在两端点的不同表现，是本轮最可迁移的工程结论之一。</strong></li><li><strong>同一技术在凉爽端更省电但 WUE 不一定更低</strong>：<code>evaporative</code> 的 PUE 从 1.181 降到 1.167，但 WUE 从 2.210 降到 2.105（v2 报的反直觉"升高"是口径错误，v3 已修正为 IT 电量口径）。剩余差异由蒸发量决定，方向正确。</li><li><strong>已知偏差</strong>：湿冷日峰值系数 1.29–1.39 低于文献 ≈2.2×。原因是本模型的日负荷序列只有季节 + 周末的光滑变化，缺少作业排队级的日间波动。<strong>这是合成驱动的局限，不是模型结构错误</strong>——第 17 节列为 R3 必须替换的第一项。当前只校核相对序与 <code>dry_first</code> 量级。</li></ul>
+<h3 id="11-3-分配政策对照-计算-全期累计居民未满足量-ml">11.3 分配政策对照【计算】（全期累计居民未满足量，ML）</h3>
+<table>
+<thead><tr><th>政策</th><th>D-HA 1000/1500/2000 MW</th><th>D-CO 1000/1500/2000 MW</th></tr></thead>
+<tbody>
+<tr><td><code>policy_a</code>（居民优先）</td><td>0 / 0 / <strong>0</strong>（但冷却缺水 1 307.7 ML）</td><td>0 / 0 / 0</td></tr>
+<tr><td><code>policy_b</code>（比例分摊）</td><td>~0 / ~0 / <strong>992.2</strong></td><td>~0 / ~0 / ~0</td></tr>
+<tr><td><code>policy_c</code>（AI 优先）</td><td>0 / 0 / 0</td><td>0 / 0 / 0</td></tr>
+</tbody></table>
+<p>一个反直觉但<strong>可解释</strong>的结果：<code>policy_c</code>（AI 优先）下居民缺水量为 0，而 <code>policy_b</code>（比例分摊）下居民缺水最多。</p>
+<p>原因：AI 的淡水取水受<strong>硬上限</strong>约束（园区局部接入 70 ML/d + 再生水目标份额），AI 优先时它拿不满，剩余水量仍足以满足居民；而比例分摊把短缺<strong>按需求规模分摊给所有用户</strong>，居民基数大，摊到的绝对缺口反而最大。</p>
+<p>因此 V8 只能写成"居民优先不劣于 AI 优先"（<code>policy_a ≤ policy_c</code>），不能写成"AI 优先一定伤害居民"。政策含义是：<strong>限制 AI 取水上限（技术性约束）比改变分配伦理（政策性约束）更能保护居民</strong>。</p>
+<p><strong>v3 新增观察</strong>：D-HA 在 2000 MW 时 <code>policy_a</code> 把缺口推给了 AI 自己——居民缺水 0，但园区出现 <strong>1 307.7 ML 冷却缺水</strong>、系统可靠性降到 0.981。这说明"居民优先"并非无代价，只是代价由园区承担。对这个代价的接受度本身是一个政策判断，论文应显式说明而不是默认。</p>
+<blockquote><strong>局限</strong>：D-CO 在 2000 MW 内三种政策都没有居民缺水，说明凉爽端尚未进入短缺区；D-HA 的 <code>policy_b</code> 与 <code>policy_c</code> 也只在 ≥1500 MW 才分化。R3 应把政策对照容量提到 3000 MW 或加一个"AI 淡水无上限"的对照，才能让伦理结论有区分度。</blockquote>
+<hr>
+<h2 id="12-不确定性与稳健性">12. 不确定性与稳健性</h2>
+<table>
+<thead><tr><th>方法</th><th>参数</th><th>样本量</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td>Morris 筛选</td><td><code>base_pue</code>、<code>temperature_coefficient</code>、<code>cycles_of_concentration</code>、<code>drift_fraction</code>、<code>internal_recovery_fraction</code>、<code>heat_to_cooling_fraction</code></td><td>24 轨迹</td><td>排序，找主导参数</td></tr>
+<tr><td>Sobol 方差分解</td><td>同上</td><td>N = 32（总评估 32 × (2D+2) = 448 次）</td><td>一阶 / 总效应</td></tr>
+<tr><td>概率承载阈值</td><td><code>base_pue</code>、<code>cycles_of_concentration</code>、<code>temperature_coefficient</code></td><td>每域 1024 样本，250 MW 锚点 + 50 MW 转折细化，bootstrap 2000</td><td>CAWCC 的 P05/P50/P95 与超限概率</td></tr>
+<tr><td>稳健性组合</td><td>9 组端点参数组合</td><td>—</td><td>结论对极端参数是否翻转</td></tr>
+</tbody></table>
+<p>沿用"规划裕度 0.95"约束（不是 1.00），否则概率模块同样恒真、给不出分布。</p>
+<h4 id="12-1-morris-筛选结果-计算-指标-ai-全期取水量">12.1 Morris 筛选结果【计算】（指标：AI 全期取水量）</h4>
+<table>
+<thead><tr><th>参数</th><th>D-HA <code>mu*</code></th><th>D-CO <code>mu*</code></th><th>方向</th></tr></thead>
+<tbody>
+<tr><td><code>temperature_coefficient</code></td><td><strong>114 591</strong></td><td><strong>205 681</strong></td><td>负（两端年均温低于 20 ℃ 参考温度，系数越大约省水）</td></tr>
+<tr><td><code>heat_to_cooling_fraction</code></td><td>30 261</td><td>28 403</td><td>正</td></tr>
+<tr><td><code>base_pue</code></td><td>22 561</td><td>21 336</td><td>正</td></tr>
+<tr><td><code>internal_recovery_fraction</code></td><td>6 991</td><td>5 375</td><td>负</td></tr>
+<tr><td><code>drift_fraction</code></td><td>3 615</td><td>3 359</td><td>正</td></tr>
+<tr><td><code>cycles_of_concentration</code></td><td>375</td><td>468</td><td>负</td></tr>
+</tbody></table>
+<p><strong>最重要的发现：PUE 温度系数（<code>temperature_coefficient</code>）是 AI 取水量的头号不确定来源，其影响力约为基准 PUE 的 5–10 倍。</strong> 这有两层含义：</p>
+<ol><li>对 H2b 是正面支持——温度敏感性确实主导冷却水量，这条假设值得做；</li><li>对工程是警示——<code>temperature_coefficient</code> 目前是<strong>设定值</strong>（0.003–0.013，按技术分档），没有实测率定。第 17 节应把"PUE-温度关系的现场率定"提到与负荷序列同级的最高优先级。</li></ol>
+<h4 id="12-2-sobol-结果-仅用于排序-不作定量方差分解">12.2 Sobol 结果（仅用于排序，不作定量方差分解）</h4>
+<table>
+<thead><tr><th>参数</th><th>D-HA 总效应 ST</th><th>D-CO 总效应 ST</th></tr></thead>
+<tbody>
+<tr><td><code>base_pue</code></td><td>0.579</td><td>0.431</td></tr>
+<tr><td><code>cycles_of_concentration</code></td><td>0.235</td><td><strong>0.457</strong></td></tr>
+<tr><td><code>heat_to_cooling_fraction</code></td><td>0.355</td><td>0.256</td></tr>
+<tr><td><code>internal_recovery_fraction</code></td><td>0.059</td><td>0.031</td></tr>
+<tr><td><code>temperature_coefficient</code></td><td>0.010</td><td>0.026</td></tr>
+<tr><td><code>drift_fraction</code></td><td>~1e−7</td><td>~1e−7</td></tr>
+</tbody></table>
+<blockquote><strong>注意</strong>：一阶指数 S1 出现负值（如 <code>base_pue</code> −0.98、<code>heat_to_cooling_fraction</code> −1.97），这在数学上越界，说明 <strong>N = 32 未收敛</strong>（Saltelli 估计器在小样本下的已知偏差）。本轮只把 Sobol 当作与 Morris 互为交叉验证的<strong>排序工具</strong>；论文阶段需 N ≥ 256 或改用 Jansen 估计器。Morris 与 Sobol 在"基准 PUE、排热系数、CoC 是前三"这一点上是一致的，可以放心用这个排序。</blockquote>
+<h4 id="12-3-概率承载阈值-历史版本-当前结果见-r4-状态文件">12.3 概率承载阈值【历史版本；当前结果见 R4 状态文件】</h4>
+<p><strong>为什么要扩样本。</strong> v3 的概率分析只有 <strong>40 个样本</strong>。用 40 个样本估计 P05 是不可信的——P05 落在第 2 个样本上，任何单个异常值都会直接改写分位数；超限概率 0.175 意味着 40 个样本里只有 <strong>7 个</strong>样本超限，该估计的标准误约为 √(0.175×0.825/40) ≈ 0.060，即 ±6 个百分点，与估计值本身同量级。这个精度不足以支撑论文结论。</p>
+<p><strong>当前修正版最终结果</strong>（每域 1024 样本，bootstrap 2000）：HA 物理 P05/P50/P95 = 950/1050/1200 MW，1000 MW 超限概率 0.0625（95% CI 0.0488–0.0781）；CO = 1250/1350/1500 MW，超限概率 0（95% CI [0, 0]）。政策阈值 HA P05/P50/P95 = 1150/1250/1350 MW；CO = 1800/2000/2000 MW，CO 右删失比例 58.5%。</p>
+<p><strong>同一修订口径下的 64 vs 1024 样本对照</strong>（<code>probabilistic_sample_size_comparison.csv</code>）：</p>
+<table>
+<thead><tr><th>域</th><th>样本数</th><th>物理 P05/P50/P95 (MW)</th><th>1000 MW 超限概率</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td>64</td><td>950/1050/1200</td><td>0.125</td></tr>
+<tr><td>D-HA</td><td>1024</td><td>950/1050/1200</td><td>0.0625</td></tr>
+<tr><td>D-CO</td><td>64</td><td>1250/1350/1500</td><td>0</td></tr>
+<tr><td>D-CO</td><td>1024</td><td>1250/1350/1500</td><td>0</td></tr>
+</tbody></table>
+<p>当前样本显示阈值分位数一致，但 HA 超限概率从 0.125 降至 0.0625；不据此声称几十个样本足以估计尾部概率。</p>
+<blockquote><strong>⚠️ 本条已于 v4.2 撤回（见 12.8.1 节）。</strong> 下面的"限制约束 100 % 是政策指标"是 <code>find_ai_carrying_capacity</code> 在<strong>粗网格（250 MW）下按字典序取首个越界约束</strong>造成的伪结论。用 50 MW 步长逐点诊断的真相是：<strong>D-HA 的承载边界由物理约束决定</strong>（1200 MW 处 <code>max_wtw_utilization</code> 与 <code>max_source_abstraction_ratio</code> 同时越界），而 <code>reclaimed_water_substitution_ratio</code> 要到 <strong>1350 MW</strong> 才越界，比物理约束晚 200 MW。<strong>以物理约束为准。</strong>（另外：本节的 CAWCC 绝对值受 250 MW 网格限制，比主实验的 50 MW 网格<strong>低估约 13 %</strong>，两套数字不可混用。）</blockquote>
+<p><strong>这一段旧结论已撤回。</strong> 旧 <code>limiting_constraint_share = 100%</code> 来自 250 MW 粗网格和按字典顺序报告首个越界约束的实现组合，不能作为政策主导的证据。修正版概率实验使用 50 MW 网格，并把物理 CAWCC 与再生水政策阈值分开计算。修正版产物完成后，正文只报告两个 estimand 及其各自的 CI，不把政策合规阈值写成物理承载上限。</p>
+<p><strong>但必须做现实性折算（第 1.3 节第 5 条）</strong>：这两个数字对应的是 <strong>1000 MW 装机</strong>，而现实百万人口城市内的园区是 50–300 MW。日尺度 CAWCC 为 1150（HA）/ 1450（CO）MW，意味着在现实装机区间内日尺度约束<strong>尚未越过 0.95 判定阈值</strong>——但这不是"无约束"：给水厂利用率与水源取水率已从 0.80 单调升至 0.87，首破阈值在 600 MW。</p>
+<blockquote><strong>当前可支持的规划含义</strong>：对 300 MW 以下园区，在合成端点参数下日尺度物理约束<strong>未越阈值但已高位运行（0.80→0.87）</strong>，说明压力测试与现实园区尺度存在错位、且余量在快速消耗。再生水政策阈值和园区专线容量可作为独立合规/接入条件；真实城市主导约束需结合节点容量和备用率率定。</blockquote>
+<p><strong>实现上的两个坑（记录给 R3 参考）</strong>：</p>
+<ol><li><strong>bootstrap CI 不能用中位数统计量</strong>。对 0/1 超限指示序列取中位数会得到恒为 0 的退化区间（本轮初版就踩了这个坑，输出 <code>[0.0, 0.0]</code>）。必须用均值型统计量，<code>_bootstrap_scalar_ci(values, stat, ...)</code> 以此重写。</li><li><strong>Windows 下 <code>ProcessPoolExecutor</code> 的子进程不继承主进程内存</strong>。常量（<code>CAP</code>、<code>CONSTRAINTS</code>）与 <code>src</code> 路径必须经 <code>_init_worker</code> 的 <code>initargs</code> 与 <code>sys.path.insert</code> 显式传入，否则报 <code>KeyError: 'ai_capacity_mw'</code>。可复现性靠主进程用同一 seed 预采样全部参数向量再分发保证，与串行调用逐位一致。</li></ol>
+<h4 id="12-4-城市侧参数敏感性-计算-v4-新增">12.4 城市侧参数敏感性【计算】（v4 新增）</h4>
+<p><strong>为什么补这一块。</strong> 第 9.4 节的头号结论——"承载容量上限由水源取水与给水处理决定"——建立在一组城市侧【设定】参数之上（库容、取水/给水/污水/再生水能力、漏损率、用水定额，见第 15 节）。v3 的敏感性分析只覆盖 AI 侧 6 个参数，<strong>城市侧从未做过检验</strong>，因此无法回答"这个结论是不是设定值的产物"。这是 v3 最实质的漏洞。</p>
+<p><strong>设计。</strong> 7 个城市侧参数按<strong>各域自身基线</strong>扰动（能力/需求/库容 ±25 %、漏损率 ±50 %），观测两个指标——<code>max_source_abstraction_ratio</code>（年尺度头号约束）与 <code>max_wtw_utilization</code>（日尺度头号约束）。这两个指标正是决定 CAWCC 的限制约束，因此比"AI 取水量"更直接对应承载容量。Morris 24 轨迹 + Sobol N = 64。</p>
+<p><strong>Morris 结果</strong>（<code>mu*</code>，按两域四列的最大值降序）：</p>
+<table>
+<thead><tr><th>城市侧参数</th><th>HA 年尺度约束 <code>mu*</code></th><th>HA 日尺度约束 <code>mu*</code></th><th>CO 年尺度约束 <code>mu*</code></th><th>CO 日尺度约束 <code>mu*</code></th></tr></thead>
+<tbody>
+<tr><td><strong>配水漏损率</strong></td><td>0.635</td><td>0.459</td><td>0.725</td><td>0.607</td></tr>
+<tr><td><strong>居民用水定额</strong></td><td>0.00186</td><td>0.00128</td><td>0.00207</td><td>0.00171</td></tr>
+<tr><td><strong>水源取水能力</strong></td><td>0.00127</td><td>0.000567</td><td>0.0017</td><td>0.000237</td></tr>
+<tr><td><strong>给水处理能力</strong></td><td>4.56e-05</td><td>0.00155</td><td>5.34e-05</td><td>0.00164</td></tr>
+<tr><td><strong>再生水处理能力</strong></td><td>0.000119</td><td>0.000114</td><td>0.000513</td><td>0.000321</td></tr>
+<tr><td><strong>污水处理能力</strong></td><td>3.59e-05</td><td>1.98e-05</td><td>3.2e-05</td><td>3.62e-05</td></tr>
+<tr><td><strong>水库库容</strong></td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p><strong>三条读法</strong>：</p>
+<ol><li>原始 <code>mu*</code> 不能直接横向比较，因为参数使用了不同的原生单位（比例、ML/d、库容）。按输入区间归一化后，水源取水能力、居民定额和漏损率都具有可见的区间效应，不能再写成“漏损率唯一主导”。</li><li>设施能力和库容的效应需要按归一化结果与物理边界解释；库容在当前两年驱动中未成为首个失效约束，但这不等于它在更长干旱序列中永远无关。</li><li>当前城市侧敏感性只能支持“城市参数不确定性不可忽略”，不能支持对单一参数的强因果排序。正式稿应引用 <code>city_morris_normalized.csv</code>，并以 N≥256 的收敛 Sobol/Jansen 结果复核。</li></ol>
+<p><strong>与干预分析的独立互证。</strong> 第 10.2 节的干预扫描是一条完全独立的路径（直接改能力值并重新扫描 CAWCC），给出"扩给水 +10 %/+20 % 增益为 <strong>0</strong>、降漏损 −30 % 增益 <strong>+200 MW</strong>"；城市侧 Morris 是另一条路径（改同一批参数但只观测约束取值、不重扫 CAWCC），给出"给水能力 <code>mu<em></code> ≈ 5e−5、漏损 <code>mu</em></code> 最大"。<strong>两条路径指向同一结论</strong>，这不是巧合而是同一机理的两次观测：城市需水量由漏损与定额决定，设施能力只在真正逼近硬截断时才起作用，而 1000 MW 下两端点的给水/取水尚未进入被能力截断的区间（这也解释了 10.3 节里再生水"处理能力"杠杆为何恒为 0）。</p>
+<p><strong>Sobol 未收敛，且与 Morris 矛盾</strong>（<code>max_source_abstraction_ratio</code>）：</p>
+<table>
+<thead><tr><th>城市侧参数</th><th>HA <code>S1</code></th><th>HA <code>ST</code></th><th>CO <code>S1</code></th><th>CO <code>ST</code></th></tr></thead>
+<tbody>
+<tr><td>水源取水能力</td><td>1.278</td><td>0.693</td><td>0.882</td><td>0.681</td></tr>
+<tr><td>居民用水定额</td><td>-0.013</td><td>0.300</td><td>0.316</td><td>0.248</td></tr>
+<tr><td>配水漏损率</td><td>-0.413</td><td>0.048</td><td>-0.351</td><td>0.047</td></tr>
+<tr><td>给水处理能力</td><td>0.200</td><td>0.004</td><td>0.079</td><td>0.004</td></tr>
+<tr><td>再生水处理能力</td><td>-0.016</td><td>0.002</td><td>-0.076</td><td>0.002</td></tr>
+<tr><td>污水处理能力</td><td>-0.041</td><td>0.001</td><td>-0.009</td><td>0.000</td></tr>
+<tr><td>水库库容</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.000</td></tr>
+</tbody></table>
+<p><code>S1</code> 出现 <strong>1.278（&gt;1）</strong> 与 <strong>−0.413（&lt;0）</strong>，数学上越界，说明 <strong>N = 64 仍未收敛</strong>。Sobol 把首位给了水源取水能力（<code>ST</code> 0.693），与 Morris 的漏损首位<strong>相反</strong>。此时<strong>不能</strong>把两者当作互相印证——按第 16 节 #5 的既定处理，Sobol 在城市侧同样只可作排序参考；而当前排序与 Morris 冲突，故<strong>本轮不以城市侧 Sobol 结果下任何定量结论</strong>。R3 需 N ≥ 256 或改用 Jansen 估计器。</p>
+<blockquote><strong>这一处修正值得写进方法部分</strong>：v3 的 12.2 节写"Morris 与 Sobol 在'基准 PUE、排热系数、CoC 为前三'上一致"，那是<strong>AI 侧</strong>的情形。城市侧两者<strong>不一致</strong>，说明"Morris 与 Sobol 互为交叉验证"这一说法不能无条件推广——当 <code>S1</code> 越界时，分歧本身就是不收敛的证据，而不是两个方法各有侧重。</blockquote>
+<p><strong>修正后的结论</strong>：城市侧参数不确定性会改变承载约束的裕度，当前证据不足以把影响归因于单一漏损参数。R3 必须替换为实测漏损率、取水能力和居民定额，并在联合不确定性分析中报告区间；在此之前，第 9.4 节的绝对数值只可作<strong>相对比较</strong>用，不宜当作规划依据。</p>
+<h4 id="12-5-城市梯度-两端点之间是否连续-计算-v4-新增">12.5 城市梯度：两端点之间是否连续【计算】（v4 新增）</h4>
+<p><strong>为什么补这一块。</strong> 全文最核心的结论（承载容量由水源与给水决定、配置干预的域间差异）都是在<strong>两个参数域端点</strong>上得到的。端点设计的优点是对比最强，缺点是<strong>无法排除"结论是端点伪影"</strong>——如果 D-HA 与 D-CO 之间的城市表现出非单调、跳变的行为，那么"端点差异"就不能外推为"沿城市参数轴的规律"。</p>
+<p><strong>设计。</strong> 在两端点之间做 <strong>5 × 5 = 25 个合成城市</strong>：<code>theta_climate</code>（0 → 1，气候轴：温湿序列、降雨、气温线性混合）与 <code>theta_infra</code>（0 → 1，设施轴：取水/给水/污水/再生水能力、漏损率、用水定额线性混合；替代率阈值 0.65 ↔ 0.40 线性插值）。每个城市跑 41 个容量点，共 <strong>1025 次模拟</strong>。</p>
+<p><strong>日尺度 CAWCC 矩阵（MW）</strong>，行 = <code>theta_climate</code> 0→1，列 = <code>theta_infra</code> 0→1：</p>
+<table>
+<thead><tr><th></th><th>0.00</th><th>0.25</th><th>0.50</th><th>0.75</th><th>1.00</th></tr></thead>
+<tbody>
+<tr><td><strong>0.00</strong>（D-HA）</td><td>1150</td><td>1200</td><td>1250</td><td>1250</td><td>1300</td></tr>
+<tr><td><strong>0.25</strong></td><td>1250</td><td>1300</td><td>1350</td><td>1400</td><td>1400</td></tr>
+<tr><td><strong>0.50</strong></td><td>1300</td><td>1400</td><td>1450</td><td>1450</td><td>1450</td></tr>
+<tr><td><strong>0.75</strong></td><td>1300</td><td>1400</td><td>1450</td><td>1450</td><td>1450</td></tr>
+<tr><td><strong>1.00</strong>（D-CO）</td><td>1300</td><td>1400</td><td>1450</td><td>1450</td><td>1450</td></tr>
+</tbody></table>
+<p>年尺度同构，范围 1150 → 1650 MW，且单调性一致。</p>
+<p><strong>四条读法</strong>：</p>
+<ol><li><strong>沿两条轴都单调不减</strong>，全程无跳变、无反转。<strong>头号结论不是端点伪影</strong>——从 D-HA 连续走到 D-CO，承载容量是平滑上升的。这是本节最重要的结论。</li><li><strong>两轴的容量矩阵显示出平台段，但不能直接解释为某类设施投入的因果回报</strong>：平台段可能来自另一约束先触发，也可能来自参数混合和 50 MW 网格。需用 R3 的物理/政策双阈值和归一化敏感性重新标注边际效应。</li><li><strong>25 个城市的限制约束身份不再报告</strong>。旧的全为 <code>reclaimed_water_substitution_ratio</code> 观察受同一报告缺陷影响；本节只保留容量沿合成谱的连续性结果，瓶颈身份待修正版约束集完成后重新生成。</li><li>端点值可复现：<code>(0,0)</code> 日尺度 1150 MW = 第 9.4 节 D-HA；<code>(1,1)</code> 日尺度 1450 MW = 第 9.4 节 D-CO。合成谱与端点结果自洽。</li></ol>
+<blockquote><strong>城市梯度的性质</strong>：这 25 个城市（除两个端点外）由两端点线性混合生成，用于检验结论沿城市参数轴的连续性与单调性。论文引用本节时表述为“沿合成城市谱的结论连续性检验”；具体城市承载容量由率定数据给出。</blockquote>
+<h4 id="12-6-外部效度-与文献值和官方标准的定量对标-计算-v4-新增">12.6 外部效度：与文献值和官方标准的定量对标【计算】（v4 新增）</h4>
+<p><strong>为什么补这一块。</strong> 到 12.5 为止全部检验都是<strong>内部</strong>的（V1–V12 自检、现实性审计、敏感性、稳健性）。内部检验全绿只说明模型自洽，不能说明它坐落在真实世界的量级里。<strong>一个内部完全自洽、但 WUE 偏离真实数据中心一个数量级的模型，前面所有结论都不可用。</strong></p>
+<p><strong>（a）数据中心侧：WUE / PUE 对标</strong>（<code>literature_benchmark.csv</code>，420 组比对）</p>
+<p>模型输出的七种冷却技术 WUE（L/kWh）与披露值的对照：</p>
+<table>
+<thead><tr><th>冷却技术</th><th>D-HA WUE</th><th>D-CO WUE</th><th>最贴近的文献披露值</th></tr></thead>
+<tbody>
+<tr><td><code>dry</code> / <code>liquid_to_air</code></td><td>0.000</td><td>0.000</td><td>行业基准"无水冷却" 0.0（理论下界）</td></tr>
+<tr><td><code>dry_first</code></td><td>0.434</td><td>0.020</td><td>Meta FY24 0.20–0.26；Microsoft 0.30–0.49</td></tr>
+<tr><td><code>hybrid</code></td><td>0.657</td><td>0.145</td><td>Microsoft FY24 0.30–0.49（偏高）</td></tr>
+<tr><td><code>liquid_to_water</code></td><td>1.917</td><td>1.777</td><td>Equinix 蒸发站点 1.55；阿里云蒸发站点 1.8</td></tr>
+<tr><td><code>efficient_evaporative</code></td><td>2.122</td><td>1.975</td><td>行业基准"蒸发冷却消耗率" 1.8–4.0</td></tr>
+<tr><td><code>evaporative</code></td><td>2.210</td><td>2.105</td><td>百度 FY24 1.61；行业基准 1.8–4.0</td></tr>
+</tbody></table>
+<p><strong>判定</strong>：模型的蒸发冷却类 WUE（1.8–2.2）落在行业"蒸发冷却消耗率 1.8–4.0"区间内，与阿里云蒸发站点 1.8、Equinix 蒸发站点 1.55 同量级；无水冷却类为 0.0（理论下界）。<strong>量级正确。</strong> 但对照"领先超大规模 0.2–0.5"区间，模型的蒸发冷却方案<strong>全部在区间外</strong>——这是技术设定使然（端点城市用的是高冷负荷、蒸发冷却为主），不是模型失真，引用时须说明技术前提。</p>
+<p>PUE：模型 1.12–1.36，与披露值（Google 1.09、Meta 1.07、AWS 1.14、Microsoft 1.16–1.18、腾讯 1.269、阿里 1.19–1.253、百度 1.20、Equinix 1.39）<strong>完全同量级</strong>。</p>
+<p><strong>（b）城市侧：与官方标准和政策锚点对标</strong>（<code>literature_benchmark_city.csv</code>）</p>
+<p>以 <code>cap_0000</code>（<strong>无 AI 负荷</strong>的城市基线）计算，避免 AI 负荷污染城市指标。同一指标尽量给出<strong>两个口径</strong>：</p>
+<table>
+<thead><tr><th>指标</th><th>模型口径</th><th>D-HA</th><th>D-CO</th><th>对标锚点</th><th>判定</th></tr></thead>
+<tbody>
+<tr><td>综合漏损率</td><td>配水干管</td><td>12.00 %</td><td>12.00 %</td><td>CJJ 92-2016 二级 12 %</td><td>达标</td></tr>
+<tr><td>综合漏损率</td><td>输配全链</td><td>13.32 %</td><td>13.32 %</td><td>CJJ 92-2016 二级 12 %</td><td><strong>超标</strong></td></tr>
+<tr><td>综合漏损率</td><td>系统口径</td><td>11.81 %</td><td>11.90 %</td><td>2025 政策目标 9 %</td><td><strong>超标</strong></td></tr>
+<tr><td>人均生活用水</td><td>平均日</td><td>163.5</td><td>159.1</td><td>GB 50013-2018 Ⅱ型大城市 平均日 一区 140–300</td><td><strong>在区间内</strong></td></tr>
+<tr><td>人均生活用水</td><td>最高日</td><td>185.7</td><td>178.9</td><td>GB 50013-2018 Ⅱ型大城市 最高日 二区 150–260</td><td><strong>在区间内</strong></td></tr>
+<tr><td>日变化系数</td><td>最高日/平均日</td><td>1.135</td><td>1.125</td><td>GB 50013 附注建议 1.1–1.5</td><td><strong>在区间内</strong></td></tr>
+<tr><td>再生水利用率</td><td>政策口径</td><td>16.04 %</td><td>15.04 %</td><td>十四五目标 25 %</td><td><strong>未达标</strong></td></tr>
+<tr><td>水厂负荷率</td><td>产水/设计能力</td><td>68.5 %</td><td>65.6 %</td><td>—</td><td>—</td></tr>
+<tr><td>污水厂负荷率</td><td>处理量/设计能力</td><td>74.6 %</td><td>73.0 %</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<p><strong>四条读法</strong>：</p>
+<ol><li><strong>人均生活用水完全落在国家标准区间内</strong>，且<strong>日变化系数 1.13 落在 GB 50013 建议的 1.1–1.5 内</strong>——这是对合成气候序列的一个独立正向验证（日间波动幅度合理）。</li><li><strong>漏损率刻意设定在"尚未完成治理"的水平</strong>：12 %（干管）/ 13.3 %（全链），对照 2025 年 9 % 的政策目标<strong>超标</strong>。这不是缺陷而是设定——正因为漏损偏高，10.2/10.4 节里"降漏损"才成为 D-HA 唯一有效的干预。<strong>若把模型城市改成已达标的先进城市（漏损 9 %），D-HA 的有效干预会消失。</strong> 这一条必须写进论文，否则读者会误以为结论与漏损水平无关。</li><li><strong>再生水利用率 15–16 % 低于十四五基准年水平（约 20 %）与目标（25 %）</strong>，与 12.3 节"限制约束 100 % 是再生水替代率政策指标"是同一事实的两个侧面：<strong>这座城市的再生水政策执行水平偏低，因此政策指标先于物理约束触发。</strong></li><li><strong>厂负荷率 66–75 %</strong>，说明模型城市的水厂/污水厂<strong>尚未逼近满负荷</strong>，与 12.4 节"设施能力 <code>mu*</code> ≤ 1.7e−3"互相印证。</li></ol>
+<p><strong>（c）口径冲突：跨文献比较前必读</strong>（<code>literature_benchmark_caliber.csv</code>，4 例）</p>
+<p>本轮发现了<strong>四个</strong>"同一指标在不同来源/不同定义下不可直接比较"的实例，与第 3.4 节已记录的"毛替代率 vs B0 城市源水增量代理"是同类问题：</p>
+<table>
+<thead><tr><th>#</th><th>指标</th><th>冲突</th><th>具体差异</th><th>处理原则</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>WUE</td><td>同一公司同一年相差近 1 倍</td><td>Google FY24：1.2 vs 0.64 L/kWh</td><td>差异来自取水量 vs 耗水量、是否含电网间接水、单站 vs fleet-wide；<strong>比较前必须统一口径</strong></td></tr>
+<tr><td>2</td><td>城市漏损率</td><td>同一年官方口径相差 &gt;2.8 pct</td><td>2023 年：12.76 %（年鉴口径）vs "10 % 以内"（部门口径）</td><td>引用必须写明年鉴/部门口径，不得混用</td></tr>
+<tr><td>3</td><td>再生水</td><td>分母不同</td><td>政策"利用率"= 再生水/污水处理量；模型"替代率"= 再生水/总供水量</td><td>两者<strong>不做数值互检</strong>，只做方向性说明</td></tr>
+<tr><td>4</td><td>替代率</td><td>毛 vs 净</td><td>毛值未扣除再生水生产自身的耗水</td><td>双口径并列，正文不得只用毛值</td></tr>
+</tbody></table>
+<blockquote><strong>方法论意义</strong>：这四例不是"数据来源不够好"的问题，而是<strong>水系统研究里的结构性问题</strong>——同一个词在不同文件里指代不同的比值。本文的应对是把<strong>口径写进数据文件本身</strong>（每个对标值都带"来源性质"与"口径与风险备注"两列），而不是只写在正文里。建议 R3 沿用这一做法。</blockquote>
+<p><strong>来源性质分级（诚实原则）</strong>：OFFICIAL（政府/电网正式文件）/ CASE（具体项目批复或中标）/ DISCLOSURE（公司披露转述）/ INDUSTRY（行业基准）/ GREY（二手摘录或行业网页）。本轮核实到官方原文的锚点：CJJ 92-2016 修订条文（漏损率一级 10 %、二级 12 %）、发改环资〔2021〕827 号（再生水利用率 25 %/35 %）、GB 50013-2018 表 4.0.3-3/4（人均综合生活用水定额）、建标 198-2022 表 5（污水厂投资估算控制指标）、建标 120-2009 表 7（净水工程投资估算指标）。<strong>除 OFFICIAL 与 CASE 外，其余条目论文正式引用前必须回溯原始年报、ESG 报告或造价定额。</strong></p>
+<h4 id="12-7-边界条件-把城市改成-政策已达标-会怎样-计算-v4-1-新增">12.7 边界条件：把城市改成"政策已达标"会怎样【计算】（v4.1 新增）</h4>
+<p><strong>为什么必须做这一块。</strong> 12.6(b) 已经暴露：模型城市的漏损率 12–13.3 % 对照 2025 年 9 % 政策目标<strong>超标</strong>，再生水政策口径利用率 15–16 % 对照十四五目标 25 % <strong>未达标</strong>。而本文两条主结论——10.4 节"降漏损是 D-HA 唯一有效干预"、12.3 节"政策约束先于物理约束触发"——<strong>都建立在这个落后设定之上</strong>。不检验边界，读者可以合理地怀疑这些结论只是"落后城市"的产物。这一节就是把这个怀疑做成实验。</p>
+<p><strong>设计。</strong> 两域各构造 4 个变体（其余设定完全不变）：</p>
+<table>
+<thead><tr><th>变体</th><th>做法</th><th>复核（城市侧指标实测）</th></tr></thead>
+<tbody>
+<tr><td><code>baseline</code></td><td>现状（漏损 0.12、政策口径再生水利用率 16.04 % / 15.04 %）</td><td>干管漏损 12.0 %，全链 13.32 %</td></tr>
+<tr><td><code>leakage_09</code></td><td>配水干管漏损 0.12 → <strong>0.09</strong>（2025 政策目标）</td><td>干管 9.0 %，全链 10.36 %</td></tr>
+<tr><td><code>reuse_25</code></td><td>政策口径再生水利用率 → <strong>25 %</strong>（分流比例等比放大，处理能力同步放大）</td><td>24.97 % / 24.96 %</td></tr>
+<tr><td><code>both</code></td><td>两项同时达标</td><td>干管 9.0 %，全链 10.36 %，利用率 24.97 %</td></tr>
+</tbody></table>
+<blockquote>处理能力必须与分流比例<strong>同步放大</strong>，否则新增的分流水在再生水厂门口被卡住——这正是 10.3 节"扩处理能力无效、扩产水量有效"的机理，构造变体时不能重犯。</blockquote>
+<p><strong>结果：日尺度 CAWCC 与干预增益（同一干预在不同城市上的效果）</strong></p>
+<table>
+<thead><tr><th>域</th><th>变体</th><th>日 CAWCC</th><th>日尺度限制约束</th><th>降漏损 −30 % 增益</th><th>扩接网 +50 % 增益</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td>baseline</td><td>1150</td><td><code>max_wtw_utilization</code></td><td><strong>+150</strong></td><td>0</td></tr>
+<tr><td>D-HA</td><td><code>leakage_09</code></td><td>1300</td><td><strong><code>reclaimed_water_substitution_ratio</code></strong></td><td><strong>0</strong></td><td>0</td></tr>
+<tr><td>D-HA</td><td><code>reuse_25</code></td><td>1400</td><td><code>max_daily_average_grid_connection_ratio</code></td><td>0</td><td><strong>+100</strong></td></tr>
+<tr><td>D-HA</td><td><code>both</code></td><td>1400</td><td><code>max_daily_average_grid_connection_ratio</code></td><td>0</td><td><strong>+100</strong></td></tr>
+<tr><td>D-CO</td><td>baseline</td><td>1450</td><td><code>max_daily_average_grid_connection_ratio</code></td><td>0</td><td><strong>+100</strong></td></tr>
+<tr><td>D-CO</td><td><code>leakage_09</code></td><td>1450</td><td>同上</td><td>0</td><td><strong>+100</strong></td></tr>
+<tr><td>D-CO</td><td><code>reuse_25</code></td><td>1450</td><td>同上</td><td>0</td><td><strong>+100</strong></td></tr>
+<tr><td>D-CO</td><td><code>both</code></td><td>1450</td><td>同上</td><td>0</td><td><strong>+100</strong></td></tr>
+</tbody></table>
+<p>年尺度：D-HA 1150（<code>max_source_abstraction_ratio</code>）→ 1300（<strong>政策指标</strong>）→ 1600 → <strong>1850</strong> MW；D-CO 1750 → 在 0–2000 网格内<strong>三个达标变体均不再失效</strong>（即年尺度 CAWCC &gt; 2000 MW）。</p>
+<p><strong>五条读法（这是本轮最需要小心表述的一组结果）</strong>：</p>
+<ol><li><strong>"降漏损是 D-HA 唯一有效干预"确实是落后城市的结论，但它的失效方式不是"没用"，而是"只能拿一次"。</strong> <code>leakage_09</code> 变体的 CAWCC 已经从 1150 提到 <strong>1300 MW（+150）</strong>——降漏损的收益被<strong>预支</strong>了；在这个已经达标的城市上再降 30 %，增益 <strong>归零</strong>。与此同时瓶颈从给水处理迁移到<strong>再生水替代率政策指标</strong>。</li><li><strong>漏损达标后，D-HA 没有任何结构性干预能再增加承载容量</strong>（降漏损 0、扩接网 0），除非同时把再生水政策执行率提上去。这是一个<strong>负结果，但很有价值</strong>：它说明漏损治理与再生水政策是<strong>互补而非替代</strong>的两级杠杆，只做前一级会卡在后一级。</li><li><strong>再生水达标会切换整个瓶颈结构</strong>：<code>reuse_25</code> 让 D-HA 的日尺度瓶颈从"给水处理"跳到<strong>电网接入</strong>——也就是 D-CO 的瓶颈——此时有效干预随之变成<strong>扩接网 +100 MW</strong>。<strong>D-HA 在再生水达标后，行为变得像 D-CO。</strong> 这为 10.2 节"哪个干预有效取决于瓶颈结构"提供了<strong>跨城市的直接证据</strong>，而不是同城市内的推断。</li><li><strong>D-HA 漏损达标后的限制约束是 <code>reclaimed_water_substitution_ratio</code></strong>——与 12.3 节概率抽样 1024 × 2 样本的 <code>limiting_constraint_share = 1.0</code> <strong>完全吻合</strong>。两条完全独立的路径（一条随机抽样、一条确定性变体）给出同一个政策约束，这是本文"政策约束主导"这一结论最硬的交叉验证。</li><li><strong>D-CO 的结论对政策达标完全稳健</strong>：四种城市状态下日尺度 CAWCC <strong>恒为 1450 MW</strong>、有效干预<strong>恒为扩接网 +100 MW</strong>。因为它本来就卡在电网上，水侧政策治理够不到它。</li></ol>
+<blockquote><strong>干预选择由瓶颈链决定。</strong> D-HA 先降漏损，随后再生水与接网依次接手；D-CO 直接扩接网。每解除一个瓶颈后重新诊断，避免把单一状态外推为普适策略。</blockquote>
+<p><strong>局限</strong>：<code>leakage_09</code> 与 <code>reuse_25</code> 是把参数直接改到目标值，<strong>没有模拟治理过程</strong>（分期投入、产能爬坡、政策执行的时滞）。因此本节给出的是<strong>边界状态</strong>，不是<strong>路径</strong>。R3 若要支撑政策建议，需要把治理过程做成时间序列。</p>
+<h4 id="12-8-实验设计自洽性与现实性复核-计算-v4-2-新增-含一条推翻-12-3-的发现">12.8 实验设计自洽性与现实性复核【计算】（v4.2 新增，<strong>含一条推翻 12.3 的发现</strong>）</h4>
+<p>这一节不引入新结论，而是<strong>对自己前面所有结论做对抗性检查</strong>。触发点是"感觉还是不太对劲"——用户的直觉是对的，复核确实查出 5 个问题，其中 1 个<strong>推翻了 12.3 节的核心论断</strong>。</p>
+<p>复核方式：不复用任何已有结论，全部从 <code>project.json</code> + <code>timeseries.csv</code> + 逐日 dump 反算（<code>scripts/audit_experiment_design.py</code>、<code>scripts/diag_constraint_binding.py</code>、<code>scripts/run_r2_realistic_scale.py</code>）。</p>
+<p>##### 12.8.1 【推翻】"概率抽样下限制约束 100 % 是政策指标"不成立</p>
+<p>12.3 节曾据此断言"承载容量的实际上限由政策指标决定"。<strong>这个论断是错的</strong>，直接原因是 <code>find_ai_carrying_capacity</code> 的实现细节：</p>
+<pre><code>failed.append((metric, ...))                    # 收集该容量点上所有越界约束
+limiting = evaluations[first_failed_index][1]   # 只取 failed[0][0] —— 字典序遍历的第一个</code></pre>
+<p>即：<strong>当多个约束在同一容量点同时越界时，报出的"限制约束"取决于 <code>constraints</code> 字典的插入顺序，而不是哪个约束余量最小。</strong> 加上概率分析用的是 <strong>250 MW 步长</strong>的粗网格，多个约束被"压"到同一个网格点上同时越界，字典序便成了唯一的判据。</p>
+<p>用 <strong>50 MW 步长逐点诊断</strong>（<code>diag_constraint_binding.py</code>）得到的真实情况：</p>
+<table>
+<thead><tr><th>域</th><th>尺度</th><th>首个越界的容量</th><th>真正越界的约束</th><th><code>reclaimed_water_substitution_ratio</code> 何时才越界</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td>日尺度</td><td><strong>1200 MW</strong></td><td><code>max_wtw_utilization</code> <strong>与</strong> <code>max_source_abstraction_ratio</code>（同时）</td><td><strong>1350 MW</strong>（比物理约束晚 200 MW）</td></tr>
+<tr><td>D-HA</td><td>年尺度</td><td>1200 MW</td><td><code>max_source_abstraction_ratio</code></td><td>1350 MW</td></tr>
+<tr><td>D-CO</td><td>日尺度</td><td>1500 MW</td><td><code>max_daily_average_grid_connection_ratio</code></td><td>1700 MW</td></tr>
+</tbody></table>
+<p><strong>结论：D-HA 的承载边界由物理约束（给水处理日最大利用率 / 取水占用率）决定，而不是政策指标。</strong> 12.3 节的论断必须撤回。城市梯度（12.5 节）"25/25 城市限制约束都是它"基于同一实现，<strong>同样撤回</strong>。</p>
+<blockquote>这一条比它推翻的结论更有价值：<strong>"约束同时越界时报了哪一个"是承载容量研究里的一个隐性陷阱。</strong> 任何用"首个失败点 + 字典序取首"来报告限制约束的实现，都会在粗网格下产出看似有意义的错误结论。报告限制约束时必须<strong>同时报告该点的所有越界约束与各自余量</strong>，而不是只报一个名字。</blockquote>
+<p>##### 12.8.2 【修正】概率分析用 250 MW 步长，与主实验的 50 MW 不可比且系统性低估</p>
+<table>
+<thead><tr><th>来源</th><th>网格步长</th><th>D-HA CAWCC</th></tr></thead>
+<tbody>
+<tr><td>主实验 <code>capacity_scan.csv</code></td><td><strong>50 MW</strong></td><td><strong>1150 MW</strong></td></tr>
+<tr><td>概率分析 <code>probabilistic_threshold_*.json</code></td><td><strong>250 MW</strong></td><td><strong>1000 MW</strong></td></tr>
+</tbody></table>
+<p><strong>概率分析把 CAWCC 系统性低估了 150 MW（13 %）</strong>，因为它只能落在 {750, 1000, 1250} 上。因此 12.3 节报的 P05/P50/P95 = <strong>750/1000/1000</strong> 是这一粗网格下的产物，与外层的 1150 MW 基准<strong>不同口径</strong>。</p>
+<p><strong>处理（历史记录）</strong>：本段保留用于说明旧 250 MW 网格的误差来源。R4 已改用 50 MW 网格并完成 1024 样本最终批次；当前数字以 12.3 节和 <code>validation_artifacts/r2/probabilistic_status.md</code> 为准。</p>
+<p>##### 12.8.3 【严重】现实园区尺度下，日尺度物理约束未越阈值但已高位运行（历史段落，表述已修正）</p>
+<blockquote><strong>⚠️ 表述修正（2026-09-27，R5）</strong>：本段原标题为"所有承载约束都不触发"，属<strong>表述错误</strong>——产物显示约束并非"不触发"，而是在 0–300 MW 区间<strong>未越过 0.95 判定阈值</strong>、且随容量<strong>单调逼近</strong>（给水厂利用率与水源取水率 50→300 MW 由 0.80 升至 0.87）。"未越阈值"≠"无约束"；0.80 附近的高位运行本身即是紧张状态。以下表格为原始记录，引用时须带上本条修正。</blockquote>
+<p><code>run_r2_realistic_scale.py</code> 沿<strong>城市规模轴</strong>（20–200 万人，设施能力与需求按人口等比缩放）× AI 装机（0–600 MW，步长 25）扫描：</p>
+<table>
+<thead><tr><th>域</th><th>人口</th><th>0–600 MW 内各约束最大取值</th><th>首个触及 0.95 的装机</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td>100 万</td><td>wtw 0.869、取水 0.872</td><td><strong>600 MW 内未越 0.95（但已逼近）</strong></td></tr>
+<tr><td>D-HA</td><td>50 万</td><td>wtw 0.952、取水 0.955</td><td><strong>600 MW</strong></td></tr>
+<tr><td>D-CO</td><td>100 万</td><td>wtw 0.781、取水 0.765</td><td>600 MW 内未越 0.95</td></tr>
+</tbody></table>
+<p><strong>含义（这是本轮最需要正视的一条）：</strong> 即使在 <strong>50 万人口</strong>的城市（设施能力只有基准的一半），也要 <strong>600 MW</strong> 的园区才会触及给水处理约束——而 600 MW 的单一园区在现实中并不存在于 50 万人口城市内。<strong>本模型所刻画的"城市水系统构成 AI 算力承载边界"这一现象，在现实参数范围内不可观测</strong>；但<strong>给水厂与水源利用率在 0–300 MW 区间已处于 0.80 附近并持续升高</strong>，说明系统已在消耗余量，不能被读作"安全余量充足"。</p>
+<p>这<strong>不是</strong>否定模型，而是<strong>重新定位结论</strong>：CAWCC 1150 / 1450 MW 应被表述为"参数域端点上的<strong>理论承载上限</strong>"，用于<strong>相对比较与机制分析</strong>；<strong>不可</strong>表述为"某类城市的水系统会拦住 AI 算力"。文档第 7 条（"超大规模 AI 算力不应布局在百万人口级城市内部"）仍然成立，但它的正确含义是<strong>尺度不匹配</strong>（1000 MW 园区 vs 100 万人口城市），而不是<strong>资源不足</strong>。</p>
+<blockquote><strong>推论（研究边界）</strong>：在 50–300 MW 现实园区区间里，日尺度物理约束（给水厂利用率、水源取水率）<strong>未越 0.95 阈值但已从 0.80 单调升至 0.87</strong>；再生水政策阈值与园区专线容量属<strong>配置合规/接入条件</strong>（不同 estimand），不是物理承载边界。该结果与 12.7 节关于 D-HA 瓶颈切换至接网的结果方向一致。</blockquote>
+<p>##### 12.8.4 【设计缺陷】<code>reclaimed_water_substitution_ratio</code> 在极大区间内是常数</p>
+<p><code>reclaimed_water_substitution_ratio = 园区再生水供应量 / (园区取水量 + 未满足量)</code>（<code>ai_metrics.py:162</code>），阈值 HA ≥ 0.65、CO ≥ 0.40。</p>
+<p>逐点实测（<code>capacity_scan.csv</code>）：</p>
+<table>
+<thead><tr><th>域</th><th>数值恒定区间</th><th>恒定值</th><th>阈值</th><th>阈值/配置值余量</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td><strong>50 – 1100 MW</strong></td><td><strong>0.700</strong></td><td>0.65</td><td><strong>仅 7.7 %</strong></td></tr>
+<tr><td>D-CO</td><td><strong>50 – 1650 MW</strong></td><td><strong>0.450</strong></td><td>0.40</td><td><strong>仅 12.5 %</strong></td></tr>
+</tbody></table>
+<p><strong>两个问题</strong>：</p>
+<ol><li><strong>它不携带容量信息</strong>：在整个 50–1100 MW 区间恒定，说明它的取值由<strong>再生水配置策略</strong>决定，与城市承载力无关。文档 1.3 节第 1 条"可失效性"纪律要求排除不携带信息的判据——这个指标在绝大部分区间内不满足该要求，<strong>应把它从"承载约束"中分离出来</strong>，改为"配置策略可行性检查"。</li><li><strong>阈值与配置值贴着</strong>：只留 7.7 % / 12.5 % 余量，导致它一旦开始下降就很快越界，从而在<strong>粗网格下抢先成为"限制约束"</strong>（12.8.1）。阈值与配置值不独立，是这条约束最根本的设计问题。</li></ol>
+<p><strong>处理</strong>：保留该约束（它对应真实的再生水政策要求），但论文中<strong>不得</strong>把它与 <code>max_wtw_utilization</code> 等物理约束并列称为"承载约束"；报告时必须显式说明它是<strong>配置可行性</strong>而非<strong>物理能力</strong>。</p>
+<p>##### 12.8.5 【历史发现，已由 R4 修正】城市非 AI 用电未建模</p>
+<p>引擎中与电有关的输入只有 <code>components.AI_DC1.grid_connection_capacity_mw = 1500 MW</code>，<strong>没有城市基准负荷序列或等效参数</strong>。因此：</p>
+<ul><li>文档局限 #10 的"1000 MW 已占城市全社会用电 129 %"是一个<strong>外部断言</strong>，在模型内无法复核，其分母来源需要说明；</li><li><code>grid_connection_capacity_mw</code> 的<strong>语义未定义</strong>：它是"AI 园区专用接入容量"还是"城市电网总容量"？两者的现实含义差别很大——前者 1500 MW 对 100 万人口城市偏高，后者 1000 MW 园区（日均 750 MW）叠加上城市自身负荷会直接过载。</li></ul>
+<p><strong>处理</strong>：论文中必须明确该字段的语义。若按"园区专用接入容量"解释，则 D-CO 的电网约束是<strong>园区自身接入</strong>限制，不能表述为"城市电力不足"。</p>
+<p>##### 12.8.6 水源可持续性：入流 ≈ 实际取水，靠动用库容维持</p>
+<table>
+<thead><tr><th>域</th><th>入流/实际取水</th><th>库容/年实际取水</th><th>两年净消耗库容</th></tr></thead>
+<tbody>
+<tr><td>D-HA</td><td><strong>1.030</strong></td><td>1.284</td><td>7887 ML（12 % 库容）</td></tr>
+<tr><td>D-CO</td><td><strong>1.164</strong></td><td>1.306</td><td>约 7000 ML</td></tr>
+</tbody></table>
+<p>文档 15 节的声称（入流/取水 1.05–1.15、库容/年取水 1.3–1.4）<strong>与实际基本吻合</strong>（HA 略低于下界）。但要注意：<strong>年入流仅约等于年取水（1.03 / 1.16），水库靠动用库容维持两年运行。</strong> 两年模拟内没问题（V12 最低蓄量仍有余量），但这是一个<strong>不可长期持续</strong>的设定——干旱情景之所以是压力最大的（12.3 节、7.5 节），根源就在这里。</p>
+<p>##### 12.8.7 复核中撤回的两条误判（记录口径教训）</p>
+<p>复核脚本<strong>自身</strong>犯了两处口径错误，修正后相关条目判定为 PASS，特此记录：</p>
+<table>
+<thead><tr><th>误判</th><th>原因</th><th>修正</th></tr></thead>
+<tbody>
+<tr><td>"AI 用电/电网接入 = 12.0，远超 0.95"</td><td>把 <code>data_center_daily</code> 的能耗列（<strong>MWh/d</strong>）直接当作 <strong>MW</strong> 使用，差 <strong>24 倍</strong></td><td>除以 24 后：300 MW→0.150、1000 MW→0.500、1450 MW→0.725，全部 PASS</td></tr>
+<tr><td>"入流/取水 = 0.69，与文档声称的 1.05–1.15 严重矛盾"</td><td>分母用了<strong>取水能力</strong>（380/400 ML/d），而文档用的是<strong>实际取水</strong>（256/252 ML/d）</td><td>改为实际取水后：1.030 / 1.164，与文档吻合</td></tr>
+</tbody></table>
+<blockquote>两处都是<strong>同一个类别</strong>的错误：把"某一口径下的量"与"另一口径下的阈值/分母"直接相除。这与 12.6(c) 记录的 6 例跨来源口径冲突是同一性质——<strong>只不过这次犯错的是复核者自己</strong>。这进一步支持本文的立场：<strong>口径必须写进数据文件本身</strong>，不能只写在正文或靠记忆。</blockquote>
+<p>##### 12.8.8 复核结论：哪些结论可以留、哪些必须改</p>
+<table>
+<thead><tr><th>结论</th><th>判定</th><th>处理</th></tr></thead>
+<tbody>
+<tr><td>8.1 约束可失效性诊断</td><td>✅ 成立</td><td>保留</td></tr>
+<tr><td>9.4 多尺度 CAWCC 数值（1150/1450）</td><td>✅ 成立（50 MW 步长）</td><td>保留，但须标注为<strong>理论上限</strong>（12.8.3）</td></tr>
+<tr><td>10.2 干预增益的域间差异</td><td>✅ 成立</td><td>保留</td></tr>
+<tr><td>10.3 再生水两杠杆（处理能力无效、产水量有效）</td><td>✅ 成立</td><td>保留</td></tr>
+<tr><td>10.4 成本效益与 Pareto</td><td>✅ 成立</td><td>保留（造价绝对值仍受 GREY 限制）</td></tr>
+<tr><td>12.1 / 12.2 Morris / Sobol</td><td>✅ 成立</td><td>保留</td></tr>
+<tr><td>12.4 城市侧敏感性（漏损主导）</td><td>✅ 成立</td><td>保留</td></tr>
+<tr><td><strong>12.3 "概率下限制约束 100 % 是政策指标"</strong></td><td>❌ <strong>不成立</strong></td><td><strong>撤回</strong>，改为"物理约束主导"（12.8.1）</td></tr>
+<tr><td><strong>12.3 概率阈值绝对值</strong></td><td>⚠️ 粗网格低估 13 %</td><td>标为独立口径，不与主实验混用（12.8.2）</td></tr>
+<tr><td><strong>12.5 城市梯度"25/25 限制约束是政策指标"</strong></td><td>❌ <strong>不成立</strong></td><td><strong>撤回</strong>；梯度的<strong>单调性</strong>结论仍成立</td></tr>
+<tr><td>12.5 城市梯度单调性</td><td>✅ 成立</td><td>保留</td></tr>
+<tr><td>12.6 外部效度对标</td><td>✅ 成立</td><td>保留</td></tr>
+<tr><td>12.7 边界条件实验</td><td>✅ 成立</td><td>保留（其"漏损达标→瓶颈迁到政策指标"是确定性 50 MW 网格下的结果，不受 12.8.1 影响）</td></tr>
+</tbody></table>
+<hr>
+<h2 id="13-执行方案">13. 执行方案</h2>
+<h3 id="13-1-命令">13.1 命令</h3>
+<pre><code>cd aiuwm_src
+$env:PYTHONPATH=&#x27;src;scripts&#x27;
+
+# 1) 生成两个参数域端点的全部工程、驱动、规格与证据表
+python scripts/build_r2_domains.py --years 2 --seed 20260918
+
+# 2) 现实性审计（改任何城市/设施参数后必跑；必须 0 FAIL）
+python scripts/audit_realism.py --domains ha,co --ai-capacity 1000
+
+# 3) 干式优先冷却阈值率定（改切换带后必跑）
+python scripts/calibrate_dry_first.py --domains ha,co --capacity 750
+
+# 4) 主实验矩阵 + 自检（两域约 14 分钟；不含敏感性与概率）
+python scripts/run_r2.py --domains ha,co --skip-sensitivity --skip-probabilistic
+
+# 5) 不确定性与稳健性（最耗时，独立重跑）
+python scripts/run_r2_sensitivity.py --domains ha,co
+
+# 6) 一次跑完（两域约 35–40 分钟）
+python scripts/run_r2.py --domains ha,co
+
+# 7) 扩展块：城市侧参数敏感性 + 能源富集补充情景（v4 新增，约 35 分钟）
+#    注意：需把 scripts/ 一并加入 PYTHONPATH——本脚本复用 run_r2.py 的
+#    口径定义（CAPACITIES_SCAN / daily_constraints / annual_constraints），
+#    以保证与主实验完全同一口径。
+PYTHONPATH=&quot;src;scripts&quot; python scripts/run_r2_extra.py --domains ha,co --sobol-samples 64
+
+#    也可分块单独跑：
+#    PYTHONPATH=&quot;src;scripts&quot; python scripts/run_r2_extra.py --blocks city
+#    PYTHONPATH=&quot;src;scripts&quot; python scripts/run_r2_extra.py --blocks energy</code></pre>
+<h3 id="13-2-实验段与产物">13.2 实验段与产物</h3>
+<table>
+<thead><tr><th>段</th><th>内容</th><th>产物（<code>validation_artifacts/r2/{ha,co}/</code>）</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>基线 vs AI（剔除城市自然增长）</td><td><code>baseline_delta.csv</code></td></tr>
+<tr><td>B</td><td>容量扫描 / 日尺度 CAWCC / 约束边界 / 可失效性</td><td><code>capacity_scan.csv</code>, <code>capacity_threshold.csv</code>, <code>constraint_boundaries.csv</code>, <code>constraint_informativeness.csv</code></td></tr>
+<tr><td>C</td><td>干预边际（排除 0 MW）</td><td><code>intervention_marginal.csv</code></td></tr>
+<tr><td>C2</td><td>主导瓶颈边际有效性曲线</td><td><code>reuse_marginal_curve.csv</code></td></tr>
+<tr><td>C3</td><td>再生水比例–CoC–补水反馈链</td><td><code>reclaimed_coc_feedback.csv</code></td></tr>
+<tr><td>D</td><td>冷却技术对照（一技术一工程）</td><td><code>technology_comparison.csv</code></td></tr>
+<tr><td>E</td><td>分配政策对照</td><td><code>policy_comparison.csv</code></td></tr>
+<tr><td>F</td><td>S×G 矩阵（4×4）</td><td><code>state_pressure_matrix.csv</code></td></tr>
+<tr><td>G</td><td>热浪极端</td><td><code>heatwave_stress.csv</code></td></tr>
+<tr><td>H</td><td>Morris / Sobol</td><td><code>morris.csv</code>, <code>sobol.csv</code></td></tr>
+<tr><td>I</td><td>概率承载阈值</td><td><code>probabilistic_thresholds.csv</code>, <code>probabilistic_summary.json</code></td></tr>
+<tr><td>C4</td><td>毛替代率 vs B0 城市源水增量代理（含产能 ×1/×1.5/×2/×3）</td><td><code>reclaimed_net_substitution.csv</code></td></tr>
+<tr><td>C5</td><td>再生水<strong>产水量</strong>边际曲线（真杠杆）</td><td><code>reuse_production_marginal_curve.csv</code></td></tr>
+<tr><td>C6</td><td>城市侧参数敏感性（Morris 双指标 + Sobol）</td><td><code>city_morris.csv</code>, <code>city_sobol.csv</code></td></tr>
+<tr><td>J</td><td>能源富集补充情景对比（<strong>两域都做</strong>）</td><td><code>energy_rich_comparison.csv</code></td></tr>
+<tr><td>G</td><td>边界条件：4 个"政策已达标"变体重跑</td><td><code>advanced_city_cawcc.csv</code>, <code>advanced_city_interventions.csv</code>, <code>advanced_city_indicators.csv</code></td></tr>
+<tr><td>—</td><td>现实性审计（19 项判据）</td><td><code>../realism_audit.csv</code>（在 <code>validation_artifacts/r2/</code> 下）</td></tr>
+<tr><td>—</td><td>自检汇总</td><td><code>r2_verification.json</code></td></tr>
+</tbody></table>
+<p><strong>v4 数据扩充阶段新增的产物</strong>（<code>validation_artifacts/</code> 下）：</p>
+<table>
+<thead><tr><th>任务</th><th>内容</th><th>产物</th><th>规模</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>逐日过程数据全量落盘（13 张表 × 日/周/月/年四级聚合）</td><td><code>timeseries/</code> + <code>timeseries/manifest.csv</code></td><td><strong>45 情景 / 1 563 174 行 / 293.4 MB</strong></td></tr>
+<tr><td>B</td><td>概率承载阈值（64 快速批次 → 1024 最终批次）</td><td><code>r2/{ha,co}/probabilistic_corrected.csv</code>, <code>probabilistic_corrected_summary.json</code></td><td>250 MW 锚点 + 50 MW 转折细化</td></tr>
+<tr><td>C</td><td>25 城合成梯度（5×5 混合谱 × 41 容量点）</td><td><code>r2/city_gradient_capacity_scan.csv</code>（1025 行）, <code>city_gradient_cawcc.csv</code></td><td>1025 次模拟</td></tr>
+<tr><td>D</td><td>干预成本效益与 Pareto 前沿</td><td><code>r2/intervention_cost_benefit.csv</code>, <code>pareto_front.csv</code>, <code>cost_parameters.csv</code></td><td>10 干预 × 2 域</td></tr>
+<tr><td>E</td><td>文献 / 官方标准定量对标</td><td><code>r2/literature_benchmark*.csv</code>（7 个文件）</td><td>420 + 城市侧比对</td></tr>
+<tr><td>G</td><td>边界条件：4 个"政策已达标"城市变体</td><td><code>r2/advanced_city_{cawcc,interventions,indicators}.csv</code></td><td>4 变体 × 2 域 × 4 次全量扫描</td></tr>
+<tr><td>F</td><td>可交付数据集（分册 + 抽样）</td><td><code>AI-UWM_R2_实验数据集/</code>（三册 xlsx + csv/ + README）</td><td>见 README</td></tr>
+</tbody></table>
+<p>对应命令：</p>
+<pre><code>$env:PYTHONPATH=&#x27;src;scripts&#x27;
+
+# A 逐日过程全量落盘（约 10 min；分域跑可并行）
+python scripts/run_r2_timeseries.py --domains ha
+python scripts/run_r2_timeseries.py --domains co
+
+# B 概率阈值（最终批次：1024 样本，24 workers，bootstrap 2000）
+python scripts/run_r2_probabilistic.py --domains ha,co --samples 1024 --workers 24 --bootstrap 2000
+
+# C 25 城合成梯度
+python scripts/run_r2_city_gradient.py --grid 5 --workers 16
+
+# D 成本效益与 Pareto（约 20 s）
+python scripts/run_r2_cost_pareto.py
+
+# E 文献 / 标准对标（读已有 dump，不重跑模拟）
+python scripts/build_literature_benchmark.py
+
+# G 边界条件：政策已达标城市（4 变体 × 2 域，每域约 11 min）
+python scripts/run_r2_advanced_city.py --domains ha
+python scripts/run_r2_advanced_city.py --domains co
+
+# F 导出可交付数据集
+python scripts/export_r2_dataset.py --daily-step 3</code></pre>
+<blockquote><strong>Windows 并行注意</strong>：<code>ProcessPoolExecutor</code> 的子进程不继承主进程内存。<code>run_r2_probabilistic.py</code><br>与 <code>run_r2_city_gradient.py</code> 已通过 <code>_init_worker</code> 的 <code>initargs</code> 传常量、并在 worker 内显式<br><code>sys.path.insert</code> 补 <code>src</code>，否则报 <code>KeyError: 'ai_capacity_mw'</code>。<br>可复现性靠主进程用同一 seed 预采样全部参数向量再分发保证。</blockquote>
+<h3 id="13-3-执行顺序-对应-v1-的-p1-p2-p3">13.3 执行顺序（对应 v1 的 P1/P2/P3）</h3>
+<ol><li><strong>P1 建基准</strong>：<code>build_r2_domains.py</code> → 检查 <code>domain_diagnostics.json</code> 两端点是否落在预期气候区间。</li><li><strong>P2 验证</strong>：先 <code>audit_realism.py</code>（19 项必须 0 FAIL），再 <code>run_r2.py</code> → 看 V1–V12。<strong>V1/V2/V4/V5/V7/V12 任一项不通过必须停下来修模型</strong>，不能往下走。</li><li><strong>P3 主扫描</strong>：P2 全通过后才引用 CAWCC、瓶颈链、边际曲线、反馈链的结果。</li><li><strong>P4 稳健性（v4 新增）</strong>：<code>run_r2_extra.py</code> 补两块——（a）城市侧参数的</li></ol>
+<p>   Morris/Sobol，回答"头号结论是否依赖城市侧设定值"；（b）能源富集补充情景，</p>
+<p>   把电力约束从瓶颈链中摘掉单独观察水系统。<strong>这两块在 v3 里是缺失的</strong>：</p>
+<p>   前者使核心结论没有不确定性支撑，后者是定义了却从未执行的悬空目标。</p>
+<ol><li><strong>P5 数据扩充（v4 新增）</strong>：A 逐日全量 → B 1024 样本 → C 25 城梯度 → D 成本效益 → E 文献对标 → F 导出。</li></ol>
+<p>   顺序上 B 与 C 独立可并行；<strong>D 依赖 A 之前已跑的 <code>intervention_marginal.csv</code>，E 与 F 依赖 A 的 dump</strong>，</p>
+<p>   所以 A 必须先跑。全部脚本只追加不覆盖，<code>manifest.csv</code> 为累积式合并（多次分域运行不会互相覆盖）。</p>
+<hr>
+<h2 id="14-自检结果-v1-v12-计算-两域各-12-12-通过">14. 自检结果 V1–V12【计算】（两域各 12/12 通过）</h2>
+<table>
+<thead><tr><th>编号</th><th>检验内容</th><th>D-HA</th><th>D-CO</th><th>关键值</th></tr></thead>
+<tbody>
+<tr><td>V1</td><td>水量平衡闭合</td><td>PASS</td><td>PASS</td><td>最大残差 <strong>1.07e−14 ML</strong></td></tr>
+<tr><td>V2</td><td>取水量随容量单调不减</td><td>PASS</td><td>PASS</td><td>最小增量 +1451 / +1382 ML</td></tr>
+<tr><td>V3</td><td>约束信息量（诊断）</td><td>PASS</td><td>PASS</td><td>D-HA 3 条不失效；D-CO 6 条不失效</td></tr>
+<tr><td>V4</td><td>尺度序 年 ≥ 日 ≥ 小时</td><td>PASS</td><td>PASS</td><td><strong>1150 ≥ 1150 ≥ 800</strong>；<strong>1750 ≥ 1450 ≥ 1150</strong> MW</td></tr>
+<tr><td>V5</td><td>PUE / WUE 技术序</td><td>PASS</td><td>PASS</td><td>干 PUE 1.356 &gt; 湿 1.181；干 WUE 0 &lt; 湿 2.210</td></tr>
+<tr><td>V6</td><td>峰值系数机制</td><td>PASS</td><td>PASS</td><td>D-HA <code>dry_first</code> <strong>7.48</strong>（文献 6.5–10× 内）；D-CO <code>dry_first</code> 退化已剔除</td></tr>
+<tr><td>V7</td><td>干预增益非负</td><td>PASS</td><td>PASS</td><td>最小增益 0</td></tr>
+<tr><td>V8</td><td>居民优先不劣于 AI 优先</td><td>PASS</td><td>PASS</td><td><code>policy_a</code> 居民缺水量全容量段为 0</td></tr>
+<tr><td>V9</td><td>气候敏感性（双信号）</td><td>PASS</td><td>PASS</td><td>夏季取水 G1 相对 G0 <strong>+0.98 % / +1.00 %</strong>；取水占用率 G2 相对 G0 <strong>+0.073 / +0.146</strong></td></tr>
+<tr><td>V10</td><td>常态不失效约束被压力激活</td><td>PASS</td><td>PASS</td><td>S×G 中可靠性最低 <strong>0.601 / 0.651</strong>，取水比最高 <strong>1.000</strong></td></tr>
+<tr><td>V11</td><td>B0 代理比 ≤ 毛替代率（仅校核再生水配置不变行）</td><td>PASS</td><td>PASS</td><td>1000 MW：毛 <strong>0.700 / 0.450</strong>，B0 代理 <strong>0.034 / 0.027</strong>；产能 ×3 时代理 1.720 / 1.642（不校核）</td></tr>
+<tr><td>V12</td><td>基线城市自洽（0 MW 无缺水、库容不枯）</td><td>PASS</td><td>PASS</td><td>基线未满足量 5.1e−12 ML；最低蓄量 <strong>57 113 / 63 972 ML</strong>（库容 47.6 % / 53.3 %）</td></tr>
+</tbody></table>
+<p><strong>v3 新增 V11 与 V12 的理由</strong>：</p>
+<ul><li><strong>V11</strong> 把"毛替代率 ≠ 城市净量"这条机制（3.4 机制一）固化成常驻校验：在不改变再生水配置的行上，B0 代理比不得大于毛替代率——否则说明输配效率或置换效应的记账有错。扩大产能的行允许代理 &gt; 毛（外溢收益），因此只校核配置不变的行（否则会误报 2 条 FAIL）。</li><li><strong>V12</strong> 专门守<strong>伪约束</strong>：0 MW（无数据中心）时城市必须自洽——无未满足需求、水库不被抽干。v2 的水库库容设定若过这条检验，第 3.3 节 #2 的伪约束在第一次跑基线时就会被抓住。判据用 1e−6 容差而非 <code>== 0.0</code>（浮点残差量级 5e−12）。</li></ul>
+<p><strong>V9 经历了两次修正，值得写进论文方法部分</strong>：</p>
+<ol><li>第一版用"总取水量"——G1/G3 相对 G0 只有 <strong>+0.28 %</strong>，气候信号被完全掩盖。因为 AI 优先取再生水，干旱时再生水少了就自动置换成淡水，<strong>总量几乎不变</strong>。</li><li>第二版用"淡水取水量"——更糟，出现 <strong>G3 &lt; G0 的假阴性</strong>（−1.69 %）。因为干旱下城市配水总量下降，AI 的淡水份额被挤压，反而不升反降。</li><li>最终版拆成两个独立物理信号：<strong>高温 → 夏季（6–8 月）AI 取水量上升</strong>（必须按季节切片，用全年总量会把 +4 ℃ 的信号稀释到 0.3 % 以下）；<strong>干旱 → 水源取水能力占用率上升</strong>（不是再生水用量——实测再生水对干旱的响应只有 +0.07 %，因为再生水供给由污水量决定、污水量由供水量决定，而库容 65 000 ML 起（库容的 54 %）、干旱只压入流与取水能力时供水并未真正受限）。</li></ol>
+<p>最后这一点本身就是<strong>一个可发表的结构发现</strong>：再生水供给对短期水文干旱不敏感，但对结构性缺水（S2 状态）敏感。</p>
+<hr>
+<h2 id="15-参数证据表">15. 参数证据表</h2>
+<p>完整表在 <code>examples/cawcc_r2/parameter_sources.csv</code>（<strong>29 行</strong>，含来源与证据类型）。要点：</p>
+<table>
+<thead><tr><th>参数</th><th>证据类型</th></tr></thead>
+<tbody>
+<tr><td>居民用水 165 L/(cap·d)</td><td>【<strong>官方</strong>】GB 50013-2018 表 4.0.3-3/4：Ⅱ型大城市（城区常住人口 100 万–300 万）最高日 220–400（一区）/150–260（二区）、平均日 140–300（一区）/90–170（二区）L/(人·d)。模型人口 100 万，取下界。<strong>模型实测 163.5/159.1（平均日）与日变化系数 1.13 均在区间内</strong></td></tr>
+<tr><td>配水干管漏损 0.12</td><td>【<strong>官方</strong>】《城镇供水管网漏损控制及评定标准》CJJ 92-2016（住建部 2018-12-27 局部修订）5.1.2：漏损率按两级评定，<strong>一级 10 %、二级 12 %</strong>（原修正条款已废止）。模型取二级 12 %，<strong>对照 2025 年 9 % 政策目标超标</strong>——是有意设定，见 12.6(b) 与 12.7</td></tr>
+<tr><td>CoC 水质限值 TDS 2200、氯化物 500 mg/L</td><td>【文献】ASHRAE 冷却水处理（DOE FEMP 给出 CoC 3–7 运行区间）</td></tr>
+<tr><td>AI 负荷因子均值 0.75</td><td>【文献】LBNL 2024</td></tr>
+<tr><td>干冷 / 湿冷 PUE 与温度敏感性方向</td><td>【文献】ASHRAE；Fan et al.</td></tr>
+<tr><td>日峰值系数区间 2.2× / 6.5–10×</td><td>【文献】Han/Li/Wierman/Ren 2026, arXiv:2603.02705</td></tr>
+<tr><td>再生水配置比例</td><td>【文献】北京市水资源公报 2024。<strong>对照</strong>：【<strong>官方</strong>】发改环资〔2021〕827 号——2025 年地级及以上缺水城市再生水利用率 ≥ 25 %、京津冀 ≥ 35 %，基准年约 20 %。<strong>模型城市 15–16 % 未达标</strong>（有意设定）</td></tr>
+<tr><td>污水厂扩容造价 1630–2170 元/(m³·d)</td><td>【GREY】行业造价摘录。<strong>官方锚点</strong>：建标 198-2022 表 5 新建一级A I类 2175–1865 元/(m³·d)（<strong>武汉市 2016-12 价格</strong>）。本文扩容增量低于新建下限，属<strong>偏保守（偏低）方向</strong>，须标注</td></tr>
+<tr><td>给水厂扩容造价 2170–2715 元/(m³·d)</td><td>【GREY】行业造价摘录。<strong>官方锚点</strong>：建标 120-2009 表 7 净水工程 210–278 元/(m³·d)（<strong>北京市 1990 年价格</strong>）+ 取水 57–90 + 配水厂 55–95。<strong>价格基准年与口径（新建 vs 扩容）都不同，不可直接互检</strong>，只作量级参照</td></tr>
+<tr><td>中水回用造价 5000–7000 元/(m³·d)</td><td>【GREY】行业造价摘录。<strong>案例锚点</strong>：西安思源学院 A²/O-MBR 4000 m³/d 决算 2238.13 万元 = <strong>5595 元/(m³·d)</strong>（落在区间内）。<strong>反例</strong>：中央预算内投资估算标准给 1100 元/(m³·d)，相差 5 倍（口径差异，不采用）</td></tr>
+<tr><td>110 kV 变电站 625 元/kVA</td><td>【<strong>官方</strong>】南方电网办基建〔2022〕28 号《35–500 千伏输变电工程造价控制线（2022 年）》</td></tr>
+<tr><td>城市规模、各类设施能力、气候驱动</td><td>【设定】 / <strong>合成</strong></td></tr>
+<tr><td>市政杂用需求 20 ML/d</td><td>【设定】按北京 2024 再生水用户结构</td></tr>
+<tr><td>建成区 12 000 ha</td><td>【设定】120 m²/人</td></tr>
+<tr><td>水源入流 265 / 290 ML/d、库容 120 000 ML、初始 65 000 ML</td><td>【设定】<strong>比值反算</strong>（入流/取水 1.05–1.15；库容/年取水 1.3–1.4）</td></tr>
+<tr><td>取水 380/400、给水 370/380、污水 270 ML/d</td><td>【设定】<strong>按峰值日利用率 0.78–0.82 反算</strong></td></tr>
+<tr><td>再生水处理能力 40 / 36 ML/d、分流比例 0.16 / 0.15</td><td>【设定】处理能力 = 产水量 × 1.25</td></tr>
+</tbody></table>
+<p><strong>所有"反算"型参数都附带反算依据</strong>，审稿人可追溯到比值型现实性判据，而不是一句"设定"。</p>
+<p><strong>证据类型为“合成”的结果用于报告条件模型估计；真实城市结论由率定数据给出。</strong></p>
+<hr>
+<h2 id="16-已知局限与-r3-改进项">16. 已知局限与 R3 改进项</h2>
+<table>
+<thead><tr><th>#</th><th>局限</th><th>影响</th><th>R3 做法</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>驱动为合成序列，AI 日负荷只有季节 + 周末变化</td><td>湿冷日峰值系数 1.17 &lt; 文献 2.2×</td><td>换成真实小时级 AI 负荷序列（至少加作业排队的 AR(1) + 突发项）</td></tr>
+<tr><td>2</td><td>蒸发量不随湿球温度变化（只随排热量）</td><td>湿冷技术的气候敏感性被低估</td><td>在 <code>data_center</code> 加入塔效率 / 逼近度对湿球的依赖</td></tr>
+<tr><td>3</td><td>再生水水质只给 TDS 与氯化物</td><td>CoC 约束只由两项指标决定</td><td>补碱度、硬度、SiO₂，接入结垢指数</td></tr>
+<tr><td>4</td><td>单一水源、单一污水厂、单一再生水厂</td><td>空间异质性无法体现</td><td>多水源 / 多厂分区</td></tr>
+<tr><td>5</td><td>Sobol N = 32，一阶指数出现负值（越界）</td><td>不能作为定量方差分解报告</td><td>N ≥ 256，或改用 Jansen 估计器</td></tr>
+<tr><td>5b</td><td><code>temperature_coefficient</code> 是最大不确定源但无实测率定</td><td>Morris <code>mu*</code> 达基准 PUE 的 5–10 倍，结论对其取值敏感</td><td>现场率定 PUE–温度关系（与负荷序列同级优先）</td></tr>
+<tr><td>6</td><td>政策对照在 2000 MW 内区分度不足（AI 淡水有硬上限；凉爽端未进短缺区）</td><td>伦理结论偏弱</td><td>容量提到 3000 MW，或加"AI 淡水无上限"对照</td></tr>
+<tr><td>7</td><td>干旱情景只压入流与取水能力，未压水库初始蓄量</td><td>干旱信号在水源侧才显现，再生水侧无响应</td><td>加"多年连旱"情景（连续 2–3 年入流折减 + 初始蓄量下调）</td></tr>
+<tr><td>8</td><td>未做校准—验证拆分</td><td>无法给出模型对实测的偏差</td><td>拿到实测 WUE/PUE/补水后做（见第 17 节）</td></tr>
+<tr><td>9</td><td><strong>毛替代率与 B0 城市取水代理相差一个数量级</strong>（1000 MW：0.70 vs 0.034）</td><td>以毛替代率为考核指标可能高估园区节水贡献（置换效应）</td><td>论文与政策建议同时报告 AI potable、被置换用户 potable 和城市源水变化；R9 再检验新增产水与分配规则</td></tr>
+<tr><td>10</td><td><strong>0–2000 MW 是刻意压力测试网格</strong>，1000 MW 已占城市全社会用电 129 %</td><td>绝对 CAWCC 值不能直接用于规划许可</td><td>所有结论折算到现实区间 50–300 MW；R3 增加 0–500 MW 细网格</td></tr>
+<tr><td>11</td><td>再生水只有 TDS / 氯化物两项水质约束</td><td>CoC 封顶机制可能与现实不同</td><td>补碱度、硬度、SiO₂，接入结垢指数（同 #3）</td></tr>
+<tr><td>12</td><td>干旱情景仍只压入流与取水能力，未压水库初始蓄量</td><td>干旱信号只在取水占用率上显现，再生水侧几乎无响应（+0.39 % / +0.07 %）</td><td>加"多年连旱"情景（连续 2–3 年入流折减 + 初始蓄量下调）</td></tr>
+<tr><td>13</td><td>单一水源、单一污水厂、单一再生水厂</td><td>空间异质性无法体现</td><td>多水源 / 多厂分区（同 #4）</td></tr>
+<tr><td>14</td><td><strong>造价参数 3 条为 GREY、1 条 MISSING</strong>（本地接水造价指标缺失）</td><td>10.4 节投资额是量级估计不是预算；<code>local_connection_plus_50pct</code> 因缺造价而无法评估</td><td>把 GREY 项回溯到造价定额；补本地接水造价指标。<strong>倍数关系（32.5×）在 GREY 区间内稳健，绝对值不可直接用于工程决策</strong></td></tr>
+<tr><td>15</td><td><strong>城市梯度是两端点的线性混合谱，不是真实城市</strong></td><td>25 个中间城市不对应任何真实城市，不得表述为"某市的承载容量"</td><td>R3 用真实城市参数替换至少 2–3 个中间点，检验线性假设是否成立</td></tr>
+<tr><td>16</td><td>~~模型城市的漏损率与再生水利用率是"落后"设定，结论依赖它~~</td><td>10.4 与 12.3 节两条主结论<strong>都建立在该设定之上</strong></td><td><strong>已于 v4.1 用 12.7 节解决</strong>：构造 4 个"政策已达标"变体重跑，给出结论的适用边界（水侧端点条件性、电侧端点无条件）。<strong>但 12.7 只给边界状态、未模拟治理过程（分期投入/产能爬坡/政策时滞）</strong>，要支撑政策建议仍需 R3 补时间序列</td></tr>
+<tr><td>17</td><td><strong>WUE 与漏损率的跨来源口径不统一</strong>（4 个实例，12.6 节）</td><td>任何跨文献数值比较都可能差近 1 倍</td><td>引用一律写明口径；口径写进数据文件本身（已做），R3 沿用</td></tr>
+<tr><td>18</td><td>概率分析只用 3 个 AI 侧参数（<code>base_pue</code>、<code>CoC</code>、<code>temperature_coefficient</code>）抽样，<strong>城市侧参数未纳入概率框架</strong></td><td>12.3 节的 CI 只反映 AI 侧不确定性，是<strong>条件于城市参数</strong>的区间，比真实不确定性窄</td><td>把城市侧参数（尤其漏损率）一并纳入联合抽样，给出无条件区间</td></tr>
+<tr><td>19</td><td><strong>概率分析网格 250 MW，比主实验 50 MW 粗 5 倍</strong></td><td>CAWCC 系统性低估 13 %（1000 vs 1150 MW），且多约束被压到同一网格点导致"限制约束"报告失真</td><td>12.8.2 已标为独立口径；R3 统一到 50 MW 或更细</td></tr>
+<tr><td>20</td><td><strong><code>find_ai_carrying_capacity</code> 报"限制约束"时取字典序首个越界者</strong>，非余量最小者</td><td>多约束同时越界时报出的约束名由字典顺序决定，不反映真正瓶颈（曾据此产出错误结论）</td><td>12.8.1 已改为逐点全量诊断；R3 应把"该点全部越界约束 + 各自余量"写进返回值</td></tr>
+<tr><td>21</td><td><strong>实验尺度相对现实错位</strong>：CAWCC 1150/1450 MW 远超现实园区 50–300 MW，且现实尺度下日尺度物理约束<strong>未越 0.95 阈值但已高位运行</strong>（给水厂/水源利用率 0.80→0.87，首破 600 MW）</td><td>核心量在现实规划中不可观测；不加说明会被误读为"城市水系统会拦住 AI"（反向亦不可：0.80 高位运行≠安全余量充足）</td><td>12.8.3 已把 CAWCC 定位为"参数域端点上的<strong>理论承载上限</strong>"；R3 需补"城市规模 × 园区规模"的现实组合标定</td></tr>
+<tr><td>22</td><td><strong><code>grid_connection_capacity_mw</code> 解释为园区专线容量</strong>，合成城市非 AI 负荷已加入</td><td>AI 占城市负荷可在合成驱动内复核；真实节点余量仍需现场率定</td><td>R4-4 补真实节点容量、备用率和园区专线数据</td></tr>
+<tr><td>23</td><td><strong>水源仅勉强维持</strong>：入流/实际取水 = 1.030 / 1.164，两年净消耗库容 12 %</td><td>模拟期内无问题，但设定<strong>长期不可持续</strong>；这也解释了为何干旱情景压力最大</td><td>R3 应把入流/取水提到 1.2–1.5，或显式建模多年调节</td></tr>
+</tbody></table>
+<hr>
+<h2 id="17-需要你补充-确认的项-待补">17. 需要你补充/确认的项【待补】</h2>
+<p>按优先级排序，前三项会直接决定本轮结论能否发表：</p>
+<ol><li><strong>真实小时级 AI 负荷序列</strong>（训练/推理分离，含日内曲线）。当前 <code>ai_load_factor_a60</code> 是合成日均值，它决定日峰值系数与小时尺度 CAWCC。若能拿到（哪怕是公开集群的归一化曲线），第 9.4 与 11.2 节的数字要重算。</li><li><strong>PUE–温度关系的现场率定</strong>（<code>temperature_coefficient</code> 与参考温度）。Morris 显示它是 AI 取水量的头号不确定源（<code>mu*</code> 为基准 PUE 的 5–10 倍），目前只有按技术分档的设定值。这一项与负荷序列同等优先。</li><li><strong>目标城市真实气象序列</strong>（干球、相对湿度、降雨、水源入流，至少 2 年逐日）。替换后 <code>driver_series</code> 从 <code>synthetic</code> 变为 <code>observed</code>，参数域端点才能真正锚定。</li><li><strong>现场设施能力</strong>（取水/给水/污水/再生水的实测设计规模与运行负荷率）。当前是"基线利用率 0.55–0.80"的规划区间设定。</li><li><strong>实测 WUE / PUE / 冷却塔补水量</strong>（至少一个园区、至少 12 个月）。用于校准—验证拆分——没有它，模型只能做机制分析，不能做预测。</li><li><strong>导师确认</strong>：参数域端点法是否保持（还是要换案例城市）；再生水替代率下限 0.65/0.40 是否符合政策语境。</li><li>~~<strong>是否把本次改动提交到 GitHub</strong>~~：<strong>已完成</strong>（commit <code>efa78e2</code>，119 files changed，已推送到 &lt;https://github.com/mmrgr/AI-UWM&gt; 的 <code>main</code> 分支）。注意仓库 <code>git user.name</code> 未配置，提交作者显示为 <code>unknown</code>，如需在 GitHub 上关联个人账号请先 <code>git config --global user.name</code>。</li><li><strong>政策口径确认</strong>：本轮发现毛替代率（0.70 / 0.45）与 B0 城市源水增量代理比（0.034 / 0.027）相差一个数量级。论文中不应把代理量写成普适净替代率；第 8.1 节的 <code>reclaimed_water_substitution_ratio ≥ 0.65 / 0.40</code> 至少要与 AI potable、被置换用户 potable 和城市源水变化并列。</li><li><strong>是否接受"扩产水量而非扩处理能力"</strong>：这条结论推翻了常见做法"建更大的再生水厂"。若要在论文中强调，建议补一个真实城市再生水厂的运行数据（产能利用率 + 分流比例）作支撑。</li></ol>
+<hr>
+<h2 id="附-本轮结论-v4-要点-17-条-历史审计版">附：本轮结论（v4 要点，17 条；历史审计版）</h2>
+<p><strong>v4 = v3 + nature-skills 审查后补做的方法学缺口（城市侧敏感性、能源富集两域对照）+ 数据量扩充（逐日全量落盘、1024 样本概率、25 城梯度、成本效益 Pareto、文献/标准定量对标）</strong>。</p>
+<p>前 7 条为 v3 原有结论（已由本轮完整重跑复核，CAWCC 逐位一致）；第 8–11 条为 nature-skills 审查后新增；第 12–17 条为数据扩充阶段新增。</p>
+<blockquote><strong>R3 覆盖声明（2026-09-24）</strong>：本附录保留用于追溯 v4 的推理过程，不是当前结果表。凡涉及概率阈值、Morris 参数排序、政策指标主导性、成本排名、外部效度或绝对 CAWCC 的表述，均以本文件顶部的 v4.3 修正块、<code>Nature级研究审查与修正计划_R3.md</code> 以及 <code>validation_artifacts/r2/*/</code> 中带 <code>corrected</code>/<code>normalized</code> 的产物为准。旧的 250 MW 概率网格、原生单位 Morris 和未率定的绝对容量不得作为正文证据。<br><br><strong>R4.4 当前结果替换（2026-09-27）</strong>：新增的末库容诊断显示，设施吞吐边界与供水可持续性边界不是同一 estimand。相同 730 日驱动、初始库容 65,000 ML 和 50 MW 网格下，要求期末库容不低于初始值时，D-HA 最后通过/首次失败为 <strong>150/200 MW</strong>，D-CO 为 <strong>900/950 MW</strong>。10 年、365 日合成年份序列按“末库容 ≥ 初始值 90% 且居民服务可靠度 ≥99%”判定时，联合边界为 HA <strong>250/300 MW</strong>、CO <strong>900/950 MW</strong>（最后通过/首次失败）。因此，后文第 1、7、12、17 条中的绝对 CAWCC、干预增益和现实尺度判断只保留为历史机制记录；论文当前结果应同时报告设施吞吐边界与库容可持续性诊断。最终概率估计已完成（每域 1024 样本、bootstrap 2000），并通过 16 个抽样点的完整网格复核。10 年结果见 <code>reservoir_multiyear_10y.json</code>，仍属于单一合成水文诊断，不能替代多序列和实测水文验证。</blockquote>
+<ol><li><strong>承载容量的上限由水源取水与给水处理决定，不是再生水</strong>。D-HA 日尺度 CAWCC 1150 MW、D-CO 1450 MW，两域年尺度的第一约束都是 <code>max_source_abstraction_ratio</code>。v2 报的"再生水深度处理能力是主导瓶颈"是<strong>审计失真（产能贴着产水量）造成的假瓶颈</strong>。</li><li><strong>再生水有两个杠杆，只有一个有用</strong>。扩<strong>处理能力</strong>（40 → 160 ML/d）边际恒为 <strong>0</strong>；扩<strong>产水量</strong>（分流 0.16 → 0.25，产水 32 → 50 ML/d）在 D-HA 有效，边际 <strong>16.6 MW per ML/d</strong>，但瓶颈一旦迁到接网容量就立刻归零；在 D-CO <strong>从起点就无效</strong>。"多建再生水厂"不是普适扩容手段，必须先诊断瓶颈链。</li><li><strong>毛替代率可能高估节水贡献</strong>。1000 MW 下 D-HA 毛替代率 0.700，B0 城市取水代理只有 <strong>0.034</strong>；R9 修正后的同一 AI 负荷比较显示，目标比例 0→0.9 时 AI potable 减少 22,674.4 ML（D-HA）/21,033.8 ML（D-CO），但城市源水取水分别增加 1,976.7/1,593.3 ML。此前“约 2,596 ML”的旧值来自未反馈回用池短缺的版本，<strong>本条旧值撤回</strong>。政策考核必须同时报告城市源水与被置换用户，而不是只看毛比例。</li><li><strong>再生水不是免费的容量</strong>：R9 将回用池期初可交付量反馈到质量求解后，目标比例 0→0.9 使 CoC 从 5.000 降至 3.875（D-HA）/4.040（D-CO），毛取水增加 7.14%/5.75%，排浓水增加 38.89%/31.35%。此前“CoC 3.38、总补水 +12.5%、排污 +67.7%”属于未修正质量求解的旧结果，<strong>本条旧值撤回</strong>；冷却储水水质和内部回收流盐质量尚未建模，当前仍是零冷却储水条件下的机制结果。</li><li><strong>"哪个干预有效"依赖端点瓶颈结构</strong>：D-HA 只有降漏损有效（升至 1300 MW；相对干预表统一基线 1100 MW 为 +200 MW，相对日尺度物理 CAWCC 1150 MW 为 +150 MW），D-CO 只有扩接网有效（+100 MW，1400→1500），不存在普适最优干预。<strong>引用增益必须注明基线口径</strong>（对照表见 <code>validation_artifacts/r2/intervention_baseline_alignment.csv</code>）。</li><li><strong>凉爽端的优势来自水需求更低，且它是电力先到顶</strong>：D-CO 换用液冷可把日尺度 CAWCC 从 1000 提到 1500 MW（+50 %），D-HA 换任何技术都停在 1000 MW——因为 D-HA 卡在水侧、D-CO 卡在电力侧。</li><li><strong>现实性折算是必须的</strong>：0–2000 MW 是压力测试网格。折算到现实的 50–300 MW 园区，日尺度物理约束<strong>未越 0.95 判定阈值，但给水厂/水源利用率已从 0.80 升至 0.87</strong>（高位运行、余量在消耗，不等于无约束）；日尺度边界只对 500 MW 以上的超大规模园区构成硬约束。<strong>超大规模 AI 算力不应布局在百万人口级城市内部</strong>——这是本轮最可直接迁移到现实规划的一条结论。</li></ol>
+<h3 id="v4-新增-nature-skills-审查后补做">v4 新增（nature-skills 审查后补做）</h3>
+<ol><li><strong>城市侧参数敏感性里，配水漏损率压倒性主导</strong>（12.4 节）。Morris <code>mu<em></code>：D-HA 0.635、D-CO 0.725，而第二名的设施能力与库容参数 <code>mu</em></code> ≤ 1.7 × 10⁻³（水库库容恒为 0）。<strong>相差 2–3 个数量级</strong>。含义：第 1 条结论"承载力由水源取水与给水处理决定"<strong>对设施能力类设定值（取水/给水/污水处理/再生水能力 ±25 %、居民用水定额 ±25 %、库容 ±25 %）稳健</strong>——这些是我们自己拍定的数，拍错了也不改结论；真正需要外部校准的是<strong>漏损率</strong>，它应是 R3 数据收集的第一优先。与 10.2 节"扩给水 0 增益 / 降漏损 +200 MW"<strong>独立互证</strong>（同一机理的两次观测）。</li><li><strong>城市侧 Sobol 未收敛，不能作为定量依据</strong>（12.4 节）。N=64 下 <code>S1</code> 出现 1.278（&gt;1）与 −0.413（&lt;0）的越界值，且首位参数给的是"水源取水能力"，与 Morris 的"漏损率"相反。<strong>v3 第 10 条"Morris 与 Sobol 互为交叉验证"不能无条件推广</strong>——该交叉验证只在 AI 侧参数（维度低、响应近单调）成立。本轮不以城市侧 Sobol 下任何定量结论；R3 需把 N 提到 ≥1024 并改用 <code>Saltelli</code> 采样 + 自助置信区间。</li><li><strong>能源富集情景在电力先到顶的端点有效、在水先到顶的端点无效</strong>（4.3.1 节）。D-HA 1150 → 1150（完全无反应，卡水侧）；<strong>D-CO 1450 → 1550（+100 MW），且日尺度限制约束由接网容量迁移为给水处理峰值利用率</strong>——"摘掉一个瓶颈，下一个立刻接手"在电力侧重演。v3 原计划只在 D-HA 上做这一对照，<strong>会得出"能源富集完全无效"的错误印象</strong>；这是"可失效性"纪律（1.3 节第 1 条）价值最直观的一次体现。</li><li><strong>最不利状态是 S2（淡水受限）而非 S1（高温干旱叠加），且干旱比高温更致命</strong>（7.5 节 S×G 矩阵）。系统可靠性最低值出现在 S2（0.601 / 0.651），居民未满足量最高（97401 / 82295 ML），水源取水占用率恒为 1.000；<strong>S3（再生水充裕）全域无居民缺水</strong>。压力因子排序：<strong>干旱 G2 &gt; 高温 G1</strong>。规划含义：缓解措施的优先级应给"保障淡水供给"而不是"降温"；同时 7.3.1 热浪实验显示 1500 MW 内无冷却缺水（D-HA 局部接入比 1.005 略越界、给水 0.980），<strong>短期极端高温不是本系统的第一风险</strong>。</li></ol>
+<h3 id="数据扩充阶段新增-逐日全量-1024-样本-25-城-成本-对标">数据扩充阶段新增（逐日全量 / 1024 样本 / 25 城 / 成本 / 对标）</h3>
+<ol><li><strong>历史样本量敏感性记录（已由 R4 更新）</strong>。旧口径的 40 样本与旧 250 MW 网格结果只用于追溯；当前同一修订口径下的 64 vs 1024 样本对照见 12.3 节，最终论文数值使用 1024 样本批次。</li><li>~~<strong>承载容量的实际上限由政策指标决定，不是由物理水/电能力决定</strong>~~ ⚠️ <strong>本条已于 v4.2 撤回</strong>。真相相反：<strong>D-HA 的承载边界由物理约束决定</strong>（<code>max_wtw_utilization</code> + <code>max_source_abstraction_ratio</code>，1200 MW 同时越界），政策指标 <code>reclaimed_water_substitution_ratio</code> 要到 1350 MW 才越界，<strong>比物理约束晚 200 MW</strong>。原论断是"粗网格（250 MW）+ 按字典序取首个越界约束"的实现伪影（12.8.1）。<strong>城市梯度的单调性结论（CAWCC 沿气候轴与设施轴单调不减、1150→1450 MW）仍然成立</strong>，头号结论不是端点伪影这一判断不变；但"两轴分别在 0.50 / 0.75 后饱和"的机制解释应改为<strong>物理约束</strong>。</li><li><strong>"对症"与"不对症"的代价可量化，且两域完全互斥</strong>（10.4 节）。给 10 个干预配上造价后，Pareto 前沿上每域只剩一项：D-HA <strong>降漏损</strong>（+200 MW，2766.6 万元，<strong>13.83 万元/MW</strong>），D-CO <strong>扩接网</strong>（+100 MW，44 921.1 万元，<strong>449.21 万元/MW</strong>），<strong>单位成本相差 32.5 倍</strong>。交叉套用的代价是实测出来的：扩接网用到 D-HA 花 4.49 亿元买 <strong>0 MW</strong>，降漏损用到 D-CO 花 2719 万元买 <strong>0 MW</strong>；10 项干预中 <strong>8 项</strong>在至少一个域是"零增益但仍需投资"。组合升级在两域都是劣选项（D-HA 增益与单独降漏损相同但造价 <strong>8.6 倍</strong>；D-CO 增益 0 而造价 2.28 亿元）。</li><li><strong>外部效度：模型坐落在真实世界的量级里，但漏损率与再生水率是刻意偏"落后"的设定</strong>（12.6 节）。数据中心侧：模型 PUE 1.12–1.36 与披露值（1.07–1.39）同量级；蒸发冷却 WUE 1.8–2.2 落在行业"蒸发冷却消耗率 1.8–4.0"区间内，与阿里云蒸发站点 1.8、Equinix 蒸发站点 1.55 同量级。城市侧：人均生活用水 <strong>163.5 / 159.1 L/(人·d)</strong> 落在 GB 50013-2018 Ⅱ型大城市区间内，<strong>日变化系数 1.13 落在规范建议的 1.1–1.5 内</strong>；而漏损率 <strong>12–13.3 %</strong> 对照 2025 年 9 % 政策目标<strong>超标</strong>、再生水利用率 <strong>15–16 %</strong> 对照十四五目标 25 % <strong>未达标</strong>。<strong>这不是缺陷而是设定</strong>——正因为漏损偏高、再生水政策执行偏低，"降漏损"才成为 D-HA 唯一有效干预、政策约束才先于物理约束触发；<strong>若把城市改成已达标的先进城市，这两条结论都会消失</strong>。</li><li><strong>口径不统一是水系统研究的结构性问题，本轮记录 6 个实例</strong>（12.6 节）。① WUE：Google FY24 同一年在两个来源下为 <strong>1.2 vs 0.64 L/kWh</strong>（取水量 vs 耗水量、是否含电网间接水、单站 vs fleet-wide）；② 城市漏损率：2023 年 <strong>12.76 %（年鉴口径）vs 10 % 以内（部门口径）</strong>，相差 &gt;2.8 个百分点；③ 再生水：政策"利用率"分母是污水处理量、模型"替代率"分母是总供水量，<strong>不可数值互检</strong>；④ 毛替代率 vs B0 城市源水增量代理（见第 3 条）；⑤ 中水回用造价 <strong>1100（中央预算内投资估算标准）vs 5595（项目决算）元/(m³·d)</strong>，相差 5 倍；⑥ 官方造价指标<strong>自带价格基准年</strong>（给水建标 120-2009 为北京市 1990 年价、污水建标 198-2022 为武汉市 2016 年 12 月价），<strong>与当期价的扩容增量不可直接比较</strong>。应对方式是把<strong>口径写进数据文件本身</strong>（每个对标值带"来源性质"与"口径与风险备注"两列），而不是只写在正文里。</li><li><strong>结论的适用边界：本文关于"哪个干预有效"的结论只适用于尚未完成漏损治理与再生水政策执行的城市</strong>（12.7 节）。把城市改成政策已达标后重跑：</li></ol>
+<ul><li><strong>D-HA（水侧先到顶）是条件性的</strong>——漏损达标（0.12→0.09）本身带来 <strong>+150 MW</strong>（1150→1300）并把瓶颈推给<strong>再生水替代率政策指标</strong>，此时<strong>再降漏损增益归零</strong>（"这个收益只能拿一次"）；再生水达标（→25 %）又把瓶颈推给<strong>电网接入</strong>，此时有效干预变成<strong>扩接网 +100 MW</strong>，即 D-HA 的行为变得像 D-CO。三级杠杆依次接手，每一级只生效一次。</li><li><strong>D-CO（电侧先到顶）是无条件的</strong>——四种城市状态下日尺度 CAWCC <strong>恒为 1450 MW</strong>、有效干预<strong>恒为扩接网 +100 MW</strong>，水侧政策达标不改变任何日尺度结果。</li><li><strong>D-HA 漏损达标后的限制约束是 <code>reclaimed_water_substitution_ratio</code></strong> ⚠️ <strong>该观察同样受 12.8.1 的实现缺陷影响，须以 12.8.1 的 50 MW 逐点诊断为准</strong>。本节其余结论（三级杠杆依次接手、D-CO 无条件稳健）不受影响。</li><li>因此论文<strong>不得</strong>表述为"缺水城市应优先降漏损"这类普适建议，而应表述为：<strong>先诊断瓶颈链，再选对症干预；每解除一个瓶颈后必须重新诊断。</strong></li></ul>
+<h3 id="v4-2-复核后的补充说明-不新增编号-但必须与上面各条同等看待">v4.2 复核后的补充说明（不新增编号，但必须与上面各条同等看待）</h3>
+<p><strong>12.8 节的对抗性复核查出 5 个真问题</strong>，其中问题 1 <strong>推翻了原第 13 条</strong>，问题 3 要求<strong>把所有 CAWCC 绝对值的定位改为"理论承载上限"</strong>：</p>
+<table>
+<thead><tr><th>#</th><th>问题</th><th>严重度</th><th>处理</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>"限制约束"报告取字典序首个越界者</strong>，非余量最小者；粗网格下多约束同时越界 → 12.3 / 12.5 的"政策约束主导"是伪结论</td><td><strong>高（推翻结论）</strong></td><td>12.8.1 撤回并改正；报告限制约束必须同时给出该点全部越界约束与余量</td></tr>
+<tr><td>2</td><td><strong>概率分析用 250 MW 步长，主实验用 50 MW</strong> → 概率 CAWCC 系统性低估 13 %，两套数字不可混用</td><td><strong>高</strong></td><td>12.8.2 标为独立口径；R3 改细网格</td></tr>
+<tr><td>3</td><td><strong>现实园区尺度（50–300 MW）下日尺度物理约束未越 0.95 阈值</strong>，但给水厂/水源利用率已从 0.80 升至 0.87（首破 600 MW）</td><td><strong>高</strong></td><td>12.8.3 把 CAWCC 重新定位为"理论上限"，仅用于相对比较与机制分析；并更正"不触发"为"未越阈值但高位运行"</td></tr>
+<tr><td>4</td><td><code>reclaimed_water_substitution_ratio</code> 在 50–1100 MW 恒定，阈值与配置值只差 7.7 %，<strong>不携带容量信息</strong></td><td>中</td><td>12.8.4 从"承载约束"中分离为"配置可行性检查"</td></tr>
+<tr><td>5</td><td><strong>历史版本未建模城市非 AI 用电</strong></td><td>中</td><td>R4 已加入 <code>city_non_ai_electricity_mw</code>；真实节点容量和备用率列入 R4-4</td></tr>
+<tr><td>—</td><td>（自查误判）能耗列 MWh/d 当 MW 用，差 24 倍</td><td>—</td><td>12.8.7 除以 24 后全部 PASS</td></tr>
+<tr><td>—</td><td>（自查误判）入流比的分母用了取水<strong>能力</strong>而非<strong>实际取水</strong></td><td>—</td><td>12.8.7 改为实际取水后 1.030/1.164，与文档吻合</td></tr>
+</tbody></table>
+<p><strong>总体判断：模型的数值实现与水量平衡是可靠的</strong>（V1–V12 全通过、现实性审计 0 FAIL、外部效度对标量级正确）；<strong>问题集中在（a）承载约束的"报告方式"与（b）实验尺度相对现实的错位这两处</strong>。（a）已改正，（b）需要在论文中正面处理为"研究边界"，而不是回避。</p>
+<hr>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,838 @@
+Performance assessment of water reuse strategies using integrated framework of urban water metabolism and water-energy-pollution nexus
+Environmental Science and Pollution Research (2020) 27:4582–4597
+https://doi.org/10.1007/s11356-019-05465-8
+水的本地、区域和全球最佳实践
+使用城市水代谢与水-能源-污染耦合的综合框架对水回用策略进行性能评估
+Oriana Landa-Cansigno1 & Kourosh Behzadian2 & Diego I. Davila-Cano3 & Luiza C. Campos1
+收稿日期：2019年2月7日 /接受日期：2019年5月14日
+# 作者 2019
+/在线发表：2019年5月26日
+摘要
+本文基于水-能源-污染耦合，评估了若干集中式和分散式水回用策略的基于代谢的性能及其对综合城市水系统（UWS）的影响。该性能评估基于为长期规划期内综合UWS开发的城市水代谢综合定量框架。UWS性能的量化基于使用WaterMet2工具追踪水、能源、物料、成本、污染物及其他环境影响的质量平衡流/通量。该评估框架在水-能源-污染耦合的背景下被定义为一组关键性能指标（KPI）。这些策略包括六种分散式水回用配置（灰水或家庭生活污水）和三种集中式配置，均处于家庭用户采用的三种比例（即20%、50%和100%）范围内。该方法在墨西哥San Francisco del Rincon和Purisima del Rincon城市的真实案例研究中得到了验证。结果表明，使用家庭生活污水的分散式水回用策略在节水、温室气体（GHG）排放和富营养化指标方面能够在UWS中提供最佳性能，而节能效果几乎可以忽略不计。另一方面，集中式策略在水回用策略中能够实现最佳的节能性能。结果还表明，在综合UWS等复杂系统中进行代谢性能评估能够揭示耦合要素（即水、能源和污染）之间相互作用的程度。此外，它还能够揭示这些要素在UWS各组件与整体系统之间可能存在的任何意外影响。
+关键词 水-能源-污染耦合 .城市水系统 .集中式和分散式水回用策略 .城市水代谢
+引言
+城市水系统（UWS）的综合管理主要被认定为用于解决以下方面的服务：供水、雨水和污水收集，以及
+责任编辑：Philippe Garrigues
+* Luiza C. Campos
+l.campos@ucl.ac.uk
+1
+土木、环境与测绘工程系，伦敦大学学院，Gower St, London WC1E6BT, UK
+2
+工程与计算学院，西伦敦大学，St. Mary's Rd, London W55RF, UK
+3
+Rincón市镇综合污水处理系统
+SITRATA, Camino a San Jerónimo s/n, col.San Jeronimo, 36407,
+Purisima, Guanajuato, Mexico
+城区内的处理。UWS所提供服务质量可通过可持续性框架内的若干性能标准进行评估（Behzadian and Kapelan 2015a）。更具体而言，UWS服务理想情况下应以满足可持续性方面的技术、环境、社会和经济要求的方式运行。例如，虽然它必须提供最高的可靠性以满足客户（即社会方面），但诸如温室气体排放和向受纳水体排放污染物等不利环境影响应当被最小化。该性能可能会受到一些外部情景的影响，例如城市化、人口增长和气候变化。因此，由于日益增长的用水需求和有限水资源面临的更大压力，必须更加关注提供替代水源，例如灰水或来自水回用选项的再生水。此外，水再生和回用选项对于城市
+Environ Sci Pollut Res (2020) 27:4582–4597
+4583
+发展和强化经济内部的循环性至关重要，这包括闭合物料和能源流动的循环，并最小化城市中更高效过程的资源输入和输出（Geissdoerfer et al. 2017）。水回用的战略性实施对于实现面向可持续发展目标的政治议程也很重要（WWAP 2017）。
+在水回用选项中，可以认为集中式水回用在城区更为常见。集中式污水处理厂（WWTW）处理出水所产生的再生水可用于城市中不同的需求，包括灌溉和厕所冲洗（Jiménez-Cisneros 2014）。该方法得益于规模经济，尽管由于空间和资源限制，在快速城市化的城市中难以实施。另一方面，分散式水回用因其模块化设计在城市中越来越受到关注，该设计可在产生源附近实施，例如家庭、高层建筑或城市的部分区域，以响应需求（Novotny 2013; Bieker et al. 2010）。分散式回用策略中的污水一般可分为灰水（来自淋浴、洗衣机、洗手盆、洗碗机和厨房的出水）和黑水（尿液和粪便；Larse et al. 2016; Friedler et al. 2013; Domènech 2011）。现有的回用指南建议，用于城市灌溉或厕所冲洗的出水生化需氧量（BOD）浓度< 30 mg/L，这需要达到三级处理水平（EPA 2012）。虽然污水处理技术似乎效率很高，但根据规模的不同，它们也可能是高能耗的或产生更多的碳排放。因此，集中式与分散式水回用的比较仍然是一个持续的争论，需要进一步研究（Chang et al. 2017; Valek et al. 2017; Matos et al. 2014; Mo et al. 2014; Opher and Friedler 2016; Singh et al. 2016）。
+由于系统评估方法在水回用替代方案分析中的广泛使用，对UWS性能的技术和环境含义的理解已显著增加（Chen et al. 2012）。水-能源（WE）耦合评估框架是近期使用的一种系统方法类型，它强调水与能源之间的联系，有时还包括它们与其他部门的联系，例如水-能源-粮食、水-能源-气候或水-能源-污染（WEP）。近几十年来，研究人员提出了多种耦合评估的框架和方法。一些研究聚焦于能源和碳足迹的耦合，用于不同污水处理技术之间的比较分析（Singh and Kansal 2018; Gu et al. 2016; Singh et al. 2016）或城市尺度上不同UWS的比较（Valek et al. 2017）。其他研究工作在耦合框架中使用了情景分析，以估算实施灰水或雨水时
+策略时UWS中节水和节能的潜力。此类情景大多通过物质流分析（MFA）或投入产出（IO）方法计算（Silva-Vieira and Ghisi 2016; Duong et al. 2011）。将WE耦合扩展到其他领域（例如环境评估）的趋势持续增长，且对温室气体排放的关注度大幅提高。此类框架包括生命周期评估（LCA）（Opher and Friedler 2016; Lane et al. 2015; Mo et al. 2014）或生态网络分析（ENA）（Wang and Chen 2016）。少数研究通过系统动力学展示了这一耦合框架，从住宅终端使用角度利用水部门与能源和成本之间的因果关系（De Stercke et al. 2018）或从国家层面的粮食部门角度（Sušnik 2018）。另一种耦合评估方法通过优化模型提出，以获得耦合要素之间的权衡（Tsolas et al. 2018; Zhang and Vesselinov 2016）。UWS中的WEP耦合在此被定义为UWS主要组件在其运行阶段期间水、能源和污染物负荷之间的联系（Kumar and Saroj 2014）。UWS中WEP耦合的分析可导致减少排入受纳水体的污染物，同时节省处理阶段用于去除污染物的能源（Chang et al. 2017; Kumar and Saroj 2014）。这可以通过一些可用工具来完成，这些工具能够同时模拟水流和污染物负荷，例如在流域尺度上的GloWPa和WorldQual（Kroeze et al. 2016），以及在UWS层面的UVQ（城市容积与水质；Mitchell and Diaper 2005）和WaterMet2（Behzadian and Kapelan 2015a），仅举几例。然而，这些模型均未被广泛用于在WEP耦合评估框架内比较水回用策略。
+UWS的另一项综合分析通过城市水代谢进行，该方法源于Wolman（1965）提出的城市代谢方法。该方法使用城市作为生命有机体的类比，其中两者都将需求输入流（例如能源和燃料），产生输出（例如废物、排放物和污染物），并循环利用废物以供自身消耗。由于水的质量平衡在城市中占主导地位（Wolman 1965），水代谢研究已被建议作为城市的优先事项（Kenway 2013）。城市水代谢具体指UWS中的容量和服务，其代谢性能通过系统内特定时间段内水、能源、物料及其他环境影响类别的各种流和通量进行分析（Behzadian and Kapelan 2015a; Huang et al. 2013）。
+城市水代谢的理论和概念包括广泛的性能含义，从澳大利亚不同供水选项的资源效率和水文性能（Farooqui et al. 2016），到中国不同UWS部门及其污水排放之间的生态关系（Zheng et al.
+Environ Sci Pollut Res (2020) 27:4582–4597
+4584
+2019）。城市代谢与耦合方法在真实系统性能评估中的整合尚未得到实质性应用。更具体而言，据作者所知，城市代谢概念在理解城市水与能源之间联系方面的应用有限。例如，Kenway（2013）通过四个澳大利亚城市的城市代谢方法量化了水流与能源流之间的联系。然而，城市代谢框架尚未用于WEP耦合的评估。本研究旨在使用城市水代谢和WEP耦合的综合评估框架，探索集中式和分散式水回用策略对综合UWS的影响评估。本研究开发的综合框架总体方案包括两个主要组件：用于模拟水回用策略可持续性性能的综合UWS建模，以及用于WEP耦合评估的一组性能指标。下一节描述本文使用的方法，随后在墨西哥的真实案例研究中进行验证。然后，给出结果和讨论，随后是结论和未来建议。
+方法
+评估框架
+所提出的框架包括一个城市水代谢模型（即WaterMet2），与一组源自WEP耦合的关键性能指标相结合，用于综合UWS中水回用策略的性能评估。WaterMet2模型（Behzadian et al. 2014a）在此被定制以分析各种集中式和分散式水回用策略。WaterMet2的基本概念和输入数据要求在下面简要概述。
+WaterMet2模型
+WaterMet2（WM2）是一个基于概念质量平衡的模型，用于模拟综合UWS的代谢性能。WM2是一个动态MFA（物质流分析）模型，具有日时间步长模拟，并结合长期持续时间（例如20–40年）的环境影响评估。WM2旨在评估UWS在常规情景（BAU）和任何水管理策略下的代谢性能。
+WM2中UWS的主要组件包含在四个子系统中（图1）：（a）饮用水供水，包括水资源、供水管道、水处理厂（WTW）、干管、服务水库和配水干管等组件；（b）子汇水区，包括局部
+区域，其中定义了用水需求特征和降雨-径流参数；（c）排水系统，包括雨水和污水收集管网、污水处理厂（WWTW）和受纳水体等组件；以及（d）水资源回收，包括集中式和分散式设施两个组件，在其中雨水、灰水或污水被收集、处理并输送/分配到用水需求点。WM2是一个分布式模型，这意味着UWS中可以建模任意数量的这些组件。集中式水回用中的水从WWTW输送，而分散式水回用则取用家庭生活污水（即灰水和黑水的混合物）或仅取灰水，在局部区域的分散式污水处理系统（DEWATS）内进行处理和收集。未考虑用于回用目的的剩余污水被排入下水管网，并最终排入受纳水体。
+该模型通过UWS主要组件追踪水、能源、物料、化学品、污染物及其他环境影响类别的主要流和通量。更具体而言，该模型以日时间步长模拟UWS组件中各种形式的水流，即供水子系统中来自雨水的绿水和来自地表/地下水的蓝水；以及排水子系统中来自用水消耗的灰水和黑水。下水管网中收集的家庭生活污水和雨水按日进行模拟，并被输送至WWTW，在那里进水基于污染物去除进行处理。处理后的出水随后要么排入受纳水体，要么返回到水回用应用中。WM2采用了一种简化的水量建模方法，通过使用水流的日质量平衡，而无需任何水质演算的传播时间。因此，顺序的日水质建模允许追踪任何污染物负荷。WM2基于任何UWS组件处的完全混合假设，追踪用户定义的任何污染物的日污染负荷（Mitchell and Diaper 2005）。这种简化对于其他类似的基于概念的模型也是不可避免的，包括Makropoulos et al.（2008）开发的城市水方案选择工具（UWOT）和Mitchell and Diaper（2005）开发的UVQ。由于季节性和年度波动，该模型需要规划期内日用水需求特征及其时间变化（日/月/年）（Venkatesh et al. 2017）。日变化和月变化可通过模型校准过程使用历史数据进行调整，而年变化可基于人口增长情景的预测来设定。储存、输送和处理的日容量是通过存量与流量的平衡来模拟UWS主要组件中水流的输入数据（Behzadian et al. 2014a）。
+Environ Sci Pollut Res (2020) 27:4582–4597
+4585
+图1 WM2中UWS的主要子系统和组件：（a）饮用水供水，（b）子汇水区，（c）排水系统，以及（d）水资源回收。改编自Behzadian and Kapelan (2015a)
+然后WM2计算与可持续性框架各个方面相关的定量关键性能指标（KPI），例如经济、社会和环境因素（Behzadian and Kapelan 2015b）。该模型还计算与LCA中类似的环境影响类别相关的若干KPI，例如富营养化、酸化和温室气体排放。这些KPI主要通过将模拟的水流和能源流乘以相应的系数来计算。与LCA不同，WM2中的KPI可以在空间上针对单个组件或整个UWS进行计算，并在时间上针对每个时间步长进行计算，然后聚合为更大的时间段。WM2中的代谢性能模拟和相应的KPI仅限于UWS的运行阶段，因为与运行阶段相比，建设、维护和拆除阶段对环境影响分析的影响较小（Jeong et al. 2015; Lane et al. 2015）。尽管如此，WM2中考虑了运行阶段物料和化学品制造及运输的所有影响。WM2中UWS的空间限制是城市水务的行政边界。WM2中的输入数据分为三个部分：时间序列、UWS组件和其他相关数据。时间序列数据包括水资源的日入流量和日气象数据。UWS组件所需的数据是定义的连接（即
+组件之间的拓扑），它们在每个子系统中的运行以及储存（即水资源和服务水库）、处理（即WTW和WWTW）和输送（即供水管道、干管/配水干管和排水系统）的容量。运行所需的其他必要信息也在此处的UWS组件中定义，例如所用能源和化学品、运行成本、漏损和污染物去除效率。WM2中建模了室内、局部区域、子汇水区和城市四个空间尺度（Behzadian et al. 2014b）。用水需求特征以及器具和配件的能源使用在家庭层面定义，而局部区域层面定义商业和室外用水需求（即花园浇水和灌溉）以及降雨-径流建模的参数。分散式水资源回收设施（例如雨水收集和灰水回用水箱）的规格在局部区域和子汇水区两个层面定义。这些规格包括储存容量、成本、能源使用、污染物去除效率以及水回用的源/汇。家庭/工业层面以及局部区域层面各种城市表面（即屋顶、道路、人行道和透水区域）的污染物平均浓度被定义为其他输入数据。计算KPI所需的系数，例如内含能源、温室气体排放和其他环境影响，是
+Environ Sci Pollut Res (2020) 27:4582–4597
+4586
+WM2中使用的二手数据，可取自相关文献。关于WM2的此信息的更多细节可在Behzadian et al. (2014b)中找到。
+WM2在此被从类似工具中选用，因为它能够通过代谢框架同时量化各种流，例如水、能源和环境影响。例如，UWOT（Makropoulos et al. 2008）和UVQ（Mitchell and Diaper 2005）是不同空间尺度上以需求为导向的方法，是水循环建模的成熟工具。然而，它们主要局限于几个影响类别（水和能源），并且不能在城市水循环建模中考虑整个UWS主要组件。WM2已被用于多种目的，例如水循环（Behzadian et al. 2018）和可靠性/韧性评估（Morley et al. 2016），并在若干案例研究中得到了验证。例如，它已被用于厄瓜多尔加拉帕戈斯群岛人口增长下雨水收集、灰水循环和海水淡化情景的比较（Reyes et al. 2017）；用于奥斯陆非传统水源方案的优化以最小化用水需求和减少局部洪水（Behzadian et al. 2018）；以及支持欧洲城市增加水源或管道修复的决策分析（Morley et al. 2016; Behzadian and Kapelan 2015b）。最近，它已被用于比较集中式和分散式水回用选项（Landa-Cansigno et al. 2018）。
+关键性能指标
+如表1所示，从WEP耦合的三个角度严格选择了一组五个KPI，以进行水回用策略的性能评估。这些KPI的定义和假设在此概述：（a）供水可靠性定义为规划期内总供水量与总用水需求之比，以百分比表示（Behzadian and Kapelan 2015a）。因此，完全满足的用水需求具有100%的可靠性，任何低于此的可靠性表明规划期内存在供水不足；（b）饮用水定义为从传统水资源供应的饮用水量。注意，总供水量是饮用水和用于满足
+表1
+关键性能指标描述
+耦合组件
+KPI
+单位
+水
+供水可靠性
+%
+饮用水
+m3/year
+能源
+总能源
+kWh/m3/year
+污染
+温室气体排放
+kg CO2-eq/m3/year
+富营养化潜势（EP）
+Kg PO4-eq/m3/year
+UWS中用水需求的回用水量之和；（c）净能源是平衡UWS组件中消耗（即产生）的能源和避免的能源的结果。消耗的能源包括来自化石燃料/电网电力的直接能源以及从运行阶段所用化学品和物料获得的间接/内含能源。避免的能源包括作为WWTW中沼气燃烧产生的电力可再生能源以及从WWTW中资源回收获得内含能源；（d）温室气体排放以kg CO2-eq表示，计算为UWS组件排放的直接和间接CO2，加上WWTW中CO2、甲烷（CH4）和一氧化二氮（N2O）的逸散排放。直接排放包括燃烧化石燃料以及用于电网发电的排放，而间接排放包括用于化学品、物料和资源回收中内含能源的排放。根据IPCC（2014），用于转换为kg CO2-eq的系数CH4为28，N2O为265；（e）富营养化潜势（EP）以kg磷酸盐当量（PO4-eq）表示，基于出水中磷（P）、硝酸盐（NO3）和化学需氧量（COD）的直接存在、污泥管理中氨（NH3）的排放，以及电力、化石燃料、化学品和污泥处置生产造成的间接影响进行计算（Behzadian et al. 2014b）。转换为PO4的系数NH3为0.35、COD为0.022、P为3.06（Heijungs et al. 1992）。污染（表1）在此基于以下污染物的负荷质量平衡进行估算：COD、总悬浮固体（TSS）、总氮（TN）和总磷（TP），使用用户输入的浓度（mg/L）。这些在此通过文献综述的平均值来定义。污染物质量流在UWS内的子汇水区和污水组件中被追踪。本研究考虑的常规活性污泥法的污染物去除率为91% BOD、97% TSS、94% COD以及60% TN和TP（SITRATA 2017）。水回用策略中四个KPI（即饮用水、能源、温室气体排放和EP）的变化是相对于常规情景（BAU）（即在规划期内'不作为'）进行评估的。因此，这些KPI也以相对于BAU的变化百分比来呈现。
+案例研究
+所建议的方法在由墨西哥瓜纳华托州San Francisco del Rincon（SFR）和Purisima del Rincon（PR）城市组成的都市区的真实案例研究中得到了验证（图2）。
+该案例研究的UWS是该国少数规划水回用的城区之一，其描述如下。共有22口深度为70–300 m的钻井（SAPAF 2017）从Turbio含水层抽取地下水。这是该地区唯一的供水水源，并需要
+Environ Sci Pollut Res (2020) 27:4582–4597
+4587
+图2 案例研究的位置
+根据国家饮用水指南（NOM-127-SSA1 1994）进行现场加氯消毒。饮用水储存在高位水箱中，然后通过重力分配给用户，漏损较大，即40–50%（CEAG 2014）。饮用水用于两个城市的家庭、工业和公共部门。家庭部门有114,150名居民分布在31,261户家庭中，但只有80%（24,751）的家庭拥有饮用水服务，因此服务人口仅为111,600（INEGI 2010）。该部门在PR和SFR分别需求总饮用水量的89%和71%。该地区人均日用水量在90至180 L/day之间变化（CEAG 2017）。工业和商业部门由2000多家各种规模的企业组成。有些小到只有2–4名工人的食品摊位，大到拥有150多名工人的鞋类或汽车零部件制造企业（DENUE 2015）。它们总共分别占PR和SFR总用水需求的8%和23%。公共部门包括医院、学校以及公园、体育设施和绿化带的用水需求。公共需求在PR占2.7%，在SFR占5.4%（CEAG 2017）。虽然这些百分比是针对整个市镇报告的，但假设对于城市是相等的。各部门的用水需求流量在此通过将漏损后的取水流量乘以这些百分比来计算。
+排入排水管网的污水覆盖了99%同时获得饮用水的城市家庭。排水系统是一个合流制管网，总容量为
+43,200 m3/day。每个城市都有独立的下水管网，但两者都将污水排入"San Jeronimo" WWTW，其平均处理能力为21,600 m3/day。下水管网的溢流和WWTW的出水排入Turbio河作为受纳水体。该WWTW采用活性污泥处理，并配有格栅和除砂、初沉和二沉池，以及使用加氯或紫外线灯的消毒阶段。该厂被设计为将出水处理至30 mg BOD/L的质量，以符合墨西哥非饮用水回用指南（NOM-003-SEMARNAT 1997）。再生水主要通过容量为20 m3的罐车分配用于城市灌溉和土壤压实。2015年水回用仅占污水入流量的1%。由于建设了容量为250 m3/day的再生水管网，这一估算可能会增加。厌氧消化池使污泥稳定，并以47.5 m3/h的速率产生沼气。沼气储存在压力容器中，其中总体积的40%以0.03 kWh/m3的速率发电
+（SITRATA 2017）。剩余的沼气在排入大气之前被燃烧。脱水的稳定污泥通常被堆放到附近的农田中，剩余的污泥和砂砾废物被运往填埋场。UWS主要特征的摘要见表2。
+模型设置与输入数据
+包括两个城市在内的案例研究被认为是城区的边界，即
+Environ Sci Pollut Res (2020) 27:4582–4597
+4588
+表2 案例研究UWS主要特征摘要
+总计
+SFR
+PR
+参考文献
+（居民）
+拥有接入
+平均每户
+居住人数
+总用水需求（× 103
+年用
+m3/y)
+水量
+m3/y)
+公共使用和灌溉（×
+工业需求（× 103
+m3/y)
+下水管网
+输送能力
+(m3/day)
+污水和
+资源
+回收
+能源生产
+(kWh/m3)
+WM2中的最高空间级别（Landa-Cansigno et al. 2018）。每个城市代表一个子汇水区（SB），因此所考虑的两个子汇水区为SB1（San Francisco del Rincon城市或SFR）和SB2（Purisima del Rincon城市或PR）。假设每个子汇水区由七个具有不同尺寸和规格的局部区域组成（表3）。每个局部区域包括若干相似的室内区域（家庭），并与工业/商业部门和室外区域相结合。图3展示了案例研究中UWS组件的示意图。
+表3中详述的各种用水需求特征是针对每个局部区域计算的，基于表2中的年用水需求乘以相应子汇水区中区域和居民的比例。灌溉需求（WDi）计算为
+WDi ¼ Ai �I f �a �0:001
+m3.
+�
+�
+ð1Þ
+其中Ai是灌溉面积（m2），If是该区域每平方米的用水量（5 L），a是假设每3天灌溉一次的修正系数（0.5）。案例研究中没有关于将用水需求分配给家庭器具和配件的可用分析。因此，
+局部区域
+面积 (ha)
+2844
+1615
+1229
+INEGI (2016)
+透水区域 (%)
+–
+26
+31
+不透水区域 (%)
+–
+58
+56
+屋顶区域 (%)
+–
+16
+13
+服务人口
+111,600
+69,169
+42,431
+INEGI (2010)
+24,960
+15,614
+9344
+饮用水的家庭（数量）
+–
+4.43
+4.54
+水资源
+水井（数量）
+22
+12
+10
+SAPAF (2017) SAPAP
+2015 (× 103 m3/y)
+9477
+6105
+3372
+(2017)
+年取水量
+能源 (kWh/m3)
+–
+0.40
+0.44
+漏损 (%)
+–
+40
+53
+CEAG (2014)
+5451
+3843
+1608
+CEAG (2017) SAPAF
+(2017) SAPAP (2017)
+家庭需求（× 103
+4166
+2734
+1432
+103 m3/y)
+251
+207
+44
+1034
+902
+132
+47,300
+–
+–
+SITRATA (2017)
+处理厂容量 (m3/day)
+21,600
+–
+–
+能源使用 (kWh/m3)
+0.38
+–
+–
+沼气产量 (m3/h)
+47.5
+–
+–
+0.03
+–
+–
+假设所有局部区域的家庭用水需求特征包括32%用于厕所冲洗、22%用于淋浴、15%用于洗衣机、15%用于厨房、9%用于洗手盆以及6%用于包括花园浇水在内的灌溉，正如Parker and Wilby（2013）所建议的。UWS中的室内用水需求不考虑洗碗机。
+校准过程涉及2015–2016年月度观测用水需求与模拟用水需求之间的比较。第一年数据用于校准设置，随后一年用于验证。每个局部区域的月度用水需求特征在校准过程中进行了调整，例如，假设雨季7–9月期间没有灌溉需求。雨水/污水子系统通过调整局部区域的储存容量、下水管网、透水性和不透水性以及降雨-径流系数进行校准。校准性能通过若干统计参数进行评估，即RSR、NSE、Pbias和相关系数，并与Moriasi et al. (2007)报告的推荐值进行比较。
+除表2中呈现的数据外，UWS的主要输入数据在此简要描述并列于表4中。日度和月度取水量
+Environ Sci Pollut Res (2020) 27:4582–4597
+4589
+表3
+子汇水区（SB）和局部区域（LA）的规格
+SB编号
+LA数量
+面积 (ha)
+居民
+家庭数量
+工业需求 (m3/day)
+灌溉需求 (m3/day)
+SB1 (SFR)
+2
+81
+3458
+781
+120
+15
+2
+162
+6917
+1561
+240
+30
+2
+323
+13,835
+3123
+480
+60
+1
+485
+20,750
+4684
+720
+90
+SB2 (PR)
+2
+62
+2121
+467
+15
+5
+2
+123
+4242
+934
+30
+10
+2
+246
+8489
+1870
+60
+20
+1
+368
+12,727
+2803
+90
+30
+是使用当地水务部门的原始数据为每个城市获取的2015年和2016年两个连续年份的数据（SAPAP 2017; SAPAF 2017）。2015年至2016年期间污水入流和出流的数据以月度尺度获取（SITRATA 2017）。人口数据从墨西哥国家统计研究所（INEGI）1990–2010年期间的各种普查中获取。使用
+图3 墨西哥Rincon城市的UWS示意图
+算术模型估算人口增长率为1–3%（此处未显示）。温度和降水量从'Guanajal'站获取了1962年至2011年期间的数据（CLICOM 2016）。蒸汽压和相对湿度来自墨西哥国家气象局（SMN 2017）提供的'Guanajuato天文台站'。透水面积（绿地和公园的总和）数据通过该区域的土地利用地图数据库获取（INEGI 2016）。假设径流
+Environ Sci Pollut Res (2020) 27:4582–4597
+4590
+表4 WM2模型中案例研究的主要输入数据和关键假设
+类别
+数据和来源
+污水入流和
+出水
+内含能源
+Cl2 5.19 kWh/kg (Wernet et al. 2016)
+来自
+污泥肥料的逸散排放
+系数为0.4，入渗系数为0.5（针对城区）。用于水/污水处理化学品生产的温室气体排放和富营养化特征系数从CML World 2001方法获取，内含能源值从Ecoinvent3数据库的累积能源需求方法获取（Wernet et al. 2016）。逸散排放从文献中获取（见表4）。考虑墨西哥电网电力排放0.458 kg CO2/kWh（SEMARNAT 2016）。由于案例研究缺乏数据，该研究排除了用于配水和下水管网运行和维护阶段的物料流。
+水回用策略
+考虑了来自集中式和分散式配置（灰水和污水回用）的九种假设水回用策略用于分析和比较。
+气候数据
+日度记录的降雨、最高、平均和最低温度数据
+1962–2011年。Guanajal站（−101.8 W, 21.0 N; 1767 masl）
+(CLICOM 2016)。月度平均蒸汽压和相对湿度。Guanajuato天文台站（SMN 2017）。
+人口数据
+各城市总人口 XI普查1990年、XII普查2000年、XIII普查2010年；
+1995年和2005年人口统计来自国家统计和地理研究所（INEGI 1990, 1995, 2000, 2005 and 2010）。饮用水子系统
+2015–2016年期间的日度取水、能源消耗和化学品使用
+墨西哥San Francisco和Purisima。
+2015–2016年日度流量（SITRATA 2017）。
+污泥
+2014–2016年月度流量产生、沼气产生和处置率
+（SITRATA 2017）。
+UWS中的化学品投入
+通过汞法制备的氯气（Cl2）0.0007 kg/m3
+水
+次氯酸钠15%溶液（NaOCl），0.0008 kg/m3
+污水
+氯化铁40%溶液（FeCl3），0.0054 kg/m3
+污水
+温室气体排放
+墨西哥电网电力 0.458 kg CO2/kg (SEMARNAT 2016)
+Cl2 1.28 kg CO2/kg (Wernet et al. 2016)
+NaOCl 0.96 kg CO2/kg (Wernet et al. 2016)
+FeCl3 1.02 kg CO2/kg (Wernet et al. 2016).
+富营养化
+电力 4.6 × 105 kgPO4eq/kWh (Wernet et al. 2016)
+Cl2 0.002 kg PO4eq/kg (Wernet et al. 2016)
+NaOCl 0.0019 kg PO4eq/kg (Wernet et al. 2016)
+FeCl3 0.0026 kg PO4eq/kg (Wernet et al. 2016).
+NaOCl 3.67 kWh/kg (Wernet et al. 2016)
+FeCl3 3.92 kWh/kg (Wernet et al. 2016).
+0.0143 kgCH4/dkgsludge (Liu et al. 2013)
+0.2 KgNH3-N/KgNsludge (Foley et al. 2010)
+0.00085 Kg N2O/dkgsludge (Liu et al. 2013).
+在与案例研究的关键专家协商后，选择了三种采用或吸收比例（20%、50%和100%），以评估使用广泛吸收范围内的水回用策略的潜力。由此定义了九种策略，由三种回用WWTW处理出水的集中式策略（C20、C50、C100）和六种分散式策略组成，后者包括三种灰水策略（DG20、DG50、DG100），回用洗手盆、洗衣机和淋浴出水，以及三种污水策略（DW20、DW50、DW100），回用所有家庭出水。还假设这些策略将在30年规划期内的两个时间步长（第10年和第20年）逐步实施。所有策略假设水回用将用于厕所冲洗、公共灌溉和工业。假设DG和DW策略使用膜生物反应器（MBR）进行灰水和污水处理。每个家庭都有一个容量为
+Environ Sci Pollut Res (2020) 27:4582–4597
+4591
+0.5 m3的回用水箱。雨水和家庭污水水质假设符合文献中报告的表5中给出的五种污染物（BOD、COD、TSS、TN和TP）的浓度范围。
+水回用策略中处理污水输送所需的能源基于WWTW或DEWATS与六个局部区域水箱（每个子汇水区三个，水回用在此输送和使用）之间的物理高程差和管道水头损失进行估算。输送距离和高程差基于案例研究的数字高程模型和土地利用地图进行估算（INEGI 2016）。因此，距离在2至5 km之间，高程差在20至50 m之间。注意，基于Hazen-Williams方程的所需能源和管道水头损失假设再生水具有1 m/s流速的连续流和0.80的泵效率。
+分散式处理所需的能源考虑为0.93 kWh/m3，使用由格栅、砂滤、MBR和加氯消毒组成的局部区域处理设施的参考值。此类值假设针对容量为5000 m3/day的处理设施，根据Longo et al. (2016)。每立方米回用水的能源投入见表6。
+结果与讨论
+水-能源-污染耦合
+九种策略（表4）的基于代谢的性能通过使用WaterMet2针对案例研究进行模拟，并相对于六个评估标准（表1）与BAU进行比较。规划期内BAU的供水可靠性几乎为100%（即99%）。对于采用比例等于或高于50%的水回用策略，总用水需求被完全满足（100%）。当分析图4中饮用水供水的年度平均值时，采用比例较高的策略能够替代更大
+表5 本研究选定的污染物浓度
+（mg/l）
+出水
+BOD
+COD
+TSS
+TN
+TP
+参考文献
+洗衣
+机
+比例的饮用水供水，以水回用替代。集中式和分散式污水回用（C和DW）似乎具有相对相似的潜在水回用比例，在所有吸收比例中均高于分散式灰水回用策略（DG）。
+图5显示了规划期内九种策略相对于BAU的四个KPI变化百分比。可以说，最具影响力的水回用策略是采用100%采用比例的分散式家庭污水回用（DW100），它在饮用水供水（27%）、EP（29.2%）和温室气体排放（17.8%）方面提供了最大的削减，尽管最大的能源使用削减（11.5%）是通过采用100%采用比例的集中式城市污水回用（C100）获得的。观察到各种水回用策略的应用在三个WEP耦合要素之间具有正面和负面影响。更具体而言，所有水回用策略都将导致饮用水节约，尽管集中式和分散式污水回用策略中具有相对相似的比例，且均大于分散式灰水回用策略。温室气体排放的削减也发生在所有水回用策略中，尽管使用家庭污水的分散式水回用的削减量远高于其他水回用策略（即，分散式灰水回用策略中的削减量约为两倍，集中式灰水回用策略中的削减量约为五倍）。这可能是由于进入下水道/WWTW的家庭污水减少导致UWS中未使用沼气主要减少，以及供水基础设施内取水、处理和输送所需的电力减少。
+虽然所有水回用策略对UWS中几乎所有KPI都会产生正面影响，但集中式策略同时对KPI产生正面和负面影响（即对饮用水供水、温室气体排放和能源使用为正面，对EP为负面）。更具体而言，与分散式灰水回用相比，分散式污水回用中EP显著降低（例如，DW100中高达29.2%，而DG100中为8.6%），而集中式污水回用将增加（即恶化）
+洗手盆
+101
+208
+20
+5.1
+3.3
+Cardoso and Antunes (2017)
+厨房水槽
+700
+900
+450
+60
+15
+Antonopoulou et al. (2013); Li et al. (2009)
+200
+400
+200
+15
+31
+Vakil et al. (2014); Antonopoulou et al. (2013); Li
+et al. (2009)
+淋浴
+200
+300
+200
+15
+5
+Cardoso and Antunes (2017); Li et al. (2009)
+厕所
+770
+2000
+1000
+170
+20
+Molla (2013)
+径流
+10
+70
+60
+1
+1
+Metcalf and Eddy (2003)
+工业
+1200
+1500
+1000
+100
+60
+Environ Sci Pollut Res (2020) 27:4582–4597
+4592
+表6 水回用设施的能源需求（单位：每立方米回用水kWh）
+EP。这可能是由于集中式水回用中的污染物（主要是磷）在UWS中循环，因此通过暴雨期间未处理出水的溢流或处理出水的排放增加了进入受纳水体的污染物负荷。这种效应在分散式水回用中不存在，因为由于分流至DEWATS，进入排水管网的家庭出水减少。这将在本节后面进一步详细讨论。
+通常预期，每种水回用策略的KPI更大变化发生在采用比例较高的策略中。然而，对于图5中所有分散式水回用策略的能源使用而言，这具体是不一致的。更具体而言，当比较水回用策略的总能源使用时，显然最高的能源节约与集中式策略相关（即从C20的2.7%到C100的11.5%），而分散式策略几乎没有可忽略的能源节约（0.1–0.3%）甚至更多的能源使用（即DW100中的-0.6%）。
+图4 九种策略中规划期内饮用水供水和回用水流量的年度平均值
+类型
+策略
+处理*
+输送
+总计
+集中式
+C20
+0.380
+0.145
+0.525
+C50
+0.380
+0.204
+0.584
+C100
+0.380
+0.223
+0.603
+分散式家庭污水
+DW20
+0.930
+0.123
+1.050
+DW50
+0.930
+0.162
+1.089
+DW100
+0.930
+0.221
+1.148
+分散式灰水
+DG20
+0.930
+0.136
+1.063
+DG50
+0.930
+0.181
+1.108
+DG100
+0.930
+0.214
+1.141
+*集中式策略中的能源需求对应于WWTW中的能源需求
+这些差异的原因应该在UWS组件中产生和避免的能源之间的相互作用中探索。UWS中产生的能源是用于饮用水供水（即原水资源的抽取和处理以及饮用水的分配）、集中式/分散式水回用设施（即用于处理和输送）的能源，而避免的能源是WWTW中产生的可再生能源。表7显示了UWS中这四个组件的年度能源摘要。由于所有水回用策略中饮用水减少，预期供水能源使用将低于BAU，即0.753 kWh/m3。BAU和集中式策略之间，污水处理的产生能源和WWTW中可再生能源发电的避免能源相对相似，尽管由于100%的可靠性水平，集中式策略中略大。然而，由于排入污水的家庭污水减少，所有分散式策略中产生和避免的能源均减少
+Environ Sci Pollut Res (2020) 27:4582–4597
+4593
+图5 规划期内九种策略相对于BAU的四个KPI变化百分比，正值表示削减率，负值表示增加率
+表7
+UWS主要组件的年度能源使用/产生；
+注意，除可再生电力外，所有均以每立方米用水需求kWh表示
+策略 总净
+能源使用
+能源
+产生
+供水
+(kWh/
+m3)
+能源
+(kWh/m3)
+回用
+设施*
+(kWh/m3)
+总
+可再生
+电力
+(kWh)
+污水
+处理
+(kWh/m3)
+BAU
+1.152
+0.753
+0.399
+0.000
+190.74
+C20
+1.121
+0.713
+0.400
+0.008
+191.23
+C50
+1.082
+0.654
+0.400
+0.027
+191.31
+C100
+1.020
+0.563
+0.400
+0.057
+191.31
+DW20
+1.149
+0.713
+0.379
+0.057
+181.22
+DW50
+1.148
+0.652
+0.347
+0.148
+166.22
+DW100
+1.159
+0.551
+0.295
+0.313
+141.07
+DG20
+1.150
+0.724
+0.385
+0.040
+184.36
+DG50
+1.149
+0.681
+0.364
+0.103
+174.17
+DG100
+1.151
+0.609
+0.328
+0.213
+156.99
+*对于集中式策略，回用设施的能源仅包含输送能源，因为集中式设施中的处理能源已包含在污水处理中
+系统中。对于分散式灰水回用，这种减少较少，因为厕所冲洗水仍然排入污水系统。在本案例研究对水回用设施能源需求的假设下，集中式设施比分散式设施更具能源效率（表6）。因此，虽然所有水回用策略都将导致供水能源使用减少，但分散式策略在总净能源使用方面几乎没有变化（表7和图5）。尽管如此，应当注意分散式设施并不一定更具能源密集性。因此，应当分析更具能源效率的分散式水回用技术（不同于MBR等能源密集型技术），以实现UWS中改进的能源性能。此外，分散式设施减少了WWTW中的可再生能源产生，这可能对分散式策略的能源性能产生负面影响。然而，在本案例研究中，可再生能源在总能源使用中的贡献几乎可以忽略不计（< 1%），因此在不同策略中无法预见到净能源的明显变化。
+案例研究中UWS运行所需的电力由电网供应，不到1%由WWTW产生的沼气在现场产生。电网电力
+Environ Sci Pollut Res (2020) 27:4582–4597
+4594
+在墨西哥主要由化石燃料供应，87%为天然气和煤炭，13%为其他来源（Santoyo-Castelazo et al. 2014）。由于分散式策略的实施导致WWTW的污水入流减少，这些策略中可再生能源产生的比例降低，如图6所示。特别是，DW100将经历可再生能源产生的最高削减（即26%），因为相对于BAU，WWTW的污水入流减少了25%。另一方面，集中式策略中该比例不受影响，因为与BAU相比污水入流保持相等。尽管所有策略中可再生能源产生的总量与电网相当大的化石基电力相比很小，但它们很重要，因为生产更多清洁能源符合气候变化减缓和适应的国际承诺。
+图7a显示了BAU和九种策略中构成UWS温室气体排放和EP的要素的贡献。这些要素是温室气体排放的三种气体（CO2、CH4和N2O）以及富营养化的P、NH3、COD、NO3和PO4向水体的排放。对于温室气体排放，CO2排放是所有UWS组件中直接（即化石燃料和电力）和间接（即化学品）排放的结果，而CH4和N2O从WWTW排放。可以看出，CH4是主要成分（60%），对温室气体排放有贡献，而BAU中CO2为（33%）。WWTW中的CH4是由未使用的沼气燃烧并释放到大气中产生的。因此，那些导致WWTW污水入流减少的策略（即如前所述的分散式策略）将导致温室气体排放的更大削减。因此，最高的削减可以从采用100%采用比例的分散式污水回用（DW100）中获得，其将温室气体排放减少17.8%。因此，应特别关注
+图6 BAU和九种策略中WWTW的污水入流与可再生能源
+图7 BAU和九种策略中（a）温室气体排放和（b）富营养化潜势（EP）的构成；两者均以每立方米用水需求CO2/PO4的年度平均值表示
+增加潜在的沼气利用以减少UWS中的温室气体排放。
+图7b中水回用策略对EP的影响存在相对相似的趋势。特别是，EP的主要成分由P组成，这是WWTW处理出水、下水管网未处理出水或WWTW排入受纳水体的出水的结果。类似地，分散式策略将减少下水管网和WWTW中的污水入流，因此EP将显著降低。另一方面，集中式策略将WWTW的处理出水返回到UWS，用于非饮用水需求（即厕所冲洗和灌溉）。尽管这种用饮用水替代的处理出水中的污染物在非饮用水用途的可接受限值内，但循环出水明显向UWS添加了更多污染物
+Environ Sci Pollut Res (2020) 27:4582–4597
+4595
+比BAU更多。一旦这些额外的污染物负荷转化为污水，特别是在厕所冲洗中，污染物总负荷可能在下水管网和WWTW中增加。因此，如图7b中所有集中式策略所示，EP可能略有增加。
+结论
+本文通过使用WEP耦合和城市水代谢的综合框架，对综合UWS中若干集中式和分散式水回用策略进行了长期性能评估。所考虑的水回用策略包括局部尺度的灰水以及局部/城市尺度的家庭/城市污水。城市水代谢的建模方法被考虑为先整合供水、雨水和污水子系统的所有主要UWS组件，然后再纳入干预策略对城市水循环其他组件的影响。
+从WEP耦合的角度来看，本研究发现使用家庭污水的分散式水回用策略在饮用水节约、富营养化和温室气体排放削减方面表现最佳，而集中式策略可以在UWS中提供最大的能源使用节约。尽管如此，由于向城市水循环排放更多污染物，集中式策略可能恶化富营养化潜势。结果表明，WEP耦合要素之间的相互作用可以通过综合UWS的代谢性能模拟进行量化。因此，相对于WEP耦合标准对水回用策略的评估能够揭示耦合要素（即水、能源和污染）之间由于综合UWS的复杂性而难以识别或意外的直接和间接影响。由于UWS组件与整体系统之间可能存在的复杂和间接相互作用，相反的影响可能发生。
+尽管当前方法使用了一个典型的真实案例研究来探索所建议框架的能力，但本文获得的结果不能推广到其他UWS。例如，水回用选项的采用/吸收百分比必须根据UWS中的社会经济因素进行调整。因此，应在其他真实案例研究上进行更多测试案例，以便提取关于水回用策略的水-能源-污染耦合的一些普遍结果。
+致谢 作者感谢Rincon城市污水部门（SITRATA）、Purisima del Rincon饮用水部门（SAPAP）、San Francisco del Rincon水务部门（SAPAF）、瓜纳华托州水务委员会（CEAG）、国家水务委员会（CONAGUA）和国家气象局（SMN）提供的信息，以上机构均位于墨西哥。
+资助 Oriana Landa获得了墨西哥科学技术委员会CONACYT（220075）、墨西哥公共教育秘书处（SEP）和伦敦大学学院的奖学金。
+遵守道德标准
+利益冲突
+作者声明他们没有利益冲突。
+开放获取 本文根据知识共享署名4.0国际许可协议（http://creativecommons.org/licenses/by/4.0/）的条款分发，该协议允许在任何介质中无限制使用、分发和复制，前提是您对原作者和来源给予适当的署名，提供知识共享许可协议的链接，并说明是否进行了更改。
+参考文献
+Antonopoulou G, Kirkou A, Stasinakis AS (2013) Quantitative and qual-
+希腊家庭灰水的表征及利用物理化学方法进行处理的研究。Sci Total
+Environ 454–455:426–432. https://doi.org/10.1016/j.scitotenv.
+2013.03.045
+Behzadian K, Kapelan Z (2015a) 集成和可持续的——
+性评估用于基于代谢的城市水系统战略规划。Sci Total Environ 527–528:220–231. https://
+doi.org/10.1016/j.scitotenv.2015.04.097
+Behzadian K, Kapelan Z (2015b) 基于代谢的绩效建模——
+mance of an urban water system using WaterMet2. Resour Conserv Recycl 99:84–99. https://doi.org/10.1016/j.resconrec.2015.03.015 Behzadian K, Kapelan Z, Mousavi SJ, Alani A (2018) Can smart rain-
+水收集方案是否能改善集成城市水系统的性能？Environ Sci Pollut Res Int 25:
+19271–19282. https://doi.org/10.1007/s11356-017-0546-5
+Behzadian K, Kapelan Z, Venkatesh G, Brattebø H, Sægrov S, Rozos E,
+Makropoulos C (2014a) 定量UWS性能模型：
+WaterMet2，TRUST报告，D33.2. https://www.uwl.ac.uk/schoolcomputing-and-engineering-0/watermet2-software-tool
+Behzadian K, Kapelan Z, Venkatesh G, Brattebø H, Sægrov S, Rozos E,
+Makropoulos C, Ugarelli R, Milina J, Hem L (2014b) 使用WaterMet2模型进行城市水
+系统代谢评估。Procedia
+Eng 70:113–122. https://doi.org/10.1016/j.proeng.2014.02.014
+Bieker S, Cornel P, Wagner M (2010) 半集中式供应和处理——
+系统：面向快速增长城区的集成基础设施解决方案。Water Sci Technol 61:2905–2913. https://doi.org/10.
+2166/wst.2010.189
+Cardoso CM, Antunes NM (2017) 使用移动式——
+bed biofilm reactor at a university campus in Brazil. J Clean Prod 142:290–296. https://doi.org/10.1016/j.jclepro.2016.07.162 Chang J, Lee W, Yoon S (2017) Energy consumptions and associated
+韩国城市水回用系统运行阶段的温室气体排放。J Clean Prod 141:728–736. https://doi.org/10.
+1016/j.jclepro.2016.09.131
+Chen Z, Ngo HH, Guo W (2012) 关于可持续性的批判性综述——
+assessment of recycled water schemes. Sci Total Environ 426:13– 31. https://doi.org/10.1016/j.scitotenv.2012.03.055 CEAG (2014) Diagnostic of potable water and sanitation sectors (in
+Spanish) CEAG (2017) Diagnostic of potable water and sanitation sectors (in
+Spanish)
+Environ Sci Pollut Res (2020) 27:4582–4597 4596
+CLICOM (2016) CLICOM daily climate data of the SMN through its
+CICESE web platform http://clicom-mex.cicese.mx. Accessed 19 February 2016 DENUE (2015) National Statistical Directory of Economic Units in
+Mexico http://www.beta.inegi.org.mx/app/mapa/denue/ Accessed 10 March 2018 (in Spanish) De Stercke S, Mijic A, Buytaert W, Chaturvedi V (2018) Modelling the
+从终端使用角度看伦敦水和能源系统之间的动态交互。Appl Energy 230:615–626. https://doi.
+org/10.1016/j.apenergy.2018.08.094
+Domènech L (2011) 重新思考水管理：从集中式到——
+decentralised water supply and sanitation models. Doc d’Anàlisi Geogràfic 57:293–310 Duong TH, Adin A, Jackman D, van der Steen P, Vairavamoorthy K
+(2011) 基于城市水循环总量模型和能源方面的城市水管理策略——特拉维夫案例研究。Urban Water J 8:103–118. https://doi.org/10.1080/1573062X.
+2010.546861
+EPA (2012) 水回用指南 EPA/600/R-12/618. US
+Environmental Protection Agency, NRMR Laboratory, US Angecy for International, Washington Farooqui TA, Renouf MA, Kenway SJ (2016) A metabolism perspective
+基于水量平衡的替代城市水服务方案。Water Res 106:415–428. https://doi.org/10.1016/j.watres.
+2016.10.014
+Foley J, de Haas D, Hartley K, Lant P (2010) 综合生命周期——
+inventories of alternative wastewater treatment systems. Water Res 44:1654–1666. https://doi.org/10.1016/j.watres.2009.11.031 Friedler E, Buttler D, Alfiya Y (2013) Wastewater composition. In:
+Larsen T, Udert K, Lienert J (eds) Source separation and decentralization for wastewater management. IWA Publishing, pp 241–257 Geissdoerfer M, Savaget P, Bocken NMP, Hultink EJ (2017) The Circular
+Economy – a new sustainability paradigm. J Clean Prod 143:757– 768. https://doi.org/10.1016/j.jclepro.2016.12.048 Gu Y, Dong Y, Wang H, Keller A, Xu J, Chiramba T, Li F (2016)
+从水-能源关联视角量化中国污水处理厂的水、能源和碳足迹。Ecol Indic 60:402–409. https://doi.org/10.1016/j.
+ecolind.2015.07.012
+Heijungs R, Guinée JB, Huppes G, Lankreijer RM, Udo de Haes HA,
+Wegener Sleeswijk A, Ansems AMM, Eggels PG, Duin R van, Goede HP de (1992) Environmental life cycle assessment of products: guide and backgrounds (Part 1) CML, Leiden. Huang CL, Vause J, Ma HW, Yu CP (2013) Urban water metabolism
+效率评估：可用水和虚拟水的集成分析。Sci Total Environ 452-453:19–27. https://doi.org/10.1016/j.
+scitotenv.2013.02.044
+INEGI (1990) XI Census 1990. Institute of Statistics, Geography and
+informatics of Mexico. https://www.inegi.org.mx/programas/ccpv/ 1990/default.html. Accessed 20 Sep 2018 (in Spanish) INEGI (1995) I Population counts 1995. Institute of Statistics, Geography
+and informatics of Mexico. https://www.inegi.org.mx/programas/ ccpv/1995/default.html. Accessed 20 Sep 2018 (in Spanish) INEGI (2000) XII Census 2000. Institute of Statistics, Geography and
+informatics of Mexico. https://www.inegi.org.mx/programas/ccpv/ 2000/default.html. Accessed 20 Sep 2018 (in Spanish) INEGI (2005) II Population count 2005. Institute of Statistics, Geography
+and informatics of Mexico. https://www.inegi.org.mx/programas/ ccpv/2005/default.html. Accessed 20 Sep 2018 (in Spanish) INEGI (2010) XIII Census 2010. Institute of Statistics, Geography and
+informatics of Mexico.可获取：https://www.inegi.org.mx/
+programas/ccpv/2010/default.html.访问于2018年9月20日（西班牙语版）
+INEGI (2016) 市政地理统计地理元数据目录。
+http://www3.inegi.org.mx/sistemas/biblioteca/ficha.aspx?upc = 702825217341 Accessed 04 Oct /2016 (in Spanish)
+IPCC (2014) Climate change 2014: synthesis report. Contribution of
+第一、二、三工作组向政府间气候变化专门委员会第五次评估报告提交的报告 [核心撰写团队，
+R.K. Pachauri和L.A. Meyer (编)]。IPCC, Geneva, Switzerland,
+151 pp.
+Jeong H, Minne E, Crittenden JC (2015) 城市的生命周期评估——
+of Atlanta, Georgia’s centralized water system. Int J Life Cycle Assess 20:880–891. https://doi.org/10.1007/s11367-015-0874-y Jiménez-Cisneros B (2014) Water reuse and recycling. In: Satinder A (ed)
+Comprehensive water quality and purification. Elsevier, Waltham, MA, pp 296–323 Kenway S (2013) The water-energy nexus and urban metabolism - con-
+nections in cities. Security Research Alliance Technical Report No. 100. Kroeze C, Gabbert S, Hofstra N, Koelmans AA, Li A, Löhr A, Ludwig F,
+Strokal M, Verburg C, Vermeulen L, van Vliet MTH, de Vries W,
+Wang M, van Wijnen J (2016) 全球地表水
+质量建模：多污染物方法。Curr Opin Environ Sustain 23:
+35–45. https://doi.org/10.1016/j.cosust.2016.11.014
+Kumar P, Saroj DP (2014) 增长中的水-能源-污染关联——
+cities. Urban Clim 10:846–853. https://doi.org/10.1016/j.uclim. 2014.07.004 Landa-Cansigno O, Behzadian K, Davila-Cano D, Campos LC (2018)
+利用基于代谢的方法对城市水系统中水回用策略进行水-能源-污染物关联评估，Silva
+Afonso A, Rodrigues-Pimental C (编) 水效率
+会议2018论文集，2018年9月5-7日，葡萄牙阿威罗：
+WATEF Network/University of Bath ISBN-13: 978-0-86197-198-5
+Lane JL, de Haas DW, Lant PA (2015) 多样化的环境负担——
+of city-scale urban water systems. Water Res 81:398–415. https:// doi.org/10.1016/j.watres.2015.03.005 Larse T, Hoffmann S, Luthi C, Trffer B, Maurer M (2016) Emerging
+solutions to the water challenges of an urbanizing world. Science 352:928–933. https://doi.org/10.1126/science.aad8641 Li F, Wichmann K, Otterpohl R (2009) Review of the technological
+approaches for grey water treatment and reuses. Sci Total Environ 407:3439–3449. https://doi.org/10.1016/j.scitotenv.2009.02.004 Liu B, Wei Q, Zhang B, Bi J (2013) Life cycle GHG emissions of sewage
+中国太湖流域的污泥处理和处置方案。Sci Total Environ 47:361–369. https://doi.org/10.1016/j.scitotenv.
+2013.01.019
+Longo S, Mirko d'Antoni B, Bongards M, Chaparro A, Cronrath A,
+Fatone F, Lema JM, Mauricio-Iglesias M, Soares A, Hospido A
+(2016) 污水处理厂能源消耗的监测和诊断。技术现状及改进建议。Appl Energy 179:1251–1268. https://doi.org/10.1007/
+s11367-016-1087-8
+Makropoulos CK, Natsis K, Liu S, Mittas K, Butler D (2008) 决策——
+support for sustainable option selection in integrated urban water management. Environ Model Softw 23:1448–1460 Matos C, Pereira S, Amorim EV, Bentes I, Briga-Sá (2014) AWastewater
+以及灰水回用于灌溉在集中式和分散式
+系统中的比较——水质、能源消耗和CO2排放的集成方法。Sci Total Environ 493:463–471. https://doi.
+org/10.1016/j.scitotenv.2014.05.129
+Metcalf and Eddy (2003) 污水工程、处理、处置——
+and reuse. McGraw-Hill, New York Mitchell VG, Diaper C (2005) UVQ: a tool for assessing the water and
+contaminant balance impacts of urban development scenarios. Water Sci Technol 52:91–98. https://doi.org/10.2166/wst.2005.0435 Mo W, Wang R, Zimmerman JB (2014) Energy-water nexus analysis of
+enhanced water supply scenarios: a regional comparison of Tampa Bay, Florida, and San Diego, California. Environ Sci Technol 48: 5883–5891. https://doi.org/10.1021/es405648x
+Environ Sci Pollut Res (2020) 27:4582–4597 4597
+Molla AS (2013) The potential of subsurface infiltration for the treatment
+of vermibed effluents generated by the biofil toilet. Dissertation, Kwame Nkrumah University of Science and Technology Moriasi DN, Arnold JG, Van Liew MW, Bingner RL, Harmel RD, Veith
+TL (2007) 流域模拟中精度系统量化的模型评估指南。Trans ASABE 50:885–900.
+https://doi.org/10.13031/2013.23153
+Morley M, Behzadian K, Kapelan Z, Ugarelli R (2016) 决策支持——
+system for metabolism-based transition to urban water systems of tomorrow. Water Supply 16:855–863. https://doi.org/10.2166/ws. 2016.007 NOM-003-SEMARNAT-1997 Mexican Official Guideline that estab-
+lishes the maximum permissible limits of pollutants for treated water that are reused in public services. SEMARNAT, Mexico (in Spanish) NOM-127-SSA1 (1994) Mexican Official Guideline, Environmental
+health: water for use and human consumption-permissible limits of quality and treatments, health secretary of Mexico (in Spanish) Novotny V (2013) Water–energy nexus: retrofitting urban areas to
+achieve zero pollution. Build Res Inf 41:589–604. https://doi.org/ 10.1080/09613218.2013.804764 Opher T, Friedler E (2016) Reducing inventory data requirements for
+比较生命周期评估（LCA）中的情景表示，
+以城市污水系统Tamar为例进行演示。Urban Water J 13:759–772
+Parker JM, Wilby RL (2013) 量化家庭用水需求：——
+review of theory and practice in the UK. Water Resour Manag 27(4):981–1011. https://doi.org/10.1007/s11269-012-0190-2 Reyes MF, Trifunović N, Sarma S, Behzadian K, Kapelan Z, Kennedy
+MD (2017) 未来水资源稀缺的缓解方案：圣克鲁斯岛
+（加拉帕戈斯群岛）案例研究。Water 9:597. https://
+doi.org/10.3390/w9080597
+Santoyo-Castelazo E, Stamford L, Azapagic A (2014) 环境——
+大型经济体电力供应脱碳的环境影响：
+以墨西哥为例。Energy Convers Manag 85:272–291. https://doi.
+org/10.1016/j.enconman.2014.05.051
+SAPAF (2017) 数据库。San Francisco del的饮用水公用事业
+Rincon, Mexico. (in Spanish) SAPAP (2017) Databases. Potable water utility in Purisima del Rincon,
+Mexico. (in Spanish) SEMARNAT (2016) Report of the National Emissions Registry-Advice:
+Available: www.geimexico.org/downs/aviso_factor_de_emision_ electrico_2015.pdf Accessed 16 Oct 2016 (in Spanish) Silva-Vieira A, Ghisi E (2016) Water-energy nexus in low-income houses
+在巴西：现场集成水和污水管理策略对水和污水处理服务能源消耗的影响。J Clean Prod 133:145–162. https://doi.org/10.1016/j.
+jclepro.2016.05.104
+Singh P, Kansal A (2018) 污水的能源和温室气体核算——
+infrastructure. Resour Conserv Recycl 128:499–507. https://doi.org/ 10.1016/j.resconrec.2016.07.014 Singh P, Kansal A, Carliell-Marquet C (2016) Energy and carbon foot-
+prints of sewage treatment methods. J Environ Manag 165:22–30. https://doi.org/10.1016/j.jenvman.2015.09.017
+SITRATA (2017). Wastewater databases. Wastewater utility in San
+Francisco and Purisima del Rincon cities. (in Spanish) SMN (2017) Monthly average climate database in Guanajuato
+Observatory station. National Meteorological Service in Mexico. Sušnik J (2018) Data-driven quantification of the global water-energy-
+food system. Resour Conserv Recycl 133:179–190. https://doi.org/ 10.1016/j.resconrec.2018.02.023 Tsolas SD, Karim MN, Hasan MMF (2018) Optimization of water-
+energy nexus: a network representation-based graphical approach. Appl Energy 224:230–250. https://doi.org/10.1016/j.apenergy. 2018.04.094 Vakil KA, Sharma MK, Bhatia A, Kazmi AA, Sarkar S (2014)
+印度中产阶级家庭灰水的表征
+及利用电絮凝进行物理化学处理的研究。Sep Purif Technol 130:160–166. https://doi.
+org/10.1016/j.seppur.2014.04.018
+Valek MA, Sušnik J, Grafakos S (2017) 城市的量化——
+墨西哥墨西哥城的水-能源关联，
+及水系统相关碳排放评估。Sci Total Environ 509-
+591:258–268. https://doi.org/10.1016/j.scitotenv.2017.02.234
+Venkatesh G, Brattebø H, Sægrov S, Behzadian K, Kapelan Z (2017)
+城市水服务长期可持续性评估的代谢建模方法。Urban Water J 14:11–22. https://
+doi.org/10.1080/1573062X.2015.1057184
+Wang S, Chen B (2016) 城市群落的能源-水关联——
+基于多区域投入产出表和生态网络
+分析：京津冀地区案例研究。Appl
+Energy 178:773–783. https://doi.org/10.1016/j.apenergy.2016.06.
+112
+Wernet G, Bauer C, Steubing B, Reinhard J, Moreno-Ruiz E, Weidema B
+(2016) ecoinvent数据库第3版（第I部分）：概述与
+方法论。Int J Life Cycle Assess 21:1218–1230. https://doi.
+org/10.1007/s11367-016-1087-8
+Wolman A (1965) 城市的代谢。Sci Am 213:179–190.
+https://doi.org/10.1017/CBO9781107415324.004 WWAP (2017) Wastewater: the untapped resource. United Nations World
+Water Assessment Programme Paris. https://doi.org/10.1017/ CBO9781107415324.004, Summary for Policymakers Zhang X, Vesselinov V (2016) Energy-water nexus: balancing the trade-
+offs between two-level decision makers. Appl Energy 183:77–87. https://doi.org/10.1016/j.apenergy.2016.08.156 Zheng B, Huang G, Guan Y, Zhai M, Liu L (2019) Metabolism of urban
+wastewater: ecological network analysis for Guangdong Province, China. J Clean Prod 217:510–519. https://doi.org/10.1016/j.jclepro. 2019.01.222
+出版者声明 Springer Nature对已发表地图和机构隶属关系中的
+管辖权主张保持中立。
+论文深度解读
+Performance assessment of water reuse strategies using integrated framework of urban water metabolism and water-energy-pollution nexus
+核心结论
+作者声称（[Abstract, 第4582页]）：将WaterMet2水代谢模型与WEP纽带KPI整合，可量化评估再生水策略对UWS的长期绩效。论文证据（[Fig. 5, 第4593页]）：墨西哥Rincon双城案例中，分散式生活污水再生（DW100）在节自来水（-27%）、富营养化（-29.2%）、温室气体（-17.8%）三项最优；集中式（C100）能耗节约最多（-11.5%）却恶化富营养化。分析判断：核心价值在于揭示WEP元素间隐性权衡——集中式回用将出水磷重新注入UWS致EP升；分散式分流污水减WWTW甲烷逃逸。作者承认结论不可外推（[Conclusions, 第4595页]）。
+研究问题与真正贡献
+作者声称的研究目标（[Introduction, 第4584页]）：将城市水代谢概念与WEP纽带整合，评估集中式与分散式再生水策略对集成UWS的影响。论文证据显示的真正贡献有三：
+
+第一，方法学整合。作者将WaterMet2（动态物质流分析模型，日时间步长，20至40年长周期）与5个WEP纽带KPI耦合（[Table 1, 第4585页]）：水维度（供水可靠性%、自来水m³/年）、能维度（净能耗kWh/m³/年）、污染维度（GHG为kg CO2-eq/m³/年、EP为kg PO4-eq/m³/年）。作者声称（[WaterMet2 model, 第4585页]）WM2优于UWOT和UVQ，因后者主要限于水和能源两类影响、无法涵盖UWS全部主组件——此为作者声称，论文未提供横向对比实验证据。
+
+第二，揭示纽带间的隐性权衡。论文证据（[Fig. 5, Fig. 7, 第4593至4594页]）表明：所有策略均能省自来水、减GHG，但集中式策略因将处理出水回用于冲厕或灌溉而把磷等污染物重新注入UWS，使EP不降反升；分散式则因分流污水减少WWTW甲烷逃逸。这一相反影响是论文最有价值的发现。
+
+第三，案例示范。在墨西哥Rincon双城（SFR与PR）真实UWS中演示方法，覆盖2个子汇水区、14个本地区域、22口井、1座WWTW。
+
+分析判断：论文未提出新算法或新模型，WM2为既有工具（Behzadian et al. 2014a）；真正贡献是整合框架加真实案例加权衡揭示的组合，而非单一技术突破。作者亦承认（[Conclusions, 第4595页]）发现不可推广至其他UWS，故贡献范围限于方法演示与机制洞察。
+技术方法详解
+方法输入、处理与输出：WaterMet2（WM2）是概念性质量平衡模型（[WaterMet2 model, 第4584页]），输入分三类——时间序列（每日水资源入流、气象数据）、UWS组件（拓扑连接、蓄水或处理或输送容量、能耗、化学药剂、渗漏、污染物去除率）、关联数据（内嵌能、GHG、EP等二次因子）。处理流程：以日为时间步长对UWS四大子系统（自来水供应、子汇水区、污水、水资源回收）执行水流量质量平衡，基于完全混合假设追踪污染物负荷（COD、TSS、TN、TP），再将模拟水或能流乘以对应因子计算5个KPI。输出为可按组件或全系统、按时间步或聚合时段表达的KPI。
+
+关键机制一：日尺度质量平衡加完全混合。WM2采用简化水量建模，无水质路由的传播时间（[WaterMet2 model, 第4584页]），仅靠逐日完全混合追踪污染物。这一简化与UWOT、UVQ同类概念模型一致，但意味着无法捕捉水力停留时间对污染物转化的影响。
+
+关键机制二：KPI等于模拟流乘因子。GHG以CO2-eq计，CH4 GWP为28、N2O GWP为265（IPCC 2014）；EP以PO4-eq计，NH3为0.35、COD为0.022、P为3.06（Heijungs et al. 1992）。电网排放因子0.458 kg CO2/kWh（SEMARNAT 2016）。这些因子均取自文献，非案例实测。
+
+关键机制三：能耗平衡等于产生能耗减避免能耗。产生能耗含直接（化石燃料或电网）与间接（化学药剂或材料的内嵌能）；避免能耗含WWTW沼气发电与资源回收的内嵌能（[Key performance indicators, 第4585至4586页]）。这一机制解释了为何分散式策略能耗节约微乎其微：虽减少自来水供应能耗，但DEWATS处理能耗高（0.93 kWh/m³，MBR），且分流污水减少WWTW沼气产量（DW100可再生能降26%）。
+
+关键机制四：策略渐进实施。9种策略在30年规划期内分两步实施（第10年、第20年，[Water reuse strategies, 第4590页]），采用比例20、50、100%。DG与DW用MBR处理，每户配0.5 m³回用水箱。
+
+关键公式：灌溉需求 WDi等于Ai乘If乘α乘0.001（[Eq. 1, 第4588页]），Ai为灌溉面积，If为5 L/m²，α为0.5（每3天灌溉一次）。输能按Hazen-Williams方程，流速1 m/s、泵效0.80、距离2至5 km、高差20至50 m。
+
+工程实现信息：WM2为分布式模型，可建模任意数量组件；四空间尺度（室内、本地区域、子汇水区、城市）；限于UWS运营阶段（排除建设或维护或拆除，作者声称其影响小，引Jeong et al. 2015等，未在本案例验证）；空间边界为城市水务行政管理范围。
+
+复杂度与可扩展性：日步长乘30年乘14个本地区域乘多组件，计算量适中；模型可扩展至更多子汇水区，但数据需求随组件数线性增长。分析判断：方法的核心局限在于完全混合假设与运营阶段限定，对水力转化敏感的污染物（如硝化反硝化）可能失真；且KPI依赖线性乘因子法，无法反映污染物间非线性协同或拮抗效应，在复合污染场景下构成偏差来源。
+数据处理与统计流程
+数据来源（[Model setup, 第4588至4590页]；[Table 4, 第4589页]）：一手数据来自当地水务机构——SAPAP与SAPAF（2015至2016年每日取水、能耗、药剂）、SITRATA（2015至2016年污水进出流月尺度、2014至2016年污泥产气）；人口数据INEGI普查；气象数据CLICOM 2016（1962至2011年降雨与气温）、SMN 2017；土地利用INEGI 2016。二次因子取自Ecoinvent3（Wernet et al. 2016）、CML World 2001、IPCC 2014。
+
+样本构成：2个子汇水区（SB1为SFR、SB2为PR）各含7个本地区域共14个；服务人口111,600、接入自来水户数24,751；人均日用水90至180 L；22口井深70至300 m；WWTW处理能力21,600 m³/日；渗漏率40至50%；WWTW沼气47.5 m³/h，发电0.03 kWh/m³。
+
+数据转换与特征工程：各本地区域水需求等于年需求（Table 2）乘区域与人口比例。生活用水需求剖面为假设值（无案例实测）：32%冲厕、22%淋浴、15%洗衣机、15%厨房、9%洗手盆、6%灌溉（Parker and Wilby 2013）；不考虑洗碗机。人口增长1至3%（算术模型，论文未展示）。径流系数0.4、入渗系数0.5。污染物浓度取自文献（[Table 5, 第4591页]）非实测——如厕所BOD 770、COD 2000 mg/L；工业BOD 1200 mg/L。去除率取自SITRATA 2017：BOD 91%、TSS 97%、COD 94%、TN与TP为60%。
+
+校准与验证（[Model setup, 第4588页]）：以2015至2016年月尺度观测对比模拟水需求，首年校准、次年验证。调整月需求剖面（如7至9月雨季无灌溉）、蓄水容量、管网、透水率、降雨径流系数。性能用RSR、NSE、Pbias、相关系数评估，对照Moriasi et al. (2007)推荐值——但论文未在正文给出具体校准统计数值。
+
+缺失数据处理：案例无户内器具用水分配数据故套用文献剖面；排除配水或污水管网O&M材料流（缺数据）；污染物浓度与去除率均非实测；渐进实施时点（10年、20年）无论证依据。
+
+统计分析：论文未做假设检验、置信区间、效应量或功效分析。结果以相对BAU的百分比变化呈现（[Fig. 5, 第4593页]）。未报告不确定性量化或敏感性分析。分析判断：数据来源可追溯，但大量关键参数为文献假设且无不确定性传播，削弱了定量结论的可信区间。
+绘图与可视化方法
+论文共7张图、7张表。以下分析4张最关键图。
+
+Fig. 5（[第4593页]）：最关键。展示9种策略下4个KPI相对BAU的百分比变化，正值为减少、负值为增加。数据聚合方式：30年规划期年度平均，按每m³水需求归一化。视觉元素：9组策略乘4个KPI柱状图。该图要证明：DW100在3项指标上最优、C100在能耗上最优、集中式EP恶化。问题：其一，无误差棒或不确定性区间，给定参数多为文献假设，应至少展示敏感性区间；其二，正值代表减少的约定反直觉，易误导读者将负值误读为改善；其三，百分比变化掩盖绝对量级——DW100能耗负0点6%与C100能耗负11点5%的差异在柱高上被压缩；其四，30年年度平均隐藏时序动态，无法看到第10、20年实施节点的不连续变化。
+
+Fig. 7（[第4594页]）：分(a)GHG与(b)EP的构成堆叠图，覆盖BAU与9策略。GHG含CO2、CH4、N2O；EP含P、NH3、COD、NO3、PO4。该图要证明：CH4占BAU的GHG 60%、CO2占33%；P是EP主要成分；分散式削减CH4与P。数据同样按每m³水需求归一化的年度平均。问题：未说明堆叠顺序与颜色编码逻辑；无误差棒；EP图(b)中集中式恶化的幅度视觉上很小，可能低估实际影响。
+
+Fig. 4（[第4591页]）：展示9策略年度平均自来水供应与再生水流量。要证明：高采用比例能替代更多自来水，C与DW替代潜力相近且高于DG。问题：同为年度平均，无时序；未显示供水可靠性（虽文字提及99%与100%）。
+
+Fig. 6（[第4594页]）：WWTW污水入流对比可再生能。要证明：DW100污水入流降25%、可再生能降26%；集中式不变。问题：关系为确定性计算结果（沼气产量正比于入流），非独立变量散点关系，图型选择易误读为相关性。
+
+整体评估：图形选择基本合理（柱状或堆叠适于策略对比），但普遍缺不确定性表达、归一化掩盖绝对量级、年度平均抹平时序。重绘建议：Fig. 5增加误差棒并将约定改为负值代表减少；补充时序图展示实施节点动态；Fig. 6改为双轴折线而非散点。
+关键证据与实验结果
+论文核心证据来自WaterMet2模拟输出，无实测验证。基线BAU为30年规划期无所作为（[Key performance indicators, 第4586页]），合理但假设无其他变化。
+
+证据一：供水可靠性（[Results, 第4591页]）。BAU约99%；采用比例大于等于50%的策略达100%，说明回用可补足缺口。
+
+证据二：DW100综合最优（[Fig. 5, 第4593页]）。自来水负27%、EP负29.2%、GHG负17.8%，为9策略中三项指标最大削减。
+
+证据三：C100能耗最优但EP恶化（[Fig. 5, Fig. 7b, 第4593至4594页]）。能耗负11.5%；但EP增加，因处理出水回用将磷重新注入UWS。
+
+证据四：分散式能耗节约微乎其微（[Fig. 5, Table 7, 第4593页]）。DW100反而增能0.6%。Table 7显示BAU总净能1.152、C100为1.020、DW100为1.159 kWh/m³——分散式因DEWATS处理能耗0.93 kWh/m³（MBR）抵消自来水供应节能。
+
+证据五：CH4主导GHG（[Fig. 7a, 第4594页]）。BAU中CH4占60%、CO2占33%，CH4源自WWTW未利用沼气燃烧。分散式分流污水减少逃逸CH4，故GHG降幅最大。
+
+证据六：可再生能占比极小（[Results, 第4594页]）。小于1%总能耗；DW100因入流降25%致可再生能降26%，对净能耗影响可忽略。
+
+一致性核查：摘要与Fig. 5及Table 7数字一致，未发现矛盾。鲁棒性：未做敏感性分析，单一案例，作者声明不可推广（[Conclusions, 第4595页]）。
+证据项 | 出处 | 关键数值 | 支持的结论 | 局限
+供水可靠性 | Results, 第4591页 | BAU 99%；大于等于50%采用为100% | 回用补足缺口 | 仅模拟
+DW100三项最优 | Fig. 5, 第4593页 | 自来水负27%、EP负29.2%、GHG负17.8% | 分散式污水综合最优 | 无误差棒
+C100能耗最优 | Fig. 5, 第4593页 | 能耗负11.5% | 集中式节能最佳 | EP恶化
+集中式EP恶化 | Fig. 7b, 第4594页 | EP增加（百分比未列） | 出水磷再注入 | 推断未验证
+分散式节能微弱 | Table 7, 第4593页 | DW100净能1.159对比BAU 1.152 | MBR抵消节能 | 单一假设
+CH4主导GHG | Fig. 7a, 第4594页 | CH4为60%、CO2为33% | 减沼气即减GHG | 模拟输出
+可再生能小于1% | Results, 第4594页 | DW100可再生能负26% | 沼气影响可忽略 | 单案例
+论文没有证明什么
+一、不可外推性。作者明确声明（[Conclusions, 第4595页]）发现不可推广至其他UWS，但摘要与正文多用一般化措辞，读者易高估普适性。
+
+二、WM2优于UWOT与UVQ的声称。作者声称（[WaterMet2 model, 第4585页]）后两者限于水和能源、无法涵盖UWS全部主组件，但未做横向对比实验，此为未经验证的方法学声称。
+
+三、集中式EP恶化的因果机制。作者推断（[Results, 第4593至4594页]）系处理出水磷回注加溢流所致，但未通过隔离实验验证，亦未量化各路径贡献。
+
+四、MBR能耗假设。分散式处理能耗取0.93 kWh/m³（引Longo et al. 2016，单一文献值）。论文承认更节能的分散技术应被分析（[Results, 第4593页]），却未做替代技术对比或敏感性分析，故分散式节能微弱结论高度依赖此假设。
+
+五、采用比例的合理性。20、50、100%系与专家协商确定（[Water reuse strategies, 第4590页]），无社会经济可行性论证，100%采用是否可达未讨论。
+
+六、不确定性缺失。论文未对渗漏率（40至50%跨度）、去除率（60% TN与TP）、污染物浓度、人口增长等关键参数做敏感性分析或不确定性传播，所有KPI为点估计。
+
+七、校准性能不透明。RSR、NSE、Pbias被提及（[Model setup, 第4588页]），但正文未报告具体数值，无法判断是否达Moriasi et al. (2007)可接受标准。
+
+八、KPI输出无实测验证。GHG、EP均为模拟乘因子计算，未与WWTW实测排放或受纳水体水质对照。
+
+九、需求剖面假设。生活用水分配（Parker and Wilby 2013）套用于全部14个本地区域，无案例实测；该剖面直接决定回用水量与节水量。
+
+十、运营阶段限定。排除建设或维护或拆除阶段（[WaterMet2 model, 第4585页]），作者声称影响小但未在本案例验证；对再生水基建密集场景可能低估总环境影响。
+
+十一、经济KPI缺失。框架提及经济可持续性（[Introduction, 第4583页]），但5个KPI中无经济指标，成本效益权衡未评估。
+可复现性清单
+复现要素 | 可获得性 | 来源或说明
+WaterMet2工具 | 部分公开 | TRUST报告D33.2，UWL网站提供软件（Behzadian et al. 2014a）
+案例输入数据 | 不公开 | 来自SAPAF与SAPAP与SITRATA内部数据，需联系墨西哥水务机构
+气象数据 | 可获取 | CLICOM 2016、SMN 2017公开数据库
+人口与土地利用 | 可获取 | INEGI公开普查与地图
+二次因子 | 可获取 | Ecoinvent3、IPCC 2014、CML 2001、Heijungs 1992文献
+策略定义 | 完整 | 9策略、采用比例、MBR、0.5 m³水箱、10与20年实施（Water reuse strategies节）
+校准细节 | 不透明 | 提及RSR与NSE与Pbias但未报告数值（Model setup节）
+代码或脚本 | 未提供 | 论文未说明是否提供复现脚本
+污染物浓度 | 可追溯 | Table 5列文献来源
+能耗假设 | 可追溯 | Table 6、0.93 kWh/m³引Longo et al. 2016
+分析判断：方法学与策略定义描述较完整，具备概念复现条件；但核心案例数据为内部数据不公开，校准统计未报告，无代码或脚本，独立定量复现困难。建议复现者需与当地水务机构合作获取一手数据，并补充校准数值与敏感性分析。
+价值、适用条件与下一步
+价值（[Conclusions, 第4595页]）：方法学层面，将城市水代谢（物质流加长周期）与WEP纽带KPI耦合，提供了量化UWS跨元素权衡的工具——尤其揭示集中式回用EP恶化这一非直觉结果，对规划者有实际警示意义。案例层面，为墨西哥Rincon双城给出了具体策略排序。
+
+适用条件：其一，具备日尺度供排水流量与WWTW运行数据的UWS；其二，规划期20至40年的长期评估；其三，UWS结构含完整四子系统；其四，接受运营阶段限定与完全混合假设；其五，二次因子可从Ecoinvent等数据库获取。不适用于需精确水力路由、建设阶段影响显著、或缺乏一手运行数据的场景。
+
+下一步建议：其一，更多真实案例以检验可推广性（作者已呼吁）；其二，对渗漏率、去除率、MBR能耗、采用比例做全局敏感性分析与不确定性传播；其三，对比非MBR分散技术（如人工湿地、好氧膜）以验证分散式节能微弱是否为技术特定；其四，纳入建设或维护阶段LCA以检验运营阶段主导假设；其五，补经济KPI与采用比例的社会经济可行性；其六，与UWOT或UVQ做同案例基准对比以验证WM2优越性声称；其七，校准统计数值应公开报告。分析判断：论文作为方法演示有价值，但定量结论需经敏感性分析与多案例验证后方可用于规划决策。
+最终记忆卡
+一句话记忆：用WaterMet2（日物质流加长周期）耦合WEP纽带5个KPI评估再生水策略，在墨西哥Rincon双城发现——分散式生活污水回用（DW100）最省自来水、减GHG、减EP，集中式（C100）最节能但恶化EP；核心洞察是WEP元素间存在隐性权衡（集中式回用出水磷再注入致EP升，分散式分流污水减CH4逃逸）。关键局限：单案例、无敏感性分析、参数多文献假设、校准数值未报告、结论不可外推，定量结果仅作方法演示。

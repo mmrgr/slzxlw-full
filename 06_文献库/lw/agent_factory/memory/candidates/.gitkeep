@@ -1,0 +1,8 @@
+# 此目录为记忆候选区（Candidates）
+# 所有 Agent 产生的新记忆首先写入此目录，状态为 candidate
+# 经审批流程通过后，迁移到对应的正式记忆层目录（episodic/semantic/procedural/evaluation）
+# 经审批拒绝的记忆状态改为 rejected，定期清理
+#
+# 审批规则：
+#   - auto_approve_candidates = false（默认）：需人工审批或独立审批Agent确认
+#   - auto_approve_candidates = true：自动格式校验+内容审查后转为 validated

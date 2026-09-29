@@ -1,0 +1,39 @@
+﻿DIR_EXISTS=True
+COUNT=11
+__pycache__  1
+02_Lei2025_RCR.pdf  7693965
+10_Behzadian2014_DWES.pdf  2272575
+11_Dobson2024_GMD.pdf  4574453
+12_Landa-Cansigno2020_ESPR.pdf  2953254
+13_Renouf2018_WaterRes.pdf  1756056
+14_Alissa2025_Nature.pdf  7512626
+15_Mytton2021_npjCW.pdf  658727
+17_Radini2021_ApplEnergy.pdf  998848
+download_all_papers.py  9274
+_manifest.txt  1919
+=== WORKSPACE LOGS ===
+ab_install.log
+ab_run.log
+ab_run_wrapper.log
+dl_17.log
+dl_green.log
+dl_green2.log
+download.log
+download_v2.log
+oa_check.log
+probe.log
+probe2.log
+pw_capture.log
+pw_capture2.log
+pw_capture2_err.log
+pw_capture2_out.log
+pw_capture2_out_0501.log
+pw_capture2_wrapper.log
+pw_diag.log
+pw_diag_wrapper.log
+pw_install.log
+pw_wrapper.log
+syntax.log
+test_dl.log
+v3_test.log
+venv.log

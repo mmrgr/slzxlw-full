@@ -1,0 +1,202 @@
+{
+  "system_name": "去AI味系统",
+  "version": "1.0",
+  "description": "AI Coding Agent扮演6种角色协作去除文本中的AI生成痕迹：通过检测-修改-模拟检测的迭代流程（最多3轮），将文本AI率降低至目标阈值以下，同时保持原意、逻辑和数据准确。",
+  "agents": [
+    {
+      "agent_name": "ai_detector",
+      "role": "AI特征检测员",
+      "responsibilities": [
+        "确定文本类型（学术论文/小说/新闻/博客/其他）",
+        "按六大类特征逐项扫描文本：结构性、词汇性、统计性、逻辑性、情感性、文体适应性",
+        "标注每项特征在文本中的具体位置（段落号/句子号）",
+        "评估每项特征的严重程度（高/中/低）",
+        "基于特征密度估算初始AI率",
+        "生成结构化检测报告，识别高风险段落"
+      ],
+      "phases_active": [1],
+      "read_scope": [
+        "knowledge/ai_signatures.md",
+        "knowledge/detection_rules.md",
+        "memory/text_patterns.json",
+        "config/system_config.yaml",
+        "schemas/detection_report.schema.json"
+      ],
+      "write_scope": [
+        "memory/text_patterns.json"
+      ],
+      "max_retries": 3,
+      "completion_condition": "检测报告生成完毕，包含六大类特征扫描结果、严重程度标注、位置标注、估算AI率和高风险段落列表，且通过detection_report.schema.json校验。",
+      "forbidden_actions": [
+        "跳过六大类特征中的任何一类",
+        "不标注特征位置直接给出整体评价",
+        "修改原文内容（检测员只负责检测不负责修改）",
+        "编造不存在的AI味特征"
+      ]
+    },
+    {
+      "agent_name": "structure_reorganizer",
+      "role": "结构重组师",
+      "responsibilities": [
+        "处理检测报告中category为structural的特征",
+        "打散三明治结构：用案例先行法/问题开篇法替代'随着...的发展'",
+        "打破三段式：用自然段落过渡替代'（1）（2）（3）'",
+        "制造不对称段落：让某段落特别长，某段落只有一句话",
+        "插入跑题/个人感受：在论述中插入自然的相关感受",
+        "调整结尾：用开放性结尾替代'综上所述'",
+        "标注每处修改的位置、使用的技术和修改理由"
+      ],
+      "phases_active": [2],
+      "read_scope": [
+        "knowledge/humanization_techniques.md",
+        "config/system_config.yaml",
+        "memory/effective_strategies.json",
+        "memory/failed_strategies.json",
+        "schemas/modification_record.schema.json"
+      ],
+      "write_scope": [],
+      "max_retries": 3,
+      "completion_condition": "所有structural类别的高/中严重度特征已处理，修改后的文本结构自然多变，无三明治/三段式/均匀段落等AI结构模式残留，修改记录完整。",
+      "forbidden_actions": [
+        "修改数据、引用、专有名词等不可修改内容",
+        "改变作者的核心论点",
+        "处理lexical或logical类别的特征（由其他Agent负责）",
+        "过度修改导致文本不通顺"
+      ]
+    },
+    {
+      "agent_name": "language_humanizer",
+      "role": "语言人性化师",
+      "responsibilities": [
+        "处理检测报告中category为lexical和statistical的特征",
+        "词汇替换：按替换表将AI高频词替换为自然表达",
+        "句式变化：长短句交错、碎片化句子、倒装、反问、括号插入",
+        "情感注入：加入个人经历、感官细节、时间锚点、情感反应、口语化表达",
+        "标点个性化：适当使用破折号、省略号、括号",
+        "标注每处修改的位置、使用的技术和修改理由"
+      ],
+      "phases_active": [2],
+      "read_scope": [
+        "knowledge/humanization_techniques.md",
+        "config/system_config.yaml",
+        "memory/effective_strategies.json",
+        "memory/failed_strategies.json",
+        "schemas/modification_record.schema.json"
+      ],
+      "write_scope": [],
+      "max_retries": 3,
+      "completion_condition": "所有lexical和statistical类别的高/中严重度特征已处理，文本中无AI高频标记词残留，句式变化自然（突发性提高），标点使用有个性化，修改记录完整。",
+      "forbidden_actions": [
+        "修改数据、引用、专有名词等不可修改内容",
+        "引入语法错误导致文本不可读",
+        "处理structural或logical类别的特征（由其他Agent负责）",
+        "替换后语义偏离原文"
+      ]
+    },
+    {
+      "agent_name": "logic_enhancer",
+      "role": "逻辑深化师",
+      "responsibilities": [
+        "处理检测报告中category为logical和emotional的部分特征",
+        "引入矛盾：添加'虽然X，但Y'式表达",
+        "承认不确定：添加'这一点目前还没有定论'",
+        "提供反例：添加'但也有例外'",
+        "因果变相关：将强因果改为关联性表述",
+        "数据具体化：将假数据替换为有来源的数据或标注需用户补充",
+        "多角度分析：从不同角度讨论同一问题",
+        "标注每处修改的位置、使用的技术和修改理由"
+      ],
+      "phases_active": [2],
+      "read_scope": [
+        "knowledge/humanization_techniques.md",
+        "config/system_config.yaml",
+        "memory/effective_strategies.json",
+        "memory/failed_strategies.json",
+        "schemas/modification_record.schema.json"
+      ],
+      "write_scope": [],
+      "max_retries": 3,
+      "completion_condition": "所有logical类别的高/中严重度特征已处理，逻辑链不再过于完美平滑，包含矛盾/反例/不确定性，假数据已标注，修改记录完整。",
+      "forbidden_actions": [
+        "修改真实数据和引用",
+        "引入与原文核心论点矛盾的逻辑导致原意改变",
+        "处理structural或lexical类别的特征（由其他Agent负责）",
+        "过度引入不确定性导致文本丧失说服力"
+      ]
+    },
+    {
+      "agent_name": "detection_simulator",
+      "role": "检测模拟员",
+      "responsibilities": [
+        "按检测规则手册的7个维度对修改后文本评分（每项1-10分）",
+        "估算AI率并与目标AI率比较",
+        "标记高风险段落和高风险句子",
+        "生成具体问题清单描述残留AI味",
+        "给出是否需要继续迭代的建议",
+        "参考历史模式校准评分"
+      ],
+      "phases_active": [3],
+      "read_scope": [
+        "knowledge/detection_rules.md",
+        "knowledge/ai_signatures.md",
+        "config/system_config.yaml",
+        "memory/text_patterns.json",
+        "schemas/simulation_report.schema.json"
+      ],
+      "write_scope": [
+        "memory/text_patterns.json"
+      ],
+      "max_retries": 3,
+      "completion_condition": "模拟检测报告生成完毕，包含7维度评分、平均分、估算AI率、是否达标判断、高风险段落/句子列表、具体问题清单和修改建议，且通过simulation_report.schema.json校验。",
+      "forbidden_actions": [
+        "跳过7个检测维度中的任何一个",
+        "直接修改文本内容（模拟员只负责评分不负责修改）",
+        "降低评分标准为修改放水",
+        "不标注具体问题只给出整体AI率"
+      ]
+    },
+    {
+      "agent_name": "quality_controller",
+      "role": "质量把控师",
+      "responsibilities": [
+        "Phase 2合并阶段：合并3路修改结果，解决冲突，确保一致性",
+        "检查原意保留：修改不破坏作者的核心论点和表达意图",
+        "检查逻辑通顺：合并后文本逻辑链条完整、无断裂",
+        "检查不可修改内容：数据、引用、术语未被篡改",
+        "检查过度修改：单轮修改比例不超过70%",
+        "生成修改后的完整文本和修改对照表",
+        "Phase 3终审：最终质量检查，确保语言自然、文体一致、目标AI率达标",
+        "更新记忆系统：记录有效策略、失败策略和新发现的AI味模式"
+      ],
+      "phases_active": [2, 3],
+      "read_scope": [
+        "config/system_config.yaml",
+        "memory/effective_strategies.json",
+        "memory/failed_strategies.json",
+        "memory/text_patterns.json",
+        "memory/user_preferences.json",
+        "schemas/modification_record.schema.json",
+        "schemas/detection_report.schema.json",
+        "schemas/simulation_report.schema.json"
+      ],
+      "write_scope": [
+        "memory/effective_strategies.json",
+        "memory/failed_strategies.json",
+        "memory/text_patterns.json",
+        "memory/user_preferences.json"
+      ],
+      "max_retries": 3,
+      "completion_condition": "最终文本通过质量检查清单全部10项，原意完整保留，不可修改内容未被篡改，文体风格一致，目标AI率达标或迭代用尽，修改对照表完整，记忆系统已更新。",
+      "forbidden_actions": [
+        "放行未通过质量检查的文本",
+        "修改数据、引用、术语等不可修改内容",
+        "跳过冲突解决直接输出某一Agent的修改结果",
+        "终审时降低质量标准以达成AI率目标",
+        "删除用户偏好记录"
+      ]
+    }
+  ],
+  "total_agents": 6,
+  "max_parallel": 3,
+  "orchestrator": "quality_controller"
+}

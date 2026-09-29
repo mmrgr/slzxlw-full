@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiuwm"
+version = "0.1.0"
+description = "Transparent reproduction of Behzadian and Kapelan (2015) AI-UWM"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0", "pandas>=2.2", "matplotlib>=3.9"]
+
+[project.scripts]
+aiuwm = "aiuwm.cli:main"
+aiuwm-api = "aiuwm.api:main"
+aiuwm-studio = "aiuwm.studio:main"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "httpx>=0.28"]
+studio = [
+    "fastapi>=0.116",
+    "uvicorn[standard]>=0.35",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,7 @@
+=== 01 === after wait title: Just a moment...
+  cands: []
+  >>> 01 NOT captured
+=== 06 === after wait title: Radware Bot Manager Captcha
+  cands: ['https://iopscience.iop.org/article/10.1088/1748-9326/abfba1/pdf']
+  no dl for org/article/10.1088/1748-9326/abfba1/pdf
+  >>> 06 NOT captured

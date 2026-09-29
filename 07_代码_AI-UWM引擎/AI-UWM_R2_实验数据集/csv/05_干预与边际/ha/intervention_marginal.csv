@@ -1,0 +1,11 @@
+intervention,maximum_safe_ai_capacity_mw,first_failed_capacity_mw,limiting_constraint,capacity_gain_mw
+baseline,1100.0,1200.0,max_source_abstraction_ratio,0.0
+wtw_plus_10pct,1100.0,1200.0,max_source_abstraction_ratio,0.0
+wtw_plus_20pct,1100.0,1200.0,max_source_abstraction_ratio,0.0
+reuse_plus_50pct,1100.0,1200.0,max_source_abstraction_ratio,0.0
+reuse_plus_100pct,1100.0,1200.0,max_source_abstraction_ratio,0.0
+wwtw_plus_20pct,1100.0,1200.0,max_source_abstraction_ratio,0.0
+local_connection_plus_50pct,1100.0,1200.0,max_source_abstraction_ratio,0.0
+grid_plus_50pct,1100.0,1200.0,max_source_abstraction_ratio,0.0
+leakage_minus_30pct,1300.0,1400.0,reclaimed_water_substitution_ratio,200.0
+combined_upgrade,1300.0,1400.0,reclaimed_water_substitution_ratio,200.0

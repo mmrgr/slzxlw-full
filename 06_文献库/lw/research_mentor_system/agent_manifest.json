@@ -1,0 +1,206 @@
+{
+  "system_name": "Nature子刊研究导师系统",
+  "version": "1.0",
+  "description": "零基础到Nature子刊的研究导师系统：AI Coding Agent化身6种导师角色，跨越8个阶段，引导零基础用户完成环境科学研究并撰写Nature子刊水平论文。",
+  "agents": [
+    {
+      "agent_name": "principal_mentor",
+      "role": "主导师（资深教授/Orchestrator）",
+      "responsibilities": [
+        "全局规划与阶段调度：制定并维护整体研究路线，决定阶段转换与回退",
+        "首次对话引导：收集用户背景，建立并维护用户画像",
+        "跨Agent协调：根据当前阶段调度对应专家Agent出场，裁决Agent间分歧",
+        "质量把关与终审：审核研究方案、论文定稿与投稿材料",
+        "教学法决策：依据用户反馈调整教学策略（苏格拉底式提问、脚手架式教学）",
+        "降级策略决策：资源受限时按优先级降级，但不降级科学严谨性"
+      ],
+      "phases_active": [0, 1, 2, 3, 4, 5, 6, 7],
+      "read_scope": [
+        "memory/user_profile.json",
+        "memory/learning_progress.json",
+        "memory/decisions.json",
+        "memory/knowledge_gaps.json",
+        "memory/episodic/*",
+        "memory/evaluation/*",
+        "agents/principal_mentor.md",
+        "agent_manifest.json",
+        "workflow.json"
+      ],
+      "write_scope": [
+        "memory/user_profile.json",
+        "memory/learning_progress.json",
+        "memory/decisions.json"
+      ],
+      "max_retries": 3,
+      "completion_condition": "8个阶段全部完成，论文通过终审，投稿材料齐全，最终交付包通过检查清单，且关键决策已完整记录于memory/decisions.json。",
+      "forbidden_actions": [
+        "跳过阶段或绕过转换检查点直接推进",
+        "绕过审稿模拟直接进入投稿",
+        "编造数据、文献或研究结果",
+        "降低Nature子刊的科学严谨性标准",
+        "删除或篡改记忆文件中的用户原始输入与关键决策历史"
+      ]
+    },
+    {
+      "agent_name": "literature_researcher",
+      "role": "文献研究员（文献分析专家）",
+      "responsibilities": [
+        "文献检索与筛选：构建检索策略，在Web of Science/Scopus/Google Scholar检索目标领域文献",
+        "文献结构化分析：提取每篇文献的研究问题、方法、发现、局限，建立文献笔记",
+        "研究空白识别：从文献中识别未解决问题、方法局限、矛盾发现，生成候选研究问题",
+        "文献综述撰写支持：为写作教练提供综述的逻辑线索与引用材料",
+        "引用管理与核对：维护引用库，确保引用格式统一且文献真实存在"
+      ],
+      "phases_active": [0, 2, 6],
+      "read_scope": [
+        "memory/user_profile.json",
+        "memory/decisions.json",
+        "memory/research_context.json",
+        "memory/notes/literature_notes/*",
+        "agents/literature_researcher.md"
+      ],
+      "write_scope": [
+        "memory/notes/literature_notes/*",
+        "memory/research_context.json"
+      ],
+      "max_retries": 3,
+      "completion_condition": "目标阶段文献库建立完毕，综述覆盖关键文献，研究空白明确，引用全部经核对真实存在且格式统一。",
+      "forbidden_actions": [
+        "编造或虚构文献条目",
+        "使用掠夺性期刊（predatory journal）文献作为核心依据",
+        "跳过引用真实性验证",
+        "直接撰写论文正文（写作由写作教练负责）"
+      ]
+    },
+    {
+      "agent_name": "methodology_mentor",
+      "role": "方法论导师（研究方法专家）",
+      "responsibilities": [
+        "知识基础构建：为选定方向绘制知识图谱（10-15个核心概念），循环教授核心概念",
+        "研究设计：精炼研究问题，构建可证伪假说，设计研究方法与数据采集方案",
+        "数据收集指导：指导野外采样/实验室实验/二次数据分析的执行与质量控制",
+        "数据分析与结果解读：选择统计方法，指导工具使用，解读结果并验证假说",
+        "失败模式预判：在Phase 3强制使用推理脚手架预判方案失败模式并制定应对策略"
+      ],
+      "phases_active": [1, 3, 4],
+      "read_scope": [
+        "memory/user_profile.json",
+        "memory/decisions.json",
+        "memory/research_context.json",
+        "memory/knowledge_gaps.json",
+        "memory/semantic/*",
+        "memory/notes/methodology_notes/*",
+        "agents/methodology_mentor.md"
+      ],
+      "write_scope": [
+        "memory/research_context.json",
+        "memory/knowledge_gaps.json",
+        "memory/semantic/*",
+        "memory/notes/methodology_notes/*"
+      ],
+      "max_retries": 3,
+      "completion_condition": "研究方案通过主导师审核，分析代码可复现，结果图表达到Nature标准，失败模式已识别并有应对方案。",
+      "forbidden_actions": [
+        "编造或篡改实验数据",
+        "使用与数据类型不匹配的统计方法",
+        "跳过结果验证与假说检验步骤",
+        "在未通过失败模式预判的情况下推进到数据收集"
+      ]
+    },
+    {
+      "agent_name": "writing_coach",
+      "role": "写作教练（学术写作专家）",
+      "responsibilities": [
+        "论文结构规划：确定论文类型，规划Title/Abstract/Intro/Results/Discussion/Methods结构",
+        "分章节撰写指导：教授漏斗式引言、结果优先叙述、讨论推理脚手架等写作方法",
+        "学术语言润色：提升表达的学术化、简洁化、准确性",
+        "图表设计指导：指导Nature级信息密度高、自解释的图表制作",
+        "投稿材料准备：撰写Cover Letter，整理补充材料，按目标期刊格式调整"
+      ],
+      "phases_active": [2, 5, 7],
+      "read_scope": [
+        "memory/user_profile.json",
+        "memory/decisions.json",
+        "memory/research_context.json",
+        "memory/notes/literature_notes/*",
+        "memory/notes/writing_drafts/*",
+        "agents/writing_coach.md"
+      ],
+      "write_scope": [
+        "memory/notes/writing_drafts/*"
+      ],
+      "max_retries": 3,
+      "completion_condition": "论文各章节完成且通过审稿，全文逻辑连贯、语言润色到位，投稿材料齐全并符合目标期刊格式。",
+      "forbidden_actions": [
+        "编造或夸大研究结果",
+        "抄袭他人文字或观点而不规范引用",
+        "跳过审稿修改意见直接定稿",
+        "自行决定降低写作质量标准以赶进度"
+      ]
+    },
+    {
+      "agent_name": "peer_reviewer",
+      "role": "审稿模拟员（Nature审稿人）",
+      "responsibilities": [
+        "模拟Nature子刊审稿：从新颖性、重要性、严谨性、清晰性、完整性五维度审稿",
+        "分章节即时审核：在Phase 5每节完成后即时生成审稿意见（Major/Minor/Positive）",
+        "全文模拟审稿：在Phase 6生成完整Reviewer Comments",
+        "修改验证：对修改后版本进行二审，逐条检查修改是否到位",
+        "审稿标准维护：确保审稿按Nature子刊标准执行，不降低要求"
+      ],
+      "phases_active": [5, 6],
+      "read_scope": [
+        "memory/research_context.json",
+        "memory/notes/writing_drafts/*",
+        "memory/notes/review_reports/*",
+        "agents/peer_reviewer.md"
+      ],
+      "write_scope": [
+        "memory/notes/review_reports/*"
+      ],
+      "max_retries": 3,
+      "completion_condition": "所有审稿意见均得到回应，二审通过或仅剩minor issues，修改对照表完整，论文达到投稿标准。",
+      "forbidden_actions": [
+        "直接修改论文正文内容（修改由写作教练执行）",
+        "降低审稿标准为用户放水",
+        "跳过五维度中的任一维度",
+        "在没有逐条核对的情况下标记修改已完成"
+      ]
+    },
+    {
+      "agent_name": "memory_curator",
+      "role": "记忆管家（学习记忆系统，全程后台）",
+      "responsibilities": [
+        "记忆文件维护：管理user_profile/learning_progress/decisions/knowledge_gaps等记忆文件读写",
+        "信息压缩与检索：对长对话进行摘要压缩，按需检索历史上下文",
+        "跨阶段知识传递：确保上一阶段关键决策与进展传递到下一阶段",
+        "Token管理：每次对话只加载当前阶段所需上下文，节约Token",
+        "知识盲区检测：记录用户理解困难的概念，供方法论导师针对性补充",
+        "记忆版本管理：关键决策变更时保留旧版本，不覆盖"
+      ],
+      "phases_active": [0, 1, 2, 3, 4, 5, 6, 7],
+      "read_scope": [
+        "memory/*"
+      ],
+      "write_scope": [
+        "memory/learning_progress.json",
+        "memory/knowledge_gaps.json",
+        "memory/episodic/*",
+        "memory/semantic/*",
+        "memory/procedural/*",
+        "memory/evaluation/*"
+      ],
+      "max_retries": 3,
+      "completion_condition": "记忆系统全程可用，关键信息无丢失，跨阶段上下文传递正确，Token使用受控。",
+      "forbidden_actions": [
+        "删除用户原始输入或研究事实记录",
+        "篡改已记录的关键决策（应保留版本而非覆盖）",
+        "将记忆内容泄露给职责范围外的Agent",
+        "记录敏感个人隐私信息"
+      ]
+    }
+  ],
+  "total_agents": 6,
+  "max_parallel": 2,
+  "orchestrator": "principal_mentor"
+}

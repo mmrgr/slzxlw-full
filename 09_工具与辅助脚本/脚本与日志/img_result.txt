@@ -1,0 +1,4 @@
+error: JSON-RPC 错误 -32603: doc_to_image: file not found: C:/Users/mmrgr/Desktop/开题/开题报告3.3.docx
+{"ok": false, "exit_code": 1, "error": "JSON-RPC 错误 -32603: doc_to_image: file not found: C:/Users/mmrgr/Desktop/开题/开题报告3.3.docx", "rpc_code": -32603}
+error: JSON-RPC 错误 -32603: doc_to_image: file not found: C:/Users/mmrgr/Desktop/开题/开题报告3.3.docx
+{"ok": false, "exit_code": 1, "error": "JSON-RPC 错误 -32603: doc_to_image: file not found: C:/Users/mmrgr/Desktop/开题/开题报告3.3.docx", "rpc_code": -32603}

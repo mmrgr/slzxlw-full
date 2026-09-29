@@ -1,0 +1,4 @@
+﻿10_Copernicus_test: status ok=True size=2272575 saved=C:\Users\mmrgr\Desktop\璁烘枃9.15\10_Copernicus_test.pdf
+06_IOP_test: status ok=False size=14375 saved=C:\Users\mmrgr\Desktop\璁烘枃9.15\06_IOP_test.bin
+15_npj_test: status ok=True size=658727 saved=C:\Users\mmrgr\Desktop\璁烘枃9.15\15_npj_test.pdf
+08_AGU_test: ERR <HTTPError 403: 'Forbidden'>

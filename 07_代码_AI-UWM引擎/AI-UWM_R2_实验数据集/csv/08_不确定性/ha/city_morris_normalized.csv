@@ -1,0 +1,15 @@
+﻿metric,parameter,mu,mu_star,sigma,metric_desc,input_scale
+max_source_abstraction_ratio,components.RES1.abstraction_capacity_ml_day,-0.24094224289169,0.24094224289169,0.19705947352599001,年尺度头号约束（水源取水占用率）,0–1 parameter range
+max_source_abstraction_ratio,local_areas.LA1.demand_profiles.0.base_value,0.153441117785472,0.153441117785472,0.12409248269166376,年尺度头号约束（水源取水占用率）,0–1 parameter range
+max_source_abstraction_ratio,components.DM1.leakage_fraction,0.07623100766372526,0.07623100766372526,0.06206998211890372,年尺度头号约束（水源取水占用率）,0–1 parameter range
+max_source_abstraction_ratio,components.WTW1.daily_capacity_ml,-0.008430314464203765,0.008430314464203765,0.029638797592108503,年尺度头号约束（水源取水占用率）,0–1 parameter range
+max_source_abstraction_ratio,components.WWTW1.daily_capacity_ml,-0.004852744547588772,0.004852744547588772,0.0165115520850105,年尺度头号约束（水源取水占用率）,0–1 parameter range
+max_source_abstraction_ratio,components.CENTRAL_REUSE.treatment_capacity_ml_day,-0.002375137724976,0.002375137724976,0.011635750990058,年尺度头号约束（水源取水占用率）,0–1 parameter range
+max_source_abstraction_ratio,components.RES1.capacity_ml,0.0,0.0,0.0,年尺度头号约束（水源取水占用率）,0–1 parameter range
+max_wtw_utilization,components.WTW1.daily_capacity_ml,-0.2876315915773745,0.2876315915773745,0.163923868665526,日尺度头号约束（给水处理峰值利用率）,0–1 parameter range
+max_wtw_utilization,components.RES1.abstraction_capacity_ml_day,0.10780395905934899,0.10780395905934899,0.19103155814324502,日尺度头号约束（给水处理峰值利用率）,0–1 parameter range
+max_wtw_utilization,local_areas.LA1.demand_profiles.0.base_value,0.10522077871517024,0.10522077871517024,0.1192383113127855,日尺度头号约束（给水处理峰值利用率）,0–1 parameter range
+max_wtw_utilization,components.DM1.leakage_fraction,0.055050850905148954,0.055050850905148954,0.06156122683676939,日尺度头号约束（给水处理峰值利用率）,0–1 parameter range
+max_wtw_utilization,components.WWTW1.daily_capacity_ml,-0.002669186281770662,0.002669186281770662,0.013076288837549613,日尺度头号约束（给水处理峰值利用率）,0–1 parameter range
+max_wtw_utilization,components.CENTRAL_REUSE.treatment_capacity_ml_day,-0.002289539342272,0.002289539342272,0.011216406269194,日尺度头号约束（给水处理峰值利用率）,0–1 parameter range
+max_wtw_utilization,components.RES1.capacity_ml,0.0,0.0,0.0,日尺度头号约束（给水处理峰值利用率）,0–1 parameter range

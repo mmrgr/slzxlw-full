@@ -1,0 +1,40 @@
+﻿=== npm install -g agent-browser ===
+
+added 1 package in 8s
+
+=== agent-browser install (Chromium) ===
+AB_PATH=C:\Users\mmrgr\.workbuddy\binaries\node\versions\22.22.2-3\agent-browser.ps1
+Installing Chrome...
+  Downloading Chrome 153.0.8010.36 for win64
+  https://storage.googleapis.com/chrome-for-testing-public/153.0.8010.36/win64/chrome-win64.zip
+agent-browser-win32-x64.exe : 
+所在位置 C:\Users\mmrgr\.workbuddy\binaries\node\versions\22.22.2-3\agent-browser.ps1:3 字符: 1
++ & "$basedir\node_modules\agent-browser\bin\agent-browser-win32-x64.ex ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  10/196 MB (5%)
+  20/196 MB (10%)
+  29/196 MB (15%)
+  39/196 MB (20%)
+  49/196 MB (25%)
+  59/196 MB (30%)
+  68/196 MB (35%)
+  78/196 MB (40%)
+  88/196 MB (45%)
+  98/196 MB (50%)
+  108/196 MB (55%)
+  117/196 MB (60%)
+  127/196 MB (65%)
+  137/196 MB (70%)
+  147/196 MB (75%)
+  157/196 MB (80%)
+  166/196 MB (85%)
+  176/196 MB (90%)
+  186/196 MB (95%)
+  196/196 MB (100%)
+鉁?Chrome 153.0.8010.36 installed successfully
+  Location: C:\Users\mmrgr\.agent-browser\browsers\chrome-153.0.8010.36
+
+=== DONE ===
