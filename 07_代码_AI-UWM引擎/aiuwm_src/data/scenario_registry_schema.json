@@ -1,0 +1,29 @@
+{
+  "schema_version": "R10.1",
+  "description": "Minimum provenance contract for every paired counterfactual simulation.",
+  "required_fields": [
+    "scenario_id",
+    "counterfactual_group",
+    "chemistry_state",
+    "allocation_state",
+    "adaptation_state",
+    "weather_seed",
+    "hydrology_seed",
+    "workload_seed",
+    "code_commit",
+    "parameter_registry_version",
+    "estimand",
+    "status"
+  ],
+  "allowed_states": {
+    "chemistry_state": ["Q0", "Q1"],
+    "allocation_state": ["Ls", "Ld", "legacy"],
+    "adaptation_state": ["A0", "A1", "A2", "A3"],
+    "status": ["diagnostic", "gate_pass", "gate_fail", "not_ready"]
+  },
+  "rules": [
+    "Paired counterfactuals share weather, hydrology and workload seeds.",
+    "A scenario marked not_ready cannot contribute to a formal E3 or E4 conclusion.",
+    "The same scenario_id must resolve to one immutable configuration."
+  ]
+}

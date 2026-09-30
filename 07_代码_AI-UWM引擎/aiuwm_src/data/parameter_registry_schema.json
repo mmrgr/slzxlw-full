@@ -1,0 +1,24 @@
+{
+  "schema_version": "R10.1",
+  "description": "Minimum provenance contract for every parameter used in R10-R12 experiments.",
+  "required_fields": [
+    "parameter_id",
+    "unit",
+    "distribution",
+    "lower",
+    "upper",
+    "correlation_group",
+    "evidence_class",
+    "source",
+    "observation_population",
+    "calibration_flag",
+    "validation_flag",
+    "version"
+  ],
+  "evidence_classes": ["E0_assumption", "E1_engineering_standard", "E2_single_measurement", "E3_independent_observations", "E4_validation_system"],
+  "rules": [
+    "Do not sample correlated chemistry or climate variables independently.",
+    "E0 parameters cannot be the sole driver of a main-text claim.",
+    "Calibration and validation flags must not both be true for the same observation split."
+  ]
+}

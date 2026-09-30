@@ -1,0 +1,17 @@
+scenario_id,counterfactual_group,chemistry_state,allocation_state,adaptation_state,weather_seed,hydrology_seed,workload_seed,code_commit,parameter_registry_version,estimand,status
+R10_Q0_Ls_A0,R10_pilot_seed_001,Q0,Ls,A0,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q0_Ls_A1,R10_pilot_seed_001,Q0,Ls,A1,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q0_Ls_A2,R10_pilot_seed_001,Q0,Ls,A2,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q0_Ls_A3,R10_pilot_seed_001,Q0,Ls,A3,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ls_A0,R10_pilot_seed_001,Q1,Ls,A0,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ls_A1,R10_pilot_seed_001,Q1,Ls,A1,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ls_A2,R10_pilot_seed_001,Q1,Ls,A2,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ls_A3,R10_pilot_seed_001,Q1,Ls,A3,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q0_Ld_A0,R10_pilot_seed_001,Q0,Ld,A0,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q0_Ld_A1,R10_pilot_seed_001,Q0,Ld,A1,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q0_Ld_A2,R10_pilot_seed_001,Q0,Ld,A2,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q0_Ld_A3,R10_pilot_seed_001,Q0,Ld,A3,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ld_A0,R10_pilot_seed_001,Q1,Ld,A0,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ld_A1,R10_pilot_seed_001,Q1,Ld,A1,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ld_A2,R10_pilot_seed_001,Q1,Ld,A2,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready
+R10_Q1_Ld_A3,R10_pilot_seed_001,Q1,Ld,A3,101,201,301,8ff14f5,R10.1,S_AI|S_city|eta_transfer,not_ready

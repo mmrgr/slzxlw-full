@@ -44,7 +44,13 @@ def sha256(path: Path) -> str:
 def git(*args: str) -> str:
     try:
         out = subprocess.run(
-            ["git", *args], cwd=str(ROOT), capture_output=True, text=True, timeout=30
+            ["git", *args],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=30,
         )
         return out.stdout.strip() if out.returncode == 0 else f"<失败: {out.stderr.strip()[:60]}>"
     except Exception as exc:  # noqa: BLE001

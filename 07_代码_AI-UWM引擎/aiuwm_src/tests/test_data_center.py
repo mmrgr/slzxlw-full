@@ -140,6 +140,45 @@ def test_reclaimed_water_quality_can_limit_coc_and_increase_makeup() -> None:
     assert limited.external_makeup_ml > fixed.external_makeup_ml
 
 
+def test_quality_mg_l_schema_is_used_by_quality_limited_coc() -> None:
+    config = component("evaporative")
+    config["cooling"].update({
+        "cycles_of_concentration": 8.0,
+        "coc_mode": "quality_limited",
+        "water_quality_limits": {"TDS": 1800.0},
+    })
+    config["water_sources"]["reclaimed"]["quality_mg_l"] = {"TDS": 700.0}
+    config["water_sources"]["potable"]["quality_mg_l"] = {"TDS": 200.0}
+    plan = calculate_data_center_plan(
+        config,
+        pd.Timestamp("2030-07-01"),
+        {"temperature_c": 34.0, "relative_humidity": 45.0},
+    )
+    assert plan.quality_coc_fallback is False
+    assert plan.cycles_of_concentration < 8.0
+
+
+def test_quality_limited_coc_accepts_treated_reclaimed_output_quality() -> None:
+    config = component("evaporative")
+    config["cooling"].update({
+        "cycles_of_concentration": 8.0,
+        "coc_mode": "quality_limited",
+        "water_quality_limits": {"TDS": 1100.0},
+    })
+    config["water_sources"]["reclaimed"]["quality_mg_l"] = {"TDS": 900.0}
+    config["water_sources"]["potable"]["quality_mg_l"] = {"TDS": 200.0}
+    drivers = {"temperature_c": 34.0, "relative_humidity": 45.0}
+    prior = calculate_data_center_plan(config, pd.Timestamp("2030-07-01"), drivers)
+    treated = calculate_data_center_plan(
+        config,
+        pd.Timestamp("2030-07-01"),
+        drivers,
+        reclaimed_quality_mg_l={"TDS": 100.0},
+    )
+    assert treated.cycles_of_concentration > prior.cycles_of_concentration
+    assert treated.quality_coc_fallback is False
+
+
 def test_quality_limited_plan_uses_delivered_reclaimed_fraction_when_pool_is_short() -> None:
     config = component("evaporative")
     config["cooling"].update({

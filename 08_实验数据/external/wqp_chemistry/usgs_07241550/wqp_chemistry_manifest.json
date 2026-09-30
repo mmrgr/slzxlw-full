@@ -1,0 +1,82 @@
+{
+  "kind": "WQP_CHEMISTRY_INGESTION",
+  "status": "PILOT_ONLY",
+  "evidence_class": "E2_observed_ambient",
+  "water_type_scope": "ambient_water_screening",
+  "site_ids": [
+    "USGS-07241550"
+  ],
+  "sample_count": 129,
+  "date_span": {
+    "start": "2018-01-08",
+    "end": "2023-12-05"
+  },
+  "generated_at_utc": "2026-09-30T02:42:27Z",
+  "parameters": {
+    "pH": {
+      "pcode": "00400",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00400",
+      "sha256": "sha256:9660103b0e84e00fede3132f24cb4d0142d16db1f7aa6702855fd87c568e99fa",
+      "row_count": 188
+    },
+    "temperature_c": {
+      "pcode": "00010",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00010",
+      "sha256": "sha256:d9730765aa9fe63623bdcdb16ce0c357949bf7247a300295ffabaaebfef3aef8",
+      "row_count": 188
+    },
+    "tds_mg_l": {
+      "pcode": "70300",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=70300",
+      "sha256": "sha256:b034c34b6cfc8340029848cb48d76b40b57c46346ddd2e5fd451c570c2034155",
+      "row_count": 129
+    },
+    "Ca_mg_l": {
+      "pcode": "00915",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00915",
+      "sha256": "sha256:7dcb8193865164fdf5ed4c981820c197074dcc55584d2abbdda3974b16bebdca",
+      "row_count": 130
+    },
+    "Mg_mg_l": {
+      "pcode": "00925",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00925",
+      "sha256": "sha256:ebf687178ee3b38c7ace4ba7d1352958bf3c3392b53aadbc9b1a1ccec134760e",
+      "row_count": 130
+    },
+    "Na_mg_l": {
+      "pcode": "00930",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00930",
+      "sha256": "sha256:ed176f5b6ebb949265152040838f6182ab0c5a09bfb2dea5d6d67e2774721ca7",
+      "row_count": 130
+    },
+    "Cl_mg_l": {
+      "pcode": "00940",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00940",
+      "sha256": "sha256:9b4d946a43f2bf45f9cc7338c5623b1571f9d4e168b17cf1c3b59154e5c19e12",
+      "row_count": 129
+    },
+    "SO4_mg_l": {
+      "pcode": "00945",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00945",
+      "sha256": "sha256:5f43220a65c523b9619ca62feb92316de0d411f4e712640c58cdb9eeea26ec93",
+      "row_count": 129
+    },
+    "alkalinity_mg_l_as_CaCO3": {
+      "pcode": "00410",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&characteristicName=Alkalinity",
+      "sha256": "sha256:e02f94f3f83aa1bc7d681bf8789fe210697c56e0c215a29bd675e7560b5c95ad",
+      "row_count": 347
+    },
+    "Si_mg_l": {
+      "pcode": "00955",
+      "url": "https://www.waterqualitydata.us/data/Result/search?siteid=USGS-07241550&sampleMedia=Water&startDateLo=01-01-2018&startDateHi=12-31-2025&mimeType=csv&zip=no&pCode=00955",
+      "sha256": "sha256:b42a1d3bde3be06d17d854159d6657f9d28a1386b9b1feb0499133b56ef05e8b",
+      "row_count": 130
+    }
+  },
+  "normalized_output": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\08_实验数据\\external\\wqp_chemistry\\usgs_07241550\\wqp_chemistry_normalized.csv",
+    "sha256": "sha256:149aca5832e169330bd6f26de976b587f4034d231df9c219ebb0ade4ccbfda4e"
+  },
+  "gate_effect": "G2 remains NOT_READY: ambient observations are not reclaimed-water validation, reduced-model comparison and false-safe review are still required."
+}

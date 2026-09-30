@@ -205,10 +205,11 @@ def validate_project(project: dict[str, Any], timeseries: pd.DataFrame) -> None:
             if cooling.get("coc_mode", "fixed") == "quality_limited":
                 quality_limits = set(cooling.get("water_quality_limits", {}))
                 for source_name, source in component.get("water_sources", {}).items():
-                    missing = quality_limits - set(source.get("quality", {}))
+                    quality = source.get("quality_mg_l", source.get("quality", {}))
+                    missing = quality_limits - set(quality)
                     if missing:
                         errors.append(
-                            f"数据中心 {component_id}.water_sources.{source_name}.quality "
+                            f"数据中心 {component_id}.water_sources.{source_name}.quality_mg_l "
                             f"缺少质量指标: {sorted(missing)}"
                         )
             source_values: list[float] = []

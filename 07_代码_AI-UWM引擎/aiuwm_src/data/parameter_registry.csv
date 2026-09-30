@@ -1,0 +1,12 @@
+parameter_id,unit,distribution,lower,upper,correlation_group,evidence_class,source,observation_population,calibration_flag,validation_flag,version
+cooling.tds_limit,mg/L,fixed,2200,2200,chemistry_limits,E1_engineering_standard,examples/cawcc_r2/parameter_sources.csv:ASHRAE量级,engineering_design_limit,false,false,R10.1
+cooling.chloride_limit,mg/L,fixed,500,500,chemistry_limits,E1_engineering_standard,examples/cawcc_r2/parameter_sources.csv:ASHRAE量级,engineering_design_limit,false,false,R10.1
+source.reclaimed_tds,mg/L,fixed,650,650,chemistry_q1,E0_assumption,examples/cawcc_r2/parameter_sources.csv:reclaimed_tds,scenario_prior,false,false,R10.1
+source.reclaimed_chloride,mg/L,fixed,130,130,chemistry_q1,E0_assumption,examples/cawcc_r2/parameter_sources.csv:reclaimed_chloride,scenario_prior,false,false,R10.1
+source.potable_tds,mg/L,fixed,180,180,chemistry_q1,E0_assumption,examples/cawcc_r2/parameter_sources.csv:potable_tds,scenario_prior,false,false,R10.1
+source.potable_chloride,mg/L,fixed,35,35,chemistry_q1,E0_assumption,examples/cawcc_r2/parameter_sources.csv:potable_chloride,scenario_prior,false,false,R10.1
+ai.load_factor,fraction,fixed,0.75,0.75,workload,E0_assumption,examples/cawcc_r2/parameter_sources.csv:ai_load_factor_mean,scenario_prior,false,false,R10.1
+cooling.storage_capacity,ML,fixed,24,24,cooling_storage,E0_assumption,examples/cawcc_r2/parameter_sources.csv:cooling_storage,scenario_prior,false,false,R10.1
+cooling.reuse_fraction,fraction,fixed,0.7,0.7,allocation,E0_assumption,R10_pilot_fixture,scenario_prior,false,false,R10.1
+impact.electricity_water_intensity,L/kWh,fixed,1.8,1.8,offsite_water,E1_engineering_standard,examples/cawcc_r2/parameter_sources.csv:offsite_water_intensity,scenario_prior,false,false,R10.1
+

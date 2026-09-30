@@ -2,15 +2,30 @@ from __future__ import annotations
 
 import copy
 import json
+import math
 from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Iterable, Mapping
 
 import numpy as np
 import pandas as pd
 
 from .data_center import apply_data_center_database, calculate_data_center_plan, finalize_data_center_day
+from .quality_state import (
+    QualityState,
+    mix_quality_states,
+    partition_blowdown_solutes,
+    withdraw_quality_state,
+)
+from .reclaimed_allocation import (
+    AllocationRequest,
+    JointPlanEvaluation,
+    JointQualityRequest,
+    allocate_dedicated_incremental,
+    allocate_shared_surplus,
+    solve_joint_quality_allocation,
+)
 from .validation import ProjectValidationError, prepare_project, validate_project
 
 
@@ -36,6 +51,11 @@ WATER_METRICS = (
     "aquifer_recharge_ml",
     "water_quality_weighted_ml",
 )
+
+REUSE_ALLOCATION_MODES = {
+    "legacy",
+    "shared_incumbent_first",
+}
 
 IMPACT_METRICS = (
     "electricity_kwh",
@@ -128,6 +148,108 @@ def _split_mass(masses: dict[str, float], fraction: float) -> dict[str, float]:
     return {name: amount * fraction for name, amount in masses.items()}
 
 
+def _quality_state_enabled(component: dict[str, Any]) -> bool:
+    """Return whether the opt-in R10a cooling quality state is active.
+
+    The default remains the R9 volume-only storage path.  Supporting the flag
+    on both the component and its ``cooling`` block keeps project files easy to
+    read while avoiding any implicit change to existing scenarios.
+    """
+
+    cooling = component.get("cooling", {})
+    return bool(component.get("quality_state_enabled", cooling.get("quality_state_enabled", False)))
+
+
+def _source_quality(component: dict[str, Any], source_name: str) -> dict[str, float]:
+    source = component.get("water_sources", {}).get(source_name, {})
+    quality = source.get("quality_mg_l", source.get("quality", {}))
+    if not isinstance(quality, dict):
+        return {}
+    return {str(name): max(0.0, float(value)) for name, value in quality.items()}
+
+
+def _initial_quality_concentrations(component: dict[str, Any]) -> dict[str, float]:
+    """Resolve optional storage quality, falling back to target-mixed sources."""
+
+    cooling = component.get("cooling", {})
+    configured = component.get(
+        "cooling_storage_quality_mg_l",
+        cooling.get("cooling_storage_quality_mg_l", cooling.get("storage_quality_mg_l")),
+    )
+    if isinstance(configured, dict):
+        return {str(name): max(0.0, float(value)) for name, value in configured.items()}
+    weighted: dict[str, float] = {}
+    total = 0.0
+    for source_name, source in component.get("water_sources", {}).items():
+        fraction = max(0.0, float(source.get("target_fraction", 0.0)))
+        if fraction <= 0.0:
+            continue
+        total += fraction
+        for name, value in _source_quality(component, source_name).items():
+            weighted[name] = weighted.get(name, 0.0) + fraction * value
+    if total:
+        return {name: value / total for name, value in weighted.items()}
+    return {}
+
+
+def _reuse_output_quality(
+    model: "FullAIUWMModel", reuse_id: str | None, reuse_component: dict[str, Any] | None
+) -> dict[str, float]:
+    """Resolve the current treated-reuse quality for an opt-in DC plan.
+
+    A central reuse component carries pollutant mass in ``pollutant_storage``
+    alongside its volume.  Applying the component removal fractions to that
+    mass gives the concentration of the treated product that can reach a DC.
+    A declared ``quality_mg_l``/``treated_quality_mg_l`` is used for indicators
+    absent from the mass ledger, which keeps sparse fixtures explicit without
+    inventing a value for unobserved indicators. A declared quality value is
+    still a scenario input unless an explicit provenance label is supplied.
+    """
+
+    if not reuse_id or not isinstance(reuse_component, dict):
+        return {}
+    volume = max(0.0, float(model.storage.get(reuse_id, 0.0)))
+    configured = reuse_component.get(
+        "treated_quality_mg_l",
+        reuse_component.get("quality_mg_l", reuse_component.get("quality", {})),
+    )
+    quality = {
+        str(name): max(0.0, float(value))
+        for name, value in (configured.items() if isinstance(configured, dict) else [])
+    }
+    if volume <= 1e-12:
+        return quality
+    removal = reuse_component.get("pollutant_removal_fraction", {})
+    masses = model.pollutant_storage.get(reuse_id, {})
+    for name, mass in masses.items():
+        quality[str(name)] = max(
+            0.0,
+            float(mass) / volume * (1.0 - float(removal.get(name, 0.0))),
+        )
+    return quality
+
+
+def _reuse_quality_provenance(
+    model: "FullAIUWMModel", reuse_id: str | None, reuse_component: dict[str, Any] | None
+) -> str:
+    """Classify Q1 source quality without overclaiming evidence."""
+
+    if reuse_id:
+        masses = model.pollutant_storage.get(reuse_id, {})
+        if any(abs(float(value)) > 1e-12 for value in masses.values()):
+            return "treated_output"
+    if isinstance(reuse_component, dict):
+        declared = str(
+            reuse_component.get(
+                "quality_provenance",
+                reuse_component.get("quality_evidence_type", "scenario_prior"),
+            )
+        )
+        if declared in {"treated_output", "scenario_prior"}:
+            return declared
+    return "scenario_prior"
+
+
 def _aggregate_frame(
     frame: pd.DataFrame, frequency: str, identifiers: list[str]
 ) -> pd.DataFrame:
@@ -208,6 +330,31 @@ class FullModelResult:
     risk_daily: pd.DataFrame
     risk_summary: pd.DataFrame
     data_center_daily: pd.DataFrame
+    # E4 is intentionally exposed as a read-only boundary diagnostic.  The
+    # field is populated by ``FullAIUWMModel.run`` and never feeds decisions
+    # back into the daily solver.
+    adaptation_diagnostic: dict[str, Any] = field(default_factory=dict)
+
+    def to_e4_ledger(self, *, freshwater_baseline_rows: Iterable[Mapping[str, Any]] | Any | None = None):
+        """Convert the emitted data-centre rows to the standalone E4 ledger.
+
+        The adapter is kept on the result object so callers cannot silently
+        reconstruct a ledger from a different table.  Supplying paired
+        freshwater-only rows is required for a B2-to-B1 claim; omission keeps
+        the comparison within this run and does not open the E4 gate.
+        """
+
+        from .adaptation import cooling_ledger_from_data_center_daily
+
+        return cooling_ledger_from_data_center_daily(
+            self.data_center_daily,
+            freshwater_baseline_rows=freshwater_baseline_rows,
+        )
+
+    def e4_adaptation_diagnostic(self) -> dict[str, Any]:
+        """Return the auditable E4 boundary status emitted by the main model."""
+
+        return dict(self.adaptation_diagnostic)
 
     def write(self, output_dir: str | Path) -> None:
         output = Path(output_dir)
@@ -225,6 +372,11 @@ class FullModelResult:
         self.risk_daily.to_csv(output / "risk_daily.csv", index=False)
         self.risk_summary.to_csv(output / "risk_summary.csv", index=False)
         self.data_center_daily.to_csv(output / "data_center_daily.csv", index=False)
+        if self.adaptation_diagnostic:
+            (output / "adaptation_diagnostic.json").write_text(
+                json.dumps(self.adaptation_diagnostic, ensure_ascii=False, indent=2, default=str),
+                encoding="utf-8",
+            )
         tables = {
             "system": (self.system_daily, []),
             "subcatchment": (self.subcatchment_daily, ["subcatchment_id"]),
@@ -268,10 +420,46 @@ class FullAIUWMModel:
     previous_snow_depth_mm: dict[str, float] = field(default_factory=dict)
     pipeline_state: dict[str, dict[str, Any]] = field(default_factory=dict)
     data_center_storage: dict[str, float] = field(default_factory=dict)
+    data_center_quality_storage: dict[str, QualityState] = field(default_factory=dict)
+    # One-day internal cooling-loop return carried between opt-in DC plans.
+    # This is a measured ledger of recovered blowdown volume/mass; it is not
+    # an invented reservoir or a replacement for a co-current loop solver.
+    data_center_recovered_return: dict[str, QualityState] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         self.project = prepare_project(self.project)
         validate_project(self.project, self.timeseries)
+        # Same-day WWTW production is deliberately opt-in.  The only
+        # supported phase at this boundary is an end-of-day accounting
+        # diagnostic: WWTW output is transferred to the central reuse buffer
+        # after today's demand transaction and is therefore carried to the
+        # next day.  A same-day data-centre feedback loop needs a separate
+        # co-current solver and must not be implied by this flag.
+        phase = self.project.get("same_day_wwtw_production", False)
+        if isinstance(phase, Mapping):
+            phase_enabled = bool(phase.get("enabled", True))
+            phase_mode = str(phase.get("mode", "end_of_day_diagnostic"))
+        elif isinstance(phase, bool):
+            phase_enabled = phase
+            phase_mode = "end_of_day_diagnostic"
+        else:
+            raise ProjectValidationError(
+                "same_day_wwtw_production 必须为布尔值或包含 enabled/mode 的对象"
+            )
+        if phase_mode not in {"end_of_day_diagnostic", "co_current_diagnostic", "off"}:
+            raise ProjectValidationError(
+                "same_day_wwtw_production.mode 目前仅支持 end_of_day_diagnostic、"
+                "co_current_diagnostic 或 off"
+            )
+        self._same_day_wwtw_phase_mode = (
+            phase_mode if phase_enabled and phase_mode != "off" else "off"
+        )
+        allocation_mode = self.project.get("reuse_allocation_mode", "legacy")
+        if allocation_mode not in REUSE_ALLOCATION_MODES:
+            raise ProjectValidationError(
+                "reuse_allocation_mode 无效；可选值为 legacy、"
+                "shared_incumbent_first"
+            )
         self.timeseries = self.timeseries.copy()
         for component_id, component in self.project["components"].items():
             if component["kind"] in {"water_resource", "service_reservoir", "sewer", "wwtw", "reuse"}:
@@ -293,6 +481,16 @@ class FullAIUWMModel:
             for component_id, component in self.project["components"].items()
             if component["kind"] == "data_center"
         }
+        self.data_center_quality_storage = {}
+        self.data_center_recovered_return = {}
+        for component_id, component in self.project["components"].items():
+            if component.get("kind") != "data_center" or not _quality_state_enabled(component):
+                continue
+            volume = self.data_center_storage.get(component_id, 0.0)
+            self.data_center_quality_storage[component_id] = QualityState.from_concentrations(
+                volume, _initial_quality_concentrations(component)
+            )
+            self.data_center_recovered_return[component_id] = QualityState(0.0, {})
         for pipeline in self.pipeline_state.values():
             pipeline.setdefault(
                 "reference_age_years", float(pipeline.get("age_years", 0.0))
@@ -314,6 +512,27 @@ class FullAIUWMModel:
         self._material_rows: list[dict[str, Any]] = []
         self._data_center_rows: list[dict[str, Any]] = []
         self._data_center_plans: dict[str, dict[str, Any]] = {}
+        self._same_day_wwtw_production_today: defaultdict[str, float] = defaultdict(float)
+        self._same_day_wwtw_production_mass_today: defaultdict[
+            str, defaultdict[str, float]
+        ] = defaultdict(lambda: defaultdict(float))
+        # Snapshot of each central reuse pool before a provisional same-day
+        # WWTW seed is inserted.  It is used to distinguish consumption of the
+        # provisional product from consumption of the carried pool.
+        self._same_day_wwtw_day_start_storage: dict[str, float] = {}
+        self._same_day_wwtw_storage_before_route: dict[str, float] = {}
+        self._same_day_wwtw_phase_diagnostic: dict[str, Any] = {}
+        self._same_day_wwtw_provisional_seed: dict[str, float] = {}
+        self._same_day_wwtw_provisional_seed_mass: dict[
+            str, dict[str, float]
+        ] = {}
+        self._same_day_wwtw_provisional_seed_applied: dict[str, float] = {}
+        self._same_day_wwtw_provisional_seed_mass_applied: dict[
+            str, dict[str, float]
+        ] = {}
+        self._same_day_wwtw_provisional_consumed: dict[str, float] = {}
+        self._same_day_wwtw_provisional_consumed_by_data_center: dict[str, float] = {}
+        self._same_day_wwtw_co_current_trial = False
         self._interventions = sorted(self.project.get("interventions", []), key=lambda item: item["date"])
         self._applied_interventions: set[str] = set()
 
@@ -342,6 +561,7 @@ class FullAIUWMModel:
             risk_summary=pd.DataFrame(),
             data_center_daily=pd.DataFrame(self._data_center_rows),
         )
+        result.adaptation_diagnostic = self._build_e4_adaptation_diagnostic(result)
         from .risk import evaluate_risks
 
         risk = evaluate_risks(result, self.project, self.timeseries)
@@ -351,24 +571,483 @@ class FullAIUWMModel:
         result.risk_summary = risk.risk_summary
         return result
 
+    @staticmethod
+    def _build_e4_adaptation_diagnostic(result: FullModelResult) -> dict[str, Any]:
+        """Summarise the main-model-to-E4 boundary without opening E4.
+
+        This deliberately evaluates only the transparent A0 accounting on the
+        rows emitted by the main model.  A paired freshwater-only counterfactual
+        and a feedback loop are still required before any adaptation policy can
+        be reported as a formal E4 result.
+        """
+
+        rows = result.data_center_daily
+        diagnostic: dict[str, Any] = {
+            "contract": "R10-E4-main-boundary-v1",
+            "status": "NOT_READY",
+            "main_model_integration": "READ_ONLY_BOUNDARY",
+            "policy": "A0",
+            "gate": "E4",
+            "ledger_rows": int(len(rows)),
+            "paired_freshwater_baseline_required": True,
+            "formal_adaptation_feedback": False,
+            "reason": (
+                "main model rows are convertible to a standalone A0 ledger; "
+                "paired B2 baseline and adaptation feedback are not supplied"
+            ),
+        }
+        if rows.empty:
+            diagnostic["reason"] = "main model emitted no data-center cooling rows"
+            return diagnostic
+        try:
+            from .adaptation import evaluate_adaptation
+
+            ledger = result.to_e4_ledger()
+            a0 = evaluate_adaptation(
+                ledger,
+                "A0",
+                provenance={"main_model_integration": "READ_ONLY_BOUNDARY"},
+            )
+            diagnostic["a0_accounting"] = {
+                "freshwater_use_ml": a0.freshwater_use_ml,
+                "within_run_baseline_ml": a0.freshwater_baseline_ml,
+                "within_run_saving_ml": a0.freshwater_saving_ml,
+                "service_reliability": a0.sla_reliability,
+                "energy_kwh": a0.energy_kwh,
+                "cost": a0.cost,
+            }
+        except (TypeError, ValueError, KeyError) as exc:
+            diagnostic["status"] = "NOT_READY_INVALID_LEDGER"
+            diagnostic["reason"] = f"data-center rows cannot be converted to E4 ledger: {exc}"
+        return diagnostic
+
     def _run_day(self, date: pd.Timestamp, row: Any) -> None:
+        if (
+            self._same_day_wwtw_phase_mode == "co_current_diagnostic"
+            and not self._same_day_wwtw_co_current_trial
+        ):
+            self._run_day_co_current(date, row)
+            return
         self._apply_interventions(date)
         metrics = {component_id: _zero_component_metrics() for component_id in self.project["components"]}
+        self._same_day_wwtw_production_today = defaultdict(float)
+        self._same_day_wwtw_production_mass_today = defaultdict(
+            lambda: defaultdict(float)
+        )
+        self._same_day_wwtw_day_start_storage = {}
+        self._same_day_wwtw_storage_before_route = {}
+        self._same_day_wwtw_phase_diagnostic = {}
+        self._same_day_wwtw_provisional_seed_applied = {}
+        self._same_day_wwtw_provisional_seed_mass_applied = {}
+        self._same_day_wwtw_provisional_consumed = {}
+        self._same_day_wwtw_provisional_consumed_by_data_center = {}
         self._age_pipelines(date)
         self._apply_annual_pipeline_rehabilitation(date, metrics)
         capacity_used: defaultdict[str, float] = defaultdict(float)
         area_state = self._calculate_area_inputs(date, row)
+        if self._same_day_wwtw_phase_mode == "co_current_diagnostic":
+            self._same_day_wwtw_day_start_storage = {
+                component_id: float(self.storage.get(component_id, 0.0))
+                for component_id in self._co_current_central_reuse_ids(date)
+            }
+        self._seed_same_day_wwtw_production()
         self._prepare_data_centers(date, row, area_state)
         self._process_reuse(date, area_state, metrics)
         self._initialize_water_storages(row, metrics)
         self._supply_potable_water(date, area_state, metrics, capacity_used)
         self._finalize_data_centers(date, area_state, metrics)
         wastewater_inputs = self._create_wastewater_inputs(area_state)
+        if self._same_day_wwtw_phase_mode != "off":
+            central_reuse_ids = {
+                component_id
+                for component_id, component in self.project["components"].items()
+                if component.get("kind") == "reuse"
+                and component.get("reuse_type", "rwh") == "central"
+            }
+            if self._same_day_wwtw_phase_mode == "co_current_diagnostic":
+                self._remove_unconsumed_same_day_wwtw_seed(area_state)
+            self._same_day_wwtw_storage_before_route = {
+                component_id: float(self.storage.get(component_id, 0.0))
+                for component_id in central_reuse_ids
+            }
         self._route_wastewater(date, wastewater_inputs, metrics)
+        self._close_same_day_wwtw_phase(area_state, metrics)
         self._apply_pipeline_events(date, metrics)
         self._apply_asset_costs_and_failures(date, metrics)
         self._calculate_component_impacts(date, metrics)
         self._save_day(date, area_state, metrics)
+
+    def _co_current_central_reuse_ids(self, date: pd.Timestamp) -> list[str]:
+        """Return central reuse buffers fed by an active WWTW on this day."""
+
+        component_ids: list[str] = []
+        components = self.project["components"]
+        for component_id, component in components.items():
+            if component.get("kind") != "wwtw" or not self._component_active(component, date):
+                continue
+            central_id = component.get("central_reuse_component")
+            if not central_id or central_id in component_ids:
+                continue
+            reuse = components.get(central_id)
+            if reuse and reuse.get("kind") == "reuse" and self._component_active(reuse, date):
+                component_ids.append(str(central_id))
+        return sorted(component_ids)
+
+    def _run_day_co_current(self, date: pd.Timestamp, row: Any) -> None:
+        """Solve a bounded same-day WWTW→reuse→DC fixed point on a copy.
+
+        The ordinary daily transaction is intentionally left untouched.  The
+        explicit diagnostic mode treats a trial WWTW product as a provisional
+        central-pool input, runs the complete day, removes any unconsumed trial
+        product before the real WWTW route, and iterates on the resulting
+        production volume and solute mass.  Only a converged trial is promoted
+        to the live model, so a failed iteration cannot corrupt the ledger.
+        """
+
+        phase = self.project.get("same_day_wwtw_production", {})
+        if not isinstance(phase, Mapping):
+            phase = {}
+        max_iterations = max(1, int(phase.get("max_iterations", 12)))
+        tolerance_ml = max(1e-12, float(phase.get("tolerance_ml", 1e-8)))
+        mass_tolerance_kg = max(
+            1e-12, float(phase.get("mass_tolerance_kg", 1e-8))
+        )
+        central_ids = self._co_current_central_reuse_ids(date)
+        baseline = copy.deepcopy(self)
+        baseline._same_day_wwtw_co_current_trial = False
+        guess = {component_id: 0.0 for component_id in central_ids}
+        mass_guess: dict[str, dict[str, float]] = {}
+        converged = False
+        trial: FullAIUWMModel | None = None
+        residuals: dict[str, float] = {component_id: 0.0 for component_id in central_ids}
+        mass_residuals: dict[str, float] = {component_id: 0.0 for component_id in central_ids}
+        iterations = 0
+        for iterations in range(1, max_iterations + 1):
+            trial = copy.deepcopy(baseline)
+            trial._same_day_wwtw_co_current_trial = True
+            trial._same_day_wwtw_provisional_seed = dict(guess)
+            trial._same_day_wwtw_provisional_seed_mass = copy.deepcopy(mass_guess)
+            trial._run_day(date, row)
+            actual = {
+                component_id: max(
+                    0.0,
+                    float(trial._same_day_wwtw_production_today.get(component_id, 0.0)),
+                )
+                for component_id in central_ids
+            }
+            residuals = {
+                component_id: actual[component_id] - guess.get(component_id, 0.0)
+                for component_id in central_ids
+            }
+            actual_mass = {
+                component_id: {
+                    str(name): float(value)
+                    for name, value in trial._same_day_wwtw_production_mass_today.get(
+                        component_id, {}
+                    ).items()
+                }
+                for component_id in central_ids
+            }
+            mass_residuals = {
+                component_id: sum(
+                    abs(
+                        float(actual_mass[component_id].get(name, 0.0))
+                        - float(mass_guess.get(component_id, {}).get(name, 0.0))
+                    )
+                    for name in set(actual_mass[component_id])
+                    | set(mass_guess.get(component_id, {}))
+                )
+                for component_id in central_ids
+            }
+            if (
+                (not residuals or max(abs(value) for value in residuals.values()) <= tolerance_ml)
+                and (
+                    not mass_residuals
+                    or max(mass_residuals.values()) <= mass_tolerance_kg
+                )
+            ):
+                converged = True
+                break
+            guess = actual
+            mass_guess = {
+                component_id: dict(trial._same_day_wwtw_production_mass_today.get(component_id, {}))
+                for component_id in central_ids
+            }
+        if trial is None:
+            raise ProjectValidationError("same-day co-current diagnostic produced no trial")
+        if not converged:
+            # Keep this mode gate-safe: expose the failure in a diagnostic
+            # result, but never label it as a co-current solution.
+            trial._same_day_wwtw_phase_diagnostic.update({
+                "status": "NOT_READY_CO_CURRENT_NOT_CONVERGED",
+                "same_day_feedback_to_data_center": False,
+                "co_current_converged": False,
+                "co_current_iterations": iterations,
+                "co_current_max_residual_ml": max(abs(value) for value in residuals.values())
+                if residuals else 0.0,
+                "co_current_max_mass_residual_kg": max(mass_residuals.values())
+                if mass_residuals else 0.0,
+                "co_current_mass_tolerance_kg": mass_tolerance_kg,
+            })
+        else:
+            trial._same_day_wwtw_phase_diagnostic.update({
+                "status": "CO_CURRENT_DIAGNOSTIC_CONVERGED",
+                "same_day_feedback_to_data_center": bool(
+                    trial._same_day_wwtw_phase_diagnostic.get(
+                        "same_day_data_center_consumed_ml", 0.0
+                    )
+                    > 0.0
+                ),
+                "co_current_converged": True,
+                "co_current_iterations": iterations,
+                "co_current_max_residual_ml": max(abs(value) for value in residuals.values())
+                if residuals else 0.0,
+                "co_current_max_mass_residual_kg": max(mass_residuals.values())
+                if mass_residuals else 0.0,
+                "co_current_mass_tolerance_kg": mass_tolerance_kg,
+            })
+        trial._same_day_wwtw_co_current_trial = False
+        trial._same_day_wwtw_provisional_seed = {}
+        trial._same_day_wwtw_provisional_seed_mass = {}
+        trial._refresh_same_day_phase_row()
+        self.__dict__.clear()
+        self.__dict__.update(copy.deepcopy(trial.__dict__))
+
+    def _seed_same_day_wwtw_production(self) -> None:
+        """Add a provisional co-current product to the central pool only."""
+
+        if self._same_day_wwtw_phase_mode != "co_current_diagnostic":
+            return
+        components = self.project["components"]
+        for component_id, requested in self._same_day_wwtw_provisional_seed.items():
+            if requested <= 0.0 or component_id not in components:
+                continue
+            component = components[component_id]
+            capacity = float(component.get("capacity_ml", np.inf))
+            applied = min(
+                max(0.0, float(requested)),
+                max(0.0, capacity - float(self.storage.get(component_id, 0.0))),
+            )
+            if applied <= 0.0:
+                continue
+            self.storage[component_id] = float(self.storage.get(component_id, 0.0)) + applied
+            source_mass = self._same_day_wwtw_provisional_seed_mass.get(component_id, {})
+            scale = applied / max(float(requested), 1e-12)
+            applied_mass = {
+                str(name): max(0.0, float(mass)) * scale
+                for name, mass in source_mass.items()
+            }
+            for pollutant, mass in applied_mass.items():
+                self.pollutant_storage[component_id][pollutant] += mass
+            self._same_day_wwtw_provisional_seed_applied[component_id] = applied
+            self._same_day_wwtw_provisional_seed_mass_applied[component_id] = applied_mass
+
+    def _remove_unconsumed_same_day_wwtw_seed(
+        self, area_state: dict[str, dict[str, Any]] | None = None
+    ) -> None:
+        """Withdraw the trial product that was not consumed before WWTW runs."""
+
+        area_state = area_state or {}
+        for component_id, seeded in self._same_day_wwtw_provisional_seed_applied.items():
+            storage_before_route = float(self.storage.get(component_id, 0.0))
+            # The pool is consumed as an aggregate volume.  Attribute demand
+            # to the provisional seed only after the carried pool has been
+            # exhausted; this makes the fixed-point transaction auditable and
+            # order independent.
+            day_start = float(
+                self._same_day_wwtw_day_start_storage.get(component_id, 0.0)
+            )
+            consumed = min(
+                seeded,
+                max(0.0, day_start + seeded - storage_before_route),
+            )
+            data_center_delivered = 0.0
+            non_data_center_delivered = 0.0
+            for state in area_state.values():
+                for (reuse_type, category), amount in state.get(
+                    "reuse_delivered", {}
+                ).items():
+                    if reuse_type != "central":
+                        continue
+                    if str(category).startswith("data_center::"):
+                        data_center_delivered += max(0.0, float(amount))
+                    else:
+                        non_data_center_delivered += max(0.0, float(amount))
+            # The carried pool can satisfy non-DC claims before the
+            # provisional seed.  Attribute only the part that cannot be
+            # covered by the carried pool to same-day DC feedback.
+            dc_consumed = min(
+                seeded,
+                max(0.0, data_center_delivered - max(0.0, day_start - non_data_center_delivered)),
+            )
+            unconsumed = max(0.0, seeded - consumed)
+            if unconsumed <= 0.0:
+                self._same_day_wwtw_provisional_consumed[component_id] = consumed
+                self._same_day_wwtw_provisional_consumed_by_data_center[component_id] = dc_consumed
+                continue
+            fraction = unconsumed / max(seeded, 1e-12)
+            self.storage[component_id] = max(0.0, storage_before_route - unconsumed)
+            for pollutant, mass in self._same_day_wwtw_provisional_seed_mass_applied.get(component_id, {}).items():
+                self.pollutant_storage[component_id][pollutant] = max(
+                    0.0,
+                    self.pollutant_storage[component_id].get(pollutant, 0.0) - mass * fraction,
+                )
+            self._same_day_wwtw_provisional_consumed[component_id] = consumed
+            self._same_day_wwtw_provisional_consumed_by_data_center[component_id] = dc_consumed
+
+    def _close_same_day_wwtw_phase(
+        self,
+        area_state: dict[str, dict[str, Any]],
+        metrics: dict[str, defaultdict[str, float]],
+    ) -> None:
+        """Record the explicit end-of-day WWTW→reuse timing boundary.
+
+        WWTW treatment is downstream of today's demand and cooling return
+        flows.  Its central-reuse transfer consequently cannot be consumed by
+        that same day's data-centre plan without a second co-current solve.
+        This phase records the produced volume, the buffer carryover, unmet
+        claims that would be eligible for a future allocation, and both water
+        closure residuals.  It never changes allocation state.
+        """
+
+        if self._same_day_wwtw_phase_mode == "off":
+            return
+        details: list[dict[str, Any]] = []
+        produced_total = 0.0
+        storage_residual_total = 0.0
+        for component_id in sorted(self._same_day_wwtw_storage_before_route):
+            produced = max(
+                0.0, float(self._same_day_wwtw_production_today.get(component_id, 0.0))
+            )
+            storage_before = float(self._same_day_wwtw_storage_before_route[component_id])
+            storage_end = float(self.storage.get(component_id, 0.0))
+            storage_residual = storage_end - storage_before - produced
+            consumed = max(
+                0.0,
+                float(self._same_day_wwtw_provisional_consumed.get(component_id, 0.0)),
+            )
+            day_start = float(
+                self._same_day_wwtw_day_start_storage.get(component_id, storage_before)
+            )
+            # ``storage_before`` already reflects all same-day withdrawals
+            # after the provisional seed has been removed.  Reconcile the
+            # carried pool withdrawal explicitly; the provisional amount is a
+            # trial input and must not be counted as a real inflow twice.
+            carried_pool_withdrawal = max(0.0, day_start - storage_before)
+            pool_residual = (
+                storage_end - day_start + carried_pool_withdrawal - produced
+            )
+            metrics[component_id]["same_day_wwtw_production_ml"] += produced
+            metrics[component_id]["same_day_wwtw_carryover_ml"] += produced
+            metrics[component_id]["same_day_wwtw_storage_reconciliation_residual_ml"] += (
+                storage_residual
+            )
+            produced_total += produced
+            storage_residual_total += storage_residual
+            details.append(
+                {
+                    "reuse_component_id": component_id,
+                    "day_start_storage_ml": day_start,
+                    "storage_before_route_ml": storage_before,
+                    "wwtw_production_ml": produced,
+                    "same_day_consumed_ml": consumed,
+                    "carryover_ml": produced,
+                    "storage_end_ml": storage_end,
+                    "closure_residual_ml": pool_residual,
+                    "storage_reconciliation_residual_ml": storage_residual,
+                    "wwtw_production_mass_kg": dict(
+                        self._same_day_wwtw_production_mass_today.get(component_id, {})
+                    ),
+                }
+            )
+
+        unmet_total = sum(
+            max(0.0, float(amount))
+            for state in area_state.values()
+            for amount in state.get("unmet", {}).values()
+        )
+        data_center_unmet = sum(
+            max(0.0, float(amount))
+            for state in area_state.values()
+            for category, amount in state.get("unmet", {}).items()
+            if str(category).startswith("data_center::")
+        )
+        non_data_center_unmet = max(0.0, unmet_total - data_center_unmet)
+        consumed_total = sum(
+            max(0.0, float(value))
+            for value in self._same_day_wwtw_provisional_consumed.values()
+        )
+        data_center_consumed_total = sum(
+            max(0.0, float(value))
+            for value in self._same_day_wwtw_provisional_consumed_by_data_center.values()
+        )
+        closure_residual_total = sum(
+            float(detail["closure_residual_ml"]) for detail in details
+        )
+        self._same_day_wwtw_phase_diagnostic = {
+            "enabled": True,
+            "mode": self._same_day_wwtw_phase_mode,
+            "status": (
+                "CO_CURRENT_DIAGNOSTIC_PENDING"
+                if self._same_day_wwtw_phase_mode == "co_current_diagnostic"
+                else "END_OF_DAY_CARRYOVER_ONLY"
+            ),
+            "same_day_consumed_ml": consumed_total,
+            "same_day_data_center_consumed_ml": data_center_consumed_total,
+            "same_day_production_ml": produced_total,
+            "same_day_carryover_ml": produced_total,
+            "same_day_eligible_unmet_ml": non_data_center_unmet,
+            "same_day_data_center_unmet_ml": data_center_unmet,
+            "same_day_feedback_to_data_center": (
+                self._same_day_wwtw_phase_mode == "co_current_diagnostic"
+                and data_center_consumed_total > 0.0
+            ),
+            "closure_residual_ml": closure_residual_total,
+            "storage_reconciliation_residual_ml": storage_residual_total,
+            "components": details,
+        }
+
+    def _refresh_same_day_phase_row(self) -> None:
+        """Refresh the already-emitted system row after co-current convergence."""
+
+        if not self._system_rows or not self._same_day_wwtw_phase_diagnostic:
+            return
+        phase = self._same_day_wwtw_phase_diagnostic
+        self._system_rows[-1].update(
+            {
+                "same_day_wwtw_phase_status": phase["status"],
+                "same_day_wwtw_production_ml": float(phase["same_day_production_ml"]),
+                "same_day_wwtw_consumed_ml": float(phase["same_day_consumed_ml"]),
+                "same_day_wwtw_data_center_consumed_ml": float(
+                    phase.get("same_day_data_center_consumed_ml", 0.0)
+                ),
+                "same_day_wwtw_carryover_ml": float(phase["same_day_carryover_ml"]),
+                "same_day_wwtw_eligible_unmet_ml": float(
+                    phase["same_day_eligible_unmet_ml"]
+                ),
+                "same_day_wwtw_data_center_unmet_ml": float(
+                    phase["same_day_data_center_unmet_ml"]
+                ),
+                "same_day_wwtw_feedback_to_data_center": bool(
+                    phase["same_day_feedback_to_data_center"]
+                ),
+                "same_day_wwtw_closure_residual_ml": float(
+                    phase["closure_residual_ml"]
+                ),
+                "same_day_wwtw_storage_reconciliation_residual_ml": float(
+                    phase["storage_reconciliation_residual_ml"]
+                ),
+                "same_day_wwtw_co_current_iterations": int(
+                    phase.get("co_current_iterations", 0)
+                ),
+                "same_day_wwtw_co_current_max_residual_ml": float(
+                    phase.get("co_current_max_residual_ml", 0.0)
+                ),
+                "same_day_wwtw_co_current_max_mass_residual_kg": float(
+                    phase.get("co_current_max_mass_residual_kg", 0.0)
+                ),
+            }
+        )
 
     def _apply_interventions(self, date: pd.Timestamp) -> None:
         for index, intervention in enumerate(self._interventions):
@@ -569,6 +1248,20 @@ class FullAIUWMModel:
             }
         return states
 
+    def _quality_storage_state(
+        self, component_id: str, component: dict[str, Any], volume_ml: float
+    ) -> QualityState:
+        """Return the opt-in quality state aligned to the numeric buffer volume."""
+
+        state = self.data_center_quality_storage.get(component_id)
+        if state is None:
+            state = QualityState.from_concentrations(
+                volume_ml, _initial_quality_concentrations(component)
+            )
+        elif abs(state.volume_ml - volume_ml) > 1e-12:
+            state = QualityState.from_concentrations(volume_ml, state.concentrations_mg_l())
+        return state
+
     def _prepare_data_centers(
         self,
         date: pd.Timestamp,
@@ -602,14 +1295,15 @@ class FullAIUWMModel:
                 component, self.project.get("ai_data_center_database")
             )
             # For quality-limited cooling, estimate the reclaimed volume that
-            # can actually be delivered before solving the day's plan.  This
-            # closes the otherwise one-way target-fraction shortcut: when the
-            # central reuse pool is short, potable fallback dilutes the mixed
-            # water and should relax the CoC limit.  The estimate is enabled
-            # only for a single active data centre; multi-centre allocation
-            # needs an explicit shared-pool solver rather than reusing the
-            # same pool for every plan.
+            # can actually be delivered before solving the day's plan.  A
+            # multi-centre run first builds provisional plans here and then
+            # replaces them with the shared co-current fixed-point result in
+            # ``_allocate_opt_in_central_reuse``.
             reclaimed_available = None
+            reclaimed_quality: dict[str, float] | None = None
+            recovered_return_state = self.data_center_recovered_return.get(
+                component_id, QualityState(0.0, {})
+            )
             storage_start = float(self.data_center_storage.get(component_id, 0.0))
             storage_capacity = float(
                 component.get("cooling_storage_capacity_ml", component.get("cooling_storage_ml", storage_start))
@@ -624,29 +1318,50 @@ class FullAIUWMModel:
             reclaimed_source = component.get("water_sources", {}).get("reclaimed", {})
             reclaimed_id = reclaimed_source.get("component_id")
             reclaimed_component = self.project["components"].get(reclaimed_id)
+            reclaimed_quality_provenance = "scenario_prior"
             if (
-                len(active_data_centres) == 1
-                and component.get("cooling", {}).get("coc_mode", "fixed") == "quality_limited"
+                _quality_state_enabled(component)
+                and component.get("cooling", {}).get("coc_mode", "fixed")
+                == "quality_limited"
+            ):
+                # The reuse ledger is populated by WWTW treatment before the
+                # allocation transaction.  Passing this treated-product
+                # quality into the CoC solver closes the source-quality link.
+                # The multi-DC allocation transaction below re-evaluates this
+                # same plan at each trial reclaimed volume.
+                reclaimed_quality = _reuse_output_quality(
+                    self, reclaimed_id, reclaimed_component
+                )
+                reclaimed_quality_provenance = _reuse_quality_provenance(
+                    self, reclaimed_id, reclaimed_component
+                )
+            if (
+                component.get("cooling", {}).get("coc_mode", "fixed") == "quality_limited"
                 and reclaimed_component is not None
                 and reclaimed_component.get("kind") == "reuse"
-                # Cooling-storage water quality is not a state variable.  The
-                # fixed-point fraction is therefore only an actual same-day
-                # source fraction when this buffer is explicitly disabled.
-                and storage_start <= 1e-12
-                and storage_capacity <= 1e-12
             ):
                 available_capacity = float(
                     reclaimed_component.get("treatment_capacity_ml_day", np.inf)
                 )
-                reclaimed_available = min(
-                    max(0.0, float(self.storage.get(reclaimed_id, 0.0))),
-                    max(0.0, available_capacity),
-                )
+                # The finite-pool fixed point is safe for the opt-in quality
+                # path because the storage and recovered-return states are
+                # passed explicitly.  Legacy quality-limited scenarios keep
+                # their historical no-storage behavior.
+                if len(active_data_centres) == 1 and (_quality_state_enabled(component) or (
+                    storage_start <= 1e-12 and storage_capacity <= 1e-12
+                )):
+                    reclaimed_available = min(
+                        max(0.0, float(self.storage.get(reclaimed_id, 0.0))),
+                        max(0.0, available_capacity),
+                    )
             plan = calculate_data_center_plan(
                 component,
                 date,
                 drivers,
                 reclaimed_available_ml=reclaimed_available,
+                reclaimed_quality_mg_l=reclaimed_quality or None,
+                quality_recovered_return_volume_ml=recovered_return_state.volume_ml,
+                quality_recovered_return_mass_kg=recovered_return_state.mass_kg,
             )
             storage_refill = (
                 max(0.0, storage_capacity - storage_start)
@@ -690,11 +1405,31 @@ class FullAIUWMModel:
             self._data_center_plans[component_id] = {
                 "component": component,
                 "plan": plan,
+                "drivers": drivers,
                 "area_id": area_id,
                 "category": category,
                 "storage_start_ml": storage_start,
                 "storage_capacity_ml": storage_capacity,
                 "reclaimed_component_id": reclaimed.get("component_id"),
+                "quality_state_enabled": _quality_state_enabled(component),
+                "reclaimed_quality_mg_l": reclaimed_quality or {},
+                "reclaimed_quality_provenance": reclaimed_quality_provenance,
+                "other_target_fraction": other_target,
+                "other_available_ml": max(0.0, other_available),
+                "recovered_return_state": recovered_return_state,
+                "quality_integration_status": (
+                    "NOT_READY_JOINT_QUALITY_ALLOCATION"
+                    if len(active_data_centres) > 1
+                    else (
+                        "READY_ALLOCATION_NOT_READY_QUALITY_COUPLING"
+                        if self.project.get("reuse_allocation_mode", "legacy")
+                        in {"shared_incumbent_first", "dedicated_incremental"}
+                        else "READY_SINGLE_DC"
+                    )
+                ),
+                "reuse_allocation_mode": self.project.get(
+                    "reuse_allocation_mode", "legacy"
+                ),
             }
 
     def _finalize_data_centers(
@@ -730,13 +1465,180 @@ class FullAIUWMModel:
 
             return_flow = result["return_flow_ml"]
             state["data_center_return_ml"] = state.get("data_center_return_ml", 0.0) + return_flow
-            quality = component.get("blowdown_quality_mg_l", component.get("cooling", {}).get("blowdown_quality_mg_l", {}))
             pollutants = state.setdefault("data_center_return_pollutants", {})
             component_pollutants: dict[str, float] = {}
-            for pollutant, concentration in quality.items():
-                mass = return_flow * float(concentration)
-                pollutants[pollutant] = pollutants.get(pollutant, 0.0) + mass
-                component_pollutants[pollutant] = mass
+            quality_enabled = bool(context.get("quality_state_enabled"))
+            quality_diag: dict[str, Any] = {
+                "quality_state_enabled": quality_enabled,
+                "quality_integration_status": context.get(
+                    "quality_integration_status", "READY_SINGLE_DC"
+                ),
+            }
+            if quality_enabled:
+                # R10a vertical slice: this ledger tracks per-DC storage and
+                # carries the measured recovered-return volume/mass into the
+                # next day's single-DC quality solve.  Shared-pool/co-current
+                # allocation remains outside this slice.
+                quality_diag["quality_state_status"] = "ENABLED_DYNAMIC_STORAGE"
+                start_state = self._quality_storage_state(
+                    component_id, component, context["storage_start_ml"]
+                )
+                incoming_states = [start_state]
+                source_amounts = {
+                    "reclaimed": reclaimed_ml,
+                    "potable": potable_ml,
+                    "other": other_ml,
+                }
+                source_quality = {
+                    "reclaimed": {
+                        str(name): max(0.0, float(value))
+                        for name, value in (
+                            context.get("reclaimed_quality_mg_l")
+                            or _source_quality(component, "reclaimed")
+                        ).items()
+                    },
+                    "potable": _source_quality(component, "potable"),
+                    "other": _source_quality(component, "other"),
+                }
+                for source_name, amount in source_amounts.items():
+                    if amount > 0.0:
+                        incoming_states.append(
+                            QualityState.from_concentrations(
+                                amount, source_quality[source_name]
+                            )
+                        )
+                mixed_state = mix_quality_states(incoming_states)
+                process_volume = min(
+                    max(0.0, plan.external_makeup_ml), mixed_state.volume_ml
+                )
+                withdrawn_state, end_state = withdraw_quality_state(
+                    mixed_state, process_volume
+                )
+                self.data_center_quality_storage[component_id] = end_state
+                prior_return_state = context.get(
+                    "recovered_return_state", QualityState(0.0, {})
+                )
+                loop_state = mix_quality_states([withdrawn_state, prior_return_state])
+                concentrations = loop_state.concentrations_mg_l()
+                cooling = component.get("cooling", {})
+                # Dissolved salts are concentrated in the cooling loop.  The
+                # makeup concentration is therefore converted to the loop
+                # blowdown concentration before partitioning the salt ledger.
+                blowdown_concentrations = {
+                    name: value * float(plan.cycles_of_concentration)
+                    for name, value in concentrations.items()
+                }
+                partition = partition_blowdown_solutes(
+                    blowdown_concentrations,
+                    result["blowdown_ml"],
+                    float(cooling.get("internal_recovery_fraction", 0.0)),
+                    cooling.get("solute_removal_fraction", {}),
+                    float(cooling.get("blowdown_return_fraction", 1.0)),
+                )
+                recovered_return_state = QualityState(
+                    result["internal_recovery_ml"], partition.recovered_return_mass_kg
+                )
+                self.data_center_recovered_return[component_id] = recovered_return_state
+                for pollutant, mass in partition.sewer_return_mass_kg.items():
+                    pollutants[pollutant] = pollutants.get(pollutant, 0.0) + mass
+                    component_pollutants[pollutant] = mass
+                start_mass = dict(start_state.mass_kg)
+                input_mass = dict(mixed_state.mass_kg)
+                end_mass = dict(end_state.mass_kg)
+                withdrawn_mass = dict(withdrawn_state.mass_kg)
+                names = (
+                    set(start_mass)
+                    | set(input_mass)
+                    | set(end_mass)
+                    | set(withdrawn_mass)
+                    | set(prior_return_state.mass_kg)
+                    | set(recovered_return_state.mass_kg)
+                )
+                quality_diag.update({
+                    "quality_storage_volume_start_ml": start_state.volume_ml,
+                    "quality_storage_volume_end_ml": end_state.volume_ml,
+                    "quality_storage_water_balance_residual_ml": (
+                        start_state.volume_ml + reclaimed_ml + potable_ml + other_ml
+                        - process_volume - end_state.volume_ml
+                    ),
+                    "quality_solute_closure_residual_kg": 0.0,
+                    "quality_process_solute_closure_residual_kg": float(
+                        sum(abs(value) for value in partition.residual_kg.values())
+                    ),
+                    "quality_recovered_return_volume_start_ml": prior_return_state.volume_ml,
+                    "quality_recovered_return_volume_end_ml": recovered_return_state.volume_ml,
+                    "quality_recovered_return_volume_residual_ml": (
+                        result["internal_recovery_ml"] - recovered_return_state.volume_ml
+                    ),
+                    "quality_recovered_return_mass_residual_kg": float(
+                        sum(
+                            abs(
+                                recovered_return_state.mass_kg.get(name, 0.0)
+                                - partition.recovered_return_mass_kg.get(name, 0.0)
+                            )
+                            for name in set(recovered_return_state.mass_kg)
+                            | set(partition.recovered_return_mass_kg)
+                        )
+                    ),
+                    "quality_loop_quality_volume_ml": loop_state.volume_ml,
+                    "quality_recovered_return_partition_closure_kg": float(
+                        sum(abs(value) for value in partition.residual_kg.values())
+                    ),
+                    "quality_reclaimed_quality_provenance": context.get(
+                        "reclaimed_quality_provenance", "scenario_prior"
+                    ),
+                })
+                for name in names:
+                    storage_residual = (
+                        start_mass.get(name, 0.0)
+                        + sum(
+                            amount * source_quality[source_name].get(name, 0.0)
+                            for source_name, amount in source_amounts.items()
+                        )
+                        - withdrawn_mass.get(name, 0.0)
+                        - end_mass.get(name, 0.0)
+                    )
+                    quality_diag["quality_solute_closure_residual_kg"] += abs(storage_residual)
+                    quality_diag[f"quality_storage_start_{name}_kg"] = start_mass.get(name, 0.0)
+                    quality_diag[f"quality_storage_end_{name}_kg"] = end_mass.get(name, 0.0)
+                    quality_diag[f"quality_recovered_return_start_{name}_kg"] = prior_return_state.mass_kg.get(name, 0.0)
+                    quality_diag[f"quality_recovered_return_end_{name}_kg"] = recovered_return_state.mass_kg.get(name, 0.0)
+                    quality_diag[f"quality_process_{name}_mg_l"] = concentrations.get(name, 0.0)
+                    quality_diag[f"quality_blowdown_{name}_mg_l"] = blowdown_concentrations.get(
+                        name, 0.0
+                    )
+                    quality_diag[f"quality_blowdown_mass_{name}_kg"] = partition.blowdown_mass_kg.get(
+                        name, 0.0
+                    )
+                    quality_diag[f"quality_recovered_return_{name}_kg"] = partition.recovered_return_mass_kg.get(
+                        name, 0.0
+                    )
+                    quality_diag[f"quality_removed_{name}_kg"] = partition.removed_mass_kg.get(
+                        name, 0.0
+                    )
+                    quality_diag[f"quality_sewer_return_{name}_kg"] = partition.sewer_return_mass_kg.get(
+                        name, 0.0
+                    )
+                    quality_diag[f"quality_unreturned_{name}_kg"] = partition.unreturned_mass_kg.get(
+                        name, 0.0
+                    )
+                    quality_diag[f"quality_partition_closure_{name}_kg"] = partition.residual_kg.get(
+                        name, 0.0
+                    )
+                    quality_diag[f"quality_solute_closure_{name}_kg"] = storage_residual
+                quality_diag["quality_reclaimed_source_mg_l"] = source_quality[
+                    "reclaimed"
+                ]
+            else:
+                quality = component.get(
+                    "blowdown_quality_mg_l",
+                    component.get("cooling", {}).get("blowdown_quality_mg_l", {}),
+                )
+                for pollutant, concentration in quality.items():
+                    mass = return_flow * float(concentration)
+                    pollutants[pollutant] = pollutants.get(pollutant, 0.0) + mass
+                    component_pollutants[pollutant] = mass
+                quality_diag["quality_state_status"] = "DISABLED_LEGACY_VOLUME_ONLY"
             self._record_pollutants(date, component_id, "blowdown", component_pollutants)
 
             metric = metrics[component_id]
@@ -765,6 +1667,7 @@ class FullAIUWMModel:
                 "data_center_id": component_id,
                 "area_id": area_id,
                 **result,
+                **quality_diag,
             }
             self._data_center_rows.append(row)
 
@@ -932,6 +1835,558 @@ class FullAIUWMModel:
         grey_categories = set(area.get("greywater_categories", []))
         return sum(value for name, value in demands.items() if name in grey_categories)
 
+    def _allocate_joint_quality_central_reuse(
+        self,
+        *,
+        date: pd.Timestamp,
+        component_id: str,
+        available_supply_ml: float,
+        eligible: list[str],
+        target_areas: list[str],
+        area_state: dict[str, dict[str, Any]],
+        dc_categories: dict[str, dict[str, Any]],
+    ) -> tuple[float, dict[str, dict[str, Any]], dict[str, float]]:
+        """Run the real multi-DC quality/allocation transaction for one day.
+
+        Each trial allocation is evaluated by the same data-centre quality
+        solver used by the single-DC path.  The joint allocator then solves
+        the shared-pool split against those dynamic external makeup volumes.
+        Central production already present at the beginning of the day is the
+        transaction supply; same-day WWTW production remains a separate
+        future extension and is never counted here.
+        """
+        mode = self.project.get("reuse_allocation_mode", "legacy")
+        scenario_id = f"{date.date()}::{component_id}::{mode}::joint-quality"
+        requests: list[JointQualityRequest] = []
+        metadata: dict[str, tuple[str, str]] = {}
+        context_by_consumer: dict[str, dict[str, Any]] = {}
+        plan_cache: dict[tuple[str, float], Any] = {}
+
+        categories: list[str] = []
+        for area_id in sorted(target_areas):
+            state = area_state[area_id]
+            for category in sorted(set(eligible)):
+                if category.startswith("data_center::") and category not in dc_categories:
+                    continue
+                if category not in categories:
+                    categories.append(category)
+        for category in sorted(dc_categories):
+            if category not in categories:
+                categories.append(category)
+
+        def _consumer_id(area_id: str, category: str) -> str:
+            return f"{area_id}::{category}"
+
+        for area_id in sorted(target_areas):
+            state = area_state[area_id]
+            for category in categories:
+                context = dc_categories.get(category)
+                if context is not None and context["area_id"] != area_id:
+                    continue
+                if context is None and category not in state["remaining"]:
+                    continue
+                remaining = max(0.0, float(state["remaining"].get(category, 0.0)))
+                reuse_limit = state.get("reuse_limits", {}).get(category, np.inf)
+                already_delivered = sum(
+                    value
+                    for (_reuse_type, delivered_category), value in state[
+                        "reuse_delivered"
+                    ].items()
+                    if delivered_category == category
+                )
+                requested = min(remaining, max(0.0, float(reuse_limit) - already_delivered))
+                consumer_id = _consumer_id(area_id, category)
+                potable_baseline = float(
+                    state.get("potable_limits", {}).get(category, requested)
+                )
+                if context is not None:
+                    source = context["component"].get("water_sources", {}).get("reclaimed", {})
+                    target_fraction = float(
+                        source.get("target_fraction", context["plan"].target_reclaimed_fraction)
+                    )
+                    requests.append(
+                        JointQualityRequest(
+                            consumer_id=consumer_id,
+                            target_reclaimed_fraction=max(0.0, min(1.0, target_fraction)),
+                            max_reclaimed_ml=float("inf"),
+                            potable_baseline_ml=max(0.0, potable_baseline),
+                        )
+                    )
+                    context_by_consumer[consumer_id] = context
+                elif requested > 0.0:
+                    # Existing municipal claims are incumbent reservations.  A
+                    # constant evaluator keeps them in the same deterministic
+                    # transaction without inventing quality information.
+                    requests.append(
+                        JointQualityRequest(
+                            consumer_id=consumer_id,
+                            target_reclaimed_fraction=1.0,
+                            incumbent_reclaimed_ml=requested,
+                            max_reclaimed_ml=requested,
+                            potable_baseline_ml=max(0.0, potable_baseline),
+                        )
+                    )
+                if requested > 0.0 or context is not None:
+                    metadata[consumer_id] = (area_id, category)
+
+        def _evaluate_plan(context: dict[str, Any], reclaimed_ml: float):
+            key = (context["category"], float(reclaimed_ml))
+            if key not in plan_cache:
+                plan_cache[key] = calculate_data_center_plan(
+                    context["component"],
+                    date,
+                    context["drivers"],
+                    reclaimed_available_ml=max(0.0, float(reclaimed_ml)),
+                    reclaimed_quality_mg_l=context.get("reclaimed_quality_mg_l") or None,
+                    quality_recovered_return_volume_ml=context.get(
+                        "recovered_return_state", QualityState(0.0, {})
+                    ).volume_ml,
+                    quality_recovered_return_mass_kg=context.get(
+                        "recovered_return_state", QualityState(0.0, {})
+                    ).mass_kg,
+                )
+            return plan_cache[key]
+
+        def evaluate(request: JointQualityRequest, reclaimed_ml: float) -> JointPlanEvaluation:
+            context = context_by_consumer.get(request.consumer_id)
+            if context is None:
+                return JointPlanEvaluation(external_makeup_ml=request.incumbent_reclaimed_ml)
+            try:
+                plan = _evaluate_plan(context, reclaimed_ml)
+                residual = float(plan.quality_solver_residual)
+                if not np.isfinite(residual):
+                    residual = 1.0
+                status = str(plan.quality_solver_status)
+                if status == "not_applicable":
+                    status = "not_converged"
+                return JointPlanEvaluation(
+                    external_makeup_ml=max(0.0, float(plan.external_makeup_ml)),
+                    cycles_of_concentration=float(plan.cycles_of_concentration),
+                    reclaimed_quality_mg_l=dict(context.get("reclaimed_quality_mg_l") or {}),
+                    quality_solver_status=status,
+                    quality_solver_residual=abs(residual),
+                )
+            except (ValueError, TypeError, OverflowError):
+                # A failed trial is a quality gate failure.  Retain a finite
+                # demand so the allocator can return an auditable NOT_READY
+                # incumbent transaction rather than silently dropping claims.
+                return JointPlanEvaluation(
+                    external_makeup_ml=max(0.0, float(context["plan"].external_makeup_ml)),
+                    quality_solver_status="not_converged",
+                    quality_solver_residual=1.0,
+                )
+
+        result = solve_joint_quality_allocation(
+            scenario_id,
+            max(0.0, float(available_supply_ml)),
+            requests,
+            evaluate,
+        )
+        rows = {item.consumer_id: item for item in result.allocations}
+
+        # Commit the evaluator's plan at the actual fixed-point allocation and
+        # resize the area demand before potable supply is allocated.
+        for consumer_id, context in context_by_consumer.items():
+            allocation = rows.get(consumer_id)
+            trial = allocation.reclaimed_allocated_ml if allocation else 0.0
+            try:
+                plan = _evaluate_plan(context, trial)
+            except (ValueError, TypeError, OverflowError):
+                plan = context["plan"]
+            context["plan"] = plan
+            area_id, category = metadata[consumer_id]
+            state = area_state[area_id]
+            storage_refill = (
+                max(0.0, context["storage_capacity_ml"] - context["storage_start_ml"])
+                if plan.external_makeup_ml > 0.0
+                else 0.0
+            )
+            request = max(0.0, float(plan.external_makeup_ml) + storage_refill)
+            other_amount = min(
+                request * float(context.get("other_target_fraction", 0.0)),
+                float(context.get("other_available_ml", 0.0)),
+            )
+            state["demand"][category] = request
+            state["other_delivered"][category] = other_amount
+            state["remaining"][category] = max(0.0, request - other_amount)
+            source = context["component"].get("water_sources", {}).get("reclaimed", {})
+            target_fraction = float(source.get("target_fraction", plan.target_reclaimed_fraction))
+            state.setdefault("reuse_limits", {})[category] = max(
+                0.0, float(plan.external_makeup_ml) * target_fraction
+            )
+            potable = context["component"].get("water_sources", {}).get("potable", {})
+            potable_target = float(potable.get("target_fraction", max(0.0, 1.0 - target_fraction)))
+            state.setdefault("potable_limits", {})[category] = (
+                request
+                if potable.get("allow_fallback", context["component"].get("water_fallback", True))
+                else request * potable_target
+            )
+
+        request_by_consumer = {
+            request.consumer_id: request for request in requests
+        }
+        records: dict[str, dict[str, Any]] = {}
+        for item in result.allocations:
+            if item.consumer_id not in metadata:
+                continue
+            area_id, category = metadata[item.consumer_id]
+            request = request_by_consumer[item.consumer_id]
+            incumbent_allocated = min(
+                item.reclaimed_allocated_ml, request.incumbent_reclaimed_ml
+            )
+            incumbent_shortfall = max(
+                0.0, request.incumbent_reclaimed_ml - incumbent_allocated
+            )
+            records[item.consumer_id] = {
+                "area_id": area_id,
+                "category": category,
+                "total_allocated_ml": item.reclaimed_allocated_ml,
+                "incumbent_allocated_ml": incumbent_allocated,
+                "incremental_allocated_ml": max(
+                    0.0,
+                    item.reclaimed_allocated_ml
+                    - incumbent_allocated,
+                ),
+                "potable_volume_displaced_ml": min(
+                    item.reclaimed_allocated_ml,
+                    request.potable_baseline_ml,
+                ),
+                "displaced_incumbent_potable_ml": min(
+                    incumbent_shortfall, request.potable_baseline_ml
+                ),
+                "quality_fixed_point_residual_ml": item.fixed_point_residual_ml,
+                "quality_solver_residual": item.quality_solver_residual,
+            }
+        diagnostic = {
+            "scenario_id": scenario_id,
+            "policy": mode,
+            "available_supply_ml": result.available_supply_ml,
+            "total_allocated_ml": result.total_allocated_ml,
+            "unallocated_supply_ml": result.unallocated_supply_ml,
+            "closure_residual_ml": result.closure_residual_ml,
+            "preserved_incumbent_reclaimed_ml": result.incumbent_allocated_ml,
+            "displaced_incumbent_potable_ml": math.fsum(
+                item["displaced_incumbent_potable_ml"] for item in records.values()
+            ),
+            "potable_volume_displaced_ml": math.fsum(
+                item["potable_volume_displaced_ml"] for item in records.values()
+            ),
+            "quality_integration_status": result.quality_integration_status,
+            "quality_solver_status": result.status,
+            "quality_solver_root_count": result.root_count,
+            "quality_solver_iterations": result.iterations,
+            "quality_max_fixed_point_residual_ml": result.max_fixed_point_residual_ml,
+        }
+        area_summaries: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(float))
+        for record in records.values():
+            area_id = record["area_id"]
+            category = record["category"]
+            state = area_state[area_id]
+            amount = max(0.0, float(record["total_allocated_ml"]))
+            remaining = max(0.0, float(state["remaining"].get(category, 0.0)))
+            reuse_limit = state.get("reuse_limits", {}).get(category, np.inf)
+            already_delivered = sum(
+                value
+                for (_reuse_type, delivered_category), value in state["reuse_delivered"].items()
+                if delivered_category == category
+            )
+            amount = min(amount, remaining, max(0.0, float(reuse_limit) - already_delivered))
+            state["remaining"][category] = remaining - amount
+            state["reuse_delivered"][("central", category)] += amount
+            record["total_allocated_ml"] = amount
+            area_summaries[area_id]["potable_volume_displaced_ml"] += record[
+                "potable_volume_displaced_ml"
+            ]
+            area_summaries[area_id]["displaced_incumbent_potable_ml"] += record[
+                "displaced_incumbent_potable_ml"
+            ]
+            area_summaries[area_id]["preserved_incumbent_reclaimed_ml"] += record[
+                "incumbent_allocated_ml"
+            ]
+            state.setdefault("reuse_allocation_records", {})[category] = {
+                **record,
+                "scenario_id": scenario_id,
+                "policy": mode,
+                "closure_residual_ml": diagnostic["closure_residual_ml"],
+                "quality_integration_status": result.quality_integration_status,
+            }
+        # Promote the main-model status only after the final evaluator plans
+        # and the allocation records have both been committed to state.
+        for context in context_by_consumer.values():
+            context["quality_integration_status"] = result.quality_integration_status
+        for area_id, summary in area_summaries.items():
+            state = area_state[area_id]
+            state.setdefault("reuse_allocation_summary", defaultdict(float))
+            for key, value in summary.items():
+                state["reuse_allocation_summary"][key] += value
+            state["reuse_allocation_summary"].update(
+                {
+                    "scenario_id": scenario_id,
+                    "policy": mode,
+                    "closure_residual_ml": diagnostic["closure_residual_ml"],
+                    "quality_integration_status": result.quality_integration_status,
+                    "quality_solver_status": result.status,
+                    "quality_solver_root_count": result.root_count,
+                }
+            )
+        return float(diagnostic["total_allocated_ml"]), records, diagnostic
+
+    def _allocate_opt_in_central_reuse(
+        self,
+        *,
+        date: pd.Timestamp,
+        component_id: str,
+        available_supply_ml: float,
+        eligible: list[str],
+        target_areas: list[str],
+        area_state: dict[str, dict[str, Any]],
+    ) -> tuple[float, dict[str, dict[str, Any]], dict[str, float]]:
+        """Apply one explicit central-reuse allocation transaction.
+
+        Existing non-data-centre categories are incumbent claims.  Data
+        centre categories are incremental claims.  Allocation is atomic over
+        all target areas so input component order cannot overdraw the pool.
+        When every eligible data centre is an opt-in quality-limited Q1
+        consumer under the shared policy, the treated-quality co-current
+        branch is selected; other configurations retain the volume-only gate.
+        """
+
+        mode = self.project.get("reuse_allocation_mode", "legacy")
+        scenario_id = f"{date.date()}::{component_id}::{mode}"
+        dc_categories = {
+            context["category"]: context
+            for context in self._data_center_plans.values()
+            if context["area_id"] in target_areas
+        }
+        joint_candidates = [
+            context
+            for context in dc_categories.values()
+            if context.get("reclaimed_component_id") == component_id
+            and context.get("quality_state_enabled")
+            and context["component"].get("cooling", {}).get("coc_mode", "fixed")
+            == "quality_limited"
+        ]
+        if (
+            mode == "shared_incumbent_first"
+            and joint_candidates
+            and len(joint_candidates) == len(dc_categories)
+        ):
+            return self._allocate_joint_quality_central_reuse(
+                date=date,
+                component_id=component_id,
+                available_supply_ml=available_supply_ml,
+                eligible=eligible,
+                target_areas=target_areas,
+                area_state=area_state,
+                dc_categories=dc_categories,
+            )
+        requests: list[AllocationRequest] = []
+        metadata: dict[str, tuple[str, str]] = {}
+        for area_id in sorted(target_areas):
+            state = area_state[area_id]
+            for category in sorted(set(eligible)):
+                if category.startswith("data_center::") and category not in dc_categories:
+                    continue
+                remaining = max(0.0, float(state["remaining"].get(category, 0.0)))
+                reuse_limit = state.get("reuse_limits", {}).get(category, np.inf)
+                already_delivered = sum(
+                    value
+                    for (_reuse_type, delivered_category), value in state[
+                        "reuse_delivered"
+                    ].items()
+                    if delivered_category == category
+                )
+                requested = min(
+                    remaining, max(0.0, float(reuse_limit) - already_delivered)
+                )
+                if requested <= 0.0:
+                    continue
+                consumer_id = f"{area_id}::{category}"
+                is_dc = category in dc_categories
+                potable_baseline = float(
+                    state.get("potable_limits", {}).get(category, requested)
+                )
+                requests.append(
+                    AllocationRequest(
+                        consumer_id=consumer_id,
+                        demand_ml=requested,
+                        incumbent_reclaimed_ml=0.0 if is_dc else requested,
+                        dedicated_supply_ml=requested if is_dc else 0.0,
+                        potable_baseline_ml=max(0.0, potable_baseline),
+                    )
+                )
+                metadata[consumer_id] = (area_id, category)
+
+        if mode == "shared_incumbent_first":
+            result = allocate_shared_surplus(
+                scenario_id, available_supply_ml, requests
+            )
+            records = {
+                row.consumer_id: {
+                    "area_id": metadata[row.consumer_id][0],
+                    "category": metadata[row.consumer_id][1],
+                    "total_allocated_ml": row.total_allocated_ml,
+                    "incumbent_allocated_ml": row.incumbent_allocated_ml,
+                    "incremental_allocated_ml": row.incremental_allocated_ml,
+                    "potable_volume_displaced_ml": row.potable_volume_displaced_ml,
+                    "displaced_incumbent_potable_ml": row.displaced_incumbent_potable_ml,
+                }
+                for row in result.allocations
+            }
+            diagnostic = {
+                "scenario_id": scenario_id,
+                "policy": mode,
+                "available_supply_ml": result.available_supply_ml,
+                "total_allocated_ml": result.total_allocated_ml,
+                "unallocated_supply_ml": result.unallocated_supply_ml,
+                "closure_residual_ml": result.closure_residual_ml,
+                "preserved_incumbent_reclaimed_ml": result.preserved_incumbent_reclaimed_ml,
+                "displaced_incumbent_potable_ml": result.displaced_incumbent_potable_ml,
+                "potable_volume_displaced_ml": result.potable_volume_displaced_ml,
+            }
+        else:
+            # Reserve incumbents first, then allocate the residual to a
+            # dedicated incremental pool.  This explicitly preserves
+            # incumbents and cannot silently displace their potable fallback.
+            incumbent_requests = [
+                AllocationRequest(
+                    consumer_id=item.consumer_id,
+                    demand_ml=item.incumbent_reclaimed_ml,
+                    incumbent_reclaimed_ml=item.incumbent_reclaimed_ml,
+                    potable_baseline_ml=item.potable_baseline_ml,
+                )
+                for item in requests
+                if item.incumbent_reclaimed_ml > 0.0
+            ]
+            incumbent_result = allocate_shared_surplus(
+                f"{scenario_id}::incumbent",
+                available_supply_ml,
+                incumbent_requests,
+            )
+            incumbent_rows = {
+                row.consumer_id: row for row in incumbent_result.allocations
+            }
+            residual_supply = max(
+                0.0, available_supply_ml - incumbent_result.total_allocated_ml
+            )
+            dedicated_requests = [
+                AllocationRequest(
+                    consumer_id=item.consumer_id,
+                    demand_ml=item.demand_ml,
+                    dedicated_supply_ml=item.dedicated_supply_ml,
+                    potable_baseline_ml=item.potable_baseline_ml,
+                )
+                for item in requests
+                if item.dedicated_supply_ml > 0.0
+            ]
+            dedicated_result = allocate_dedicated_incremental(
+                f"{scenario_id}::dedicated",
+                residual_supply,
+                dedicated_requests,
+            )
+            dedicated_rows = {
+                row.consumer_id: row for row in dedicated_result.allocations
+            }
+            records = {}
+            for item in requests:
+                incumbent_row = incumbent_rows.get(item.consumer_id)
+                dedicated_row = dedicated_rows.get(item.consumer_id)
+                incumbent_allocated = (
+                    incumbent_row.total_allocated_ml if incumbent_row else 0.0
+                )
+                incremental_allocated = (
+                    dedicated_row.total_allocated_ml if dedicated_row else 0.0
+                )
+                records[item.consumer_id] = {
+                    "area_id": metadata[item.consumer_id][0],
+                    "category": metadata[item.consumer_id][1],
+                    "total_allocated_ml": incumbent_allocated + incremental_allocated,
+                    "incumbent_allocated_ml": incumbent_allocated,
+                    "incremental_allocated_ml": incremental_allocated,
+                    "potable_volume_displaced_ml": (
+                        (incumbent_row.potable_volume_displaced_ml if incumbent_row else 0.0)
+                        + (dedicated_row.potable_volume_displaced_ml if dedicated_row else 0.0)
+                    ),
+                    "displaced_incumbent_potable_ml": (
+                        incumbent_row.displaced_incumbent_potable_ml
+                        if incumbent_row
+                        else 0.0
+                    ),
+                }
+            total_allocated = (
+                incumbent_result.total_allocated_ml
+                + dedicated_result.total_allocated_ml
+            )
+            unallocated = max(0.0, available_supply_ml - total_allocated)
+            diagnostic = {
+                "scenario_id": scenario_id,
+                "policy": mode,
+                "available_supply_ml": float(available_supply_ml),
+                "total_allocated_ml": total_allocated,
+                "unallocated_supply_ml": unallocated,
+                "closure_residual_ml": float(
+                    available_supply_ml - total_allocated - unallocated
+                ),
+                "preserved_incumbent_reclaimed_ml": incumbent_result.total_allocated_ml,
+                "displaced_incumbent_potable_ml": incumbent_result.displaced_incumbent_potable_ml,
+                "potable_volume_displaced_ml": (
+                    incumbent_result.potable_volume_displaced_ml
+                    + dedicated_result.potable_volume_displaced_ml
+                ),
+            }
+
+        area_summaries: dict[str, dict[str, float]] = defaultdict(
+            lambda: defaultdict(float)
+        )
+        for record in records.values():
+            area_id = record["area_id"]
+            category = record["category"]
+            state = area_state[area_id]
+            amount = max(0.0, float(record["total_allocated_ml"]))
+            remaining = max(0.0, float(state["remaining"].get(category, 0.0)))
+            reuse_limit = state.get("reuse_limits", {}).get(category, np.inf)
+            already_delivered = sum(
+                value
+                for (_reuse_type, delivered_category), value in state[
+                    "reuse_delivered"
+                ].items()
+                if delivered_category == category
+            )
+            amount = min(
+                amount,
+                remaining,
+                max(0.0, float(reuse_limit) - already_delivered),
+            )
+            state["remaining"][category] = remaining - amount
+            state["reuse_delivered"][("central", category)] += amount
+            record["total_allocated_ml"] = amount
+            area_summaries[area_id]["potable_volume_displaced_ml"] += record[
+                "potable_volume_displaced_ml"
+            ]
+            area_summaries[area_id]["displaced_incumbent_potable_ml"] += record[
+                "displaced_incumbent_potable_ml"
+            ]
+            area_summaries[area_id]["preserved_incumbent_reclaimed_ml"] += record[
+                "incumbent_allocated_ml"
+            ]
+            state.setdefault("reuse_allocation_records", {})[category] = {
+                **record,
+                "scenario_id": scenario_id,
+                "policy": mode,
+                "closure_residual_ml": diagnostic["closure_residual_ml"],
+            }
+        for area_id, summary in area_summaries.items():
+            state = area_state[area_id]
+            state.setdefault("reuse_allocation_summary", defaultdict(float))
+            for key, value in summary.items():
+                state["reuse_allocation_summary"][key] += value
+            state["reuse_allocation_summary"]["scenario_id"] = scenario_id
+            state["reuse_allocation_summary"]["policy"] = mode
+            state["reuse_allocation_summary"]["closure_residual_ml"] += diagnostic[
+                "closure_residual_ml"
+            ]
+        return float(diagnostic["total_allocated_ml"]), records, diagnostic
+
     def _process_reuse(
         self,
         date: pd.Timestamp,
@@ -1001,6 +2456,7 @@ class FullAIUWMModel:
             available = min(self.storage[component_id], treatment_capacity)
             delivered = 0.0
             eligible = list(component.get("eligible_demands", []))
+            opt_in_allocation = False
             if reuse_type == "central":
                 data_center_eligible: list[tuple[int, str]] = []
                 for context in self._data_center_plans.values():
@@ -1013,25 +2469,44 @@ class FullAIUWMModel:
                         source = context["component"].get("water_sources", {}).get("reclaimed", {})
                         data_center_eligible.append((int(source.get("priority", 100)), context["category"]))
                 eligible = [category for _priority, category in sorted(data_center_eligible)] + eligible
-            for area_id in target_areas:
-                state = area_state[area_id]
-                for category in eligible:
-                    if available <= 0:
-                        break
-                    remaining = state["remaining"].get(category, 0.0)
-                    requested = remaining
-                    reuse_limit = state.get("reuse_limits", {}).get(category, np.inf)
-                    already_delivered = sum(
-                        amount
-                        for (_reuse_type, delivered_category), amount in state["reuse_delivered"].items()
-                        if delivered_category == category
-                    )
-                    requested = min(requested, max(0.0, reuse_limit - already_delivered))
-                    amount = min(requested, available)
-                    state["remaining"][category] = remaining - amount
-                    state["reuse_delivered"][(reuse_type, category)] += amount
-                    delivered += amount
-                    available -= amount
+                opt_in_allocation = self.project.get(
+                    "reuse_allocation_mode", "legacy"
+                ) in {"shared_incumbent_first", "dedicated_incremental"}
+            if opt_in_allocation:
+                allocated, _records, diagnostic = self._allocate_opt_in_central_reuse(
+                    date=date,
+                    component_id=component_id,
+                    available_supply_ml=available,
+                    eligible=eligible,
+                    target_areas=target_areas,
+                    area_state=area_state,
+                )
+                delivered += allocated
+                available = max(0.0, available - allocated)
+                for area_id in target_areas:
+                    area_state[area_id].setdefault(
+                        "reuse_allocation_diagnostics", []
+                    ).append(diagnostic)
+            else:
+                for area_id in target_areas:
+                    state = area_state[area_id]
+                    for category in eligible:
+                        if available <= 0:
+                            break
+                        remaining = state["remaining"].get(category, 0.0)
+                        requested = remaining
+                        reuse_limit = state.get("reuse_limits", {}).get(category, np.inf)
+                        already_delivered = sum(
+                            amount
+                            for (_reuse_type, delivered_category), amount in state["reuse_delivered"].items()
+                            if delivered_category == category
+                        )
+                        requested = min(requested, max(0.0, reuse_limit - already_delivered))
+                        amount = min(requested, available)
+                        state["remaining"][category] = remaining - amount
+                        state["reuse_delivered"][(reuse_type, category)] += amount
+                        delivered += amount
+                        available -= amount
             storage_before_delivery = self.storage[component_id]
             delivered_fraction = delivered / max(storage_before_delivery, 1e-12)
             removed_mass: dict[str, float] = {}
@@ -1604,9 +3079,17 @@ class FullAIUWMModel:
             self.storage[central_id] += transfer
             metrics[central_id]["inflow_ml"] += transfer
             metrics[central_id]["storage_ml"] = self.storage[central_id]
+            if self._same_day_wwtw_phase_mode != "off":
+                self._same_day_wwtw_production_today[central_id] += transfer
             transfer_fraction = transfer / max(treatment, 1e-12)
+            transferred_mass: dict[str, float] = {}
             for pollutant, mass in treated_mass.items():
-                self.pollutant_storage[central_id][pollutant] += mass * transfer_fraction
+                transferred = mass * transfer_fraction
+                self.pollutant_storage[central_id][pollutant] += transferred
+                transferred_mass[pollutant] = transferred
+            if self._same_day_wwtw_phase_mode != "off":
+                for pollutant, mass in transferred_mass.items():
+                    self._same_day_wwtw_production_mass_today[central_id][pollutant] += mass
             discharge_fraction = 1.0 - transfer_fraction
             treated_mass = _split_mass(treated_mass, discharge_fraction)
             treatment -= transfer
@@ -2369,6 +3852,23 @@ class FullAIUWMModel:
                     "appliance_annualized_capital_cost_eur"
                 ],
             }
+            allocation_summary = state.get("reuse_allocation_summary", {})
+            if allocation_summary:
+                row["reuse_allocation_scenario_id"] = allocation_summary.get(
+                    "scenario_id", ""
+                )
+                row["reuse_allocation_policy"] = allocation_summary.get(
+                    "policy", ""
+                )
+                for name in (
+                    "potable_volume_displaced_ml",
+                    "displaced_incumbent_potable_ml",
+                    "preserved_incumbent_reclaimed_ml",
+                    "closure_residual_ml",
+                ):
+                    row[f"reuse_allocation_{name}"] = float(
+                        allocation_summary.get(name, 0.0)
+                    )
             for category, value in state["demand"].items():
                 row[f"demand_{category}_ml"] = value
                 row[f"potable_{category}_ml"] = state["potable_delivered"].get(category, 0.0)
@@ -2438,6 +3938,52 @@ class FullAIUWMModel:
                 ),
             }
         )
+        if self._same_day_wwtw_phase_diagnostic:
+            phase = self._same_day_wwtw_phase_diagnostic
+            # Keep the timing boundary visible in the system table.  These
+            # fields are emitted only for the explicit opt-in diagnostic mode
+            # so legacy/default result schemas and values remain unchanged.
+            system.update(
+                {
+                    "same_day_wwtw_phase_status": phase["status"],
+                    "same_day_wwtw_production_ml": float(
+                        phase["same_day_production_ml"]
+                    ),
+                    "same_day_wwtw_consumed_ml": float(
+                        phase["same_day_consumed_ml"]
+                    ),
+                    "same_day_wwtw_data_center_consumed_ml": float(
+                        phase.get("same_day_data_center_consumed_ml", 0.0)
+                    ),
+                    "same_day_wwtw_carryover_ml": float(
+                        phase["same_day_carryover_ml"]
+                    ),
+                    "same_day_wwtw_eligible_unmet_ml": float(
+                        phase["same_day_eligible_unmet_ml"]
+                    ),
+                    "same_day_wwtw_data_center_unmet_ml": float(
+                        phase["same_day_data_center_unmet_ml"]
+                    ),
+                    "same_day_wwtw_feedback_to_data_center": bool(
+                        phase["same_day_feedback_to_data_center"]
+                    ),
+                    "same_day_wwtw_closure_residual_ml": float(
+                        phase["closure_residual_ml"]
+                    ),
+                    "same_day_wwtw_storage_reconciliation_residual_ml": float(
+                        phase["storage_reconciliation_residual_ml"]
+                    ),
+                    "same_day_wwtw_co_current_iterations": int(
+                        phase.get("co_current_iterations", 0)
+                    ),
+                    "same_day_wwtw_co_current_max_residual_ml": float(
+                        phase.get("co_current_max_residual_ml", 0.0)
+                    ),
+                    "same_day_wwtw_co_current_max_mass_residual_kg": float(
+                        phase.get("co_current_max_mass_residual_kg", 0.0)
+                    ),
+                }
+            )
         electricity_factor = self.project.get("energy_sources", {}).get("electricity", {})
         appliance_kwh = sum(row["appliance_electricity_kwh"] for row in area_rows_today)
         system["ghg_caused_kg_co2e"] += appliance_kwh * float(

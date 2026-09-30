@@ -222,6 +222,7 @@ def _pue(
 def _cycles_of_concentration(
     component: Mapping[str, Any], cooling: Mapping[str, Any],
     source_fractions: Mapping[str, float] | None = None,
+    source_quality_overrides: Mapping[str, Mapping[str, float]] | None = None,
 ) -> tuple[float, bool]:
     default_coc = 7.0 if cooling.get("technology") == "efficient_evaporative" else 5.0
     design = max(1.000001, float(cooling.get("cycles_of_concentration", default_coc)))
@@ -236,7 +237,16 @@ def _cycles_of_concentration(
             if source_fractions is not None
             else float(source.get("target_fraction", 0.0))
         )
-        for indicator, value in source.get("quality", {}).items():
+        # ``quality`` is the legacy project-file key.  ``quality_mg_l`` is
+        # the explicit R10 schema; accept both while the registry migration
+        # is completed so a Q1 fixture cannot silently fall back to design CoC.
+        quality = (
+            source_quality_overrides.get(source_name, {})
+            if source_quality_overrides is not None
+            and source_name in source_quality_overrides
+            else source.get("quality_mg_l", source.get("quality", {}))
+        )
+        for indicator, value in quality.items():
             concentrations[indicator] = concentrations.get(indicator, 0.0) + fraction * float(value)
     ratios = [
         float(limit) / concentrations[indicator]
@@ -254,6 +264,9 @@ def calculate_data_center_plan(
     drivers: Mapping[str, Any],
     *,
     reclaimed_available_ml: float | None = None,
+    reclaimed_quality_mg_l: Mapping[str, float] | None = None,
+    quality_recovered_return_volume_ml: float = 0.0,
+    quality_recovered_return_mass_kg: Mapping[str, float] | None = None,
 ) -> DataCenterPlan:
     temperature = float(drivers.get("temperature_c", 20.0))
     humidity_value = drivers.get("relative_humidity", drivers.get("relative_humidity_pct"))
@@ -295,7 +308,29 @@ def calculate_data_center_plan(
     quality_solver_status = "not_applicable"
     quality_solver_residual = float("nan")
     quality_solver_root_count = 0
-    coc, quality_fallback = _cycles_of_concentration(component, cooling)
+    design_coc = max(
+        1.000001,
+        float(
+            cooling.get(
+                "cycles_of_concentration",
+                7.0 if technology == "efficient_evaporative" else 5.0,
+            )
+        ),
+    )
+    source_quality_overrides = (
+        {"reclaimed": dict(reclaimed_quality_mg_l)}
+        if reclaimed_quality_mg_l is not None
+        else None
+    )
+    recovered_return_volume = max(0.0, float(quality_recovered_return_volume_ml))
+    recovered_return_mass = {
+        str(name): max(0.0, float(value))
+        for name, value in (quality_recovered_return_mass_kg or {}).items()
+    }
+    limits = cooling.get("water_quality_limits", {})
+    coc, quality_fallback = _cycles_of_concentration(
+        component, cooling, source_quality_overrides=source_quality_overrides
+    )
     if (
         reclaimed_available_ml is not None
         and cooling.get("coc_mode", "fixed") == "quality_limited"
@@ -338,6 +373,80 @@ def calculate_data_center_plan(
             )
             return consumption_value + return_flow_value
 
+        def _mixed_quality_for_fraction(
+            fraction: float, external_volume: float
+        ) -> dict[str, float]:
+            """Mix external makeup with the explicitly carried loop return pool."""
+            fractions = {
+                "reclaimed": fraction,
+                "potable": max(0.0, 1.0 - other_fraction - fraction),
+            }
+            for name, source in sources.items():
+                if name not in fractions:
+                    fractions[name] = float(source.get("target_fraction", 0.0))
+            external_mass: dict[str, float] = {}
+            for source_name, source_fraction in fractions.items():
+                if (
+                    source_quality_overrides is not None
+                    and source_name in source_quality_overrides
+                ):
+                    quality = source_quality_overrides[source_name]
+                else:
+                    source = sources.get(source_name, {})
+                    quality = source.get("quality_mg_l", source.get("quality", {}))
+                if not isinstance(quality, Mapping):
+                    continue
+                for name, value in quality.items():
+                    external_mass[str(name)] = external_mass.get(str(name), 0.0) + (
+                        external_volume * source_fraction * max(0.0, float(value))
+                    )
+            total_volume = recovered_return_volume + external_volume
+            if total_volume <= 1e-12:
+                return {}
+            names = set(external_mass) | set(recovered_return_mass)
+            return {
+                name: (
+                    external_mass.get(name, 0.0) + recovered_return_mass.get(name, 0.0)
+                )
+                / total_volume
+                for name in names
+            }
+
+        def _coc_with_return_pool(
+            fraction: float,
+            initial_coc: float,
+            fractions: Mapping[str, float],
+        ) -> tuple[float, bool, float]:
+            """Solve CoC against source plus the carried recovered-return pool."""
+            if recovered_return_volume <= 1e-12:
+                candidate_coc, candidate_fallback = _cycles_of_concentration(
+                    component,
+                    cooling,
+                    fractions,
+                    source_quality_overrides=source_quality_overrides,
+                )
+                return candidate_coc, candidate_fallback, 0.0
+            candidate = max(1.000001, min(float(initial_coc), design_coc))
+            residual = 0.0
+            for _ in range(100):
+                external = _external_makeup_for_coc(candidate)
+                mixed = _mixed_quality_for_fraction(fraction, external)
+                ratios = [
+                    float(limit) / mixed[name]
+                    for name, limit in limits.items()
+                    if mixed.get(name, 0.0) > 0.0
+                ]
+                target = (
+                    max(1.000001, min(design_coc, min(ratios)))
+                    if ratios
+                    else design_coc
+                )
+                residual = target - candidate
+                candidate = 0.5 * candidate + 0.5 * target
+                if abs(residual) <= 1e-11:
+                    break
+            return candidate, bool(not mixed), residual
+
         def _fixed_point_residual(fraction: float) -> tuple[float, float, bool, float]:
             fractions = {
                 "reclaimed": fraction,
@@ -346,8 +455,14 @@ def calculate_data_center_plan(
             for name, source in sources.items():
                 if name not in fractions:
                     fractions[name] = float(source.get("target_fraction", 0.0))
-            candidate_coc, candidate_fallback = _cycles_of_concentration(
-                component, cooling, fractions
+            initial_coc, initial_fallback = _cycles_of_concentration(
+                component,
+                cooling,
+                fractions,
+                source_quality_overrides=source_quality_overrides,
+            )
+            candidate_coc, candidate_fallback, _return_residual = _coc_with_return_pool(
+                fraction, initial_coc, fractions
             )
             candidate_external = _external_makeup_for_coc(candidate_coc)
             delivered_fraction = (

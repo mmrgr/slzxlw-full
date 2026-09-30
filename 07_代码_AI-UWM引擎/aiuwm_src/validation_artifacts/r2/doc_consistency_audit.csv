@@ -8,18 +8,18 @@ research,CO 日/年/小时 max-safe 三元组,CO 为 1450/1700/1350 MW,1350.0,13
 research,HA 物理年边界,HA 去除再生水目标后的物理年边界为 1650 MW,1650.0,1650.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_annual|max_safe_mw
 research,10 年联合边界,联合边界为 HA 250 MW、CO 900 MW,250.0,250.0,PASS,reservoir_multiyear_10y.json,ha:reservoir_10y|max_safe_mw
 research,10 年联合边界,联合边界为 HA 250 MW、CO 900 MW,900.0,900.0,PASS,reservoir_multiyear_10y.json,co:reservoir_10y|max_safe_mw
-plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1150/1650/1100 MW | 1450/1700/1350 MW,1150.0,1150.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_daily|max_safe_mw
-plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1150/1650/1100 MW | 1450/1700/1350 MW,1650.0,1650.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_annual|max_safe_mw
-plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1150/1650/1100 MW | 1450/1700/1350 MW,1100.0,1100.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_hourly|max_safe_mw
-plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1150/1650/1100 MW | 1450/1700/1350 MW,1450.0,1450.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_daily|max_safe_mw
-plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1150/1650/1100 MW | 1450/1700/1350 MW,1700.0,1700.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_annual|max_safe_mw
-plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1150/1650/1100 MW | 1450/1700/1350 MW,1350.0,1350.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_hourly|max_safe_mw
-plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1150/1300/1100 MW | 1450/1700/1350 MW,1150.0,1150.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:daily|max_safe_mw
-plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1150/1300/1100 MW | 1450/1700/1350 MW,1300.0,1300.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:annual|max_safe_mw
-plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1150/1300/1100 MW | 1450/1700/1350 MW,1100.0,1100.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_hourly|max_safe_mw
-plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1150/1300/1100 MW | 1450/1700/1350 MW,1450.0,1450.0,PASS,co/capacity_threshold_corrected.json,co:threshold:daily|max_safe_mw
-plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1150/1300/1100 MW | 1450/1700/1350 MW,1700.0,1700.0,PASS,co/capacity_threshold_corrected.json,co:threshold:annual|max_safe_mw
-plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1150/1300/1100 MW | 1450/1700/1350 MW,1350.0,1350.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_hourly|max_safe_mw
+plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1100/1650/1100 MW | 1450/1700/1350 MW,1100.0,1150.0,MISMATCH,ha/capacity_threshold_corrected.json,ha:threshold:physical_daily|max_safe_mw
+plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1100/1650/1100 MW | 1450/1700/1350 MW,1650.0,1650.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_annual|max_safe_mw
+plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1100/1650/1100 MW | 1450/1700/1350 MW,1100.0,1100.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_hourly|max_safe_mw
+plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1100/1650/1100 MW | 1450/1700/1350 MW,1450.0,1450.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_daily|max_safe_mw
+plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1100/1650/1100 MW | 1450/1700/1350 MW,1700.0,1700.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_annual|max_safe_mw
+plan,plan 表：物理 CAWCC 日/年/小时,| 物理 CAWCC（日/年/小时代理） | 1100/1650/1100 MW | 1450/1700/1350 MW,1350.0,1350.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_hourly|max_safe_mw
+plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1100/1250/1100 MW | 1450/1700/1350 MW,1100.0,1150.0,MISMATCH,ha/capacity_threshold_corrected.json,ha:threshold:daily|max_safe_mw
+plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1100/1250/1100 MW | 1450/1700/1350 MW,1250.0,1300.0,MISMATCH,ha/capacity_threshold_corrected.json,ha:threshold:annual|max_safe_mw
+plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1100/1250/1100 MW | 1450/1700/1350 MW,1100.0,1100.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_hourly|max_safe_mw
+plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1100/1250/1100 MW | 1450/1700/1350 MW,1450.0,1450.0,PASS,co/capacity_threshold_corrected.json,co:threshold:daily|max_safe_mw
+plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1100/1250/1100 MW | 1450/1700/1350 MW,1700.0,1700.0,PASS,co/capacity_threshold_corrected.json,co:threshold:annual|max_safe_mw
+plan,plan 表：综合口径 日/年/小时,| 综合口径（含再生水政策目标） | 1100/1250/1100 MW | 1450/1700/1350 MW,1350.0,1350.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_hourly|max_safe_mw
 plan,plan 表：两年末库容边界,| 两年末库容边界（期末≥初值） | 150/200 MW | 900/950 MW,150.0,150.0,PASS,reservoir_sustainability_corrected.json,ha:reservoir_2y|max_safe_mw
 plan,plan 表：两年末库容边界,| 两年末库容边界（期末≥初值） | 150/200 MW | 900/950 MW,200.0,200.0,PASS,reservoir_sustainability_corrected.json,ha:reservoir_2y|first_fail_mw
 plan,plan 表：两年末库容边界,| 两年末库容边界（期末≥初值） | 150/200 MW | 900/950 MW,900.0,900.0,PASS,reservoir_sustainability_corrected.json,co:reservoir_2y|max_safe_mw
@@ -28,18 +28,18 @@ plan,plan 表：10 年合成联合边界,| 10 年合成联合边界（末库容�
 plan,plan 表：10 年合成联合边界,| 10 年合成联合边界（末库容≥90%初值 且可靠性≥99%） | 250/300 MW | 900/950 MW,300.0,300.0,PASS,reservoir_multiyear_10y.json,ha:reservoir_10y|first_fail_mw
 plan,plan 表：10 年合成联合边界,| 10 年合成联合边界（末库容≥90%初值 且可靠性≥99%） | 250/300 MW | 900/950 MW,900.0,900.0,PASS,reservoir_multiyear_10y.json,co:reservoir_10y|max_safe_mw
 plan,plan 表：10 年合成联合边界,| 10 年合成联合边界（末库容≥90%初值 且可靠性≥99%） | 250/300 MW | 900/950 MW,950.0,950.0,PASS,reservoir_multiyear_10y.json,co:reservoir_10y|first_fail_mw
-plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1200 MW | 1250/1350/1500 MW,950.0,950.0,PASS,ha/probabilistic_corrected_summary.json,ha:probabilistic_physical|p05
-plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1200 MW | 1250/1350/1500 MW,1050.0,1050.0,PASS,ha/probabilistic_corrected_summary.json,ha:probabilistic_physical|p50
-plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1200 MW | 1250/1350/1500 MW,1200.0,1200.0,PASS,ha/probabilistic_corrected_summary.json,ha:probabilistic_physical|p95
-plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1200 MW | 1250/1350/1500 MW,1250.0,1250.0,PASS,co/probabilistic_corrected_summary.json,co:probabilistic_physical|p05
-plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1200 MW | 1250/1350/1500 MW,1350.0,1350.0,PASS,co/probabilistic_corrected_summary.json,co:probabilistic_physical|p50
-plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1200 MW | 1250/1350/1500 MW,1500.0,1500.0,PASS,co/probabilistic_corrected_summary.json,co:probabilistic_physical|p95
+plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1150 MW | 1250/1350/1500 MW,950.0,950.0,PASS,ha/probabilistic_corrected_summary.json,ha:probabilistic_physical|p05
+plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1150 MW | 1250/1350/1500 MW,1050.0,1050.0,PASS,ha/probabilistic_corrected_summary.json,ha:probabilistic_physical|p50
+plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1150 MW | 1250/1350/1500 MW,1150.0,1200.0,MISMATCH,ha/probabilistic_corrected_summary.json,ha:probabilistic_physical|p95
+plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1150 MW | 1250/1350/1500 MW,1250.0,1250.0,PASS,co/probabilistic_corrected_summary.json,co:probabilistic_physical|p05
+plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1150 MW | 1250/1350/1500 MW,1350.0,1350.0,PASS,co/probabilistic_corrected_summary.json,co:probabilistic_physical|p50
+plan,plan 表：1024 样本概率分布 P05/P50/P95,| 概率分布（1024 样本，物理 CAWCC） | P05/P50/P95 = 950/1050/1150 MW | 1250/1350/1500 MW,1500.0,1500.0,PASS,co/probabilistic_corrected_summary.json,co:probabilistic_physical|p95
 plan,plan 表：10 年多序列联合边界中位数（T0.4）,"| 10 年**多序列**联合边界（T0.4） | 12 条独立合成序列，同上门槛，报中位数与范围 | **200 MW**（[200,300]，n=12） | **900 MW**",200.0,200.0,PASS,reservoir_multiyear_ensemble.json,ha:reservoir_ensemble|median_mw
 plan,plan 表：10 年多序列联合边界中位数（T0.4）,"| 10 年**多序列**联合边界（T0.4） | 12 条独立合成序列，同上门槛，报中位数与范围 | **200 MW**（[200,300]，n=12） | **900 MW**",900.0,900.0,PASS,reservoir_multiyear_ensemble.json,co:reservoir_ensemble|median_mw
-plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1150 → 1200 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1150.0,1150.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:daily|max_safe_mw
-plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1150 → 1200 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1200.0,1200.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:daily|first_fail_mw
-plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1150 → 1200 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1450.0,1450.0,PASS,co/capacity_threshold_corrected.json,co:threshold:daily|max_safe_mw
-plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1150 → 1200 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1500.0,1500.0,PASS,co/capacity_threshold_corrected.json,co:threshold:daily|first_fail_mw
+plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1100 → 1150 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1100.0,1150.0,MISMATCH,ha/capacity_threshold_corrected.json,ha:threshold:daily|max_safe_mw
+plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1100 → 1150 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1150.0,1200.0,MISMATCH,ha/capacity_threshold_corrected.json,ha:threshold:daily|first_fail_mw
+plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1100 → 1150 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1450.0,1450.0,PASS,co/capacity_threshold_corrected.json,co:threshold:daily|max_safe_mw
+plan,项目说明表：物理 CAWCC 日尺度,| 物理 CAWCC（日尺度，50 MW 网格） | 9 项水源/给水/污水/再生水/接网约束首个失效点 | 1100 → 1150 MW（限制约束 `max_source_abstraction_ratio`） | 1450 → 1500 MW,1500.0,1500.0,PASS,co/capacity_threshold_corrected.json,co:threshold:daily|first_fail_mw
 plan,项目说明表：物理 CAWCC 年尺度（纯物理子集）,| 物理 CAWCC（年尺度） | 同约束家族的年度均值口径 | 1650 → 1700 MW | 1700 → 1750 MW,1650.0,1650.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_annual|max_safe_mw
 plan,项目说明表：物理 CAWCC 年尺度（纯物理子集）,| 物理 CAWCC（年尺度） | 同约束家族的年度均值口径 | 1650 → 1700 MW | 1700 → 1750 MW,1700.0,1700.0,PASS,ha/capacity_threshold_corrected.json,ha:threshold:physical_annual|first_fail_mw
 plan,项目说明表：物理 CAWCC 年尺度（纯物理子集）,| 物理 CAWCC（年尺度） | 同约束家族的年度均值口径 | 1650 → 1700 MW | 1700 → 1750 MW,1700.0,1700.0,PASS,co/capacity_threshold_corrected.json,co:threshold:physical_annual|max_safe_mw
@@ -60,9 +60,9 @@ plan,项目说明表：污水厂酸化占 UWS 总酸化份额（A09）,| WWTW �
 plan,项目说明表：污水厂酸化占 UWS 总酸化份额（A09）,| WWTW 占 UWS 已造成酸化比（A09） | 0.40143 | 0.40147,0.40147,0.40147,PASS,literature_anchor_check_R7.csv,co:anchor|A09
 plan,项目说明表：间接水占数据中心总水足迹份额（A22）,| 间接水占数据中心总水足迹比（A22） | 0.55050 | 0.55050,0.5505,0.5505,PASS,literature_anchor_check_R7.csv,ha:anchor|A22
 plan,项目说明表：间接水占数据中心总水足迹份额（A22）,| 间接水占数据中心总水足迹比（A22） | 0.55050 | 0.55050,0.5505,0.5505,PASS,literature_anchor_check_R7.csv,co:anchor|A22
-plan,项目说明表：再生水比例 0→0.9 的 CoC 降幅,| 再生水比例 0→0.9 的 CoC 降幅（%） | 22.51 | 19.20,22.51,22.51,PASS,reclaimed_fraction_sweep_R8.csv,ha:reclaim|coc_drop_pct
-plan,项目说明表：再生水比例 0→0.9 的 CoC 降幅,| 再生水比例 0→0.9 的 CoC 降幅（%） | 22.51 | 19.20,19.2,19.2,PASS,reclaimed_fraction_sweep_R8.csv,co:reclaim|coc_drop_pct
-plan,项目说明表：再生水比例 0→0.9 的每单位散热取水升幅,| 再生水比例 0→0.9 的每单位散热取水升幅（%） | 7.14 | 5.75,7.14,7.14,PASS,reclaimed_fraction_sweep_R8.csv,ha:reclaim|withdraw_rise_pct
-plan,项目说明表：再生水比例 0→0.9 的每单位散热取水升幅,| 再生水比例 0→0.9 的每单位散热取水升幅（%） | 7.14 | 5.75,5.75,5.75,PASS,reclaimed_fraction_sweep_R8.csv,co:reclaim|withdraw_rise_pct
-plan,项目说明表：再生水比例 0→0.9 的排入下水道量升幅,| 再生水比例 0→0.9 的排入下水道量升幅（%） | 38.89 | 31.35,38.89,38.89,PASS,reclaimed_fraction_sweep_R8.csv,ha:reclaim|sewer_rise_pct
-plan,项目说明表：再生水比例 0→0.9 的排入下水道量升幅,| 再生水比例 0→0.9 的排入下水道量升幅（%） | 38.89 | 31.35,31.35,31.35,PASS,reclaimed_fraction_sweep_R8.csv,co:reclaim|sewer_rise_pct
+plan,项目说明表：再生水比例 0→0.9 的 CoC 降幅,| 再生水比例 0→0.9 的 CoC 降幅（%） | 21.59 | 18.28,21.59,22.51,MISMATCH,reclaimed_fraction_sweep_R8.csv,ha:reclaim|coc_drop_pct
+plan,项目说明表：再生水比例 0→0.9 的 CoC 降幅,| 再生水比例 0→0.9 的 CoC 降幅（%） | 21.59 | 18.28,18.28,19.2,MISMATCH,reclaimed_fraction_sweep_R8.csv,co:reclaim|coc_drop_pct
+plan,项目说明表：再生水比例 0→0.9 的每单位散热取水升幅,| 再生水比例 0→0.9 的每单位散热取水升幅（%） | 7.33 | 5.88,7.33,7.14,MISMATCH,reclaimed_fraction_sweep_R8.csv,ha:reclaim|withdraw_rise_pct
+plan,项目说明表：再生水比例 0→0.9 的每单位散热取水升幅,| 再生水比例 0→0.9 的每单位散热取水升幅（%） | 7.33 | 5.88,5.88,5.75,MISMATCH,reclaimed_fraction_sweep_R8.csv,co:reclaim|withdraw_rise_pct
+plan,项目说明表：再生水比例 0→0.9 的排入下水道量升幅,| 再生水比例 0→0.9 的排入下水道量升幅（%） | 36.70 | 29.40,36.7,38.89,MISMATCH,reclaimed_fraction_sweep_R8.csv,ha:reclaim|sewer_rise_pct
+plan,项目说明表：再生水比例 0→0.9 的排入下水道量升幅,| 再生水比例 0→0.9 的排入下水道量升幅（%） | 36.70 | 29.40,29.4,31.35,MISMATCH,reclaimed_fraction_sweep_R8.csv,co:reclaim|sewer_rise_pct

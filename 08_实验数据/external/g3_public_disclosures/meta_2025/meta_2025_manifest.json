@@ -1,0 +1,61 @@
+{
+  "evidence_id": "E2-META-2025-DC",
+  "status": "CANDIDATE_PARTIAL",
+  "evidence_class": "E2_public_annual_disclosure",
+  "source": {
+    "publisher": "Meta Platforms, Inc.",
+    "title": "Meta 2025 Environmental Data Index",
+    "url": "https://sustainability.atmeta.com/wp-content/uploads/2025/10/Meta_2025-Environmental-Data-Index.pdf",
+    "landing_page": "https://sustainability.atmeta.com/sustainability-report/",
+    "reporting_period": "2020-2024",
+    "retrieved_utc": "2026-09-30",
+    "license": "public_report_terms_unspecified"
+  },
+  "extracted_files": [
+    {
+      "path": "Meta_2025-Environmental-Data-Index.pdf",
+      "sha256": "d7527cd23308869105b404b486117603bb3f5ee10e30499367f8698110afb66d",
+      "content": "source PDF; pages F and I contain facility electricity and water withdrawal tables"
+    },
+    {
+      "path": "meta_2025_facility_annual.csv",
+      "sha256": "8ecebdc044b65a60b949b56aa207d8c8d993fe9f3f8dd6f1bb788dcf822ca466",
+      "content": "90 annual rows for 18 named data-center facilities; blank cells preserve source dashes"
+    }
+  ],
+  "extraction": {
+    "tool": "pypdf",
+    "version": "6.10.0",
+    "source_pages": ["F", "I"],
+    "units": {
+      "electricity_mwh": "MWh",
+      "water_withdrawal_ml": "megaliters"
+    }
+  },
+  "coverage": {
+    "facility_count": 18,
+    "year_count": 5,
+    "annual_rows": 90,
+    "facility_ids": [
+      "Altoona_IA", "Clonee_Ireland", "DeKalb_IL", "Eagle_Mountain_UT",
+      "Forest_City_NC", "Fort_Worth_TX", "Gallatin_TN", "Henrico_VA",
+      "Huntsville_AL", "Kansas_City_MO", "Los_Lunas_NM", "Lulea_Sweden",
+      "Mesa_AZ", "New_Albany_OH", "Odense_Denmark", "Prineville_OR",
+      "Sarpy_NE", "Stanton_Springs_GA"
+    ]
+  },
+  "reconciliation": {
+    "included_scope": "18 named facilities only",
+    "excluded_source_categories": ["Leased data center facilities", "Other data center-related facilities"],
+    "reason": "The source table reports those categories without a facility identifier; they are not silently assigned to a named site.",
+    "named_site_totals_may_be_below_source_data_centers_total": true
+  },
+  "gate_effect": {
+    "g3": "NOT_READY",
+    "reason": "Annual operator disclosure supplies facility-level electricity and water-withdrawal totals, but no daily timestamps, meter IDs, makeup/blowdown split, CoC, WUE observations per facility, weather, calibration metadata, or train/holdout provenance.",
+    "allowed_use": ["source availability audit", "annual magnitude and facility-list cross-check"],
+    "excluded_use": ["G3 leave-one-facility-out runner input", "daily facility prediction accuracy", "field-calibrated CoC or WUE"],
+    "missing_requirements": ["at least 12 months of traceable daily or higher-frequency measurements per facility", "meter and aggregation metadata", "out-of-sample predictions separated by facility", "cooling makeup/blowdown/CoC fields"]
+  }
+}
+

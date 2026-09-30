@@ -16,6 +16,7 @@ aiuwm-studio = "aiuwm.studio:main"
 
 [project.optional-dependencies]
 test = ["pytest>=8", "httpx>=0.28"]
+chemistry = ["phreeqpython==1.6.2"]
 studio = [
     "fastapi>=0.116",
     "uvicorn[standard]>=0.35",

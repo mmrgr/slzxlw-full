@@ -1,9 +1,8 @@
 """Small, auditable water-quality state primitives.
 
-This module is intentionally not wired into :mod:`full_engine` yet.  It
-defines the units and mass bookkeeping needed before cooling-storage quality
-can be coupled to the R9 fixed point.  ``1 ML * 1 mg/L = 1 kg`` exactly, so
-the representation avoids hidden litre-to-kilogram conversions.
+The R10a vertical slice wires these primitives into the opt-in per-data-center
+cooling-storage state in :mod:`full_engine`.  ``1 ML * 1 mg/L = 1 kg`` exactly,
+so the representation avoids hidden litre-to-kilogram conversions.
 """
 from __future__ import annotations
 
