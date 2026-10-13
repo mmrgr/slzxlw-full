@@ -1,0 +1,3 @@
+sample_id,water_resource,ec_us_cm,ph,na_mmol_l,k_mmol_l,hco3_mmol_l,cl_mmol_l,ca_mmol_l,mg_mmol_l,so4_mmol_l,sar,tn_mg_l,tp_mg_l,pb_mg_l,cu_mg_l,zn_mg_l,cd_mg_l,charge_balance
+FIGSHARE-28948753-RW,RW,2120.0,8.17,13.5,0.36,4.56,8.85,2.28,3.1,5.28,5.81,0.52,0.05,,,,,"{'cation_meq_l': 24.619999999999997, 'anion_meq_l': 23.97, 'charge_balance_percent': 2.6754476229676833, 'status': 'PASS_SCREEN'}"
+FIGSHARE-28948753-BW_5_g_L_1,BW (5 g·L<sup>-1</sup>),9432.0,8.44,87.0,0.07,2.28,90.9,0.92,0.77,1.14,66.86,1.18,0.02,,,,,"{'cation_meq_l': 90.45, 'anion_meq_l': 95.46000000000001, 'charge_balance_percent': -5.389704695820563, 'status': 'REVIEW_REQUIRED'}"

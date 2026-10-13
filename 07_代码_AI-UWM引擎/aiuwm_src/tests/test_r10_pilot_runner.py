@@ -190,6 +190,21 @@ def test_verified_g2_manifest_can_become_ready(tmp_path: Path) -> None:
     result = audit(repo)
     assert result["g2"]["status"] == "READY"
 
+    # A set-equality check alone could accept duplicate sample IDs while
+    # silently omitting another sample.  The audit must reject that manifest.
+    with output_csv.open("r", encoding="utf-8", newline="") as handle:
+        output_rows = list(csv.DictReader(handle))
+        output_fields = list(output_rows[0])
+    output_rows[1]["sample_id"] = output_rows[0]["sample_id"]
+    with output_csv.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=output_fields)
+        writer.writeheader()
+        writer.writerows(output_rows)
+    manifest["output_hashes"]["per_sample"] = _sha256(output_csv)
+    (out / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    result = audit(repo)
+    assert result["g2"]["status"] == "NOT_READY"
+
 
 def test_verified_g3_manifest_requires_real_rows_and_review(tmp_path: Path) -> None:
     repo = _fixture(tmp_path, status="gate_pass")

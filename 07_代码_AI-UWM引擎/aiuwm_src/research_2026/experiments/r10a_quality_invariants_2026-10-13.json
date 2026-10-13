@@ -1,0 +1,54 @@
+{
+  "artifact": "R10a_single_dc_quality_invariants",
+  "generated_at": "2026-10-13T08:56:12.735305+00:00",
+  "status": "PASS_INTERNAL_DIAGNOSTIC",
+  "gate_classification": "diagnostic_only",
+  "formal_g2_or_g3_evidence": false,
+  "scope": {
+    "engine": "examples/ai_data_center/project.json",
+    "days": 1,
+    "data_centres": 1,
+    "quality_inputs": "declared treated-output scenario values"
+  },
+  "checks": {
+    "all_metrics_finite": true,
+    "solver_converged": true,
+    "quality_provenance_is_treated_output": true,
+    "water_and_solute_closure": true,
+    "higher_tds_does_not_increase_quality_limited_coc": true
+  },
+  "scenarios": [
+    {
+      "treated_tds_mg_l": 100.0,
+      "metrics": {
+        "water_balance_residual_ml": -2.220446049250313e-16,
+        "quality_solute_closure_residual_kg": 0.0,
+        "quality_process_solute_closure_residual_kg": 0.0,
+        "quality_partition_closure_TDS_kg": 0.0,
+        "quality_storage_water_balance_residual_ml": 0.0,
+        "quality_recovered_return_volume_residual_ml": 0.0,
+        "quality_recovered_return_mass_residual_kg": 0.0,
+        "cycles_of_concentration": 8.0,
+        "quality_process_TDS_mg_l": 130.0,
+        "quality_solver_status": "converged",
+        "quality_reclaimed_quality_provenance": "treated_output"
+      }
+    },
+    {
+      "treated_tds_mg_l": 900.0,
+      "metrics": {
+        "water_balance_residual_ml": 0.0,
+        "quality_solute_closure_residual_kg": 0.0,
+        "quality_process_solute_closure_residual_kg": 0.0,
+        "quality_partition_closure_TDS_kg": 0.0,
+        "quality_storage_water_balance_residual_ml": 0.0,
+        "quality_recovered_return_volume_residual_ml": 0.0,
+        "quality_recovered_return_mass_residual_kg": 0.0,
+        "cycles_of_concentration": 1.5942028985507246,
+        "quality_process_TDS_mg_l": 690.0,
+        "quality_solver_status": "converged",
+        "quality_reclaimed_quality_provenance": "treated_output"
+      }
+    }
+  ]
+}

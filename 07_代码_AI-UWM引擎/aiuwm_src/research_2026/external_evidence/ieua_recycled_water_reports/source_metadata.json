@@ -1,0 +1,16 @@
+{
+  "source": "Inland Empire Utilities Agency official recycled-water quality report",
+  "title": "RW & Effluent Water Quality (all years).xlsx / 2025 report",
+  "landing_page": "https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf",
+  "license": "Official public utility report; reuse terms not separately specified",
+  "retrieved_utc": "2026-10-13T12:06:00Z",
+  "report_year": 2025,
+  "facility_scope": "RP-1 Recycled Water Quality (2025)",
+  "raw_file": "RW-Effluent-Water-Quality-2025.pdf",
+  "raw_bytes": 111630,
+  "raw_sha256": "sha256:5cc9866cfd26a8dFAE41AEA9C4169670DE50AE955FABD8B76E4B8DE8ABB3B3AF",
+  "aggregation": "Average, minimum and maximum values based on monthly averages; EC is based on 24-hour composite laboratory samples.",
+  "coverage": "RP-1 provides pH, TDS, bicarbonate alkalinity, calcium, chloride, magnesium, sodium, sulfate and silica ranges; temperature is not reported.",
+  "extraction_note": "RP-1 rows were transcribed from page 1 of the public PDF into RP1_2025_normalized.csv; no values were imputed or converted.",
+  "source_context": "Direct recycled-water facility report; not a cooling-tower operating dataset and not an independent PHREEQC validation package."
+}

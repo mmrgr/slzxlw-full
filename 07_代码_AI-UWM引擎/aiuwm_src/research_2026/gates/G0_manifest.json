@@ -1,0 +1,40 @@
+{
+  "manifest": "AI-UWM Phase 0 G0 baseline",
+  "generated_at": "2026-10-13T16:13:15+08:00",
+  "repository_root": "C:/Users/mmrgr/Desktop/论文/算力中心/07_代码_AI-UWM引擎/aiuwm_src",
+  "remote": "https://github.com/mmrgr/AI-UWM.git",
+  "branch": "main",
+  "head": "8ff14f52432a7a5ba2985dd2b215845a9a943360",
+  "ahead_of_origin_main": 11,
+  "worktree": {
+    "status": "DIRTY_PRESERVED",
+    "destructive_git_operations": false,
+    "tracked_modified_files": true,
+    "untracked_r10_files": true
+  },
+  "environment": {
+    "codex_python": "3.12.14",
+    "pytest_executable": "8.4.2",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "lockfile": false,
+    "phreeqpython": "MISSING"
+  },
+  "verification": {
+    "compileall": "PASS",
+    "pytest": "136 passed; 1 failed because phreeqpython is missing",
+    "git_diff_check": "PASS",
+    "water_balance_closure": "90 rows PASS; command exits on Windows UnicodeEncodeError after writing output",
+    "doc_consistency": "FAIL: 12 mismatches",
+    "g2": "NOT_READY",
+    "g3": "NOT_READY",
+    "r10_preflight": "DIAGNOSTIC_PREFLIGHT_ONLY"
+  },
+  "registry_sha256": {
+    "parameter_registry.csv": "CAE1492017EB0E1980FD73D6FD6BFF3F065EE201357CA84BE4E0422F591B3958",
+    "scenario_registry.csv": "3AD65D293187CF95AC067950271EA6F58F94D801903C185C035E7F2435C36923",
+    "external_evidence_registry.csv": "94FCDBF07A0FD5672342BF5BD488F067704B4C059CC0EF642F800DA5FF4044C5"
+  },
+  "gate_policy": "Keep formal E3/E4 closed until G1 production integration, G2 independent chemistry, and G3 facility holdout are ready.",
+  "status": "IN_PROGRESS"
+}

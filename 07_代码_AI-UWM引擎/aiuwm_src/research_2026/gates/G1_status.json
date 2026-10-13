@@ -1,0 +1,38 @@
+{
+  "gate": "G1 physical process, dynamic quality, and main-model closure",
+  "updated": "2026-10-13",
+  "isolated_primitives": "PASS",
+  "internal_water_closure": {
+    "status": "PASS",
+    "rows": 90,
+    "failed_rows": 0,
+    "max_relative_error": "<4e-13 percent",
+    "interpretation": "Internal model identity only; not external validation. The ASCII-safe audit CLI exits 0."
+  },
+  "main_model_integration": {
+    "daily_slice": "PASS",
+    "same_day_wwtw": "CO_CURRENT_DIAGNOSTIC_ONLY",
+    "full_production_timeseries": "NOT_READY_FOR_E3",
+    "multi_data_center": "OPT_IN_TESTED; NOT_FORMAL E3 READY",
+    "dedicated_incremental_source": "PURE_FUNCTION_EXISTS; FULL MAIN-MODEL INTEGRATION NOT READY"
+  },
+  "tests": {
+    "quality_state": "EXISTS",
+    "reclaimed_allocation": "EXISTS",
+    "same_day_wwtw_phase": "EXISTS",
+    "adaptation": "STANDALONE LEDGER ONLY",
+    "full_suite": "138 passed with phreeqpython==1.6.2 in the recorded temporary target environment"
+  },
+  "deliverables": {
+    "component_audit": "research_2026/gates/G1_component_audit.md",
+    "closure_summary": "research_2026/gates/G1_closure_summary.csv",
+    "r10a_quality_invariant_diagnostic": "research_2026/experiments/r10a_quality_invariants_2026-10-13.json"
+  },
+  "open_risks": [
+    "Treated reuse quality can be scenario_prior rather than measured provenance.",
+    "Cooling storage salt-state support is not cleared for formal compatibility claims.",
+    "Same-day WWTW-to-reuse feedback remains diagnostic and does not unlock E3.",
+    "G2 and G3 evidence gates remain NOT_READY."
+  ],
+  "status": "PARTIAL_PASS_NOT_READY_FOR_FORMAL_EXPERIMENT"
+}

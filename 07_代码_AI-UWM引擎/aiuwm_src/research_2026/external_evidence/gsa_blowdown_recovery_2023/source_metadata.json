@@ -1,0 +1,31 @@
+{
+  "source_id": "GSA-GPG-BDR-LLOYD-2023",
+  "title": "Blowdown Recovery System for Cooling Tower Water Treatment",
+  "publisher": "U.S. General Services Administration Green Proving Ground / NREL",
+  "source_url": "https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf",
+  "retrieved_at": "2026-10-13",
+  "license_or_access": "official public government report",
+  "raw_file": "GSA_Blowdown_Recovery_System_Full_Report.pdf",
+  "raw_sha256": "95D530F500E06A6FADF373C757A04FA894FD44314B20E804715598E10677E4D2",
+  "raw_bytes": 1279970,
+  "facility": "Lloyd D. George U.S. Courthouse, Las Vegas, Nevada",
+  "measurement_context": "Cooling-tower blowdown recovery evaluation with metered makeup/blowdown and monthly water-quality testing; baseline and 2021/2022 evaluation periods",
+  "coverage": [
+    "metered makeup",
+    "metered blowdown",
+    "drift and evaporation",
+    "heat rejected",
+    "water per heat rejected",
+    "water-balance CoC",
+    "monthly pH/alkalinity/conductivity/scale/corrosion monitoring"
+  ],
+  "evidence_class": "E2_public_cooling_facility_operations",
+  "limitations": [
+    "one facility/study unit",
+    "three aggregate evaluation periods totaling 102 days rather than 12 months of daily rows",
+    "no IT energy, facility energy, PUE or WUE observations",
+    "not a data-center facility and no leave-one-facility-out model predictions",
+    "not independently reviewed under the locked G3 runner"
+  ],
+  "formal_g3_eligible": false
+}

@@ -1,0 +1,11 @@
+metric,units,reported_value,detection_limit,qualifier,source_table,source_page
+tds_mg_l,mg/L,22,10,,Table 4-3,4-19
+chloride_mg_l,mg/L,3.6,0.5,,Table 4-3,4-19
+sulfate_mg_l,mg/L,0.96,0.5,,Table 4-3,4-19
+calcium_mg_l,mg/L,0.41,0.1,,Table 4-3,4-19
+magnesium_mg_l,mg/L,,0.1,ND,Table 4-3,4-19
+sodium_mg_l,mg/L,6.6,0.5,,Table 4-3,4-19
+silica_mg_l,mg/L,0.52,0.04,,Table 4-3,4-19
+temperature_c,°C,26.3,0.1,,Table 4-3,4-19
+pH,su,6.4,0.1,,Table 4-3,4-19
+alkalinity_mg_l_as_caco3,mg/L as CaCO3,7.1,2,,Table 4-3,4-19

@@ -1,0 +1,20 @@
+{
+  "gate": "G2 independent chemistry cross-validation",
+  "updated": "2026-10-13",
+  "status": "NOT_READY",
+  "available_pilot": "validation_artifacts/external_evidence/wqp_chemistry_phreeqc_pilot.json",
+  "available_candidates": ["research_2026/experiments/figshare_reclaimed_water_candidate_2026-10-13/candidate.json", "research_2026/experiments/sipibel_data_inventory_2026-10-13/inventory.json", "research_2026/experiments/sdwis_ieu_recycled_water_inventory_2026-10-13/inventory.json", "research_2026/experiments/ieua_recycled_water_candidate_2026-10-13/candidate.json", "research_2026/experiments/ladwp_gwr_candidate_2026-10-13/candidate.json"],
+  "deliverables": {
+    "sample_manifest": "research_2026/gates/G2_sample_manifest.csv",
+    "comparison": "research_2026/gates/G2_chemistry_comparison.csv",
+    "review": "research_2026/gates/G2_review.md"
+  },
+  "pilot_scope": "129 ambient WQP samples with conditional reduced-order and IPhreeqc diagnostics, one public reclaimed-water table candidate, one SIPIBEL wastewater-observatory inventory, one direct utility recycled-water portal inventory, one IEUA aggregate recycled-water report candidate, and one LADWP temperature-bearing pilot candidate",
+  "not_valid_as": ["reclaimed-water validation", "facility safety proof", "formal PASS manifest"],
+  "missing": [
+    "real reclaimed-water provenance and complete ion panel",
+    "frozen equivalence review of reduced-order and independent criteria",
+    "verified input/output hashes and independent review",
+    "replicated cooling-relevant reclaimed-water samples with treatment-stage and temperature context"
+  ]
+}

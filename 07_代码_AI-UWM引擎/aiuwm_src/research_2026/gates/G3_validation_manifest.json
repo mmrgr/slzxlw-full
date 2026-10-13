@@ -1,0 +1,25 @@
+{
+  "gate": "G3",
+  "updated": "2026-10-13",
+  "status": "NOT_READY",
+  "candidate_files": [
+    {
+      "path": "examples/demo_full/observed.csv",
+      "classification": "synthetic_or_scenario",
+      "eligible_for_formal_holdout": false
+    },
+    {
+      "path": "research_2026/experiments/gsa_blowdown_candidate_2026-10-13/candidate.json",
+      "classification": "public_cooling_facility_aggregate",
+      "eligible_for_formal_holdout": false
+    }
+  ],
+  "required_minimum": {
+    "facility_or_study_units": 3,
+    "months_per_unit": 12,
+    "leave_one_unit_out": true,
+    "observations": ["IT energy", "facility energy", "PUE", "WUE", "makeup", "blowdown", "CoC", "weather"],
+    "provenance": ["source URI", "meter ID", "observed flag", "quality flag", "training facilities"]
+  },
+  "reason": "No non-synthetic, independently sourced facility or study holdout package is present."
+}

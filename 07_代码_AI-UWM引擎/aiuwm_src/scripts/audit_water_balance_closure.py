@@ -129,10 +129,11 @@ def main() -> int:
     print(f"\nwritten -> {OUT}  ({len(out_df)} 条)")
     print(f"最大相对闭合误差 = {worst:.3e}% ；FAIL 条数 = {n_fail}")
 
+    # Keep the CLI report ASCII-safe on Windows consoles using legacy code pages.
     if worst <= TOLERANCE_PCT:
-        print(f"✅ 水量闭合满足 ≤{TOLERANCE_PCT}% 验收目标（注意：这是模型内部守恒性，不代表与实测一致）")
+        print(f"PASS: 水量闭合满足 <= {TOLERANCE_PCT}% 验收目标（注意：这是模型内部守恒性，不代表与实测一致）")
     else:
-        print(f"❌ 存在超出 {TOLERANCE_PCT}% 的闭合残差，需检查上式是否为模型真实恒等式")
+        print(f"FAIL: 存在超出 {TOLERANCE_PCT}% 的闭合残差，需检查上式是否为模型真实恒等式")
     return 0
 
 

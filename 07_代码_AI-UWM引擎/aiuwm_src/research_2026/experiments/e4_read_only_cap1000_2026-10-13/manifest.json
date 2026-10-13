@@ -1,0 +1,155 @@
+{
+  "kind": "R10_E4_ADAPTATION_PILOT",
+  "runner_version": "R10-E4-1.0",
+  "status": "NOT_READY",
+  "diagnostic_status": "READ_ONLY",
+  "main_model_integration": "READ_ONLY_BOUNDARY",
+  "gate": "E4",
+  "formal_requested": false,
+  "formal_run_performed": false,
+  "execution_performed": true,
+  "execution_mode": "READ_ONLY_DIAGNOSTIC",
+  "gate_statuses": {
+    "g2": "NOT_READY",
+    "g3": "NOT_READY"
+  },
+  "gate_reasons": {
+    "g2": "No complete PASS G2 manifest with verified input/output hashes, chemistry provenance/quality rows, independent review, and false-safe statistic was found.",
+    "g3": "No complete PASS G3 manifest with verified input/output hashes, facility/month structure, provenance/quality rows, and independent review was found."
+  },
+  "input": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\validation_artifacts\\timeseries\\co\\cap_1000\\data_center_daily.csv",
+    "sha256": "sha256:5afaa4de21361166b0558db580925f0199aba478f05abacc400b735071c2f481",
+    "row_count": 730,
+    "kind": "main_model_data_center_daily"
+  },
+  "paired_freshwater_baseline": null,
+  "config": {
+    "path": null,
+    "sha256": null,
+    "source": "policy_only_defaults"
+  },
+  "parameterization": {
+    "status": "NEUTRAL_POLICY_ONLY_DEFAULTS",
+    "formal_usable": false,
+    "warning": "A1-A3 use neutral zero-cost/zero-energy defaults; identical policy outputs must not be interpreted as adaptation evidence."
+  },
+  "formal_review": null,
+  "policies": [
+    "A0",
+    "A1",
+    "A2",
+    "A3"
+  ],
+  "results": [
+    {
+      "policy": "A0",
+      "status": "feasible",
+      "E_adapt": 0.0,
+      "C_adapt": 0.0,
+      "freshwater_use_ml": 15198.477277275164,
+      "freshwater_baseline_ml": 15210.47727727516,
+      "freshwater_saving_ml": 11.999999999996362,
+      "unmet_water_ml": 0.0,
+      "sla_reliability": 1.0,
+      "energy_kwh": 0.0,
+      "carbon_kg_co2e": 0.0,
+      "cost": 0.0,
+      "reject_ml": 0.0,
+      "unreturned_ml": 0.0,
+      "infeasible_reasons": ""
+    },
+    {
+      "policy": "A1",
+      "status": "feasible",
+      "E_adapt": 0.0,
+      "C_adapt": 0.0,
+      "freshwater_use_ml": 15198.477277275164,
+      "freshwater_baseline_ml": 15210.47727727516,
+      "freshwater_saving_ml": 11.999999999996362,
+      "unmet_water_ml": 0.0,
+      "sla_reliability": 1.0,
+      "energy_kwh": 0.0,
+      "carbon_kg_co2e": 0.0,
+      "cost": 0.0,
+      "reject_ml": 0.0,
+      "unreturned_ml": 0.0,
+      "infeasible_reasons": ""
+    },
+    {
+      "policy": "A2",
+      "status": "feasible",
+      "E_adapt": 0.0,
+      "C_adapt": 0.0,
+      "freshwater_use_ml": 15198.477277275164,
+      "freshwater_baseline_ml": 15210.47727727516,
+      "freshwater_saving_ml": 11.999999999996362,
+      "unmet_water_ml": 0.0,
+      "sla_reliability": 1.0,
+      "energy_kwh": 0.0,
+      "carbon_kg_co2e": 0.0,
+      "cost": 0.0,
+      "reject_ml": 0.0,
+      "unreturned_ml": 0.0,
+      "infeasible_reasons": ""
+    },
+    {
+      "policy": "A3",
+      "status": "feasible",
+      "E_adapt": 0.0,
+      "C_adapt": 0.0,
+      "freshwater_use_ml": 15198.477277275164,
+      "freshwater_baseline_ml": 15210.47727727516,
+      "freshwater_saving_ml": 11.999999999996362,
+      "unmet_water_ml": 0.0,
+      "sla_reliability": 1.0,
+      "energy_kwh": 0.0,
+      "carbon_kg_co2e": 0.0,
+      "cost": 0.0,
+      "reject_ml": 0.0,
+      "unreturned_ml": 0.0,
+      "infeasible_reasons": ""
+    }
+  ],
+  "selection": {
+    "status": "feasible",
+    "E_adapt": 0.0,
+    "C_adapt": 0.0,
+    "minimum_energy_policy": "A0",
+    "minimum_cost_policy": "A0",
+    "feasible_policies": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "summary_rows": 4,
+    "daily_rows": 2920,
+    "parameterization_status": "NEUTRAL_POLICY_ONLY_DEFAULTS",
+    "formal_parameterization_ready": false
+  },
+  "outputs": {
+    "summary": "adaptation_summary.csv",
+    "daily": "adaptation_daily.csv"
+  },
+  "output_hashes": {
+    "summary": "sha256:7bb5f591a8f92bcc6290cec4d4f008465282437acbd6c35a3760ed8ff87523f4",
+    "daily": "sha256:6ecb2e31cd0acd5b0116b68dcda5f534cf42c483916f9acb917366d1bd603412"
+  },
+  "reasons": [],
+  "provenance": {
+    "adapter": "aiuwm.adaptation.cooling_ledger_from_data_center_daily",
+    "evaluation": "aiuwm.adaptation.evaluate_adaptation_set",
+    "contract": "R10-E4-A0-A3",
+    "units": {
+      "volume": "ML",
+      "energy": "kWh",
+      "carbon": "kgCO2e",
+      "cost": "caller-defined"
+    },
+    "comparison_scope": "within-run or paired freshwater baseline; no city-scale claim",
+    "generated_at_utc": "2026-10-13T09:23:58Z",
+    "baseline_mode": "within_run_potable_use"
+  },
+  "gate_effect": "E4 remains NOT_READY until G2/G3 evidence audit is READY and the main-model boundary is formally reviewed."
+}

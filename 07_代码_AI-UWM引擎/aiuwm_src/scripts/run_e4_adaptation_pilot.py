@@ -280,6 +280,14 @@ def _base_manifest(
         "input": {"path": str(input_path.resolve()), "sha256": None, "row_count": 0, "kind": "main_model_data_center_daily"},
         "paired_freshwater_baseline": None if baseline_path is None else {"path": str(baseline_path.resolve()), "sha256": None, "row_count": 0},
         "config": {"path": None if config_path is None else str(config_path.resolve()), "sha256": None, "source": "policy_only_defaults" if config_path is None else "caller_supplied"},
+        "parameterization": {
+            "status": "NEUTRAL_POLICY_ONLY_DEFAULTS" if config_path is None else "CALLER_SUPPLIED",
+            "formal_usable": config_path is not None,
+            "warning": (
+                "A1-A3 use neutral zero-cost/zero-energy defaults; identical policy outputs must not be interpreted as adaptation evidence."
+                if config_path is None else None
+            ),
+        },
         "formal_review": None,
         "policies": list(POLICIES),
         "results": [],
@@ -401,6 +409,8 @@ def run(
                 "feasible_policies": [result.policy for result in evaluated.feasible_results],
                 "summary_rows": len(summary_rows),
                 "daily_rows": len(daily_rows),
+                "parameterization_status": payload["parameterization"]["status"],
+                "formal_parameterization_ready": payload["parameterization"]["formal_usable"],
             }
             payload["execution_performed"] = True
             payload["formal_run_performed"] = bool(formal)

@@ -1,0 +1,96 @@
+{
+  "artifact": "FIGSHARE_RECLAIMED_WATER_G2_CANDIDATE",
+  "generated_at_utc": "2026-10-13T10:59:42Z",
+  "source": {
+    "article_id": 28948753,
+    "file_id": 54279751,
+    "title": "Physicochemical properties and ion concentrations of reclaimed water (RW) and brackish water (BW)",
+    "doi": "10.1371/journal.pone.0322846.t002",
+    "landing_page": "https://plos.figshare.com/articles/dataset/Physicochemical_properties_and_ion_concentrations_of_reclaimed_water_RW_and_brackish_water_BW_/28948753",
+    "download_url": "https://ndownloader.figshare.com/files/54279751",
+    "metadata_path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\figshare_reclaimed_water_2025\\source_metadata.json",
+    "license": "CC BY 4.0",
+    "raw_path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\figshare_reclaimed_water_2025\\Table_2.xls",
+    "raw_sha256": "sha256:341895eea8a9fd343ec424f4f31e667f992252a2d913d2735cb7efa029f56ad5",
+    "raw_bytes": 5632
+  },
+  "rows": [
+    {
+      "sample_id": "FIGSHARE-28948753-RW",
+      "water_resource": "RW",
+      "ec_us_cm": 2120.0,
+      "ph": 8.17,
+      "na_mmol_l": 13.5,
+      "k_mmol_l": 0.36,
+      "hco3_mmol_l": 4.56,
+      "cl_mmol_l": 8.85,
+      "ca_mmol_l": 2.28,
+      "mg_mmol_l": 3.1,
+      "so4_mmol_l": 5.28,
+      "sar": 5.81,
+      "tn_mg_l": 0.52,
+      "tp_mg_l": 0.05,
+      "pb_mg_l": null,
+      "cu_mg_l": null,
+      "zn_mg_l": null,
+      "cd_mg_l": null,
+      "charge_balance": {
+        "cation_meq_l": 24.619999999999997,
+        "anion_meq_l": 23.97,
+        "charge_balance_percent": 2.6754476229676833,
+        "status": "PASS_SCREEN"
+      }
+    },
+    {
+      "sample_id": "FIGSHARE-28948753-BW_5_g_L_1",
+      "water_resource": "BW (5 g·L<sup>-1</sup>)",
+      "ec_us_cm": 9432.0,
+      "ph": 8.44,
+      "na_mmol_l": 87.0,
+      "k_mmol_l": 0.07,
+      "hco3_mmol_l": 2.28,
+      "cl_mmol_l": 90.9,
+      "ca_mmol_l": 0.92,
+      "mg_mmol_l": 0.77,
+      "so4_mmol_l": 1.14,
+      "sar": 66.86,
+      "tn_mg_l": 1.18,
+      "tp_mg_l": 0.02,
+      "pb_mg_l": null,
+      "cu_mg_l": null,
+      "zn_mg_l": null,
+      "cd_mg_l": null,
+      "charge_balance": {
+        "cation_meq_l": 90.45,
+        "anion_meq_l": 95.46000000000001,
+        "charge_balance_percent": -5.389704695820563,
+        "status": "REVIEW_REQUIRED"
+      }
+    }
+  ],
+  "sample_count": 2,
+  "evidence_class": "E2_public_reclaimed_water_table",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "formal_g2_eligible": false,
+  "applicable_to": [
+    "major-ion plausibility screening",
+    "charge-balance review",
+    "scenario-prior bounding"
+  ],
+  "not_valid_for": [
+    "formal G2 chemistry cross-validation",
+    "data-centre cooling-water representation",
+    "facility holdout or time-series validation",
+    "temperature-dependent PHREEQC comparison"
+  ],
+  "limitations": [
+    "one reclaimed-water row from an irrigation study",
+    "no sampling date, treatment-stage metadata, temperature, TDS, or analytical uncertainty in the table",
+    "independent PHREEQC results and cooling-tower operating context are absent",
+    "the brackish-water comparison row has a charge-balance review flag; the reclaimed-water row passes this screen"
+  ],
+  "gate_effect": {
+    "g2": "unchanged_NOT_READY",
+    "g3": "unchanged_NOT_READY"
+  }
+}

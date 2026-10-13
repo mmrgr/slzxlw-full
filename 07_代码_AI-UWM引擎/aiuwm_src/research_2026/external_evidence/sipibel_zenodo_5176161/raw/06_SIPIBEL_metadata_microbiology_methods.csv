@@ -1,0 +1,40 @@
+ID Microbiology method;Microbiology test;Fraction;Endpoint;Standard, guideline or bibliographic reference;LoD;LoQ;Unit;Sample freezing;Type of method
+MM_0001;Antibiotic resistance - Integrons;5 - TSS fraction;Bacteria (16s rDNA);Stalder 2012;100;1000;copies/L;No;Real time quantitative PCR
+MM_0002;Pseudomonas aeroginosa;2 - Whole water with no separation of liquid and SPM phases;NA;NF EN ISO 16266;10;NA;CFUs (colony-forming units)/100 mL;No;Membrane filtration
+MM_0003;Pseudomonas aeroginosa;2 - Whole water with no separation of liquid and SPM phases;NA;NF EN ISO 16266;3;NA;CFUs (colony-forming units)/100 mL;No;Most likely number coupled to PCR (MLN-PCR)
+MM_0004;Antibiotic resistance - Integrons;5 - TSS fraction;Bacteria (16s rDNA);Stalder 2012;100;1000;copies/L;Yes;Real time quantitative PCR
+MM_0005;Antibiotic resistance - Integrons;5 - TSS fraction;Integron class 1;Stalder 2012;100;1000;copies/L;No;Real time quantitative PCR
+MM_0006;Antibiotic resistance - Integrons;5 - TSS fraction;Integron class 1;Stalder 2012;100;1000;copies/L;Yes;Real time quantitative PCR
+MM_0007;Antibiotic resistance - Integrons;5 - TSS fraction;Relative abundance class 1;Stalder 2012;NA;NA;NA;No;Real time quantitative PCR
+MM_0008;Antibiotic resistance - Integrons;5 - TSS fraction;Relative abundance class 1;Stalder 2012;NA;NA;NA;Yes;Real time quantitative PCR
+MM_0009;Antibiotic resistance - Integrons;5 - TSS fraction;Integron class 2;Stalder 2012;100;1000;copies/L;No;Real time quantitative PCR
+MM_0011;Antibiotic resistance - Integrons;5 - TSS fraction;Relative abundance class 2;Stalder 2012;NA;NA;NA;No;Real time quantitative PCR
+MM_0013;Antibiotic resistance - Integrons;5 - TSS fraction;Integron class 3;Stalder 2012;100;1000;copies/L;No;Real time quantitative PCR
+MM_0015;Antibiotic resistance - Integrons;5 - TSS fraction;Relative abundance class 3;Stalder 2012;NA;NA;NA;No;Real time quantitative PCR
+MM_0017;Antibiotic resistance - Integrons;5 - TSS fraction;Integron all classes;Stalder 2012;100;1000;copies/L;No;Real time quantitative PCR
+MM_0019;Antibiotic resistance - Integrons;5 - TSS fraction;Relative abundance all classes;Stalder 2012;NA;NA;NA;No;Real time quantitative PCR
+MM_0021;Roundworm eggs;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;eggs/g DM;No;Flotation
+MM_0022;Trichuris eggs;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;eggs/g DM;No;Flotation
+MM_0023;Pinworm eggs;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;eggs/g DM;No;Flotation
+MM_0024;Other nematodes eggs;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;eggs/g DM;No;Flotation
+MM_0025;Cestodes eggs;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;eggs/g DM;No;Flotation
+MM_0026;Small moat eggs;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;eggs/g DM;No;Flotation
+MM_0027;Trematodes;6 - Sludge;NA;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;individuals/g DM;No;Flotation
+MM_0028;Larvae;6 - Sludge;NA;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;individuals/g DM;No;Flotation
+MM_0029;Oocysts of coccidia;6 - Sludge;Oocysts;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;oocysts/g DM;No;Flotation
+MM_0030;Mites eggs;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;eggs/g DM;No;Flotation
+MM_0031;Mites;6 - Sludge;Eggs;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;individuals/g DM;No;Flotation
+MM_0032;Tardigrades;6 - Sludge;NA;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;individuals/g DM;No;Flotation
+MM_0033;Thermotolerant coliforms;6 - Sludge;NA;NF V 08-060;NA;NA;bacteria/g DM;No;Flotation
+MM_0034;Butyric acid spores;6 - Sludge;NA;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;spores/g DM;No;MPN method
+MM_0035;Spores of sulfite-reducing anaerobes;6 - Sludge;NA;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;spores/g DM;No;Counting
+MM_0036;Salmonella;6 - Sludge;NA;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;bacteria/g DM;No;MPN method
+MM_0037;Antibiotic resistance - Integrons;6 - Sludge;Bacteria (16s rDNA);Stalder 2012;100;1000;copies/L;Yes;Real time quantitative PCR
+MM_0071;Salmonella;6 - Sludge;NA;Internal method (Laboratoire départemental d'analyses vétérinaires de Savoie);NA;NA;bacteria/10 g DM;No;MPN method
+MM_0072;Antibiotic resistance - Integrons;6 - Sludge;Bacteria (16s rDNA);Stalder 2012;100;1000;copies/g DM;Yes;Real time quantitative PCR
+MM_0073;Antibiotic resistance - Integrons;6 - Sludge;Integron class 1;Stalder 2012;100;1000;copies/g DM;Yes;Real time quantitative PCR
+MM_0074;Antibiotic resistance - Integrons;6 - Sludge;Relative abundance class 1;Stalder 2012;NA;NA;NA;Yes;Real time quantitative PCR
+MM_0077;Antibiotic resistance - Integrons;6 - Sludge;Integron class 3;Stalder 2012;100;1000;copies/g DM;Yes;Real time quantitative PCR
+MM_0078;Antibiotic resistance - Integrons;6 - Sludge;Relative abundance class 3;Stalder 2012;NA;NA;NA;Yes;Real time quantitative PCR
+MM_0079;Antibiotic resistance - Integrons;6 - Sludge;Integron all classes;Stalder 2012;100;1000;copies/g DM;Yes;Real time quantitative PCR
+MM_0080;Antibiotic resistance - Integrons;6 - Sludge;Relative abundance all classes;Stalder 2012;NA;NA;NA;Yes;Real time quantitative PCR

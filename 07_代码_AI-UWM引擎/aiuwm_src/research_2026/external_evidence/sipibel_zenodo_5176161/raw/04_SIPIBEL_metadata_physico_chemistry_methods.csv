@@ -1,0 +1,760 @@
+ID Physico-chemical method;Physico-chemical indicator;CAS number;Sample matrix;Fraction;Standard, guideline or bibliographic reference;LoD;< LoQ value 1;< LoQ value 2;< LoQ value 3;< LoQ value 4;LoQ;Unit;Uncertainty (in %) at LoQ (95% confidence level);Uncertainty (in %) at the measured concentrations (95% confidence level);Analytical method
+MP_0001;BOD5;NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 1899-1;NA;0;1;2;4;4;mg/L;25;NA;Oxymetry measurement
+MP_0003;BOD5;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 1899-1;NA;0;1;2;4;4;mg/L;25;NA;Oxymetry measurement
+MP_0006;BOD5;NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN 1899-1;NA;0;1;2;4;4;mg/L;25;NA;Oxymetry measurement
+MP_0008;BOD5;NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 1899-2;NA;0;0.25;0.5;1;1;mg/L;25;NA;Oxymetry measurement
+MP_0011;BOD5;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 1899-2;NA;0;0.25;0.5;1;1;mg/L;25;NA;Oxymetry measurement
+MP_0013;BOD5;NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN 1899-2;NA;0;0.25;0.5;1;1;mg/L;25;NA;Oxymetry measurement
+MP_0014;BOD5;NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN 1899-2;NA;0;0.25;0.5;1;1;mg/L;25;NA;Oxymetry measurement
+MP_0015;DOC (Dissolved Organic Carbon);NA;Wastewater - raw;1 - Dissolved fraction;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;NA;Infrared measurement
+MP_0017;DOC (Dissolved Organic Carbon);NA;Wastewater - treated;1 - Dissolved fraction;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;NA;Infrared measurement
+MP_0020;DOC (Dissolved Organic Carbon);NA;Surface freshwater;1 - Dissolved fraction;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;NA;Infrared measurement
+MP_0021;DOC (Dissolved Organic Carbon);NA;Ground water;1 - Dissolved fraction;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;NA;Infrared measurement
+MP_0022;COD (Chemical Oxygen Demand);NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF T 90-101;NA;0;2.5;5;10;10;mg/L;45;10;Spectrometry
+MP_0024;COD (Chemical Oxygen Demand);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF T 90-101;NA;0;2.5;5;10;10;mg/L;45;45;Spectrometry
+MP_0027;COD (Chemical Oxygen Demand);NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF T 90-101;NA;0;2.5;5;10;10;mg/L;45;45;Spectrometry
+MP_0028;COD (Chemical Oxygen Demand);NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF T 90-101;NA;0;2.5;5;10;10;mg/L;45;45;Spectrometry
+MP_0984;COD (Chemical Oxygen Demand);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF T 90-101;NA;0;7.5;15;30;30;mg/L;45;45;Colorimetry
+MP_1016;COD (Chemical Oxygen Demand);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 15705;NA;0;7.5;15;30;30;mg/L;45;45;Spectrophometry
+MP_0029;Residual COD;NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;ISO 15705;NA;0;7.5;15;30;30;mg/L;NA;NA;Spectrophotometry
+MP_0031;Residual COD;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 15705;NA;0;7.5;15;30;30;mg/L;NA;NA;Spectrophotometry
+MP_0034;TKN (ammonia + organic N);NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 25663;NA;0;0.125;0.25;0.5;0.5;mg/L;10;NA;Distillation and quantitative analysis
+MP_0036;TKN (ammonia + organic N);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 25663;NA;0;0.125;0.25;0.5;0.5;mg/L;10;NA;Distillation and quantitative analysis
+MP_0039;TKN (ammonia + organic N);NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN 25663;NA;0;0.125;0.25;0.5;0.5;mg/L;10;NA;Distillation and quantitative analysis
+MP_0040;TKN (ammonia + organic N);NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN 25663;NA;0;0.125;0.25;0.5;0.5;mg/L;10;NA;Distillation and quantitative analysis
+MP_1336;TKN (ammonia + organic N);NA;Sludge;6 - Sludge;NF EN 13342;NA;0;0.025;0.05;0.1;0.1;% N DM;10;NA;NA
+MP_0041;Residual NTK;NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 25663;NA;0;0.75;1.5;3;3;mg/L;NA;NA;Distillation and quantitative analysis
+MP_0043;Residual NTK;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 25663;NA;0;0.75;1.5;3;3;mg/L;NA;NA;Distillation and quantitative analysis
+MP_0046;TSS (Total Suspended Solids);NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 872;NA;0;0.5;1;2;2;mg/L;20;10;Gravimetry
+MP_0048;TSS (Total Suspended Solids);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 872;NA;0;0.5;1;2;2;mg/L;20;20;Gravimetry
+MP_0051;TSS (Total Suspended Solids);NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN 872;NA;0;0.5;1;2;2;mg/L;20;20;Gravimetry
+MP_0052;TSS (Total Suspended Solids);NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN 872;NA;0;0.5;1;2;2;mg/L;20;20;Gravimetry
+MP_0053;Total phosphorous;7723-14-0;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 6878;NA;0;0.0025;0.005;0.01;0.01;mg/L;10;NA;Spectrometry
+MP_0055;Total phosphorous;7723-14-0;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 6878;NA;0;0.0025;0.005;0.01;0.01;mg/L;10;NA;Spectrometry
+MP_0058;Total phosphorous;7723-14-0;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 6878;NA;0;0.0025;0.005;0.01;0.01;mg/L;10;NA;Spectrometry
+MP_0059;Total phosphorous;7723-14-0;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 6878;NA;0;0.0025;0.005;0.01;0.01;mg/L;10;NA;Spectrometry
+MP_1338;Total phosphorous;7723-14-0;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;NA;NA;NA;NA;% P2O5 DM;NA;NA;ICP-MS
+MP_0060;PO43-;14265-44-2;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 6878;NA;0;0.00625;0.0125;0.025;0.025;mg/L;30;10;Spectrometry
+MP_0062;PO43-;14265-44-2;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 6878;NA;0;0.00625;0.0125;0.025;0.025;mg/L;30;10;Spectrometry
+MP_0065;PO43-;14265-44-2;Surface freshwater;1 - Dissolved fraction;NF EN ISO 6878;NA;0;0.00625;0.0125;0.025;0.025;mg/L;30;30;Spectrometry
+MP_0066;PO43-;14265-44-2;Ground water;1 - Dissolved fraction;NF EN ISO 6878;NA;0;0.00625;0.0125;0.025;0.025;mg/L;30;30;Spectrometry
+MP_0067;PO43-;14265-44-2;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 6878;NA;0;0.019;0.038;0.076;0.076;mg/L;30;10;Calculation
+MP_1014;PO43-;14265-44-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 15681-2;NA;0;0.125;0.25;0.5;0.5;mg/L;30;10;Continuous flow analyzer
+MP_0074;pH;NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF T 90-008;NA;0;NA;NA;NA;NA;NA;2;NA;pH metry
+MP_0076;pH;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF T 90-008;NA;0;NA;NA;NA;NA;NA;2;NA;pH metry
+MP_0079;pH;NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF T 90-008;NA;0;NA;NA;NA;NA;NA;2;NA;pH metry
+MP_0080;pH;NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF T 90-008;NA;0;NA;NA;NA;NA;NA;2;NA;pH metry
+MP_1155;pH;NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF T 90-008;NA;0;NA;NA;NA;NA;NA;2;NA;pH metry
+MP_1388;pH;NA;Sludge;6 - Sludge;NF EN 12176;NA;0;NA;NA;NA;NA;NA;2;NA;pH metry
+MP_0081;NH4+;14798-03-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF T 90-015-1;NA;0;0.125;0.25;0.5;0.5;mg/L;10;NA;Distillation and quantitative analysis
+MP_0083;NH4+;14798-03-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF T 90-015-1;NA;0;0.125;0.25;0.5;0.5;mg/L;10;NA;Distillation and quantitative analysis
+MP_0086;NH4+;14798-03-9;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF T 90-015-1;NA;0;0.002;0.004;0.008;0.008;mg/L;10;NA;Distillation and quantitative analysis
+MP_0087;NH4+;14798-03-9;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF T 90-015-1;NA;0;0.002;0.004;0.008;0.008;mg/L;10;NA;Distillation and quantitative analysis
+MP_0093;NH4+;14798-03-9;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF T 90-015-2;NA;0;0.002;0.004;0.008;0.008;mg/L;20;NA;Distillation and quantitative analysis
+MP_0094;NH4+;14798-03-9;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF T 90-015-2;NA;0;0.002;0.004;0.008;0.008;mg/L;20;NA;Distillation and quantitative analysis
+MP_0097;NH4+;14798-03-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF T 90-015-1;NA;0;0.15625;0.3125;0.625;0.625;mg/L;10;NA;Calculation
+MP_1015;NH4+;14798-03-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11732;NA;0;0.125;0.25;0.5;0.5;mg/L;NA;NA;Continuous flow analyzer
+MP_1334;NH4+;14798-03-9;Sludge;6 - Sludge;NF T 90-015-1;NA;0;0.025;0.05;0.1;0.1;% N DM;10;NA;NA
+MP_0109;NO3-;14797-55-8;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 10304;NA;0;0.0275;0.055;0.11;0.11;mg/L;13;NA;Ion chromatography
+MP_0111;NO3-;14797-55-8;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 10304;NA;0;0.0275;0.055;0.11;0.11;mg/L;13;NA;Ion chromatography
+MP_0114;NO3-;14797-55-8;Surface freshwater;1 - Dissolved fraction;NF EN ISO 10304;NA;0;0.0275;0.055;0.11;0.11;mg/L;13;NA;Ion chromatography
+MP_0115;NO3-;14797-55-8;Ground water;1 - Dissolved fraction;NF EN ISO 10304;NA;0;0.0275;0.055;0.11;0.11;mg/L;13;NA;Ion chromatography
+MP_0116;NO3-;14797-55-8;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 10304;NA;0;0.125;0.25;0.5;0.5;mg/L;13;NA;Calculation
+MP_1017;NO3-;14797-55-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10304-1;NA;0;0.075;0.15;0.3;0.3;mg/L;NA;NA;Ion chromatography
+MP_0123;NO2-;14797-65-0;Wastewater - raw;1 - Dissolved fraction;NF EN 26777;NA;0;0.00075;0.0015;0.003;0.003;mg/L;10;NA;Spectrometry
+MP_0125;NO2-;14797-65-0;Wastewater - treated;1 - Dissolved fraction;NF EN 26777;NA;0;0.00075;0.0015;0.003;0.003;mg/L;10;NA;Spectrometry
+MP_0128;NO2-;14797-65-0;Surface freshwater;1 - Dissolved fraction;NF EN 26777;NA;0;0.00075;0.0015;0.003;0.003;mg/L;10;NA;Spectrometry
+MP_0129;NO2-;14797-65-0;Ground water;1 - Dissolved fraction;NF EN 26777;NA;0;0.00075;0.0015;0.003;0.003;mg/L;10;NA;Spectrometry
+MP_0130;NO2-;14797-65-0;Wastewater - raw;1 - Dissolved fraction;NF EN 26777;NA;0;0.0025;0.005;0.01;0.01;mg/L;10;NA;Calculation
+MP_0143;Conductivity (25°C);NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 27888;NA;0;7.5;15;30;30;µS/cm;5;NA;Electrical conductivity measurement
+MP_0145;Conductivity (25°C);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 27888;NA;0;7.5;15;30;30;µS/cm;5;NA;Electrical conductivity measurement
+MP_0148;Conductivity (25°C);NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN 27888;NA;0;7.5;15;30;30;µS/cm;5;NA;Electrical conductivity measurement
+MP_0149;Conductivity (25°C);NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN 27888;NA;0;7.5;15;30;30;µS/cm;5;NA;Electrical conductivity measurement
+MP_0150;TOC (Total Organic Carbon);NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;20;Infrared measurement
+MP_0152;TOC (Total Organic Carbon);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;20;Infrared measurement
+MP_0155;TOC (Total Organic Carbon);NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;20;Infrared measurement
+MP_0156;TOC (Total Organic Carbon);NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN 1484;NA;0;0.125;0.25;0.5;0.5;mg/L;20;20;Infrared measurement
+MP_0157;Dry content;NA;Sludge;6 - Sludge;NF EN 12880;NA;0;0.125;0.25;0.5;0.5;%;5;NA;NA
+MP_1153;Dry content;NA;Sludge;6 - Sludge;NF EN 12880;NA;0;0.025;0.05;0.1;0.1;%;5;NA;NA
+MP_1154;Dry content;NA;Sludge;6 - Sludge;NF EN 12880;NA;0;0.025;0.05;0.1;0.1;%;5;NA;NA
+MP_0159;Organic fraction;NA;Sludge;6 - Sludge;NF EN 12879;NA;0;0.125;0.25;0.5;0.5;% DM;5;NA;NA
+MP_0161;Mineral fraction;NA;Sludge;6 - Sludge;NF EN 12879;NA;0;0.125;0.25;0.5;0.5;% DM;5;NA;NA
+MP_0163;1,2-dichloroethane;107-06-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0165;1,2-dichloroethane;107-06-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0168;1,2-dichloroethane;107-06-2;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0169;1,2-dichloroethane;107-06-2;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0989;1,2-dichloroethane;107-06-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method POMS_M07;NA;0;0.5;1;2;2;µg/L;NA;NA;NA
+MP_0170;1,1-dichloroethane;75-34-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0172;1,1-dichloroethane;75-34-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0175;1,1-dichloroethane;75-34-3;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0176;1,1-dichloroethane;75-34-3;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0177;1,1-dichloroethylene;75-35-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0179;1,1-dichloroethylene;75-35-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0182;1,1-dichloroethylene;75-35-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0183;1,1-dichloroethylene;75-35-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0184;1,2-dichloroethylene (trans);156-59-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0186;1,2-dichloroethylene (trans);156-59-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0189;1,2-dichloroethylene (trans);156-59-2;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0190;1,2-dichloroethylene (trans);156-59-2;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0191;1,2-dichloroethylene (cis);156-60-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0193;1,2-dichloroethylene (cis);156-60-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0196;1,2-dichloroethylene (cis);156-60-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0197;1,2-dichloroethylene (cis);156-60-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0198;Hexachloroethane;67-72-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0200;Hexachloroethane;67-72-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0203;Hexachloroethane;67-72-1;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0204;Hexachloroethane;67-72-1;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0205;1,1,2,2-tetrachloroethane;79-34-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0207;1,1,2,2-tetrachloroethane;79-34-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0210;1,1,2,2-tetrachloroethane;79-34-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0211;1,1,2,2-tetrachloroethane;79-34-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0212;1,1,2-trichlorotrifluoroethane;76-13-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0214;1,1,2-trichlorotrifluoroethane;76-13-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0217;1,1,2-trichlorotrifluoroethane;76-13-1;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0218;1,1,2-trichlorotrifluoroethane;76-13-1;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0219;1,1,1-trichloroethane;71-55-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0221;1,1,1-trichloroethane;71-55-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0224;1,1,1-trichloroethane;71-55-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_1008;1,1,1-trichloroethane;71-55-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_1010;1,1,1-trichloroethane;71-55-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10303;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_1012;1,1,1-trichloroethane;71-55-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10306;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_0226;1,1,2-trichloroethane;79-00-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0228;1,1,2-trichloroethane;79-00-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0231;1,1,2-trichloroethane;79-00-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0232;1,1,2-trichloroethane;79-00-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0233;Vinyl chloride;75-01-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0235;Vinyl chloride;75-01-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0238;Vinyl chloride;75-01-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0239;Vinyl chloride;75-01-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0240;1,2-dibromoethane;106-93-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0242;1,2-dibromoethane;106-93-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0245;1,2-dibromoethane;106-93-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0246;1,2-dibromoethane;106-93-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0247;1,2-dichloropropane;78-87-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0249;1,2-dichloropropane;78-87-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0252;1,2-dichloropropane;78-87-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0253;1,2-dichloropropane;78-87-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0254;Bromochloromethane;74-97-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0256;Bromochloromethane;74-97-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0259;Bromochloromethane;74-97-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0260;Bromochloromethane;74-97-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0261;Chloroform;67-66-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0263;Chloroform;67-66-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0266;Chloroform;67-66-3;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0267;Chloroform;67-66-3;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0990;Chloroform;67-66-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method POMS_M07;NA;0;0.25;0.5;1;1;µg/L;NA;NA;NA
+MP_0268;Bromoforme;75-25-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0270;Bromoforme;75-25-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0273;Bromoforme;75-25-2;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0274;Bromoforme;75-25-2;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0275;Methyl chloride;74-87-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0277;Methyl chloride;74-87-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0280;Methyl chloride;74-87-3;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0281;Methyl chloride;74-87-3;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0282;3-chloropropene;107-05-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0284;3-chloropropene;107-05-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0287;3-chloropropene;107-05-1;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0288;3-chloropropene;107-05-1;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0289;2,3-dichloropropene;78-88-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0291;2,3-dichloropropene;78-88-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0294;2,3-dichloropropene;78-88-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0295;2,3-dichloropropene;78-88-6;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0296;2-chlorotoluene;95-49-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0298;2-chlorotoluene;95-49-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0301;2-chlorotoluene;95-49-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0302;2-chlorotoluene;95-49-8;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0303;3-chlorotoluene;108-41-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0305;3-chlorotoluene;108-41-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0308;3-chlorotoluene;108-41-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0309;3-chlorotoluene;108-41-8;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0310;4-chlorotoluene;106-43-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0312;4-chlorotoluene;106-43-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0315;4-chlorotoluene;106-43-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0316;4-chlorotoluene;106-43-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0317;Monochlorobenzene;108-90-7;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0319;Monochlorobenzene;108-90-7;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0322;Monochlorobenzene;108-90-7;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0323;Monochlorobenzene;108-90-7;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0324;1,2-dichlorobenzene;95-50-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0326;1,2-dichlorobenzene;95-50-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0329;1,2-dichlorobenzene;95-50-1;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0330;1,2-dichlorobenzene;95-50-1;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0331;1,2-dichlorobenzene;95-50-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_0336;1,2-dichlorobenzene;95-50-1;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_0337;1,2-dichlorobenzene;95-50-1;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_0338;1,3-dichlorobenzene;142-28-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0340;1,3-dichlorobenzene;142-28-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0343;1,3-dichlorobenzene;142-28-9;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0344;1,3-dichlorobenzene;142-28-9;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0345;1,4-dichlorobenzene;106-46-7;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0347;1,4-dichlorobenzene;106-46-7;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0350;1,4-dichlorobenzene;106-46-7;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0351;1,4-dichlorobenzene;106-46-7;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0352;1,4-dichlorobenzene;106-46-7;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_0357;1,4-dichlorobenzene;106-46-7;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_0358;1,4-dichlorobenzene;106-46-7;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.0125;0.025;0.05;0.05;µg/L;60;60;GC-MS or MS/MS
+MP_0359;Cis-1,3-dichloropropylene;10061-02-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0361;Cis-1,3-dichloropropylene;10061-02-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0364;Cis-1,3-dichloropropylene;10061-02-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0365;Cis-1,3-dichloropropylene;10061-02-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0366;Trans-1,3-dichloropropylene;10061-02-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0368;Trans-1,3-dichloropropylene;10061-02-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0371;Trans-1,3-dichloropropylene;10061-02-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0372;Trans-1,3-dichloropropylene;10061-02-6;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.5;1;2;2;µg/L;60;60;GC-MS or MS/MS
+MP_0373;Dibromochloromethane;124-48-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0375;Dibromochloromethane;124-48-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0378;Dibromochloromethane;124-48-1;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0379;Dibromochloromethane;124-48-1;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0380;Dichloromethane;75-09-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;1.25;2.5;5;5;µg/L;60;60;GC-MS or MS/MS
+MP_0382;Dichloromethane;75-09-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;1.25;2.5;5;5;µg/L;60;60;GC-MS or MS/MS
+MP_0385;Dichloromethane;75-09-2;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;1.25;2.5;5;5;µg/L;60;60;GC-MS or MS/MS
+MP_0386;Dichloromethane;75-09-2;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;1.25;2.5;5;5;µg/L;60;60;GC-MS or MS/MS
+MP_0991;Dichloromethane;75-09-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method POMS_M07;NA;0;1.25;2.5;5;5;µg/L;NA;NA;NA
+MP_0387;Dichlorobromomethane;75-27-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0389;Dichlorobromomethane;75-27-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0392;Dichlorobromomethane;75-27-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0393;Dichlorobromomethane;75-27-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0394;Tetrachloroethylene;127-18-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0396;Tetrachloroethylene;127-18-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0399;Tetrachloroethylene;127-18-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0400;Tetrachloroethylene;127-18-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0992;Tetrachloroethylene;127-18-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method POMS_M07;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;NA
+MP_0401;Carbon tetrachloride;56-23-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0403;Carbon tetrachloride;56-23-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0406;Carbon tetrachloride;56-23-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0407;Carbon tetrachloride;56-23-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0993;Carbon tetrachloride;56-23-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method POMS_M07;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;NA
+MP_0408;Trichloroethylene;79-01-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0410;Trichloroethylene;79-01-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0413;Trichloroethylene;79-01-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0414;Trichloroethylene;79-01-6;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0994;Trichloroethylene;79-01-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method POMS_M07;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;NA
+MP_0415;Trichlorofluoromethane;75-69-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0417;Trichlorofluoromethane;75-69-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0420;Trichlorofluoromethane;75-69-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0421;Trichlorofluoromethane;75-69-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0422;1,2,3-trimethylbenzene;526-73-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0424;1,2,3-trimethylbenzene;526-73-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0427;1,2,3-trimethylbenzene;526-73-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0428;1,2,3-trimethylbenzene;526-73-8;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0429;Methyl tert-butyl ether (MTBE);1634-04-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0431;Methyl tert-butyl ether (MTBE);1634-04-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0434;Methyl tert-butyl ether (MTBE);1634-04-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0435;Methyl tert-butyl ether (MTBE);1634-04-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0436;Isopropylbenzene (cumene);98-82-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0438;Isopropylbenzene (cumene);98-82-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0441;Isopropylbenzene (cumene);98-82-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0442;Isopropylbenzene (cumene);98-82-8;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0443;4-isopropyltoluene (cymene);99-87-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0445;4-isopropyltoluene (cymene);99-87-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0448;4-isopropyltoluene (cymene);99-87-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0449;4-isopropyltoluene (cymene);99-87-6;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0450;Tert-butylbenzene;98-06-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0452;Tert-butylbenzene;98-06-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0455;Tert-butylbenzene;98-06-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0456;Tert-butylbenzene;98-06-6;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0457;n-butylbenzene;104-51-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0459;n-butylbenzene;104-51-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0462;n-butylbenzene;104-51-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0463;n-butylbenzene;104-51-8;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0464;1,3,5-trimethylbenzene;108-67-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0466;1,3,5-trimethylbenzene;108-67-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0469;1,3,5-trimethylbenzene;108-67-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0470;1,3,5-trimethylbenzene;108-67-8;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0471;1,2,4-trimethylbenzene;95-63-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0473;1,2,4-trimethylbenzene;95-63-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0476;1,2,4-trimethylbenzene;95-63-6;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0477;1,2,4-trimethylbenzene;95-63-6;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0478;Xylenes;1330-20-7;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0480;Xylenes;1330-20-7;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0483;Xylenes;1330-20-7;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0484;Xylenes;1330-20-7;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0485;Ethylbenzene;100-41-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0487;Ethylbenzene;100-41-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0490;Ethylbenzene;100-41-4;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0491;Ethylbenzene;100-41-4;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0492;Benzene;71-43-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0494;Benzene;71-43-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0497;Benzene;71-43-1;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0498;Benzene;71-43-1;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0995;Benzene;71-43-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method POMS_M07;NA;0;0.25;0.5;1;1;µg/L;NA;NA;NA
+MP_0499;Toluene;108-88-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0501;Toluene;108-88-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0504;Toluene;108-88-3;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0505;Toluene;108-88-3;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.25;0.5;1;1;µg/L;60;60;GC-MS or MS/MS
+MP_0506;Styrene;100-42-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0508;Styrene;100-42-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0511;Styrene;100-42-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0512;Styrene;100-42-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11423-1;NA;0;0.125;0.25;0.5;0.5;µg/L;60;60;GC-MS or MS/MS
+MP_0513;Anionic surfactant;NA;Wastewater - raw;1 - Dissolved fraction;NF EN 903;NA;0;0.0125;0.025;0.05;0.05;mg/L;60;NA;Spectrophotometry
+MP_0515;Anionic surfactant;NA;Wastewater - treated;1 - Dissolved fraction;NF EN 903;NA;0;0.0125;0.025;0.05;0.05;mg/L;60;NA;Spectrophotometry
+MP_0518;Anionic surfactant;NA;Surface freshwater;1 - Dissolved fraction;NF EN 903;NA;0;0.0125;0.025;0.05;0.05;mg/L;60;NA;Spectrophotometry
+MP_0534;Anionic surfactant;NA;Wastewater - raw;1 - Dissolved fraction;ISO 16265;NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;NA
+MP_0536;Anionic surfactant;NA;Wastewater - treated;1 - Dissolved fraction;ISO 16265;NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;NA
+MP_0538;Anionic surfactant;NA;Surface freshwater;1 - Dissolved fraction;ISO 16265;NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;NA
+MP_0539;Anionic surfactant;NA;Ground water;1 - Dissolved fraction;ISO 16265;NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;NA
+MP_1019;Anionic surfactant;NA;Wastewater - raw;1 - Dissolved fraction;ISO 16265;NA;0;0.025;0.05;0.1;0.1;mg/L;20;20;Continuous flow analyzer
+MP_1025;Anionic surfactant;NA;Wastewater - raw;1 - Dissolved fraction;NF EN 903;NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;Spectrophotometry
+MP_1027;Anionic surfactant;NA;Wastewater - treated;1 - Dissolved fraction;NF EN 903;NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;Spectrophotometry
+MP_0520;Cationic surfactant;NA;Wastewater - raw;1 - Dissolved fraction;Internal method RODIER;NA;0;0.1;0.2;0.4;0.4;mg/L;60;NA;Spectrophotometry
+MP_0522;Cationic surfactant;NA;Wastewater - treated;1 - Dissolved fraction;Internal method RODIER;NA;0;0.1;0.2;0.4;0.4;mg/L;NA;NA;Spectrophotometry
+MP_0525;Cationic surfactant;NA;Surface freshwater;1 - Dissolved fraction;Internal method RODIER;NA;0;0.1;0.2;0.4;0.4;mg/L;NA;NA;Spectrophotometry
+MP_0540;Cationic surfactant;NA;Wastewater - raw;1 - Dissolved fraction;Internal method (Eurofins IPL Est);NA;0;0.1;0.2;0.4;0.4;mg/L;20;20;Spectrophotometry
+MP_0542;Cationic surfactant;NA;Wastewater - treated;1 - Dissolved fraction;Internal method (Eurofins IPL Est);NA;0;0.1;0.2;0.4;0.4;mg/L;20;20;Spectrophotometry
+MP_0544;Cationic surfactant;NA;Surface freshwater;1 - Dissolved fraction;Internal method (Eurofins IPL Est);NA;0;0.1;0.2;0.4;0.4;mg/L;20;20;Spectrophotometry
+MP_0545;Cationic surfactant;NA;Ground water;1 - Dissolved fraction;Internal method (Eurofins IPL Est);NA;0;0.1;0.2;0.4;0.4;mg/L;20;20;Spectrophotometry
+MP_0527;Non-ionic surfactant;NA;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 9562;NA;0;0.0025;0.005;0.01;0.01;mg/L;NA;NA;Coulometry
+MP_0529;Non-ionic surfactant;NA;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 9564;NA;0;0.0025;0.005;0.01;0.01;mg/L;NA;NA;Coulometry
+MP_0532;Non-ionic surfactant;NA;Surface freshwater;1 - Dissolved fraction;NF EN ISO 9567;NA;0;0.0025;0.005;0.01;0.01;mg/L;NA;NA;Coulometry
+MP_0546;Non-ionic surfactant;NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method (Eurofins IPL Est);NA;0;0.025;0.05;0.1;0.1;mg/L;20;20;Spectrophotometry
+MP_0548;Non-ionic surfactant;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method (Eurofins IPL Est);NA;0;0.025;0.05;0.1;0.1;mg/L;20;20;Spectrophotometry
+MP_0550;Non-ionic surfactant;NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method (Eurofins IPL Est);NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;Spectrophotometry
+MP_0551;Non-ionic surfactant;NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;Internal method (Eurofins IPL Est);NA;0;0.0125;0.025;0.05;0.05;mg/L;20;20;Spectrophotometry
+MP_0552;4-tert-octylphenol;140-66-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;ISO/DIS 18857-1;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;GC-MS or MS/MS
+MP_0554;4-tert-octylphenol;140-66-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO/DIS 18857-1;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;GC-MS or MS/MS
+MP_0556;4-tert-octylphenol;140-66-9;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;ISO/DIS 18857-1;NA;0;0.0075;0.015;0.03;0.03;µg/L;NA;NA;GC-MS or MS/MS
+MP_0557;4-tert-octylphenol;140-66-9;Sludge;6 - Sludge;ISO/DIS 18857-1;NA;0;25;50;100;100;µg/g DM;NA;NA;GC-MS or MS/MS
+MP_0582;4-tert-octylphenol;140-66-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.01;0.02;0.04;0.04;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0584;4-tert-octylphenol;140-66-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.01;0.02;0.04;0.04;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0586;4-tert-octylphenol;140-66-9;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.01;0.02;0.04;0.04;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0602;4-tert-octylphenol;140-66-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0604;4-tert-octylphenol;140-66-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0606;4-tert-octylphenol;140-66-9;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0607;4-tert-octylphenol;140-66-9;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0608;4-tert-octylphenol;140-66-9;Sludge;6 - Sludge;NF EN ISO 18857-1;NA;0;2.5;5;10;10;µg/g DM;NA;30;GC-MS or MS/MS
+MP_0996;4-tert-octylphenol;140-66-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;GC-MS or MS/MS
+MP_0558;4-n-nonylphenol;104-40-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;ISO/DIS 18857-1;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;GC-MS or MS/MS
+MP_0560;4-n-nonylphenol;104-40-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO/DIS 18857-1;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;GC-MS or MS/MS
+MP_0562;4-n-nonylphenol;104-40-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;ISO/DIS 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;GC-MS or MS/MS
+MP_0563;4-n-nonylphenol;104-40-5;Sludge;6 - Sludge;ISO/DIS 18857-1;NA;0;25;50;100;100;µg/g DM;NA;NA;GC-MS or MS/MS
+MP_0587;4-n-nonylphenol;104-40-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.01;0.02;0.04;0.04;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0589;4-n-nonylphenol;104-40-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.01;0.02;0.04;0.04;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0591;4-n-nonylphenol;104-40-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.01;0.02;0.04;0.04;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0610;4-n-nonylphenol;104-40-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0612;4-n-nonylphenol;104-40-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0614;4-n-nonylphenol;104-40-5;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0615;4-n-nonylphenol;104-40-5;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;30;GC-MS or MS/MS
+MP_0616;4-n-nonylphenol;104-40-5;Sludge;6 - Sludge;NF EN ISO 18857-1;NA;0;2.5;5;10;10;µg/g DM;NA;30;GC-MS or MS/MS
+MP_0997;4-n-nonylphenol;104-40-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.075;0.15;0.3;0.3;µg/L;NA;NA;GC-MS or MS/MS
+MP_0564;Nonylphenol monoethoxylate (NP1OE);104-35-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;HPLC-FLD
+MP_0568;Nonylphenol monoethoxylate (NP1OE);104-35-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;HPLC-FLD
+MP_0569;Nonylphenol monoethoxylate (NP1OE);104-35-8;Sludge;6 - Sludge;Internal method (Carso);NA;0;12.5;25;50;50;µg/g DM;NA;NA;HPLC-FLD
+MP_0592;Nonylphenol monoethoxylate (NP1OE);104-35-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.025;0.05;0.1;0.1;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0594;Nonylphenol monoethoxylate (NP1OE);104-35-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.025;0.05;0.1;0.1;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0596;Nonylphenol monoethoxylate (NP1OE);104-35-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.025;0.05;0.1;0.1;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0618;Nonylphenol monoethoxylate (NP1OE);104-35-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0620;Nonylphenol monoethoxylate (NP1OE);104-35-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0622;Nonylphenol monoethoxylate (NP1OE);104-35-8;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0623;Nonylphenol monoethoxylate (NP1OE);104-35-8;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0624;Nonylphenol monoethoxylate (NP1OE);104-35-8;Sludge;6 - Sludge;NF EN ISO 18857-1;NA;0;25;50;100;100;µg/g DM;NA;30;GC-MS or MS/MS
+MP_0998;Nonylphenol monoethoxylate (NP1OE);104-35-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.075;0.15;0.3;0.3;µg/L;NA;NA;GC-MS or MS/MS
+MP_0570;Nonylphénol diethoxylate (NP2OE);20427-84-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;HPLC-FLD
+MP_0574;Nonylphénol diethoxylate (NP2OE);20427-84-3;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;HPLC-FLD
+MP_0575;Nonylphénol diethoxylate (NP2OE);20427-84-3;Sludge;6 - Sludge;Internal method (Carso);NA;0;12.5;25;50;50;µg/g DM;NA;NA;HPLC-FLD
+MP_0597;Nonylphénol diethoxylate (NP2OE);20427-84-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.025;0.05;0.1;0.1;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0599;Nonylphénol diethoxylate (NP2OE);20427-84-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.025;0.05;0.1;0.1;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0601;Nonylphénol diethoxylate (NP2OE);20427-84-3;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method CMO_MTO2;NA;0;0.025;0.05;0.1;0.1;µg/L;35;NA;Multi-detection : HPLC/DAD  - HPLC/MS/MS - GC/ECD/NPD - GC/MS
+MP_0626;Nonylphénol diethoxylate (NP2OE);20427-84-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0628;Nonylphénol diethoxylate (NP2OE);20427-84-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0630;Nonylphénol diethoxylate (NP2OE);20427-84-3;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0631;Nonylphénol diethoxylate (NP2OE);20427-84-3;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;30;GC-MS or MS/MS
+MP_0632;Nonylphénol diethoxylate (NP2OE);20427-84-3;Sludge;6 - Sludge;NF EN ISO 18857-1;NA;0;25;50;100;100;µg/g DM;NA;30;GC-MS or MS/MS
+MP_0999;Nonylphénol diethoxylate (NP2OE);20427-84-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.075;0.15;0.3;0.3;µg/L;NA;NA;GC-MS or MS/MS
+MP_0576;4-nonylphenoxiacetic acid;3115-49-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;NA
+MP_0578;4-nonylphenoxiacetic acid;3115-49-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;NA
+MP_0580;4-nonylphenoxiacetic acid;3115-49-9;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;NA
+MP_0581;4-nonylphenoxiacetic acid;3115-49-9;Sludge;6 - Sludge;Internal method (Carso);NA;0;12.5;25;50;50;µg/g DM;NA;NA;NA
+MP_0634;AOX;NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 9562;NA;0;0.0025;0.005;0.01;0.01;mg/L;60;30;Coulometry
+MP_0636;AOX;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 9562;NA;0;0.0025;0.005;0.01;0.01;mg/L;60;30;Coulometry
+MP_0639;AOX;NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 9562;NA;0;0.0025;0.005;0.01;0.01;mg/L;60;30;Coulometry
+MP_0640;AOX;NA;Ground water;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 9562;NA;0;0.0025;0.005;0.01;0.01;mg/L;60;60;Coulometry
+MP_1364;AOX;NA;Sludge;6 - Sludge;NF EN ISO 9562;NA;0;0.025;0.05;0.1;0.1;µg/g DM;20;NA;ICP-MS
+MP_0641;Total chlorine (Cl);7782-50-5;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;MA-E2-124;NA;0;1.25;2.5;5;5;mg/L;10;NA;Coupling chromatographic chain and oxydising combustion system
+MP_0643;Total chlorine (Cl);7782-50-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;MA-E2-124;NA;0;1.25;2.5;5;5;mg/L;10;NA;Coupling chromatographic chain and oxydising combustion system
+MP_0646;Total bromine (Br);7726-95-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;MA-E2-124;NA;0;10;20;40;40;mg/L;10;NA;Coupling chromatographic chain and oxydising combustion system
+MP_0648;Total bromine (Br);7726-95-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;MA-E2-124;NA;0;10;20;40;40;mg/L;10;NA;Coupling chromatographic chain and oxydising combustion system
+MP_0651;Total fluorine (Fl);7782-41-4;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;MA-E2-124;NA;0;1.25;2.5;5;5;mg/L;10;NA;Coupling chromatographic chain and oxydising combustion system
+MP_0653;Total fluorine (Fl);7782-41-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;MA-E2-124;NA;0;1.25;2.5;5;5;mg/L;10;NA;Coupling chromatographic chain and oxydising combustion system
+MP_0746;Nickel;7440-02-0;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0748;Nickel;7440-02-0;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0750;Nickel;7440-02-0;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0753;Nickel;7440-02-0;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0754;Nickel;7440-02-0;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.01;0.02;0.04;0.04;µg/g DM;NA;NA;ICP-MS
+MP_0975;Nickel;7440-02-0;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_1000;Nickel;7440-02-0;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;NA;NA;ICP-OES
+MP_1037;Nickel;7440-02-0;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;30;30;ICP-AES
+MP_1047;Nickel;7440-02-0;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;30;30;ICP-AES
+MP_1077;Nickel;7440-02-0;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;30;30;ICP-AES
+MP_1087;Nickel;7440-02-0;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;30;30;ICP-AES
+MP_1097;Nickel;7440-02-0;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.25;0.5;1;1;µg/g DM;30;NA;ICP-AES
+MP_1106;Nickel;7440-02-0;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.25;0.5;1;1;µg/g DM;30;NA;ICP-AES
+MP_1115;Nickel;7440-02-0;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;30;30;ICP-AES
+MP_1124;Nickel;7440-02-0;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;30;30;ICP-AES
+MP_1354;Nickel;7440-02-0;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/g DM;20;NA;ICP-MS
+MP_0756;Copper;7440-50-8;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1;2;4;4;µg/L;20;20;ICP-MS
+MP_0758;Copper;7440-50-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;1;2;4;4;µg/L;20;20;ICP-MS
+MP_0760;Copper;7440-50-8;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1;2;4;4;µg/L;20;20;ICP-MS
+MP_0763;Copper;7440-50-8;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1;2;4;4;µg/L;20;20;ICP-MS
+MP_0764;Copper;7440-50-8;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.0625;0.125;0.25;0.25;µg/g DM;NA;NA;ICP-MS
+MP_0976;Copper;7440-50-8;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1;2;4;4;µg/L;20;20;ICP-MS
+MP_1001;Copper;7440-50-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;NA;NA;ICP-OES
+MP_1036;Copper;7440-50-8;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;20;20;ICP-AES
+MP_1046;Copper;7440-50-8;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;20;20;ICP-AES
+MP_1086;Copper;7440-50-8;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;20;NA;ICP-AES
+MP_1096;Copper;7440-50-8;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/g DM;20;NA;ICP-AES
+MP_1105;Copper;7440-50-8;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/g DM;20;20;ICP-AES
+MP_1114;Copper;7440-50-8;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;20;20;ICP-AES
+MP_1123;Copper;7440-50-8;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;20;20;ICP-AES
+MP_1350;Copper;7440-50-8;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;7.5;15;30;30;µg/g DM;20;NA;ICP-MS
+MP_0766;Zinc;7440-66-6;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;60;40;ICP-MS
+MP_0768;Zinc;7440-66-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;60;40;ICP-MS
+MP_0770;Zinc;7440-66-6;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;60;40;ICP-MS
+MP_0773;Zinc;7440-66-6;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;60;40;ICP-MS
+MP_0774;Zinc;7440-66-6;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.0625;0.125;0.25;0.25;µg/g DM;NA;NA;ICP-MS
+MP_0977;Zinc;7440-66-6;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;60;60;ICP-MS
+MP_1002;Zinc;7440-66-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;NA;NA;ICP-OES
+MP_1018;Zinc;7440-66-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 15587-1  ISO  17294-1/2;NA;0;2.5;5;10;10;µg/L;NA;NA;ICP-MS
+MP_1035;Zinc;7440-66-6;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;10;10;ICP-AES
+MP_1045;Zinc;7440-66-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;10;10;ICP-AES
+MP_1085;Zinc;7440-66-6;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;10;10;ICP-AES
+MP_1095;Zinc;7440-66-6;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/g DM;18;NA;ICP-AES
+MP_1104;Zinc;7440-66-6;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/g DM;18;NA;ICP-AES
+MP_1113;Zinc;7440-66-6;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;10;10;ICP-AES
+MP_1122;Zinc;7440-66-6;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;2.5;5;10;10;µg/L;10;10;ICP-AES
+MP_1360;Zinc;7440-66-6;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;3.75;7.5;15;15;µg/g DM;20;NA;ICP-MS
+MP_0776;Chrome;7440-47-3;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0778;Chrome;7440-47-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0780;Chrome;7440-47-3;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0783;Chrome;7440-47-3;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0784;Chrome;7440-47-3;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.005;0.01;0.02;0.02;µg/g DM;NA;NA;ICP-MS
+MP_0978;Chrome;7440-47-3;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_1003;Chrome;7440-47-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;NA;NA;ICP-OES
+MP_1039;Chrome;7440-47-3;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;15;15;ICP-AES
+MP_1049;Chrome;7440-47-3;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;15;15;ICP-AES
+MP_1079;Chrome;7440-47-3;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;15;15;ICP-AES
+MP_1099;Chrome;7440-47-3;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.1;0.2;0.4;0.4;µg/g DM;20;NA;ICP-AES
+MP_1108;Chrome;7440-47-3;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.1;0.2;0.4;0.4;µg/g DM;20;NA;ICP-AES
+MP_1117;Chrome;7440-47-3;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;15;15;ICP-AES
+MP_1126;Chrome;7440-47-3;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;15;15;ICP-AES
+MP_1348;Chrome;7440-47-3;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;1.75;3.5;7;7;µg/g DM;20;NA;ICP-MS
+MP_0786;Arsenic;7440-38-2;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0788;Arsenic;7440-38-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0790;Arsenic;7440-38-2;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0793;Arsenic;7440-38-2;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_0794;Arsenic;7440-38-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.005;0.01;0.02;0.02;µg/g DM;NA;NA;ICP-MS
+MP_0979;Arsenic;7440-38-2;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;20;20;ICP-MS
+MP_1004;Arsenic;7440-38-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;NA;NA;ICP-OES
+MP_1043;Arsenic;7440-38-2;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.00125;0.0025;0.005;0.005;µg/L;40;40;ICP-AES
+MP_1053;Arsenic;7440-38-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.00125;0.0025;0.005;0.005;µg/L;40;40;ICP-AES
+MP_1083;Arsenic;7440-38-2;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.00125;0.0025;0.005;0.005;µg/L;40;40;ICP-AES
+MP_1102;Arsenic;7440-38-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.25;0.5;1;1;µg/g DM;40;NA;ICP-AES
+MP_1120;Arsenic;7440-38-2;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.00125;0.0025;0.005;0.005;µg/L;40;40;ICP-AES
+MP_1129;Arsenic;7440-38-2;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.00125;0.0025;0.005;0.005;µg/L;40;40;ICP-AES
+MP_1362;Arsenic;7440-38-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/g DM;30;NA;ICP-MS
+MP_0796;Cadmium;7440-43-9;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0798;Cadmium;7440-43-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0800;Cadmium;7440-43-9;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0803;Cadmium;7440-43-9;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0804;Cadmium;7440-43-9;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.005;0.01;0.02;0.02;µg/g DM;NA;NA;ICP-MS
+MP_0980;Cadmium;7440-43-9;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_1005;Cadmium;7440-43-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;NA;NA;ICP-OES
+MP_1044;Cadmium;7440-43-9;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.125;0.25;0.5;0.5;µg/L;15;15;ICP-AES
+MP_1054;Cadmium;7440-43-9;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.125;0.25;0.5;0.5;µg/L;15;15;ICP-AES
+MP_1084;Cadmium;7440-43-9;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.125;0.25;0.5;0.5;µg/L;15;15;ICP-AES
+MP_1094;Cadmium;7440-43-9;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.125;0.25;0.5;0.5;µg/L;15;15;ICP-AES
+MP_1103;Cadmium;7440-43-9;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.025;0.05;0.1;0.1;µg/g DM;30;NA;ICP-AES
+MP_1112;Cadmium;7440-43-9;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.025;0.05;0.1;0.1;µg/g DM;30;NA;ICP-AES
+MP_1121;Cadmium;7440-43-9;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.125;0.25;0.5;0.5;µg/L;15;15;ICP-AES
+MP_1130;Cadmium;7440-43-9;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.125;0.25;0.5;0.5;µg/L;15;15;ICP-AES
+MP_1346;Cadmium;7440-43-9;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.25;0.5;1;1;µg/g DM;30;NA;ICP-MS
+MP_0806;Gadolinium;7440-54-2;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0808;Gadolinium;7440-54-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0810;Gadolinium;7440-54-2;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0813;Gadolinium;7440-54-2;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_0814;Gadolinium;7440-54-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.005;0.01;0.02;0.02;µg/g DM;NA;NA;ICP-MS
+MP_0981;Gadolinium;7440-54-2;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.05;0.1;0.2;0.2;µg/L;20;20;ICP-MS
+MP_1041;Gadolinium;7440-54-2;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;NA;NA;ICP-AES
+MP_1051;Gadolinium;7440-54-2;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;NA;NA;ICP-AES
+MP_1081;Gadolinium;7440-54-2;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;NA;NA;ICP-AES
+MP_1091;Gadolinium;7440-54-2;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;NA;NA;ICP-AES
+MP_1100;Gadolinium;7440-54-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.1;0.2;0.4;0.4;µg/g DM;NA;NA;ICP-AES
+MP_1109;Gadolinium;7440-54-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.1;0.2;0.4;0.4;µg/g DM;NA;NA;ICP-AES
+MP_1118;Gadolinium;7440-54-2;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;NA;NA;ICP-AES
+MP_1127;Gadolinium;7440-54-2;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;NA;NA;ICP-AES
+MP_1330;Gadolinium;7440-54-2;Sludge;6 - Sludge;Internal method (CARSO Savoie);NA;0;0.25;0.5;1;1;µg/g DM;30;NA;ICP-MS
+MP_0824;Mercury;7439-97-6;Sludge;6 - Sludge;NF EN ISO 17852;NA;0;0.005;0.01;0.02;0.02;µg/g DM;NA;NA;ICP-MS
+MP_1006;Mercury;7439-97-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17852;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;Atomic Fluorescence Spectrometry
+MP_1042;Mercury;7439-97-6;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11852;NA;0;0.025;0.05;0.1;0.1;µg/L;20;5;Fluorescence analysis
+MP_1052;Mercury;7439-97-6;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11852;NA;0;0.025;0.05;0.1;0.1;µg/L;20;5;Fluorescence analysis
+MP_1082;Mercury;7439-97-6;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11852;NA;0;0.025;0.05;0.1;0.1;µg/L;20;5;Fluorescence analysis
+MP_1092;Mercury;7439-97-6;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11852;NA;0;0.025;0.05;0.1;0.1;µg/L;20;5;Fluorescence analysis
+MP_1101;Mercury;7439-97-6;Sludge;6 - Sludge;NF EN ISO 11852;NA;0;0.005;0.01;0.02;0.02;µg/g DM;30;NA;Fluorescence analysis
+MP_1110;Mercury;7439-97-6;Sludge;6 - Sludge;NF EN ISO 11852;NA;0;0.005;0.01;0.02;0.02;µg/g DM;30;NA;Fluorescence analysis
+MP_1119;Mercury;7439-97-6;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11852;NA;0;0.025;0.05;0.1;0.1;µg/L;20;5;Fluorescence analysis
+MP_1128;Mercury;7439-97-6;Ground water;1 - Dissolved fraction;NF EN ISO 11852;NA;0;0.025;0.05;0.1;0.1;µg/L;20;5;Fluorescence analysis
+MP_1352;Mercury;7439-97-6;Sludge;6 - Sludge;NF EN 1483;NA;0;0.125;0.25;0.5;0.5;µg/g DM;30;NA;ICP-MS
+MP_1398;Mercury;7439-97-6;Sludge;6 - Sludge;NF EN ISO 17852;NA;0;2.5;5;10;10;µg/g DM;NA;NA;NA
+MP_0826;Lead;7439-92-1;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0828;Lead;7439-92-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0830;Lead;7439-92-1;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0833;Lead;7439-92-1;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_0834;Lead;7439-92-1;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.005;0.01;0.02;0.02;µg/g DM;NA;NA;ICP-MS
+MP_0983;Lead;7439-92-1;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/L;20;20;ICP-MS
+MP_1007;Lead;7439-92-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 15586;NA;0;0.5;1;2;2;µg/L;NA;NA;F-AAS
+MP_1038;Lead;7439-92-1;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;30;30;ICP-AES
+MP_1048;Lead;7439-92-1;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;30;30;ICP-AES
+MP_1078;Lead;7439-92-1;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;30;30;ICP-AES
+MP_1088;Lead;7439-92-1;Wastewater - treated;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;30;30;ICP-AES
+MP_1098;Lead;7439-92-1;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.1;0.2;0.4;0.4;µg/g DM;30;NA;ICP-AES
+MP_1116;Lead;7439-92-1;Surface freshwater;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;30;30;ICP-AES
+MP_1125;Lead;7439-92-1;Ground water;1 - Dissolved fraction;NF EN ISO 11885;NA;0;0.5;1;2;2;µg/L;30;30;ICP-AES
+MP_1356;Lead;7439-92-1;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/g DM;20;NA;ICP-MS
+MP_0836;Paracetamol;103-90-2;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;1.1;6.65;6.65;6.65;12.2;12.2;ng/L;NA;12;HPLC-MS or MS/MS
+MP_0838;Paracetamol;103-90-2;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;1.1;6.65;6.65;6.65;12.2;12.2;ng/L;NA;22;HPLC-MS or MS/MS
+MP_0840;Paracetamol;103-90-2;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.8;4.9;4.9;4.9;9;9;ng/L;NA;30;HPLC-MS or MS/MS
+MP_0841;Paracetamol;103-90-2;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.8;4.9;4.9;4.9;9;9;ng/L;NA;30;HPLC-MS or MS/MS
+MP_1031;Paracetamol;103-90-2;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;1.1;6.65;6.65;6.65;12.2;12.2;ng/L;NA;30;HPLC-MS or MS/MS
+MP_1131;Paracetamol;103-90-2;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;80;0;53.5;107;214;214;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1305;Paracetamol;103-90-2;Sludge;6 - Sludge;Peysson & Vulliet 2013;16;0;10.75;21.5;43;43;ng/g DM;27;27;HPLC-MS or MS/MS
+MP_0842;Atenolol;29122-68-7;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.5;2.3;2.3;2.3;4.1;4.1;ng/L;NA;3;HPLC-MS or MS/MS
+MP_0844;Atenolol;29122-68-7;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;0.5;2.3;2.3;2.3;4.1;4.1;ng/L;NA;11;HPLC-MS or MS/MS
+MP_0846;Atenolol;29122-68-7;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.75;0.75;0.75;1.3;1.3;ng/L;NA;12;HPLC-MS or MS/MS
+MP_0847;Atenolol;29122-68-7;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.75;0.75;0.75;1.3;1.3;ng/L;NA;12;HPLC-MS or MS/MS
+MP_1132;Atenolol;29122-68-7;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;13.39285714;0;10.71428571;21.42857143;42.85714286;42.85714286;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1306;Atenolol;29122-68-7;Sludge;6 - Sludge;Peysson & Vulliet 2013;3;0;2.5;5;10;10;ng/g DM;39;39;HPLC-MS or MS/MS
+MP_0848;Ciprofloxacin;85721-33-1;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;3.5;19.4;19.4;19.4;35.3;35.3;ng/L;NA;27;HPLC-MS or MS/MS
+MP_0850;Ciprofloxacin;85721-33-1;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;3.5;19.4;19.4;19.4;35.3;35.3;ng/L;NA;27;HPLC-MS or MS/MS
+MP_0852;Ciprofloxacin;85721-33-1;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.7;3.65;3.65;3.65;6.6;6.6;ng/L;NA;30;HPLC-MS or MS/MS
+MP_0853;Ciprofloxacin;85721-33-1;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.7;3.65;3.65;3.65;6.6;6.6;ng/L;NA;30;HPLC-MS or MS/MS
+MP_1316;Ciprofloxacin;85721-33-1;Sludge;6 - Sludge;Peysson & Vulliet 2013;12;0;10;20;40;40;ng/g DM;55;55;HPLC-MS or MS/MS
+MP_0854;Sulfamethoxazole;723-46-6;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;1.2;3.55;3.55;3.55;5.9;5.9;ng/L;NA;25;HPLC-MS or MS/MS
+MP_0856;Sulfamethoxazole;723-46-6;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;1.2;3.55;3.55;3.55;5.9;5.9;ng/L;NA;10;HPLC-MS or MS/MS
+MP_0858;Sulfamethoxazole;723-46-6;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.3;1;1;1;1.7;1.7;ng/L;NA;21;HPLC-MS or MS/MS
+MP_0859;Sulfamethoxazole;723-46-6;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.3;1;1;1;1.7;1.7;ng/L;NA;21;HPLC-MS or MS/MS
+MP_1133;Sulfamethoxazole;723-46-6;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;8.035714286;0;5.357142857;10.71428571;21.42857143;21.42857143;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1307;Sulfamethoxazole;723-46-6;Sludge;6 - Sludge;Peysson & Vulliet 2013;2;0;1;2;4;4;ng/g DM;19;19;HPLC-MS or MS/MS
+MP_0860;Propranolol;525-66-6;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.4;0.4;0.4;0.6;0.6;ng/L;NA;5;HPLC-MS or MS/MS
+MP_0862;Propranolol;525-66-6;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.4;0.4;0.4;0.6;0.6;ng/L;NA;25;HPLC-MS or MS/MS
+MP_0864;Propranolol;525-66-6;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.1;0.15;0.15;0.15;0.2;0.2;ng/L;NA;31;HPLC-MS or MS/MS
+MP_0865;Propranolol;525-66-6;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.1;0.15;0.15;0.15;0.2;0.2;ng/L;NA;31;HPLC-MS or MS/MS
+MP_1134;Propranolol;525-66-6;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;2.678571429;0;2.678571429;5.357142857;10.71428571;10.71428571;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1308;Propranolol;525-66-6;Sludge;6 - Sludge;Peysson & Vulliet 2013;1;0;0.5;1;2;2;ng/g DM;24;24;HPLC-MS or MS/MS
+MP_0866;Carbamazepine;298-46-4;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.4;0.4;0.4;0.6;0.6;ng/L;NA;4;HPLC-MS or MS/MS
+MP_0868;Carbamazepine;298-46-4;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.4;0.4;0.4;0.6;0.6;ng/L;NA;11;HPLC-MS or MS/MS
+MP_0870;Carbamazepine;298-46-4;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.1;0.2;0.2;0.2;0.3;0.3;ng/L;NA;22;HPLC-MS or MS/MS
+MP_0871;Carbamazepine;298-46-4;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.1;0.2;0.2;0.2;0.3;0.3;ng/L;NA;22;HPLC-MS or MS/MS
+MP_1135;Carbamazepine;298-46-4;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;2.678571429;0;2.678571429;5.357142857;10.71428571;10.71428571;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1309;Carbamazepine;298-46-4;Sludge;6 - Sludge;Peysson & Vulliet 2013;1;0;0.5;1;2;2;ng/g DM;31;31;HPLC-MS or MS/MS
+MP_0872;Ketoprofen;22071-15-4;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;1;5.4;5.4;5.4;9.8;9.8;ng/L;NA;7;HPLC-MS or MS/MS
+MP_0874;Ketoprofen;22071-15-4;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;1;5.4;5.4;5.4;9.8;9.8;ng/L;NA;12;HPLC-MS or MS/MS
+MP_0876;Ketoprofen;22071-15-4;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.3;1.4;1.4;1.4;2.5;2.5;ng/L;NA;15;HPLC-MS or MS/MS
+MP_0877;Ketoprofen;22071-15-4;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.3;1.4;1.4;1.4;2.5;2.5;ng/L;NA;15;HPLC-MS or MS/MS
+MP_1136;Ketoprofen;22071-15-4;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;5.357142857;0;4.017857143;8.035714286;16.07142857;16.07142857;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1310;Ketoprofen;22071-15-4;Sludge;6 - Sludge;Peysson & Vulliet 2013;10;0;7.5;15;30;30;ng/g DM;47;47;HPLC-MS or MS/MS
+MP_0878;Econazole;27220-47-9;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.6;0.9;0.9;0.9;1.2;1.2;ng/L;NA;27;HPLC-MS or MS/MS
+MP_0880;Econazole;27220-47-9;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;0.6;0.9;0.9;0.9;1.2;1.2;ng/L;NA;24;HPLC-MS or MS/MS
+MP_0882;Econazole;27220-47-9;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.5;0.75;0.75;0.75;1;1;ng/L;NA;30;HPLC-MS or MS/MS
+MP_0883;Econazole;27220-47-9;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.5;0.75;0.75;0.75;1;1;ng/L;NA;30;HPLC-MS or MS/MS
+MP_1137;Econazole;27220-47-9;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;5.357142857;0;4.017857143;8.035714286;16.07142857;16.07142857;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1311;Econazole;27220-47-9;Sludge;6 - Sludge;Peysson & Vulliet 2013;1;0;0.75;1.5;3;3;ng/g DM;34;34;HPLC-MS or MS/MS
+MP_0884;Diclofenac;15307-86-5;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;1;3;3;3;5;5;ng/L;NA;16;HPLC-MS or MS/MS
+MP_0886;Diclofenac;15307-86-5;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;1;3;3;3;5;5;ng/L;NA;26;HPLC-MS or MS/MS
+MP_0888;Diclofenac;15307-86-5;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.3;0.9;0.9;0.9;1.5;1.5;ng/L;NA;19;HPLC-MS or MS/MS
+MP_0889;Diclofenac;15307-86-5;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.3;0.9;0.9;0.9;1.5;1.5;ng/L;NA;19;HPLC-MS or MS/MS
+MP_1138;Diclofenac;15307-86-5;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;5.357142857;0;4.017857143;8.035714286;16.07142857;16.07142857;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1312;Diclofenac;15307-86-5;Sludge;6 - Sludge;Peysson & Vulliet 2013;6;0;5;10;20;20;ng/g DM;49;49;HPLC-MS or MS/MS
+MP_0890;Salicylic acid;69-72-7;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.7;7;7;7;13.3;13.3;ng/L;NA;23;HPLC-MS or MS/MS
+MP_0892;Salicylic acid;69-72-7;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;0.7;7;7;7;13.3;13.3;ng/L;NA;30;HPLC-MS or MS/MS
+MP_0894;Salicylic acid;69-72-7;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.5;5.25;5.25;5.25;10;10;ng/L;NA;35;HPLC-MS or MS/MS
+MP_0895;Salicylic acid;69-72-7;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.5;5.25;5.25;5.25;10;10;ng/L;NA;35;HPLC-MS or MS/MS
+MP_1033;Salicylic acid;69-72-7;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.7;6.65;6.65;6.65;13.3;13.3;ng/L;NA;35;HPLC-MS or MS/MS
+MP_1139;Salicylic acid;69-72-7;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;107.1428571;0;80.35714286;160.7142857;321.4285714;321.4285714;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1313;Salicylic acid;69-72-7;Sludge;6 - Sludge;Peysson & Vulliet 2013;21;0;16;32;64;64;ng/g DM;52;52;HPLC-MS or MS/MS
+MP_0896;Ibuprofen;15687-27-1;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.35;0.35;0.35;0.5;0.5;ng/L;NA;20;HPLC-MS or MS/MS
+MP_0898;Ibuprofen;15687-27-1;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;0.2;0.35;0.35;0.35;0.5;0.5;ng/L;NA;27;HPLC-MS or MS/MS
+MP_0900;Ibuprofen;15687-27-1;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.05;0.075;0.075;0.075;0.1;0.1;ng/L;NA;21;HPLC-MS or MS/MS
+MP_0901;Ibuprofen;15687-27-1;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.05;0.075;0.075;0.075;0.1;0.1;ng/L;NA;21;HPLC-MS or MS/MS
+MP_1140;Ibuprofen;15687-27-1;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;13.39285714;0;10.71428571;21.42857143;42.85714286;42.85714286;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1314;Ibuprofen;15687-27-1;Sludge;6 - Sludge;Peysson & Vulliet 2013;3;0;2.5;5;10;10;ng/g DM;44;44;HPLC-MS or MS/MS
+MP_0902;Ethinylestradiol;57-63-6;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;0.4;3.85;3.85;3.85;7.3;7.3;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0904;Ethinylestradiol;57-63-6;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;0.4;3.85;3.85;3.85;7.3;7.3;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0906;Ethinylestradiol;57-63-6;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;0.1;1.45;1.45;1.45;2.8;2.8;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0907;Ethinylestradiol;57-63-6;Ground water;1 - Dissolved fraction;Wiest et al. 2016;0.1;1.45;1.45;1.45;2.8;2.8;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_1141;Ethinylestradiol;57-63-6;Wastewater - raw;5 - TSS fraction;Peysson & Vulliet 2013;107.1428571;0;80.35714286;160.7142857;321.4285714;321.4285714;ng/g DM;20;20;HPLC-MS or MS/MS
+MP_1315;Ethinylestradiol;57-63-6;Sludge;6 - Sludge;Peysson & Vulliet 2013;21;0;16;32;64;64;ng/g DM;44;44;HPLC-MS or MS/MS
+MP_0908;Meropenem;119478-56-7;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0910;Meropenem;119478-56-7;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0912;Meropenem;119478-56-7;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;2;0;NA;NA;NA;NA;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0913;Meropenem;119478-56-7;Ground water;1 - Dissolved fraction;Wiest et al. 2016;2;0;NA;NA;NA;NA;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0914;Aztreonam;78110-38-0;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0916;Aztreonam;78110-38-0;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0918;Aztreonam;78110-38-0;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;2;0;NA;NA;NA;NA;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0919;Aztreonam;78110-38-0;Ground water;1 - Dissolved fraction;Wiest et al. 2016;2;0;NA;NA;NA;NA;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0920;Vancomycin;1404-90-6;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;50;HPLC-MS or MS/MS
+MP_0921;Vancomycin;1404-90-6;Wastewater - raw;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0922;Vancomycin;1404-90-6;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;50;HPLC-MS or MS/MS
+MP_0923;Vancomycin;1404-90-6;Wastewater - treated;1 - Dissolved fraction;Wiest et al. 2016;8;0;NA;NA;50;50;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0924;Vancomycin;1404-90-6;Surface freshwater;1 - Dissolved fraction;Wiest et al. 2016;2;0;NA;NA;NA;NA;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0925;Vancomycin;1404-90-6;Ground water;1 - Dissolved fraction;Wiest et al. 2016;2;0;NA;NA;NA;NA;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0926;Hexachlorobutadiene;87-68-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.125;0.25;0.5;0.5;µg/L;NA;NA;GC-MS or MS/MS
+MP_0927;Pentachlorobenzene;608-93-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;NA;GC-MS or MS/MS
+MP_0928;1,2,3-Trichlorobenzene;87-61-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.05;0.1;0.2;0.2;µg/L;NA;NA;GC-MS or MS/MS
+MP_0929;1,2,4-Trichlorobenzene;120-82-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.05;0.1;0.2;0.2;µg/L;NA;NA;GC-MS or MS/MS
+MP_0930;1,3,5-Trichlorobenzene;108-70-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 10301;NA;0;0.05;0.1;0.2;0.2;µg/L;NA;NA;GC-MS or MS/MS
+MP_0931;Anthracene;120-12-7;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.005;0.01;0.02;0.02;µg/L;NA;NA;GC-MS or MS/MS
+MP_0932;Fluoranthene;206-44-0;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;NA;GC-MS or MS/MS
+MP_1366;Fluoranthene;206-44-0;Sludge;6 - Sludge;XP-X33012;NA;0;0.005;0.01;0.02;0.02;µg/g DM;30;NA;HPLC-FLD
+MP_0933;Naphthalene;91-20-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.0125;0.025;0.05;0.05;µg/L;NA;NA;GC-MS or MS/MS
+MP_0934;Benzo(a)pyrene;50-32-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.0025;0.005;0.01;0.01;µg/L;NA;NA;GC-MS or MS/MS
+MP_1368;Benzo(a)pyrene;50-32-8;Sludge;6 - Sludge;XP-X33012;NA;0;0.005;0.01;0.02;0.02;µg/g DM;30;NA;HPLC-FLD
+MP_0935;Benzo(b)fluoranthene;205-99-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.00125;0.0025;0.005;0.005;µg/L;NA;NA;GC-MS or MS/MS
+MP_1370;Benzo(b)fluoranthene;205-99-2;Sludge;6 - Sludge;XP-X33012;NA;0;0.005;0.01;0.02;0.02;µg/g DM;30;NA;HPLC-FLD
+MP_0936;Benzo(k)fluoranthene;207-08-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.00125;0.0025;0.005;0.005;µg/L;NA;NA;GC-MS or MS/MS
+MP_0937;Benzo(ghi)perylene;191-24-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.00125;0.0025;0.005;0.005;µg/L;NA;NA;GC-MS or MS/MS
+MP_0938;Indeno(1,2,3,c,d)pyrene;193-39-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17993;NA;0;0.00125;0.0025;0.005;0.005;µg/L;NA;NA;GC-MS or MS/MS
+MP_0939;Phenol,4-nonyl-,branched;84852-15-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.075;0.15;0.3;0.3;µg/L;NA;NA;NA
+MP_0940;Linear and ramificated nonylphenols;NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.075;0.15;0.3;0.3;µg/L;NA;NA;GC-MS or MS/MS
+MP_0941;4-n-octylphenol;1806-26-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;GC-MS or MS/MS
+MP_0942;Octylphenols;67554-50-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;GC-MS or MS/MS
+MP_0943;OP1OE;2315-67-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;HPLC-FLD
+MP_0944;OP2OE;2315-61-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 18857-1;NA;0;0.025;0.05;0.1;0.1;µg/L;NA;NA;HPLC-FLD
+MP_0945;Atrazine;1912-24-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 10695;NA;0;7.5;15;30;30;ng/L;NA;NA;GC-MS or MS/MS
+MP_0946;Simazine;122-34-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 10695;NA;0;7.5;15;30;30;ng/L;NA;NA;GC-MS or MS/MS
+MP_0947;Diuron;330-54-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET0126;NA;0;12.5;25;50;50;ng/L;NA;NA;HPLC-DAD
+MP_0948;Isoproturon;34123-59-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET0126;NA;0;25;50;100;100;ng/L;NA;NA;HPLC-DAD
+MP_0949;Linuron;330-55-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET0126;NA;0;12.5;25;50;50;ng/L;NA;NA;HPLC-DAD
+MP_0950;Chlortoluron;15545-48-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET0126;NA;0;12.5;25;50;50;ng/L;NA;NA;HPLC-DAD
+MP_0951;Alachlor;15972-60-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET0127;NA;0;5;10;20;20;ng/L;NA;NA;GC-MS or MS/MS
+MP_0952;Trifluralin;1582-09-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET0127;NA;0;2.5;5;10;10;ng/L;NA;NA;GC-MS or MS/MS
+MP_0953;Endrin;72-20-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0954;2-methyl-4-chlorophenoxyacetic acid (2,4-MCPA);94-74-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET081;NA;0;12.5;25;50;50;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0955;2,4-dichlorophenoxyacetic acid (2,4-D);94-75-7;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET081;NA;0;25;50;100;100;ng/L;NA;NA;HPLC-MS or MS/MS
+MP_0956;Chlorfenvinphos;470-90-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 12918;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0957;Chlorpyrifos ethyl;39475-55-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 12918;NA;0;5;10;20;20;ng/L;NA;NA;GC-MS or MS/MS
+MP_0958;Hexachlorobenzene;118-74-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;2.5;5;10;10;ng/L;NA;NA;GC-MS or MS/MS
+MP_0959;Endosulfan;115-29-7;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;5;10;20;20;ng/L;NA;NA;GC-MS or MS/MS
+MP_0960;Dieldrine;60-57-1;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0961;Aldrin;309-00-2;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0962;Isodrin;465-73-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0963;Oxadiazon;19666-30-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET081;NA;0;7.5;15;30;30;ng/L;NA;NA;GC-MS or MS/MS
+MP_0964;Hexachlorocyclohexane (HCH);58-89-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;5;10;20;20;ng/L;NA;NA;GC-MS or MS/MS
+MP_0965;4,4'-DDD;72-54-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0966;4,4'-DDE;72-55-9;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0967;4,4'-DDT;50-29-3;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0968;2,4'-DDD;53-19-0;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0969;2,4'-DDE;3424-82-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0970;2,4'-DDT;789-02-6;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;ISO 6468;NA;0;12.5;25;50;50;ng/L;NA;NA;GC-MS or MS/MS
+MP_0971;Chloroalcanes C10-C13;85535-84-8;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method M-ET125;NA;0;1.25;2.5;5;5;µg/L;NA;NA;GC-MS or MS/MS
+MP_0972;Pentachlorophenol;87-86-5;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 12673;NA;0;25;50;100;100;ng/L;NA;NA;GC-MS or MS/MS
+MP_0973;Diethylhexyl phthalate (DEHP);117-81-7;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;Internal method (Carso);NA;0;0.25;0.5;1;1;µg/L;NA;NA;GC-MS or MS/MS
+MP_0974;Tributyltin cation;36643-28-4;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN ISO 17353;NA;0;5;10;20;20;ng/L;NA;NA;GC-MS or MS/MS
+MP_1156;Temperature;NA;Surface freshwater;2 - Whole water with no separation of liquid and SPM phases;Bergé et al. 2016;NA;0;NA;NA;NA;NA;°C;NA;NA;NA
+MP_1157;Texapon N701 S;68891-38-3;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.001666667;0;0.00125;0.0025;0.005;0.005;µg/L;4.1;4.1;HPLC-MS or MS/MS
+MP_1173;Texapon N701 S;68891-38-3;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.333;0;0.25;0.5;1;1;µg/g DM;4.5;4.5;HPLC-MS or MS/MS
+MP_1219;Texapon N701 S;68891-38-3;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.001666667;0;0.00125;0.0025;0.005;0.005;µg/L;4.1;4.1;HPLC-MS or MS/MS
+MP_1251;Texapon N701 S;68891-38-3;Sludge;6 - Sludge;Bergé et al. 2016;0.333333333;0;0.25;0.5;1;1;µg/g DM;4.5;4.5;HPLC-MS or MS/MS
+MP_1158;Stepanquat GA 90;157905-74-3;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;1.666666667;0;1.25;2.5;5;5;µg/L;2;2;HPLC-MS or MS/MS
+MP_1174;Stepanquat GA 90;157905-74-3;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.00333;0;0.0025;0.005;0.01;0.01;µg/g DM;7;7;HPLC-MS or MS/MS
+MP_1205;Stepanquat GA 90;157905-74-3;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;3.333333333;0;2.5;5;10;10;µg/g DM;7;7;HPLC-MS or MS/MS
+MP_1220;Stepanquat GA 90;157905-74-3;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;1.666666667;0;1.25;2.5;5;5;µg/L;2;2;HPLC-MS or MS/MS
+MP_1252;Stepanquat GA 90;157905-74-3;Sludge;6 - Sludge;Bergé et al. 2016;3.333333333;0;2.5;5;10;10;µg/g DM;7;7;HPLC-MS or MS/MS
+MP_1159;Sodium dodecyl sulfate;151-21-3;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.166666667;0;0.125;0.25;0.5;0.5;µg/L;6.2;6.2;HPLC-MS or MS/MS
+MP_1175;Sodium dodecyl sulfate;151-21-3;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.0333;0;0.025;0.05;0.1;0.1;µg/g DM;5.9;5.9;HPLC-MS or MS/MS
+MP_1206;Sodium dodecyl sulfate;151-21-3;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;33.33333333;0;25;50;100;100;µg/g DM;5.9;5.9;HPLC-MS or MS/MS
+MP_1221;Sodium dodecyl sulfate;151-21-3;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.166666667;0;0.125;0.25;0.5;0.5;µg/L;6.2;6.2;HPLC-MS or MS/MS
+MP_1253;Sodium dodecyl sulfate;151-21-3;Sludge;6 - Sludge;Bergé et al. 2016;33.33333333;0;25;50;100;100;µg/g DM;5.9;5.9;HPLC-MS or MS/MS
+MP_1160;Incromine SD;7651-02-7;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.066666667;0;0.05;0.1;0.2;0.2;µg/L;0.9;0.9;HPLC-MS or MS/MS
+MP_1176;Incromine SD;7651-02-7;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.00333;0;0.0025;0.005;0.01;0.01;µg/g DM;3.4;3.4;HPLC-MS or MS/MS
+MP_1207;Incromine SD;7651-02-7;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;3.333333333;0;2.5;5;10;10;µg/g DM;3.4;3.4;HPLC-MS or MS/MS
+MP_1222;Incromine SD;7651-02-7;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.066666667;0;0.05;0.1;0.2;0.2;µg/L;0.9;0.9;HPLC-MS or MS/MS
+MP_1254;Incromine SD;7651-02-7;Sludge;6 - Sludge;Bergé et al. 2016;3.333333333;0;2.5;5;10;10;µg/g DM;3.4;3.4;HPLC-MS or MS/MS
+MP_1161;Comperlan 100;68140-00-1;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.033333333;0;0.025;0.05;0.1;0.1;µg/L;13.9;13.9;HPLC-MS or MS/MS
+MP_1177;Comperlan 100;68140-00-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.00667;0;0.005;0.01;0.02;0.02;µg/g DM;7;7;HPLC-MS or MS/MS
+MP_1208;Comperlan 100;68140-00-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;6.666666667;0;5;10;20;20;µg/g DM;7;7;HPLC-MS or MS/MS
+MP_1223;Comperlan 100;68140-00-1;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.033333333;0;0.025;0.05;0.1;0.1;µg/L;13.9;13.9;HPLC-MS or MS/MS
+MP_1255;Comperlan 100;68140-00-1;Sludge;6 - Sludge;Bergé et al. 2016;6.666666667;0;5;10;20;20;µg/g DM;7;7;HPLC-MS or MS/MS
+MP_1162;Benzyldimethyldodecylammonium chloride (BDDAC);139-07-1;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.08;0;0.06;0.12;0.24;0.24;µg/L;5.1;5.1;HPLC-MS or MS/MS
+MP_1178;Benzyldimethyldodecylammonium chloride (BDDAC);139-07-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.02;0;0.015;0.03;0.06;0.06;µg/g DM;8;8;HPLC-MS or MS/MS
+MP_1209;Benzyldimethyldodecylammonium chloride (BDDAC);139-07-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;20;0;15;30;60;60;µg/g DM;8;8;HPLC-MS or MS/MS
+MP_1224;Benzyldimethyldodecylammonium chloride (BDDAC);139-07-1;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.08;0;0.06;0.12;0.24;0.24;µg/L;5.1;5.1;HPLC-MS or MS/MS
+MP_1256;Benzyldimethyldodecylammonium chloride (BDDAC);139-07-1;Sludge;6 - Sludge;Bergé et al. 2016;20;0;15;30;60;60;µg/g DM;8;8;HPLC-MS or MS/MS
+MP_1163;Benzyldimethyltetradecylammonium chloride (BDTAC);139-08-2;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.053333333;0;0.04;0.08;0.16;0.16;µg/L;2;2;HPLC-MS or MS/MS
+MP_1179;Benzyldimethyltetradecylammonium chloride (BDTAC);139-08-2;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.0133;0;0.01;0.02;0.04;0.04;µg/g DM;6.4;6.4;HPLC-MS or MS/MS
+MP_1210;Benzyldimethyltetradecylammonium chloride (BDTAC);139-08-2;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;13.33333333;0;10;20;40;40;µg/g DM;6.4;6.4;HPLC-MS or MS/MS
+MP_1225;Benzyldimethyltetradecylammonium chloride (BDTAC);139-08-2;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.053333333;0;0.04;0.08;0.16;0.16;µg/L;2;2;HPLC-MS or MS/MS
+MP_1257;Benzyldimethyltetradecylammonium chloride (BDTAC);139-08-2;Sludge;6 - Sludge;Bergé et al. 2016;13.33333333;0;10;20;40;40;µg/g DM;6.4;6.4;HPLC-MS or MS/MS
+MP_1164;Cetyl betain;693-33-4;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.033333333;0;0.025;0.05;0.1;0.1;µg/L;5.1;5.1;HPLC-MS or MS/MS
+MP_1180;Cetyl betain;693-33-4;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.00067;0;0.0005;0.001;0.002;0.002;µg/g DM;11.5;11.5;HPLC-MS or MS/MS
+MP_1211;Cetyl betain;693-33-4;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/g DM;11.5;11.5;HPLC-MS or MS/MS
+MP_1226;Cetyl betain;693-33-4;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.033333333;0;0.025;0.05;0.1;0.1;µg/L;5.1;5.1;HPLC-MS or MS/MS
+MP_1258;Cetyl betain;693-33-4;Sludge;6 - Sludge;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/g DM;11.5;11.5;HPLC-MS or MS/MS
+MP_1165;Lauryl pyridinium chloride;104-74-5;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.066666667;0;0.05;0.1;0.2;0.2;µg/L;0.6;0.6;HPLC-MS or MS/MS
+MP_1181;Lauryl pyridinium chloride;104-74-5;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.00067;0;0.0005;0.001;0.002;0.002;µg/g DM;6.6;6.6;HPLC-MS or MS/MS
+MP_1212;Lauryl pyridinium chloride;104-74-5;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/g DM;6.6;6.6;HPLC-MS or MS/MS
+MP_1227;Lauryl pyridinium chloride;104-74-5;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.066666667;0;0.05;0.1;0.2;0.2;µg/L;0.6;0.6;HPLC-MS or MS/MS
+MP_1259;Lauryl pyridinium chloride;104-74-5;Sludge;6 - Sludge;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/g DM;6.6;6.6;HPLC-MS or MS/MS
+MP_1166;Sodium 2-ethylhexyl sulfate;126-92-1;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.001666667;0;0.00125;0.0025;0.005;0.005;µg/L;7.6;7.6;HPLC-MS or MS/MS
+MP_1182;Sodium 2-ethylhexyl sulfate;126-92-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.00067;0;0.0005;0.001;0.002;0.002;µg/g DM;5.1;5.1;HPLC-MS or MS/MS
+MP_1213;Sodium 2-ethylhexyl sulfate;126-92-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.000666667;0;0.0005;0.001;0.002;0.002;µg/g DM;5.1;5.1;HPLC-MS or MS/MS
+MP_1228;Sodium 2-ethylhexyl sulfate;126-92-1;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.001666667;0;0.00125;0.0025;0.005;0.005;µg/L;7.6;7.6;HPLC-MS or MS/MS
+MP_1260;Sodium 2-ethylhexyl sulfate;126-92-1;Sludge;6 - Sludge;Bergé et al. 2016;0.000666667;0;0.0005;0.001;0.002;0.002;µg/g DM;5.1;5.1;HPLC-MS or MS/MS
+MP_1167;Triton X100;9002-93-1;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.033333333;0;0.025;0.05;0.1;0.1;µg/L;7.9;7.9;HPLC-MS or MS/MS
+MP_1183;Triton X100;9002-93-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.00067;0;0.0005;0.001;0.002;0.002;µg/g DM;6.5;6.5;HPLC-MS or MS/MS
+MP_1214;Triton X100;9002-93-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/g DM;6.5;6.5;HPLC-MS or MS/MS
+MP_1229;Triton X100;9002-93-1;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.033333333;0;0.025;0.05;0.1;0.1;µg/L;7.9;7.9;HPLC-MS or MS/MS
+MP_1261;Triton X100;9002-93-1;Sludge;6 - Sludge;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/g DM;6.5;6.5;HPLC-MS or MS/MS
+MP_1168;Benzotriazole;95-14-7;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.7;6.7;HPLC-MS or MS/MS
+MP_1230;Benzotriazole;95-14-7;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.7;6.7;HPLC-MS or MS/MS
+MP_1169;Sodium decylbenzenesulphonate C10;1322-98-1;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.6;6.6;HPLC-MS or MS/MS
+MP_1184;Sodium decylbenzenesulphonate C10;1322-98-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.333;0;0.25;0.5;1;1;µg/g DM;6.7;6.7;HPLC-MS or MS/MS
+MP_1215;Sodium decylbenzenesulphonate C10;1322-98-1;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;6.7;6.7;HPLC-MS or MS/MS
+MP_1231;Sodium decylbenzenesulphonate C10;1322-98-1;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.6;6.6;HPLC-MS or MS/MS
+MP_1262;Sodium decylbenzenesulphonate C10;1322-98-1;Sludge;6 - Sludge;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;6.7;6.7;HPLC-MS or MS/MS
+MP_1170;Sodium decylbenzenesulphonate C11;20466-34-6;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;11.2;11.2;HPLC-MS or MS/MS
+MP_1185;Sodium decylbenzenesulphonate C11;20466-34-6;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.333;0;0.25;0.5;1;1;µg/g DM;8.1;8.1;HPLC-MS or MS/MS
+MP_1216;Sodium decylbenzenesulphonate C11;20466-34-6;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;8.1;8.1;HPLC-MS or MS/MS
+MP_1232;Sodium decylbenzenesulphonate C11;20466-34-6;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;11.2;11.2;HPLC-MS or MS/MS
+MP_1263;Sodium decylbenzenesulphonate C11;20466-34-6;Sludge;6 - Sludge;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;8.1;8.1;HPLC-MS or MS/MS
+MP_1171;Sodium decylbenzenesulphonate C12;2211-98-5;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.1;6.1;HPLC-MS or MS/MS
+MP_1186;Sodium decylbenzenesulphonate C12;2211-98-5;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.333;0;0.25;0.5;1;1;µg/g DM;6.4;6.4;HPLC-MS or MS/MS
+MP_1217;Sodium decylbenzenesulphonate C12;2211-98-5;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;6.4;6.4;HPLC-MS or MS/MS
+MP_1233;Sodium decylbenzenesulphonate C12;2211-98-5;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.1;6.1;HPLC-MS or MS/MS
+MP_1264;Sodium decylbenzenesulphonate C12;2211-98-5;Sludge;6 - Sludge;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;6.4;6.4;HPLC-MS or MS/MS
+MP_1172;Sodium decylbenzenesulphonate C13;26248-24-8;Wastewater - raw;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.1;6.1;HPLC-MS or MS/MS
+MP_1187;Sodium decylbenzenesulphonate C13;26248-24-8;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;0.333;0;0.25;0.5;1;1;µg/g DM;6.7;6.7;HPLC-MS or MS/MS
+MP_1218;Sodium decylbenzenesulphonate C13;26248-24-8;Wastewater - raw;5 - TSS fraction;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;6.7;6.7;HPLC-MS or MS/MS
+MP_1234;Sodium decylbenzenesulphonate C13;26248-24-8;Wastewater - treated;1 - Dissolved fraction;Bergé et al. 2016;0.666666667;0;0.5;1;2;2;µg/L;6.1;6.1;HPLC-MS or MS/MS
+MP_1265;Sodium decylbenzenesulphonate C13;26248-24-8;Sludge;6 - Sludge;Bergé et al. 2016;333.3333333;0;250;500;1000;1000;µg/g DM;6.7;6.7;HPLC-MS or MS/MS
+MP_1281;N4-acetyl-sulfaméthoxazole (SMX impurity A);21312-10-7;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;0.333333333;0;0.25;0.5;1;1;ng/L;22.30447361;12.49817713;HPLC-MS or MS/MS
+MP_1282;Sulfamethoxazole B-D-Glucuronide (SMX glucuronide);14365-52-7;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;3.333333333;0;2.5;5;10;10;ng/L;7.54028935;4.12974597;HPLC-MS or MS/MS
+MP_1283;4-Amino-N-(3-methyl-5-isoxazolyl)benzenesulfonamide (SMX impurity F);17103-52-5;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;1.666666667;0;1.25;2.5;5;5;ng/L;15.5896326;8.746410692;HPLC-MS or MS/MS
+MP_1284;4-hydroxy diclofénac (DCF 4HO);64118-84-9;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;1.666666667;0;1.25;2.5;5;5;ng/L;7.171648717;4.097387833;HPLC-MS or MS/MS
+MP_1285;5-hydroxy diclofénac (DCF 5HO);69002-84-2;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;33.33333333;0;25;50;100;100;ng/L;21.76372826;12.87609369;HPLC-MS or MS/MS
+MP_1286;Diclofénac carboxylic acid (DCF COOH);13625-57-5;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;1.666666667;0;1.25;2.5;5;5;ng/L;15.02926985;8.459948802;HPLC-MS or MS/MS
+MP_1287;Diclofénac acyl-B-D-glucuronide (DCF glucuronide);64118-81-6;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;33.33333333;0;25;50;100;100;ng/L;13.12818813;7.1493124;HPLC-MS or MS/MS
+MP_1288;2-[(2-chlorophenyl)-amino] benzaldehyde (DCF CPAB);71758-44-6;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;1.666666667;0;1.25;2.5;5;5;ng/L;18.3182051;10.7146558;HPLC-MS or MS/MS
+MP_1289;2-[(2,6-Dichlorophenyl)amino]benzaldehyde (DCF impurity B);22121-58-0;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;3.333333333;0;2.5;5;10;10;ng/L;8.618278667;4.913761646;HPLC-MS or MS/MS
+MP_1290;1-(2,6-Dichlorophenyl)-1,3-dihydro-2H-indol-2-one (DCF lactam);15362-40-0;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;0.333333333;0;0.25;0.5;1;1;ng/L;13.8267772;7.572881093;HPLC-MS or MS/MS
+MP_1291;[2-[(2,6-Dichlorophenyl)amino]phenyl]methanol (DCF impurity C);27204-57-5;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;16.66666667;0;12.5;25;50;50;ng/L;6.000741053;3.50260436;HPLC-MS or MS/MS
+MP_1292;1,3-Dihydro-2H-indol-2-one (DCF impurity E);59-48-3;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;3.333333333;0;2.5;5;10;10;ng/L;7.396157611;4.303831647;HPLC-MS or MS/MS
+MP_1390;Organic TSS (Total Suspended Solids);NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 12879;NA;0;NA;NA;NA;NA;mg/L;10;NA;NA
+MP_1396;Organic TSS (Total Suspended Solids);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 12879;NA;0;0.25;0.5;1;1;mg/L;NA;NA;NA
+MP_1391;Mineral TSS (Total Suspended Solids);NA;Wastewater - raw;2 - Whole water with no separation of liquid and SPM phases;NF EN 12879;NA;0;NA;NA;NA;NA;mg/L;10;NA;NA
+MP_1397;Mineral TSS (Total Suspended Solids);NA;Wastewater - treated;2 - Whole water with no separation of liquid and SPM phases;NF EN 12879;NA;0;0.25;0.5;1;1;mg/L;NA;NA;NA
+MP_1392;Sulphates;NA;Wastewater - raw;1 - Dissolved fraction;NF EN ISO 10304-1;NA;0;0.25;0.5;1;1;mg/L;15;NA;Ion chromatography
+MP_1393;Sulphides;NA;Wastewater - raw;1 - Dissolved fraction;Internal method (Carso);NA;0;0.025;0.05;0.1;0.1;mg/L;NA;NA;NA
+MP_1389;Soluble COD (Chemical Oxygen Demand);NA;Wastewater - raw;1 - Dissolved fraction;NF T 90-101;NA;0;7.5;15;30;30;mg/L;18;NA;Spectrometry
+MP_1332;Organic carbon;NA;Sludge;6 - Sludge;NF U 44-160;NA;0;0.125;0.25;0.5;0.5;% DM;5;NA;NA
+MP_1340;Calcium;7440-70-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.01125;0.0225;0.045;0.045;% CaO DM;20;NA;ICP-MS
+MP_1342;Magnesium;7439-95-4;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.002;0.004;0.008;0.008;% MgO DM;20;NA;ICP-MS
+MP_1344;Potassium;7440-09-7;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;0.002;0.004;0.008;0.008;% K2O DM;20;NA;ICP-MS
+MP_1358;Selenium;7782-49-2;Sludge;6 - Sludge;NF EN ISO 11885;NA;0;1.25;2.5;5;5;µg/g DM;30;NA;ICP-MS
+MP_1372;Polychlorinated biphenyl (PCB) - 28;7012-37-5;Sludge;6 - Sludge;XP-X33012;NA;0;5;10;20;20;ng/g DM;30;NA;GC-ECD
+MP_1374;Polychlorinated biphenyl (PCB) - 52;35693-99-3;Sludge;6 - Sludge;XP-X33012;NA;0;5;10;20;20;ng/g DM;30;NA;GC-ECD
+MP_1376;Polychlorinated biphenyl (PCB) - 101;37680-73-2;Sludge;6 - Sludge;XP-X33012;NA;0;5;10;20;20;ng/g DM;30;NA;GC-ECD
+MP_1378;Polychlorinated biphenyl (PCB) - 118;31508-00-6;Sludge;6 - Sludge;XP-X33012;NA;0;5;10;20;20;ng/g DM;30;NA;GC-ECD
+MP_1380;Polychlorinated biphenyl (PCB) - 138;35065-28-2;Sludge;6 - Sludge;XP-X33012;NA;0;5;10;20;20;ng/g DM;30;NA;GC-ECD
+MP_1382;Polychlorinated biphenyl (PCB) - 153;35065-27-1;Sludge;6 - Sludge;XP-X33012;NA;0;5;10;20;20;ng/g DM;30;NA;GC-ECD
+MP_1384;Polychlorinated biphenyl (PCB) - 180;35065-29-3;Sludge;6 - Sludge;XP-X33012;NA;0;5;10;20;20;ng/g DM;30;NA;GC-ECD
+MP_1386;C/N Ratio;NA;Sludge;6 - Sludge;NA;NA;0;NA;NA;NA;NA;NA;NA;NA;NA
+MP_1394;4-Nitro-sulfaméthoxazole (SMX-NO2);29699-89-6;Wastewater - raw;1 - Dissolved fraction;Wiest & Vulliet 2017;16.66666667;0;12.5;25;50;50;ng/L;15.5896326;8.746410692;HPLC-MS or MS/MS

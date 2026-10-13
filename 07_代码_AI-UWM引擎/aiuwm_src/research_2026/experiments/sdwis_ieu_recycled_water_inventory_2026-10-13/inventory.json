@@ -1,0 +1,204 @@
+{
+  "artifact": "SDWIS_IEU_RECYCLED_WATER_E2_INVENTORY",
+  "generated_at_utc": "2026-10-13T11:41:46Z",
+  "status": "E2_PUBLIC_RECLAIMED_WATER_INCOMPLETE_PANEL",
+  "evidence_class": "E2_public_reclaimed_water",
+  "source_context": "Inland Empire Utilities Agency, 001B EFFLUENT - RP1 RECYCLED WATER",
+  "source_url": "https://sdwis.waterboards.ca.gov/PDWW/JSP/WSamplingResultsByStoret.jsp?FacilityID=038&SamplingPointID=038&SamplingPointName=001B+EFFLUENT+-+RP1+RECYCLED+WATER&SystemName=INLAND+EMPIRE+UTILITIES+AGENCY&SystemNumber=3690001&WSFNumber=72452",
+  "snapshot": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\sdwis_ieu_recycled_water_2026\\sampling_results.html",
+    "sha256": "sha256:ce9fd433644ff609c091b86eac5ea2d7860d19ce77e43613e69a6d29c71d56bf",
+    "bytes": 1079172
+  },
+  "summary": {
+    "analyte_row_count": 1177,
+    "lab_sample_id_count": 149,
+    "sampling_date_count": 64,
+    "date_start": "2023-08-09",
+    "date_end": "2026-07-28",
+    "date_parse_failures": 0,
+    "complete_required_panel_date_count": 0,
+    "coverage": {
+      "pH": {
+        "row_count": 0,
+        "sampling_date_count": 0,
+        "sampling_dates": [],
+        "units": [],
+        "observed": false
+      },
+      "temperature_c": {
+        "row_count": 0,
+        "sampling_date_count": 0,
+        "sampling_dates": [],
+        "units": [],
+        "observed": false
+      },
+      "tds_mg_l": {
+        "row_count": 0,
+        "sampling_date_count": 0,
+        "sampling_dates": [],
+        "units": [],
+        "observed": false
+      },
+      "chloride": {
+        "row_count": 12,
+        "sampling_date_count": 12,
+        "sampling_dates": [
+          "02-02-2026",
+          "02-12-2024",
+          "02-25-2025",
+          "05-14-2024",
+          "05-14-2025",
+          "05-18-2026",
+          "07-28-2026",
+          "08-12-2024",
+          "08-20-2025",
+          "11-08-2023",
+          "11-13-2024",
+          "11-19-2025"
+        ],
+        "units": [
+          "MG/L"
+        ],
+        "observed": true
+      },
+      "calcium": {
+        "row_count": 12,
+        "sampling_date_count": 12,
+        "sampling_dates": [
+          "02-02-2026",
+          "02-12-2024",
+          "02-25-2025",
+          "05-14-2024",
+          "05-14-2025",
+          "05-18-2026",
+          "07-28-2026",
+          "08-12-2024",
+          "08-20-2025",
+          "11-08-2023",
+          "11-13-2024",
+          "11-19-2025"
+        ],
+        "units": [
+          "MG/L"
+        ],
+        "observed": true
+      },
+      "magnesium": {
+        "row_count": 12,
+        "sampling_date_count": 12,
+        "sampling_dates": [
+          "02-02-2026",
+          "02-12-2024",
+          "02-25-2025",
+          "05-14-2024",
+          "05-14-2025",
+          "05-18-2026",
+          "07-28-2026",
+          "08-12-2024",
+          "08-20-2025",
+          "11-08-2023",
+          "11-13-2024",
+          "11-19-2025"
+        ],
+        "units": [
+          "MG/L"
+        ],
+        "observed": true
+      },
+      "sodium": {
+        "row_count": 12,
+        "sampling_date_count": 12,
+        "sampling_dates": [
+          "02-02-2026",
+          "02-12-2024",
+          "02-25-2025",
+          "05-14-2024",
+          "05-14-2025",
+          "05-18-2026",
+          "07-28-2026",
+          "08-12-2024",
+          "08-20-2025",
+          "11-08-2023",
+          "11-13-2024",
+          "11-19-2025"
+        ],
+        "units": [
+          "MG/L"
+        ],
+        "observed": true
+      },
+      "sulfate": {
+        "row_count": 12,
+        "sampling_date_count": 12,
+        "sampling_dates": [
+          "02-02-2026",
+          "02-12-2024",
+          "02-25-2025",
+          "05-14-2024",
+          "05-14-2025",
+          "05-18-2026",
+          "07-28-2026",
+          "08-12-2024",
+          "08-20-2025",
+          "11-08-2023",
+          "11-13-2024",
+          "11-19-2025"
+        ],
+        "units": [
+          "MG/L"
+        ],
+        "observed": true
+      },
+      "alkalinity": {
+        "row_count": 11,
+        "sampling_date_count": 11,
+        "sampling_dates": [
+          "02-02-2026",
+          "02-12-2024",
+          "02-25-2025",
+          "05-14-2024",
+          "05-14-2025",
+          "05-18-2026",
+          "08-12-2024",
+          "08-20-2025",
+          "11-08-2023",
+          "11-13-2024",
+          "11-19-2025"
+        ],
+        "units": [
+          "MG/L"
+        ],
+        "observed": true
+      },
+      "silica": {
+        "row_count": 0,
+        "sampling_date_count": 0,
+        "sampling_dates": [],
+        "units": [],
+        "observed": false
+      }
+    }
+  },
+  "formal_g2_eligible": false,
+  "applicable_to": [
+    "direct recycled-water provenance",
+    "major-ion plausibility bounds",
+    "future G2 acquisition planning"
+  ],
+  "not_valid_for": [
+    "formal G2 chemistry cross-validation",
+    "cooling-tower makeup chemistry",
+    "temperature-dependent PHREEQC validation",
+    "facility holdout validation"
+  ],
+  "limitations": [
+    "the public page lacks observed pH, temperature, TDS and silica rows",
+    "the page is a live utility portal snapshot rather than a versioned analytical dataset",
+    "sample quality flags and measurement uncertainty are not exposed consistently"
+  ],
+  "gate_effect": {
+    "g2": "unchanged_NOT_READY",
+    "g3": "unchanged_NOT_READY"
+  }
+}

@@ -298,6 +298,9 @@ def _g2_manifest_check(paths: Iterable[Path]) -> tuple[bool, dict[str, Any] | No
         output_ids = {str(row.get("sample_id", "")).strip() for row in output_rows}
         if (input_parse_error or "sample_id" not in input_fields or len(input_rows) != int(sample_count)
                 or input_meta.get("row_count", input_meta.get("sample_count")) != int(sample_count)
+                # A matching set is insufficient: duplicate IDs could otherwise
+                # hide omitted or duplicated samples while preserving row counts.
+                or len(input_ids) != len(input_rows) or len(output_ids) != len(output_rows)
                 or input_ids != output_ids or "" in input_ids):
             continue
         return True, {"path": str(path), "manifest": payload}, "Complete sample-level G2 validation manifest passed."

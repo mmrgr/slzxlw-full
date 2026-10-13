@@ -1,0 +1,302 @@
+{
+  "artifact": "AquaSPICE_E2_adaptation_parameter_screen",
+  "generated_at_utc": "2026-10-13T09:12:03Z",
+  "status": "PASS_E2_SCREEN",
+  "evidence_class": "E2_public_pilot",
+  "dataset_root": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\08_实验数据\\external\\aqua_spice_cooling_tower",
+  "files": [
+    {
+      "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\08_实验数据\\external\\aqua_spice_cooling_tower\\BACF_CTMU_Enhanced.csv",
+      "sha256": "sha256:e72aab89b41026bcda7b6f04eda071e1ea883ecd1c2e7ec97a7facf2abbcef08",
+      "bytes": 1875297,
+      "row_count": 17932,
+      "columns": [
+        "Time",
+        "GAC_Feed_Flow",
+        "GAC_Feed_p",
+        "GAC_Feedtank_T",
+        "GAC_Feed_visc_T [mPas]",
+        "GAC_visc_T/visc_20",
+        "GAC_TCF_20d",
+        "GAC_WP_[L/m²hbar]",
+        "GAC_NWP_20deg_[L/m²hbar]"
+      ],
+      "time_start": "10.06.2022 00:01",
+      "time_end": "05.07.2022 23:58"
+    },
+    {
+      "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\08_实验数据\\external\\aqua_spice_cooling_tower\\RO_CTMU_Enhanced.csv",
+      "sha256": "sha256:03e48570a06448e0f1257af1ddb6814c53f0bdca6ea72c5ab07491e0d62f9823",
+      "bytes": 7670942,
+      "row_count": 17984,
+      "columns": [
+        "Time",
+        "Stream",
+        "RO_EC-OSMO_Feed",
+        "RO_EC-OSMO_Concentrate",
+        "RO_EC-OSMO_Perm",
+        "RO_EC-TDS_Feed",
+        "RO_EC-TDS_Conc",
+        "RO_EC-TDS_Perm",
+        "$RT_DIS$",
+        "DB_Settings_Recovery",
+        "RO_Feed_Cond",
+        "RO_Perm_Cond",
+        "RO_Conc_Cond",
+        "RO_Feed_CL",
+        "RO_Conc_Return_Flow",
+        "RO_Perm_Flow",
+        "RO_Conc_Flow",
+        "RO_Feed_Flow_ultrasonic",
+        "RO_Feedtank_Level",
+        "RO_Feed_p",
+        "RO_Conc_p",
+        "RO_Feed_T",
+        "RO_Feed_pH",
+        "RO_PD_[bar]",
+        "RO_QCF",
+        "RO_visc_T/visc_20deg",
+        "RO_NPD_20deg",
+        "RO_Osmo_p_Feed",
+        "RO_Osmo_p_Conc",
+        "RO_Osmo_p_Perm",
+        "RO_T_CF_OP",
+        "RO_DP",
+        "RO_OP",
+        "RO_NDP",
+        "RO_MTC_20deg",
+        "RO_TCF_20degr_MTC",
+        "RO_TCF_NSP",
+        "RO_Y",
+        "RO_C_Feed_TDS",
+        "RO_C_Perm",
+        "RO_C_TCF_OP",
+        "RO_NSP_20deg"
+      ],
+      "time_start": "10.06.2022 00:01",
+      "time_end": "05.07.2022 23:58",
+      "measurements": {
+        "RO_C_Feed_TDS": {
+          "count": 17984,
+          "median": 1100.9450000000002,
+          "q05": 1003.133696,
+          "q95": 1229.0407172999999
+        },
+        "RO_C_Perm": {
+          "count": 17984,
+          "median": 8.438427245,
+          "q05": 5.6199456996,
+          "q95": 15.106107153999996
+        },
+        "RO_Perm_Flow": {
+          "count": 17749,
+          "median": 173.8706,
+          "q05": 0.000179,
+          "q95": 175.3356
+        },
+        "RO_Conc_Flow": {
+          "count": 17749,
+          "median": 38.09524,
+          "q05": 0.4884005,
+          "q95": 47.37485
+        },
+        "RO_Feed_Flow_ultrasonic": {
+          "count": 17749,
+          "median": 690.5983,
+          "q05": 0.4884005,
+          "q95": 913.3089
+        },
+        "RO_Feed_pH": {
+          "count": 17749,
+          "median": 7.873505,
+          "q05": 7.517949,
+          "q95": 7.993162999999999
+        },
+        "RO_Feed_T": {
+          "count": 17749,
+          "median": 13.85348,
+          "q05": 8.051283,
+          "q95": 21.50916
+        },
+        "RO_Y": {
+          "count": 17750,
+          "median": 0.16622214800000001,
+          "q05": 0.000427064,
+          "q95": 0.18381911985
+        }
+      },
+      "derived_screening_metrics": {
+        "flow_recovery_fraction": {
+          "count": 17701,
+          "median": 0.8183419983903738,
+          "q05": 0.7764234328623133,
+          "q95": 0.9179211292216435
+        },
+        "tds_rejection_fraction": {
+          "count": 17749,
+          "median": 0.9924882153109311,
+          "q05": 0.9865807005198097,
+          "q95": 0.9949178845487098
+        }
+      }
+    },
+    {
+      "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\08_实验数据\\external\\aqua_spice_cooling_tower\\RO_CTBD.csv",
+      "sha256": "sha256:e2f41c6f4958e63b423883cfcf988765e49f56507f603ad41d1a070957c83dd5",
+      "bytes": 8928418,
+      "row_count": 20984,
+      "columns": [
+        "Time",
+        "Stream",
+        "RO_EC-OSMO_Feed",
+        "RO_EC-OSMO_Concentrate",
+        "RO_EC-OSMO_Perm",
+        "RO_EC-TDS_Feed",
+        "RO_EC-TDS_Conc",
+        "RO_EC-TDS_Perm",
+        "$RT_DIS$",
+        "DB_Settings_Recovery",
+        "RO_Feed_Cond",
+        "RO_Perm_Cond",
+        "RO_Conc_Cond",
+        "RO_Feed_CL",
+        "RO_Conc_Return_Flow",
+        "RO_Perm_Flow",
+        "RO_Conc_Flow",
+        "RO_Feed_Flow_ultrasonic",
+        "RO_Feedtank_Level",
+        "RO_Feed_p",
+        "RO_Conc_p",
+        "RO_Feed_T",
+        "RO_Feed_pH",
+        "RO_PD_[bar]",
+        "RO_QCF",
+        "RO_visc_T/visc_20deg",
+        "RO_NPD_20deg",
+        "RO_Osmo_p_Feed",
+        "RO_Osmo_p_Conc",
+        "RO_Osmo_p_Perm",
+        "RO_T_CF_OP",
+        "RO_DP",
+        "RO_OP",
+        "RO_NDP",
+        "RO_MTC_20deg",
+        "RO_TCF_20degr_MTC",
+        "RO_TCF_NSP",
+        "RO_Y",
+        "RO_C_Feed_TDS",
+        "RO_C_Perm",
+        "RO_C_TCF_OP",
+        "RO_NSP_20deg"
+      ],
+      "time_start": "19.07.2022 00:01",
+      "time_end": "16.08.2022 17:15",
+      "measurements": {
+        "RO_C_Feed_TDS": {
+          "count": 20984,
+          "median": 3625.392001,
+          "q05": 2814.14960105,
+          "q95": 3965.4867079
+        },
+        "RO_C_Perm": {
+          "count": 20984,
+          "median": 44.796451165,
+          "q05": 29.583263143000003,
+          "q95": 76.3863648845
+        },
+        "RO_Perm_Flow": {
+          "count": 20681,
+          "median": 173.8706,
+          "q05": 172.0238,
+          "q95": 175.3358
+        },
+        "RO_Conc_Flow": {
+          "count": 20681,
+          "median": 58.11966,
+          "q05": 52.25885,
+          "q95": 63.00367
+        },
+        "RO_Feed_Flow_ultrasonic": {
+          "count": 20681,
+          "median": 613.431,
+          "q05": 519.1697,
+          "q95": 703.2967
+        },
+        "RO_Feed_pH": {
+          "count": 20681,
+          "median": 6.11624,
+          "q05": 5.965812,
+          "q95": 6.208547
+        },
+        "RO_Feed_T": {
+          "count": 20681,
+          "median": 18.28572,
+          "q05": 11.24786,
+          "q95": 28.62759
+        },
+        "RO_Y": {
+          "count": 20682,
+          "median": 0.167307111,
+          "q05": 0.1522040051,
+          "q95": 0.18236825510000002
+        }
+      },
+      "derived_screening_metrics": {
+        "flow_recovery_fraction": {
+          "count": 20618,
+          "median": 0.7494737063530167,
+          "q05": 0.7100588314787166,
+          "q95": 0.7659282080921566
+        },
+        "tds_rejection_fraction": {
+          "count": 20681,
+          "median": 0.9875489380913265,
+          "q05": 0.9788334859826089,
+          "q95": 0.9914642471216756
+        }
+      }
+    },
+    {
+      "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\08_实验数据\\external\\aqua_spice_cooling_tower\\UF_CTMU_Enhanced.csv",
+      "sha256": "sha256:c2ce8a1b8cabcb5e7b23f2453cc17eafbbaa43a7f180b42921a2eabdc3ccfa6f",
+      "bytes": 1805051,
+      "row_count": 17708,
+      "columns": [
+        "Time",
+        "UF_Filtrate_Flow",
+        "UF_Feed_Flow",
+        "UF_Feed_p",
+        "UF_Conc_p",
+        "UF_Filtrate_p",
+        "UF_Feedtank_T",
+        "UF_TCF_20deg",
+        "UF_TMP_[bar]",
+        "UF_WP_[L/m²/h/bar]",
+        "UF_NWP_20deg"
+      ],
+      "time_start": "10.06.2022 00:01",
+      "time_end": "05.07.2022 23:58"
+    }
+  ],
+  "missing_files": [],
+  "applicable_to": [
+    "A1/A2 treatment flow and TDS parameter screening"
+  ],
+  "not_valid_for": [
+    "formal G2 chemistry cross-validation",
+    "G3 facility holdout",
+    "data-centre-specific energy or cost calibration",
+    "microbial, corrosion or field-scale scaling safety"
+  ],
+  "unmeasured_or_unresolved": [
+    "treatment energy and carbon",
+    "chemical and capital costs",
+    "complete ion panel and alkalinity",
+    "data-centre operating conditions"
+  ],
+  "gate_effect": {
+    "g2": "unchanged_NOT_READY",
+    "g3": "unchanged_NOT_READY",
+    "e4": "diagnostic_parameter_screen_only"
+  }
+}

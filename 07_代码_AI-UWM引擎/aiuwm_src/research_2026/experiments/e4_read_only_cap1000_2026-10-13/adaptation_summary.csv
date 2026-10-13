@@ -1,0 +1,5 @@
+policy,status,E_adapt,C_adapt,freshwater_use_ml,freshwater_baseline_ml,freshwater_saving_ml,unmet_water_ml,sla_reliability,energy_kwh,carbon_kg_co2e,cost,reject_ml,unreturned_ml,infeasible_reasons
+A0,feasible,0.0,0.0,15198.477277275164,15210.47727727516,11.999999999996362,0.0,1.0,0.0,0.0,0.0,0.0,0.0,
+A1,feasible,0.0,0.0,15198.477277275164,15210.47727727516,11.999999999996362,0.0,1.0,0.0,0.0,0.0,0.0,0.0,
+A2,feasible,0.0,0.0,15198.477277275164,15210.47727727516,11.999999999996362,0.0,1.0,0.0,0.0,0.0,0.0,0.0,
+A3,feasible,0.0,0.0,15198.477277275164,15210.47727727516,11.999999999996362,0.0,1.0,0.0,0.0,0.0,0.0,0.0,

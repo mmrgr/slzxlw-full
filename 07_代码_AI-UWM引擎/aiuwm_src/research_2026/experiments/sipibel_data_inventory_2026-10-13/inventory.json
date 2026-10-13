@@ -1,0 +1,143 @@
+{
+  "artifact": "SIPIBEL_E2_WASTEWATER_DATA_INVENTORY",
+  "generated_at_utc": "2026-10-13T11:23:10Z",
+  "status": "E2_INVENTORY_INCOMPLETE_CHEMISTRY",
+  "evidence_class": "E2_public_wastewater_observatory",
+  "data_root": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\sipibel_zenodo_5176161\\raw",
+  "archive": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\sipibel_zenodo_5176161\\SIPIBEL_data_set_files.7z",
+    "sha256": "sha256:45f43fed50f9f647c9256ad7c26b2e5a293a86144a440a0bbb5c9554909f899d",
+    "bytes": 354278
+  },
+  "summary": {
+    "sample_count": 961,
+    "sample_id_count": 961,
+    "sampling_point_count": 45,
+    "date_start": "2011-02-01T08:00:00",
+    "date_end": "2017-08-11T12:00:00",
+    "date_parse_failures": 0,
+    "sample_quality_counts": {
+      "CORRECT": 500,
+      "UNCERTAIN": 461
+    },
+    "physico_chemistry_value_count": 44455,
+    "physico_chemistry_method_count": 759,
+    "treated_required_panel_complete": false,
+    "coverage": {
+      "pH": {
+        "treated_methods": [
+          "MP_0076"
+        ],
+        "treated_indicators": [
+          "pH"
+        ],
+        "treated_units": [],
+        "treated_observed_method": true,
+        "raw_methods": [
+          "MP_0074"
+        ],
+        "raw_indicators": [
+          "pH"
+        ]
+      },
+      "temperature_c": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      },
+      "tds_mg_l": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      },
+      "chloride": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      },
+      "calcium": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      },
+      "magnesium": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      },
+      "sodium": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      },
+      "sulfate": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [
+          "MP_1392"
+        ],
+        "raw_indicators": [
+          "Sulphates"
+        ]
+      },
+      "alkalinity": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      },
+      "silica": {
+        "treated_methods": [],
+        "treated_indicators": [],
+        "treated_units": [],
+        "treated_observed_method": false,
+        "raw_methods": [],
+        "raw_indicators": []
+      }
+    }
+  },
+  "formal_g2_eligible": false,
+  "applicable_to": [
+    "wastewater monitoring provenance",
+    "treatment-matrix coverage audit",
+    "future chemistry acquisition planning"
+  ],
+  "not_valid_for": [
+    "formal G2 chemistry cross-validation",
+    "cooling-tower makeup chemistry",
+    "facility holdout validation",
+    "imputation of missing TDS, chloride, sodium, alkalinity or silica"
+  ],
+  "limitations": [
+    "treated-wastewater monitoring is not a reclaimed cooling-water dataset",
+    "the required major-ion panel is incomplete for the treated matrix",
+    "sample quality includes uncertain rows and analytical methods are heterogeneous",
+    "no cooling-tower operating conditions or independent PHREEQC outputs are supplied"
+  ],
+  "gate_effect": {
+    "g2": "unchanged_NOT_READY",
+    "g3": "unchanged_NOT_READY"
+  }
+}

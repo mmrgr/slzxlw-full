@@ -1,0 +1,54 @@
+{
+  "artifact": "GSA_BLOWDOWN_RECOVERY_COOLING_FACILITY_CANDIDATE",
+  "generated_at_utc": "2026-10-13T12:46:14Z",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "evidence_class": "E2_public_cooling_facility_operations",
+  "source_context": "GSA Green Proving Ground Lloyd D. George Courthouse cooling-tower BDR evaluation",
+  "source_pdf": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\gsa_blowdown_recovery_2023\\GSA_Blowdown_Recovery_System_Full_Report.pdf",
+    "sha256": "sha256:95d530f500e06a6fadf373c757a04fa894fd44314b20e804715598e10677e4d2",
+    "bytes": 1279970
+  },
+  "normalized_csv": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\gsa_blowdown_recovery_2023\\cooling_tower_periods_normalized.csv",
+    "sha256": "sha256:6e8dee8109323742a8bd6b41b9ae32aea3f87c79793d4f5ff78dca263ad9a790",
+    "rows": 3
+  },
+  "coverage": {
+    "facility_count": 1,
+    "facility_ids": [
+      "LLOYD_D_GEORGE_US_COURTHOUSE"
+    ],
+    "aggregate_period_count": 3,
+    "aggregate_days": 102
+  },
+  "observed_metrics": [
+    "blowdown_gal",
+    "coc_water_balance",
+    "drift_gal",
+    "evaporation_gal",
+    "heat_rejected_mmbtu",
+    "makeup_gal",
+    "period_days",
+    "water_per_heat_gal_per_mmbtu"
+  ],
+  "formal_g3_eligible": false,
+  "applicable_to": [
+    "bounded cooling-tower makeup/blowdown/CoC prior",
+    "G3 acquisition and protocol design"
+  ],
+  "not_valid_for": [
+    "formal leave-one-facility-out holdout",
+    "data-center WUE validation",
+    "12-month daily facility prediction"
+  ],
+  "limitations": [
+    "one courthouse facility and three aggregate periods totaling 102 days",
+    "no IT energy, facility energy, PUE or WUE fields",
+    "no model predictions or independent leave-one-facility-out review"
+  ],
+  "gate_effect": {
+    "g3": "unchanged_NOT_READY",
+    "g2": "unchanged_NOT_READY"
+  }
+}

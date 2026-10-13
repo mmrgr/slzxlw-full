@@ -1,0 +1,4 @@
+facility_id,study_id,period_label,period_days,makeup_gal,blowdown_gal,drift_gal,evaporation_gal,heat_rejected_mmbtu,water_per_heat_gal_per_mmbtu,coc_water_balance,source_page
+LLOYD_D_GEORGE_US_COURTHOUSE,GSA_BDR_2022,baseline,30,394456,128114,12030,254312,2217,177.9,2.8,11
+LLOYD_D_GEORGE_US_COURTHOUSE,GSA_BDR_2022,2021_evaluation,15,239086,43081,11926,184079,1604,149.0,4.34,11
+LLOYD_D_GEORGE_US_COURTHOUSE,GSA_BDR_2022,2022_evaluation,57,706695,112194,31855,562646,4904,144.1,4.91,11

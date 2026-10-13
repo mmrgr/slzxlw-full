@@ -1,0 +1,110 @@
+{
+  "artifact": "IEUA_RP1_2025_RECLAIMED_WATER_CANDIDATE",
+  "generated_at_utc": "2026-10-13T12:06:07Z",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "evidence_class": "E2_public_reclaimed_water_aggregate",
+  "source_context": "IEUA RP-1 direct recycled-water report",
+  "source_pdf": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\ieua_recycled_water_reports\\RW-Effluent-Water-Quality-2025.pdf",
+    "sha256": "sha256:5cc9866cfd26a8dfae41aea9c4169670de50ae955fabd8b76e4b8de8abb3b3af",
+    "bytes": 111630
+  },
+  "normalized_csv": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\ieua_recycled_water_reports\\RP1_2025_normalized.csv",
+    "sha256": "sha256:694bc86d461ac662e24f5ed7cae2896107087735adcc16b568459b69c1a5d4bd",
+    "rows": 9
+  },
+  "aggregation": "Monthly-average summary with average/minimum/maximum columns; not individual samples.",
+  "coverage": {
+    "pH": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "units"
+      ]
+    },
+    "temperature_c": {
+      "observed": false,
+      "rows": 0,
+      "units": []
+    },
+    "tds_mg_l": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "chloride_mg_l": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "calcium_mg_l": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "magnesium_mg_l": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "sodium_mg_l": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "sulfate_mg_l": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "alkalinity_mg_l_as_caco3": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L as CaCO3"
+      ]
+    },
+    "silica_mg_l": {
+      "observed": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    }
+  },
+  "required_panel_complete": false,
+  "formal_g2_eligible": false,
+  "applicable_to": [
+    "direct reclaimed-water plausibility bounds",
+    "cooling chemistry prior screening",
+    "future G2 acquisition planning"
+  ],
+  "not_valid_for": [
+    "formal G2 chemistry cross-validation",
+    "temperature-dependent PHREEQC validation",
+    "facility holdout validation",
+    "sample-level uncertainty estimation"
+  ],
+  "limitations": [
+    "temperature is absent from the public report",
+    "the report aggregates monthly averages and does not provide row-level samples",
+    "measurement uncertainty and charge-balance inputs are not reported"
+  ],
+  "gate_effect": {
+    "g2": "unchanged_NOT_READY",
+    "g3": "unchanged_NOT_READY"
+  }
+}

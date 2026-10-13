@@ -1,0 +1,20 @@
+{
+  "source": "Zenodo public API v1",
+  "record_id": 5176161,
+  "concept_record_id": 5176067,
+  "doi": "10.5281/zenodo.5176161",
+  "concept_doi": "10.5281/zenodo.5176067",
+  "title": "SIPIBEL data set",
+  "resource_type": "Dataset",
+  "landing_page": "https://zenodo.org/records/5176161",
+  "api_record": "https://zenodo.org/api/records/5176161",
+  "license": "CC BY 4.0",
+  "publication_date": "2021-08-10",
+  "archive_name": "SIPIBEL data set files.7z",
+  "archive_bytes": 354278,
+  "archive_md5": "5255329a410db3b5c7d07ffe0bca1141",
+  "archive_sha256": "sha256:45f43fed50f9f647c9256ad7c26b2e5a293a86144a440a0bbb5c9554909f899d",
+  "description_scope": "961 samples and 48,439 values from raw and treated hospital/urban wastewater, sludge, river and groundwater; 10 Excel/CSV data files in the archive.",
+  "source_context": "Wastewater observatory dataset; not a cooling-tower or data-centre operating dataset.",
+  "retrieved_utc": "2026-10-13T10:45:00Z"
+}

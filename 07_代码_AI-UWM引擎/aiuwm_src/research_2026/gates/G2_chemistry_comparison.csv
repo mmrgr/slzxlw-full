@@ -1,0 +1,2 @@
+comparison_id,sample_count,source_class,reduced_order_definition,independent_definition,false_safe_count,false_safe_rate,false_unsafe_count,false_unsafe_rate,rank_spearman,comparison_status,formal_gate_effect
+WQP-07241550-ambient-pilot,129,ambient USGS/WQP,reclaimed-water engineering limits at CoC=1,Calcite/Dolomite/Gypsum/Anhydrite saturation indices <= 0 at multiplier=1,125,0.9689922481,0,0.0,0.2495440780,CONDITIONAL_PILOT,G2_NOT_READY

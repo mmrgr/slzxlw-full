@@ -1,0 +1,16 @@
+{
+  "source": "California SDWIS public sampling-results portal",
+  "title": "001B EFFLUENT - RP1 RECYCLED WATER sampling results",
+  "utility": "Inland Empire Utilities Agency",
+  "facility_system_number": "3690001",
+  "sampling_point": "CA3690001_038_038",
+  "landing_page": "https://sdwis.waterboards.ca.gov/PDWW/JSP/WSamplingResultsByStoret.jsp?FacilityID=038&SamplingPointID=038&SamplingPointName=001B+EFFLUENT+-+RP1+RECYCLED+WATER&SystemName=INLAND+EMPIRE+UTILITIES+AGENCY&SystemNumber=3690001&WSFNumber=72452",
+  "license": "Public state water-quality portal; terms not separately specified",
+  "retrieved_utc": "2026-10-13T11:41:00Z",
+  "snapshot_file": "sampling_results.html",
+  "snapshot_bytes": 1079172,
+  "snapshot_sha256": "sha256:ce9fd433644ff609c091b86eac5ea2d7860d19ce77e43613e69a6d29c71d56bf",
+  "scope": "Public laboratory records for recycled-water effluent sampled from 2023-08-09 through 2026-07-28; the inventory contains 149 lab sample IDs and 1,177 analyte rows.",
+  "coverage_note": "Observed chloride, calcium, magnesium, sodium, sulfate and total alkalinity rows recur across the portal; observed pH, temperature, TDS and silica rows are absent.",
+  "source_context": "Direct recycled-water effluent; not a cooling-tower operating dataset and not an independent PHREEQC validation package."
+}

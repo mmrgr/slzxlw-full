@@ -1,0 +1,121 @@
+{
+  "artifact": "LADWP_GWR_AWPF_2012_RECLAIMED_WATER_CANDIDATE",
+  "generated_at_utc": "2026-10-13T12:26:27Z",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "evidence_class": "E2_public_reclaimed_water_pilot",
+  "source_context": "LADWP AWPF pilot RO product water, Table 4-3",
+  "source_pdf": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\ladwp_gwr_2012\\GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf",
+    "sha256": "sha256:69dbc397527d62ca9e3c4cbccb4178dc83f58b8e66452a055c259b2df2abf331",
+    "bytes": 33532714
+  },
+  "normalized_csv": {
+    "path": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\research_2026\\external_evidence\\ladwp_gwr_2012\\AWPF_RO_product_normalized.csv",
+    "sha256": "sha256:d8d0cc310158c7a7947c8b47f60d11924dc05c6c5721b95fc7ad318b27751663",
+    "rows": 10
+  },
+  "aggregation": "Single pilot analytical result with detection limits; not a replicated time series.",
+  "coverage": {
+    "pH": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "su"
+      ]
+    },
+    "temperature_c": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "°C"
+      ]
+    },
+    "tds_mg_l": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "chloride_mg_l": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "calcium_mg_l": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "magnesium_mg_l": {
+      "observed": true,
+      "reported_value_present": false,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "sodium_mg_l": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "sulfate_mg_l": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    },
+    "alkalinity_mg_l_as_caco3": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "mg/L as CaCO3"
+      ]
+    },
+    "silica_mg_l": {
+      "observed": true,
+      "reported_value_present": true,
+      "rows": 1,
+      "units": [
+        "mg/L"
+      ]
+    }
+  },
+  "required_panel_complete": false,
+  "formal_g2_eligible": false,
+  "applicable_to": [
+    "reclaimed-water chemistry plausibility bounds",
+    "temperature-dependent criterion test fixture planning"
+  ],
+  "not_valid_for": [
+    "formal G2 chemistry cross-validation",
+    "facility holdout validation",
+    "sample-level uncertainty estimation",
+    "cooling-tower operating prediction"
+  ],
+  "limitations": [
+    "single RO-product pilot result rather than replicated samples",
+    "magnesium is reported as non-detect and is retained as ND, not imputed",
+    "no charge-balance inputs or independent solver review"
+  ],
+  "gate_effect": {
+    "g2": "unchanged_NOT_READY",
+    "g3": "unchanged_NOT_READY"
+  }
+}

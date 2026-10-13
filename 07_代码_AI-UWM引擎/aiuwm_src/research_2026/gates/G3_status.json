@@ -1,0 +1,19 @@
+{
+  "gate": "G3 facility behaviour holdout",
+  "updated": "2026-10-13",
+  "status": "NOT_READY",
+  "candidate_files": ["examples/demo_full/observed.csv", "research_2026/experiments/gsa_blowdown_candidate_2026-10-13/candidate.json"],
+  "candidate_classification": "synthetic_or_scenario plus bounded public cooling-facility aggregate",
+  "deliverables": {
+    "evidence_gap": "research_2026/gates/G3_evidence_gap.md",
+    "validation_manifest": "research_2026/gates/G3_validation_manifest.json"
+  },
+  "required_minimum": {
+    "facility_or_study_units": 3,
+    "months_per_unit": 12,
+    "leave_one_out": true,
+    "required_observations": ["WUE", "makeup", "blowdown", "CoC", "IT/facility energy"],
+    "required_provenance": ["source URI", "meter ID", "observed flag", "prediction training facilities"]
+  },
+  "blocking_reason": "The GSA/NREL aggregate is non-synthetic operational evidence but covers one courthouse and 102 aggregate days without IT/facility energy, PUE/WUE or leave-one-facility-out predictions; the required three-unit, 12-month holdout package is absent."
+}

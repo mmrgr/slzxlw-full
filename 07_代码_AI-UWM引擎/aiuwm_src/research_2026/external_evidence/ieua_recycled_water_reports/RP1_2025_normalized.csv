@@ -1,0 +1,10 @@
+source,facility,report_year,metric,units,average,minimum,maximum,aggregation
+IEUA_2025,RP-1,2025,pH,units,6.9,6.8,7.0,monthly_average_summary
+IEUA_2025,RP-1,2025,tds_mg_l,mg/L,443,418,464,monthly_average_summary
+IEUA_2025,RP-1,2025,alkalinity_mg_l_as_caco3,mg/L as CaCO3,140,140,140,monthly_average_summary
+IEUA_2025,RP-1,2025,calcium_mg_l,mg/L,45,35,49,monthly_average_summary
+IEUA_2025,RP-1,2025,chloride_mg_l,mg/L,100,100,100,monthly_average_summary
+IEUA_2025,RP-1,2025,magnesium_mg_l,mg/L,9,6,11,monthly_average_summary
+IEUA_2025,RP-1,2025,sodium_mg_l,mg/L,88,83,91,monthly_average_summary
+IEUA_2025,RP-1,2025,sulfate_mg_l,mg/L,47,47,47,monthly_average_summary
+IEUA_2025,RP-1,2025,silica_mg_l,mg/L,24,5,27,monthly_average_summary

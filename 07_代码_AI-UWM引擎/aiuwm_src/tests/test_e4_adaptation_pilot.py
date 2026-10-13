@@ -34,10 +34,14 @@ def test_read_only_pilot_evaluates_a0_to_a3_and_hashes_outputs(tmp_path: Path) -
     assert payload["diagnostic_status"] == "READ_ONLY"
     assert payload["execution_mode"] == "READ_ONLY_DIAGNOSTIC"
     assert payload["main_model_integration"] == "READ_ONLY_BOUNDARY"
+    assert payload["parameterization"]["status"] == "NEUTRAL_POLICY_ONLY_DEFAULTS"
+    assert payload["parameterization"]["formal_usable"] is False
+    assert "must not be interpreted" in payload["parameterization"]["warning"]
     assert payload["execution_performed"] is True
     assert len(payload["results"]) == 4
     assert payload["selection"]["summary_rows"] == 4
     assert payload["selection"]["daily_rows"] == 4
+    assert payload["selection"]["formal_parameterization_ready"] is False
     assert payload["output_hashes"]["summary"].startswith("sha256:")
     assert payload["input"]["sha256"].startswith("sha256:")
 

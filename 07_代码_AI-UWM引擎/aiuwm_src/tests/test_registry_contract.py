@@ -32,3 +32,11 @@ def test_scenario_registry_has_paired_not_ready_q_l_a_fixture() -> None:
     assert {row["adaptation_state"] for row in rows} == {"A0", "A1", "A2", "A3"}
     assert {row["status"] for row in rows} == {"not_ready"}
     assert len({(row["weather_seed"], row["hydrology_seed"], row["workload_seed"]) for row in rows}) == 1
+
+
+def test_external_registry_keeps_figshare_candidate_nonformal() -> None:
+    rows = _rows("external_evidence_registry.csv")
+    candidate = next(row for row in rows if row["evidence_id"] == "E2-FIGSHARE-28948753")
+    assert candidate["evidence_class"] == "E2_public_reclaimed_water"
+    assert "G2_PASS" in candidate["not_valid_for"]
+    assert candidate["gate_effect"] == "G2_NOT_READY|G3_NOT_READY"

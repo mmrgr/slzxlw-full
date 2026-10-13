@@ -1,0 +1,32 @@
+{
+  "source_id": "LADWP-GWR-AWPF-2012",
+  "title": "Groundwater Replenishment Evaluation Technical Memorandum, Volume 3, Appendix H/M",
+  "publisher": "Los Angeles Department of Water and Power",
+  "source_url": "https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf",
+  "retrieved_at": "2026-10-13",
+  "license_or_access": "official public report",
+  "raw_file": "GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf",
+  "raw_sha256": "69DBC397527D62CA9E3C4CBCCB4178DC83F58B8E66452A055C259B2DF2ABF331",
+  "raw_bytes": 33532714,
+  "measurement_context": "AWPF pilot RO product water; Table 4-3 analytical results for groundwater-replenishment evaluation",
+  "coverage": [
+    "TDS",
+    "chloride",
+    "sulfate",
+    "calcium",
+    "magnesium",
+    "sodium",
+    "silica",
+    "temperature",
+    "pH",
+    "alkalinity"
+  ],
+  "evidence_class": "E2_public_reclaimed_water_pilot",
+  "limitations": [
+    "single RO-product pilot result rather than replicated time-series samples",
+    "no row-level uncertainty or charge-balance inputs beyond reported detection limits",
+    "no cooling-tower operating context or facility holdout linkage",
+    "not independently reviewed with the locked reduced-order/PHREEQC criteria"
+  ],
+  "formal_g2_eligible": false
+}
