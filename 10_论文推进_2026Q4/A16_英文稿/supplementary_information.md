@@ -290,6 +290,36 @@ and location, released CC-BY-4.0 on Zenodo (`10.5281/zenodo.22138940`).
 > opposite of what was claimed. Load rate is a production-side quantity; regime membership is
 > demand-side. We therefore do **not** report regime prevalence from these data.
 
+### S6c. Which regime do real systems occupy? (external validity test)
+
+We place the regimes on the observed **scale** distribution — the legitimate independent
+variable. The required deliverable reclaimed volume to enter the zero-displacement (surplus) branch
+is the threshold `pool_scale` times the model's per-day base supply. Measured empirically, surplus
+**first appears** at `pool_scale` = 2.0 and reaches 50% prevalence at 2.2 (D-HA) / 2.4 (D-CO),
+i.e. **≈ 66.9 / 61.4 ML/d** (first appearance) and **≈ 73.5 / 73.7 ML/d** (50% level).
+
+| $r$ | D-HA surplus % (first) | D-HA surplus % (50% level) | D-CO surplus % (first) | D-CO surplus % (50% level) |
+|---:|---:|---:|---:|---:|
+| 1.00 | 5.99 | 5.37 | 6.55 | 5.34 |
+| 0.80 | 4.50 | 4.05 | 5.07 | 4.01 |
+| 0.50 | 2.14 | 1.88 | 2.48 | 1.88 |
+| 0.30 | 0.88 | 0.79 | 1.04 | 0.79 |
+| 0.20 | 0.47 | 0.39 | 0.54 | 0.39 |
+
+Observed treated volume (n = 10,826): median 3.0, P75 16.8, P90 44.4, P95 77.8 ML/d.
+
+> **The committed branch dominates: above 93% for all $r$ and above 99% for $r \le 0.3$; surplus
+> covers only 0.4–6.6%.** The regime in which our central result bites hardest is the empirically
+> dominant one, so the result is not an artefact of a parameter corner; the supply-expansion route
+> is realistic only for the largest systems and should not be a universal prescription.
+
+> **Methodological note.** We use **empirically measured** thresholds, not the closed-form
+> `elig/P0` (2.384 / 2.567), because surplus already appears at `pool_scale` = 2.0. The transition is
+> smooth rather than a step: at `pool_scale` = 1.5 unused reclaimed water is present (2,828 ML) while
+> displacement still occurs (11,896 ML), so "unused water present" ≠ "no displacement". The empirical
+> thresholds are therefore the conservative choice. (`A24_外部锚定/external_validity.py`,
+> `fix_threshold.py`, `explain_transition.py`)
+
 > **We do not claim external validation.** The data constrain parameter ranges and bound the
 > scope for expanding supply; they do not validate city-level predictions, and no
 > facility-level cooling-operations data were obtainable (engine gate G3 remains `NOT_READY`).

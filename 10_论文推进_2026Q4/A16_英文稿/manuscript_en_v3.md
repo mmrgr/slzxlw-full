@@ -36,11 +36,14 @@ abstraction" becomes a **necessary-service gap** (up to 62,080 ML) and the data 
 itself curtailed. Finally,
 setting the water-quality constraint to non-binding makes the outcome exactly zero in the
 committed regime — establishing that "reclaimed cooling does not save water" is a property
-of *quality-limited, fully-committed* systems rather than of reuse in general. We anchor the
-analysis against a public dataset of **10,826 observed wastewater treatment plants**: our
-supply parameter falls at the **81st percentile** of that distribution, and observed
-utilisation (median 0.594 of design capacity) bounds the physical scope for expanding
-reclaimed supply.
+of *quality-limited, fully-committed* systems rather than of reuse in general. Anchoring
+against a public dataset of **10,826 observed wastewater treatment plants** shows our supply
+parameter sits at the **81st percentile** of that distribution, that most plants retain spare
+treatment capacity (median utilisation 0.594), and — most importantly — that the
+fully-committed regime our result describes is the **empirically dominant** one (above 95% of
+plants; the surplus regime covers only ~2–5%). The result is thus relevant to most real
+systems, while the supply-expansion route that does reduce withdrawal is realistic only for
+the largest ones.
 
 ---
 
@@ -293,10 +296,45 @@ Two consequences for our claims:
 
 > **What this does and does not establish.** The external data constrain our parameter range
 > and bound the physical scope for expanding reclaimed supply; they do **not** validate
-> city-level predictions and do **not** determine regime prevalence. No facility-level
-> cooling-operations data were available. We therefore still make no predictive claim for a
-> named city.
+> city-level predictions and do **not** determine regime prevalence from load rate. No
+> facility-level cooling-operations data were available. We therefore still make no predictive
+> claim for a named city.
 > (`A24_外部锚定/A24_外部锚定报告.md`)
+
+### 6b. Which regime do real systems occupy?
+
+We can nevertheless place the regimes on the observed **scale** distribution, which is the
+legitimate independent variable. Our identity gives the deliverable reclaimed volume required
+to enter the zero-displacement (surplus) branch — the threshold `pool_scale` times the model's
+per-day base supply. Measured empirically, surplus first appears at `pool_scale` = 2.0 and
+reaches 50% prevalence at 2.2 (D-HA) / 2.4 (D-CO), i.e. required deliverable volumes of
+**≈ 66.9 / 61.4 ML/d** (first appearance) and **≈ 73.5 / 73.7 ML/d** (50% prevalence). Comparing
+this with the observed distribution of *actual treated volume × reclaimed yield* $r$:
+
+| $r$ | D-HA surplus % (first) | D-HA surplus % (50% level) | D-CO surplus % (first) | D-CO surplus % (50% level) |
+|---:|---:|---:|---:|---:|
+| 1.00 | 5.99 | 5.37 | 6.55 | 5.34 |
+| 0.80 | 4.50 | 4.05 | 5.07 | 4.01 |
+| **0.50** | **2.14** | **1.88** | **2.48** | **1.88** |
+| 0.30 | 0.88 | 0.79 | 1.04 | 0.79 |
+| 0.20 | 0.47 | 0.39 | 0.54 | 0.39 |
+
+(The observed treated-volume distribution is heavily right-skewed: median 3.0, P75 16.8, P90 44.4, P95 77.8 ML/d.)
+
+> **The committed branch dominates real infrastructure — above 93% across the entire plausible
+> range of $r$ and above 99% for $r\le0.3$; the surplus branch covers only ~0.4–6%.** Two
+> readings follow, and we state both. First, the regime in which our central result bites
+> hardest (*facility saving ≠ city saving*, with withdrawal able to rise) is the **empirically
+> dominant** one, so the result is not an artefact of an unusual parameter corner. Second, the
+> route that *does* reduce city withdrawal — expanding reclaimed supply until it exceeds
+> committed demand — is reachable for only a minority of real systems (the largest ones), so it
+> should not be advanced as a universal policy prescription. The conclusion is therefore
+> **strengthened in relevance and bounded in scope**.
+
+> **Methodological note.** We use the *empirically measured* thresholds rather than the closed-form
+> `elig/P0` values recorded earlier (2.384 / 2.567), because surplus first appears already at
+> `pool_scale` = 2.0; using the theoretical values would overstate the required supply and
+> understate the surplus share.
 
 ### 7. Robustness and falsification
 

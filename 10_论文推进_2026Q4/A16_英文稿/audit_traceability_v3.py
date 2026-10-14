@@ -40,6 +40,8 @@ def main() -> None:
     qt23 = json.loads((A22 / "q_theory_summary.json").read_text(encoding="utf-8"))
     A24 = ROOT / "A24_外部锚定"
     ea24 = json.loads((A24 / "external_anchor_summary.json").read_text(encoding="utf-8"))
+    ev24 = json.loads((A24 / "external_validity_summary.json").read_text(encoding="utf-8"))
+    th24 = json.loads((A24 / "surplus_threshold_check.json").read_text(encoding="utf-8"))
     A21 = ROOT / "A21_动态状态"
     ds = json.loads((A21 / "dynamic_state_summary.json").read_text(encoding="utf-8"))
     dc = pd.read_csv(A21 / "dynamic_criterion_grid.csv", encoding="utf-8-sig")
@@ -79,6 +81,12 @@ def main() -> None:
         ("A24 实测污水厂数 = 10826", ea24["WWTP_scale"]["n"], 10826, 0),
         ("A24 负荷率中位 0.594", ea24["load_rate"]["median"], 0.5943, 0.002),
         ("A24 设计能力中位 8.0 ML/d", ea24["WWTP_scale"]["median"], 0.8, 0.01),
+        ("A24b committed 占比 ~98% (r=0.5)",
+         ev24["headline"]["committed_ha_pct"], 98.32, 5.0),
+        ("A24b surplus 占比 ~2% (r=0.5)",
+         ev24["headline"]["surplus_first_ha_pct"], 2.14, 3.0),
+        ("A24b 经验阈值 2.0 (非理论 2.384)",
+         float(th24["empirical"]["ha"]["first_appearance"]), 2.0, 0.01),
         ("A22 ρ(κ-1)-q 残差 (恒等式)", dc22["identity_residual"], 1.33e-15, 1e-14),
         ("A22 q>0 组有益数 = n (零例外)",
          dc22["q_sign_groups"][0]["n_beneficial"], dc22["q_sign_groups"][0]["n"], 0),

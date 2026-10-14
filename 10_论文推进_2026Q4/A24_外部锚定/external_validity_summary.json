@@ -1,0 +1,89 @@
+{
+ "method": "由 A17 的 surplus 阈值(pool_scale)反解所需可交付再生水量, 与真实厂『实际处理量×r』比较 ⇒ 得到真实分布下两分支占比。用【规模】作判据, 不使用已撤回的负荷率映射。",
+ "threshold_pool_scale_empirical_first": {
+  "ha": 2.0,
+  "co": 2.0
+ },
+ "threshold_pool_scale_empirical_half": {
+  "ha": 2.2,
+  "co": 2.4
+ },
+ "P_model_ml_per_day": {
+  "ha": 33.43075511149729,
+  "co": 30.70407752281263
+ },
+ "required_deliverable_ml_per_day_first": {
+  "ha": 66.86151022299458,
+  "co": 61.40815504562526
+ },
+ "required_deliverable_ml_per_day_half": {
+  "ha": 73.54766124529405,
+  "co": 73.6897860547503
+ },
+ "real_treated_volume": {
+  "n": 10826,
+  "p50": 3.0,
+  "p75": 16.757123287671245,
+  "p90": 44.43835616438355,
+  "p95": 77.7633561643836,
+  "p99": 210.3869863013698
+ },
+ "prevalence_table": [
+  {
+   "r": 1.0,
+   "surplus_first_ha_pct": 5.986,
+   "surplus_half_ha_pct": 5.367,
+   "committed_ha_pct": 94.014,
+   "surplus_first_co_pct": 6.549,
+   "surplus_half_co_pct": 5.339,
+   "committed_co_pct": 93.451
+  },
+  {
+   "r": 0.8,
+   "surplus_first_ha_pct": 4.498,
+   "surplus_half_ha_pct": 4.055,
+   "committed_ha_pct": 95.502,
+   "surplus_first_co_pct": 5.071,
+   "surplus_half_co_pct": 4.009,
+   "committed_co_pct": 94.929
+  },
+  {
+   "r": 0.5,
+   "surplus_first_ha_pct": 2.143,
+   "surplus_half_ha_pct": 1.884,
+   "committed_ha_pct": 97.857,
+   "surplus_first_co_pct": 2.476,
+   "surplus_half_co_pct": 1.875,
+   "committed_co_pct": 97.524
+  },
+  {
+   "r": 0.3,
+   "surplus_first_ha_pct": 0.878,
+   "surplus_half_ha_pct": 0.794,
+   "committed_ha_pct": 99.122,
+   "surplus_first_co_pct": 1.044,
+   "surplus_half_co_pct": 0.794,
+   "committed_co_pct": 98.956
+  },
+  {
+   "r": 0.2,
+   "surplus_first_ha_pct": 0.471,
+   "surplus_half_ha_pct": 0.388,
+   "committed_ha_pct": 99.529,
+   "surplus_first_co_pct": 0.536,
+   "surplus_half_co_pct": 0.388,
+   "committed_co_pct": 99.464
+  }
+ ],
+ "headline": {
+  "r_mid": 0.5,
+  "committed_ha_pct": 97.857,
+  "committed_co_pct": 97.524,
+  "surplus_first_ha_pct": 2.143,
+  "surplus_half_ha_pct": 1.884,
+  "surplus_first_co_pct": 2.476,
+  "surplus_half_co_pct": 1.875,
+  "reading": "真实规模分布下 committed 分支占绝对多数; surplus 分支仅少数(见 prevalence_table)。这支持本文中心结论的现实相关性, 并限制『扩产即可节水』路径的现实适用范围。"
+ },
+ "discipline_note": "外部数据仅作规模对照与分支占比估计; 不作拟合、不作城市级预测; r 以敏感性区间报告。"
+}
