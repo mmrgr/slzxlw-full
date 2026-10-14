@@ -61,26 +61,72 @@ $$dS_{\rm pot} = C - F
   the general form is required.
 - If there is **no** displacement ($C=0$): $dS=-(M_0-M_1)-x_{\rm AI}<0$.
 
-**Sign criterion** (100% agreement, 1,152/1,152): $dS_{\rm pot}<0 \iff x_{\rm AI}+(M_0-M_1) > C_{\rm disp}$.
+**Sign criterion**: dividing the identity by $M_1$ gives the exact dimensionless form
+$dS_{\rm pot}/M_1=\rho(\kappa-1)-q$ with $\rho=x_{\rm AI}/M_1$, $\kappa=\text{displacement}/x_{\rm AI}$,
+$q=(M_0-M_1)/M_1$; residual **1.3 × 10⁻¹⁵**. This is an **algebraic rearrangement, not a
+discovery**, and is reported as an accounting convention.
 
-### S3.1 No single ratio predicts the sign
+The substantive content is the sign structure of $q$:
 
-| $C/x_{\rm AI}$ | n | $dS<0$ | range (ML) |
-|---|---:|---:|---|
-| 0.00 | 447 | 430 (96%) | −98,158 … +33,217 |
-| 0.01–0.25 | 122 | 97 (80%) | −95,375 … +485,436 |
-| 0.25–0.50 | 128 | 66 (52%) | −87,758 … +598,752 |
-| 0.50–0.75 | 66 | 20 (30%) | −78,507 … +343,916 |
-| 0.75–1.00 | 351 | 136 (39%) | −66,322 … +255,180 |
+| $q$ group | n | withdrawal falls | withdrawal rises | median $dS_{\rm pot}$ |
+|---|---:|---:|---:|---:|
+| $q>0$ | 349 | **349** | **0** | −14,325 |
+| $q\approx0$ | 326 | 208 | 38 | −5,590 |
+| $q<0$ | 477 | 192 | 285 | +1,907 |
 
-An intermediate draft claimed the extremes were "pure" (ratio 0 ⇒ no positive; ratio 1 ⇒ no
-negative). That was a **pre-fix artefact** of frozen composition; with composition live
-**114 purely-displaced cases are negative**, because a severe quality penalty can outweigh a
-complete displacement. The three-term criterion above supersedes the ratio heuristic.
+**$q>0$ is sufficient for a city-level benefit (349/349, no exception).**
 
-**Composition modulation**: LADWP 237 negative / 31 positive; AI-UWM 261/7; IEUA 153/115;
-Figshare RW 98/170. With quality fully relaxed (`limit_scale` = 10⁶): **208 negative, 0
-positive**.
+### S3.1 Closed form for the sign of $q$
+
+Since $M(\mathrm{CoC})=E\,\mathrm{CoC}/(\mathrm{CoC}-1)$:
+
+$$q=\frac{M_0-M_1}{M_1}=\frac{\mathrm{CoC}_1-\mathrm{CoC}_0}
+{\mathrm{CoC}_1(\mathrm{CoC}_0-1)},\qquad
+q>0\iff\mathrm{CoC}_1>\mathrm{CoC}_0$$
+
+Residual **5.6 × 10⁻¹⁷** (numeric vs analytic). "Does reclaimed cooling reduce facility
+makeup?" is therefore **exactly equivalent** to "does blending reclaimed water raise the
+admissible CoC?"
+
+**Sufficient external condition.** If *every* constrained species satisfies
+$c^{\rm rec}_i<c^{\rm pot}_i$, then the blend concentration falls with $\varphi$, CoC rises, and
+$q>0$. **Zero violations** across the compositions tested (`q_theory_samples.csv`).
+
+**Why no single indicator suffices** (best of seven predictors: 0.768):
+
+| mechanism | demonstration |
+|---|---|
+| one dirty species can take over the minimum | Figshare RW: 3 species present, 2 exceed potable → $\mathrm{CoC}_1/\mathrm{CoC}_0=0.40$ |
+| the design ceiling truncates the benefit | LADWP: `limit_scale`=5.0 → $\mathrm{CoC}_0=\mathrm{CoC}_1=5.000$ ($q=0$); `limit_scale`=0.5 → $2.500\to5.000$ ($q>0$) |
+
+### S3.2 Empirical classifier comparison (why the downgrade is warranted)
+
+Seven candidates, full sample, no filtering:
+
+| predictor | accuracy | TP | FP | TN | FN |
+|---|---:|---:|---:|---:|---:|
+| reclaimed TDS < potable TDS | **0.768** | 185 | 103 | 700 | 164 |
+| reclaimed Cl < potable Cl | 0.768 | 185 | 103 | 700 | 164 |
+| either indicator cleaner | 0.768 | 185 | 103 | 700 | 164 |
+| both indicators cleaner | 0.768 | 185 | 103 | 700 | 164 |
+| CoC constrained below design | 0.428 | 205 | 515 | 288 | 144 |
+| $\kappa=0$ (no displacement) | 0.576 | 153 | 293 | 510 | 196 |
+| chemistry ∧ constraint | 0.748 | 90 | 31 | 772 | 259 |
+
+Per composition: IEUA **1.000**, Figshare 0.993, LADWP 0.642, AI-UWM assumption **0.438**.
+
+### S3.3 Data-integrity gap
+
+The quality dictionary supplies only species present in a sample, so a missing species enters
+as **zero** and its limit never binds. IEUA and LADWP are complete (5/5); Figshare RW lacks
+alkalinity and silica; the `AI-UWM model assumption` entry carries **only TDS and chloride**.
+
+Imputing missing species from observed-source medians over 192 scenarios: makeup changes by up
+to **2,869 ML** for the incomplete entry, but **zero sign flips in $q$ (0/192)**.
+
+> The gap is real but does not alter qualitative conclusions. The placeholder composition
+> should not be presented alongside published observations as a "water composition"; we flag
+> it and recommend exclusion or explicit labelling. (`A22_判据分解/A22_判据分解报告.md`)
 
 ### S3.2 The 17 exceptions at zero displacement (physical, not noise)
 

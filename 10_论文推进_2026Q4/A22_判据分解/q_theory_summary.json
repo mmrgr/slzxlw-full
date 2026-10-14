@@ -1,0 +1,72 @@
+{
+ "q_closed_form": "q = (CoC1 - CoC0) / (CoC1*(CoC0-1))",
+ "q_sign_condition": "q > 0 ⟺ CoC1 > CoC0",
+ "closed_form_max_diff": 5.551115123125783e-17,
+ "sufficient_condition": "若全部约束物种均满足 c_rec,i < c_pot,i，则 CoC_lim 随 φ 上升 ⇒ q>0",
+ "sufficient_condition_violations": 0,
+ "potable_concentrations": {
+  "TDS": 180.0,
+  "chloride": 35.0,
+  "hardness": 120.0,
+  "alkalinity": 100.0,
+  "silica": 10.0
+ },
+ "per_sample": [
+  {
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "n_species": 5,
+   "all_cleaner_than_potable": false,
+   "any_dirtier": true,
+   "CoC0": 2.5,
+   "CoC1": 1.953125,
+   "q_sign": "-",
+   "n_missing": 0
+  },
+  {
+   "sample": "LADWP AWPF (2012, RO product)",
+   "n_species": 5,
+   "all_cleaner_than_potable": true,
+   "any_dirtier": false,
+   "CoC0": 2.5,
+   "CoC1": 5.0,
+   "q_sign": "+",
+   "n_missing": 0
+  },
+  {
+   "sample": "Figshare RW (2025, paired study)",
+   "n_species": 3,
+   "all_cleaner_than_potable": false,
+   "any_dirtier": true,
+   "CoC0": 2.5,
+   "CoC1": 1.000001,
+   "q_sign": "-",
+   "n_missing": 2
+  },
+  {
+   "sample": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "n_species": 3,
+   "all_cleaner_than_potable": false,
+   "any_dirtier": true,
+   "CoC0": 2.5,
+   "CoC1": 1.000001,
+   "q_sign": "-",
+   "n_missing": 2
+  },
+  {
+   "sample": "AI-UWM model assumption",
+   "n_species": 2,
+   "all_cleaner_than_potable": false,
+   "any_dirtier": true,
+   "CoC0": 2.5,
+   "CoC1": 2.1611001964636545,
+   "q_sign": "-",
+   "n_missing": 3
+  }
+ ],
+ "why_empirical_classifier_fails": [
+  "只要有任一物种 c_rec > c_pot，其比值随 φ 下降并可能接管 min",
+  "CoC 受 CoC_design 上限截断；若 CoC0 已到顶，则 q≤0 与清洁度无关",
+  "故 TDS 单指标不足，须'全部相关物种'判定"
+ ],
+ "discipline_note": "闭式由 sympy 推导并数值验证；充分条件用引擎实测 CoC 检验。"
+}

@@ -23,13 +23,17 @@ reclaimed pool is already committed to incumbent users, a data centre's reclaime
 fully displaced: the city's potable withdrawal does not fall, and the old facility-to-city
 identity is recovered exactly. When unused reclaimed water remains, the draw is *not*
 displaced and urban potable withdrawal genuinely falls — by up to 27,354 ML per period in
-our tests. Whether that happens is decided by a three-term criterion — the facility's
-reclaimed draw plus its own water-quality penalty versus the reclaimed volume it displaces —
-which reproduces the observed sign in **1,152 of 1,152 scenarios (100%)** and is not
-reducible to any single ratio. Imposing a finite potable-supply cap shows the effect is not
-merely redistributed but transformed: as the cap binds, the apparent "extra abstraction"
-becomes a **necessary-service gap** (up to 62,080 ML) and the data centre is itself curtailed.
-Finally,
+our tests. We show that the sign of the outcome is decided by a **decision inequality** —
+the net discharge must outweigh the water-quality effect — and we **explicitly downgrade this
+to an accounting convention rather than a discovery**, since it is an algebraic rearrangement
+of the underlying identity. What is substantive is the sign structure beneath it: reuse lowers
+facility makeup in 349 of 1,152 scenarios, and in **all 349** the city benefits, with no
+exception; when reuse instead raises makeup, the outcome is a genuine contest that goes both
+ways. We do **not** claim a single external predictor for that sign — the best of seven
+candidates reaches only 0.77 accuracy. Imposing a finite potable-supply cap shows the effect
+is not merely redistributed but transformed: as the cap binds, the apparent "extra
+abstraction" becomes a **necessary-service gap** (up to 62,080 ML) and the data centre is
+itself curtailed. Finally,
 setting the water-quality constraint to non-binding makes the outcome exactly zero in the
 committed regime — establishing that "reclaimed cooling does not save water" is a property
 of *quality-limited, fully-committed* systems rather than of reuse in general.
@@ -110,52 +114,74 @@ Branch-degradation residuals: **1.1 × 10⁻¹¹** (A) and **1.5 × 10⁻¹¹** 
 > The earlier facility-to-city identity is therefore **not wrong** — it is the
 > fully-committed branch. That is a stronger statement than refuting it.
 
-### 3. What decides the sign: a three-term criterion, not the displacement ratio alone
+### 3. What decides the sign: a decision inequality, not a discovery
 
-$dS_{\rm pot}<0$ **iff**
+Dividing the identity by $M_1$ gives an exact dimensionless form
+(residual **1.3 × 10⁻¹⁵**):
 
-$$\boxed{\;x_{\rm AI} + (M_0-M_1) > \bigl(r_{\rm inc}^{B_2}-r_{\rm inc}^{B_1}\bigr)\;}$$
+$$\frac{dS_{\rm pot}}{M_1}=\rho(\kappa-1)-q,\qquad
+\rho=\frac{x_{\rm AI}}{M_1},\quad
+\kappa=\frac{\text{displacement}}{x_{\rm AI}},\quad
+q=\frac{M_0-M_1}{M_1}$$
 
-reproducing the observed sign in **1,152 of 1,152 cases (100%)**. The criterion involves three
-quantities — the facility's reclaimed draw, its own water-quality penalty, and the
-displacement — so no single ratio suffices:
+> **We explicitly downgrade this.** The relation is an **algebraic rearrangement of the
+> identity**, not an empirical law. It is an accounting convention: city withdrawal falls
+> exactly when the net discharge $\rho(\kappa-1)$ is outweighed by the quality effect $q$.
 
-| displacement ratio $C/x_{\rm AI}$ | n | $dS_{\rm pot}<0$ | range (ML) |
-|---|---:|---:|---|
-| 0.00 | 447 | 430 (96%) | −98,158 … +33,217 |
-| 0.01–0.25 | 122 | 97 (80%) | −95,375 … +485,436 |
-| 0.25–0.50 | 128 | 66 (52%) | −87,758 … +598,752 |
-| 0.50–0.75 | 66 | 20 (30%) | −78,507 … +343,916 |
-| 0.75–1.00 | 351 | 136 (39%) | −66,322 … +255,180 |
+What *is* substantive is the sign structure of $q$. Treating it as a classifier over 1,152
+scenarios:
 
-> **A correction we make against our own earlier draft.** An intermediate version of this
-> manuscript claimed the two extremes were "pure" (ratio 0 ⇒ no positive case; ratio 1 ⇒ no
-> negative case). That was a **pre-fix artefact**: with composition held frozen, displacement
-> appeared to be the sole determinant. With composition live, **114 purely-displaced cases are
-> negative** — a sufficiently severe quality penalty outweighs a *full* displacement — so the
-> three-term criterion, not the ratio, is the correct statement.
+| $q$ group | n | withdrawal **falls** | withdrawal **rises** | median $dS_{\rm pot}$ |
+|---|---:|---:|---:|---:|
+| **$q>0$** (reuse lowers makeup) | 349 | **349** | **0** | −14,325 |
+| $q\approx0$ | 326 | 208 | 38 | −5,590 |
+| $q<0$ (reuse raises makeup) | 477 | 192 | 285 | +1,907 |
 
-Composition modulates the sign strongly:
+**$q>0$ is a sufficient condition for a city-level benefit: 349 of 349, with no exception.**
+When $q<0$, the outcome is a genuine contest between the discharge relief and the quality
+penalty, and both signs occur.
 
-| composition | $dS_{\rm pot}<0$ | $dS_{\rm pot}>0$ |
-|---|---:|---:|
-| LADWP AWPF (RO, TDS 22) | 237 | 31 |
-| AI-UWM assumption (TDS 650) | 261 | 7 |
-| IEUA RP-1 (tertiary, TDS 443) | 153 | 115 |
-| **Figshare RW (TDS 1,378)** | **98** | **170** |
+**The sign of $q$ has a closed form.** Since $M(\mathrm{CoC})=E\,\mathrm{CoC}/(\mathrm{CoC}-1)$,
 
-With the quality constraint fully relaxed (`limit_scale` = 10⁶) the sign is one-sided:
-**208 negative, 0 positive**.
+$$q=\frac{M_0-M_1}{M_1}=\frac{\mathrm{CoC}_1-\mathrm{CoC}_0}
+{\mathrm{CoC}_1\,(\mathrm{CoC}_0-1)},\qquad
+\boxed{\,q>0\iff \mathrm{CoC}_1>\mathrm{CoC}_0\,}$$
 
-The displacement itself is set by an external, measurable quantity — committed reclaimed
-demand over deliverable supply, `elig/P0` = **2.384** (D-HA) and **2.567** (D-CO). In the
-zero-displacement branch incumbents are satisfied in **100%** of cases, `C = 0.0` exactly, and
-a mean **33,671 ML** of reclaimed water sits unused.
+verified to 5.6 × 10⁻¹⁷. The question "does reclaimed cooling reduce facility makeup?" is
+therefore **exactly equivalent** to "does blending reclaimed water raise the admissible cycles
+of concentration?"
 
-> **Consequence for practice.** A city cannot infer its outcome from the cooling technology
-> or the reuse fraction $\varphi$ alone. It must measure three things: how much reclaimed
-> water is already committed, whether usable surplus is genuinely unclaimed, **and** the
-> water-quality penalty its own source composition imposes.
+This yields a **sufficient external condition**: if *every* constrained species satisfies
+$c^{\rm rec}_i<c^{\rm pot}_i$, then the blended concentration falls monotonically with
+$\varphi$, so the quality-limited CoC rises and $q>0$. Across the compositions tested there
+are **zero violations**. Two further features explain why no single indicator predicts the
+sign (§ below): (i) a *single* species with $c^{\rm rec}_i>c^{\rm pot}_i$ can take over the
+minimum; and (ii) CoC is truncated by the design value — if $\mathrm{CoC}_0$ already equals
+the design ceiling, then $\mathrm{CoC}_1\le\mathrm{CoC}_0$ and $q\le0$ **regardless of how
+clean the reclaimed water is**. The second effect is measurable: for the RO-product
+composition, relaxing the limit gives $\mathrm{CoC}_0=\mathrm{CoC}_1=5.000$ ($q=0$), whereas
+tightening it gives $2.500\to5.000$ ($q>0$).
+
+**We do not claim a single external predictor for the sign of $q$.** Testing seven
+candidates on the full sample, the best (whether reclaimed TDS is below potable TDS)
+reaches only **0.768** accuracy — near-perfect on the high-salinity end (IEUA 1.000;
+Figshare 0.993) but failing on the low-salinity and placeholder compositions
+(LADWP 0.642; AI-UWM assumption 0.438), for exactly the two reasons above.
+(`A22_判据分解/A22_判据分解报告.md`)
+
+### 3b. Data-integrity gap, and its quantified (limited) impact
+
+The quality dictionary supplies only the species present in a water sample, so a missing
+species enters as concentration **zero** and its limit never binds. Two compositions are
+incomplete: Figshare RW lacks alkalinity and silica; the `AI-UWM model assumption` entry
+carries **only TDS and chloride** (hardness, alkalinity and silica missing). Imputing the
+missing species from observed-source medians across 192 scenarios changes makeup by up to
+2,869 ML for the incomplete entry — but produces **zero sign flips in $q$ (0/192)**.
+
+> **Disclosure**: the placeholder composition should not be presented alongside three
+> published observations as a "water composition"; we therefore flag it and recommend
+> exclusion or explicit labelling in the next revision. The gap is real but does **not**
+> alter our qualitative conclusions.
 
 ### 4. Finite supply transforms the effect rather than merely moving it
 

@@ -1,0 +1,60 @@
+{
+ "n_scenarios": 192,
+ "impute_values": {
+  "TDS": 910.5,
+  "chloride": 206.86625,
+  "hardness": 159.2919929,
+  "alkalinity": 73.55,
+  "silica": 12.26
+ },
+ "by_sample": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "n_missing": 0,
+   "q_current_median": -0.0624353389330989,
+   "q_imputed_median": -0.0624353389330989,
+   "q_sign_flips": 0,
+   "q_sign_flips_nonzero": 0,
+   "share_q_pos_current": 0.0,
+   "share_q_pos_imputed": 0.0,
+   "M1_delta_median": 0.0,
+   "M1_delta_max_abs": 0.0
+  },
+  "LADWP AWPF (2012, RO product)": {
+   "n_missing": 0,
+   "q_current_median": 0.05761654187150023,
+   "q_imputed_median": 0.05761654187150023,
+   "q_sign_flips": 0,
+   "q_sign_flips_nonzero": 0,
+   "share_q_pos_current": 0.5,
+   "share_q_pos_imputed": 0.5,
+   "M1_delta_median": 0.0,
+   "M1_delta_max_abs": 0.0
+  },
+  "Figshare RW (2025, paired study)": {
+   "n_missing": 2,
+   "q_current_median": -0.3922229557770065,
+   "q_imputed_median": -0.3922229557770065,
+   "q_sign_flips": 0,
+   "q_sign_flips_nonzero": 0,
+   "share_q_pos_current": 0.0,
+   "share_q_pos_imputed": 0.0,
+   "M1_delta_median": 0.0,
+   "M1_delta_max_abs": 0.0
+  },
+  "AI-UWM model assumption": {
+   "n_missing": 3,
+   "q_current_median": -0.005745669138526279,
+   "q_imputed_median": -0.005745669138526279,
+   "q_sign_flips": 0,
+   "q_sign_flips_nonzero": 0,
+   "share_q_pos_current": 0.25,
+   "share_q_pos_imputed": 0.25,
+   "M1_delta_median": 0.0,
+   "M1_delta_max_abs": 2868.802396015788
+  }
+ },
+ "total_sign_flips_nonzero": 0,
+ "worst_sample": "IEUA RP-1 (2025, tertiary)",
+ "recommendation": "'AI-UWM model assumption' 只有 2 个物种(TDS/Cl)，其 hardness/alkalinity/silica 被按 0 处理 → 对应限值永不触发 → 该水样显得比实际更干净，使其 q>0 的比例被**高估**。建议主扫描**剔除该样本**或明确标注其物种不全，与 A19 化学审计的结论一致。",
+ "discipline_note": "填补只用有观测来源的水样中位数；未据此更改主口径数字。"
+}

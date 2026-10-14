@@ -1,0 +1,53 @@
+{
+ "n_rows": 16,
+ "A_equals_B": false,
+ "missing_by_sample": {
+  "IEUA RP-1 (2025, tertiary)": [
+   ""
+  ],
+  "LADWP AWPF (2012, RO product)": [
+   ""
+  ],
+  "Figshare RW (2025, paired study)": [
+   "alkalinity",
+   "silica"
+  ],
+  "AI-UWM model assumption": [
+   "alkalinity",
+   "hardness",
+   "silica"
+  ]
+ },
+ "impact": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "n_missing": 0,
+   "q_A_median": -0.1388686181713037,
+   "q_C_median": -0.1388686181713037,
+   "M1_delta_median": 0.0,
+   "q_sign_flips": 0
+  },
+  "LADWP AWPF (2012, RO product)": {
+   "n_missing": 0,
+   "q_A_median": 0.2674161098055191,
+   "q_C_median": 0.2674161098055191,
+   "M1_delta_median": 0.0,
+   "q_sign_flips": 0
+  },
+  "Figshare RW (2025, paired study)": {
+   "n_missing": 2,
+   "q_A_median": -0.8441310823711314,
+   "q_C_median": -0.8441310823711314,
+   "M1_delta_median": 0.0,
+   "q_sign_flips": 0
+  },
+  "AI-UWM model assumption": {
+   "n_missing": 3,
+   "q_A_median": 0.0014620882504562671,
+   "q_C_median": -0.03977949516950648,
+   "M1_delta_median": 1.8227413291604186,
+   "q_sign_flips": 0
+  }
+ },
+ "finding": "缺失物种浓度被按 0 处理，使对应限值永不触发，水样显得更'干净'。影响集中在 AI-UWM 假设值(缺 3 项) 与 Figshare RW(缺 2 项)。'AI-UWM model assumption' 只有 2 个物种，本不应与 3 个公开实测样本并列作为'水质组成'参与主扫描 —— 这与 A19 化学审计的结论一致。",
+ "discipline_note": "A/B 等价性作为自检；C 为敏感性，不改变主结果口径。"
+}

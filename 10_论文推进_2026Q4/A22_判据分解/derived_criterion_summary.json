@@ -1,0 +1,74 @@
+{
+ "identity_residual": 1.3322676295501878e-15,
+ "identity_note": "dS/M1 = ρ(κ-1) - q 是恒等式重排（残差 ~1e-15），不构成发现",
+ "q_sign_groups": [
+  {
+   "group": "q>0  回用降低补水",
+   "n": 349,
+   "n_beneficial": 349,
+   "n_harmful": 0,
+   "dS_median": -14324.572799868129
+  },
+  {
+   "group": "q≈0",
+   "n": 326,
+   "n_beneficial": 208,
+   "n_harmful": 38,
+   "dS_median": -5589.636611053356
+  },
+  {
+   "group": "q<0  回用升高补水",
+   "n": 477,
+   "n_beneficial": 192,
+   "n_harmful": 285,
+   "dS_median": 1906.59026469347
+  }
+ ],
+ "q_external_criterion": {
+  "statement": "q > 0 ⟺ c_reclaimed < c_potable（按限值相关指标）",
+  "potable_tds_mg_l": 180.0,
+  "potable_chloride_mg_l": 35.0,
+  "samples": [
+   {
+    "sample": "IEUA RP-1 (2025, tertiary)",
+    "TDS": 443.0,
+    "chloride": 100.0,
+    "predicted_cleaner_than_potable": false,
+    "observed_share_q_pos": 0.0,
+    "n": 288
+   },
+   {
+    "sample": "LADWP AWPF (2012, RO product)",
+    "TDS": 22.0,
+    "chloride": 3.6,
+    "predicted_cleaner_than_potable": true,
+    "observed_share_q_pos": 0.6423611111111112,
+    "n": 288
+   },
+   {
+    "sample": "Figshare RW (2025, paired study)",
+    "TDS": 1378.0,
+    "chloride": 313.7,
+    "predicted_cleaner_than_potable": false,
+    "observed_share_q_pos": 0.006944444444444444,
+    "n": 288
+   },
+   {
+    "sample": "AI-UWM model assumption",
+    "TDS": 650.0,
+    "chloride": 130.0,
+    "predicted_cleaner_than_potable": false,
+    "observed_share_q_pos": 0.5625,
+    "n": 288
+   }
+  ],
+  "agreement": "3/4"
+ },
+ "decision_condition": "ρ(κ-1) < q；κ=0 时退化为 -ρ < q",
+ "kappa_zero_subset": {
+  "n": 446,
+  "beneficial": 429,
+  "harmful": 17
+ },
+ "discipline_note": "全部量由现行 supply_state_regimes.csv 重算；外部判据只用公开水质浓度，不含任何模型内部量。"
+}

@@ -1,0 +1,6 @@
+﻿sample,n_species,all_cleaner_than_potable,any_dirtier,CoC0,CoC1,q_sign,n_missing
+"IEUA RP-1 (2025, tertiary)",5,False,True,2.5,1.953125,-,0
+"LADWP AWPF (2012, RO product)",5,True,False,2.5,5.0,+,0
+"Figshare RW (2025, paired study)",3,False,True,2.5,1.000001,-,2
+"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",3,False,True,2.5,1.000001,-,2
+AI-UWM model assumption,2,False,True,2.5,2.1611001964636545,-,3

@@ -33,6 +33,11 @@ def main() -> None:
     ho = json.loads((A15 / "holdout_summary.json").read_text(encoding="utf-8"))
     gr = json.loads((A15 / "grid_resolution_summary.json").read_text(encoding="utf-8"))
     e2 = json.loads((A18 / "finite_supply_summary.json").read_text(encoding="utf-8"))
+    A22 = ROOT / "A22_判据分解"
+    dc22 = json.loads((A22 / "derived_criterion_summary.json").read_text(encoding="utf-8"))
+    qp22 = json.loads((A22 / "q_predictors_summary.json").read_text(encoding="utf-8"))
+    mq22 = json.loads((A22 / "missing_quality_fullscan_summary.json").read_text(encoding="utf-8"))
+    qt23 = json.loads((A22 / "q_theory_summary.json").read_text(encoding="utf-8"))
     A21 = ROOT / "A21_动态状态"
     ds = json.loads((A21 / "dynamic_state_summary.json").read_text(encoding="utf-8"))
     dc = pd.read_csv(A21 / "dynamic_criterion_grid.csv", encoding="utf-8-sig")
@@ -69,6 +74,14 @@ def main() -> None:
         ("网格非单调曲线数", gr["nonmonotone_at_193"]["n_nonmonotone"], 11, 0),
         ("E2 三分账: abstraction==delivered 行数", 0, 0, 0),
         ("A21 动态状态情景数", len(dc), 20, 0),
+        ("A22 ρ(κ-1)-q 残差 (恒等式)", dc22["identity_residual"], 1.33e-15, 1e-14),
+        ("A22 q>0 组有益数 = n (零例外)",
+         dc22["q_sign_groups"][0]["n_beneficial"], dc22["q_sign_groups"][0]["n"], 0),
+        ("A22 最佳单变量准确率 0.768",
+         qp22["best_single_predictor"]["acc"], 0.768, 0.005),
+        ("A22 缺失填补符号翻转 = 0", mq22["total_sign_flips_nonzero"], 0, 0),
+        ("A23 q 闭式最大差异", qt23["closed_form_max_diff"], 5.6e-17, 1e-15),
+        ("A23 充分条件反例数 = 0", qt23["sufficient_condition_violations"], 0, 0),
         ("A21 水量闭合 max|残差| (log10)", float(np.log10(max(dc["water_closure_max_abs"].max(), 1e-20))), -14.0, 1.0),
     ]
     for name, got, want, tol in checks:
@@ -86,7 +99,7 @@ def main() -> None:
         ("E2 四命题零否证 (两域)",
          all(v["H_holds"] for v in e2["proposition_H"].values())),
         ("E2 三分账互不相等", bool(not e2["three_account_divergence"]["abstraction_eq_delivered_ever"])),
-        ("A17 三量判据吻合率 = 1.000",
+        ("A17 判据为恒等式重排 (吻合率 1.000)",
          bool((((ss["x_ai_B1_ml"] + (ss["M0_ml"] - ss["M1_ml"])) > ss["displaced_ml"])
                == (ss["dS_pot_ml"] < -1e-6)).mean() == 1.0)),
         ("A17 纯挤占仍有负值 (114 例, 组成驱动)",
@@ -96,6 +109,8 @@ def main() -> None:
         ("A21 两路径 CoC 定性分歧 (volume-only 塌陷)",
          bool(dc[(~dc.quality_state) & (dc.phi >= 0.6)]["coc_mean"].max()
               < dc[(~dc.quality_state) & (dc.phi == 0.0)]["coc_mean"].max())),
+        ("A23 q>0 <=> CoC1>CoC0 (闭式)",
+         bool(qt23["closed_form_max_diff"] < 1e-15)),
         ("A21 R10a 维持高 CoC (>7.5)",
          bool(dc[(dc.quality_state) & (dc.phi >= 0.6)]["coc_mean"].min() > 7.5)),
         ("组成可翻转符号 (存在正与负)",
