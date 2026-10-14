@@ -1,0 +1,60 @@
+================================================================================
+A21d  三量判据在动态路径 (R10a) 下是否仍成立
+================================================================================
+  ha qs=False phi=0.0 | M=      27403 pot=     27403 rec=         0 coc= 5.500
+  ha qs=False phi=0.2 | M=      32030 pot=     25624 rec=      6406 coc= 3.235
+  ha qs=False phi=0.4 | M=      38747 pot=     23248 rec=     15499 coc= 2.292
+  ha qs=False phi=0.6 | M=      47735 pot=     19094 rec=     28641 coc= 1.824
+  ha qs=False phi=0.8 | M=      47808 pot=      9562 rec=     38246 coc= 1.822
+  ha qs=True  phi=0.0 | M=      27403 pot=     27403 rec=         0 coc= 5.500
+  ha qs=True  phi=0.2 | M=      26889 pot=     21511 rec=      5378 coc= 6.075
+  ha qs=True  phi=0.4 | M=      25872 pot=     15523 rec=     10349 coc= 7.801
+  ha qs=True  phi=0.6 | M=      25804 pot=     10322 rec=     15483 coc= 7.986
+  ha qs=True  phi=0.8 | M=      25832 pot=      5166 rec=     20666 coc= 7.984
+  co qs=False phi=0.0 | M=      27079 pot=     27079 rec=         0 coc= 5.500
+  co qs=False phi=0.2 | M=      31652 pot=     25321 rec=      6330 coc= 3.235
+  co qs=False phi=0.4 | M=      38290 pot=     22974 rec=     15316 coc= 2.292
+  co qs=False phi=0.6 | M=      45599 pot=     18239 rec=     27359 coc= 1.880
+  co qs=False phi=0.8 | M=      45625 pot=      9125 rec=     36500 coc= 1.880
+  co qs=True  phi=0.0 | M=      27079 pot=     27079 rec=         0 coc= 5.500
+  co qs=True  phi=0.2 | M=      26574 pot=     21259 rec=      5315 coc= 6.073
+  co qs=True  phi=0.4 | M=      25569 pot=     15341 rec=     10227 coc= 7.795
+  co qs=True  phi=0.6 | M=      25500 pot=     10200 rec=     15300 coc= 7.986
+  co qs=True  phi=0.8 | M=      25528 pot=      5106 rec=     20422 coc= 7.984
+
+完成 20 情景
+
+[闭合]
+  水量闭合 max|残差| = 9.770e-15 ML
+
+[判据] 对每个 (域, 路径), 用 phi=0 作 B2 基准计算三量
+
+  路径对比（同域同 φ 的补水）:
+quality_state    False    True 
+domain phi                     
+co     0.0     27079.0  27079.0
+       0.2     31652.0  26574.0
+       0.4     38290.0  25569.0
+       0.6     45599.0  25500.0
+       0.8     45625.0  25528.0
+ha     0.0     27403.0  27403.0
+       0.2     32030.0  26889.0
+       0.4     38747.0  25872.0
+       0.6     47735.0  25804.0
+       0.8     47808.0  25832.0
+
+  路径对比（同域同 φ 的 CoC 均值）:
+quality_state  False  True 
+domain phi                 
+co     0.0     5.500  5.500
+       0.2     3.235  6.073
+       0.4     2.292  7.795
+       0.6     1.880  7.986
+       0.8     1.880  7.984
+ha     0.0     5.500  5.500
+       0.2     3.235  6.075
+       0.4     2.292  7.801
+       0.6     1.824  7.986
+       0.8     1.822  7.984
+
+[write] dynamic_criterion_grid.csv / _derived.csv / _summary.json

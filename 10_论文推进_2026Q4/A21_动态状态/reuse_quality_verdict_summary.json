@@ -1,0 +1,80 @@
+{
+ "expected_coc_if_consistent": 1.7741935483870968,
+ "hypothesis_confirmed": false,
+ "table": [
+  {
+   "domain": "ha",
+   "quality_state": false,
+   "set_reuse_quality": false,
+   "makeup_ml": 47734.80202273672,
+   "blowdown_ml": 27655.1907856416,
+   "coc_mean": 1.823640817874261,
+   "coc_min": 1.7741935483870968
+  },
+  {
+   "domain": "ha",
+   "quality_state": false,
+   "set_reuse_quality": true,
+   "makeup_ml": 47734.80202273672,
+   "blowdown_ml": 27655.1907856416,
+   "coc_mean": 1.823640817874261,
+   "coc_min": 1.7741935483870968
+  },
+  {
+   "domain": "ha",
+   "quality_state": true,
+   "set_reuse_quality": false,
+   "makeup_ml": 25804.26566273244,
+   "blowdown_ml": 3293.3429903345195,
+   "coc_mean": 7.986379159460488,
+   "coc_min": 1.7741935483870968
+  },
+  {
+   "domain": "ha",
+   "quality_state": true,
+   "set_reuse_quality": true,
+   "makeup_ml": 25804.26566273244,
+   "blowdown_ml": 3293.3429903345195,
+   "coc_mean": 7.986379159460488,
+   "coc_min": 1.7741935483870968
+  },
+  {
+   "domain": "co",
+   "quality_state": false,
+   "set_reuse_quality": false,
+   "makeup_ml": 45598.536932982875,
+   "blowdown_ml": 25581.460556861493,
+   "coc_mean": 1.8800742958895627,
+   "coc_min": 1.7741935483870968
+  },
+  {
+   "domain": "co",
+   "quality_state": false,
+   "set_reuse_quality": true,
+   "makeup_ml": 45598.536932982875,
+   "blowdown_ml": 25581.460556861493,
+   "coc_mean": 1.8800742958895627,
+   "coc_min": 1.7741935483870968
+  },
+  {
+   "domain": "co",
+   "quality_state": true,
+   "set_reuse_quality": false,
+   "makeup_ml": 25500.13159728126,
+   "blowdown_ml": 3254.8615316904134,
+   "coc_mean": 7.986355732710169,
+   "coc_min": 1.7741935483870968
+  },
+  {
+   "domain": "co",
+   "quality_state": true,
+   "set_reuse_quality": true,
+   "makeup_ml": 25500.13159728126,
+   "blowdown_ml": 3254.8615316904134,
+   "coc_mean": 7.986355732710169,
+   "coc_min": 1.7741935483870968
+  }
+ ],
+ "reading": "若 hypothesis_confirmed=True，则 R10a 的 CoC≈8 是 **CENTRAL_REUSE 未配置质量**造成的（溶质账本为空 → 浓度按 0 计），而非更真实的物理；两条路径在补齐质量输入后应一致，既有 volume-only 结论可用，但论文须声明'再生水质量必须显式配置'。",
+ "discipline_note": "不改引擎；只改输入配置，配对比较。"
+}

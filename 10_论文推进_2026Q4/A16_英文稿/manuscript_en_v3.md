@@ -23,13 +23,13 @@ reclaimed pool is already committed to incumbent users, a data centre's reclaime
 fully displaced: the city's potable withdrawal does not fall, and the old facility-to-city
 identity is recovered exactly. When unused reclaimed water remains, the draw is *not*
 displaced and urban potable withdrawal genuinely falls — by up to 27,354 ML per period in
-our tests. Which regime applies is governed by the **displacement ratio** (the share of the
-facility's reclaimed draw taken out of incumbent supply), itself set by a measurable
-quantity — committed reclaimed demand relative to deliverable supply (thresholds 2.384 for
-D-HA and 2.567 for D-CO) — **not** by the cooling technology. Imposing a finite
-potable-supply cap shows the effect is not merely redistributed but transformed: as the cap
-binds, the apparent "extra abstraction" becomes a **necessary-service gap** (up to
-62,080 ML) and the data centre is itself curtailed. Finally,
+our tests. Whether that happens is decided by a three-term criterion — the facility's
+reclaimed draw plus its own water-quality penalty versus the reclaimed volume it displaces —
+which reproduces the observed sign in **1,152 of 1,152 scenarios (100%)** and is not
+reducible to any single ratio. Imposing a finite potable-supply cap shows the effect is not
+merely redistributed but transformed: as the cap binds, the apparent "extra abstraction"
+becomes a **necessary-service gap** (up to 62,080 ML) and the data centre is itself curtailed.
+Finally,
 setting the water-quality constraint to non-binding makes the outcome exactly zero in the
 committed regime — establishing that "reclaimed cooling does not save water" is a property
 of *quality-limited, fully-committed* systems rather than of reuse in general.
@@ -110,34 +110,52 @@ Branch-degradation residuals: **1.1 × 10⁻¹¹** (A) and **1.5 × 10⁻¹¹** 
 > The earlier facility-to-city identity is therefore **not wrong** — it is the
 > fully-committed branch. That is a stronger statement than refuting it.
 
-### 3. The sign is set by the *degree* of displacement
+### 3. What decides the sign: a three-term criterion, not the displacement ratio alone
 
-Rather than a binary state label, the natural predictor is the **displacement ratio**
-$C/x_{\rm AI}$ — the share of the facility's reclaimed draw that actually comes out of
-incumbent supply (1 = pure displacement, 0 = drawn entirely from unused surplus). Over the
-main scan (1,152 scenarios), $dS_{\rm pot}$'s sign tracks it monotonically:
+$dS_{\rm pot}<0$ **iff**
 
-| displacement ratio | n | $dS_{\rm pot}<0$ | range (ML) |
+$$\boxed{\;x_{\rm AI} + (M_0-M_1) > \bigl(r_{\rm inc}^{B_2}-r_{\rm inc}^{B_1}\bigr)\;}$$
+
+reproducing the observed sign in **1,152 of 1,152 cases (100%)**. The criterion involves three
+quantities — the facility's reclaimed draw, its own water-quality penalty, and the
+displacement — so no single ratio suffices:
+
+| displacement ratio $C/x_{\rm AI}$ | n | $dS_{\rm pot}<0$ | range (ML) |
 |---|---:|---:|---|
-| **0.00** (pure surplus) | 424 | **424 (100%)** | −27,354 … −5,125 |
-| 0.01 … 0.25 | 88 | 88 (100%) | −23,575 … −8,669 |
-| 0.25 … 0.50 | 68 | 68 (100%) | −14,195 … −2,329 |
-| 0.50 … 0.75 | 16 | 16 (100%) | −4,235 … −1,140 |
-| 0.75 … 1.00 | 268 | 16 (6%) | −2,828 … +4,024 |
+| 0.00 | 447 | 430 (96%) | −98,158 … +33,217 |
+| 0.01–0.25 | 122 | 97 (80%) | −95,375 … +485,436 |
+| 0.25–0.50 | 128 | 66 (52%) | −87,758 … +598,752 |
+| 0.50–0.75 | 66 | 20 (30%) | −78,507 … +343,916 |
+| 0.75–1.00 | 351 | 136 (39%) | −66,322 … +255,180 |
 
-Both extremes are **pure**: at ratio 0 there is **not one** positive case, and at ratio 1
-there is **not one** negative case. In between the sign is governed by
-$x_{\rm AI}+(M_0-M_1) > C_{\rm disp}$, which reproduces the observed sign with **100%**
-agreement.
+> **A correction we make against our own earlier draft.** An intermediate version of this
+> manuscript claimed the two extremes were "pure" (ratio 0 ⇒ no positive case; ratio 1 ⇒ no
+> negative case). That was a **pre-fix artefact**: with composition held frozen, displacement
+> appeared to be the sole determinant. With composition live, **114 purely-displaced cases are
+> negative** — a sufficiently severe quality penalty outweighs a *full* displacement — so the
+> three-term criterion, not the ratio, is the correct statement.
 
-The ratio itself is set by an external, measurable quantity — the ratio of committed
-reclaimed demand to deliverable supply, `elig/P0` = **2.384** (D-HA) and **2.567** (D-CO).
-In the surplus branch incumbents are satisfied in **100%** of cases, `C = 0.0` exactly, and a
-mean **33,671 ML** of reclaimed water sits unused.
+Composition modulates the sign strongly:
+
+| composition | $dS_{\rm pot}<0$ | $dS_{\rm pot}>0$ |
+|---|---:|---:|
+| LADWP AWPF (RO, TDS 22) | 237 | 31 |
+| AI-UWM assumption (TDS 650) | 261 | 7 |
+| IEUA RP-1 (tertiary, TDS 443) | 153 | 115 |
+| **Figshare RW (TDS 1,378)** | **98** | **170** |
+
+With the quality constraint fully relaxed (`limit_scale` = 10⁶) the sign is one-sided:
+**208 negative, 0 positive**.
+
+The displacement itself is set by an external, measurable quantity — committed reclaimed
+demand over deliverable supply, `elig/P0` = **2.384** (D-HA) and **2.567** (D-CO). In the
+zero-displacement branch incumbents are satisfied in **100%** of cases, `C = 0.0` exactly, and
+a mean **33,671 ML** of reclaimed water sits unused.
 
 > **Consequence for practice.** A city cannot infer its outcome from the cooling technology
-> or from the reuse fraction $\varphi$; it must first measure how much reclaimed water is
-> already committed, and whether its usable surplus is genuinely unclaimed.
+> or the reuse fraction $\varphi$ alone. It must measure three things: how much reclaimed
+> water is already committed, whether usable surplus is genuinely unclaimed, **and** the
+> water-quality penalty its own source composition imposes.
 
 ### 4. Finite supply transforms the effect rather than merely moving it
 
@@ -256,14 +274,29 @@ Shen et al. (2026) note reuse benefits depend on demand conditions; we make that
 
 ### Limitations
 
-1. Supply caps are parameterised, not observed for a named city.
-2. Two homologous synthetic domains; no independent city calibration.
-3. Allocation rules remain the engine's (reserved-pool pro-rata); priority queues and
+1. **The quality penalty is path-dependent.** Our primary results use the engine's
+   volume-only quality solver, in which the loop concentration is the *instantaneous*
+   blend of makeup sources, so blending reclaimed water lowers the admissible CoC. The
+   engine also ships an opt-in dynamic solute-state path (R10a) that maintains a loop
+   solute stock; on identical inputs it holds CoC near the design value (7.99 vs 1.82 at
+   $\varphi=0.6$) and reduces makeup by **46%**. In that path the quality penalty
+   $(M_0-M_1)$ nearly vanishes. The **direction** of our central conclusion survives in both
+   paths, but the **mechanism attribution** ("the penalty arises from blending raising the
+   CoC constraint") holds only for the volume-only path. The volume-only path is the
+   conservative bound, and the engine's own R10 gate marks the dynamic path
+   `NOT_READY_FOR_E3`; we therefore report it as a **structural sensitivity**, not as the
+   primary convention. (`A21_动态状态/A21_动态状态报告.md`)
+2. **Cooling storage itself consumes water.** Introducing storage raises makeup by
+   **+3.45%** (D-HA) and **+7.02%** (D-CO), independently of capacity (50 / 200 / 800 ML give
+   identical results). Storage is not free.
+3. Supply caps are parameterised, not observed for a named city.
+4. Two homologous synthetic domains; no independent city calibration.
+5. Allocation rules remain the engine's (reserved-pool pro-rata); priority queues and
    interruptible contracts are not represented.
-4. Quality envelope CoC ∈ [2.1, 4.9] from mixed observed/literature/an extrapolated tier;
+6. Quality envelope CoC ∈ [2.1, 4.9] from mixed observed/literature/an extrapolated tier;
    temperature is missing for all five water sources, which alone can shift CoC by −30%.
-5. Costs are declared values; no cost claim is made.
-6. Engine-side G2/G3 evidence gates remain `NOT_READY` (SI §S8).
+7. Costs are declared values; no cost claim is made.
+8. Engine-side G2/G3 evidence gates remain `NOT_READY` (SI §S8).
 
 ---
 

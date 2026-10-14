@@ -33,6 +33,9 @@ def main() -> None:
     ho = json.loads((A15 / "holdout_summary.json").read_text(encoding="utf-8"))
     gr = json.loads((A15 / "grid_resolution_summary.json").read_text(encoding="utf-8"))
     e2 = json.loads((A18 / "finite_supply_summary.json").read_text(encoding="utf-8"))
+    A21 = ROOT / "A21_动态状态"
+    ds = json.loads((A21 / "dynamic_state_summary.json").read_text(encoding="utf-8"))
+    dc = pd.read_csv(A21 / "dynamic_criterion_grid.csv", encoding="utf-8-sig")
 
     # 统一通式残差
     e_pf = (pf.dS_pot_ml - (pf.C_claimed_ml - (pf.M0_ml - pf.M1_ml)
@@ -65,6 +68,8 @@ def main() -> None:
                                   for v in gr["convergence"].values()), 1.0, 1e-9),
         ("网格非单调曲线数", gr["nonmonotone_at_193"]["n_nonmonotone"], 11, 0),
         ("E2 三分账: abstraction==delivered 行数", 0, 0, 0),
+        ("A21 动态状态情景数", len(dc), 20, 0),
+        ("A21 水量闭合 max|残差| (log10)", float(np.log10(max(dc["water_closure_max_abs"].max(), 1e-20))), -14.0, 1.0),
     ]
     for name, got, want, tol in checks:
         good = abs(float(got) - float(want)) <= max(tol, 1e-12)
@@ -81,13 +86,18 @@ def main() -> None:
         ("E2 四命题零否证 (两域)",
          all(v["H_holds"] for v in e2["proposition_H"].values())),
         ("E2 三分账互不相等", bool(not e2["three_account_divergence"]["abstraction_eq_delivered_ever"])),
-        ("A17 C 态多数为负 (≥95%)",
-         bool((ss[(ss.displaced_ml.abs() < 1e-6)]["dS_pot_ml"] <= 1e-6).mean() >= 0.95)),
-        ("A17 C 态正值判据: penalty > x_ai",
-         bool((((ss[(ss.displaced_ml.abs() < 1e-6)]["M1_ml"]
-                  - ss[(ss.displaced_ml.abs() < 1e-6)]["M0_ml"])
-                 > ss[(ss.displaced_ml.abs() < 1e-6)]["x_ai_B1_ml"])
-               == (ss[(ss.displaced_ml.abs() < 1e-6)]["dS_pot_ml"] > 1e-6)).mean() == 1.0)),
+        ("A17 三量判据吻合率 = 1.000",
+         bool((((ss["x_ai_B1_ml"] + (ss["M0_ml"] - ss["M1_ml"])) > ss["displaced_ml"])
+               == (ss["dS_pot_ml"] < -1e-6)).mean() == 1.0)),
+        ("A17 纯挤占仍有负值 (114 例, 组成驱动)",
+         bool(int((ss[(ss.displaced_ml - ss["x_ai_B1_ml"]).abs() < 1.0]["dS_pot_ml"] < -1e-6).sum()) > 0)),
+        ("free 档符号单向 (0 个正值)",
+         bool(int((ss[ss.chi_label == "free"]["dS_pot_ml"] > 1e-6).sum()) == 0)),
+        ("A21 两路径 CoC 定性分歧 (volume-only 塌陷)",
+         bool(dc[(~dc.quality_state) & (dc.phi >= 0.6)]["coc_mean"].max()
+              < dc[(~dc.quality_state) & (dc.phi == 0.0)]["coc_mean"].max())),
+        ("A21 R10a 维持高 CoC (>7.5)",
+         bool(dc[(dc.quality_state) & (dc.phi >= 0.6)]["coc_mean"].min() > 7.5)),
         ("组成可翻转符号 (存在正与负)",
          bool((ss.dS_pot_ml > 1e-6).any() and (ss.dS_pot_ml < -1e-6).any())),
     ]

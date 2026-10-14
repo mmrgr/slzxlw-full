@@ -61,21 +61,26 @@ $$dS_{\rm pot} = C - F
   the general form is required.
 - If there is **no** displacement ($C=0$): $dS=-(M_0-M_1)-x_{\rm AI}<0$.
 
-**Sign criterion** (100% agreement): $dS_{\rm pot}<0 \iff x_{\rm AI}+(M_0-M_1) > C_{\rm disp}$.
+**Sign criterion** (100% agreement, 1,152/1,152): $dS_{\rm pot}<0 \iff x_{\rm AI}+(M_0-M_1) > C_{\rm disp}$.
 
-### S3.1 Displacement ratio governs the sign
+### S3.1 No single ratio predicts the sign
 
 | $C/x_{\rm AI}$ | n | $dS<0$ | range (ML) |
 |---|---:|---:|---|
-| 0.00 | 446 | **429 (96.2%)** | −98,158 … +33,217 |
-| 0.01–0.25 | 88 | 88 | −23,575 … −8,669 |
-| 0.25–0.50 | 68 | 68 | −14,195 … −2,329 |
-| 0.50–0.75 | 16 | 16 | −4,235 … −1,140 |
-| 0.75–1.00 | 268 | 16 | −2,828 … +4,024 |
+| 0.00 | 447 | 430 (96%) | −98,158 … +33,217 |
+| 0.01–0.25 | 122 | 97 (80%) | −95,375 … +485,436 |
+| 0.25–0.50 | 128 | 66 (52%) | −87,758 … +598,752 |
+| 0.50–0.75 | 66 | 20 (30%) | −78,507 … +343,916 |
+| 0.75–1.00 | 351 | 136 (39%) | −66,322 … +255,180 |
 
-Ratios 0.01–0.75 are uniformly negative. At the two extremes the identity is exact:
-at ratio 1 there is **no** negative case; at ratio 0 there are 17 positive cases, all
-explained by the criterion below.
+An intermediate draft claimed the extremes were "pure" (ratio 0 ⇒ no positive; ratio 1 ⇒ no
+negative). That was a **pre-fix artefact** of frozen composition; with composition live
+**114 purely-displaced cases are negative**, because a severe quality penalty can outweigh a
+complete displacement. The three-term criterion above supersedes the ratio heuristic.
+
+**Composition modulation**: LADWP 237 negative / 31 positive; AI-UWM 261/7; IEUA 153/115;
+Figshare RW 98/170. With quality fully relaxed (`limit_scale` = 10⁶): **208 negative, 0
+positive**.
 
 ### S3.2 The 17 exceptions at zero displacement (physical, not noise)
 
@@ -95,7 +100,38 @@ occurring only for the high-salinity composition under severe quality tiers.
 
 ---
 
-## S4. Water quality and composition
+## S4. Water quality, composition, and **solver path**
+
+### S4.0 The primary convention and its alternative (read first)
+
+Two quality solvers exist in the engine and they disagree qualitatively. This is the single
+most important caveat on the "quality penalty" mechanism.
+
+| | **volume-only** (primary) | **R10a dynamic solute state** (opt-in) |
+|---|---|---|
+| loop concentration | instantaneous blend of makeup sources | maintained loop solute stock |
+| CoC at $\varphi=0$ | 5.500 | 5.500 |
+| CoC at $\varphi=0.4$ | 2.292 | **7.801** |
+| CoC at $\varphi=0.6$ | **1.824** | **7.986** |
+| makeup at $\varphi=0.6$ | 47 735 ML | **25 804 ML** (−46%) |
+| behaviour as blending rises | CoC **collapses** | CoC **holds** near design |
+
+Water closure on both paths: **9.77 × 10⁻¹⁵ ML**. Both satisfy mass balance
+($M/B=\mathrm{CoC}$, 16/16).
+
+**Consequence.** The quality penalty $(M_0-M_1)$ that drives our mechanism is large on the
+volume-only path and ≈0 on the dynamic path. Our **central direction** ("reclaimed cooling
+does not automatically save city water") holds on both, but the **mechanism attribution**
+holds only for volume-only. We adopt volume-only as the primary convention because it is the
+conservative bound **and** because the engine's own R10 gate marks the dynamic path
+`NOT_READY_FOR_E3`. The dynamic path is reported as a structural sensitivity.
+(`A21_动态状态/A21_动态状态报告.md`)
+
+**Storage.** Introducing cooling storage raises makeup by **+3.45%** (D-HA) and **+7.02%**
+(D-CO), identically for 50, 200 and 800 ML capacity — a discrete "storage present" effect,
+not a capacity gradient.
+
+### S4.1 Solute-state sensitivity
 
 **Switch.** With `limit_scale` = 10⁶ (realised CoC = design 5.000):
 $dS_{\rm pot}=$ **0.000000 ML exactly** in the committed branch (80/80); ≤ 0 in the surplus
@@ -154,8 +190,8 @@ Four outcomes, all measured: (1) old conclusion holds when supply is adequate;
 > boundary-position criterion the boundary moves at most one step in **100%** of cases.
 > However, after the cache fix the composition dimension is live and **non-monotone feasible
 > regions appear in 11/39 curves (28%)** — i.e. there exist parameter intervals where the
-> city-level outcome fails, recovers, and fails again. This was previously invisible (0/39)
-> precisely because composition carried no variation. Non-monotone regions are therefore a
+> city-level outcome fails, recovers, and fails again. Before the cache fix these were
+> invisible (0/39) because composition carried no variation; they are therefore a
 > **genuine structural feature**, and coarse-grid scans can miss them; we report them rather
 > than rely on first-failure identification.
 
@@ -209,16 +245,26 @@ Engine-side register applies a stricter bar than the paper side. Disclosed:
 
 ---
 
-## S9. Defects found and fixed in this round
+## S9. Defects, findings and corrections in this round
 
-Both are documented in `19_缺陷报告_缓存与桥接_2026-10-15.md`.
+All are documented in `19_缺陷报告_缓存与桥接_2026-10-15.md` and
+`A21_动态状态/A21_动态状态报告.md`.
 
 1. **Evaluator cache key omitted water composition** → with a shared cache, the first
    composition's results were reused for all others, and the composition axis carried no
    variation. After the fix, composition spans both signs of the outcome.
    *Gate added*: any factor claimed to be swept must be demonstrated to produce variation.
-2. **Bridging harness used makeup where evaporation was required** → 1.60× inflation.
+2. **Bridging harness used makeup where evaporation was required** → 1.60× inflation;
+   corrected, $M_0$ agrees exactly in 24/24 pairs.
    *Gate added*: cross-model comparisons must assert equality of shared quantities.
+3. **A displacement-ratio heuristic was over-claimed in an intermediate draft.** We had
+   claimed the ratio's extremes were "pure". With composition live, **114 purely-displaced
+   cases are negative**; the three-term criterion, not the ratio, is correct.
+4. **The quality penalty is solver-path dependent** (§S4.0). Both paths satisfy closure, but
+   they diverge qualitatively; both directions support our central claim, while the
+   *mechanism attribution* holds only for the volume-only path.
+5. **No new mechanism beyond conservation was found** in the dynamic-state experiment. We
+   report this rather than constructing a narrative.
 
 ---
 

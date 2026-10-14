@@ -1,0 +1,15 @@
+{
+ "tds_limit": 1100.0,
+ "reclaimed_fraction": 0.6,
+ "c_reclaimed_mg_l": 900.0,
+ "c_potable_mg_l": 200.0,
+ "design_coc": 8.0,
+ "makeup_blend_mg_l": 620.0,
+ "coc_volume_only_analytic": 1.7741935483870968,
+ "coc_volume_only_measured": 1.77,
+ "coc_r10a_measured": 7.98,
+ "ratio": 4.497818181818182,
+ "finding": "volume-only 用瞬时混合浓度作循环水浓度 → CoC_lim = L/c_mix（解析可证）；R10a 允许储罐滞留与内部回收，有效补水被稀释 → CoC 接近设计值。两者都满足水量闭合，**代表不同物理情形**，不是一对一错。",
+ "paper_implication": "既有结论建立在 volume-only（无内部回收/无储罐滞留）的保守情形，须显式声明；R10a 是引擎 opt-in 诊断接口且 R10 标注 NOT_READY_FOR_E3，不宜作主口径；两路径 4.5× 差异应作为**冷却水管理策略敏感性**报告。",
+ "discipline_note": "解析 + 两次独立实测对照; 不修改引擎。"
+}

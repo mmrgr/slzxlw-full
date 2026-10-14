@@ -1,0 +1,21 @@
+==============================================================================
+A21c  判决性检验: R10a 的 CoC 是否由缺失质量输入造成
+==============================================================================
+
+预期（若两路径物理一致）: CoC = 1100.0/620 = 1.774
+  ha qs=False set_reuse_quality=False | makeup=     47735 coc_mean= 1.824 coc_min=1.774
+  ha qs=False set_reuse_quality=True  | makeup=     47735 coc_mean= 1.824 coc_min=1.774
+  ha qs=True  set_reuse_quality=False | makeup=     25804 coc_mean= 7.986 coc_min=1.774
+  ha qs=True  set_reuse_quality=True  | makeup=     25804 coc_mean= 7.986 coc_min=1.774
+  co qs=False set_reuse_quality=False | makeup=     45599 coc_mean= 1.880 coc_min=1.774
+  co qs=False set_reuse_quality=True  | makeup=     45599 coc_mean= 1.880 coc_min=1.774
+  co qs=True  set_reuse_quality=False | makeup=     25500 coc_mean= 7.986 coc_min=1.774
+  co qs=True  set_reuse_quality=True  | makeup=     25500 coc_mean= 7.986 coc_min=1.774
+
+[判定]
+  ha: volume-only coc=1.824 | R10a(无质量)=7.986 | R10a(配质量)=7.986
+  co: volume-only coc=1.880 | R10a(无质量)=7.986 | R10a(配质量)=7.986
+
+  假设（配质量后 R10a 回落到解析值 1.774）= False
+
+[write] reuse_quality_verdict.csv / .json

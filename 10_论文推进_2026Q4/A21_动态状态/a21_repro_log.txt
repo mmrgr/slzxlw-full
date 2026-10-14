@@ -1,0 +1,54 @@
+================================================================================
+A21 / WP1.3  动态储冷与溶质状态实验
+================================================================================
+  ha storage=   0.0 ML quality_state=False | makeup=       47735 coc_mean=1.824
+  ha storage=   0.0 ML quality_state=True  | makeup=       25804 coc_mean=7.986
+  ha storage=  50.0 ML quality_state=False | makeup=       49382 coc_mean=1.774
+  ha storage=  50.0 ML quality_state=True  | makeup=       25806 coc_mean=7.983
+  ha storage= 200.0 ML quality_state=False | makeup=       49382 coc_mean=1.774
+  ha storage= 200.0 ML quality_state=True  | makeup=       25809 coc_mean=7.976
+  ha storage= 800.0 ML quality_state=False | makeup=       49382 coc_mean=1.774
+  ha storage= 800.0 ML quality_state=True  | makeup=       25812 coc_mean=7.967
+  co storage=   0.0 ML quality_state=False | makeup=       45599 coc_mean=1.880
+  co storage=   0.0 ML quality_state=True  | makeup=       25500 coc_mean=7.986
+  co storage=  50.0 ML quality_state=False | makeup=       48799 coc_mean=1.774
+  co storage=  50.0 ML quality_state=True  | makeup=       25502 coc_mean=7.983
+  co storage= 200.0 ML quality_state=False | makeup=       48799 coc_mean=1.774
+  co storage= 200.0 ML quality_state=True  | makeup=       25505 coc_mean=7.976
+  co storage= 800.0 ML quality_state=False | makeup=       48799 coc_mean=1.774
+  co storage= 800.0 ML quality_state=True  | makeup=       25508 coc_mean=7.967
+
+完成 16 情景
+
+[Q1] 物理闭合 (必须有界且小)
+  water_balance_residual_ml_max_abs: max = 1.066e-13  (非零行数 = 0)
+
+[Q2] 储冷容量对补水的影响 (与 0 储冷配对)
+  co qs=False storage=   0.0: makeup=       45599  Δ vs 0=        +0 ML ( +0.00%)
+  co qs=False storage=  50.0: makeup=       48799  Δ vs 0=     +3201 ML ( +7.02%)
+  co qs=False storage= 200.0: makeup=       48799  Δ vs 0=     +3201 ML ( +7.02%)
+  co qs=False storage= 800.0: makeup=       48799  Δ vs 0=     +3201 ML ( +7.02%)
+  co qs=True storage=   0.0: makeup=       25500  Δ vs 0=        +0 ML ( +0.00%)
+  co qs=True storage=  50.0: makeup=       25502  Δ vs 0=        +2 ML ( +0.01%)
+  co qs=True storage= 200.0: makeup=       25505  Δ vs 0=        +5 ML ( +0.02%)
+  co qs=True storage= 800.0: makeup=       25508  Δ vs 0=        +8 ML ( +0.03%)
+  ha qs=False storage=   0.0: makeup=       47735  Δ vs 0=        +0 ML ( +0.00%)
+  ha qs=False storage=  50.0: makeup=       49382  Δ vs 0=     +1647 ML ( +3.45%)
+  ha qs=False storage= 200.0: makeup=       49382  Δ vs 0=     +1647 ML ( +3.45%)
+  ha qs=False storage= 800.0: makeup=       49382  Δ vs 0=     +1647 ML ( +3.45%)
+  ha qs=True storage=   0.0: makeup=       25804  Δ vs 0=        +0 ML ( +0.00%)
+  ha qs=True storage=  50.0: makeup=       25806  Δ vs 0=        +2 ML ( +0.01%)
+  ha qs=True storage= 200.0: makeup=       25809  Δ vs 0=        +5 ML ( +0.02%)
+  ha qs=True storage= 800.0: makeup=       25812  Δ vs 0=        +8 ML ( +0.03%)
+
+[Q3] 水质状态 (R10a) 是否改变结果
+  ha storage=   0.0: qs_off=       47735 qs_on=       25804 Δ=    -21931 ML
+  ha storage=  50.0: qs_off=       49382 qs_on=       25806 Δ=    -23576 ML
+  ha storage= 200.0: qs_off=       49382 qs_on=       25809 Δ=    -23572 ML
+  ha storage= 800.0: qs_off=       49382 qs_on=       25812 Δ=    -23569 ML
+  co storage=   0.0: qs_off=       45599 qs_on=       25500 Δ=    -20098 ML
+  co storage=  50.0: qs_off=       48799 qs_on=       25502 Δ=    -23297 ML
+  co storage= 200.0: qs_off=       48799 qs_on=       25505 Δ=    -23294 ML
+  co storage= 800.0: qs_off=       48799 qs_on=       25508 Δ=    -23291 ML
+
+完成 39.9s
