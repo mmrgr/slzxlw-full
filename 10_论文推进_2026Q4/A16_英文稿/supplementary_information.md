@@ -246,6 +246,57 @@ Four outcomes, all measured: (1) old conclusion holds when supply is adequate;
 
 ---
 
+## S6b. External anchoring (observed infrastructure)
+
+**The project's largest weakness was external validity.** We located, downloaded and
+integrity-checked a public, reproducible dataset accompanying Shen et al. (2026,
+*Nature Water*): 10,826 Chinese wastewater treatment plants with design capacity, load rate
+and location, released CC-BY-4.0 on Zenodo (`10.5281/zenodo.22138940`).
+
+**Verification performed**
+
+| check | result |
+|---|---|
+| archive retrieved | 2,683,047 bytes (record lists 2.7 MB) |
+| plant count | **10,826 rows** — matches the count in the paper's own title |
+| internal consistency | reported load rate reproduces annual volume / 365 / design capacity, **r = 1.0000** |
+
+**Observed distributions**
+
+| quantity | value |
+|---|---:|
+| design capacity, P25 / **P50** / P75 / P90 | 1.4 / **8.0** / 25 / 60 ML/d |
+| aggregate design capacity | 268,599 ML/d |
+| load rate, P10 / P25 / **P50** / P75 / P90 | 0.09 / 0.31 / **0.594** / 0.83 / 0.97 |
+| load rate > 1 | 6.2% |
+| industrial cooling-water share (39 sectors) | median of sector means **0.184** |
+| urban water price (n = 39,083) | median **1.45** CNY/m³ |
+
+**Consequences**
+
+1. **Parameter placement.** Our nominal deliverable reclaimed supply is 33.4 ML/d (D-HA) and
+   30.7 ML/d (D-CO) — the **81st percentile** of observed plants. The work therefore describes
+   cities with **above-median reclaimed-water provision**, and is labelled so.
+2. **Supply-expansion headroom.** Median utilisation is 0.594 of design capacity and only
+   6.2% of plants exceed capacity, so most plants retain **spare treatment capacity**: there
+   is physical scope to produce additional reclaimed water.
+
+> **A correction we record here.** An earlier draft of this section used load rate as a direct
+> proxy for the committed-share and reported the prevalence of the two regimes as
+> 41.6% / 29.8% / 28.6%. That mapping is **wrong in direction**: the regime is set by the
+> demand-side ratio $\text{elig}/P_0$, and since $P_0 \approx \text{load rate} \times$
+> $\text{design capacity}$, a *low* load rate implies *less* reclaimed water produced and hence
+> a *higher* demand-to-supply ratio, pushing the system **toward** the committed branch — the
+> opposite of what was claimed. Load rate is a production-side quantity; regime membership is
+> demand-side. We therefore do **not** report regime prevalence from these data.
+
+> **We do not claim external validation.** The data constrain parameter ranges and bound the
+> scope for expanding supply; they do not validate city-level predictions, and no
+> facility-level cooling-operations data were obtainable (engine gate G3 remains `NOT_READY`).
+> (`A24_外部锚定/A24_外部锚定报告.md`)
+
+---
+
 ## S7. Model bridging
 
 Periodic representative-day model vs full daily engine, identical inputs, **24 pairs**

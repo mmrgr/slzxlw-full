@@ -38,6 +38,8 @@ def main() -> None:
     qp22 = json.loads((A22 / "q_predictors_summary.json").read_text(encoding="utf-8"))
     mq22 = json.loads((A22 / "missing_quality_fullscan_summary.json").read_text(encoding="utf-8"))
     qt23 = json.loads((A22 / "q_theory_summary.json").read_text(encoding="utf-8"))
+    A24 = ROOT / "A24_外部锚定"
+    ea24 = json.loads((A24 / "external_anchor_summary.json").read_text(encoding="utf-8"))
     A21 = ROOT / "A21_动态状态"
     ds = json.loads((A21 / "dynamic_state_summary.json").read_text(encoding="utf-8"))
     dc = pd.read_csv(A21 / "dynamic_criterion_grid.csv", encoding="utf-8-sig")
@@ -74,6 +76,9 @@ def main() -> None:
         ("网格非单调曲线数", gr["nonmonotone_at_193"]["n_nonmonotone"], 11, 0),
         ("E2 三分账: abstraction==delivered 行数", 0, 0, 0),
         ("A21 动态状态情景数", len(dc), 20, 0),
+        ("A24 实测污水厂数 = 10826", ea24["WWTP_scale"]["n"], 10826, 0),
+        ("A24 负荷率中位 0.594", ea24["load_rate"]["median"], 0.5943, 0.002),
+        ("A24 设计能力中位 8.0 ML/d", ea24["WWTP_scale"]["median"], 0.8, 0.01),
         ("A22 ρ(κ-1)-q 残差 (恒等式)", dc22["identity_residual"], 1.33e-15, 1e-14),
         ("A22 q>0 组有益数 = n (零例外)",
          dc22["q_sign_groups"][0]["n_beneficial"], dc22["q_sign_groups"][0]["n"], 0),
@@ -113,6 +118,9 @@ def main() -> None:
          bool(qt23["closed_form_max_diff"] < 1e-15)),
         ("A21 R10a 维持高 CoC (>7.5)",
          bool(dc[(dc.quality_state) & (dc.phi >= 0.6)]["coc_mean"].min() > 7.5)),
+        ("A24 未再声称分支占比 (已撤回)",
+         bool("regime prevalence" not in json.dumps(ea24).lower()
+              or "撤回" in json.dumps(ea24, ensure_ascii=False))),
         ("组成可翻转符号 (存在正与负)",
          bool((ss.dS_pot_ml > 1e-6).any() and (ss.dS_pot_ml < -1e-6).any())),
     ]

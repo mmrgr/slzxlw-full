@@ -36,7 +36,11 @@ abstraction" becomes a **necessary-service gap** (up to 62,080 ML) and the data 
 itself curtailed. Finally,
 setting the water-quality constraint to non-binding makes the outcome exactly zero in the
 committed regime — establishing that "reclaimed cooling does not save water" is a property
-of *quality-limited, fully-committed* systems rather than of reuse in general.
+of *quality-limited, fully-committed* systems rather than of reuse in general. We anchor the
+analysis against a public dataset of **10,826 observed wastewater treatment plants**: our
+supply parameter falls at the **81st percentile** of that distribution, and observed
+utilisation (median 0.594 of design capacity) bounds the physical scope for expanding
+reclaimed supply.
 
 ---
 
@@ -253,7 +257,48 @@ coarse parameter scans can miss genuine feasible windows. We therefore do not re
 "first-failure" identification for any claim. (Grid-refinement check: the feasible boundary
 moves by at most one grid step, 0.015625, in 100% of cases.)
 
-### 6. Robustness and falsification
+### 6. External anchoring against observed infrastructure
+
+The project's largest weakness was external validity. We obtained a public, reproducible
+dataset of **10,826 Chinese wastewater treatment plants** (design capacity, load rate,
+location) released CC-BY-4.0 with Shen et al. (2026); integrity was confirmed by a perfect
+internal consistency check — the reported load rate reproduces
+`annual treated volume / 365 / design capacity` with **r = 1.0000**.
+
+| observed quantity | value |
+|---|---:|
+| plants | 10,826 |
+| design capacity, median (P75 / P90) | **8.0** (25 / 60) ML/d |
+| aggregate design capacity | 268,599 ML/d |
+| **load rate, median** | **0.594** (P75 0.83; above 1 in 6.2%) |
+| industrial cooling-water share (39 sectors, median of means) | 0.184 |
+| urban water price (n = 39,083), median | 1.45 CNY/m³ |
+
+Two consequences for our claims:
+
+1. **Our key parameter lies inside the observed range but on the large side.** The model's
+   nominal deliverable reclaimed supply is 33.4 ML/d (D-HA) and 30.7 ML/d (D-CO) — the
+   **81st percentile** of the 10,826 plants. This work therefore represents cities with
+   **above-median reclaimed-water provision** (the median plant is 8 ML/d, a quarter of ours)
+   and is described that way throughout.
+2. **Observed load rates bound the scope for supply expansion, not the claim status.** Median
+   utilisation is 0.594 of design capacity (only 6.2% exceed capacity), so most plants retain
+   **spare treatment capacity** — i.e. physical headroom to produce additional reclaimed water.
+   We deliberately do **not** translate this into the prevalence of our two regimes: the branch
+   is set by the demand-side ratio of *committed demand to deliverable supply*, whereas load
+   rate is a production-side quantity, and the two move in opposite directions (a *low* load
+   rate implies *less* reclaimed water produced and hence, other things equal, a *higher*
+   demand-to-supply ratio, pushing the system toward the committed branch). Mapping one onto
+   the other would require an assumption we cannot justify from the data.
+
+> **What this does and does not establish.** The external data constrain our parameter range
+> and bound the physical scope for expanding reclaimed supply; they do **not** validate
+> city-level predictions and do **not** determine regime prevalence. No facility-level
+> cooling-operations data were available. We therefore still make no predictive claim for a
+> named city.
+> (`A24_外部锚定/A24_外部锚定报告.md`)
+
+### 7. Robustness and falsification
 
 | test | result |
 |---|---|
@@ -315,8 +360,12 @@ Shen et al. (2026) note reuse benefits depend on demand conditions; we make that
 2. **Cooling storage itself consumes water.** Introducing storage raises makeup by
    **+3.45%** (D-HA) and **+7.02%** (D-CO), independently of capacity (50 / 200 / 800 ML give
    identical results). Storage is not free.
-3. Supply caps are parameterised, not observed for a named city.
-4. Two homologous synthetic domains; no independent city calibration.
+3. Supply caps are parameterised, not observed for a named city. Our reclaimed-supply
+   parameter is anchored to the **81st percentile** of 10,826 observed wastewater plants
+   (§6), so the work describes above-median-provision cities rather than the median.
+4. Two homologous synthetic domains; no independent city calibration. The external dataset
+   constrains parameter ranges and regime prevalence but does **not** validate city-level
+   predictions, and no facility-level cooling-operations data were obtainable.
 5. Allocation rules remain the engine's (reserved-pool pro-rata); priority queues and
    interruptible contracts are not represented.
 6. Quality envelope CoC ∈ [2.1, 4.9] from mixed observed/literature/an extrapolated tier;
@@ -357,10 +406,14 @@ reported separately and never merged.
 **Quality tiers.** As anchored in Results §5; the extrapolation tier is flagged in the data.
 
 **Data.** Public compositions (IEUA RP-1 2025 with monthly min–max ranges; LADWP AWPF 2012;
-Figshare paired study; SIPIBEL; SDWIS IEU; GSA courthouse cooling tower) bound the parameter
-domain; they are never calibration targets or point-prediction validation. Composition enters
-the corrected model through the blended-water concentration against scaled limits, and — as
-Results §5 shows — it materially changes the outcome.
+Figshare paired study; SIPIBEL; SDWIS IEU; GSA courthouse cooling tower) bound the water-quality
+parameter domain. External infrastructure anchoring uses the CC-BY-4.0 dataset released with
+Shen et al. (2026) — 10,826 Chinese wastewater treatment plants with design capacity and load
+rate (Zenodo 10.5281/zenodo.22138940), verified by an internal-consistency check (r = 1.0000).
+These sources are used to **bound parameters and calibrate regime prevalence**, never as
+calibration targets or point-prediction validation. Composition enters the corrected model
+through the blended-water concentration against scaled limits, and — as Results §5 shows — it
+materially changes the outcome.
 
 **Reproducibility.** Environment locked (Python 3.13.14, numpy 2.4.4, pandas 3.0.5,
 matplotlib 3.11.2, phreeqpython 1.6.2); engine located via `AIUWM_REPO` or relative layout
