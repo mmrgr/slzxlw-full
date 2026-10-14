@@ -1,0 +1,52 @@
+{
+ "estimand": "dS_pot = C - F (份额口径 dp=0)",
+ "n_fit_ha": 204,
+ "n_holdout_co": 204,
+ "identity_max_err_ml": 1.4551915228366852e-11,
+ "H1_algebraic_rederivation": {
+  "co_R2": 1.0,
+  "co_RMSE_ml": 3.743449309167966e-12,
+  "is_validation": false,
+  "caveat": "使用 co 引擎量 M0/M1, 与生成式同源"
+ },
+ "H2_true_holdout": {
+  "frozen_param_a": 0.37548716415916206,
+  "fitted_on": "ha",
+  "co_R2_phi_eff": 0.5985026965590701,
+  "co_median_abs_err": 0.028323477249094703,
+  "trivial_baseline_R2": -0.03379126992932413
+ },
+ "H3_no_quality_constraint_max_abs_dS": 0.0,
+ "H4_chi_monotone": true,
+ "H5_phi0_max_abs_dS": 0.0,
+ "gates": [
+  {
+   "gate": "H1 恒等式自检 (非留出)",
+   "passed": true,
+   "value": "max err 1.455e-11 ML; co R²=1.000000 (代数重推导)"
+  },
+  {
+   "gate": "H2 phi_eff 单参数律优于平凡基线",
+   "passed": true,
+   "value": "律 R²=0.598503 vs 基线 R²=-0.033791"
+  },
+  {
+   "gate": "H3 无水质约束 => dS_pot=0 (纯再分配)",
+   "passed": true,
+   "value": "max |dS_pot| = 0.0000 ML"
+  },
+  {
+   "gate": "H4 chi 变小 => 惩罚上升 (单调)",
+   "passed": true,
+   "value": "max dS_pot by chi(升序) = {0.25: 29103.0, 0.5: 2953.0, 1.0: 910.0}"
+  },
+  {
+   "gate": "H5 phi=0 => dS_pot=0",
+   "passed": true,
+   "value": "max |dS_pot| = 0.000e+00 ML"
+  }
+ ],
+ "all_gates_pass": true,
+ "runtime_s": 9.7,
+ "discipline_note": "份额口径下 dS_pot = M1 - M0 >= 0 (旧结论)。H1 是代数重推导, 已明确标注为非验证; H2 是唯一的真留出 (单参数)。不使用已撤回的 psi/Delta。"
+}

@@ -1,0 +1,119 @@
+{
+ "coordinate": {
+  "rho": "dp_scale",
+  "chi": "limit_scale"
+ },
+ "fixed": {
+  "pool_scale": 1.0,
+  "gap_scale": 1.0,
+  "ai_target": 0.7
+ },
+ "domain": "ha",
+ "panel": "B_full",
+ "samples": [
+  "IEUA RP-1 (2025, tertiary)",
+  "Figshare RW (2025, paired study)",
+  "AI-UWM model assumption"
+ ],
+ "n_levels": [
+  25,
+  49,
+  97,
+  193
+ ],
+ "n_chi": 13,
+ "grid_step_at_193": 0.015625,
+ "convergence": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "n_chi_compared": 11,
+   "n_boundary_within_1_step": 11,
+   "share_within_1_step": 1.0,
+   "max_boundary_shift": 0.015625,
+   "median_abs_shift": 0.0
+  },
+  "Figshare RW (2025, paired study)": {
+   "n_chi_compared": 11,
+   "n_boundary_within_1_step": 11,
+   "share_within_1_step": 1.0,
+   "max_boundary_shift": 0.015625,
+   "median_abs_shift": 0.0
+  },
+  "AI-UWM model assumption": {
+   "n_chi_compared": 11,
+   "n_boundary_within_1_step": 11,
+   "share_within_1_step": 1.0,
+   "max_boundary_shift": 0.015625,
+   "median_abs_shift": 0.0
+  }
+ },
+ "convergence_metric_note": "第一版误用'可行点计数相同'作判据 —— 那是错的: chi 宽松时几乎全域可行, 网格越细可行点必然越多, 计数永不相等, 会把'分辨率提高'误报成'结论不稳定'。现判据改为**边界位置 rho_min_feasible 的位移 <= 1 个网格步长**, 因为瓶颈识别的输出是边界在哪里。",
+ "nonmonotone_at_193": {
+  "n_curves": 39,
+  "n_nonmonotone": 0,
+  "share": 0.0
+ },
+ "bottleneck_reproducibility": {
+  "engine_fields": [
+   "CoC_ai",
+   "M_ml",
+   "Phi",
+   "S_AI_ml",
+   "S_city_ml",
+   "ai_target",
+   "chi",
+   "closure_residual_ml",
+   "domain",
+   "dp_ml",
+   "dp_scale",
+   "e_scale",
+   "eta_transfer",
+   "gap_scale",
+   "inc_reclaimed_ml",
+   "m0_ml",
+   "panel",
+   "period_days",
+   "phi_eff",
+   "pool_ml",
+   "pool_scale",
+   "roots",
+   "sample",
+   "status",
+   "x_ai_ml",
+   "y"
+  ],
+  "exposes_per_constraint_headroom": false,
+  "note": "'首个失败网格点上超限最大的约束' 需要逐物种浓度与限值。city_outcome/reliability_model 均不返回这些字段, 故该口径在 A15 的调用层级上**不可复现**; 本表改报引擎原生信号 (quality_solver_status, CoC 相对设计值)。"
+ },
+ "coc_ratio_stats": {
+  "min": 0.2000002,
+  "max": 1.0,
+  "median": 0.4165671893908101
+ },
+ "status_counts": {
+  "converged_unique": 14196
+ },
+ "gates": [
+  {
+   "gate": "P1-网格: 边界位置随细化稳定 (<=1 网格步长)",
+   "passed": true,
+   "value": "边界位移 <=1 步长的 chi 占比 = 1.000",
+   "rule": "97 与 193 点边界位置一致率 >= 0.80 => 瓶颈未随细化改变",
+   "evidence": "3 组水样各自比对 13 条 chi 曲线; 最大位移 0.0156 (步长 0.0156)"
+  },
+  {
+   "gate": "P1-非单调: 不存在非单调可行域",
+   "passed": true,
+   "value": "非单调曲线数 = 0/39",
+   "rule": "非单调数 = 0 才能支持'首个失败点即边界'的既有口径",
+   "evidence": "最细网格 193 点; 若 >0 则既有瓶颈识别口径在那些 chi 上失效"
+  },
+  {
+   "gate": "P1-瓶颈口径: 可逐约束复现",
+   "passed": false,
+   "value": "引擎暴露逐约束 headroom = False",
+   "rule": "需暴露逐物种 浓度/限值 才能复现'超限最大的约束'",
+   "evidence": "若为 False, 该口径在管线外不可复现, 应改为报告引擎原生的 quality_solver_status + CoC 截断"
+  }
+ ],
+ "runtime_s": 232.4
+}

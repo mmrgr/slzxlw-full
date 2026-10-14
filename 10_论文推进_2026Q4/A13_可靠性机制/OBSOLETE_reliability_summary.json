@@ -1,0 +1,42 @@
+{
+ "n_grid": 3840,
+ "S_algebra_max_ml": 0.0,
+ "S_algebra_min_ml": -47661.61314347747,
+ "S_algebra_all_le_zero": true,
+ "S_city_max_ml": 0.0,
+ "S_city_min_ml": -87302.25335718822,
+ "n_S_city_positive": 0,
+ "share_S_city_positive": 0.0,
+ "n_excess_loss": 1308,
+ "excess_loss_max_ml": 39640.64021371075,
+ "excess_loss_median_ml": 8334.544488403568,
+ "n_psi_gt1": 1308,
+ "n_psi_le1": 2532,
+ "Delta_zero_when_psi_le1": true,
+ "Delta_pos_when_psi_gt1": true,
+ "n_psi_decreases_with_phi": 64,
+ "n_psi_comparisons": 64,
+ "dpsi_median": -0.11536388892195115,
+ "dpsi_max_decrease": -0.15714593384432085,
+ "ablation_off_all_le_zero": true,
+ "ablation_off_max_ml": 0.0,
+ "domain_stats": {
+  "ha": {
+   "n": 1920,
+   "S_algebra_max_ml": 0.0,
+   "excess_loss_max_ml": 39640.64021371075,
+   "psi_max": 1.3581769117184956,
+   "Delta_max_ml": 39640.64021371075
+  },
+  "co": {
+   "n": 1920,
+   "S_algebra_max_ml": 0.0,
+   "excess_loss_max_ml": 38661.66270138946,
+   "psi_max": 1.3477731892418978,
+   "Delta_max_ml": 38661.66270138946
+  }
+ },
+ "both_domains_consistent": true,
+ "discipline_note": "旧恒等式 S_city = M0 - M 已被数值证实为代数恒等式 (守恒残差 ~1e-12)。引入有限供水可靠性闭合后,S_city = S_algebra - Delta, Delta = W*max(0,psi-1)。该式可证伪: 若 psi<=1 时 Delta 不为 0, 或 psi>1 时 Delta 为 0, 则命题被否证。本表为**模型内**结论, 不是观测频率。",
+ "runtime_s": 24.7
+}

@@ -1,0 +1,21 @@
+{
+ "n_scenarios": 612,
+ "psi_analytic_max_err": 0.0,
+ "psi_analytic_verified": true,
+ "dp_all_zero": true,
+ "phi_star_by_W": {
+  "0.8": null,
+  "0.85": null,
+  "0.9": 0.625,
+  "0.95": 0.275,
+  "1.0": 0.0
+ },
+ "reachable_share": 0.6,
+ "channel_opposite_sign_share": 0.75,
+ "channel_Q_mean_ml": -13936.525431684257,
+ "channel_R_mean_ml": 4741.669487431979,
+ "decomposition_max_residual_ml": 0.0,
+ "n_nonmonotone_S_city": 0,
+ "runtime_s": 8.3,
+ "discipline_note": "通道 R 在 dp=0 (无新增产能) 下成立, 故本机制与 T12 的产能边界曲面正交。两通道符号相反, 净效应是二者之和 —— 这解释为何单一通道核算会给出误导性结论。模型内结论, 非观测频率。"
+}

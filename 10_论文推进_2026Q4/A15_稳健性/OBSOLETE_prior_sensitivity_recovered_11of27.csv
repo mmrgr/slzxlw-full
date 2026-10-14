@@ -1,0 +1,12 @@
+﻿pool_prior,gap_prior,dp_prior,n_effective,P_gt0_dpA_dp0,P_gt0_dpB_dp1,P_reach_dp_le1
+uniform,uniform,uniform,600,0.0,0.6117,0.6033
+uniform,uniform,log-uniform,600,0.0017,0.6383,0.405
+uniform,uniform,triangular,600,0.0033,0.6217,0.615
+uniform,log-uniform,uniform,600,0.0017,0.4767,0.4717
+uniform,log-uniform,log-uniform,600,0.0,0.4817,0.2933
+uniform,log-uniform,triangular,600,0.0,0.4517,0.4483
+uniform,triangular,uniform,600,0.0,0.6617,0.6533
+uniform,triangular,log-uniform,600,0.0,0.685,0.395
+uniform,triangular,triangular,600,0.0017,0.6833,0.68
+log-uniform,uniform,uniform,600,0.0017,0.7133,0.7083
+log-uniform,uniform,log-uniform,600,0.0017,0.71,0.445

@@ -1,0 +1,106 @@
+{
+ "W_sweep": [
+  1.0,
+  1.2,
+  2.0,
+  5.0,
+  10.0,
+  100.0,
+  10000.0,
+  1000000.0,
+  100000000.0
+ ],
+ "eps_sweep": [
+  1.0,
+  0.75,
+  0.5,
+  0.25,
+  0.1,
+  0.0
+ ],
+ "stress_config": {
+  "D_scale": 1.5,
+  "limit_scale": 0.5,
+  "phi": 0.4
+ },
+ "W_limit": {
+  "max_psi_at_1e8": 9.4301461139712e-09,
+  "max_abs_gap_ml_at_1e8": 0.0,
+  "dp0_S_city_range_at_1e8": [
+   -9538.273119151156,
+   -8425.698694467923
+  ],
+  "dp1_S_city_range_at_1e8": [
+   4623.853990046315,
+   4997.313587465422
+  ],
+  "convergence_slope_median": null,
+  "n_slope_estimates": 0
+ },
+ "eps_limit": {
+  "n_rows": 144,
+  "S_city_range_eps0": [
+   -17168.340115530125,
+   -15167.427048205755
+  ],
+  "S_city_range_eps1": [
+   -9538.273119151156,
+   -8425.698694467923
+  ],
+  "all_le_zero_eps0": true,
+  "all_le_zero_eps1": true,
+  "monotone_share": 1.0,
+  "note": "eps 在 A13 的实现中未被使用; 本表用**外部**参数化检验刚性极限: Delta_eps = rigid_gap + (1-eps)*displaced, 其中 displaced = max(0, inc_noai - inc_recl) 为 AI 挤占量。"
+ },
+ "impl_consistency": {
+  "docstring_mentions_eps": false,
+  "signature_has_eps": false,
+  "has_g_eps_term_in_S_city": false,
+  "finding": "reliability_model.reliability_closure 的 docstring (第 14 行) 声明参数 eps 与让渡成本项 g(eps), 且净效益定义写为 S_city = (M0-M) + Lambda*Delta - g(eps); 但函数签名无 eps, 实现为 S_city = S_algebra - lam*Delta。文档与实现不一致, 且 docstring 中 Delta 的符号 (+Lambda*Delta) 与实现的 (-lam*Delta) 相反。需 Lead 统一。"
+ },
+ "gates": [
+  {
+   "gate": "边界1: W->∞ 时 Delta->0",
+   "passed": true,
+   "value": "max |S_city - S_algebra| = 0.000e+00 ML",
+   "rule": "W_scale=1e8 时新机制的额外项必须消失",
+   "evidence": "同时 max psi = 9.430e-09 -> 0, 即供水宽松极限"
+  },
+  {
+   "gate": "边界1b: W->∞ 退化回旧结论 (dp=0 口径)",
+   "passed": true,
+   "value": "max S_city = -8425.699 ML",
+   "rule": "dp=0 时旧结论 S_city<=0 必须被恢复",
+   "evidence": "dp=0 口径下 available=pool, S_algebra 恒 <=0, 极限为其本身"
+  },
+  {
+   "gate": "边界1c: 收敛阶为一阶 (非病态)",
+   "passed": false,
+   "value": "n/a",
+   "rule": "|S_city-S_algebra| ~ W^-1 => |slope+1| < 0.35",
+   "evidence": "0 组配置可估阶"
+  },
+  {
+   "gate": "边界2: eps->0 刚性极限下仍 S_city<=0",
+   "passed": true,
+   "value": "max S_city(eps=0) = -15167.427 ML",
+   "rule": "刚性极限不应产生正的净效益",
+   "evidence": "24 个 eps=0 格点全部非正"
+  },
+  {
+   "gate": "边界2b: S_city 对 eps 单调不减",
+   "passed": true,
+   "value": "单调比例 = 1.000",
+   "rule": "可让渡份额越大, 城市损失越小 (>=0.99)",
+   "evidence": "外部参数化口径, 见脚本 §2"
+  },
+  {
+   "gate": "实现一致性: reliability_closure 的 eps 参数",
+   "passed": true,
+   "value": "doc 提到=False, 签名含=False",
+   "rule": "文档声明的参数应在实现中存在",
+   "evidence": "docstring 声明 eps 与 g(eps) 让渡成本, 但签名/实现均无 -> 文档-实现不一致"
+  }
+ ],
+ "runtime_s": 0.8
+}

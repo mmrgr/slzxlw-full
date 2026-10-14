@@ -1,0 +1,45 @@
+============================================================================
+A15 留出验证 + 边界压力 (修正版, A13c 口径)
+============================================================================
+
+ha n=204  co n=204
+[自检] 份额口径恒等式 dS_pot = M1-M0 最大残差 = 1.455e-11 ML
+
+[H1] 闭式 dS_pot = M1 - M0 到 co 的吻合度 (⚠ 代数重推导, 非真留出)
+  co R² = 1.000000, RMSE = 3.743e-12 ML
+  ⚠ 该式直接使用 co 的引擎量 M0/M1, 与生成 dS_pot 的表达式同源,
+    故 R²≈1 是**代数恒等**, 不构成留出证据。仅作数值自检。
+
+[H2] 真留出: 在 ha 锁定 1 参数 phi_eff ≈ a*phi, 冻结后预测 co
+  ha 锁定: a = 0.375487  (phi_eff ≈ a*phi)
+  冻结律对 co 的 phi_eff 预测: R² = 0.598503, 中位误差 = 0.0283
+  平凡基线 (取 ha 均值常数): R² = -0.033791
+
+[H3] 边界: 关闭水质反馈 (限值极宽) 时 dS_pot 必须 -> 0
+                          sample  phi  dS_pot_ml  CoC
+      IEUA RP-1 (2025, tertiary)  0.4        0.0  5.0
+      IEUA RP-1 (2025, tertiary)  0.8        0.0  5.0
+   LADWP AWPF (2012, RO product)  0.4        0.0  5.0
+   LADWP AWPF (2012, RO product)  0.8        0.0  5.0
+Figshare RW (2025, paired study)  0.4        0.0  5.0
+Figshare RW (2025, paired study)  0.8        0.0  5.0
+         AI-UWM model assumption  0.4        0.0  5.0
+         AI-UWM model assumption  0.8        0.0  5.0
+
+[H4] 边界: 质量惩罚应随水质约束变强 (chi 变小) 单调上升
+chi
+0.25    29102.8
+0.50     2953.2
+1.00      909.8
+
+[H5] 边界: phi->0 时 dS_pot -> 0
+  phi=0 的 12 个情景 max |dS_pot| = 0.000e+00 ML
+
+[Gates]
+  [PASS] H1 恒等式自检 (非留出): max err 1.455e-11 ML; co R²=1.000000 (代数重推导)
+  [PASS] H2 phi_eff 单参数律优于平凡基线: 律 R²=0.598503 vs 基线 R²=-0.033791
+  [PASS] H3 无水质约束 => dS_pot=0 (纯再分配): max |dS_pot| = 0.0000 ML
+  [PASS] H4 chi 变小 => 惩罚上升 (单调): max dS_pot by chi(升序) = {0.25: 29103.0, 0.5: 2953.0, 1.0: 910.0}
+  [PASS] H5 phi=0 => dS_pot=0: max |dS_pot| = 0.000e+00 ML
+
+完成 9.7s; 全部 Gate 通过 = True

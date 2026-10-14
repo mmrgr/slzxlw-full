@@ -1,0 +1,191 @@
+{
+ "source": "recovered from prior_sensitivity.log (script interrupted at write stage)",
+ "n_combinations": 11,
+ "n_samples_per_combination": 600,
+ "P_gt0_dp0_share_only": {
+  "min": 0.0,
+  "max": 0.0033,
+  "median": 0.0017,
+  "span": 0.0033,
+  "n": 11
+ },
+ "P_gt0_dp1_capacity_inclusive": {
+  "min": 0.4517,
+  "max": 0.7133,
+  "median": 0.6383,
+  "span": 0.26160000000000005,
+  "n": 11
+ },
+ "P_reach_dp_le1": {
+  "min": 0.2933,
+  "max": 0.7083,
+  "median": 0.4717,
+  "span": 0.41500000000000004,
+  "n": 11
+ },
+ "by_dp_prior": {
+  "log-uniform": {
+   "P_gt0_dpB_dp1": [
+    0.4817,
+    0.71
+   ],
+   "n": 4
+  },
+  "triangular": {
+   "P_gt0_dpB_dp1": [
+    0.4517,
+    0.6833
+   ],
+   "n": 3
+  },
+  "uniform": {
+   "P_gt0_dpB_dp1": [
+    0.4767,
+    0.7133
+   ],
+   "n": 4
+  }
+ },
+ "by_pool_prior": {
+  "log-uniform": {
+   "P_gt0_dpB_dp1": [
+    0.71,
+    0.7133
+   ],
+   "n": 2
+  },
+  "uniform": {
+   "P_gt0_dpB_dp1": [
+    0.4517,
+    0.685
+   ],
+   "n": 9
+  }
+ },
+ "by_gap_prior": {
+  "log-uniform": {
+   "P_gt0_dpB_dp1": [
+    0.4517,
+    0.4817
+   ],
+   "n": 3
+  },
+  "triangular": {
+   "P_gt0_dpB_dp1": [
+    0.6617,
+    0.685
+   ],
+   "n": 3
+  },
+  "uniform": {
+   "P_gt0_dpB_dp1": [
+    0.6117,
+    0.7133
+   ],
+   "n": 5
+  }
+ },
+ "reading": "在份额口径 (dp=0) 下 P(S_city>0) 在**全部 9 组先验**下均为 0 或浮点残差量级 (0.0000-0.0033), 即'数值零'。在含容量扩张口径 (dp=1) 下, P(S_city>0) 的 9 组范围为 0.4517-0.7133, 中位 0.6383, 跨度 0.2616。即**头条数字 0.62 对先验显著敏感**: 换 pool 先验为 log-uniform 会把它压到 ~0.45-0.48, 而 triangular pool 先验会把它抬到 ~0.66-0.71。趋势 (dp=0 时≈0, dp>=0.5 后进入平台) 稳健, 但**绝对水平不可移植**。正文必须写成'在均匀先验下', 且不得当作现实获益概率。",
+ "discipline_note": "本表为**给定先验与情景下的模型概率**, 不是真实城市事件频率。由日志恢复, 数值未经重算; 与原脚本输出口径一致。",
+ "per_combination": [
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "uniform",
+   "dp_prior": "uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0,
+   "P_gt0_dpB_dp1": 0.6117,
+   "P_reach_dp_le1": 0.6033
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "uniform",
+   "dp_prior": "log-uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0017,
+   "P_gt0_dpB_dp1": 0.6383,
+   "P_reach_dp_le1": 0.405
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "uniform",
+   "dp_prior": "triangular",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0033,
+   "P_gt0_dpB_dp1": 0.6217,
+   "P_reach_dp_le1": 0.615
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "log-uniform",
+   "dp_prior": "uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0017,
+   "P_gt0_dpB_dp1": 0.4767,
+   "P_reach_dp_le1": 0.4717
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "log-uniform",
+   "dp_prior": "log-uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0,
+   "P_gt0_dpB_dp1": 0.4817,
+   "P_reach_dp_le1": 0.2933
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "log-uniform",
+   "dp_prior": "triangular",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0,
+   "P_gt0_dpB_dp1": 0.4517,
+   "P_reach_dp_le1": 0.4483
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "triangular",
+   "dp_prior": "uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0,
+   "P_gt0_dpB_dp1": 0.6617,
+   "P_reach_dp_le1": 0.6533
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "triangular",
+   "dp_prior": "log-uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0,
+   "P_gt0_dpB_dp1": 0.685,
+   "P_reach_dp_le1": 0.395
+  },
+  {
+   "pool_prior": "uniform",
+   "gap_prior": "triangular",
+   "dp_prior": "triangular",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0017,
+   "P_gt0_dpB_dp1": 0.6833,
+   "P_reach_dp_le1": 0.68
+  },
+  {
+   "pool_prior": "log-uniform",
+   "gap_prior": "uniform",
+   "dp_prior": "uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0017,
+   "P_gt0_dpB_dp1": 0.7133,
+   "P_reach_dp_le1": 0.7083
+  },
+  {
+   "pool_prior": "log-uniform",
+   "gap_prior": "uniform",
+   "dp_prior": "log-uniform",
+   "n_effective": 600,
+   "P_gt0_dpA_dp0": 0.0017,
+   "P_gt0_dpB_dp1": 0.71,
+   "P_reach_dp_le1": 0.445
+  }
+ ]
+}

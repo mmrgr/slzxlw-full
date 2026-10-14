@@ -1,0 +1,116 @@
+{
+ "n_configs": 27,
+ "n_lhs_per_config": 600,
+ "seed": 20261014,
+ "priors": {
+  "uniform": "线性, 对所有取值同等无知",
+  "log-uniform": "几何, 只知量级 (Jeffreys); 均值远低于区间中点",
+  "triangular": "众数=区间中点, 端点最不可能"
+ },
+ "prior_moments": {
+  "pool_scale": {
+   "mean": 1.42842408279656,
+   "median": 1.0954451150103321,
+   "uniform_mean": 2.15
+  },
+  "gap_scale": {
+   "mean": 1.42842408279656,
+   "median": 1.0954451150103321,
+   "uniform_mean": 2.15
+  }
+ },
+ "drift_dp0": {
+  "min": 0.0,
+  "max": 0.005,
+  "median": 0.0,
+  "span": 0.005
+ },
+ "drift_dp1": {
+  "min": 0.42833333333333334,
+  "max": 0.785,
+  "median": 0.6383333333333333,
+  "span": 0.3566666666666667
+ },
+ "drift_reach_dp_le1": {
+  "min": 0.265,
+  "max": 0.775,
+  "median": 0.6016666666666667,
+  "span": 0.51
+ },
+ "drift_by_dp_prior": "<function main.<locals>.span_row at 0x00000270B10A4540>",
+ "by_dp_prior": {
+  "uniform": {
+   "P_gt0_dpA_dp0": [
+    0.0,
+    0.005
+   ],
+   "P_gt0_dpB_dp1": [
+    0.44,
+    0.785
+   ],
+   "P_reach_dp_le1": [
+    0.43833333333333335,
+    0.775
+   ]
+  },
+  "log-uniform": {
+   "P_gt0_dpA_dp0": [
+    0.0,
+    0.0033333333333333335
+   ],
+   "P_gt0_dpB_dp1": [
+    0.4666666666666667,
+    0.7633333333333333
+   ],
+   "P_reach_dp_le1": [
+    0.265,
+    0.5116666666666667
+   ]
+  },
+  "triangular": {
+   "P_gt0_dpA_dp0": [
+    0.0,
+    0.0033333333333333335
+   ],
+   "P_gt0_dpB_dp1": [
+    0.42833333333333334,
+    0.7516666666666667
+   ],
+   "P_reach_dp_le1": [
+    0.42833333333333334,
+    0.7516666666666667
+   ]
+  }
+ },
+ "T11b_frozen_reference": {
+  "0.0": 0.0029,
+  "0.5": 0.61,
+  "1.0": 0.62,
+  "2.0": 0.6214
+ },
+ "runtime_s": 3098.6,
+ "discipline_note": "MODEL probabilities under the stated priors and the frozen sample pool; NOT observed event frequencies. The water-sample dimension is drawn uniformly over 5 lab samples of which 1 is non-reclaimed (brackish) and 2 have estimated TDS, so it carries no global-frequency meaning.",
+ "gates": [
+  {
+   "gate": "M5-P2 先验漂移必须量化",
+   "passed": true,
+   "value": "dp0 span=0.005; dp1 span=0.357",
+   "rule": "必须给出明确漂移区间 (区间宽度 > 0 即算量化)",
+   "evidence": "9 组先验 x 600 样本; P(dp=0)∈[0.000,0.005], P(dp=1)∈[0.428,0.785]"
+  },
+  {
+   "gate": "0.62 是否对先验稳健 (<0.10 绝对漂移)",
+   "passed": false,
+   "value": "dp1 极差 = 0.357",
+   "rule": "极差 < 0.10 => 可保留单一数字; 否则必须限定先验",
+   "evidence": "P(dp=1) 从 0.428 到 0.785, 冻结值 0.62 落在区间内 = True"
+  },
+  {
+   "gate": "A13 恒等式在 dp=0 口径成立",
+   "passed": true,
+   "value": "max P(dp=0) = 0.0050",
+   "rule": "dp=0 时 available=pool => x_ai+inc≡pool => S_city≡M0-M<=0, 故 P 应≈0",
+   "evidence": "9 组先验下 P(S_city>0|dp=0) 最大仅 0.0050"
+  }
+ ]
+}

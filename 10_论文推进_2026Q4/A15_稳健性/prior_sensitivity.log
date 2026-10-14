@@ -1,0 +1,38 @@
+﻿==============================================================================
+task-4 / 交付物1: 先验敏感性 P(S_city>0)
+  9 组 pool x gap 先验组合, 每组 600 样本, dp 三套先验
+==============================================================================
+  uniform      x uniform      x dp:uniform      | n= 600 | P(dp0)=0.0000 P(dp1)=0.6117 P(d*<=1)=0.6033
+  uniform      x uniform      x dp:log-uniform  | n= 600 | P(dp0)=0.0017 P(dp1)=0.6383 P(d*<=1)=0.4050
+  uniform      x uniform      x dp:triangular   | n= 600 | P(dp0)=0.0033 P(dp1)=0.6217 P(d*<=1)=0.6150
+  uniform      x log-uniform  x dp:uniform      | n= 600 | P(dp0)=0.0017 P(dp1)=0.4767 P(d*<=1)=0.4717
+  uniform      x log-uniform  x dp:log-uniform  | n= 600 | P(dp0)=0.0000 P(dp1)=0.4817 P(d*<=1)=0.2933
+  uniform      x log-uniform  x dp:triangular   | n= 600 | P(dp0)=0.0000 P(dp1)=0.4517 P(d*<=1)=0.4483
+  uniform      x triangular   x dp:uniform      | n= 600 | P(dp0)=0.0000 P(dp1)=0.6617 P(d*<=1)=0.6533
+  uniform      x triangular   x dp:log-uniform  | n= 600 | P(dp0)=0.0000 P(dp1)=0.6850 P(d*<=1)=0.3950
+  uniform      x triangular   x dp:triangular   | n= 600 | P(dp0)=0.0017 P(dp1)=0.6833 P(d*<=1)=0.6800
+  log-uniform  x uniform      x dp:uniform      | n= 600 | P(dp0)=0.0017 P(dp1)=0.7133 P(d*<=1)=0.7083
+  log-uniform  x uniform      x dp:log-uniform  | n= 600 | P(dp0)=0.0017 P(dp1)=0.7100 P(d*<=1)=0.4450
+  log-uniform  x uniform      x dp:triangular   | n= 600 | P(dp0)=0.0000 P(dp1)=0.7183 P(d*<=1)=0.7183
+  log-uniform  x log-uniform  x dp:uniform      | n= 600 | P(dp0)=0.0017 P(dp1)=0.6100 P(d*<=1)=0.6017
+  log-uniform  x log-uniform  x dp:log-uniform  | n= 600 | P(dp0)=0.0000 P(dp1)=0.6317 P(d*<=1)=0.3883
+  log-uniform  x log-uniform  x dp:triangular   | n= 600 | P(dp0)=0.0000 P(dp1)=0.6250 P(d*<=1)=0.6217
+  log-uniform  x triangular   x dp:uniform      | n= 600 | P(dp0)=0.0000 P(dp1)=0.7850 P(d*<=1)=0.7750
+  log-uniform  x triangular   x dp:log-uniform  | n= 600 | P(dp0)=0.0000 P(dp1)=0.7633 P(d*<=1)=0.5117
+  log-uniform  x triangular   x dp:triangular   | n= 600 | P(dp0)=0.0000 P(dp1)=0.7517 P(d*<=1)=0.7517
+  triangular   x uniform      x dp:uniform      | n= 600 | P(dp0)=0.0017 P(dp1)=0.6417 P(d*<=1)=0.6250
+  triangular   x uniform      x dp:log-uniform  | n= 600 | P(dp0)=0.0000 P(dp1)=0.6233 P(d*<=1)=0.3783
+  triangular   x uniform      x dp:triangular   | n= 600 | P(dp0)=0.0033 P(dp1)=0.6100 P(d*<=1)=0.6100
+  triangular   x log-uniform  x dp:uniform      | n= 600 | P(dp0)=0.0050 P(dp1)=0.4400 P(d*<=1)=0.4383
+  triangular   x log-uniform  x dp:log-uniform  | n= 600 | P(dp0)=0.0017 P(dp1)=0.4667 P(d*<=1)=0.2650
+  triangular   x log-uniform  x dp:triangular   | n= 600 | P(dp0)=0.0000 P(dp1)=0.4283 P(d*<=1)=0.4283
+  triangular   x triangular   x dp:uniform      | n= 600 | P(dp0)=0.0000 P(dp1)=0.6933 P(d*<=1)=0.6867
+  triangular   x triangular   x dp:log-uniform  | n= 600 | P(dp0)=0.0033 P(dp1)=0.7200 P(d*<=1)=0.4267
+  triangular   x triangular   x dp:triangular   | n= 600 | P(dp0)=0.0017 P(dp1)=0.7083 P(d*<=1)=0.7083
+
+==============================================================================
+口径 A (dp=0):   P(S_city>0) ∈ [0.0000, 0.0050]  中位 0.0000
+口径 B (dp=1):   P(S_city>0) ∈ [0.4283, 0.7850]  中位 0.6383
+   冻结 0.62 在区间内 = True
+P(dp*<=1) 达标的比例 ∈ [0.2650, 0.7750]
+耗时 3098.6s

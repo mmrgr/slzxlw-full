@@ -1,0 +1,62 @@
+{
+ "n_scenarios": 80,
+ "n_trivial_ai_got_no_water": 32,
+ "n_effective": 48,
+ "claim_frac_grid": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "trivial_threshold_note": "claim_frac>=0.75 时既有用户保护量 (0.75*33,779=25,334 ML) 超过池 (24,404 ML), 池被全额保留, AI 取到 0 再生水, dS_pot=0 属**平凡结果**, 不作为证据。",
+ "rule_effect_on_sign": {
+  "0.0": {
+   "dS_min": 974.4663715387105,
+   "dS_max": 2953.2281791380847,
+   "n_negative": 0,
+   "n": 16,
+   "n_effective": 16
+  },
+  "0.25": {
+   "dS_min": 743.0450230360984,
+   "dS_max": 2196.160923374802,
+   "n_negative": 0,
+   "n": 16,
+   "n_effective": 16
+  },
+  "0.5": {
+   "dS_min": 354.9236128464363,
+   "dS_max": 1203.4317139037157,
+   "n_negative": 0,
+   "n": 16,
+   "n_effective": 16
+  },
+  "0.75": {
+   "dS_min": 0.0,
+   "dS_max": 0.0,
+   "n_negative": 0,
+   "n": 16,
+   "n_effective": 0
+  },
+  "1.0": {
+   "dS_min": 0.0,
+   "dS_max": 0.0,
+   "n_negative": 0,
+   "n": 16,
+   "n_effective": 0
+  }
+ },
+ "effective_regime_dS_range_ml": [
+  354.9236128464363,
+  2953.2281791380847
+ ],
+ "effective_regime_negative_share": 0.0,
+ "protection_monotone_reduces_harm": true,
+ "pure_displacement_max_abs_ml": 3.637978807091713e-12,
+ "n_dS_negative": 0,
+ "min_dS_pot_ml": 354.9236128464363,
+ "max_dS_pot_ml": 2953.2281791380847,
+ "runtime_s": 1.5,
+ "discipline_note": "扫描引擎原生 incumbent_reclaimed_ml (既有用户保护强度)。claim_frac=0 复现 A13c 纯挤占口径。关键: 纯挤占 (x_ai == 既有用户损失) 在**所有**保护强度下精确成立, 说明它不是本规则选择的产物。实质情景中 dS_pot>0 恒成立。"
+}
