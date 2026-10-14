@@ -1,0 +1,54 @@
+{
+  "thresholds": {
+    "ha|omega=0.0": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 1000.0
+    },
+    "ha|omega=0.25": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 9000.0
+    },
+    "ha|omega=0.5": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 17000.0
+    },
+    "ha|omega=0.75": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 26000.0
+    },
+    "ha|omega=1.0": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 34000.0
+    },
+    "co|omega=0.0": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 1000.0
+    },
+    "co|omega=0.25": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 9000.0
+    },
+    "co|omega=0.5": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 18000.0
+    },
+    "co|omega=0.75": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 27000.0
+    },
+    "co|omega=1.0": {
+      "dP_star_city_benefit_ml": 1000.0,
+      "dP_star_AI_gets_water_ml": 36000.0
+    }
+  },
+  "pool_and_demand": {
+    "ha": [
+      24404.451231393024,
+      58183.297999999995
+    ],
+    "co": [
+      22413.97659165322,
+      57530.252
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+================================================================================================
+T14e 数据溯源 / 合成气象实现敏感性 / 指标 B 归属
+================================================================================================
+[S1] parameter_sources.csv 中进入 T5/T14 链的输入
+   population                   1000000              [assumption]  参数域设定: 中等规模城市
+   domestic_demand              165                  [literature]  GB/T 50331 城市综合用水量标准量级
+   industrial_demand            60                   [assumption]  参数域设定: 一般工业占比
+   wtw_capacity                 370 / 380            [scenario-tuned]  场景标定(设计): 按峰值日利用率 ~0.78-0.82 反算(城市峰值日需水 ~289 ML/d); 非实测率定
+   wwtw_capacity                270                  [scenario-tuned]  场景标定(设计): 按峰值日利用率 ~0.82 反算(峰值日污水 ~222 ML/d); 非实测率定
+   reuse_treatment_capacity     40 / 36              [assumption]  参数域设定: HA 高回用 / CO 中回用; 取产水量的 1.2 倍作日峰值裕度
+   central_reuse_fraction       0.16 / 0.15          [scenario-tuned]  场景标定(设计): 按再生水产能反算: 产能/污水量, 使产能利用率落在 90-95%; 非实测率定
+   reservoir_inflow_mean        265 / 290            [scenario-tuned]  场景标定(设计): 使弃水率 < 10%、库容年内真实循环(取水量的 1.1-1.26 倍); 非实测率定
+   reservoir_capacity           120000               [scenario-tuned]  场景标定(设计): 年取水量的 1.3-1.4 倍(现实多年调节水库 1-2 倍); 非实测率定
+   reservoir_initial_storage    65000                [assumption]  参数域设定: 起调库容 54%
+   abstraction_capacity         380 / 400            [scenario-tuned]  场景标定(设计): 使 0 MW 基线日峰值占用率落在 0.73-0.79; 非实测率定
+   local_connection_capacity    70                   [assumption]  参数域设定: 园区局部接入能力
+   cooling_storage              24                   [assumption]  园区冷却水调蓄: 1000 MW 设计补水量的 ~15 小时(现实 12-72 h)
+   grid_connection_capacity     1500 / 2600          [assumption]  参数域设定: 常规 / 能源富集(HA 补充情景)
+   ai_load_factor_mean          0.75                 [literature]  LBNL 2024 利用率区间中位
+   training_fraction            0.65                 [assumption]  开题报告 3.3 训练/推理占比设定
+   inference_peak_factor        1.35                 [assumption]  开题报告 3.3 推理峰荷系数设定
+   coc_quality_limits_tds       2200                 [literature]  ASHRAE 冷却水处理: 结垢/腐蚀控制量级
+   coc_quality_limits_chloride  500                  [literature]  ASHRAE 冷却水处理: 不锈钢腐蚀控制量级
+   driver_series                synthetic            [synthetic]  合成分成: 正弦季节 + AR(1) 噪声, 固定种子
+   -> synthetic/scenario-tuned: ['wtw_capacity', 'wwtw_capacity', 'central_reuse_fraction', 'reservoir_inflow_mean', 'reservoir_capacity', 'abstraction_capacity', 'driver_series']
+------------------------------------------------------------------------------------------------
+[S2] 合成气象实现敏感性 (每域 24 组备用实现)
+  [ha] 湿球 p95 ∈ [24.27,25.52]°C (中位 24.94) | ≥24°C 天数中位 60
+       evaporative  季节因子 ∈ [1.11,1.14] (中位 1.11) | 需求峰落在湿球 top37 内的比例 ∈ [0.57,0.73]
+       hybrid       季节因子 ∈ [3.58,3.89] (中位 3.69) | 需求峰落在湿球 top37 内的比例 ∈ [0.62,0.81]
+       定性检验: {"hybrid_seasonal_factor_gt_2_all": true, "hybrid_seasonal_gt_diurnal_all": true, "evaporative_seasonal_factor_lt_1.3_all": true, "evaporative_peak_in_wb_top37_ge_half_all": true, "hybrid_peak_in_wb_top37_ge_half_all": true, "wb_p95_range_c": [24.2655, 25.5165], "n_wb_ge_24c_median": 59.5}
+  [co] 湿球 p95 ∈ [16.76,17.96]°C (中位 17.40) | ≥24°C 天数中位 0
+       evaporative  季节因子 ∈ [1.10,1.11] (中位 1.10) | 需求峰落在湿球 top37 内的比例 ∈ [0.49,0.73]
+       hybrid       季节因子 ∈ [8.48,12.44] (中位 10.02) | 需求峰落在湿球 top37 内的比例 ∈ [0.95,1.00]
+       定性检验: {"hybrid_seasonal_factor_gt_2_all": true, "hybrid_seasonal_gt_diurnal_all": true, "evaporative_seasonal_factor_lt_1.3_all": true, "evaporative_peak_in_wb_top37_ge_half_all": false, "hybrid_peak_in_wb_top37_ge_half_all": true, "wb_p95_range_c": [16.7565, 17.9565], "n_wb_ge_24c_median": 0.0}
+------------------------------------------------------------------------------------------------
+[S3] 指标 B
+  [ha] 取水节约 9,492 ML/yr | 净耗水减少 7,987 ML/yr (上界)
+  [co] 取水节约 9,382 ML/yr | 净耗水减少 7,894 ML/yr (上界)
+  流域版本状态: NOT_IDENTIFIABLE_FROM_AVAILABLE_DATA
+  τ 轴状态: RETIRED (基于 scenario-tuned 来水, 不作为任何结论依据)
+================================================================================================
+写出: T14e_provenance_basin_summary.json + T14e_realisations_{ha,co}.csv

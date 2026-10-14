@@ -1,0 +1,103 @@
+{
+  "prereg_criteria": {
+    "R2_min": 0.9,
+    "median_rel_err_max": 0.2
+  },
+  "candidates": [
+    {
+      "model": "A_dp_over_pool_plus_dp",
+      "n": 478,
+      "R2": -0.05232691552525259,
+      "MAE": 2.136658866667666,
+      "RMSE": 3.480369393175195,
+      "med_rel_err": 0.7772215901575095,
+      "hit_rate_0.05": 0.060669456066945605,
+      "hit_rate_0.10": 0.11297071129707113,
+      "bias": 1.0829988077713184
+    },
+    {
+      "model": "B_dp_over_pool_plus_dp_minus_gap",
+      "n": 478,
+      "R2": 0.024692768150780253,
+      "MAE": 1.966361124960842,
+      "RMSE": 3.3505856467379926,
+      "med_rel_err": 0.6658503933778863,
+      "hit_rate_0.05": 0.07322175732217573,
+      "hit_rate_0.10": 0.1192468619246862,
+      "bias": 0.7332245158742565
+    },
+    {
+      "model": "C_dp_minus_gap_shortfall_over_dp",
+      "n": 478,
+      "R2": -0.26282375888054355,
+      "MAE": 2.49140278911967,
+      "RMSE": 3.8126011414254806,
+      "med_rel_err": 1.0,
+      "hit_rate_0.05": 0.016736401673640166,
+      "hit_rate_0.10": 0.02301255230125523,
+      "bias": 1.0518525956763678
+    }
+  ],
+  "best_model": "B_dp_over_pool_plus_dp_minus_gap",
+  "best_model_formula": "clip( dP / max(P + dP - min(G,P), eps), 0, 1 )",
+  "delta_prediction_pass": false,
+  "delta_quantiles": {
+    "0": -14.148828096627822,
+    "5": -2.985981183644474,
+    "25": 0.3112910367085068,
+    "50": 1.1224676030877734,
+    "75": 2.655770770316104,
+    "95": 7.595751958396045,
+    "100": 16.533377249112
+  },
+  "physical_domain_share": 0.27291666666666664,
+  "physical_domain_candidates": [
+    {
+      "model": "A_dp_over_pool_plus_dp",
+      "n": 131,
+      "R2": -0.1377316572859273,
+      "MAE": 0.22850840163097394,
+      "RMSE": 0.3032479888237932,
+      "med_rel_err": 0.3374989424864959,
+      "hit_rate_0.05": 0.20610687022900764,
+      "hit_rate_0.10": 0.3893129770992366,
+      "bias": 0.13541892157710841
+    },
+    {
+      "model": "B_dp_over_pool_plus_dp_minus_gap",
+      "n": 131,
+      "R2": -0.8032933036312488,
+      "MAE": 0.2854528497206807,
+      "RMSE": 0.3817782588914275,
+      "med_rel_err": 0.35739265889328103,
+      "hit_rate_0.05": 0.19083969465648856,
+      "hit_rate_0.10": 0.3282442748091603,
+      "bias": -0.2854528497206807
+    },
+    {
+      "model": "C_dp_minus_gap_shortfall_over_dp",
+      "n": 131,
+      "R2": -2.7148476809098137,
+      "MAE": 0.46928327896889277,
+      "RMSE": 0.5479595667431717,
+      "med_rel_err": 1.0,
+      "hit_rate_0.05": 0.04580152671755725,
+      "hit_rate_0.10": 0.05343511450381679,
+      "bias": -0.19491238823466736
+    }
+  ],
+  "physical_domain_best_R2": -0.1377316572859273,
+  "end_to_end_y": {
+    "n": 480,
+    "R2": 0.8346854213315855,
+    "MAE": 0.6060701880738326,
+    "RMSE": 0.8382624292113005,
+    "med_rel_err": 0.6680347963269928,
+    "hit_rate_0.05": 0.08333333333333333,
+    "hit_rate_0.10": 0.18333333333333332,
+    "bias": 0.10533135675995274
+  },
+  "sign_agreement": 0.8,
+  "n_scenarios": 480,
+  "interpretation": "delta is NOT predictable from exogenous parameters at the pre-registered tolerance; the collapse coordinate is descriptive, not transferable"
+}

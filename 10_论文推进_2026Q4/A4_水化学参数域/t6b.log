@@ -1,0 +1,25 @@
+============================================================================================
+T6b 冷却水质限值: 占位 → 带引用
+============================================================================================
+  [strict    ] GB/T 19923-2024 再生水作工业用水 (间冷开式循环冷却水补充水)
+              GB/T 19923-2024《城市污水再生利用 工业用水水质》表 1  (补充水)
+              限值 {'TDS': 1000.0, 'chloride': 250.0, 'hardness': 450.0, 'alkalinity': 350.0, 'silica': 30.0}   合计校验 {'hardness_plus_alkalinity': 800.0, 'criterion': 1100.0, 'compliant': True}
+  [baseline  ] GB/T 50050-2017 循环冷却水控制指标 (间冷开式, 碳钢换热器)
+              GB/T 50050-2017《工业循环冷却水处理设计规范》  (循环水)
+              限值 {'TDS': 2200.0, 'chloride': 700.0, 'hardness': 750.0, 'alkalinity': 350.0, 'silica': 175.0}   合计校验 {'hardness_plus_alkalinity': 1100.0, 'criterion': 1100.0, 'compliant': True}
+  [permissive] GB/T 50050-2017 循环水 (仅碳钢部件 → Cl⁻ 放宽; 电导率上界)
+              GB/T 50050-2017《工业循环冷却水处理设计规范》  (循环水)
+              限值 {'TDS': 2600.0, 'chloride': 1000.0, 'hardness': 750.0, 'alkalinity': 350.0, 'silica': 175.0}   合计校验 {'hardness_plus_alkalinity': 1100.0, 'criterion': 1100.0, 'compliant': True}
+  [placeholder] 引擎占位值 {'TDS': 2200.0, 'chloride': 500.0, 'hardness': 700.0, 'alkalinity': 500.0, 'silica': 150.0}   合计校验 {'hardness_plus_alkalinity': 1200.0, 'criterion': 1100.0, 'compliant': False}
+--------------------------------------------------------------------------------------------
+                                               source  chi_strict  chi_baseline  chi_permissive  chi_placeholder_engine  CoC_phreeqc   limiting_phase
+                           IEUA RP-1 (2025, tertiary)      0.2500        0.5000          0.5000                  0.5040       2.5202          Calcite
+                        LADWP AWPF (2012, RO product)      1.0000        1.0000          1.0000                  1.0000     100.0000 none_below_upper
+                     Figshare RW (2025, paired study)      0.1451        0.2785          0.2785                  0.2600     100.0000 none_below_upper
+Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)      0.0155        0.0434          0.0621                  0.0310     100.0000 none_below_upper
+                              AI-UWM model assumption      0.3077        0.6769          0.8000                  0.6769     100.0000 none_below_upper
+--------------------------------------------------------------------------------------------
+把占位限值换成**带引用**准则后, 关键定性结论不变: 对真实三级再生水, 限制性判据仍是**方解石饱和** (PHREEQC), 比值法系统性高估允许 CoC (见 T6 §B1)。占位档的问题有二: (i) 无引用; (ii) 钙硬度+总碱度合计 1200 mg/L **超出** GB/T 50050-2017 的 1100 mg/L 结垢判据 —— 即占位档在结垢侧偏宽松、在氯离子侧偏严格。后续一律以引用档为准。
+  占位档位置: 占位档不与引用档单调对齐
+============================================================================================
+写出: T6b_cited_limits_summary.json / T6b_cited_limits_table.csv

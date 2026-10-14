@@ -1,0 +1,38 @@
+{
+ "n_curve_points": 380,
+ "n_cells": 640,
+ "closure_residual_max_ml": 0.0,
+ "fp_residual_max_ml": 0.0,
+ "root_counts": [
+  1
+ ],
+ "statuses": [
+  "converged_unique",
+  "quality_not_converged"
+ ],
+ "baselines": {
+  "ha": {
+   "P0_ml": 24404.451231393024,
+   "gap_ml": 33778.84676860697,
+   "reuse_elig_ml": 58183.297999999995,
+   "E_total_ml": 22814.377710876743
+  },
+  "co": {
+   "P0_ml": 22413.97659165322,
+   "gap_ml": 35116.27540834678,
+   "reuse_elig_ml": 57530.252,
+   "E_total_ml": 22550.114693164403
+  }
+ },
+ "S_city_mean_by_Q_L": {
+  "Q0|L_claim0_capP0": 15030.4,
+  "Q0|L_claimP0_capGap": 17790.0,
+  "Q0|Ld_claimP0_capP0": 15030.4,
+  "Q0|Ls_claim0_capGap": 17790.0,
+  "Q1|L_claim0_capP0": -40252.6,
+  "Q1|L_claimP0_capGap": -8470.4,
+  "Q1|Ld_claimP0_capP0": -12392.0,
+  "Q1|Ls_claim0_capGap": -35643.6
+ },
+ "d_QL_abs_max_ml": 140305.79459528375
+}

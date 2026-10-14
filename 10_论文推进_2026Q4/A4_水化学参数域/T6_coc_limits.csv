@@ -1,0 +1,6 @@
+﻿sample,sclass,is_reclaimed,TDS_is_estimated,n_present,charge_error_pct,CoC_lim_engine_conservative,who_engine,CoC_lim_precipitation_ratio,who_precipitation,CoC_lim_all_ratio,who_all,CoC_lim_phreeqc,limiting_phase_phreeqc,chi_eff_conservative,chi_eff_all_ratio,chi_eff_phreeqc,f_star_2ind
+"IEUA RP-1 (2025, tertiary)",municipal tertiary reclaimed,True,False,9,3.187760659766949,4.966139954853273,TDS,3.5714285714285716,alkalinity,3.5714285714285716,alkalinity,2.5201580272987485,Calcite,0.9932279909706546,0.7142857142857143,0.5040316054597497,0.989
+"LADWP AWPF (2012, RO product)",RO product (advanced treated),True,False,8,,100.0,TDS,70.42253521126761,alkalinity,70.42253521126761,alkalinity,100.0,none_below_upper,1.0,1.0,1.0,
+"Figshare RW (2025, paired study)","reclaimed (RW, high-salinity)",True,True,6,,1.5937143904440885,chloride,1.2998626118754333,hardness,1.2998626118754333,hardness,,n/a,0.3187428780888177,0.25997252237508667,,0.2175
+"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",brackish (BW) — NOT reclaimed water,False,True,6,,0.1551636122709591,chloride,4.138167848578441,hardness,0.1551636122709591,chloride,,n/a,0.03103272245419182,0.03103272245419182,,0.0205
+AI-UWM model assumption,assumed in main model,True,False,2,,3.3846153846153846,TDS,,n/a,3.3846153846153846,TDS,,n/a,0.676923076923077,0.676923076923077,,0.5535

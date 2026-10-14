@@ -1,0 +1,61 @@
+{
+ "n": 700,
+ "status_counts": {
+  "converged_unique": 699,
+  "no_convergence": 1
+ },
+ "class_counts": {
+  "negative": 362,
+  "edge": 336,
+  "positive": 2
+ },
+ "class_share": {
+  "negative": 0.5171,
+  "edge": 0.48,
+  "positive": 0.0029
+ },
+ "P_S_city_gt0": {
+  "dp0.0": 0.002857142857142857,
+  "dp0.5": 0.61,
+  "dp1.0": 0.62,
+  "dp2.0": 0.6214285714285714
+ },
+ "P_S_city_gt0_by_domain_dp1": {
+  "co": 0.6371428571428571,
+  "ha": 0.6028571428571429
+ },
+ "dp_star_quantiles_negative_only": {
+  "q5": 0.010997988469898645,
+  "q25": 0.02500162366777655,
+  "q50": 0.0640732897445559,
+  "q75": 0.17685748636722556,
+  "q95": 0.5925000173971048
+ },
+ "n_negative": 362,
+ "dp_star_share_gt_0.1_in_negative": 0.09944751381215469,
+ "dp_star_share_gt_0.5_in_negative": 0.024861878453038673,
+ "y_dp1_quantiles_all": {
+  "q5": -13.572217486455767,
+  "q25": -0.9279372309521282,
+  "q50": 0.4540647486516843,
+  "q75": 0.8113816977953708,
+  "q95": 0.8732034988869894
+ },
+ "y_dp1_quantiles_excl_illconditioned": {
+  "q5": -1.7785415395587552,
+  "q25": -0.06066668962846471,
+  "q50": 0.6788863065678941,
+  "q75": 0.8113816977953708,
+  "q95": 0.8732034988869894
+ },
+ "illconditioned_share_abs_y_gt5": 0.16285714285714287,
+ "S_city_dp1_quantiles_ML": {
+  "q5": -379087.09038031637,
+  "q25": -25857.875733144887,
+  "q50": 12616.927763776064,
+  "q75": 22413.97659165322,
+  "q95": 24404.451231393024
+ },
+ "discipline_note": "MODEL probabilities under uniform priors and the frozen sample pool; NOT observed event frequencies. 'edge' cases sit on the conditional zero-sum knife-edge S_city(dp=0)~0 and carry no dp* info.",
+ "reading": "P(S_city>0) jumps from ~0 at dp=0 to ~0.62 for any dp>=0.5 and then saturates: adding reuse capacity beyond the incumbent-gap/pool balance cannot fix the ~38% of configurations where displacement dominates."
+}

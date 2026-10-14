@@ -1,0 +1,34 @@
+{
+  "gsa_periods": 3,
+  "gsa_accounting_selfconsistent_MAE": 0.001776341236508679,
+  "gsa_claim": "arithmetic consistency of the source report's own water balance; NOT an independent validation of data-centre cooling physics (C5)",
+  "gsa_coc_range": [
+    2.8,
+    4.91
+  ],
+  "model_reference": {
+    "coC_design": 5.0,
+    "E_ml": 22835.03025143902,
+    "M_ml": 27973.482933769086,
+    "M_over_E": 1.225025,
+    "CoC_effective_by_water_balance": 5.4439506721475395,
+    "source": "A2_规则实验/stage1_cooling_curve.csv (domain=ha, phi=0)"
+  },
+  "baseline_source_note": "C7: single source = A2 frozen cooling curve at phi=0",
+  "meta_disclosure": {
+    "n_disclosed_rows": 90,
+    "n_used": 70,
+    "n_excluded": 20,
+    "disclosure_park_wue_q1_median_q3": [
+      0.12158173763039581,
+      0.18317649495063848,
+      0.30960760254018627
+    ],
+    "model_cooling_over_it_wue_l_per_kwh": 1.8214236650743458,
+    "model_park_equivalent_wue_l_per_kwh": 1.401095126980266,
+    "pue_assumed": 1.3,
+    "ratio_of_park_equivalents": 7.648880536543875,
+    "interpretation": "Model is a WET evaporative design; the disclosed fleet mixes closed-loop/dry designs. This is a scope statement, NOT a validation of fleet-average WUE."
+  },
+  "claim_boundary": "order-of-magnitude anchoring; NOT facility-level point prediction."
+}

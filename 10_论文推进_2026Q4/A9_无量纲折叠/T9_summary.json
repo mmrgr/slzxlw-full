@@ -1,0 +1,42 @@
+{
+ "n_lhs_cities": 240,
+ "n_scenarios": 480,
+ "n_valid": 480,
+ "statuses": [
+  "converged_unique"
+ ],
+ "roots": [
+  1
+ ],
+ "closure_residual_max_ml": 0.0,
+ "collapse_residual_max_abs": 7.105427357601002e-15,
+ "collapse_residual_max_rel": 1.682020221542478e-14,
+ "collapse_R2": 1.0,
+ "dispersion_at_w": 0.039669494511675424,
+ "dispersion_at_naive_dp": 0.7684988565787024,
+ "dispersion_at_phi": 0.8350242682816208,
+ "dispersion_n_physical": 381,
+ "dispersion_excluded_extreme": 99,
+ "variance_reduction_ratio": 19.372539681656892,
+ "Phi_le2_share": 0.79375,
+ "Phi_range": [
+  1.0,
+  36.577844647860154
+ ],
+ "phi_eff_range": [
+  0.02458154303421328,
+  0.938868121804216
+ ],
+ "delta_range": [
+  -14.148828096627822,
+  16.533377249112
+ ],
+ "y_range": [
+  -33.19705911335597,
+  2.4137692822188512
+ ],
+ "collapse_status": "algebraic_identity (audit A1): residual ~ machine precision is mathematically necessary and is NOT a transferability finding",
+ "diagnostic_residual_below_1e6": true,
+ "diagnostic_dispersion_ratio_gt3": true,
+ "transferability_tested_in": "T9b (delta exogenous prediction)"
+}

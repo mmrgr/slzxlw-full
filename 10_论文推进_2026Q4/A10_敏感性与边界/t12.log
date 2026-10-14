@@ -1,0 +1,5 @@
+[T12] 1275 点 | 状态=['converged_unique']
+  零界面可测比例: 0.941
+  AI-UWM model assumption            dp*: chi=0.5->0.19 | chi=0.9->0.00
+  Figshare RW (2025, paired study)   dp*: chi=0.5->0.00 | chi=0.9->0.00
+  IEUA RP-1 (2025, tertiary)         dp*: chi=0.5->0.19 | chi=0.9->0.00

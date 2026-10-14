@@ -1,0 +1,315 @@
+{
+ "fixed": {
+  "domain": "ha",
+  "panel": "B_full",
+  "sample": "IEUA RP-1 (2025, tertiary)",
+  "pool_scale": 1.0,
+  "gap_scale": 1.0,
+  "ai_target": 0.7,
+  "rule": "Ls",
+  "days_per_year": 365.0,
+  "model_days": 730.0,
+  "crf_6pct_20yr": 0.0871845569768514,
+  "energy_basis": "annual sum of daily facility_energy_mwh (uniform for all policies)",
+  "A3_basis": "daily_model.tech_annual_basis (E_total=sum daily E; rep day = wet day)"
+ },
+ "parameters": {
+  "reuse_capex_cny_per_m3d": [
+   5000.0,
+   7000.0
+  ],
+  "membrane_kwh_per_m3": [
+   1.0,
+   2.5
+  ],
+  "a1_kwh_per_m3": [
+   0.1,
+   0.2
+  ],
+  "a1_chem_cny_per_m3": [
+   0.3,
+   0.6
+  ],
+  "carbon_kg_per_kwh": 0.35
+ },
+ "carbon_factor_provenance": "ratio Delta-carbon/Delta-energy in the engine's own intervention_water_energy_carbon.csv (=0.35 kgCO2e/kWh)",
+ "declared_parameters_warning": "membrane/A1 energy and chemical intensities are literature-order DECLARED values; must be replaced with cited sources before submission",
+ "A3_basis_meta": {
+  "dry_wetfrac1.0": {
+   "domain": "ha",
+   "tech": "dry",
+   "wet_fraction_override": 1.0,
+   "rep_day": "2029-04-09",
+   "degenerate_no_wet_day": false,
+   "E_annual_ml_730d": 25131.306630386935,
+   "E_annual_ml_yr": 12565.653315193467,
+   "energy_mwh_yr": 8551625.17284,
+   "energy_kwh_yr": 8551625172.839999,
+   "pue_mean": 1.300547219178082,
+   "wet_frac_mean": 1.0,
+   "n_zero_wet_days": 0,
+   "n_days": 730
+  },
+  "dry_wetfrac0.7": {
+   "domain": "ha",
+   "tech": "dry",
+   "wet_fraction_override": 0.7,
+   "rep_day": "2029-04-09",
+   "degenerate_no_wet_day": false,
+   "E_annual_ml_730d": 17591.914641270858,
+   "E_annual_ml_yr": 8795.957320635429,
+   "energy_mwh_yr": 8551625.17284,
+   "energy_kwh_yr": 8551625172.839999,
+   "pue_mean": 1.300547219178082,
+   "wet_frac_mean": 0.7,
+   "n_zero_wet_days": 0,
+   "n_days": 730
+  },
+  "dry_wetfrac0.5": {
+   "domain": "ha",
+   "tech": "dry",
+   "wet_fraction_override": 0.5,
+   "rep_day": "2029-04-09",
+   "degenerate_no_wet_day": false,
+   "E_annual_ml_730d": 12565.653315193467,
+   "E_annual_ml_yr": 6282.826657596734,
+   "energy_mwh_yr": 8551625.17284,
+   "energy_kwh_yr": 8551625172.839999,
+   "pue_mean": 1.300547219178082,
+   "wet_frac_mean": 0.5,
+   "n_zero_wet_days": 0,
+   "n_days": 730
+  },
+  "dry_wetfrac0.3": {
+   "domain": "ha",
+   "tech": "dry",
+   "wet_fraction_override": 0.3,
+   "rep_day": "2029-04-09",
+   "degenerate_no_wet_day": false,
+   "E_annual_ml_730d": 7539.39198911608,
+   "E_annual_ml_yr": 3769.69599455804,
+   "energy_mwh_yr": 8551625.17284,
+   "energy_kwh_yr": 8551625172.839999,
+   "pue_mean": 1.300547219178082,
+   "wet_frac_mean": 0.29999999999999993,
+   "n_zero_wet_days": 0,
+   "n_days": 730
+  },
+  "dry_wetfrac0.0": {
+   "domain": "ha",
+   "tech": "dry",
+   "wet_fraction_override": 0.0,
+   "rep_day": "2029-04-09",
+   "degenerate_no_wet_day": true,
+   "E_annual_ml_730d": 0.0,
+   "E_annual_ml_yr": 0.0,
+   "energy_mwh_yr": 8551625.17284,
+   "energy_kwh_yr": 8551625172.839999,
+   "pue_mean": 1.300547219178082,
+   "wet_frac_mean": 0.0,
+   "n_zero_wet_days": 730,
+   "n_days": 730
+  },
+  "hybrid_default": {
+   "domain": "ha",
+   "tech": "hybrid",
+   "wet_fraction_override": null,
+   "rep_day": "2029-07-13",
+   "degenerate_no_wet_day": false,
+   "E_annual_ml_730d": 6928.316814222245,
+   "E_annual_ml_yr": 3464.1584071111224,
+   "energy_mwh_yr": 8026025.556840001,
+   "energy_kwh_yr": 8026025556.840001,
+   "pue_mean": 1.2205472191780822,
+   "wet_frac_mean": 0.2740629443754401,
+   "n_zero_wet_days": 414,
+   "n_days": 730
+  }
+ },
+ "n_scenarios": 29,
+ "statuses": [
+  "converged_unique"
+ ],
+ "S_city_range_ml": [
+  -444.002980745332,
+  6101.112807848254
+ ],
+ "energy_range_kwh_yr": [
+  7763225748.839999,
+  33184529114.8744
+ ],
+ "pareto_4d": [
+  {
+   "policy": "A0",
+   "variant": "baseline",
+   "S_city_ml": -418.55,
+   "energy_kwh_yr": 7763225748.84,
+   "carbon_kgco2e_yr": 2717129012.094,
+   "capex_annual_cny": 0.0
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.05_r0.75_lo",
+   "S_city_ml": 610.111,
+   "energy_kwh_yr": 8576707456.553,
+   "carbon_kgco2e_yr": 3001847609.794,
+   "capex_annual_cny": 874393672.139
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.1_r0.75_lo",
+   "S_city_ml": 1220.223,
+   "energy_kwh_yr": 9390189164.266,
+   "carbon_kgco2e_yr": 3286566207.493,
+   "capex_annual_cny": 1748787344.279
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.2_r0.75_lo",
+   "S_city_ml": 2440.445,
+   "energy_kwh_yr": 11017152579.692,
+   "carbon_kgco2e_yr": 3856003402.892,
+   "capex_annual_cny": 3497574688.557
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.3_r0.75_lo",
+   "S_city_ml": 3660.668,
+   "energy_kwh_yr": 12644115995.119,
+   "carbon_kgco2e_yr": 4425440598.292,
+   "capex_annual_cny": 5246362032.836
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.5_r0.75_lo",
+   "S_city_ml": 6101.113,
+   "energy_kwh_yr": 15898042825.971,
+   "carbon_kgco2e_yr": 5564314989.09,
+   "capex_annual_cny": 8743936721.393
+  },
+  {
+   "policy": "A3",
+   "variant": "dry_wetfrac0.0",
+   "S_city_ml": 0.0,
+   "energy_kwh_yr": 8551625172.84,
+   "carbon_kgco2e_yr": 2993068810.494,
+   "capex_annual_cny": 0.0
+  },
+  {
+   "policy": "A3",
+   "variant": "hybrid_default",
+   "S_city_ml": -67.384,
+   "energy_kwh_yr": 8026025556.84,
+   "carbon_kgco2e_yr": 2809108944.894,
+   "capex_annual_cny": 0.0
+  }
+ ],
+ "pareto_2d_S_energy": [
+  {
+   "policy": "A0",
+   "variant": "baseline",
+   "S_city_ml": -418.55,
+   "energy_kwh_yr": 7763225748.84
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.05_r0.75_lo",
+   "S_city_ml": 610.111,
+   "energy_kwh_yr": 8576707456.553
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.1_r0.75_lo",
+   "S_city_ml": 1220.223,
+   "energy_kwh_yr": 9390189164.266
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.2_r0.75_lo",
+   "S_city_ml": 2440.445,
+   "energy_kwh_yr": 11017152579.692
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.3_r0.75_lo",
+   "S_city_ml": 3660.668,
+   "energy_kwh_yr": 12644115995.119
+  },
+  {
+   "policy": "A2",
+   "variant": "ro_k0.5_r0.75_lo",
+   "S_city_ml": 6101.113,
+   "energy_kwh_yr": 15898042825.971
+  },
+  {
+   "policy": "A3",
+   "variant": "dry_wetfrac0.0",
+   "S_city_ml": 0.0,
+   "energy_kwh_yr": 8551625172.84
+  },
+  {
+   "policy": "A3",
+   "variant": "hybrid_default",
+   "S_city_ml": -67.384,
+   "energy_kwh_yr": 8026025556.84
+  }
+ ],
+ "infeasible_or_negative": [
+  {
+   "policy": "A0",
+   "variant": "baseline",
+   "S_city_ml": -418.55
+  },
+  {
+   "policy": "A3",
+   "variant": "dry_wetfrac1.0",
+   "S_city_ml": -444.003
+  },
+  {
+   "policy": "A3",
+   "variant": "dry_wetfrac0.7",
+   "S_city_ml": -353.79
+  },
+  {
+   "policy": "A3",
+   "variant": "dry_wetfrac0.5",
+   "S_city_ml": -278.513
+  },
+  {
+   "policy": "A3",
+   "variant": "dry_wetfrac0.3",
+   "S_city_ml": -186.227
+  },
+  {
+   "policy": "A3",
+   "variant": "hybrid_default",
+   "S_city_ml": -67.384
+  }
+ ],
+ "ledger_crosscheck": [
+  {
+   "policy": "A0",
+   "status": "feasible",
+   "freshwater_saving_ml": 9118.405360693876,
+   "solute_closure_residual_kg": 0.0
+  },
+  {
+   "policy": "A1",
+   "status": "feasible",
+   "freshwater_saving_ml": 9118.405360693876,
+   "solute_closure_residual_kg": 0.0
+  },
+  {
+   "policy": "A2",
+   "status": "feasible",
+   "freshwater_saving_ml": 6838.804020520409,
+   "solute_closure_residual_kg": 0.0
+  }
+ ],
+ "limitations": [
+  "A3 的能耗来自引擎 per-technology 的 technology_pue_adjustment, 与排热湿分 w 无关 (dry +0.12 PUE, hybrid +0.04); 即引擎不给 '越干越耗电' 的连续律, 故 A3 的能耗-水权衡是技术级而非 w 级。",
+  "A3 已在**技术年度基座**上求值 (Σ_t E(t) + 湿日代表日), 不再是'典型日'。热浪期的湿分抬升已由逐日序列体现。",
+  "capex 取下限-上限中值, 按 6%/20yr 折现; 未计征地/管网/电贴费。",
+  "A1 的 S_city 绝对值 = 0: 仅消去水质惩罚, 不产生新增供给. 相对 A0 的改善 = |A0|。"
+ ]
+}

@@ -1,0 +1,379 @@
+{
+ "question": "引擎 water_quality_limits 是占位值 (无引用); 换为带引用准则后 χ 是否改变结论",
+ "engine_semantics": "limit/(补充水掺混浓度) → limit 面向**循环冷却水**; 故引用 GB/T 50050-2017, GB/T 19923-2024 作补充水下界参照",
+ "cited_limit_sets": {
+  "strict": {
+   "limits": {
+    "TDS": 1000.0,
+    "chloride": 250.0,
+    "hardness": 450.0,
+    "alkalinity": 350.0,
+    "silica": 30.0
+   },
+   "label": "GB/T 19923-2024 再生水作工业用水 (间冷开式循环冷却水补充水)",
+   "citation": "GB/T 19923-2024《城市污水再生利用 工业用水水质》表 1",
+   "scope": "补充水",
+   "note": "这是**补充水**口径的限值。引擎的 water_quality_limits 面向循环水, 故本档在严格端上更保守 (等价于假设循环水须直接满足补充水标准)。"
+  },
+  "baseline": {
+   "limits": {
+    "TDS": 2200.0,
+    "chloride": 700.0,
+    "hardness": 750.0,
+    "alkalinity": 350.0,
+    "silica": 175.0
+   },
+   "label": "GB/T 50050-2017 循环冷却水控制指标 (间冷开式, 碳钢换热器)",
+   "citation": "GB/T 50050-2017《工业循环冷却水处理设计规范》",
+   "scope": "循环水",
+   "note": "TDS 由电导率 ≤4000 µS/cm 换算 (TDS ≈ 0.55×EC); Cl⁻ ≤700 mg/L 对应碳钢腐蚀速率 ≤0.075 mm/a; 结垢判据为**合计值** 钙硬度+总碱度 ≤1100 (as CaCO3), 本表拆成 hardness 750 / alkalinity 350 以适配引擎的单项接口。"
+  },
+  "permissive": {
+   "limits": {
+    "TDS": 2600.0,
+    "chloride": 1000.0,
+    "hardness": 750.0,
+    "alkalinity": 350.0,
+    "silica": 175.0
+   },
+   "label": "GB/T 50050-2017 循环水 (仅碳钢部件 → Cl⁻ 放宽; 电导率上界)",
+   "citation": "GB/T 50050-2017《工业循环冷却水处理设计规范》",
+   "scope": "循环水",
+   "note": "仅两处放宽: Cl⁻ 至碳钢专用系统值 1000 mg/L (无不锈钢/铜部件时 200 mg/L 的不锈钢点蚀约束不生效), 电导率取上界 4000 µS/cm 的 TDS 换算 2600。钙硬度+总碱度合计仍为 1100 (as CaCO3), 未突破标准。"
+  }
+ },
+ "placeholder": {
+  "TDS": 2200.0,
+  "chloride": 500.0,
+  "hardness": 700.0,
+  "alkalinity": 500.0,
+  "silica": 150.0
+ },
+ "sum_criterion_check": {
+  "GB/T 50050-2017 (钙硬度+总碱度 ≤ 1100 as CaCO3)": {
+   "strict": {
+    "hardness_plus_alkalinity": 800.0,
+    "criterion": 1100.0,
+    "compliant": true
+   },
+   "baseline": {
+    "hardness_plus_alkalinity": 1100.0,
+    "criterion": 1100.0,
+    "compliant": true
+   },
+   "permissive": {
+    "hardness_plus_alkalinity": 1100.0,
+    "criterion": 1100.0,
+    "compliant": true
+   },
+   "placeholder_engine": {
+    "hardness_plus_alkalinity": 1200.0,
+    "criterion": 1100.0,
+    "compliant": false
+   }
+  }
+ },
+ "per_sample": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "phreeqc": {
+    "phreeqc_available": true,
+    "safe_multiplier": 2.5201580272987485,
+    "limiting_phase": "Calcite",
+    "SI_at_limit": -0.0
+   },
+   "makeup_mg_l": {
+    "TDS": 443.0,
+    "chloride": 100.0,
+    "hardness": 149.427,
+    "alkalinity": 140.0,
+    "silica": 24.0
+   },
+   "tiers": {
+    "strict": {
+     "CoC_ratio": 1.25,
+     "limiting_species_ratio": "silica",
+     "CoC_min_with_phreeqc": 1.25,
+     "chi_eff": 0.25,
+     "chi_ratio_only": 0.25
+    },
+    "baseline": {
+     "CoC_ratio": 2.5,
+     "limiting_species_ratio": "alkalinity",
+     "CoC_min_with_phreeqc": 2.5,
+     "chi_eff": 0.5,
+     "chi_ratio_only": 0.5
+    },
+    "permissive": {
+     "CoC_ratio": 2.5,
+     "limiting_species_ratio": "alkalinity",
+     "CoC_min_with_phreeqc": 2.5,
+     "chi_eff": 0.5,
+     "chi_ratio_only": 0.5
+    },
+    "placeholder_engine": {
+     "CoC_ratio": 3.5714285714285716,
+     "limiting_species_ratio": "alkalinity",
+     "CoC_min_with_phreeqc": 2.5201580272987485,
+     "chi_eff": 0.5040316054597497,
+     "chi_ratio_only": 0.7142857142857143
+    }
+   }
+  },
+  "LADWP AWPF (2012, RO product)": {
+   "phreeqc": {
+    "phreeqc_available": true,
+    "safe_multiplier": 100.0,
+    "limiting_phase": "none_below_upper"
+   },
+   "makeup_mg_l": {
+    "TDS": 22.0,
+    "chloride": 3.6,
+    "hardness": 1.0237699999999998,
+    "alkalinity": 7.1,
+    "silica": 0.52
+   },
+   "tiers": {
+    "strict": {
+     "CoC_ratio": 45.45454545454545,
+     "limiting_species_ratio": "TDS",
+     "CoC_min_with_phreeqc": 45.45454545454545,
+     "chi_eff": 1.0,
+     "chi_ratio_only": 1.0
+    },
+    "baseline": {
+     "CoC_ratio": 49.29577464788733,
+     "limiting_species_ratio": "alkalinity",
+     "CoC_min_with_phreeqc": 49.29577464788733,
+     "chi_eff": 1.0,
+     "chi_ratio_only": 1.0
+    },
+    "permissive": {
+     "CoC_ratio": 49.29577464788733,
+     "limiting_species_ratio": "alkalinity",
+     "CoC_min_with_phreeqc": 49.29577464788733,
+     "chi_eff": 1.0,
+     "chi_ratio_only": 1.0
+    },
+    "placeholder_engine": {
+     "CoC_ratio": 70.42253521126761,
+     "limiting_species_ratio": "alkalinity",
+     "CoC_min_with_phreeqc": 70.42253521126761,
+     "chi_eff": 1.0,
+     "chi_ratio_only": 1.0
+    }
+   }
+  },
+  "Figshare RW (2025, paired study)": {
+   "phreeqc": {
+    "phreeqc_available": true,
+    "safe_multiplier": 100.0,
+    "limiting_phase": "none_below_upper"
+   },
+   "makeup_mg_l": {
+    "TDS": 1378.0,
+    "chloride": 313.7325,
+    "hardness": 538.5184508,
+    "alkalinity": NaN,
+    "silica": NaN
+   },
+   "tiers": {
+    "strict": {
+     "CoC_ratio": 0.7256894049346879,
+     "limiting_species_ratio": "TDS",
+     "CoC_min_with_phreeqc": 0.7256894049346879,
+     "chi_eff": 0.14513788098693758,
+     "chi_ratio_only": 0.14513788098693758
+    },
+    "baseline": {
+     "CoC_ratio": 1.3927099412951072,
+     "limiting_species_ratio": "hardness",
+     "CoC_min_with_phreeqc": 1.3927099412951072,
+     "chi_eff": 0.27854198825902143,
+     "chi_ratio_only": 0.27854198825902143
+    },
+    "permissive": {
+     "CoC_ratio": 1.3927099412951072,
+     "limiting_species_ratio": "hardness",
+     "CoC_min_with_phreeqc": 1.3927099412951072,
+     "chi_eff": 0.27854198825902143,
+     "chi_ratio_only": 0.27854198825902143
+    },
+    "placeholder_engine": {
+     "CoC_ratio": 1.2998626118754333,
+     "limiting_species_ratio": "hardness",
+     "CoC_min_with_phreeqc": 1.2998626118754333,
+     "chi_eff": 0.25997252237508667,
+     "chi_ratio_only": 0.25997252237508667
+    }
+   }
+  },
+  "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)": {
+   "phreeqc": {
+    "phreeqc_available": true,
+    "safe_multiplier": 100.0,
+    "limiting_phase": "none_below_upper"
+   },
+   "makeup_mg_l": {
+    "TDS": 6130.8,
+    "chloride": 3222.4050000000007,
+    "hardness": 169.1569858,
+    "alkalinity": NaN,
+    "silica": NaN
+   },
+   "tiers": {
+    "strict": {
+     "CoC_ratio": 0.07758180613547955,
+     "limiting_species_ratio": "chloride",
+     "CoC_min_with_phreeqc": 0.07758180613547955,
+     "chi_eff": 0.01551636122709591,
+     "chi_ratio_only": 0.01551636122709591
+    },
+    "baseline": {
+     "CoC_ratio": 0.2172290571793427,
+     "limiting_species_ratio": "chloride",
+     "CoC_min_with_phreeqc": 0.2172290571793427,
+     "chi_eff": 0.043445811435868543,
+     "chi_ratio_only": 0.043445811435868543
+    },
+    "permissive": {
+     "CoC_ratio": 0.3103272245419182,
+     "limiting_species_ratio": "chloride",
+     "CoC_min_with_phreeqc": 0.3103272245419182,
+     "chi_eff": 0.06206544490838364,
+     "chi_ratio_only": 0.06206544490838364
+    },
+    "placeholder_engine": {
+     "CoC_ratio": 0.1551636122709591,
+     "limiting_species_ratio": "chloride",
+     "CoC_min_with_phreeqc": 0.1551636122709591,
+     "chi_eff": 0.03103272245419182,
+     "chi_ratio_only": 0.03103272245419182
+    }
+   }
+  },
+  "AI-UWM model assumption": {
+   "phreeqc": {
+    "phreeqc_available": true,
+    "safe_multiplier": 100.0,
+    "limiting_phase": "none_below_upper"
+   },
+   "makeup_mg_l": {
+    "TDS": 650.0,
+    "chloride": 130.0,
+    "hardness": NaN,
+    "alkalinity": NaN,
+    "silica": NaN
+   },
+   "tiers": {
+    "strict": {
+     "CoC_ratio": 1.5384615384615385,
+     "limiting_species_ratio": "TDS",
+     "CoC_min_with_phreeqc": 1.5384615384615385,
+     "chi_eff": 0.3076923076923077,
+     "chi_ratio_only": 0.3076923076923077
+    },
+    "baseline": {
+     "CoC_ratio": 3.3846153846153846,
+     "limiting_species_ratio": "TDS",
+     "CoC_min_with_phreeqc": 3.3846153846153846,
+     "chi_eff": 0.676923076923077,
+     "chi_ratio_only": 0.676923076923077
+    },
+    "permissive": {
+     "CoC_ratio": 4.0,
+     "limiting_species_ratio": "TDS",
+     "CoC_min_with_phreeqc": 4.0,
+     "chi_eff": 0.8,
+     "chi_ratio_only": 0.8
+    },
+    "placeholder_engine": {
+     "CoC_ratio": 3.3846153846153846,
+     "limiting_species_ratio": "TDS",
+     "CoC_min_with_phreeqc": 3.3846153846153846,
+     "chi_eff": 0.676923076923077,
+     "chi_ratio_only": 0.676923076923077
+    }
+   }
+  }
+ },
+ "summary": {
+  "n_samples": 5,
+  "chi_by_tier": {
+   "chi_strict": {
+    "min": 0.01551636122709591,
+    "median": 0.25,
+    "max": 1.0
+   },
+   "chi_baseline": {
+    "min": 0.043445811435868543,
+    "median": 0.5,
+    "max": 1.0
+   },
+   "chi_permissive": {
+    "min": 0.06206544490838364,
+    "median": 0.5,
+    "max": 1.0
+   },
+   "chi_placeholder_engine": {
+    "min": 0.03103272245419182,
+    "median": 0.5040316054597497,
+    "max": 1.0
+   }
+  },
+  "chi_eff_span_ratio_cited": 23.017178571428577,
+  "placeholder_position": "占位档不与引用档单调对齐",
+  "placeholder_compliance": {
+   "hardness_plus_alkalinity_violates_GBT50050": true,
+   "chloride_below_GBT50050_carbon_steel": true
+  },
+  "conclusion": "把占位限值换成**带引用**准则后, 关键定性结论不变: 对真实三级再生水, 限制性判据仍是**方解石饱和** (PHREEQC), 比值法系统性高估允许 CoC (见 T6 §B1)。占位档的问题有二: (i) 无引用; (ii) 钙硬度+总碱度合计 1200 mg/L **超出** GB/T 50050-2017 的 1100 mg/L 结垢判据 —— 即占位档在结垢侧偏宽松、在氯离子侧偏严格。后续一律以引用档为准。",
+  "placeholder_retired": true
+ },
+ "table": [
+  {
+   "source": "IEUA RP-1 (2025, tertiary)",
+   "chi_strict": 0.25,
+   "chi_baseline": 0.5,
+   "chi_permissive": 0.5,
+   "chi_placeholder_engine": 0.504,
+   "CoC_phreeqc": 2.5202,
+   "limiting_phase": "Calcite"
+  },
+  {
+   "source": "LADWP AWPF (2012, RO product)",
+   "chi_strict": 1.0,
+   "chi_baseline": 1.0,
+   "chi_permissive": 1.0,
+   "chi_placeholder_engine": 1.0,
+   "CoC_phreeqc": 100.0,
+   "limiting_phase": "none_below_upper"
+  },
+  {
+   "source": "Figshare RW (2025, paired study)",
+   "chi_strict": 0.1451,
+   "chi_baseline": 0.2785,
+   "chi_permissive": 0.2785,
+   "chi_placeholder_engine": 0.26,
+   "CoC_phreeqc": 100.0,
+   "limiting_phase": "none_below_upper"
+  },
+  {
+   "source": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "chi_strict": 0.0155,
+   "chi_baseline": 0.0434,
+   "chi_permissive": 0.0621,
+   "chi_placeholder_engine": 0.031,
+   "CoC_phreeqc": 100.0,
+   "limiting_phase": "none_below_upper"
+  },
+  {
+   "source": "AI-UWM model assumption",
+   "chi_strict": 0.3077,
+   "chi_baseline": 0.6769,
+   "chi_permissive": 0.8,
+   "chi_placeholder_engine": 0.6769,
+   "CoC_phreeqc": 100.0,
+   "limiting_phase": "none_below_upper"
+  }
+ ]
+}

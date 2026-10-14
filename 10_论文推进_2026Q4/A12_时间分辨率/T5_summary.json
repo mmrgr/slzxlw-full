@@ -1,0 +1,424 @@
+{
+ "estimand": "daily-resolved cooling water / heat-wave axis",
+ "heatwave_def": {
+  "wet_bulb_quantile": 0.95,
+  "hybrid_full_wet_wb_c": 24.0
+ },
+ "domains": {
+  "ha": {
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "n_days": 730,
+   "wet_bulb_threshold_p95_c": 25.357499999999998,
+   "n_heatwave_days": 37,
+   "n_full_wet_days": 70,
+   "date_heatwave_window": [
+    "2029-06-18",
+    "2030-08-20"
+   ],
+   "tech": {
+    "evaporative": {
+     "evaporation": {
+      "sum": 22814.37771087673,
+      "mean": 31.252572206680455,
+      "p50": 31.17667608293877,
+      "p95": 34.31453313893878,
+      "max": 34.79222112391837,
+      "min": 27.705936666122447,
+      "peak_over_mean": 1.1132594428973526,
+      "p95_over_mean": 1.0979746854757704,
+      "cv": 0.06275929926326757
+     },
+     "makeup": {
+      "sum": 29880.088614291002,
+      "mean": 40.9316282387548,
+      "p50": 40.832226759055374,
+      "p95": 44.94189164145796,
+      "max": 45.56752164995771,
+      "min": 36.28658441693956,
+      "peak_over_mean": 1.1132594428973526,
+      "p95_over_mean": 1.0979746854757704,
+      "cv": 0.06275929926326757
+     },
+     "wet_fraction": {
+      "min": 1.0,
+      "p50": 1.0,
+      "p95": 1.0,
+      "max": 1.0,
+      "n_days_zero": 0
+     },
+     "M_over_E": {
+      "n_valid": 730,
+      "min": 1.3097043010752685,
+      "p50": 1.309704301075269,
+      "max": 1.3097043010752691,
+      "is_constant": true
+     },
+     "heatwave_vs_all": {
+      "E_heat_mean": 34.20531627094981,
+      "E_all_mean": 31.252572206680455,
+      "E_heat_over_all": 1.094480033347085,
+      "wf_heat_mean": 1.0,
+      "wf_all_mean": 1.0
+     },
+     "tau": {
+      "p50": 1.0207954540397213,
+      "p95": 1.5984275821429652,
+      "max": 1.9465173627079546,
+      "frac_days_gt1": 0.5315068493150685,
+      "heat_mean": 1.0001443753650043
+     }
+    },
+    "hybrid": {
+     "evaporation": {
+      "sum": 6928.316814222245,
+      "mean": 9.490844950989377,
+      "p50": 0.0,
+      "p95": 35.42624928470204,
+      "max": 35.91182406269388,
+      "min": 0.0,
+      "peak_over_mean": 3.783838451491112,
+      "p95_over_mean": 3.7326760122668543,
+      "cv": 0.5137304811559276
+     },
+     "makeup": {
+      "sum": 9074.046330798978,
+      "mean": 12.430200453149284,
+      "p50": 0.0,
+      "p95": 46.39791105913893,
+      "max": 47.03387043436851,
+      "min": 0.0,
+      "peak_over_mean": 3.7838384514911123,
+      "p95_over_mean": 3.732676012266855,
+      "cv": 0.5137304811559276
+     },
+     "wet_fraction": {
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 1.0,
+      "max": 1.0,
+      "n_days_zero": 414
+     },
+     "M_over_E": {
+      "n_valid": 316,
+      "min": 1.3097043010752687,
+      "p50": 1.309704301075269,
+      "max": 1.3097043010752691,
+      "is_constant": true
+     },
+     "heatwave_vs_all": {
+      "E_heat_mean": 35.313401751369,
+      "E_all_mean": 9.490844950989377,
+      "E_heat_over_all": 3.720785866140163,
+      "wf_heat_mean": 1.0,
+      "wf_all_mean": 0.2740629443754401
+     },
+     "tau": {
+      "p50": 0.0,
+      "p95": 3.4764410452947034,
+      "max": 4.6123356065517465,
+      "frac_days_gt1": 0.3506849315068493,
+      "heat_mean": 3.4000760588839616
+     }
+    },
+    "dry": {
+     "evaporation": {
+      "sum": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "min": 0.0,
+      "peak_over_mean": NaN,
+      "p95_over_mean": NaN,
+      "cv": NaN
+     },
+     "makeup": {
+      "sum": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "min": 0.0,
+      "peak_over_mean": NaN,
+      "p95_over_mean": NaN,
+      "cv": NaN
+     },
+     "wet_fraction": {
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "n_days_zero": 730
+     },
+     "M_over_E": {
+      "n_valid": 0,
+      "min": null,
+      "p50": null,
+      "max": null,
+      "is_constant": false
+     },
+     "heatwave_vs_all": {
+      "E_heat_mean": 0.0,
+      "E_all_mean": 0.0,
+      "E_heat_over_all": null,
+      "wf_heat_mean": 0.0,
+      "wf_all_mean": 0.0
+     },
+     "tau": {
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "frac_days_gt1": 0.0,
+      "heat_mean": 0.0
+     }
+    }
+   },
+   "calibration": {
+    "evaporative|ai_load_factor_a30": {
+     "E_sum_ml": 22814.37771087673,
+     "M_sum_ml": 27948.18305526677,
+     "M_over_E_is_constant": true
+    },
+    "evaporative|ai_load_factor_a60": {
+     "E_sum_ml": 22835.03025143902,
+     "M_sum_ml": 27973.482933769086,
+     "M_over_E_is_constant": true
+    },
+    "evaporative|ai_load_factor_a90": {
+     "E_sum_ml": 22855.802285952,
+     "M_sum_ml": 27998.929195348348,
+     "M_over_E_is_constant": true
+    },
+    "vs_T2_E_total": {
+     "E_sum_daily_ml": 22814.37771087673,
+     "E_total_T2_ml": 22814.377710876743,
+     "rel_diff": -4.783797550643657e-16,
+     "M_over_E_constant_repr_day": true,
+     "verdict": "年度缩放对蒸发式无偏 (M/E 逐日恒定)"
+    }
+   }
+  },
+  "co": {
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "n_days": 730,
+   "wet_bulb_threshold_p95_c": 17.781,
+   "n_heatwave_days": 37,
+   "n_full_wet_days": 0,
+   "date_heatwave_window": [
+    "2029-06-05",
+    "2030-09-11"
+   ],
+   "tech": {
+    "evaporative": {
+     "evaporation": {
+      "sum": 22550.114693164407,
+      "mean": 30.890568072827953,
+      "p50": 30.775858883265307,
+      "p95": 33.578427652310204,
+      "max": 34.34369107591837,
+      "min": 27.807075236571432,
+      "peak_over_mean": 1.111785674997925,
+      "p95_over_mean": 1.0870123065767299,
+      "cv": 0.05661773948405295
+     },
+     "makeup": {
+      "sum": 29533.98220337804,
+      "mean": 40.45750986764115,
+      "p50": 40.30727474869809,
+      "p95": 43.977811119575414,
+      "max": 44.98007991693062,
+      "min": 36.419046037661204,
+      "peak_over_mean": 1.111785674997925,
+      "p95_over_mean": 1.0870123065767299,
+      "cv": 0.05661773948405293
+     },
+     "wet_fraction": {
+      "min": 1.0,
+      "p50": 1.0,
+      "p95": 1.0,
+      "max": 1.0,
+      "n_days_zero": 0
+     },
+     "M_over_E": {
+      "n_valid": 730,
+      "min": 1.3097043010752685,
+      "p50": 1.309704301075269,
+      "max": 1.3097043010752691,
+      "is_constant": true
+     },
+     "heatwave_vs_all": {
+      "E_heat_mean": 33.52578481540871,
+      "E_all_mean": 30.890568072827953,
+      "E_heat_over_all": 1.0853081347150348,
+      "wf_heat_mean": 1.0,
+      "wf_all_mean": 1.0
+     },
+     "tau": {
+      "p50": 1.0063407616793882,
+      "p95": 1.449146912103158,
+      "max": 1.7278196590699388,
+      "frac_days_gt1": 0.5178082191780822,
+      "heat_mean": 0.9555452875366105
+     }
+    },
+    "hybrid": {
+     "evaporation": {
+      "sum": 2228.5395735532506,
+      "mean": 3.052793936374316,
+      "p50": 0.0,
+      "p95": 16.56055237849265,
+      "max": 32.68910593687771,
+      "min": 0.0,
+      "peak_over_mean": 10.707930708124138,
+      "p95_over_mean": 5.424720018332114,
+      "cv": 0.5792706118446315
+     },
+     "makeup": {
+      "sum": 2918.7278645991382,
+      "mean": 3.998257348765943,
+      "p50": 0.0,
+      "p95": 21.689426678294094,
+      "max": 42.81306264383384,
+      "min": 0.0,
+      "peak_over_mean": 10.707930708124136,
+      "p95_over_mean": 5.424720018332113,
+      "cv": 0.5792706118446316
+     },
+     "wet_fraction": {
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 0.48177635689387877,
+      "max": 0.9217766389742202,
+      "n_days_zero": 526
+     },
+     "M_over_E": {
+      "n_valid": 204,
+      "min": 1.3097043010752685,
+      "p50": 1.309704301075269,
+      "max": 1.3097043010752691,
+      "is_constant": true
+     },
+     "heatwave_vs_all": {
+      "E_heat_mean": 20.68850626574421,
+      "E_all_mean": 3.052793936374316,
+      "E_heat_over_all": 6.776908856912608,
+      "wf_heat_mean": 0.5967741742775002,
+      "wf_all_mean": 0.08901052744639626
+     },
+     "tau": {
+      "p50": 0.0,
+      "p95": 4.90969790967058,
+      "max": 9.331722976720538,
+      "frac_days_gt1": 0.24794520547945206,
+      "heat_mean": 5.974975493228149
+     }
+    },
+    "dry": {
+     "evaporation": {
+      "sum": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "min": 0.0,
+      "peak_over_mean": NaN,
+      "p95_over_mean": NaN,
+      "cv": NaN
+     },
+     "makeup": {
+      "sum": 0.0,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "min": 0.0,
+      "peak_over_mean": NaN,
+      "p95_over_mean": NaN,
+      "cv": NaN
+     },
+     "wet_fraction": {
+      "min": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "n_days_zero": 730
+     },
+     "M_over_E": {
+      "n_valid": 0,
+      "min": null,
+      "p50": null,
+      "max": null,
+      "is_constant": false
+     },
+     "heatwave_vs_all": {
+      "E_heat_mean": 0.0,
+      "E_all_mean": 0.0,
+      "E_heat_over_all": null,
+      "wf_heat_mean": 0.0,
+      "wf_all_mean": 0.0
+     },
+     "tau": {
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "frac_days_gt1": 0.0,
+      "heat_mean": 0.0
+     }
+    }
+   },
+   "calibration": {
+    "evaporative|ai_load_factor_a30": {
+     "E_sum_ml": 22550.114693164407,
+     "M_sum_ml": 27624.454251993728,
+     "M_over_E_is_constant": true
+    },
+    "evaporative|ai_load_factor_a60": {
+     "E_sum_ml": 22565.591095209795,
+     "M_sum_ml": 27643.41323140938,
+     "M_over_E_is_constant": true
+    },
+    "evaporative|ai_load_factor_a90": {
+     "E_sum_ml": 22581.184863438368,
+     "M_sum_ml": 27662.515987333587,
+     "M_over_E_is_constant": true
+    },
+    "vs_T2_E_total": {
+     "E_sum_daily_ml": 22550.114693164407,
+     "E_total_T2_ml": 22550.114693164403,
+     "rel_diff": 1.6132861657659286e-16,
+     "M_over_E_constant_repr_day": true,
+     "verdict": "年度缩放对蒸发式无偏 (M/E 逐日恒定)"
+    }
+   }
+  }
+ },
+ "calibration": {},
+ "artifacts": {
+  "daily_series": [
+   "T5_daily_series_ha_evaporative.csv",
+   "T5_daily_series_ha_hybrid.csv",
+   "T5_daily_series_ha_dry.csv",
+   "T5_daily_series_co_evaporative.csv",
+   "T5_daily_series_co_hybrid.csv",
+   "T5_daily_series_co_dry.csv"
+  ]
+ },
+ "verdicts": [
+  {
+   "domain": "ha",
+   "evaporative_peak_over_mean": 1.1132594428973526,
+   "hybrid_peak_over_mean": 3.783838451491112,
+   "evaporative_time_structure": "flat (PUE-driven only)",
+   "hybrid_time_structure": "strongly seasonal (wet-fraction driven)",
+   "implication": "时间分辨率对蒸发式结果影响小; 对 hybrid/dry 是决定性的, 且峰值落在城市自身应力最高时段 → 指标 C 的必要性成立"
+  },
+  {
+   "domain": "co",
+   "evaporative_peak_over_mean": 1.111785674997925,
+   "hybrid_peak_over_mean": 10.707930708124138,
+   "evaporative_time_structure": "flat (PUE-driven only)",
+   "hybrid_time_structure": "strongly seasonal (wet-fraction driven)",
+   "implication": "时间分辨率对蒸发式结果影响小; 对 hybrid/dry 是决定性的, 且峰值落在城市自身应力最高时段 → 指标 C 的必要性成立"
+  }
+ ]
+}

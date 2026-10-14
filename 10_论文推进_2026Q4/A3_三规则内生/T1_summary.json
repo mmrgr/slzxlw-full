@@ -1,0 +1,76 @@
+{
+  "prereg_sha256_16": "bd4eab72b579a1e8",
+  "n_scenarios": 532,
+  "identity_residual_max_pct_theta0": 6.882604378528657e-13,
+  "general_closure_max_abs_ml": 1.8189894035458565e-12,
+  "cross_module_max_abs_diff_ml": 3.637978807091713e-12,
+  "F1_no_expansion_max_S_city_ml_ALL": {
+    "co|dedicated": 0.0,
+    "co|engine_native": 1.8189894035458565e-12,
+    "co|incumbent_first": 0.0,
+    "co|pro_rata": 0.0,
+    "ha|dedicated": 0.0,
+    "ha|engine_native": 1.8189894035458565e-12,
+    "ha|incumbent_first": 0.0,
+    "ha|pro_rata": 0.0
+  },
+  "F1_no_expansion_max_S_city_ml_AI_ACTIVE": {
+    "co|engine_native": 1.8189894035458565e-12,
+    "co|pro_rata": 0.0,
+    "ha|engine_native": 1.8189894035458565e-12,
+    "ha|pro_rata": 0.0
+  },
+  "F1_n_active_scenarios": {
+    "co|dedicated": 0.0,
+    "co|engine_native": 18.0,
+    "co|incumbent_first": 0.0,
+    "co|pro_rata": 18.0,
+    "ha|dedicated": 0.0,
+    "ha|engine_native": 18.0,
+    "ha|incumbent_first": 0.0,
+    "ha|pro_rata": 18.0
+  },
+  "F1_triggered": false,
+  "F1_trivial_rules_note": "audit A3: at theta=0 the incumbent_first and dedicated rules allocate ZERO reclaimed water to the AI (pool already fully claimed / no dedicated increment), so their S_city=0 is a trivial pass. Only rules where AI actually receives reclaimed water are informative.",
+  "S_city_is_conditional": "S_city = M0 - M(phi_act) <= 0 holds conditional on (i) rigid incumbent service and (ii) fixed total reclaimed supply; it is an accounting statement, not a physical law (audit D1).",
+  "max_S_city_with_expansion_ml": {
+    "co|dedicated": 21008.046942793884,
+    "co|incumbent_first": 21008.046942793884,
+    "ha|dedicated": 22669.302811393103,
+    "ha|incumbent_first": 22669.302811393103
+  },
+  "engine_crosscheck": [
+    {
+      "domain": "ha",
+      "phi_requested": 0.3,
+      "engine_M_ml": 27973.482933769086,
+      "engine_AI_reclaimed_ml": 8392.044880130725,
+      "engine_phi_actual": 0.29999999999999993,
+      "engine_pool_ml": 24345.180434682752
+    },
+    {
+      "domain": "ha",
+      "phi_requested": 0.8,
+      "engine_M_ml": 29737.901981967647,
+      "engine_AI_reclaimed_ml": 23607.418525407025,
+      "engine_phi_actual": 0.7938494968381428,
+      "engine_pool_ml": 24627.424748889112
+    },
+    {
+      "domain": "co",
+      "phi_requested": 0.3,
+      "engine_M_ml": 27643.41323140938,
+      "engine_AI_reclaimed_ml": 8293.023969422813,
+      "engine_phi_actual": 0.29999999999999993,
+      "engine_pool_ml": 22353.732921963867
+    },
+    {
+      "domain": "co",
+      "phi_requested": 0.8,
+      "engine_M_ml": 29181.82027740435,
+      "engine_AI_reclaimed_ml": 22386.213575653434,
+      "engine_phi_actual": 0.7671287590304025,
+      "engine_pool_ml": 22584.44269976778
+    }
+  ]
+}

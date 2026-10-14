@@ -1,0 +1,524 @@
+{
+ "criteria": {
+  "T_A_structural": {
+   "threshold_rel": 1e-06,
+   "max_rel_diff": 6.278534533664416e-08,
+   "pass": true,
+   "note": "窗口单步解与逐日解共用同一求解器, 残差应仅为求解器自身容差 (~1e-8 相对), 远小于任何物理量。"
+  },
+  "T_D_scaling": {
+   "threshold_rel": 1e-09,
+   "max_rel_diff_non_degenerate": 1.7666962966632395e-16,
+   "pass": true
+  },
+  "T_B_aggregation": {
+   "max_rel_diff": 2.1955449444436033,
+   "max_abs_diff_over_m0": 0.1292723798499785,
+   "sign_agreement_all": true,
+   "one_step_adequate_rel_5pct": false,
+   "one_step_adequate_over_m0_1pct": false
+  }
+ },
+ "T_A_structural": {
+  "ha|evaporative": {
+   "rep_day": "2029-04-09",
+   "E_rep_ml": 31.344788547918373,
+   "M0_rep_direct_ml": 38.398149590913704,
+   "m0_window_ml": 38.398149590913704,
+   "pool_rep_ml": 33.63705572516682,
+   "M_ml": {
+    "window_1d": 39.55767677691749,
+    "daily": 39.55767679163309,
+    "abs_diff": 1.4715602958403906e-08,
+    "rel_diff": 3.7200372108279843e-10
+   },
+   "x_ai_ml": {
+    "window_1d": 12.593128783192757,
+    "daily": 12.593128786123582,
+    "abs_diff": 2.9308253601811884e-09,
+    "rel_diff": 2.3273210420056796e-10
+   },
+   "inc_reclaimed_ml": {
+    "window_1d": 21.043926941974057,
+    "daily": 21.043926939043235,
+    "abs_diff": 2.9308218074675096e-09,
+    "rel_diff": 1.3927162052733204e-10
+   },
+   "S_AI_ml": {
+    "window_1d": 11.433601597188972,
+    "daily": 11.433601585404194,
+    "abs_diff": 1.1784777598222718e-08,
+    "rel_diff": 1.0307143814701472e-09
+   },
+   "S_city_ml": {
+    "window_1d": -1.1595271860037855,
+    "daily": -1.1595272007193884,
+    "abs_diff": 1.4715602958403906e-08,
+    "rel_diff": 1.2691037464261632e-08
+   }
+  },
+  "ha|hybrid": {
+   "rep_day": "2029-07-13",
+   "E_rep_ml": 23.95979325569366,
+   "M0_rep_direct_ml": 29.351345733056128,
+   "m0_window_ml": 29.351345733056128,
+   "pool_rep_ml": 35.287179231967365,
+   "M_ml": {
+    "window_1d": 30.374675673285935,
+    "daily": 30.374675727716863,
+    "abs_diff": 5.443092732093646e-08,
+    "rel_diff": 1.7919838192316118e-09
+   },
+   "x_ai_ml": {
+    "window_1d": 11.10963722517811,
+    "daily": 11.109637238818573,
+    "abs_diff": 1.3640462981356904e-08,
+    "rel_diff": 1.2278045362672244e-09
+   },
+   "inc_reclaimed_ml": {
+    "window_1d": 24.177542006789253,
+    "daily": 24.177541993148786,
+    "abs_diff": 1.3640466534070583e-08,
+    "rel_diff": 5.64179209377042e-10
+   },
+   "S_AI_ml": {
+    "window_1d": 10.086307284948303,
+    "daily": 10.086307244157839,
+    "abs_diff": 4.079046433957956e-08,
+    "rel_diff": 4.044142537720496e-09
+   },
+   "S_city_ml": {
+    "window_1d": -1.0233299402298073,
+    "daily": -1.0233299946607417,
+    "abs_diff": 5.443093442636382e-08,
+    "rel_diff": 5.319001456572292e-08
+   }
+  },
+  "co|evaporative": {
+   "rep_day": "2030-04-15",
+   "E_rep_ml": 31.009332119510205,
+   "M0_rep_direct_ml": 37.98720707970299,
+   "m0_window_ml": 37.98720707970299,
+   "pool_rep_ml": 30.523102753606533,
+   "M_ml": {
+    "window_1d": 39.00450702285851,
+    "daily": 39.004507068627625,
+    "abs_diff": 4.576911294407182e-08,
+    "rel_diff": 1.1734313913325178e-09
+   },
+   "x_ai_ml": {
+    "window_1d": 11.051625317577365,
+    "daily": 11.051625325850194,
+    "abs_diff": 8.272829532529613e-09,
+    "rel_diff": 7.485622516872574e-10
+   },
+   "inc_reclaimed_ml": {
+    "window_1d": 19.47147743602917,
+    "daily": 19.471477427756337,
+    "abs_diff": 8.272831308886452e-09,
+    "rel_diff": 4.2486921375461566e-10
+   },
+   "S_AI_ml": {
+    "window_1d": 10.034325374421844,
+    "daily": 10.03432533692556,
+    "abs_diff": 3.749628341154221e-08,
+    "rel_diff": 3.736801629646444e-09
+   },
+   "S_city_ml": {
+    "window_1d": -1.0172999431555212,
+    "daily": -1.0172999889246377,
+    "abs_diff": 4.57691164967855e-08,
+    "rel_diff": 4.4990778584746744e-08
+   }
+  },
+  "co|hybrid": {
+   "rep_day": "2029-09-10",
+   "E_rep_ml": 10.761650037851506,
+   "M0_rep_direct_ml": 13.183290337619042,
+   "m0_window_ml": 13.183290337619042,
+   "pool_rep_ml": 31.113288986925603,
+   "M_ml": {
+    "window_1d": 13.658504895912035,
+    "daily": 13.658504925748543,
+    "abs_diff": 2.983650837506957e-08,
+    "rel_diff": 2.1844637171085676e-09
+   },
+   "x_ai_ml": {
+    "window_1d": 5.158595954249193,
+    "daily": 5.158595963649592,
+    "abs_diff": 9.400399569869933e-09,
+    "rel_diff": 1.8222787078578463e-09
+   },
+   "inc_reclaimed_ml": {
+    "window_1d": 25.95469303267641,
+    "daily": 25.95469302327601,
+    "abs_diff": 9.400398681691513e-09,
+    "rel_diff": 3.621849300955557e-10
+   },
+   "S_AI_ml": {
+    "window_1d": 4.683381395956199,
+    "daily": 4.68338137552009,
+    "abs_diff": 2.0436108805199638e-08,
+    "rel_diff": 4.363537170567598e-09
+   },
+   "S_city_ml": {
+    "window_1d": -0.4752145582929934,
+    "daily": -0.47521458812950357,
+    "abs_diff": 2.983651015142641e-08,
+    "rel_diff": 6.278534533664416e-08
+   }
+  }
+ },
+ "T_D_scaling": {
+  "ha|evaporative": {
+   "full_year": {
+    "n_days": 730,
+    "E_window_ml": 22814.37771087673,
+    "rep_day": "2029-04-09",
+    "rep_E_ml": 31.344788547918373,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 27948.18305526677,
+    "sum_daily_M0_ml": 27948.18305526677,
+    "rel_diff": 0.0
+   },
+   "heatwave": {
+    "n_days": 37,
+    "E_window_ml": 1265.5967020251428,
+    "rep_day": "2029-07-26",
+    "rep_E_ml": 34.46360810448979,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 1550.3875998983506,
+    "sum_daily_M0_ml": 1550.3875998983508,
+    "rel_diff": 1.4665602037718795e-16
+   },
+   "non_heatwave_matched": {
+    "n_days": 37,
+    "E_window_ml": 1054.416339789061,
+    "rep_day": "2029-01-17",
+    "rep_E_ml": 28.658480267755102,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 1291.6863766500946,
+    "sum_daily_M0_ml": 1291.6863766500949,
+    "rel_diff": 1.7602854652141722e-16
+   }
+  },
+  "ha|hybrid": {
+   "full_year": {
+    "n_days": 730,
+    "E_window_ml": 6928.316814222245,
+    "rep_day": "2029-07-13",
+    "rep_E_ml": 23.95979325569366,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 8487.361305342605,
+    "sum_daily_M0_ml": 8487.361305342605,
+    "rel_diff": 0.0
+   },
+   "heatwave": {
+    "n_days": 37,
+    "E_window_ml": 1306.595864800653,
+    "rep_day": "2029-07-26",
+    "rep_E_ml": 35.58292892081632,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 1600.6125992774198,
+    "sum_daily_M0_ml": 1600.61259927742,
+    "rel_diff": 1.4205415823034104e-16
+   },
+   "non_heatwave_matched": {
+    "n_days": 37,
+    "E_window_ml": 0.0,
+    "rep_day": "2029-01-17",
+    "rep_E_ml": 0.0,
+    "degenerate_no_wet_day": true,
+    "m0_window_ml": 0.0,
+    "sum_daily_M0_ml": 0.0,
+    "rel_diff": 0.0
+   }
+  },
+  "co|evaporative": {
+   "full_year": {
+    "n_days": 730,
+    "E_window_ml": 22550.114693164407,
+    "rep_day": "2030-04-15",
+    "rep_E_ml": 31.009332119510205,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 27624.454251993728,
+    "sum_daily_M0_ml": 27624.454251993728,
+    "rel_diff": 0.0
+   },
+   "heatwave": {
+    "n_days": 37,
+    "E_window_ml": 1240.4540381701224,
+    "rep_day": "2030-08-12",
+    "rep_E_ml": 33.657790746122444,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 1519.5872081093544,
+    "sum_daily_M0_ml": 1519.5872081093542,
+    "rel_diff": 1.4962857954439266e-16
+   },
+   "non_heatwave_matched": {
+    "n_days": 37,
+    "E_window_ml": 1050.590166923755,
+    "rep_day": "2030-01-26",
+    "rep_E_ml": 27.82064271673469,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 1286.9992192357731,
+    "sum_daily_M0_ml": 1286.999219235773,
+    "rel_diff": 1.7666962966632395e-16
+   }
+  },
+  "co|hybrid": {
+   "full_year": {
+    "n_days": 730,
+    "E_window_ml": 2228.5395735532506,
+    "rep_day": "2029-09-10",
+    "rep_E_ml": 10.761650037851506,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 2730.016691092071,
+    "sum_daily_M0_ml": 2730.0166910920707,
+    "rel_diff": 1.665731027836883e-16
+   },
+   "heatwave": {
+    "n_days": 37,
+    "E_window_ml": 765.4747318325358,
+    "rep_day": "2030-08-12",
+    "rep_E_ml": 19.45579326325086,
+    "degenerate_no_wet_day": false,
+    "m0_window_ml": 937.7256833631521,
+    "sum_daily_M0_ml": 937.7256833631523,
+    "rel_diff": 1.212367750383868e-16
+   },
+   "non_heatwave_matched": {
+    "n_days": 37,
+    "E_window_ml": 0.0,
+    "rep_day": "2030-01-26",
+    "rep_E_ml": 0.0,
+    "degenerate_no_wet_day": true,
+    "m0_window_ml": 0.0,
+    "sum_daily_M0_ml": 0.0,
+    "rel_diff": 0.0
+   }
+  }
+ },
+ "T_B_aggregation": {
+  "ha|evaporative": {
+   "dp0": {
+    "one_step": {
+     "S_AI_ml": 8281.304666856962,
+     "S_city_ml": -837.1006938369101,
+     "M_ml": 28785.283749103684,
+     "x_ai_ml": 9118.405360693876,
+     "inc_reclaimed_ml": 15286.04587069915,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 8227.139583837596,
+     "S_city_ml": -1011.263668403276,
+     "M_ml": 28782.522573358932,
+     "x_ai_ml": 9061.479101929755,
+     "inc_reclaimed_ml": 15166.047979152161
+    },
+    "S_city_abs_diff_ml": 174.16297456636596,
+    "S_city_rel_diff": 0.2080549877077245,
+    "S_city_abs_diff_over_m0": 0.006231638537001258,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": -1.0658141036401503e-14
+   },
+   "dp1": {
+    "one_step": {
+     "S_AI_ml": 16869.34401042366,
+     "S_city_ml": 22694.486271754497,
+     "M_ml": 29658.14801490529,
+     "x_ai_ml": 18579.308970062182,
+     "inc_reclaimed_ml": 30229.593492723863,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 16840.09339176977,
+     "S_city_ml": 22618.914699586232,
+     "M_ml": 29660.76068223508,
+     "x_ai_ml": 18552.67101873811,
+     "inc_reclaimed_ml": 30183.272539209487
+    },
+    "S_city_abs_diff_ml": 75.57157216826454,
+    "S_city_rel_diff": 0.0033299529790335345,
+    "S_city_abs_diff_over_m0": 0.0027039887358267195,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": 0.0
+   }
+  },
+  "ha|hybrid": {
+   "dp0": {
+    "one_step": {
+     "S_AI_ml": 3564.7248244015927,
+     "S_city_ml": -134.76716336794198,
+     "M_ml": 8622.128468710549,
+     "x_ai_ml": 3699.4919877695365,
+     "inc_reclaimed_ml": 20704.95924362349,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 2821.887092601419,
+     "S_city_ml": -286.28242209672726,
+     "M_ml": 8773.643727439336,
+     "x_ai_ml": 3108.169514698147,
+     "inc_reclaimed_ml": 21296.281716694906
+    },
+    "S_city_abs_diff_ml": 151.51525872878528,
+    "S_city_rel_diff": 1.124274303489772,
+    "S_city_abs_diff_over_m0": 0.017851868593529746,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": 0.0
+   },
+   "dp1": {
+    "one_step": {
+     "S_AI_ml": 5874.4655917846885,
+     "S_city_ml": 15248.861128998637,
+     "M_ml": 8709.652378526387,
+     "x_ai_ml": 6096.75666496847,
+     "inc_reclaimed_ml": 33778.84676860697,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 5377.414150553759,
+     "S_city_ml": 14151.679734410378,
+     "M_ml": 9034.379668158004,
+     "x_ai_ml": 5924.432513369155,
+     "inc_reclaimed_ml": 33178.71681524929
+    },
+    "S_city_abs_diff_ml": 1097.1813945882586,
+    "S_city_rel_diff": 0.07195169431386306,
+    "S_city_abs_diff_over_m0": 0.1292723798499785,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": 0.0
+   }
+  },
+  "co|evaporative": {
+   "dp0": {
+    "one_step": {
+     "S_AI_ml": 7353.741972085056,
+     "S_city_ml": -742.3999613663254,
+     "M_ml": 28366.85421336005,
+     "x_ai_ml": 8096.141933451378,
+     "inc_reclaimed_ml": 14317.83465820184,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 7326.092203985962,
+     "S_city_ml": -832.9700448957556,
+     "M_ml": 28367.204994671163,
+     "x_ai_ml": 8068.842946663397,
+     "inc_reclaimed_ml": 14254.914342771523
+    },
+    "S_city_abs_diff_ml": 90.57008352943012,
+    "S_city_rel_diff": 0.121996347309533,
+    "S_city_abs_diff_over_m0": 0.0032786198309381425,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": -7.105427357601002e-15
+   },
+   "dp1": {
+    "one_step": {
+     "S_AI_ml": 14957.028931444973,
+     "S_city_ml": 20900.182130888832,
+     "M_ml": 29138.24871275811,
+     "x_ai_ml": 16470.823392209357,
+     "inc_reclaimed_ml": 28357.12979109708,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 14870.400373476783,
+     "S_city_ml": 20656.72871264055,
+     "M_ml": 29135.884978253445,
+     "x_ai_ml": 16381.831099736484,
+     "inc_reclaimed_ml": 28200.304930816972
+    },
+    "S_city_abs_diff_ml": 243.4534182482821,
+    "S_city_rel_diff": 0.01164838740273354,
+    "S_city_abs_diff_over_m0": 0.008812967526071993,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": -2.842170943040401e-14
+   }
+  },
+  "co|hybrid": {
+   "dp0": {
+    "one_step": {
+     "S_AI_ml": 1138.5640212039173,
+     "S_city_ml": -30.485610776217072,
+     "M_ml": 2760.502301868288,
+     "x_ai_ml": 1169.0496319801343,
+     "inc_reclaimed_ml": 21244.926959673085,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 960.095807925771,
+     "S_city_ml": -97.4181393942159,
+     "M_ml": 2827.434830486288,
+     "x_ai_ml": 1057.5139473199883,
+     "inc_reclaimed_ml": 21356.46264433324
+    },
+    "S_city_abs_diff_ml": 66.93252861799883,
+    "S_city_rel_diff": 2.1955449444436033,
+    "S_city_abs_diff_over_m0": 0.024517259852804868,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": -3.552713678800501e-15
+   },
+   "dp1": {
+    "one_step": {
+     "S_AI_ml": 1895.773575231875,
+     "S_city_ml": 14598.072391925438,
+     "M_ml": 2780.8103862006537,
+     "x_ai_ml": 1946.5672703404575,
+     "inc_reclaimed_ml": 35116.27540834678,
+     "status": "converged_unique"
+    },
+    "daily_sum": {
+     "S_AI_ml": 1799.172583103972,
+     "S_city_ml": 14361.867907625432,
+     "M_ml": 2913.0861960855054,
+     "x_ai_ml": 1982.2420880974087,
+     "inc_reclaimed_ml": 34976.67191617498
+    },
+    "S_city_abs_diff_ml": 236.2044843000058,
+    "S_city_rel_diff": 0.01618052561724906,
+    "S_city_abs_diff_over_m0": 0.0865212601339512,
+    "sign_agreement": true,
+    "daily_sum_closure_residual_ml": 0.0
+   }
+  }
+ },
+ "T_C_inputs": {
+  "ha": {
+   "P0_frozen_ml": 24404.451231393024,
+   "sum_daily_R_ml": 24404.451231393024,
+   "sum_daily_R_over_P0": 1.0,
+   "R_cv": 0.05524686206508136,
+   "R_min_max_ml": [
+    29.830065523038726,
+    40.0
+   ],
+   "gap_frozen_ml": 33778.84676860697
+  },
+  "co": {
+   "P0_frozen_ml": 22413.97659165322,
+   "sum_daily_R_ml": 22413.97659165322,
+   "sum_daily_R_over_P0": 1.0,
+   "R_cv": 0.04545131966272292,
+   "R_min_max_ml": [
+    27.91139073054177,
+    36.0
+   ],
+   "gap_frozen_ml": 35116.27540834678
+  }
+ },
+ "M4_M5_fixes": {},
+ "M4_M5_M6_fixes": {
+  "M4_technology_propagated": "m0_of / window_scale / city_outcome 已透传 cooling_tech / wet_fraction; 代表日改为窗口内湿日。",
+  "M5_cache_key_includes_rep_day": "make_evaluators 缓存键已含 domain/date_rep/drivers_rep/period_days, 跨窗口复用不再返回陈旧计划。",
+  "M6_period_days_explicit": "再生水可得量由 trial/730 改为 trial/period_days; 窗口解 (n≠730) 不再被按 730 天摊薄。",
+  "impact_before_fix": "修复前: hybrid 窗口行混用 evaporative 计划 (M4); 跨窗口缓存命中陈旧计划 (M5); 热浪窗 37 天的可得量被除以 730 → M 被算成'无回用水'值 (M6)。T14 §3.3 窗口行与 T13 的 A3 行 受影响, 需按其重跑结果替换。"
+ },
+ "verdict": {
+  "M1_status": "RESOLVED-ALIGNED",
+  "window_scaling_status": "EXACT",
+  "one_step_vs_daily": "report daily-sum as primary; one-step biased"
+ }
+}

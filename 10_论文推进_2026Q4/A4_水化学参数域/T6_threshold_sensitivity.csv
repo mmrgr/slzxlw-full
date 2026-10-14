@@ -1,0 +1,16 @@
+﻿sample,tier,CoC_lim_all,who,chi_eff
+"IEUA RP-1 (2025, tertiary)",conservative,2.142857142857143,alkalinity,0.42857142857142855
+"IEUA RP-1 (2025, tertiary)",baseline,3.5714285714285716,alkalinity,0.7142857142857143
+"IEUA RP-1 (2025, tertiary)",permissive,5.0,alkalinity,1.0
+"LADWP AWPF (2012, RO product)",conservative,42.25352112676057,alkalinity,1.0
+"LADWP AWPF (2012, RO product)",baseline,70.42253521126761,alkalinity,1.0
+"LADWP AWPF (2012, RO product)",permissive,98.59154929577466,alkalinity,1.0
+"Figshare RW (2025, paired study)",conservative,0.7427786353573904,hardness,0.14855572707147807
+"Figshare RW (2025, paired study)",baseline,1.2998626118754333,hardness,0.25997252237508667
+"Figshare RW (2025, paired study)",permissive,1.8569465883934761,hardness,0.3713893176786952
+"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",conservative,0.09309816736257545,chloride,0.01861963347251509
+"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",baseline,0.1551636122709591,chloride,0.03103272245419182
+"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",permissive,0.24826177963353452,chloride,0.0496523559267069
+AI-UWM model assumption,conservative,2.3076923076923075,TDS,0.4615384615384615
+AI-UWM model assumption,baseline,3.3846153846153846,TDS,0.676923076923077
+AI-UWM model assumption,permissive,4.615384615384615,TDS,0.923076923076923

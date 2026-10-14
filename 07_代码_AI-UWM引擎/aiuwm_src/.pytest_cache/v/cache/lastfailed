@@ -1,3 +1,4 @@
 {
-  "tests/test_r10_pilot_runner.py::test_complete_manifests_are_visible_but_runner_stays_diagnostic": true
+  "tests/test_r10_pilot_runner.py::test_complete_manifests_are_visible_but_runner_stays_diagnostic": true,
+  "tests/test_g2_phreeqc_runner.py::test_phreeqc_runner_emits_pilot_manifest_without_opening_gate": true
 }

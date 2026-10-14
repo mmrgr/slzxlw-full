@@ -1,0 +1,73 @@
+{
+  "n_samples": 5,
+  "n_complete_ion_panel": 1,
+  "chi_eff_definition": "min(CoC_lim, CoC_design)/CoC_design  (A5 fix)",
+  "reclaimed_chi_eff_range_all_ratio": [
+    0.25997252237508667,
+    1.0
+  ],
+  "reclaimed_chi_eff_range_conservative": [
+    0.3187428780888177,
+    1.0
+  ],
+  "phreeqc_chi_eff_range": [
+    0.5040316054597497,
+    1.0
+  ],
+  "limiting_species_counts_all_ratio": {
+    "alkalinity": 2,
+    "hardness": 1
+  },
+  "limiting_phase_counts_phreeqc": {
+    "Calcite": 1,
+    "none_below_upper": 1,
+    "n/a": 1
+  },
+  "threshold_tiers": {
+    "conservative": {
+      "TDS": 1500.0,
+      "chloride": 300.0,
+      "hardness": 400.0,
+      "alkalinity": 300.0,
+      "silica": 100.0
+    },
+    "baseline": {
+      "TDS": 2200.0,
+      "chloride": 500.0,
+      "hardness": 700.0,
+      "alkalinity": 500.0,
+      "silica": 150.0
+    },
+    "permissive": {
+      "TDS": 3000.0,
+      "chloride": 800.0,
+      "hardness": 1000.0,
+      "alkalinity": 700.0,
+      "silica": 200.0
+    }
+  },
+  "model_assumed_TDS": 650.0,
+  "charge_balance": [
+    {
+      "sample": "IEUA RP-1 (2025, tertiary)",
+      "charge_error_pct": 3.19
+    },
+    {
+      "sample": "LADWP AWPF (2012, RO product)",
+      "charge_error_pct": NaN
+    },
+    {
+      "sample": "Figshare RW (2025, paired study)",
+      "charge_error_pct": NaN
+    },
+    {
+      "sample": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+      "charge_error_pct": NaN
+    },
+    {
+      "sample": "AI-UWM model assumption",
+      "charge_error_pct": NaN
+    }
+  ],
+  "claim_boundary": "chi_eff <= 1 only; values >1 have no physical meaning because the engine itself caps CoC at the design value."
+}

@@ -1,0 +1,292 @@
+{
+ "axes": {
+  "rho": "dP_scale = new reuse capacity / P0",
+  "chi": "CoC_lim/CoC_design"
+ },
+ "fixed": {
+  "domain": "ha",
+  "panel": "B_full",
+  "pool_scale": 1.0,
+  "gap_scale": 1.0,
+  "ai_target": 0.7,
+  "rule": "Ls (incumbent claim=0)"
+ },
+ "n_points": 1275,
+ "samples": [
+  "IEUA RP-1 (2025, tertiary)",
+  "AI-UWM model assumption",
+  "Figshare RW (2025, paired study)"
+ ],
+ "statuses": [
+  "converged_unique"
+ ],
+ "boundary_found_share": 0.9411764705882353,
+ "boundary_by_sample": {
+  "AI-UWM model assumption": [
+   {
+    "chi": 0.2031,
+    "dp_star_dimensionless": NaN,
+    "found": false
+   },
+   {
+    "chi": 0.2236,
+    "dp_star_dimensionless": 2.3615,
+    "found": true
+   },
+   {
+    "chi": 0.2462,
+    "dp_star_dimensionless": 1.4838,
+    "found": true
+   },
+   {
+    "chi": 0.2711,
+    "dp_star_dimensionless": 1.0358,
+    "found": true
+   },
+   {
+    "chi": 0.2985,
+    "dp_star_dimensionless": 0.76,
+    "found": true
+   },
+   {
+    "chi": 0.3286,
+    "dp_star_dimensionless": 0.5721,
+    "found": true
+   },
+   {
+    "chi": 0.3619,
+    "dp_star_dimensionless": 0.4357,
+    "found": true
+   },
+   {
+    "chi": 0.3984,
+    "dp_star_dimensionless": 0.3323,
+    "found": true
+   },
+   {
+    "chi": 0.4387,
+    "dp_star_dimensionless": 0.2512,
+    "found": true
+   },
+   {
+    "chi": 0.483,
+    "dp_star_dimensionless": 0.1863,
+    "found": true
+   },
+   {
+    "chi": 0.5319,
+    "dp_star_dimensionless": 0.1331,
+    "found": true
+   },
+   {
+    "chi": 0.5856,
+    "dp_star_dimensionless": 0.0891,
+    "found": true
+   },
+   {
+    "chi": 0.6448,
+    "dp_star_dimensionless": 0.052,
+    "found": true
+   },
+   {
+    "chi": 0.71,
+    "dp_star_dimensionless": 0.0206,
+    "found": true
+   },
+   {
+    "chi": 0.7817,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   },
+   {
+    "chi": 0.8607,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   },
+   {
+    "chi": 0.9477,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   }
+  ],
+  "Figshare RW (2025, paired study)": [
+   {
+    "chi": 0.078,
+    "dp_star_dimensionless": NaN,
+    "found": false
+   },
+   {
+    "chi": 0.0859,
+    "dp_star_dimensionless": 2.3615,
+    "found": true
+   },
+   {
+    "chi": 0.0946,
+    "dp_star_dimensionless": 1.4838,
+    "found": true
+   },
+   {
+    "chi": 0.1041,
+    "dp_star_dimensionless": 1.0358,
+    "found": true
+   },
+   {
+    "chi": 0.1146,
+    "dp_star_dimensionless": 0.76,
+    "found": true
+   },
+   {
+    "chi": 0.1262,
+    "dp_star_dimensionless": 0.5721,
+    "found": true
+   },
+   {
+    "chi": 0.139,
+    "dp_star_dimensionless": 0.4357,
+    "found": true
+   },
+   {
+    "chi": 0.153,
+    "dp_star_dimensionless": 0.3323,
+    "found": true
+   },
+   {
+    "chi": 0.1685,
+    "dp_star_dimensionless": 0.2512,
+    "found": true
+   },
+   {
+    "chi": 0.1855,
+    "dp_star_dimensionless": 0.1863,
+    "found": true
+   },
+   {
+    "chi": 0.2043,
+    "dp_star_dimensionless": 0.1331,
+    "found": true
+   },
+   {
+    "chi": 0.2249,
+    "dp_star_dimensionless": 0.0891,
+    "found": true
+   },
+   {
+    "chi": 0.2476,
+    "dp_star_dimensionless": 0.052,
+    "found": true
+   },
+   {
+    "chi": 0.2727,
+    "dp_star_dimensionless": 0.0206,
+    "found": true
+   },
+   {
+    "chi": 0.3002,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   },
+   {
+    "chi": 0.3306,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   },
+   {
+    "chi": 0.364,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   }
+  ],
+  "IEUA RP-1 (2025, tertiary)": [
+   {
+    "chi": 0.2143,
+    "dp_star_dimensionless": NaN,
+    "found": false
+   },
+   {
+    "chi": 0.2359,
+    "dp_star_dimensionless": 2.3615,
+    "found": true
+   },
+   {
+    "chi": 0.2598,
+    "dp_star_dimensionless": 1.4838,
+    "found": true
+   },
+   {
+    "chi": 0.286,
+    "dp_star_dimensionless": 1.0358,
+    "found": true
+   },
+   {
+    "chi": 0.315,
+    "dp_star_dimensionless": 0.76,
+    "found": true
+   },
+   {
+    "chi": 0.3468,
+    "dp_star_dimensionless": 0.5721,
+    "found": true
+   },
+   {
+    "chi": 0.3818,
+    "dp_star_dimensionless": 0.4357,
+    "found": true
+   },
+   {
+    "chi": 0.4204,
+    "dp_star_dimensionless": 0.3323,
+    "found": true
+   },
+   {
+    "chi": 0.4629,
+    "dp_star_dimensionless": 0.2512,
+    "found": true
+   },
+   {
+    "chi": 0.5097,
+    "dp_star_dimensionless": 0.1863,
+    "found": true
+   },
+   {
+    "chi": 0.5612,
+    "dp_star_dimensionless": 0.1331,
+    "found": true
+   },
+   {
+    "chi": 0.6179,
+    "dp_star_dimensionless": 0.0891,
+    "found": true
+   },
+   {
+    "chi": 0.6804,
+    "dp_star_dimensionless": 0.052,
+    "found": true
+   },
+   {
+    "chi": 0.7491,
+    "dp_star_dimensionless": 0.0206,
+    "found": true
+   },
+   {
+    "chi": 0.8248,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   },
+   {
+    "chi": 0.9082,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   },
+   {
+    "chi": 1.0,
+    "dp_star_dimensionless": 0.0,
+    "found": true
+   }
+  ]
+ },
+ "y_range": [
+  -1.697548186762295,
+  1.0354205716584985
+ ],
+ "interpretation": "conditional response surface of the city-level estimand; the zero contour (when it exists) is the minimum new reuse capacity rho* needed for non-negative city saving at a given water-quality severity chi. Surface is conditional on frozen placeholder limits."
+}

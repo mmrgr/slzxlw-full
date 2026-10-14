@@ -1,0 +1,27 @@
+[city] ha: P0=24,404 ML | gap=33,779 | E_total=22,814
+[city] co: P0=22,414 ML | gap=35,116 | E_total=22,550
+[Stage1] Phi/u 曲线 820 点 | Phi 范围 1.000–734696.027
+[Stage1b] 容量不变性 (g_ratio 应跨 16x 容量恒定):
+panel           A_engine2    B_full
+it_capacity_mw                     
+250.0            1.225025  1.309704
+500.0            1.225025  1.309704
+1000.0           1.225025  1.309704
+2000.0           1.225025  1.309704
+4000.0           1.225025  1.309704
+
+[Stage2] LHS 240 城市 × 2 面板 = 480 情景
+  状态=['converged_unique'] | 根数=[1] | 闭合残差 max=0.00e+00 ML
+  折叠残差 max|Δ|=7.11e-15 (相对 1.68e-14) | R2=1.000000
+  散度: @w=3.967e-02  @dp/P0=7.685e-01  @phi=8.350e-01 | 降维比=19.37x
+  折叠定位: 代数化简 (审计 A1) — 机器精度残差为数学必然, 不作 Gate 声明
+
+  Phi ∈ [1.000, 36.578] | phi_eff ∈ [0.025, 0.939] | delta ∈ [-14.149, 16.533]
+
+[Stage3] 破坏阈值 (B_full, phi=0.7):
+                                               sample    CoC  delta_star   dP_star_ml
+                              AI-UWM model assumption 4.3222      0.0516 1.047312e+03
+Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study) 1.0000      1.4286 2.053339e+10
+                     Figshare RW (2025, paired study) 1.6951      0.6660 2.440824e+04
+                           IEUA RP-1 (2025, tertiary) 3.9062      0.0924 1.931906e+03
+                        LADWP AWPF (2012, RO product) 5.0000      0.0000 0.000000e+00

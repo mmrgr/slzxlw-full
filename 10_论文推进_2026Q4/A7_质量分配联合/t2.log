@@ -1,0 +1,67 @@
+[baseline] ha: P0=24,404 ML | 可回用需求=58,183 | gap=33,779 | E_total=22,814 | M0=27,948
+[baseline] co: P0=22,414 ML | 可回用需求=57,530 | gap=35,116 | E_total=22,550 | M0=27,624
+
+[Phase1] CoC 曲线 380 点; status=['not_applicable', 'converged']
+[Phase2] 640 行 | status=['quality_not_converged', 'converged_unique'] | 闭合残差 max=0.00e+00 ML | 固定点残差 max=0.00e+00 | roots=[np.int64(1)]
+
+===== S_city (ML) 按 Q x L 分组
+                        mean       min      max
+Q  L                                           
+Q0 L_claim0_capP0    15030.0       0.0  25153.0
+   L_claimP0_capGap  17790.0       0.0  37564.0
+   Ld_claimP0_capP0  15030.0       0.0  25153.0
+   Ls_claim0_capGap  17790.0       0.0  37564.0
+Q1 L_claim0_capP0   -40253.0 -419893.0  25153.0
+   L_claimP0_capGap  -8470.0 -269304.0  37564.0
+   Ld_claimP0_capP0 -12392.0 -279047.0  25153.0
+   Ls_claim0_capGap -35644.0 -409979.0  37564.0
+
+===== |Delta_QL| 最大 = 140,306 ML
+
+----- 交互项明细 (panel B_full, dP_frac=1.0)
+domain  panel                                                sample  dP_frac  d_Q_given_Ld_ml  d_Q_given_Ls_ml  d_QL_ml  d_Q_claim_effect_ml  d_Q_capacity_effect_ml
+    co B_full                               AI-UWM model assumption      1.0          -1528.0           -763.0   -765.0                763.0                 -1182.0
+    co B_full Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)      1.0        -147535.0        -264391.0 116857.0             129033.0                -12963.0
+    co B_full                      Figshare RW (2025, paired study)      1.0         -14372.0         -15073.0    701.0               4918.0                 -4064.0
+    co B_full                            IEUA RP-1 (2025, tertiary)      1.0          -2063.0          -1772.0   -292.0                386.0                  -480.0
+    co B_full                         LADWP AWPF (2012, RO product)      1.0              0.0              0.0      0.0                  0.0                     0.0
+    ha B_full                               AI-UWM model assumption      1.0          -1926.0          -1265.0   -660.0                757.0                  -942.0
+    ha B_full Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)      1.0        -161192.0        -292941.0 131749.0             140857.0                 -9634.0
+    ha B_full                      Figshare RW (2025, paired study)      1.0         -15756.0         -17353.0   1596.0               5083.0                 -3232.0
+    ha B_full                            IEUA RP-1 (2025, tertiary)      1.0          -2249.0          -1995.0   -254.0                334.0                  -381.0
+    ha B_full                         LADWP AWPF (2012, RO product)      1.0              0.0              0.0      0.0                  0.0                     0.0
+
+----- T1 vs T2 阈值对照 (panel A_engine2, 水样=AI-UWM model)
+domain     panel                  sample  Q                L  dP_frac   dP_ml   P0_ml  gap_ml   M0_ml    M_ml  x_ai_ml  inc_reclaimed_ml  displacement_ml  S_AI_ml  S_city_ml  eta_transfer  CoC_ai  frac_ai           status quality_integration_status  closure_residual_ml  fp_residual_ml  roots  iterations
+    ha A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      0.0     0.0 24404.5 33778.8 27948.2 27948.2      0.0           24404.5              0.0      0.0        0.0           NaN     5.0      0.0 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    ha A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      0.5 12202.2 24404.5 33778.8 27948.2 27948.2  12202.2           24404.5              0.0  12202.2    12202.2           1.0     5.0      0.4 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    ha A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      1.0 24404.5 24404.5 33778.8 27948.2 29873.7  24404.5           24404.5              0.0  22478.9    22478.9           1.0     3.9      0.8 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    ha A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      2.0 48808.9 24404.5 33778.8 27948.2 30545.9  27491.3           24404.5              0.0  24893.6    24893.6           1.0     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61
+    ha A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      0.0     0.0 24404.5 33778.8 27948.2 27948.2  10416.3           13988.2          10416.3  10416.3        0.0           0.0     5.0      0.4 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    ha A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      0.5 12202.2 24404.5 33778.8 27948.2 27975.5  15633.2           20973.5           3430.9  15605.8    12174.9           0.8     5.0      0.6 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          53
+    ha A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      1.0 24404.5 24404.5 33778.8 27948.2 29213.5  21362.9           27446.0              0.0  20097.6    23139.2           1.2     4.2      0.7 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          54
+    ha A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      2.0 48808.9 24404.5 33778.8 27948.2 30545.9  27491.3           33778.8              0.0  24893.6    34268.0           1.4     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61
+    ha A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      0.0     0.0 24404.5 33778.8 27948.2 27948.2  12386.6           12017.8          12386.6  12386.6        0.0           0.0     5.0      0.4 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          48
+    ha A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      0.5 12202.2 24404.5 33778.8 27948.2 28661.0  18810.3           17796.4           6608.1  18097.5    11489.4           0.6     4.5      0.7 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          52
+    ha A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      1.0 24404.5 24404.5 33778.8 27948.2 30155.5  25699.6           23109.3           1295.2  23492.3    22197.1           0.9     3.8      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          54
+    ha A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      2.0 48808.9 24404.5 33778.8 27948.2 30545.9  27491.3           24404.5              0.0  24893.6    24893.6           1.0     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61
+    ha A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      0.0     0.0 24404.5 33778.8 27948.2 27948.2      0.0           24404.5              0.0      0.0        0.0           NaN     5.0      0.0 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    ha A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      0.5 12202.2 24404.5 33778.8 27948.2 27948.2   8889.3           27717.4              0.0   8889.3    12202.2           1.4     5.0      0.3 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    ha A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      1.0 24404.5 24404.5 33778.8 27948.2 28456.8  17865.3           30943.6              0.0  17356.6    23895.8           1.4     4.6      0.6 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          51
+    ha A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      2.0 48808.9 24404.5 33778.8 27948.2 30545.9  27491.3           33778.8              0.0  24893.6    34268.0           1.4     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61
+    co A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      0.0     0.0 22414.0 35116.3 27624.5 27624.5      0.0           22414.0              0.0      0.0        0.0           NaN     5.0      0.0 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    co A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      0.5 11207.0 22414.0 35116.3 27624.5 27624.5  11207.0           22414.0              0.0  11207.0    11207.0           1.0     5.0      0.4 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    co A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      1.0 22414.0 22414.0 35116.3 27624.5 29152.4  22414.0           22414.0              0.0  20886.0    20886.0           1.0     4.1      0.8 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    co A_engine2 AI-UWM model assumption Q1 Ld_claimP0_capP0      2.0 44828.0 22414.0 35116.3 27624.5 30185.5  27166.9           22414.0              0.0  24605.9    24605.9           1.0     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61
+    co A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      0.0     0.0 22414.0 35116.3 27624.5 27624.5   9291.0           13123.0           9291.0   9291.0        0.0           0.0     5.0      0.3 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          48
+    co A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      0.5 11207.0 22414.0 35116.3 27624.5 27624.5  13936.5           19684.5           2729.5  13936.5    11207.0           0.8     5.0      0.5 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    co A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      1.0 22414.0 22414.0 35116.3 27624.5 28387.3  18879.0           25949.0              0.0  18116.1    21651.1           1.2     4.5      0.7 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          53
+    co A_engine2 AI-UWM model assumption Q1 Ls_claim0_capGap      2.0 44828.0 22414.0 35116.3 27624.5 30185.5  27166.9           35116.3              0.0  24605.9    37308.2           1.5     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61
+    co A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      0.0     0.0 22414.0 35116.3 27624.5 27624.5  11787.3           10626.7          11787.3  11787.3        0.0           0.0     5.0      0.4 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          48
+    co A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      0.5 11207.0 22414.0 35116.3 27624.5 28163.6  17842.9           15778.1           6635.9  17303.7    10667.8           0.6     4.6      0.6 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          52
+    co A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      1.0 22414.0 22414.0 35116.3 27624.5 29569.0  24333.3           20494.7           1919.3  22388.8    20469.5           0.9     3.9      0.8 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          54
+    co A_engine2 AI-UWM model assumption Q1   L_claim0_capP0      2.0 44828.0 22414.0 35116.3 27624.5 30185.5  27166.9           22414.0              0.0  24605.9    24605.9           1.0     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61
+    co A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      0.0     0.0 22414.0 35116.3 27624.5 27624.5      0.0           22414.0              0.0      0.0        0.0           NaN     5.0      0.0 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    co A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      0.5 11207.0 22414.0 35116.3 27624.5 27624.5   7417.4           26203.6              0.0   7417.4    11207.0           1.5     5.0      0.3 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          49
+    co A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      1.0 22414.0 22414.0 35116.3 27624.5 27624.5  14834.7           29993.2              0.0  14834.7    22414.0           1.5     5.0      0.5 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          50
+    co A_engine2 AI-UWM model assumption Q1 L_claimP0_capGap      2.0 44828.0 22414.0 35116.3 27624.5 30185.5  27166.9           35116.3              0.0  24605.9    37308.2           1.5     3.7      0.9 converged_unique     READY_JOINT_CO_CURRENT                  0.0             0.0      1          61

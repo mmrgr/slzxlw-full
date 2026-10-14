@@ -1,0 +1,6 @@
+﻿source,chi_strict,chi_baseline,chi_permissive,chi_placeholder_engine,CoC_phreeqc,limiting_phase
+"IEUA RP-1 (2025, tertiary)",0.25,0.5,0.5,0.504,2.5202,Calcite
+"LADWP AWPF (2012, RO product)",1.0,1.0,1.0,1.0,100.0,none_below_upper
+"Figshare RW (2025, paired study)",0.1451,0.2785,0.2785,0.26,100.0,none_below_upper
+"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.0155,0.0434,0.0621,0.031,100.0,none_below_upper
+AI-UWM model assumption,0.3077,0.6769,0.8,0.6769,100.0,none_below_upper

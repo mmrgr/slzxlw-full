@@ -1,0 +1,958 @@
+{
+ "windows": {
+  "p90": {
+   "kind": "quantile",
+   "value": 0.9
+  },
+  "p95": {
+   "kind": "quantile",
+   "value": 0.95
+  },
+  "p99": {
+   "kind": "quantile",
+   "value": 0.99
+  },
+  "abs24": {
+   "kind": "abs",
+   "value": 24.0
+  },
+  "top37": {
+   "kind": "topn",
+   "value": 37
+  }
+ },
+ "results": {
+  "ha": {
+   "evaporative": {
+    "p90": {
+     "n_days": 73,
+     "wb_threshold_c": 23.9,
+     "sigma_0.30": {
+      "coverage_in_window": 0.34472451968507495,
+      "coverage_overall": 0.35038121150556645,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5745408661417916,
+      "coverage_overall": 0.5839686858426107,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.8043572125985082,
+      "coverage_overall": 0.817043029122381,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.989345509893455,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -93.54923284308552,
+     "eta_window": -0.09975318105223169,
+     "E_window_ml": 2485.1304708950206
+    },
+    "p95": {
+     "n_days": 37,
+     "wb_threshold_c": 25.38,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3436628693175792,
+      "coverage_overall": 0.35038121150556645,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5727714488626321,
+      "coverage_overall": 0.5839686858426107,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.8018800284076849,
+      "coverage_overall": 0.817043029122381,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.98989898989899,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -48.00199412686857,
+     "eta_window": -0.10058454652078062,
+     "E_window_ml": 1265.5967020251428
+    },
+    "p99": {
+     "n_days": 8,
+     "wb_threshold_c": 27.28,
+     "sigma_0.30": {
+      "coverage_in_window": 0.34225537397803607,
+      "coverage_overall": 0.35038121150556645,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5704256232967267,
+      "coverage_overall": 0.5839686858426107,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7985958726154174,
+      "coverage_overall": 0.817043029122381,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.9903047091412742,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -10.55430674483813,
+     "eta_window": -0.10081551439556703,
+     "E_window_ml": 276.82424993828573
+    },
+    "abs24": {
+     "n_days": 70,
+     "wb_threshold_c": 24.08,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3446336784506612,
+      "coverage_overall": 0.35038121150556645,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5743894640844351,
+      "coverage_overall": 0.5839686858426107,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.8041452497182093,
+      "coverage_overall": 0.817043029122381,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.9893939393939394,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -90.00776855271624,
+     "eta_window": -0.10011178932836495,
+     "E_window_ml": 2383.4690771186943
+    },
+    "top37": {
+     "n_days": 37,
+     "wb_threshold_c": 25.38,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3436628693175792,
+      "coverage_overall": 0.35038121150556645,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5727714488626321,
+      "coverage_overall": 0.5839686858426107,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.8018800284076849,
+      "coverage_overall": 0.817043029122381,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.98989898989899,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -48.00199412686857,
+     "eta_window": -0.10058454652078062,
+     "E_window_ml": 1265.5967020251428
+    }
+   },
+   "hybrid": {
+    "p90": {
+     "n_days": 73,
+     "wb_threshold_c": 23.9,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3339563938056151,
+      "coverage_overall": 0.8306576496239882,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.2557077625570776,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5565939896760252,
+      "coverage_overall": 0.9141906025265414,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.1613394216133942,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7792315855464351,
+      "coverage_overall": 0.9684351475760267,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.0882800608828006,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.1
+     },
+     "S_city_window_ml": -95.32036291583245,
+     "eta_window": -0.09973950312915665,
+     "E_window_ml": 2565.2638282947723
+    },
+    "p95": {
+     "n_days": 37,
+     "wb_threshold_c": 25.38,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3328790766253258,
+      "coverage_overall": 0.8306576496239882,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.2943722943722944,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5547984610422098,
+      "coverage_overall": 0.9141906025265414,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.2049062049062049,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7767178454590935,
+      "coverage_overall": 0.9684351475760267,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.13564213564213565,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.1
+     },
+     "S_city_window_ml": -48.9135651956592,
+     "eta_window": -0.1005719112763919,
+     "E_window_ml": 1306.595864800653
+    },
+    "p99": {
+     "n_days": 8,
+     "wb_threshold_c": 27.28,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3315617122889563,
+      "coverage_overall": 0.8306576496239882,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.32271468144044324,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5526028538149272,
+      "coverage_overall": 0.9141906025265414,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.23684210526315788,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.773643995340898,
+      "coverage_overall": 0.9684351475760267,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.1703601108033241,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.1
+     },
+     "S_city_window_ml": -10.754531925189383,
+     "eta_window": -0.10081960178386545,
+     "E_window_ml": 285.7524380199184
+    },
+    "abs24": {
+     "n_days": 70,
+     "wb_threshold_c": 24.08,
+     "sigma_0.30": {
+      "coverage_in_window": 0.33378790060310165,
+      "coverage_overall": 0.8306576496239882,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.2590909090909091,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5563131676718364,
+      "coverage_overall": 0.9141906025265414,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.16515151515151516,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7788384347405707,
+      "coverage_overall": 0.9684351475760267,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.09242424242424242,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.1
+     },
+     "S_city_window_ml": -91.73557355864796,
+     "eta_window": -0.1001111147305734,
+     "E_window_ml": 2460.9108429962453
+    },
+    "top37": {
+     "n_days": 37,
+     "wb_threshold_c": 25.38,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3328790766253258,
+      "coverage_overall": 0.8306576496239882,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.2943722943722944,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5547984610422098,
+      "coverage_overall": 0.9141906025265414,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.2049062049062049,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7767178454590935,
+      "coverage_overall": 0.9684351475760267,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.13564213564213565,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.1
+     },
+     "S_city_window_ml": -48.9135651956592,
+     "eta_window": -0.1005719112763919,
+     "E_window_ml": 1306.595864800653
+    }
+   }
+  },
+  "co": {
+   "evaporative": {
+    "p90": {
+     "n_days": 73,
+     "wb_threshold_c": 16.66,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3190670045846262,
+      "coverage_overall": 0.32564732631635285,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5317783409743772,
+      "coverage_overall": 0.542745543860588,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7444896773641279,
+      "coverage_overall": 0.7598437614048232,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.75
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.05
+     },
+     "S_city_window_ml": -81.85132074987632,
+     "eta_window": -0.10016662917592221,
+     "E_window_ml": 2433.0123917191836
+    },
+    "p95": {
+     "n_days": 37,
+     "wb_threshold_c": 17.79,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3187776116129973,
+      "coverage_overall": 0.32564732631635285,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5312960193549955,
+      "coverage_overall": 0.542745543860588,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7438144270969934,
+      "coverage_overall": 0.7598437614048232,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.75
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.05
+     },
+     "S_city_window_ml": -42.155636544388926,
+     "eta_window": -0.10095322304810997,
+     "E_window_ml": 1240.4540381701224
+    },
+    "p99": {
+     "n_days": 8,
+     "wb_threshold_c": 20.42,
+     "sigma_0.30": {
+      "coverage_in_window": 0.32057838816052364,
+      "coverage_overall": 0.32564732631635285,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5342973136008728,
+      "coverage_overall": 0.542745543860588,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7480162390412219,
+      "coverage_overall": 0.7598437614048232,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.75
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.05
+     },
+     "S_city_window_ml": -9.588143988073512,
+     "eta_window": -0.10416977374111712,
+     "E_window_ml": 270.85690289240813
+    },
+    "abs24": {
+     "n_days": 0,
+     "wb_threshold_c": null,
+     "note": "窗内无日: 该定义在此域不可用"
+    },
+    "top37": {
+     "n_days": 37,
+     "wb_threshold_c": 17.79,
+     "sigma_0.30": {
+      "coverage_in_window": 0.3187776116129973,
+      "coverage_overall": 0.32564732631635285,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.5312960193549955,
+      "coverage_overall": 0.542745543860588,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.55
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.7438144270969934,
+      "coverage_overall": 0.7598437614048232,
+      "failure_in_window": 1.0,
+      "failure_outside": 1.0,
+      "s_star": 0.75
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.05
+     },
+     "S_city_window_ml": -42.155636544388926,
+     "eta_window": -0.10095322304810997,
+     "E_window_ml": 1240.4540381701224
+    }
+   },
+   "hybrid": {
+    "p90": {
+     "n_days": 73,
+     "wb_threshold_c": 16.66,
+     "sigma_0.30": {
+      "coverage_in_window": 0.6306750965653718,
+      "coverage_overall": 0.9582505218983467,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.045662100456621,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.9382803445955021,
+      "coverage_overall": 0.9938280344595504,
+      "failure_in_window": 0.410958904109589,
+      "failure_outside": 0.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.993932936342412,
+      "coverage_overall": 0.9993932936342411,
+      "failure_in_window": 0.0684931506849315,
+      "failure_outside": 0.0,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -56.19785397186797,
+     "eta_window": -0.10686418801371855,
+     "E_window_ml": 1286.0626208063156
+    },
+    "p95": {
+     "n_days": 37,
+     "wb_threshold_c": 17.79,
+     "sigma_0.30": {
+      "coverage_in_window": 0.529693534561203,
+      "coverage_overall": 0.9582505218983467,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.09523809523809523,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.8782287879857209,
+      "coverage_overall": 0.9938280344595504,
+      "failure_in_window": 0.8108108108108109,
+      "failure_outside": 0.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.9880298473782724,
+      "coverage_overall": 0.9993932936342411,
+      "failure_in_window": 0.13513513513513514,
+      "failure_outside": 0.0,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -32.689685823977925,
+     "eta_window": -0.10858362167057334,
+     "E_window_ml": 765.4747318325358
+    },
+    "p99": {
+     "n_days": 8,
+     "wb_threshold_c": 20.42,
+     "sigma_0.30": {
+      "coverage_in_window": 0.40674646463427344,
+      "coverage_overall": 0.9582505218983467,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.13157894736842105,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.6779107743904558,
+      "coverage_overall": 0.9938280344595504,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.030470914127423823,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.9446380441245102,
+      "coverage_overall": 0.9993932936342411,
+      "failure_in_window": 0.625,
+      "failure_outside": 0.0,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -8.273499660665607,
+     "eta_window": -0.10414031641407122,
+     "E_window_ml": 214.9358663180201
+    },
+    "abs24": {
+     "n_days": 0,
+     "wb_threshold_c": null,
+     "note": "窗内无日: 该定义在此域不可用"
+    },
+    "top37": {
+     "n_days": 37,
+     "wb_threshold_c": 17.79,
+     "sigma_0.30": {
+      "coverage_in_window": 0.529693534561203,
+      "coverage_overall": 0.9582505218983467,
+      "failure_in_window": 1.0,
+      "failure_outside": 0.09523809523809523,
+      "s_star": 0.35
+     },
+     "sigma_0.50": {
+      "coverage_in_window": 0.8782287879857209,
+      "coverage_overall": 0.9938280344595504,
+      "failure_in_window": 0.8108108108108109,
+      "failure_outside": 0.0,
+      "s_star": 0.6
+     },
+     "sigma_0.70": {
+      "coverage_in_window": 0.9880298473782724,
+      "coverage_overall": 0.9993932936342411,
+      "failure_in_window": 0.13513513513513514,
+      "failure_outside": 0.0,
+      "s_star": 0.8
+     },
+     "sigma_1.00": {
+      "coverage_in_window": 1.0,
+      "coverage_overall": 1.0,
+      "failure_in_window": 0.0,
+      "failure_outside": 0.0,
+      "s_star": 1.15
+     },
+     "S_city_window_ml": -32.689685823977925,
+     "eta_window": -0.10858362167057334,
+     "E_window_ml": 765.4747318325358
+    }
+   }
+  }
+ },
+ "verdict": {
+  "by_domain_tech": {
+   "ha|evaporative": {
+    "failure_in_vs_out_window": [
+     [
+      "p90",
+      1.0,
+      1.0
+     ],
+     [
+      "p95",
+      1.0,
+      1.0
+     ],
+     [
+      "p99",
+      1.0,
+      1.0
+     ],
+     [
+      "abs24",
+      1.0,
+      1.0
+     ],
+     [
+      "top37",
+      1.0,
+      1.0
+     ]
+    ],
+    "coverage_gap_overall_minus_window": [
+     [
+      "p90",
+      0.009427819700819184
+     ],
+     [
+      "p95",
+      0.011197236979978653
+     ],
+     [
+      "p99",
+      0.013543062545884
+     ],
+     [
+      "abs24",
+      0.009579221758175605
+     ],
+     [
+      "top37",
+      0.011197236979978653
+     ]
+    ],
+    "S_city_sign_per_window": [
+     [
+      "p90",
+      true
+     ],
+     [
+      "p95",
+      true
+     ],
+     [
+      "p99",
+      true
+     ],
+     [
+      "abs24",
+      true
+     ],
+     [
+      "top37",
+      true
+     ]
+    ],
+    "S_city_always_negative": true,
+    "nonwet_failure_concentrated": null
+   },
+   "ha|hybrid": {
+    "failure_in_vs_out_window": [
+     [
+      "p90",
+      1.0,
+      0.1613394216133942
+     ],
+     [
+      "p95",
+      1.0,
+      0.2049062049062049
+     ],
+     [
+      "p99",
+      1.0,
+      0.23684210526315788
+     ],
+     [
+      "abs24",
+      1.0,
+      0.16515151515151516
+     ],
+     [
+      "top37",
+      1.0,
+      0.2049062049062049
+     ]
+    ],
+    "coverage_gap_overall_minus_window": [
+     [
+      "p90",
+      0.35759661285051614
+     ],
+     [
+      "p95",
+      0.35939214148433163
+     ],
+     [
+      "p99",
+      0.36158774871161414
+     ],
+     [
+      "abs24",
+      0.357877434854705
+     ],
+     [
+      "top37",
+      0.35939214148433163
+     ]
+    ],
+    "S_city_sign_per_window": [
+     [
+      "p90",
+      true
+     ],
+     [
+      "p95",
+      true
+     ],
+     [
+      "p99",
+      true
+     ],
+     [
+      "abs24",
+      true
+     ],
+     [
+      "top37",
+      true
+     ]
+    ],
+    "S_city_always_negative": true,
+    "nonwet_failure_concentrated": true
+   },
+   "co|evaporative": {
+    "failure_in_vs_out_window": [
+     [
+      "p90",
+      1.0,
+      1.0
+     ],
+     [
+      "p95",
+      1.0,
+      1.0
+     ],
+     [
+      "p99",
+      1.0,
+      1.0
+     ],
+     [
+      "top37",
+      1.0,
+      1.0
+     ]
+    ],
+    "coverage_gap_overall_minus_window": [
+     [
+      "p90",
+      0.010967202886210892
+     ],
+     [
+      "p95",
+      0.011449524505592557
+     ],
+     [
+      "p99",
+      0.008448230259715195
+     ],
+     [
+      "top37",
+      0.011449524505592557
+     ]
+    ],
+    "S_city_sign_per_window": [
+     [
+      "p90",
+      true
+     ],
+     [
+      "p95",
+      true
+     ],
+     [
+      "p99",
+      true
+     ],
+     [
+      "top37",
+      true
+     ]
+    ],
+    "S_city_always_negative": true,
+    "nonwet_failure_concentrated": null
+   },
+   "co|hybrid": {
+    "failure_in_vs_out_window": [
+     [
+      "p90",
+      0.410958904109589,
+      0.0
+     ],
+     [
+      "p95",
+      0.8108108108108109,
+      0.0
+     ],
+     [
+      "p99",
+      1.0,
+      0.030470914127423823
+     ],
+     [
+      "top37",
+      0.8108108108108109,
+      0.0
+     ]
+    ],
+    "coverage_gap_overall_minus_window": [
+     [
+      "p90",
+      0.05554768986404823
+     ],
+     [
+      "p95",
+      0.11559924647382946
+     ],
+     [
+      "p99",
+      0.3159172600690946
+     ],
+     [
+      "top37",
+      0.11559924647382946
+     ]
+    ],
+    "S_city_sign_per_window": [
+     [
+      "p90",
+      true
+     ],
+     [
+      "p95",
+      true
+     ],
+     [
+      "p99",
+      true
+     ],
+     [
+      "top37",
+      true
+     ]
+    ],
+    "S_city_always_negative": true,
+    "nonwet_failure_concentrated": true
+   }
+  },
+  "S_city_always_negative_all": true,
+  "statement": "全窗定义下 (p90/p95/p99/abs24/top37) 窗内 S_city 均保持为负 → 关键时段无符号反转这一结论不依赖热浪窗定义; 非全湿技术的失效集中于窗内这一结论亦在全定义下成立。"
+ }
+}

@@ -1,0 +1,30 @@
+{
+  "source": "validation_artifacts\\r2\\reclaimed_compatibility_R9.csv",
+  "rows": 20,
+  "f_star": {
+    "D-CO": {
+      "bracket": [
+        0.5,
+        0.6
+      ],
+      "midpoint": 0.55
+    },
+    "D-HA": {
+      "bracket": [
+        0.5,
+        0.6
+      ],
+      "midpoint": 0.55
+    }
+  },
+  "max_abs_identity_residual_pct_of_S_AI": 0.08719912130692047,
+  "zero_transfer_region": {
+    "D-CO": 0.5,
+    "D-HA": 0.5
+  },
+  "eta_transfer_at_max_f": {
+    "D-CO": -0.07574880964834202,
+    "D-HA": -0.0871756258931394
+  },
+  "scope": "model diagnostic over frozen R9 artifact; 1000 MW, fixed point TDS/chloride; NOT a field-validated result"
+}

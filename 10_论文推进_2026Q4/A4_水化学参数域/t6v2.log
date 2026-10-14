@@ -1,0 +1,32 @@
+===== B2 样本完整性矩阵
+                                               sample  n_present                           missing  charge_error_pct  charge_balanced
+                           IEUA RP-1 (2025, tertiary)          9                                                3.19             True
+                        LADWP AWPF (2012, RO product)          8                                Mg               NaN            False
+                     Figshare RW (2025, paired study)          6             SO4,alkalinity,silica               NaN            False
+Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)          6             SO4,alkalinity,silica               NaN            False
+                              AI-UWM model assumption          2 Ca,Mg,Na,SO4,alkalinity,silica,pH               NaN            False
+
+===== 多判据 CoC_lim 与 chi_eff (A5: chi 已截断到 <=1)
+                                               sample  CoC_lim_engine_conservative who_engine  CoC_lim_precipitation_ratio who_precipitation  CoC_lim_phreeqc limiting_phase_phreeqc  chi_eff_conservative  chi_eff_all_ratio  chi_eff_phreeqc
+                           IEUA RP-1 (2025, tertiary)                        4.966        TDS                        3.571        alkalinity             2.52                Calcite                 0.993              0.714            0.504
+                        LADWP AWPF (2012, RO product)                      100.000        TDS                       70.423        alkalinity           100.00       none_below_upper                 1.000              1.000            1.000
+                     Figshare RW (2025, paired study)                        1.594   chloride                        1.300          hardness              NaN                    n/a                 0.319              0.260              NaN
+Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)                        0.155   chloride                        4.138          hardness              NaN                    n/a                 0.031              0.031              NaN
+                              AI-UWM model assumption                        3.385        TDS                          NaN               n/a              NaN                    n/a                 0.677              0.677              NaN
+
+===== B3 阈值三档敏感性 (全物种比值法)
+tier                                                   baseline  conservative  permissive
+sample                                                                                   
+AI-UWM model assumption                                    3.38          2.31        4.62
+Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)      0.16          0.09        0.25
+Figshare RW (2025, paired study)                           1.30          0.74        1.86
+IEUA RP-1 (2025, tertiary)                                 3.57          2.14        5.00
+LADWP AWPF (2012, RO product)                             70.42         42.25       98.59
+
+===== 再生水样本 chi_eff (A5 截断后), n=3
+  conservative 判据: 0.319 – 1.000
+  全物种比值法:      0.260 – 1.000  (跨度 3.8x, 非旧报告的 200x)
+  PHREEQC 判据:      0.504 – 1.000 (n=2)
+  [C2] 苦咸水 BW 已剔出再生水分布: chi_eff_all = 0.031 (非再生水边界情形)
+
+[write] C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A4_水化学参数域\T6_coc_limits.csv  C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A4_水化学参数域\T6_summary.json

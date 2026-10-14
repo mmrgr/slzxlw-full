@@ -1,0 +1,6 @@
+﻿source,sclass,is_reclaimed,TDS,chloride,Ca,Mg,Na,SO4,alkalinity,silica,pH,TDS_is_estimated,hardness,n_present,missing,charge_error_pct
+"IEUA RP-1 (2025, tertiary)",municipal tertiary reclaimed,True,443.0,100.0,45.0,9.0,88.0,47.0,140.0,24.0,6.9,False,149.427,9,,3.187760659766949
+"LADWP AWPF (2012, RO product)",RO product (advanced treated),True,22.0,3.6,0.41,,6.6,0.96,7.1,0.52,6.4,False,1.0237699999999998,8,Mg,
+"Figshare RW (2025, paired study)","reclaimed (RW, high-salinity)",True,1378.0,313.7325,91.38239999999999,75.361,310.36499999999995,,,,8.17,True,538.5184508,6,"SO4,alkalinity,silica",
+"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",brackish (BW) — NOT reclaimed water,False,6130.8,3222.4050000000007,36.8736,18.7187,2000.1299999999999,,,,8.44,True,169.1569858,6,"SO4,alkalinity,silica",
+AI-UWM model assumption,assumed in main model,True,650.0,130.0,,,,,,,,False,,2,"Ca,Mg,Na,SO4,alkalinity,silica,pH",

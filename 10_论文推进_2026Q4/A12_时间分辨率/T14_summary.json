@@ -1,0 +1,719 @@
+{
+ "discipline": "指标 B/C 分列不合并; 全部日尺度; S_city 分组复用冻结模块, 仅替换时间尺度参数; 日尺度自建解算器的语义差异已记录, 不用于结论。",
+ "params": {
+  "phi": 0.7,
+  "shares": [
+   0.3,
+   0.5,
+   0.7,
+   1.0
+  ],
+  "panel": "B_full",
+  "sample": "IEUA RP-1 (2025, tertiary)"
+ },
+ "indicator_B": {
+  "ha": {
+   "evaporative": {
+    "withdrawal_B2": {
+     "annual_ml": 27948.18305526677,
+     "mean_ml_day": 38.28518226748873,
+     "max_ml_day": 42.621340682328096,
+     "min_ml_day": 33.94046506441665,
+     "peak_over_mean": 1.1132594428973523
+    },
+    "withdrawal_B1": {
+     "annual_ml": 8964.026584287303,
+     "mean_ml_day": 12.279488471626443,
+     "max_ml_day": 13.670256494987315,
+     "min_ml_day": 10.885975325081871,
+     "peak_over_mean": 1.1132594428973523
+    },
+    "return_B2": {
+     "annual_ml": 5128.101749962318,
+     "mean_ml_day": 7.0247969177566,
+     "max_ml_day": 7.820421503128752,
+     "min_ml_day": 6.227601914127673,
+     "peak_over_mean": 1.1132594428973526
+    },
+    "return_B1_strict": {
+     "annual_ml": 2117.8734018540495,
+     "mean_ml_day": 2.901196440895958,
+     "max_ml_day": 3.229784333527616,
+     "min_ml_day": 2.5719599755139964,
+     "peak_over_mean": 1.1132594428973526
+    },
+    "net_B2": {
+     "annual_ml": 22820.081305304455,
+     "mean_ml_day": 31.26038534973213,
+     "max_ml_day": 34.80091917919935,
+     "min_ml_day": 27.712863150288975,
+     "peak_over_mean": 1.1132594428973523
+    },
+    "net_B1": {
+     "annual_ml": 6846.153182433254,
+     "mean_ml_day": 9.378292030730485,
+     "max_ml_day": 10.440472161459699,
+     "min_ml_day": 8.314015349567875,
+     "peak_over_mean": 1.1132594428973523
+    },
+    "annual_withdrawal_saving_ml": 18984.15647097947,
+    "annual_net_saving_ml": 15973.9281228712,
+    "net_peak_over_mean_B2": 1.1132594428973523,
+    "net_peak_over_mean_B1": 1.1132594428973523,
+    "caveat": "回归流按来源份额严格归属, 故净耗水差为**上界**估计。"
+   },
+   "hybrid": {
+    "withdrawal_B2": {
+     "annual_ml": 8487.361305342605,
+     "mean_ml_day": 11.62652233608576,
+     "max_ml_day": 43.992882272401566,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 3.783838451491112
+    },
+    "withdrawal_B1": {
+     "annual_ml": 2722.213899239694,
+     "mean_ml_day": 3.729060135944786,
+     "max_ml_day": 14.110161130310555,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 3.783838451491112
+    },
+    "return_B2": {
+     "annual_ml": 1557.312411916805,
+     "mean_ml_day": 2.133304673858637,
+     "max_ml_day": 8.072080253692016,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 3.7838384514911114
+    },
+    "return_B1_strict": {
+     "annual_ml": 643.1601197460667,
+     "mean_ml_day": 0.8810412599261188,
+     "max_ml_day": 3.3337177966586236,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 3.783838451491112
+    },
+    "net_B2": {
+     "annual_ml": 6930.048893425801,
+     "mean_ml_day": 9.493217662227124,
+     "max_ml_day": 35.92080201870955,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 3.7838384514911114
+    },
+    "net_B1": {
+     "annual_ml": 2079.053779493627,
+     "mean_ml_day": 2.8480188760186675,
+     "max_ml_day": 10.776443333651931,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 3.783838451491112
+    },
+    "annual_withdrawal_saving_ml": 5765.147406102911,
+    "annual_net_saving_ml": 4850.995113932174,
+    "net_peak_over_mean_B2": 3.7838384514911114,
+    "net_peak_over_mean_B1": 3.783838451491112,
+    "caveat": "回归流按来源份额严格归属, 故净耗水差为**上界**估计。"
+   }
+  },
+  "co": {
+   "evaporative": {
+    "withdrawal_B2": {
+     "annual_ml": 27624.454251993728,
+     "mean_ml_day": 37.84171815341607,
+     "max_ml_day": 42.071880160276905,
+     "min_ml_day": 34.06436234168092,
+     "peak_over_mean": 1.1117856749979247
+    },
+    "withdrawal_B1": {
+     "annual_ml": 8860.194661013415,
+     "mean_ml_day": 12.137252960292349,
+     "max_ml_day": 13.494023975079187,
+     "min_ml_day": 10.925713811298364,
+     "peak_over_mean": 1.1117856749979247
+    },
+    "return_B2": {
+     "annual_ml": 5068.70203015603,
+     "mean_ml_day": 6.943427438569904,
+     "max_ml_day": 7.719603161589552,
+     "min_ml_day": 6.250335336300344,
+     "peak_over_mean": 1.1117856749979247
+    },
+    "return_B1_strict": {
+     "annual_ml": 2093.3416954275444,
+     "mean_ml_day": 2.867591363599376,
+     "max_ml_day": 3.188146999797552,
+     "min_ml_day": 2.581348734259466,
+     "peak_over_mean": 1.111785674997925
+    },
+    "net_B2": {
+     "annual_ml": 22555.752221837698,
+     "mean_ml_day": 30.898290714846162,
+     "max_ml_day": 34.35227699868735,
+     "min_ml_day": 27.814027005380574,
+     "peak_over_mean": 1.1117856749979247
+    },
+    "net_B1": {
+     "annual_ml": 6766.852965585868,
+     "mean_ml_day": 9.26966159669297,
+     "max_ml_day": 10.305876975281635,
+     "min_ml_day": 8.344365077038898,
+     "peak_over_mean": 1.1117856749979247
+    },
+    "annual_withdrawal_saving_ml": 18764.259590980313,
+    "annual_net_saving_ml": 15788.899256251829,
+    "net_peak_over_mean_B2": 1.1117856749979247,
+    "net_peak_over_mean_B1": 1.1117856749979247,
+    "caveat": "回归流按来源份额严格归属, 故净耗水差为**上界**估计。"
+   },
+   "hybrid": {
+    "withdrawal_B2": {
+     "annual_ml": 2730.0166910920707,
+     "mean_ml_day": 3.739748891906946,
+     "max_ml_day": 40.04497200032361,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 10.70793070812414
+    },
+    "withdrawal_B1": {
+     "annual_ml": 875.6183593797415,
+     "mean_ml_day": 1.1994772046297828,
+     "max_ml_day": 12.843918793150154,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 10.70793070812414
+    },
+    "return_B2": {
+     "annual_ml": 500.91998264543196,
+     "mean_ml_day": 0.686191757048537,
+     "max_ml_day": 7.347693786961687,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 10.707930708124138
+    },
+    "return_B1_strict": {
+     "annual_ml": 206.87676638041512,
+     "mean_ml_day": 0.2833928306581029,
+     "max_ml_day": 3.034550793866124,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 10.707930708124138
+    },
+    "net_B2": {
+     "annual_ml": 2229.0967084466392,
+     "mean_ml_day": 3.05355713485841,
+     "max_ml_day": 32.697278213361926,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 10.707930708124138
+    },
+    "net_B1": {
+     "annual_ml": 668.7415929993264,
+     "mean_ml_day": 0.91608437397168,
+     "max_ml_day": 9.80936799928403,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 10.70793070812414
+    },
+    "annual_withdrawal_saving_ml": 1854.3983317123293,
+    "annual_net_saving_ml": 1560.355115447313,
+    "net_peak_over_mean_B2": 10.707930708124138,
+    "net_peak_over_mean_B1": 10.70793070812414,
+    "caveat": "回归流按来源份额严格归属, 故净耗水差为**上界**估计。"
+   }
+  }
+ },
+ "indicator_C": {
+  "ha": {
+   "evaporative": {
+    "demand_entitlement": {
+     "annual_ml": 20916.062030003704,
+     "mean_ml_day": 28.65213976712836,
+     "max_ml_day": 31.897265154970395,
+     "min_ml_day": 25.400609091857692,
+     "peak_over_mean": 1.1132594428973523
+    },
+    "reclaimed_supply": {
+     "annual_ml": 24404.451231393024,
+     "mean_ml_day": 33.43075511149729,
+     "max_ml_day": 40.0,
+     "min_ml_day": 29.830065523038726,
+     "peak_over_mean": 1.1965030363984646
+    },
+    "tau_p95": 1.5984275821429652,
+    "tau_heat_mean": 1.0001443753650043,
+    "tau_max": 1.9465173627079546,
+    "frac_days_tau_gt1": 0.5315068493150685,
+    "coverage_by_share": {
+     "sigma_0.30": {
+      "coverage_mean": 0.35038121150556645,
+      "coverage_heatwave": 0.3436628693175792,
+      "failure_prob_overall": 1.0,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 1.0,
+      "peak_shortfall_ml_day": 21.068252362766124
+     },
+     "sigma_0.50": {
+      "coverage_mean": 0.5839686858426107,
+      "coverage_heatwave": 0.5727714488626321,
+      "failure_prob_overall": 1.0,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 1.0,
+      "peak_shortfall_ml_day": 14.0325871602296
+     },
+     "sigma_0.70": {
+      "coverage_mean": 0.817043029122381,
+      "coverage_heatwave": 0.8018800284076849,
+      "failure_prob_overall": 0.9904109589041096,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 0.98989898989899,
+      "peak_shortfall_ml_day": 7.003202876040522
+     },
+     "sigma_1.00": {
+      "coverage_mean": 1.0,
+      "coverage_heatwave": 1.0,
+      "failure_prob_overall": 0.0,
+      "failure_prob_heatwave": 0.0,
+      "failure_prob_non_heatwave": 0.0,
+      "peak_shortfall_ml_day": 0.0
+     }
+    },
+    "failure_scale_s_star": {
+     "sigma_0.30": 0.35,
+     "sigma_0.50": 0.6,
+     "sigma_0.70": 0.8,
+     "sigma_1.00": 1.15
+    },
+    "failure_scale_note": "s* = 使 **任一** 时刻 'AI 目标再生水抽水' 超过 σ·R(t) 的最小 AI 部署倍数 (相对 1000 MW IT); None/NaN 表示在 0.25–3.0 区间内不失效。",
+    "s_star_at_full_pool": 1.15,
+    "S_city_by_window": {
+     "full_year": {
+      "window": "full_year",
+      "n_days": 730,
+      "E_window_ml": 22814.37771087673,
+      "pool_window_ml": 24404.451231393024,
+      "gap_window_ml": 33778.84676860697,
+      "m0_window_ml": 27948.18305526677,
+      "S_AI_ml": 8281.304666856962,
+      "S_city_ml": -837.1006938369101,
+      "eta_transfer": -0.1010831900904593,
+      "phi_eff": 0.3167731622926178,
+      "CoC_ai": 4.4391707634805275,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2029-04-09",
+      "tech": "evaporative",
+      "sum_daily_M0_ml": 27948.18305526677,
+      "m0_consistency_rel": 0.0
+     },
+     "heatwave": {
+      "window": "heatwave",
+      "n_days": 37,
+      "E_window_ml": 1265.5967020251428,
+      "pool_window_ml": 1328.9331501936197,
+      "gap_window_ml": 1712.0785348472025,
+      "m0_window_ml": 1550.3875998983506,
+      "S_AI_ml": 477.23030810653825,
+      "S_city_ml": -48.00199412686857,
+      "eta_transfer": -0.10058454652078062,
+      "phi_eff": 0.3286009269559345,
+      "CoC_ai": 4.422996746049085,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2029-07-26",
+      "tech": "evaporative",
+      "sum_daily_M0_ml": 1550.3875998983508,
+      "m0_consistency_rel": 1.4665602037718798e-16
+     },
+     "non_heatwave_matched": {
+      "window": "non_heatwave_matched",
+      "n_days": 37,
+      "E_window_ml": 1054.416339789061,
+      "pool_window_ml": 1153.3619672011762,
+      "gap_window_ml": 1712.0785348472025,
+      "m0_window_ml": 1291.6863766500946,
+      "S_AI_ml": 368.8630981411829,
+      "S_city_ml": -37.1720580940987,
+      "eta_transfer": -0.10077467299228464,
+      "phi_eff": 0.30555185234117416,
+      "CoC_ai": 4.458174743241242,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2029-01-17",
+      "tech": "evaporative",
+      "sum_daily_M0_ml": 1291.6863766500949,
+      "m0_consistency_rel": 1.7602854652141725e-16
+     }
+    }
+   },
+   "hybrid": {
+    "demand_entitlement": {
+     "annual_ml": 6351.832431559285,
+     "mean_ml_day": 8.701140317204501,
+     "max_ml_day": 32.92370930405796,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 3.7838384514911114
+    },
+    "reclaimed_supply": {
+     "annual_ml": 24404.451231393024,
+     "mean_ml_day": 33.43075511149729,
+     "max_ml_day": 40.0,
+     "min_ml_day": 29.830065523038726,
+     "peak_over_mean": 1.1965030363984646
+    },
+    "tau_p95": 3.4764410452947034,
+    "tau_heat_mean": 3.4000760588839616,
+    "tau_max": 4.6123356065517465,
+    "frac_days_tau_gt1": 0.3506849315068493,
+    "coverage_by_share": {
+     "sigma_0.30": {
+      "coverage_mean": 0.8306576496239882,
+      "coverage_heatwave": 0.3328790766253258,
+      "failure_prob_overall": 0.33013698630136984,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 0.2943722943722944,
+      "peak_shortfall_ml_day": 22.094567187908986
+     },
+     "sigma_0.50": {
+      "coverage_mean": 0.9141906025265414,
+      "coverage_heatwave": 0.5547984610422098,
+      "failure_prob_overall": 0.2452054794520548,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 0.2049062049062049,
+      "peak_shortfall_ml_day": 15.054246323363252
+     },
+     "sigma_0.70": {
+      "coverage_mean": 0.9684351475760267,
+      "coverage_heatwave": 0.7767178454590935,
+      "failure_prob_overall": 0.17945205479452056,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 0.13564213564213565,
+      "peak_shortfall_ml_day": 8.024862039174174
+     },
+     "sigma_1.00": {
+      "coverage_mean": 1.0,
+      "coverage_heatwave": 1.0,
+      "failure_prob_overall": 0.0,
+      "failure_prob_heatwave": 0.0,
+      "failure_prob_non_heatwave": 0.0,
+      "peak_shortfall_ml_day": 0.0
+     }
+    },
+    "failure_scale_s_star": {
+     "sigma_0.30": 0.35,
+     "sigma_0.50": 0.55,
+     "sigma_0.70": 0.8,
+     "sigma_1.00": 1.1
+    },
+    "failure_scale_note": "s* = 使 **任一** 时刻 'AI 目标再生水抽水' 超过 σ·R(t) 的最小 AI 部署倍数 (相对 1000 MW IT); None/NaN 表示在 0.25–3.0 区间内不失效。",
+    "s_star_at_full_pool": 1.1,
+    "S_city_by_window": {
+     "full_year": {
+      "window": "full_year",
+      "n_days": 730,
+      "E_window_ml": 6928.316814222245,
+      "pool_window_ml": 24404.451231393024,
+      "gap_window_ml": 33778.84676860697,
+      "m0_window_ml": 8487.361305342605,
+      "S_AI_ml": 3564.7248244015927,
+      "S_city_ml": -134.76716336794198,
+      "eta_transfer": -0.03780576903031084,
+      "phi_eff": 0.42906945787167106,
+      "CoC_ai": 4.681716231282889,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2029-07-13",
+      "tech": "hybrid",
+      "sum_daily_M0_ml": 8487.361305342605,
+      "m0_consistency_rel": 0.0
+     },
+     "heatwave": {
+      "window": "heatwave",
+      "n_days": 37,
+      "E_window_ml": 1306.595864800653,
+      "pool_window_ml": 1328.9331501936197,
+      "gap_window_ml": 1712.0785348472025,
+      "m0_window_ml": 1600.6125992774198,
+      "S_AI_ml": 486.3541377993191,
+      "S_city_ml": -48.9135651956592,
+      "eta_transfer": -0.1005719112763919,
+      "phi_eff": 0.32449785551959587,
+      "CoC_ai": 4.429419997827634,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2029-07-26",
+      "tech": "hybrid",
+      "sum_daily_M0_ml": 1600.61259927742,
+      "m0_consistency_rel": 1.4205415823034104e-16
+     },
+     "non_heatwave_matched": {
+      "window": "non_heatwave_matched",
+      "n_days": 37,
+      "E_window_ml": 0.0,
+      "pool_window_ml": 1153.3619672011762,
+      "gap_window_ml": 1712.0785348472025,
+      "m0_window_ml": 0.0,
+      "S_AI_ml": 0.0,
+      "S_city_ml": 0.0,
+      "eta_transfer": NaN,
+      "phi_eff": 0.0,
+      "CoC_ai": 5.0,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2029-01-17",
+      "tech": "hybrid",
+      "sum_daily_M0_ml": 0.0,
+      "m0_consistency_rel": 0.0
+     }
+    }
+   }
+  },
+  "co": {
+   "evaporative": {
+    "demand_entitlement": {
+     "annual_ml": 20673.787542364626,
+     "mean_ml_day": 28.320256907348803,
+     "max_ml_day": 31.486055941851433,
+     "min_ml_day": 25.493332226362842,
+     "peak_over_mean": 1.111785674997925
+    },
+    "reclaimed_supply": {
+     "annual_ml": 22413.97659165322,
+     "mean_ml_day": 30.70407752281263,
+     "max_ml_day": 36.0,
+     "min_ml_day": 27.91139073054177,
+     "peak_over_mean": 1.1724827092835663
+    },
+    "tau_p95": 1.449146912103158,
+    "tau_heat_mean": 0.9555452875366105,
+    "tau_max": 1.7278196590699388,
+    "frac_days_tau_gt1": 0.5178082191780822,
+    "coverage_by_share": {
+     "sigma_0.30": {
+      "coverage_mean": 0.32564732631635285,
+      "coverage_heatwave": 0.3187776116129973,
+      "failure_prob_overall": 1.0,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 1.0,
+      "peak_shortfall_ml_day": 21.533651515082184
+     },
+     "sigma_0.50": {
+      "coverage_mean": 0.542745543860588,
+      "coverage_heatwave": 0.5312960193549955,
+      "failure_prob_overall": 1.0,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 1.0,
+      "peak_shortfall_ml_day": 14.975797991789479
+     },
+     "sigma_0.70": {
+      "coverage_mean": 0.7598437614048232,
+      "coverage_heatwave": 0.7438144270969934,
+      "failure_prob_overall": 1.0,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 1.0,
+      "peak_shortfall_ml_day": 8.690328319675483
+     },
+     "sigma_1.00": {
+      "coverage_mean": 1.0,
+      "coverage_heatwave": 1.0,
+      "failure_prob_overall": 0.0,
+      "failure_prob_heatwave": 0.0,
+      "failure_prob_non_heatwave": 0.0,
+      "peak_shortfall_ml_day": 0.0
+     }
+    },
+    "failure_scale_s_star": {
+     "sigma_0.30": 0.35,
+     "sigma_0.50": 0.55,
+     "sigma_0.70": 0.75,
+     "sigma_1.00": 1.05
+    },
+    "failure_scale_note": "s* = 使 **任一** 时刻 'AI 目标再生水抽水' 超过 σ·R(t) 的最小 AI 部署倍数 (相对 1000 MW IT); None/NaN 表示在 0.25–3.0 区间内不失效。",
+    "s_star_at_full_pool": 1.05,
+    "S_city_by_window": {
+     "full_year": {
+      "window": "full_year",
+      "n_days": 730,
+      "E_window_ml": 22550.114693164407,
+      "pool_window_ml": 22413.97659165322,
+      "gap_window_ml": 35116.27540834678,
+      "m0_window_ml": 27624.454251993728,
+      "S_AI_ml": 7353.741972085056,
+      "S_city_ml": -742.3999613663254,
+      "eta_transfer": -0.10095539987457948,
+      "phi_eff": 0.28540852195159183,
+      "CoC_ai": 4.489433882737205,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2030-04-15",
+      "tech": "evaporative",
+      "sum_daily_M0_ml": 27624.454251993728,
+      "m0_consistency_rel": 0.0
+     },
+     "heatwave": {
+      "window": "heatwave",
+      "n_days": 37,
+      "E_window_ml": 1240.4540381701224,
+      "pool_window_ml": 1208.2182506508375,
+      "gap_window_ml": 1779.8660138477135,
+      "m0_window_ml": 1519.5872081093544,
+      "S_AI_ml": 417.57593538444394,
+      "S_city_ml": -42.155636544388926,
+      "eta_transfer": -0.10095322304810997,
+      "phi_eff": 0.2943708520916968,
+      "CoC_ai": 4.475127784187696,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2030-08-12",
+      "tech": "evaporative",
+      "sum_daily_M0_ml": 1519.5872081093542,
+      "m0_consistency_rel": 1.4962857954439263e-16
+     },
+     "non_heatwave_matched": {
+      "window": "non_heatwave_matched",
+      "n_days": 37,
+      "E_window_ml": 1050.590166923755,
+      "pool_window_ml": 1085.5620394801513,
+      "gap_window_ml": 1779.8660138477135,
+      "m0_window_ml": 1286.9992192357731,
+      "S_AI_ml": 336.4350393562403,
+      "S_city_ml": -34.88578983853404,
+      "eta_transfer": -0.1036924985735347,
+      "phi_eff": 0.28090251924015974,
+      "CoC_ai": 4.485600364858159,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2030-01-26",
+      "tech": "evaporative",
+      "sum_daily_M0_ml": 1286.999219235773,
+      "m0_consistency_rel": 1.766696296663239e-16
+     }
+    }
+   },
+   "hybrid": {
+    "demand_entitlement": {
+     "annual_ml": 2043.1095052193964,
+     "mean_ml_day": 2.7987801441361593,
+     "max_ml_day": 29.969143850683686,
+     "min_ml_day": 0.0,
+     "peak_over_mean": 10.70793070812414
+    },
+    "reclaimed_supply": {
+     "annual_ml": 22413.97659165322,
+     "mean_ml_day": 30.70407752281263,
+     "max_ml_day": 36.0,
+     "min_ml_day": 27.91139073054177,
+     "peak_over_mean": 1.1724827092835663
+    },
+    "tau_p95": 4.90969790967058,
+    "tau_heat_mean": 5.974975493228149,
+    "tau_max": 9.331722976720538,
+    "frac_days_tau_gt1": 0.24794520547945206,
+    "coverage_by_share": {
+     "sigma_0.30": {
+      "coverage_mean": 0.9582505218983467,
+      "coverage_heatwave": 0.529693534561203,
+      "failure_prob_overall": 0.1410958904109589,
+      "failure_prob_heatwave": 1.0,
+      "failure_prob_non_heatwave": 0.09523809523809523,
+      "peak_shortfall_ml_day": 20.016739423914437
+     },
+     "sigma_0.50": {
+      "coverage_mean": 0.9938280344595504,
+      "coverage_heatwave": 0.8782287879857209,
+      "failure_prob_overall": 0.0410958904109589,
+      "failure_prob_heatwave": 0.8108108108108109,
+      "failure_prob_non_heatwave": 0.0,
+      "peak_shortfall_ml_day": 13.381803139401608
+     },
+     "sigma_0.70": {
+      "coverage_mean": 0.9993932936342411,
+      "coverage_heatwave": 0.9880298473782724,
+      "failure_prob_overall": 0.00684931506849315,
+      "failure_prob_heatwave": 0.13513513513513514,
+      "failure_prob_non_heatwave": 0.0,
+      "peak_shortfall_ml_day": 6.746866854888779
+     },
+     "sigma_1.00": {
+      "coverage_mean": 1.0,
+      "coverage_heatwave": 1.0,
+      "failure_prob_overall": 0.0,
+      "failure_prob_heatwave": 0.0,
+      "failure_prob_non_heatwave": 0.0,
+      "peak_shortfall_ml_day": 0.0
+     }
+    },
+    "failure_scale_s_star": {
+     "sigma_0.30": 0.35,
+     "sigma_0.50": 0.6,
+     "sigma_0.70": 0.8,
+     "sigma_1.00": 1.15
+    },
+    "failure_scale_note": "s* = 使 **任一** 时刻 'AI 目标再生水抽水' 超过 σ·R(t) 的最小 AI 部署倍数 (相对 1000 MW IT); None/NaN 表示在 0.25–3.0 区间内不失效。",
+    "s_star_at_full_pool": 1.15,
+    "S_city_by_window": {
+     "full_year": {
+      "window": "full_year",
+      "n_days": 730,
+      "E_window_ml": 2228.5395735532506,
+      "pool_window_ml": 22413.97659165322,
+      "gap_window_ml": 35116.27540834678,
+      "m0_window_ml": 2730.016691092071,
+      "S_AI_ml": 1138.5640212039173,
+      "S_city_ml": -30.485610776217072,
+      "eta_transfer": -0.02677549106459696,
+      "phi_eff": 0.42349163454380384,
+      "CoC_ai": 4.770749613676297,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2029-09-10",
+      "tech": "hybrid",
+      "sum_daily_M0_ml": 2730.0166910920707,
+      "m0_consistency_rel": 1.6657310278368828e-16
+     },
+     "heatwave": {
+      "window": "heatwave",
+      "n_days": 37,
+      "E_window_ml": 765.4747318325358,
+      "pool_window_ml": 1208.2182506508375,
+      "gap_window_ml": 1779.8660138477135,
+      "m0_window_ml": 937.7256833631521,
+      "S_AI_ml": 301.0554015517515,
+      "S_city_ml": -32.689685823977925,
+      "eta_transfer": -0.10858362167057334,
+      "phi_eff": 0.3439198285320763,
+      "CoC_ai": 4.361920048334535,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2030-08-12",
+      "tech": "hybrid",
+      "sum_daily_M0_ml": 937.7256833631523,
+      "m0_consistency_rel": 1.2123677503838682e-16
+     },
+     "non_heatwave_matched": {
+      "window": "non_heatwave_matched",
+      "n_days": 37,
+      "E_window_ml": 0.0,
+      "pool_window_ml": 1085.5620394801513,
+      "gap_window_ml": 1779.8660138477135,
+      "m0_window_ml": 0.0,
+      "S_AI_ml": 0.0,
+      "S_city_ml": 0.0,
+      "eta_transfer": NaN,
+      "phi_eff": 0.0,
+      "CoC_ai": 5.0,
+      "status": "converged_unique",
+      "closure_residual_ml": 0.0,
+      "roots": 1,
+      "rep_day": "2030-01-26",
+      "tech": "hybrid",
+      "sum_daily_M0_ml": 0.0,
+      "m0_consistency_rel": 0.0
+     }
+    }
+   }
+  }
+ },
+ "S_city_windows": {}
+}

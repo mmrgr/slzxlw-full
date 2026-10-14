@@ -1,0 +1,166 @@
+{
+ "estimand": "y = S_city / M0 (Ls rule: incumbent claim = 0)",
+ "control_bounds": {
+  "pool_scale": [
+   0.3,
+   4.0
+  ],
+  "gap_scale": [
+   0.3,
+   4.0
+  ],
+  "dp_scale": [
+   0.0,
+   3.0
+  ],
+  "ai_target": [
+   0.1,
+   0.95
+  ]
+ },
+ "configs": [
+  "ha|B_full|IEUA",
+  "co|B_full|IEUA",
+  "ha|B_full|model",
+  "ha|A_engine2|IEUA"
+ ],
+ "morris_main_ranking": [
+  {
+   "parameter": "gap_scale",
+   "mu": 2.66711,
+   "mu_star": 2.66711,
+   "sigma": 2.09378
+  },
+  {
+   "parameter": "pool_scale",
+   "mu": -2.06821,
+   "mu_star": 2.06821,
+   "sigma": 1.5379
+  },
+  {
+   "parameter": "dp_scale",
+   "mu": 0.97077,
+   "mu_star": 0.97077,
+   "sigma": 1.28026
+  },
+  {
+   "parameter": "ai_target",
+   "mu": 0.5205,
+   "mu_star": 0.563,
+   "sigma": 0.45791
+  }
+ ],
+ "sobol_main": [
+  {
+   "parameter": "gap_scale",
+   "S1": 0.41709,
+   "ST": 0.76241
+  },
+  {
+   "parameter": "pool_scale",
+   "S1": 0.26539,
+   "ST": 0.33428
+  },
+  {
+   "parameter": "dp_scale",
+   "S1": 0.14091,
+   "ST": 0.22794
+  },
+  {
+   "parameter": "ai_target",
+   "S1": 0.02091,
+   "ST": 0.02791
+  }
+ ],
+ "morris_by_config": {
+  "ha|B_full|IEUA": [
+   {
+    "parameter": "gap_scale",
+    "mu_star": 2.66711,
+    "sigma": 2.09378
+   },
+   {
+    "parameter": "pool_scale",
+    "mu_star": 2.06821,
+    "sigma": 1.5379
+   },
+   {
+    "parameter": "dp_scale",
+    "mu_star": 0.97077,
+    "sigma": 1.28026
+   },
+   {
+    "parameter": "ai_target",
+    "mu_star": 0.563,
+    "sigma": 0.45791
+   }
+  ],
+  "co|B_full|IEUA": [
+   {
+    "parameter": "gap_scale",
+    "mu_star": 2.07394,
+    "sigma": 2.16048
+   },
+   {
+    "parameter": "pool_scale",
+    "mu_star": 1.74369,
+    "sigma": 1.43486
+   },
+   {
+    "parameter": "dp_scale",
+    "mu_star": 1.00886,
+    "sigma": 1.19543
+   },
+   {
+    "parameter": "ai_target",
+    "mu_star": 0.50339,
+    "sigma": 0.44771
+   }
+  ],
+  "ha|B_full|model": [
+   {
+    "parameter": "gap_scale",
+    "mu_star": 2.68763,
+    "sigma": 2.08945
+   },
+   {
+    "parameter": "pool_scale",
+    "mu_star": 2.08456,
+    "sigma": 1.52025
+   },
+   {
+    "parameter": "dp_scale",
+    "mu_star": 0.96854,
+    "sigma": 1.27779
+   },
+   {
+    "parameter": "ai_target",
+    "mu_star": 0.54637,
+    "sigma": 0.44187
+   }
+  ],
+  "ha|A_engine2|IEUA": [
+   {
+    "parameter": "gap_scale",
+    "mu_star": 2.73959,
+    "sigma": 2.10611
+   },
+   {
+    "parameter": "pool_scale",
+    "mu_star": 2.10169,
+    "sigma": 1.50273
+   },
+   {
+    "parameter": "dp_scale",
+    "mu_star": 0.96992,
+    "sigma": 1.2798
+   },
+   {
+    "parameter": "ai_target",
+    "mu_star": 0.53125,
+    "sigma": 0.42036
+   }
+  ]
+ },
+ "interpretation": "global sensitivity of the city-level estimand to the four allocation knobs; ranking is model-based and conditional on the Ls rule and the frozen water samples"
+}

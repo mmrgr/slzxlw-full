@@ -1,0 +1,1186 @@
+{
+ "S1_provenance": {
+  "file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\07_代码_AI-UWM引擎\\aiuwm_src\\examples\\cawcc_r2\\parameter_sources.csv",
+  "evidence_type_counts_all": {
+   "assumption": 15,
+   "literature": 10,
+   "scenario-tuned": 6,
+   "synthetic": 1
+  },
+  "chain_inputs": [
+   {
+    "parameter": "population",
+    "value": "1000000",
+    "unit": "cap",
+    "source": "参数域设定: 中等规模城市",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "domestic_demand",
+    "value": "165",
+    "unit": "l_capita_day",
+    "source": "GB/T 50331 城市综合用水量标准量级",
+    "evidence_type": "literature"
+   },
+   {
+    "parameter": "industrial_demand",
+    "value": "60",
+    "unit": "ml_day",
+    "source": "参数域设定: 一般工业占比",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "wtw_capacity",
+    "value": "370 / 380",
+    "unit": "ml_day",
+    "source": "场景标定(设计): 按峰值日利用率 ~0.78-0.82 反算(城市峰值日需水 ~289 ML/d); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "wwtw_capacity",
+    "value": "270",
+    "unit": "ml_day",
+    "source": "场景标定(设计): 按峰值日利用率 ~0.82 反算(峰值日污水 ~222 ML/d); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "reuse_treatment_capacity",
+    "value": "40 / 36",
+    "unit": "ml_day",
+    "source": "参数域设定: HA 高回用 / CO 中回用; 取产水量的 1.2 倍作日峰值裕度",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "central_reuse_fraction",
+    "value": "0.16 / 0.15",
+    "unit": "fraction",
+    "source": "场景标定(设计): 按再生水产能反算: 产能/污水量, 使产能利用率落在 90-95%; 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "reservoir_inflow_mean",
+    "value": "265 / 290",
+    "unit": "ml_day",
+    "source": "场景标定(设计): 使弃水率 < 10%、库容年内真实循环(取水量的 1.1-1.26 倍); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "reservoir_capacity",
+    "value": "120000",
+    "unit": "ml",
+    "source": "场景标定(设计): 年取水量的 1.3-1.4 倍(现实多年调节水库 1-2 倍); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "reservoir_initial_storage",
+    "value": "65000",
+    "unit": "ml",
+    "source": "参数域设定: 起调库容 54%",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "abstraction_capacity",
+    "value": "380 / 400",
+    "unit": "ml_day",
+    "source": "场景标定(设计): 使 0 MW 基线日峰值占用率落在 0.73-0.79; 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "local_connection_capacity",
+    "value": "70",
+    "unit": "ml_day",
+    "source": "参数域设定: 园区局部接入能力",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "cooling_storage",
+    "value": "24",
+    "unit": "ml",
+    "source": "园区冷却水调蓄: 1000 MW 设计补水量的 ~15 小时(现实 12-72 h)",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "grid_connection_capacity",
+    "value": "1500 / 2600",
+    "unit": "MW",
+    "source": "参数域设定: 常规 / 能源富集(HA 补充情景)",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "ai_load_factor_mean",
+    "value": "0.75",
+    "unit": "fraction",
+    "source": "LBNL 2024 利用率区间中位",
+    "evidence_type": "literature"
+   },
+   {
+    "parameter": "training_fraction",
+    "value": "0.65",
+    "unit": "fraction",
+    "source": "开题报告 3.3 训练/推理占比设定",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "inference_peak_factor",
+    "value": "1.35",
+    "unit": "fraction",
+    "source": "开题报告 3.3 推理峰荷系数设定",
+    "evidence_type": "assumption"
+   },
+   {
+    "parameter": "coc_quality_limits_tds",
+    "value": "2200",
+    "unit": "mg/L",
+    "source": "ASHRAE 冷却水处理: 结垢/腐蚀控制量级",
+    "evidence_type": "literature"
+   },
+   {
+    "parameter": "coc_quality_limits_chloride",
+    "value": "500",
+    "unit": "mg/L",
+    "source": "ASHRAE 冷却水处理: 不锈钢腐蚀控制量级",
+    "evidence_type": "literature"
+   },
+   {
+    "parameter": "driver_series",
+    "value": "synthetic",
+    "unit": "-",
+    "source": "合成分成: 正弦季节 + AR(1) 噪声, 固定种子",
+    "evidence_type": "synthetic"
+   }
+  ],
+  "synthetic_or_tuned_in_chain": [
+   {
+    "parameter": "wtw_capacity",
+    "source": "场景标定(设计): 按峰值日利用率 ~0.78-0.82 反算(城市峰值日需水 ~289 ML/d); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "wwtw_capacity",
+    "source": "场景标定(设计): 按峰值日利用率 ~0.82 反算(峰值日污水 ~222 ML/d); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "central_reuse_fraction",
+    "source": "场景标定(设计): 按再生水产能反算: 产能/污水量, 使产能利用率落在 90-95%; 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "reservoir_inflow_mean",
+    "source": "场景标定(设计): 使弃水率 < 10%、库容年内真实循环(取水量的 1.1-1.26 倍); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "reservoir_capacity",
+    "source": "场景标定(设计): 年取水量的 1.3-1.4 倍(现实多年调节水库 1-2 倍); 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "abstraction_capacity",
+    "source": "场景标定(设计): 使 0 MW 基线日峰值占用率落在 0.73-0.79; 非实测率定",
+    "evidence_type": "scenario-tuned"
+   },
+   {
+    "parameter": "driver_series",
+    "source": "合成分成: 正弦季节 + AR(1) 噪声, 固定种子",
+    "evidence_type": "synthetic"
+   }
+  ]
+ },
+ "S2_realisation_sensitivity": {
+  "generator": "scripts/build_r2_domains.build_drivers (正弦季节 + AR(1) 噪声)",
+  "n_realisations_per_domain": 24,
+  "seed_base": 20260918,
+  "seed_step_per_domain": 101,
+  "seed_step_per_realisation": 7919,
+  "by_domain": {
+   "ha": {
+    "n_realisations": 24,
+    "stats": {
+     "wb_p95_c": {
+      "min": 24.2655,
+      "p25": 24.654999999999998,
+      "median": 24.93875,
+      "p75": 25.07575,
+      "max": 25.5165
+     },
+     "wb_max_c": {
+      "min": 27.5,
+      "p25": 28.375,
+      "median": 29.125,
+      "p75": 30.0175,
+      "max": 32.6
+     },
+     "n_wb_ge_p95": {
+      "min": 37.0,
+      "p25": 37.0,
+      "median": 37.0,
+      "p75": 37.0,
+      "max": 38.0
+     },
+     "n_wb_ge_24c": {
+      "min": 44.0,
+      "p25": 54.5,
+      "median": 59.5,
+      "p75": 68.0,
+      "max": 85.0
+     },
+     "evaporative_seasonal_factor": {
+      "min": 1.1078213090531839,
+      "p25": 1.1113767684462037,
+      "median": 1.114260895354441,
+      "p75": 1.1173977268811732,
+      "max": 1.1384182128443556
+     },
+     "evaporative_n_zero_wet_days": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 0.0
+     },
+     "evaporative_peak_in_wb_top37_share": {
+      "min": 0.5675675675675675,
+      "p25": 0.6216216216216216,
+      "median": 0.6486486486486487,
+      "p75": 0.6824324324324325,
+      "max": 0.7297297297297297
+     },
+     "evaporative_M_window_over_year": {
+      "min": 1.0853509170191058,
+      "p25": 1.0896249557794273,
+      "median": 1.091970352643905,
+      "p75": 1.0941244011530271,
+      "max": 1.0970448202465681
+     },
+     "hybrid_seasonal_factor": {
+      "min": 3.582797736846646,
+      "p25": 3.6351063554402954,
+      "median": 3.6913913492905728,
+      "p75": 3.770917465712067,
+      "max": 3.886407193446776
+     },
+     "hybrid_n_zero_wet_days": {
+      "min": 402.0,
+      "p25": 410.5,
+      "median": 414.0,
+      "p75": 419.25,
+      "max": 429.0
+     },
+     "hybrid_peak_in_wb_top37_share": {
+      "min": 0.6216216216216216,
+      "p25": 0.6689189189189189,
+      "median": 0.7027027027027027,
+      "p75": 0.7297297297297297,
+      "max": 0.8108108108108109
+     },
+     "hybrid_M_window_over_year": {
+      "min": 3.5016168298531536,
+      "p25": 3.565926399375928,
+      "median": 3.628025240400019,
+      "p75": 3.6815543553197725,
+      "max": 3.808178891548023
+     }
+    },
+    "qualitative_checks": {
+     "hybrid_seasonal_factor_gt_2_all": true,
+     "hybrid_seasonal_gt_diurnal_all": true,
+     "evaporative_seasonal_factor_lt_1.3_all": true,
+     "evaporative_peak_in_wb_top37_ge_half_all": true,
+     "hybrid_peak_in_wb_top37_ge_half_all": true,
+     "wb_p95_range_c": [
+      24.2655,
+      25.5165
+     ],
+     "n_wb_ge_24c_median": 59.5
+    },
+    "per_realisation": [
+     {
+      "seed": 20260918,
+      "wb_p95_c": 25.3575,
+      "wb_max_c": 28.23,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 70,
+      "evaporative_seasonal_factor": 1.1133,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7297,
+      "evaporative_M_window_over_year": 1.0945,
+      "hybrid_seasonal_factor": 3.7838,
+      "hybrid_n_zero_wet_days": 414,
+      "hybrid_peak_in_wb_top37_share": 0.7297,
+      "hybrid_M_window_over_year": 3.7208
+     },
+     {
+      "seed": 20268837,
+      "wb_p95_c": 25.09,
+      "wb_max_c": 28.76,
+      "n_wb_ge_p95": 38,
+      "n_wb_ge_24c": 68,
+      "evaporative_seasonal_factor": 1.1162,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.0958,
+      "hybrid_seasonal_factor": 3.746,
+      "hybrid_n_zero_wet_days": 423,
+      "hybrid_peak_in_wb_top37_share": 0.6757,
+      "hybrid_M_window_over_year": 3.6784
+     },
+     {
+      "seed": 20276756,
+      "wb_p95_c": 24.802,
+      "wb_max_c": 32.6,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 50,
+      "evaporative_seasonal_factor": 1.1384,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6757,
+      "evaporative_M_window_over_year": 1.0939,
+      "hybrid_seasonal_factor": 3.7669,
+      "hybrid_n_zero_wet_days": 420,
+      "hybrid_peak_in_wb_top37_share": 0.7027,
+      "hybrid_M_window_over_year": 3.6226
+     },
+     {
+      "seed": 20284675,
+      "wb_p95_c": 25.0175,
+      "wb_max_c": 27.5,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 64,
+      "evaporative_seasonal_factor": 1.1108,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0894,
+      "hybrid_seasonal_factor": 3.6063,
+      "hybrid_n_zero_wet_days": 417,
+      "hybrid_peak_in_wb_top37_share": 0.6216,
+      "hybrid_M_window_over_year": 3.5374
+     },
+     {
+      "seed": 20292594,
+      "wb_p95_c": 24.2655,
+      "wb_max_c": 28.07,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 48,
+      "evaporative_seasonal_factor": 1.1078,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0889,
+      "hybrid_seasonal_factor": 3.6515,
+      "hybrid_n_zero_wet_days": 412,
+      "hybrid_peak_in_wb_top37_share": 0.7027,
+      "hybrid_M_window_over_year": 3.59
+     },
+     {
+      "seed": 20300513,
+      "wb_p95_c": 24.734,
+      "wb_max_c": 28.33,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 58,
+      "evaporative_seasonal_factor": 1.1094,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0904,
+      "hybrid_seasonal_factor": 3.716,
+      "hybrid_n_zero_wet_days": 407,
+      "hybrid_peak_in_wb_top37_share": 0.7027,
+      "hybrid_M_window_over_year": 3.6533
+     },
+     {
+      "seed": 20308432,
+      "wb_p95_c": 24.932,
+      "wb_max_c": 30.9,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 59,
+      "evaporative_seasonal_factor": 1.1158,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.0902,
+      "hybrid_seasonal_factor": 3.5828,
+      "hybrid_n_zero_wet_days": 421,
+      "hybrid_peak_in_wb_top37_share": 0.6486,
+      "hybrid_M_window_over_year": 3.5016
+     },
+     {
+      "seed": 20316351,
+      "wb_p95_c": 24.871,
+      "wb_max_c": 27.63,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 58,
+      "evaporative_seasonal_factor": 1.1093,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7297,
+      "evaporative_M_window_over_year": 1.0931,
+      "hybrid_seasonal_factor": 3.7039,
+      "hybrid_n_zero_wet_days": 421,
+      "hybrid_peak_in_wb_top37_share": 0.7568,
+      "hybrid_M_window_over_year": 3.6503
+     },
+     {
+      "seed": 20324270,
+      "wb_p95_c": 25.0355,
+      "wb_max_c": 28.39,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 72,
+      "evaporative_seasonal_factor": 1.1107,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7297,
+      "evaporative_M_window_over_year": 1.0933,
+      "hybrid_seasonal_factor": 3.5946,
+      "hybrid_n_zero_wet_days": 412,
+      "hybrid_peak_in_wb_top37_share": 0.7297,
+      "hybrid_M_window_over_year": 3.539
+     },
+     {
+      "seed": 20332189,
+      "wb_p95_c": 25.3555,
+      "wb_max_c": 27.83,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 85,
+      "evaporative_seasonal_factor": 1.1116,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.0895,
+      "hybrid_seasonal_factor": 3.6021,
+      "hybrid_n_zero_wet_days": 407,
+      "hybrid_peak_in_wb_top37_share": 0.6757,
+      "hybrid_M_window_over_year": 3.5316
+     },
+     {
+      "seed": 20340108,
+      "wb_p95_c": 24.9455,
+      "wb_max_c": 29.42,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 59,
+      "evaporative_seasonal_factor": 1.1142,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7027,
+      "evaporative_M_window_over_year": 1.0951,
+      "hybrid_seasonal_factor": 3.6008,
+      "hybrid_n_zero_wet_days": 402,
+      "hybrid_peak_in_wb_top37_share": 0.7297,
+      "hybrid_M_window_over_year": 3.54
+     },
+     {
+      "seed": 20348027,
+      "wb_p95_c": 24.495,
+      "wb_max_c": 29.11,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 55,
+      "evaporative_seasonal_factor": 1.1143,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.0894,
+      "hybrid_seasonal_factor": 3.605,
+      "hybrid_n_zero_wet_days": 418,
+      "hybrid_peak_in_wb_top37_share": 0.6757,
+      "hybrid_M_window_over_year": 3.526
+     },
+     {
+      "seed": 20355946,
+      "wb_p95_c": 25.281,
+      "wb_max_c": 30.49,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 73,
+      "evaporative_seasonal_factor": 1.12,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0937,
+      "hybrid_seasonal_factor": 3.6591,
+      "hybrid_n_zero_wet_days": 415,
+      "hybrid_peak_in_wb_top37_share": 0.6216,
+      "hybrid_M_window_over_year": 3.5746
+     },
+     {
+      "seed": 20363865,
+      "wb_p95_c": 24.631,
+      "wb_max_c": 29.06,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 62,
+      "evaporative_seasonal_factor": 1.1129,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5946,
+      "evaporative_M_window_over_year": 1.0854,
+      "hybrid_seasonal_factor": 3.6777,
+      "hybrid_n_zero_wet_days": 414,
+      "hybrid_peak_in_wb_top37_share": 0.6216,
+      "hybrid_M_window_over_year": 3.5878
+     },
+     {
+      "seed": 20371784,
+      "wb_p95_c": 24.9695,
+      "wb_max_c": 30.1,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 61,
+      "evaporative_seasonal_factor": 1.1186,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5946,
+      "evaporative_M_window_over_year": 1.0918,
+      "hybrid_seasonal_factor": 3.7844,
+      "hybrid_n_zero_wet_days": 413,
+      "hybrid_peak_in_wb_top37_share": 0.6757,
+      "hybrid_M_window_over_year": 3.6953
+     },
+     {
+      "seed": 20379703,
+      "wb_p95_c": 24.61,
+      "wb_max_c": 28.39,
+      "n_wb_ge_p95": 38,
+      "n_wb_ge_24c": 53,
+      "evaporative_seasonal_factor": 1.115,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6757,
+      "evaporative_M_window_over_year": 1.0922,
+      "hybrid_seasonal_factor": 3.8864,
+      "hybrid_n_zero_wet_days": 420,
+      "hybrid_peak_in_wb_top37_share": 0.7297,
+      "hybrid_M_window_over_year": 3.8082
+     },
+     {
+      "seed": 20387622,
+      "wb_p95_c": 25.071,
+      "wb_max_c": 28.91,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 60,
+      "evaporative_seasonal_factor": 1.1084,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7027,
+      "evaporative_M_window_over_year": 1.0946,
+      "hybrid_seasonal_factor": 3.6789,
+      "hybrid_n_zero_wet_days": 417,
+      "hybrid_peak_in_wb_top37_share": 0.7027,
+      "hybrid_M_window_over_year": 3.6334
+     },
+     {
+      "seed": 20395541,
+      "wb_p95_c": 25.5165,
+      "wb_max_c": 30.17,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 71,
+      "evaporative_seasonal_factor": 1.1186,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.091,
+      "hybrid_seasonal_factor": 3.7828,
+      "hybrid_n_zero_wet_days": 409,
+      "hybrid_peak_in_wb_top37_share": 0.6486,
+      "hybrid_M_window_over_year": 3.691
+     },
+     {
+      "seed": 20403460,
+      "wb_p95_c": 24.663,
+      "wb_max_c": 29.14,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 62,
+      "evaporative_seasonal_factor": 1.1129,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.0942,
+      "hybrid_seasonal_factor": 3.6447,
+      "hybrid_n_zero_wet_days": 411,
+      "hybrid_peak_in_wb_top37_share": 0.7297,
+      "hybrid_M_window_over_year": 3.5846
+     },
+     {
+      "seed": 20411379,
+      "wb_p95_c": 25.16,
+      "wb_max_c": 29.17,
+      "n_wb_ge_p95": 38,
+      "n_wb_ge_24c": 68,
+      "evaporative_seasonal_factor": 1.1165,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0912,
+      "hybrid_seasonal_factor": 3.7597,
+      "hybrid_n_zero_wet_days": 419,
+      "hybrid_peak_in_wb_top37_share": 0.6486,
+      "hybrid_M_window_over_year": 3.6755
+     },
+     {
+      "seed": 20419298,
+      "wb_p95_c": 24.805,
+      "wb_max_c": 29.99,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 56,
+      "evaporative_seasonal_factor": 1.1193,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6757,
+      "evaporative_M_window_over_year": 1.0941,
+      "hybrid_seasonal_factor": 3.8733,
+      "hybrid_n_zero_wet_days": 429,
+      "hybrid_peak_in_wb_top37_share": 0.6757,
+      "hybrid_M_window_over_year": 3.7875
+     },
+     {
+      "seed": 20427217,
+      "wb_p95_c": 24.622,
+      "wb_max_c": 29.18,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 48,
+      "evaporative_seasonal_factor": 1.1125,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0887,
+      "hybrid_seasonal_factor": 3.6545,
+      "hybrid_n_zero_wet_days": 405,
+      "hybrid_peak_in_wb_top37_share": 0.7027,
+      "hybrid_M_window_over_year": 3.5775
+     },
+     {
+      "seed": 20435136,
+      "wb_p95_c": 24.9475,
+      "wb_max_c": 29.31,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 51,
+      "evaporative_seasonal_factor": 1.1171,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7297,
+      "evaporative_M_window_over_year": 1.097,
+      "hybrid_seasonal_factor": 3.8489,
+      "hybrid_n_zero_wet_days": 403,
+      "hybrid_peak_in_wb_top37_share": 0.8108,
+      "hybrid_M_window_over_year": 3.7811
+     },
+     {
+      "seed": 20443055,
+      "wb_p95_c": 24.35,
+      "wb_max_c": 30.36,
+      "n_wb_ge_p95": 38,
+      "n_wb_ge_24c": 44,
+      "evaporative_seasonal_factor": 1.1182,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5676,
+      "evaporative_M_window_over_year": 1.0897,
+      "hybrid_seasonal_factor": 3.749,
+      "hybrid_n_zero_wet_days": 414,
+      "hybrid_peak_in_wb_top37_share": 0.7568,
+      "hybrid_M_window_over_year": 3.655
+     }
+    ]
+   },
+   "co": {
+    "n_realisations": 24,
+    "stats": {
+     "wb_p95_c": {
+      "min": 16.7565,
+      "p25": 17.198375,
+      "median": 17.404249999999998,
+      "p75": 17.695374999999995,
+      "max": 17.9565
+     },
+     "wb_max_c": {
+      "min": 20.09,
+      "p25": 21.065,
+      "median": 21.39,
+      "p75": 22.235,
+      "max": 24.0
+     },
+     "n_wb_ge_p95": {
+      "min": 37.0,
+      "p25": 37.0,
+      "median": 37.0,
+      "p75": 37.0,
+      "max": 38.0
+     },
+     "n_wb_ge_24c": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1.0
+     },
+     "evaporative_seasonal_factor": {
+      "min": 1.098527050128679,
+      "p25": 1.1008301761623158,
+      "median": 1.1043527155368942,
+      "p75": 1.1068332114052788,
+      "max": 1.111785674997925
+     },
+     "evaporative_n_zero_wet_days": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 0.0
+     },
+     "evaporative_peak_in_wb_top37_share": {
+      "min": 0.4864864864864865,
+      "p25": 0.5675675675675675,
+      "median": 0.6216216216216216,
+      "p75": 0.6756756756756757,
+      "max": 0.7297297297297297
+     },
+     "evaporative_M_window_over_year": {
+      "min": 1.0747021041056,
+      "p25": 1.0804475615489955,
+      "median": 1.0817044114533139,
+      "p75": 1.0841606694578054,
+      "max": 1.0887581907016128
+     },
+     "hybrid_seasonal_factor": {
+      "min": 8.480537734939318,
+      "p25": 9.3214295551373,
+      "median": 10.021759506449094,
+      "p75": 10.695353531897826,
+      "max": 12.436196640252428
+     },
+     "hybrid_n_zero_wet_days": {
+      "min": 497.0,
+      "p25": 510.25,
+      "median": 520.0,
+      "p75": 526.0,
+      "max": 547.0
+     },
+     "hybrid_peak_in_wb_top37_share": {
+      "min": 0.9459459459459459,
+      "p25": 0.9459459459459459,
+      "median": 0.972972972972973,
+      "p75": 1.0,
+      "max": 1.0
+     },
+     "hybrid_M_window_over_year": {
+      "min": 6.375567470932972,
+      "p25": 6.760698869381775,
+      "median": 6.855087160142211,
+      "p75": 7.056148686663853,
+      "max": 7.597316746507012
+     }
+    },
+    "qualitative_checks": {
+     "hybrid_seasonal_factor_gt_2_all": true,
+     "hybrid_seasonal_gt_diurnal_all": true,
+     "evaporative_seasonal_factor_lt_1.3_all": true,
+     "evaporative_peak_in_wb_top37_ge_half_all": false,
+     "hybrid_peak_in_wb_top37_ge_half_all": true,
+     "wb_p95_range_c": [
+      16.7565,
+      17.9565
+     ],
+     "n_wb_ge_24c_median": 0.0
+    },
+    "per_realisation": [
+     {
+      "seed": 20261019,
+      "wb_p95_c": 17.781,
+      "wb_max_c": 23.06,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1118,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0853,
+      "hybrid_seasonal_factor": 10.7079,
+      "hybrid_n_zero_wet_days": 526,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 6.7769
+     },
+     {
+      "seed": 20268938,
+      "wb_p95_c": 16.7565,
+      "wb_max_c": 21.14,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1005,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.4865,
+      "evaporative_M_window_over_year": 1.0747,
+      "hybrid_seasonal_factor": 10.5956,
+      "hybrid_n_zero_wet_days": 534,
+      "hybrid_peak_in_wb_top37_share": 0.9459,
+      "hybrid_M_window_over_year": 7.1372
+     },
+     {
+      "seed": 20276857,
+      "wb_p95_c": 17.382,
+      "wb_max_c": 22.37,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1066,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5946,
+      "evaporative_M_window_over_year": 1.0808,
+      "hybrid_seasonal_factor": 10.9773,
+      "hybrid_n_zero_wet_days": 526,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.7917
+     },
+     {
+      "seed": 20284776,
+      "wb_p95_c": 17.695,
+      "wb_max_c": 20.82,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1056,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0816,
+      "hybrid_seasonal_factor": 8.4805,
+      "hybrid_n_zero_wet_days": 506,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.5461
+     },
+     {
+      "seed": 20292695,
+      "wb_p95_c": 17.497,
+      "wb_max_c": 21.83,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1086,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5676,
+      "evaporative_M_window_over_year": 1.081,
+      "hybrid_seasonal_factor": 9.8561,
+      "hybrid_n_zero_wet_days": 506,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.797
+     },
+     {
+      "seed": 20300614,
+      "wb_p95_c": 17.9565,
+      "wb_max_c": 22.19,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1084,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7297,
+      "evaporative_M_window_over_year": 1.0887,
+      "hybrid_seasonal_factor": 10.5941,
+      "hybrid_n_zero_wet_days": 547,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 7.3119
+     },
+     {
+      "seed": 20308533,
+      "wb_p95_c": 17.2275,
+      "wb_max_c": 22.56,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1116,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6757,
+      "evaporative_M_window_over_year": 1.0868,
+      "hybrid_seasonal_factor": 12.0056,
+      "hybrid_n_zero_wet_days": 529,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 7.4492
+     },
+     {
+      "seed": 20316452,
+      "wb_p95_c": 17.7065,
+      "wb_max_c": 22.95,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1065,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6757,
+      "evaporative_M_window_over_year": 1.0823,
+      "hybrid_seasonal_factor": 12.4362,
+      "hybrid_n_zero_wet_days": 524,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 7.5079
+     },
+     {
+      "seed": 20324371,
+      "wb_p95_c": 17.2765,
+      "wb_max_c": 21.18,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.0985,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7297,
+      "evaporative_M_window_over_year": 1.0819,
+      "hybrid_seasonal_factor": 9.693,
+      "hybrid_n_zero_wet_days": 519,
+      "hybrid_peak_in_wb_top37_share": 0.9459,
+      "hybrid_M_window_over_year": 6.8474
+     },
+     {
+      "seed": 20332290,
+      "wb_p95_c": 17.6455,
+      "wb_max_c": 24.0,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 1,
+      "evaporative_seasonal_factor": 1.1107,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5676,
+      "evaporative_M_window_over_year": 1.0796,
+      "hybrid_seasonal_factor": 10.9771,
+      "hybrid_n_zero_wet_days": 497,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.3756
+     },
+     {
+      "seed": 20340209,
+      "wb_p95_c": 17.5565,
+      "wb_max_c": 21.3,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1025,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7027,
+      "evaporative_M_window_over_year": 1.0865,
+      "hybrid_seasonal_factor": 9.7197,
+      "hybrid_n_zero_wet_days": 511,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.8627
+     },
+     {
+      "seed": 20348128,
+      "wb_p95_c": 17.14,
+      "wb_max_c": 21.52,
+      "n_wb_ge_p95": 38,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1048,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5676,
+      "evaporative_M_window_over_year": 1.0805,
+      "hybrid_seasonal_factor": 10.5198,
+      "hybrid_n_zero_wet_days": 505,
+      "hybrid_peak_in_wb_top37_share": 0.9459,
+      "hybrid_M_window_over_year": 6.7121
+     },
+     {
+      "seed": 20356047,
+      "wb_p95_c": 17.2955,
+      "wb_max_c": 21.96,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1039,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5405,
+      "evaporative_M_window_over_year": 1.0808,
+      "hybrid_seasonal_factor": 10.6912,
+      "hybrid_n_zero_wet_days": 533,
+      "hybrid_peak_in_wb_top37_share": 0.9459,
+      "hybrid_M_window_over_year": 6.8391
+     },
+     {
+      "seed": 20363966,
+      "wb_p95_c": 17.4265,
+      "wb_max_c": 21.05,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1037,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.0819,
+      "hybrid_seasonal_factor": 9.3186,
+      "hybrid_n_zero_wet_days": 522,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.7913
+     },
+     {
+      "seed": 20371885,
+      "wb_p95_c": 17.143,
+      "wb_max_c": 21.33,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1016,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5676,
+      "evaporative_M_window_over_year": 1.0777,
+      "hybrid_seasonal_factor": 9.5282,
+      "hybrid_n_zero_wet_days": 502,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 6.4072
+     },
+     {
+      "seed": 20379804,
+      "wb_p95_c": 17.842,
+      "wb_max_c": 21.72,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1062,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.7297,
+      "evaporative_M_window_over_year": 1.0888,
+      "hybrid_seasonal_factor": 10.3919,
+      "hybrid_n_zero_wet_days": 543,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 7.5973
+     },
+     {
+      "seed": 20387723,
+      "wb_p95_c": 17.6965,
+      "wb_max_c": 21.07,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.0986,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5946,
+      "evaporative_M_window_over_year": 1.0804,
+      "hybrid_seasonal_factor": 9.3072,
+      "hybrid_n_zero_wet_days": 519,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.9573
+     },
+     {
+      "seed": 20395642,
+      "wb_p95_c": 17.372,
+      "wb_max_c": 21.1,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1037,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5676,
+      "evaporative_M_window_over_year": 1.0781,
+      "hybrid_seasonal_factor": 9.3224,
+      "hybrid_n_zero_wet_days": 523,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 7.0423
+     },
+     {
+      "seed": 20403561,
+      "wb_p95_c": 17.13,
+      "wb_max_c": 20.72,
+      "n_wb_ge_p95": 38,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1009,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6216,
+      "evaporative_M_window_over_year": 1.082,
+      "hybrid_seasonal_factor": 8.745,
+      "hybrid_n_zero_wet_days": 515,
+      "hybrid_peak_in_wb_top37_share": 0.9459,
+      "hybrid_M_window_over_year": 6.5876
+     },
+     {
+      "seed": 20411480,
+      "wb_p95_c": 17.1205,
+      "wb_max_c": 21.45,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.106,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6757,
+      "evaporative_M_window_over_year": 1.0839,
+      "hybrid_seasonal_factor": 10.8054,
+      "hybrid_n_zero_wet_days": 521,
+      "hybrid_peak_in_wb_top37_share": 1.0,
+      "hybrid_M_window_over_year": 7.0977
+     },
+     {
+      "seed": 20419399,
+      "wb_p95_c": 17.793,
+      "wb_max_c": 23.15,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1076,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5946,
+      "evaporative_M_window_over_year": 1.0849,
+      "hybrid_seasonal_factor": 10.1874,
+      "hybrid_n_zero_wet_days": 512,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.4802
+     },
+     {
+      "seed": 20427318,
+      "wb_p95_c": 17.2075,
+      "wb_max_c": 20.38,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.0997,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.5946,
+      "evaporative_M_window_over_year": 1.0786,
+      "hybrid_seasonal_factor": 8.8823,
+      "hybrid_n_zero_wet_days": 508,
+      "hybrid_peak_in_wb_top37_share": 0.9459,
+      "hybrid_M_window_over_year": 6.8746
+     },
+     {
+      "seed": 20435237,
+      "wb_p95_c": 17.171,
+      "wb_max_c": 20.09,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1001,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.0809,
+      "hybrid_seasonal_factor": 9.243,
+      "hybrid_n_zero_wet_days": 525,
+      "hybrid_peak_in_wb_top37_share": 0.9459,
+      "hybrid_M_window_over_year": 6.9551
+     },
+     {
+      "seed": 20443156,
+      "wb_p95_c": 17.511,
+      "wb_max_c": 21.05,
+      "n_wb_ge_p95": 37,
+      "n_wb_ge_24c": 0,
+      "evaporative_seasonal_factor": 1.1005,
+      "evaporative_n_zero_wet_days": 0,
+      "evaporative_peak_in_wb_top37_share": 0.6486,
+      "evaporative_M_window_over_year": 1.0835,
+      "hybrid_seasonal_factor": 9.7968,
+      "hybrid_n_zero_wet_days": 512,
+      "hybrid_peak_in_wb_top37_share": 0.973,
+      "hybrid_M_window_over_year": 6.9615
+     }
+    ]
+   }
+  },
+  "interpretation": "这是**生成器实现**的散布, 不是气候不确定性, 也不是观测区间; 它的用途是回答'结论是否依赖某一次随机实现'。"
+ },
+ "S3_indicator_B": {
+  "strict_version": "取水 − 回流, 并按来源份额严格归属再生水。此项**不需要**流域水文, 只依赖设施水量平衡, 故可作为**上界**报告。",
+  "basin_version_status": "NOT_IDENTIFIABLE_FROM_AVAILABLE_DATA",
+  "required_external_data": [
+   "经校验的流域水文模型/实测径流序列 (替换 scenario-tuned 的 reservoir_inflow)",
+   "取水口与排放口所在流域的对应关系 (本研究未指定具体流域)",
+   "回归流时滞、河道损失与最小生态流量约束"
+  ],
+  "previous_tau_status": "RETIRED (基于 scenario-tuned 来水, 不作为任何结论依据)",
+  "basin_free_stress_axis": "改用 τ_cool(t) = M(t)/mean(M) —— 只依赖设施侧需求, 不含合成来水, 见 T5/T14 的季节因子",
+  "by_domain": {
+   "ha": {
+    "withdrawal_ml_yr": [
+     13974.091527633385,
+     4482.013292143652
+    ],
+    "return_ml_yr": [
+     2564.050874981159,
+     1058.9367009270247
+    ],
+    "net_consumption_ml_yr": [
+     11410.040652652227,
+     3423.076591216627
+    ],
+    "delta_withdrawal_ml_yr": 9492.078235489735,
+    "delta_net_ml_yr": 7986.9640614356,
+    "relative_uncertainty_declared_missing": [
+     "流域分配系数 (取水/回流归属同一流域的份额)",
+     "回归流时滞与河道损失",
+     "跨流域调水与地下水交换"
+    ]
+   },
+   "co": {
+    "withdrawal_ml_yr": [
+     13812.227125996864,
+     4430.097330506707
+    ],
+    "return_ml_yr": [
+     2534.351015078015,
+     1046.6708477137722
+    ],
+    "net_consumption_ml_yr": [
+     11277.876110918849,
+     3383.426482792934
+    ],
+    "delta_withdrawal_ml_yr": 9382.129795490157,
+    "delta_net_ml_yr": 7894.449628125914,
+    "relative_uncertainty_declared_missing": [
+     "流域分配系数 (取水/回流归属同一流域的份额)",
+     "回归流时滞与河道损失",
+     "跨流域调水与地下水交换"
+    ]
+   }
+  }
+ },
+ "corrections": {
+  "driver_series": "`timeseries.csv` 的气温/湿度/湿球/降雨由 `scripts/build_r2_domains.build_drivers` 生成 (正弦季节 + AR(1) 噪声, 固定种子 20260918 / co 20261019), **不是实测气象**。上一轮阶段报告称其为'真实气象'属表述错误, 已更正。",
+  "reservoir_inflow": "`reservoir_inflow_ml` 是**场景标定**量 (为使弃水率<10%、库容年内循环而反算), 非实测率定 → 基于它的 τ 轴**停用**。",
+  "coc_quality_limits": "引擎占位限值在 parameter_sources 中标注为 'ASHRAE 冷却水处理: 结垢/腐蚀控制**量级**' (literature), 即**量级引用而非标准值**; 且其 钙硬度+总碱度=1200 mg/L 超出 GB/T 50050-2017 的 1100 判据 → 已由 T6b 的引用档取代。"
+ }
+}

@@ -1,0 +1,33 @@
+[Morris] ha|B_full|IEUA: n_eval=120 nan=0
+        config  parameter        mu  mu_star    sigma
+ha|B_full|IEUA  gap_scale  2.667107 2.667107 2.093781
+ha|B_full|IEUA pool_scale -2.068209 2.068209 1.537904
+ha|B_full|IEUA   dp_scale  0.970772 0.970772 1.280256
+ha|B_full|IEUA  ai_target  0.520501 0.563003 0.457913
+[Morris] co|B_full|IEUA: n_eval=120 nan=0
+        config  parameter        mu  mu_star    sigma
+co|B_full|IEUA  gap_scale  2.073939 2.073939 2.160485
+co|B_full|IEUA pool_scale -1.743691 1.743691 1.434856
+co|B_full|IEUA   dp_scale  1.008861 1.008861 1.195433
+co|B_full|IEUA  ai_target  0.460541 0.503389 0.447709
+[Morris] ha|B_full|model: n_eval=120 nan=0
+         config  parameter        mu  mu_star    sigma
+ha|B_full|model  gap_scale  2.687632 2.687632 2.089454
+ha|B_full|model pool_scale -2.084555 2.084555 1.520246
+ha|B_full|model   dp_scale  0.968541 0.968541 1.277789
+ha|B_full|model  ai_target  0.519732 0.546370 0.441868
+[Morris] ha|A_engine2|IEUA: n_eval=120 nan=0
+           config  parameter        mu  mu_star    sigma
+ha|A_engine2|IEUA  gap_scale  2.739586 2.739586 2.106112
+ha|A_engine2|IEUA pool_scale -2.101689 2.101689 1.502730
+ha|A_engine2|IEUA   dp_scale  0.969918 0.969918 1.279805
+ha|A_engine2|IEUA  ai_target  0.531250 0.531250 0.420355
+
+[Sobol] ha|B_full|IEUA: n_eval=3072 nan=0
+        config  parameter       S1       ST
+ha|B_full|IEUA  gap_scale 0.417086 0.762405
+ha|B_full|IEUA pool_scale 0.265391 0.334276
+ha|B_full|IEUA   dp_scale 0.140910 0.227940
+ha|B_full|IEUA  ai_target 0.020911 0.027910
+
+[T10] 已写出 T10_morris.csv / T10_sobol.csv / T10_summary.json

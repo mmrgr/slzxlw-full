@@ -1,0 +1,40 @@
+============================================================================================
+T14b 跨尺度一致性自检 (M1 / M4 / M5 修复验证)
+============================================================================================
+[T-A 结构等价: 1 天窗口单步解 vs 逐日解]
+  ha|evaporative       rep=2029-04-09 E_rep=  31.345  M rel=3.720e-10  S_city rel=1.269e-08   (-1.159527 vs -1.159527)
+  ha|hybrid            rep=2029-07-13 E_rep=  23.960  M rel=1.792e-09  S_city rel=5.319e-08   (-1.023330 vs -1.023330)
+  co|evaporative       rep=2030-04-15 E_rep=  31.009  M rel=1.173e-09  S_city rel=4.499e-08   (-1.017300 vs -1.017300)
+  co|hybrid            rep=2029-09-10 E_rep=  10.762  M rel=2.184e-09  S_city rel=6.279e-08   (-0.475215 vs -0.475215)
+  → pass=True (max rel 6.279e-08)
+
+[T-D 缩放精确性: m0_window = ΣE_win×g_wet  vs  Σ_t M0(t)]
+  ha|evaporative       full_year              n=730 ΣE=  22814.4 rel=0.000e+00
+  ha|evaporative       heatwave               n= 37 ΣE=   1265.6 rel=1.467e-16
+  ha|evaporative       non_heatwave_matched   n= 37 ΣE=   1054.4 rel=1.760e-16
+  ha|hybrid            full_year              n=730 ΣE=   6928.3 rel=0.000e+00
+  ha|hybrid            heatwave               n= 37 ΣE=   1306.6 rel=1.421e-16
+  ha|hybrid            non_heatwave_matched   n= 37 ΣE=      0.0 rel=0.000e+00 (无湿日: 退化)
+  co|evaporative       full_year              n=730 ΣE=  22550.1 rel=0.000e+00
+  co|evaporative       heatwave               n= 37 ΣE=   1240.5 rel=1.496e-16
+  co|evaporative       non_heatwave_matched   n= 37 ΣE=   1050.6 rel=1.767e-16
+  co|hybrid            full_year              n=730 ΣE=   2228.5 rel=1.666e-16
+  co|hybrid            heatwave               n= 37 ΣE=    765.5 rel=1.212e-16
+  co|hybrid            non_heatwave_matched   n= 37 ΣE=      0.0 rel=0.000e+00 (无湿日: 退化)
+  → pass=True (max rel 1.767e-16)
+
+[T-B 聚合: 全年逐日求和 vs 单步年总量]
+  ha|evaporative       dp0  单步=    -837.10  逐日和=   -1011.26  Δ=  174.16 ML (rel=20.805%, Δ/M0=0.623%, 同号=True)
+  ha|evaporative       dp1  单步=   22694.49  逐日和=   22618.91  Δ=   75.57 ML (rel= 0.333%, Δ/M0=0.270%, 同号=True)
+  ha|hybrid            dp0  单步=    -134.77  逐日和=    -286.28  Δ=  151.52 ML (rel=112.427%, Δ/M0=1.785%, 同号=True)
+  ha|hybrid            dp1  单步=   15248.86  逐日和=   14151.68  Δ= 1097.18 ML (rel= 7.195%, Δ/M0=12.927%, 同号=True)
+  co|evaporative       dp0  单步=    -742.40  逐日和=    -832.97  Δ=   90.57 ML (rel=12.200%, Δ/M0=0.328%, 同号=True)
+  co|evaporative       dp1  单步=   20900.18  逐日和=   20656.73  Δ=  243.45 ML (rel= 1.165%, Δ/M0=0.881%, 同号=True)
+  co|hybrid            dp0  单步=     -30.49  逐日和=     -97.42  Δ=   66.93 ML (rel=219.554%, Δ/M0=2.452%, 同号=True)
+  co|hybrid            dp1  单步=   14598.07  逐日和=   14361.87  Δ=  236.20 ML (rel= 1.618%, Δ/M0=8.652%, 同号=True)
+
+[T-C 输入一致性]
+  ha: ΣR/P0=1.000000  R_cv=0.0552  R∈[29.83,40.00]
+  co: ΣR/P0=1.000000  R_cv=0.0455  R∈[27.91,36.00]
+============================================================================================
+verdict: {"M1_status": "RESOLVED-ALIGNED", "window_scaling_status": "EXACT", "one_step_vs_daily": "report daily-sum as primary; one-step biased"}

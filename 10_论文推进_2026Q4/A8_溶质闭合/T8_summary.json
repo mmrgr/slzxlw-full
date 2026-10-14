@@ -1,0 +1,24 @@
+{
+ "closure_definition": "steady state: M*c_makeup + recirc_return = (blowdown+drift)*c_loop",
+ "closure_residual_max_kg_day": 3.637978807091713e-12,
+ "closure_rel_max": 4.446966854004237e-16,
+ "external_closure_max_kg_day": 3.637978807091713e-12,
+ "recirc_share_range": [
+  0.11098766803688476,
+  0.11102034147536971
+ ],
+ "partition_residual_max_kg_day": 9.094947017729282e-13,
+ "water_balance_resid_max_ml": 0.0,
+ "engine_blowdown_vs_waterbalance_max_rel": 5.895053648913647e-16,
+ "engine_coc_reported_vs_effective_max_rel": 0.08155,
+ "closure_with_reported_coc_max_kg_day": 1305.1769436897066,
+ "coc_definition_selfconsistent": true,
+ "n_ledger_rows": 40,
+ "r_min_table": {
+  "TDS": 0.0,
+  "alkalinity": 0.5,
+  "chloride": 0.0,
+  "hardness": 0.0,
+  "silica": 0.0
+ }
+}

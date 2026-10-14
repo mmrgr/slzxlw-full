@@ -1,0 +1,381 @@
+﻿domain,panel,sample,phi_requested,CoC,g_ratio,status
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.0,5.0,1.225025,not_applicable
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.05,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.1,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.15,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.2,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.25,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.3,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.35,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.4,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.45,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.5,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.55,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.6,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.65,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.7,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.75,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.8,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.85,5.0,1.225025,converged
+ha,A_engine2,"IEUA RP-1 (2025, tertiary)",0.9,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.0,5.0,1.225025,not_applicable
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.05,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.1,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.15,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.2,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.25,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.3,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.35,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.4,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.45,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.5,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.55,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.6,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.65,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.7,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.75,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.8,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.85,5.0,1.225025,converged
+ha,A_engine2,"LADWP AWPF (2012, RO product)",0.9,5.0,1.225025,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.0,5.0,1.225025,not_applicable
+ha,A_engine2,"Figshare RW (2025, paired study)",0.05,5.0,1.225025,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.1,5.0,1.225025,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.15,5.0,1.225025,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.2,5.0,1.225025,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.25,4.588112617309697,1.2508538215634988,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.3,4.078605858361142,1.2923666144766952,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.35,3.670949441014517,1.3369863184856625,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.4,3.337378640776699,1.3850752855659396,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.45,3.0593797802809064,1.4370544938888514,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.5,2.8241335044929397,1.4934159042927515,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.55,2.6224818214328285,1.5547380794945265,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.6,2.447708055184691,1.6217061174300642,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.65,2.294774173359758,1.6951373559977443,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.7,2.1598272138228944,1.7760148975791432,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.75,2.039870190078813,1.8655318769505127,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.8,1.9325368938861558,1.9651507159005277,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.85,1.8359342401735792,2.0766836378157136,converged
+ha,A_engine2,"Figshare RW (2025, paired study)",0.9,1.7485296455253536,2.20240390741134,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.0,5.0,1.225025,not_applicable
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.05,2.5724101296366078,1.5724024739083813,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.1,1.413465520628822,3.17679159302473,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.15,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.2,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.25,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.3,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.35,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.4,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.45,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.5,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.55,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.6,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.65,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.7,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.75,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.8,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.85,1.000001,900021.0000940416,converged
+ha,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.9,1.000001,900021.0000940416,converged
+ha,A_engine2,AI-UWM model assumption,0.0,5.0,1.225025,not_applicable
+ha,A_engine2,AI-UWM model assumption,0.05,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.1,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.15,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.2,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.25,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.3,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.35,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.4,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.45,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.5,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.55,5.0,1.225025,converged
+ha,A_engine2,AI-UWM model assumption,0.6,4.761904761904762,1.2392658227848101,converged
+ha,A_engine2,AI-UWM model assumption,0.65,4.531410916580844,1.2548813065033537,converged
+ha,A_engine2,AI-UWM model assumption,0.7,4.322200392927309,1.270930810171496,converged
+ha,A_engine2,AI-UWM model assumption,0.75,4.131455399061033,1.2874326836581709,converged
+ha,A_engine2,AI-UWM model assumption,0.8,3.9568345323741005,1.3044063260340633,converged
+ha,A_engine2,AI-UWM model assumption,0.85,3.7963761863675582,1.3218722616476395,converged
+ha,A_engine2,AI-UWM model assumption,0.9,3.648424543946932,1.3398522229179712,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.0,5.0,1.225025,not_applicable
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.05,4.901960784313726,1.230678391959799,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.1,4.8076923076923075,1.2363888888888888,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.15,4.716981132075472,1.2421573604060911,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.2,4.62962962962963,1.247984693877551,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.25,4.545454545454546,1.2538717948717948,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.3,4.464285714285714,1.259819587628866,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.35,4.385964912280702,1.2658290155440415,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.4,4.310344827586207,1.2719010416666665,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.45,4.237288135593221,1.2780366492146598,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.5,4.166666666666667,1.2842368421052632,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.55,4.098360655737705,1.2905026455026454,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.6,4.032258064516129,1.2968351063829786,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.65,3.9682539682539684,1.303235294117647,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.7,3.90625,1.3097043010752687,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.75,3.8461538461538463,1.3162432432432434,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.8,3.787878787878788,1.3228532608695651,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.85,3.7313432835820897,1.329535519125683,converged
+ha,B_full,"IEUA RP-1 (2025, tertiary)",0.9,3.676470588235294,1.3362912087912089,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.0,5.0,1.225025,not_applicable
+ha,B_full,"LADWP AWPF (2012, RO product)",0.05,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.1,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.15,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.2,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.25,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.3,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.35,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.4,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.45,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.5,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.55,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.6,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.65,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.7,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.75,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.8,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.85,5.0,1.225025,converged
+ha,B_full,"LADWP AWPF (2012, RO product)",0.9,5.0,1.225025,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.0,5.0,1.225025,not_applicable
+ha,B_full,"Figshare RW (2025, paired study)",0.05,4.967148608172596,1.2268882343146656,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.1,4.324942972716836,1.2707073493425922,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.15,3.8297874468809536,1.3180721565292897,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.2,3.4363638648380976,1.3694311593876427,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.25,3.1162409603353245,1.4253118343747535,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.3,2.850678968876988,1.4863388133305162,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.35,2.6268244170965978,1.553257331909654,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.4,2.4355672398552133,1.626963813576279,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.45,2.2702704946466254,1.7085462578269797,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.5,2.1259844705933637,1.7993383063401518,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.55,1.9989425711450688,1.9009927145458663,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.6,1.8862277514238817,2.0155828714559645,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.65,1.785545783849763,2.1457457088049376,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.7,1.6950674591464523,2.2948871213945634,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.75,1.6133164500504351,2.4674843080680264,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.8,1.5390881312096898,2.6695429367791776,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.85,1.4713898238027079,2.9093102615918327,converged
+ha,B_full,"Figshare RW (2025, paired study)",0.9,1.40939614610335,3.1984285794808502,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.0,5.0,1.225025,not_applicable
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.05,2.5724101296366078,1.5724024739083813,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.1,1.413465520628822,3.17679159302473,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.15,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.2,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.25,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.3,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.35,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.4,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.45,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.5,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.55,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.6,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.65,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.7,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.75,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.8,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.85,1.000001,900021.0000940416,converged
+ha,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.9,1.000001,900021.0000940416,converged
+ha,B_full,AI-UWM model assumption,0.0,5.0,1.225025,not_applicable
+ha,B_full,AI-UWM model assumption,0.05,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.1,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.15,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.2,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.25,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.3,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.35,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.4,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.45,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.5,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.55,5.0,1.225025,converged
+ha,B_full,AI-UWM model assumption,0.6,4.761904761904762,1.2392658227848101,converged
+ha,B_full,AI-UWM model assumption,0.65,4.531410916580844,1.2548813065033537,converged
+ha,B_full,AI-UWM model assumption,0.7,4.322200392927309,1.270930810171496,converged
+ha,B_full,AI-UWM model assumption,0.75,4.131455399061033,1.2874326836581709,converged
+ha,B_full,AI-UWM model assumption,0.8,3.9568345323741005,1.3044063260340633,converged
+ha,B_full,AI-UWM model assumption,0.85,3.7963761863675582,1.3218722616476395,converged
+ha,B_full,AI-UWM model assumption,0.9,3.648424543946932,1.3398522229179712,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.0,5.0,1.225025,not_applicable
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.05,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.1,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.15,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.2,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.25,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.3,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.35,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.4,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.45,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.5,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.55,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.6,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.65,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.7,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.75,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.8,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.85,5.0,1.225025,converged
+co,A_engine2,"IEUA RP-1 (2025, tertiary)",0.9,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.0,5.0,1.225025,not_applicable
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.05,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.1,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.15,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.2,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.25,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.3,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.35,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.4,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.45,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.5,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.55,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.6,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.65,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.7,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.75,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.8,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.85,5.0,1.225025,converged
+co,A_engine2,"LADWP AWPF (2012, RO product)",0.9,5.0,1.225025,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.0,5.0,1.225025,not_applicable
+co,A_engine2,"Figshare RW (2025, paired study)",0.05,5.0,1.225025,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.1,5.0,1.225025,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.15,5.0,1.225025,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.2,5.0,1.225025,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.25,4.588112617309697,1.250853821563499,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.3,4.078605858361142,1.292366614476695,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.35,3.670949441014517,1.3369863184856625,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.4,3.337378640776699,1.3850752855659396,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.45,3.0593797802809064,1.4370544938888514,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.5,2.8241335044929397,1.4934159042927517,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.55,2.6224818214328285,1.5547380794945267,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.6,2.447708055184691,1.6217061174300644,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.65,2.294774173359758,1.6951373559977443,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.7,2.1598272138228944,1.776014897579143,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.75,2.039870190078813,1.8655318769505127,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.8,1.9325368938861558,1.9651507159005277,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.85,1.8359342401735792,2.076683637815713,converged
+co,A_engine2,"Figshare RW (2025, paired study)",0.9,1.7485296455253536,2.20240390741134,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.0,5.0,1.225025,not_applicable
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.05,2.5724101296366078,1.5724024739083813,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.1,1.413465520628822,3.17679159302473,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.15,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.2,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.25,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.3,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.35,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.4,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.45,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.5,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.55,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.6,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.65,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.7,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.75,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.8,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.85,1.000001,900021.0000940416,converged
+co,A_engine2,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.9,1.000001,900021.0000940416,converged
+co,A_engine2,AI-UWM model assumption,0.0,5.0,1.225025,not_applicable
+co,A_engine2,AI-UWM model assumption,0.05,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.1,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.15,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.2,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.25,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.3,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.35,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.4,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.45,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.5,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.55,5.0,1.225025,converged
+co,A_engine2,AI-UWM model assumption,0.6,4.761904761904762,1.2392658227848101,converged
+co,A_engine2,AI-UWM model assumption,0.65,4.531410916580844,1.2548813065033537,converged
+co,A_engine2,AI-UWM model assumption,0.7,4.322200392927309,1.2709308101714962,converged
+co,A_engine2,AI-UWM model assumption,0.75,4.131455399061033,1.2874326836581709,converged
+co,A_engine2,AI-UWM model assumption,0.8,3.9568345323741005,1.3044063260340633,converged
+co,A_engine2,AI-UWM model assumption,0.85,3.7963761863675582,1.3218722616476397,converged
+co,A_engine2,AI-UWM model assumption,0.9,3.648424543946932,1.3398522229179712,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.0,5.0,1.225025,not_applicable
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.05,4.901960784313726,1.230678391959799,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.1,4.8076923076923075,1.2363888888888888,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.15,4.716981132075472,1.2421573604060914,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.2,4.62962962962963,1.247984693877551,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.25,4.545454545454546,1.2538717948717948,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.3,4.464285714285714,1.259819587628866,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.35,4.385964912280702,1.2658290155440413,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.4,4.310344827586207,1.2719010416666665,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.45,4.237288135593221,1.2780366492146595,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.5,4.166666666666667,1.2842368421052632,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.55,4.098360655737705,1.2905026455026456,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.6,4.032258064516129,1.2968351063829786,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.65,3.9682539682539684,1.3032352941176468,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.7,3.90625,1.3097043010752687,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.75,3.8461538461538463,1.3162432432432432,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.8,3.787878787878788,1.3228532608695651,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.85,3.7313432835820897,1.329535519125683,converged
+co,B_full,"IEUA RP-1 (2025, tertiary)",0.9,3.676470588235294,1.3362912087912087,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.0,5.0,1.225025,not_applicable
+co,B_full,"LADWP AWPF (2012, RO product)",0.05,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.1,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.15,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.2,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.25,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.3,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.35,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.4,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.45,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.5,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.55,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.6,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.65,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.7,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.75,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.8,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.85,5.0,1.225025,converged
+co,B_full,"LADWP AWPF (2012, RO product)",0.9,5.0,1.225025,converged
+co,B_full,"Figshare RW (2025, paired study)",0.0,5.0,1.225025,not_applicable
+co,B_full,"Figshare RW (2025, paired study)",0.05,4.967148608172596,1.2268882343146654,converged
+co,B_full,"Figshare RW (2025, paired study)",0.1,4.324942972716836,1.2707073493425924,converged
+co,B_full,"Figshare RW (2025, paired study)",0.15,3.8297874468809536,1.3180721565292897,converged
+co,B_full,"Figshare RW (2025, paired study)",0.2,3.4363638648380976,1.369431159387643,converged
+co,B_full,"Figshare RW (2025, paired study)",0.25,3.1162409603353245,1.4253118343747535,converged
+co,B_full,"Figshare RW (2025, paired study)",0.3,2.850678968876988,1.486338813330516,converged
+co,B_full,"Figshare RW (2025, paired study)",0.35,2.6268244170965978,1.5532573319096539,converged
+co,B_full,"Figshare RW (2025, paired study)",0.4,2.4355672398552133,1.6269638135762787,converged
+co,B_full,"Figshare RW (2025, paired study)",0.45,2.2702704946466254,1.7085462578269797,converged
+co,B_full,"Figshare RW (2025, paired study)",0.5,2.1259844705933637,1.7993383063401518,converged
+co,B_full,"Figshare RW (2025, paired study)",0.55,1.9989425711450688,1.9009927145458665,converged
+co,B_full,"Figshare RW (2025, paired study)",0.6,1.8862277514238817,2.0155828714559645,converged
+co,B_full,"Figshare RW (2025, paired study)",0.65,1.785545783849763,2.1457457088049376,converged
+co,B_full,"Figshare RW (2025, paired study)",0.7,1.6950674591464523,2.294887121394564,converged
+co,B_full,"Figshare RW (2025, paired study)",0.75,1.6133164500504351,2.4674843080680264,converged
+co,B_full,"Figshare RW (2025, paired study)",0.8,1.5390881312096898,2.669542936779178,converged
+co,B_full,"Figshare RW (2025, paired study)",0.85,1.4713898238027079,2.9093102615918327,converged
+co,B_full,"Figshare RW (2025, paired study)",0.9,1.40939614610335,3.1984285794808494,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.0,5.0,1.225025,not_applicable
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.05,2.5724101296366078,1.5724024739083813,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.1,1.413465520628822,3.17679159302473,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.15,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.2,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.25,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.3,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.35,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.4,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.45,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.5,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.55,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.6,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.65,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.7,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.75,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.8,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.85,1.000001,900021.0000940416,converged
+co,B_full,"Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",0.9,1.000001,900021.0000940416,converged
+co,B_full,AI-UWM model assumption,0.0,5.0,1.225025,not_applicable
+co,B_full,AI-UWM model assumption,0.05,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.1,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.15,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.2,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.25,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.3,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.35,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.4,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.45,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.5,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.55,5.0,1.225025,converged
+co,B_full,AI-UWM model assumption,0.6,4.761904761904762,1.2392658227848101,converged
+co,B_full,AI-UWM model assumption,0.65,4.531410916580844,1.2548813065033537,converged
+co,B_full,AI-UWM model assumption,0.7,4.322200392927309,1.2709308101714962,converged
+co,B_full,AI-UWM model assumption,0.75,4.131455399061033,1.2874326836581709,converged
+co,B_full,AI-UWM model assumption,0.8,3.9568345323741005,1.3044063260340633,converged
+co,B_full,AI-UWM model assumption,0.85,3.7963761863675582,1.3218722616476397,converged
+co,B_full,AI-UWM model assumption,0.9,3.648424543946932,1.3398522229179712,converged
