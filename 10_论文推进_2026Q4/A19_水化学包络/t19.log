@@ -1,0 +1,223 @@
+========================================================================================================
+T19 热力学数据库 / 相选择 / 判据敏感性   (phreeqpython 自带数据库)
+========================================================================================================
+库目录: C:\Users\mmrgr\.workbuddy\binaries\python\envs\default\Lib\site-packages\phreeqpython\database
+限值相集 orig : ('Calcite', 'Dolomite', 'Gypsum', 'Anhydrite', 'SiO2(a)')
+限值相集 ext  : ('Calcite', 'Dolomite', 'Gypsum', 'Anhydrite', 'SiO2(a)', 'Aragonite', 'Hydroxyapatite', 'Struvite', 'Halite', 'Nahcolite', 'Trona')
+仅报 SI       : ('Quartz', 'Chalcedony', 'Vaterite', 'Ca3(PO4)2', 'Fluorite', 'Celestite', 'Barite', 'Siderite', 'Fe(OH)3(a)')
+
+[vitens.dat] exists=True bytes=69151 phases=77 master_elements=60 PITZER=True LLNL=False Si_master=True
+      | #  stimela.dat (version 3.1.7)
+      | #  under development by Peter de Moel (Omnisys) for Stimela platform at Delft University of Technology
+      | #  based on: phreeqc.dat (file date 2015-01-27, as part of Phreeqc Interactive 3.1.7-9213)
+      | #  Stimela is focussed on modelling for water and waste water treatment
+      | #  list of modifications:
+      | #  - added [Fe+2], [Mn+2] and [N+3] (with master species [Fe+2]+2 , [Mn+2]+2 and [N+3]O2-) for redox-uncoupled Fe+2, M
+      目标相缺失: ['Struvite', 'Nahcolite', 'Trona', 'Ca3(PO4)2']
+
+[phreeqc.dat] exists=True bytes=46008 phases=71 master_elements=50 PITZER=True LLNL=False Si_master=True
+      | # PHREEQC.DAT for calculating pressure dependence of reactions, with
+      | #   molal volumina of aqueous species and of minerals, and
+      | #   critical temperatures and pressures of gases used in Peng-Robinson's EOS.
+      | # Details are given at the end of this file.
+      | SOLUTION_MASTER_SPECIES
+      | #
+      目标相缺失: ['Struvite', 'Nahcolite', 'Trona', 'Vaterite', 'Ca3(PO4)2']
+
+[pitzer.dat] exists=True bytes=31939 phases=72 master_elements=28 PITZER=True LLNL=False Si_master=True
+      | # Pitzer.DAT for calculating pressure dependence of reactions
+      | #   and temperature dependence to 200 �C. With
+      | #   molal volumina of aqueous species and of minerals, and
+      | #   critical temperatures and pressures of gases used in Peng-Robinson's EOS.
+      | # Details are given at the end of this file.
+      | SOLUTION_MASTER_SPECIES
+      目标相缺失: ['Hydroxyapatite', 'Struvite', 'Vaterite', 'Ca3(PO4)2', 'Fluorite', 'Siderite', 'Fe(OH)3(a)']
+
+[wateq4f_PWN.dat] exists=True bytes=107557 phases=325 master_elements=80 PITZER=False LLNL=False Si_master=True
+      | #  $Id: wateq4f.dat 6895 2012-08-21 18:10:05Z dlpark $
+      | # Revised arsenic data from Archer and Nordstrom (2002)
+      | SOLUTION_MASTER_SPECIES
+      | Turb		Turb	0.0	Turb		1.0		# Turbidity
+      | Doc		Doc-	0.0	Doc		12.0111		# DOC as C, uncharged				 	#50% C, 45% O, 5% H			1000 Da
+      | Uvab		Uvab	0.0	Uvab		1.0		# UV absorption
+      目标相缺失: ['Struvite', 'Vaterite', 'Ca3(PO4)2']
+
+[请求但不可用] ['minteq.v4.dat', 'minteq.dat', 'llnl.dat', 'sit.dat']
+
+样本: IEUA RP-1 (2025, tertiary) | LADWP AWPF (2012, RO product) | Figshare RW (2025, paired study) | Figshare BW (5 g·L<sup>-1</sup>) (2025, pair | AI-UWM model assumption
+
+########################################################################################################
+### vitens.dat
+########################################################################################################
+  IEUA RP-1 (2025, tertiary)                     T=25.0  CoC_orig=2.5202 (Calcite)  CoC_ext=2.5202 (Calcite)
+      SI@1x(orig相): Calcite=-0.6856  Dolomite=-1.7241  Gypsum=-2.0857  Anhydrite=-2.3891  SiO2(a)=-0.6863
+      SI@1x(其他)  : Quartz=0.5823  Chalcedony=0.1533  Vaterite=-1.252
+  IEUA RP-1 (2025, tertiary)                     T=35.0  CoC_orig=2.1033 (Calcite)  CoC_ext=2.1033 (Calcite)
+      SI@1x(orig相): Calcite=-0.5519  Dolomite=-1.362  Gypsum=-2.0904  Anhydrite=-2.288  SiO2(a)=-0.7661
+      SI@1x(其他)  : Quartz=0.4396  Chalcedony=0.0407  Vaterite=-1.0928
+  IEUA RP-1 (2025, tertiary)                     T=45.0  CoC_orig=1.7717 (Calcite)  CoC_ext=1.7717 (Calcite)
+      SI@1x(orig相): Calcite=-0.4251  Dolomite=-1.0553  Gypsum=-2.0851  Anhydrite=-2.1805  SiO2(a)=-0.8409
+      SI@1x(其他)  : Quartz=0.3059  Chalcedony=-0.0648  Vaterite=-0.9419
+  LADWP AWPF (2012, RO product)                  T=25.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): Calcite=-4.331  Gypsum=-5.4814  Anhydrite=-5.7848  SiO2(a)=-2.3511
+      SI@1x(其他)  : Quartz=-1.0825  Chalcedony=-1.5115  Vaterite=-4.8974
+  LADWP AWPF (2012, RO product)                  T=35.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): Calcite=-4.1922  Gypsum=-5.4745  Anhydrite=-5.6721  SiO2(a)=-2.4307
+      SI@1x(其他)  : Quartz=-1.225  Chalcedony=-1.6239  Vaterite=-4.733
+  LADWP AWPF (2012, RO product)                  T=45.0  CoC_orig=190.7859 (Calcite)  CoC_ext=190.7859 (Calcite)
+      SI@1x(orig相): Calcite=-4.0604  Gypsum=-5.457  Anhydrite=-5.5525  SiO2(a)=-2.5054
+      SI@1x(其他)  : Quartz=-1.3586  Chalcedony=-1.7293  Vaterite=-4.5772
+  Figshare RW (2025, paired study)               T=25.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare RW (2025, paired study)               T=35.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare RW (2025, paired study)               T=45.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=25.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=35.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=45.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  AI-UWM model assumption                        T=None  skipped (no pH (assumption row))
+
+########################################################################################################
+### phreeqc.dat
+########################################################################################################
+  IEUA RP-1 (2025, tertiary)                     T=25.0  CoC_orig=2.5203 (Calcite)  CoC_ext=2.5203 (Calcite)
+      SI@1x(orig相): Calcite=-0.6856  Dolomite=-1.7242  Gypsum=-2.0858  Anhydrite=-2.3891  SiO2(a)=-0.6863
+      SI@1x(其他)  : Quartz=0.5823  Chalcedony=0.1533
+  IEUA RP-1 (2025, tertiary)                     T=35.0  CoC_orig=2.1034 (Calcite)  CoC_ext=2.1034 (Calcite)
+      SI@1x(orig相): Calcite=-0.552  Dolomite=-1.3621  Gypsum=-2.0905  Anhydrite=-2.2881  SiO2(a)=-0.7661
+      SI@1x(其他)  : Quartz=0.4396  Chalcedony=0.0407
+  IEUA RP-1 (2025, tertiary)                     T=45.0  CoC_orig=1.7718 (Calcite)  CoC_ext=1.7718 (Calcite)
+      SI@1x(orig相): Calcite=-0.4251  Dolomite=-1.0555  Gypsum=-2.0851  Anhydrite=-2.1806  SiO2(a)=-0.8409
+      SI@1x(其他)  : Quartz=0.3059  Chalcedony=-0.0648
+  LADWP AWPF (2012, RO product)                  T=25.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): Calcite=-4.331  Gypsum=-5.4815  Anhydrite=-5.7849  SiO2(a)=-2.3511
+      SI@1x(其他)  : Quartz=-1.0825  Chalcedony=-1.5115
+  LADWP AWPF (2012, RO product)                  T=35.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): Calcite=-4.1923  Gypsum=-5.4745  Anhydrite=-5.6721  SiO2(a)=-2.4307
+      SI@1x(其他)  : Quartz=-1.225  Chalcedony=-1.6239
+  LADWP AWPF (2012, RO product)                  T=45.0  CoC_orig=190.7961 (Calcite)  CoC_ext=190.7961 (Calcite)
+      SI@1x(orig相): Calcite=-4.0604  Gypsum=-5.4571  Anhydrite=-5.5526  SiO2(a)=-2.5054
+      SI@1x(其他)  : Quartz=-1.3586  Chalcedony=-1.7293
+  Figshare RW (2025, paired study)               T=25.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare RW (2025, paired study)               T=35.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare RW (2025, paired study)               T=45.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=25.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=35.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=45.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  AI-UWM model assumption                        T=None  skipped (no pH (assumption row))
+
+########################################################################################################
+### pitzer.dat
+########################################################################################################
+  IEUA RP-1 (2025, tertiary)                     T=25.0  CoC_orig=2.3481 (Calcite)  CoC_ext=2.3481 (Calcite)
+      SI@1x(orig相): Calcite=-0.6511  Dolomite=-1.7023  Gypsum=-2.0514  Anhydrite=-2.4007  SiO2(a)=-0.737
+      SI@1x(其他)  : Quartz=0.5815  Chalcedony=0.1515
+  IEUA RP-1 (2025, tertiary)                     T=35.0  CoC_orig=1.8777 (Calcite)  CoC_ext=1.8777 (Calcite)
+      SI@1x(orig相): Calcite=-0.4809  Dolomite=-1.3362  Gypsum=-2.0453  Anhydrite=-2.276  SiO2(a)=-0.8206
+      SI@1x(其他)  : Quartz=0.4388  Chalcedony=0.039
+  IEUA RP-1 (2025, tertiary)                     T=45.0  CoC_orig=1.5401 (Calcite)  CoC_ext=1.5401 (Calcite)
+      SI@1x(orig相): Calcite=-0.3297  Dolomite=-1.0253  Gypsum=-2.0276  Anhydrite=-2.1464  SiO2(a)=-0.8976
+      SI@1x(其他)  : Quartz=0.305  Chalcedony=-0.0665
+  LADWP AWPF (2012, RO product)                  T=25.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): Calcite=-4.318  Gypsum=-5.4619  Anhydrite=-5.8112  SiO2(a)=-2.4014
+      SI@1x(其他)  : Quartz=-1.0829  Chalcedony=-1.5129
+  LADWP AWPF (2012, RO product)                  T=35.0  CoC_orig=192.5481 (Calcite)  CoC_ext=192.5481 (Calcite)
+      SI@1x(orig相): Calcite=-4.1427  Gypsum=-5.4476  Anhydrite=-5.6782  SiO2(a)=-2.4849
+      SI@1x(其他)  : Quartz=-1.2254  Chalcedony=-1.6252
+  LADWP AWPF (2012, RO product)                  T=45.0  CoC_orig=156.408 (Calcite)  CoC_ext=156.408 (Calcite)
+      SI@1x(orig相): Calcite=-3.9863  Gypsum=-5.4212  Anhydrite=-5.54  SiO2(a)=-2.5617
+      SI@1x(其他)  : Quartz=-1.359  Chalcedony=-1.7305
+  Figshare RW (2025, paired study)               T=25.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare RW (2025, paired study)               T=35.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare RW (2025, paired study)               T=45.0  CoC_orig=200.0 (none_below_upper)  CoC_ext=200.0 (none_below_upper)
+      SI@1x(orig相): 
+      SI@1x(其他)  : 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=25.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=35.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=45.0  ERROR Exception: 2 errors occured.
+ERROR: Solute mass exceeds solution mass 
+  AI-UWM model assumption                        T=None  skipped (no pH (assumption row))
+
+########################################################################################################
+### wateq4f_PWN.dat
+########################################################################################################
+  IEUA RP-1 (2025, tertiary)                     T=25.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  IEUA RP-1 (2025, tertiary)                     T=35.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  IEUA RP-1 (2025, tertiary)                     T=45.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  LADWP AWPF (2012, RO product)                  T=25.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  LADWP AWPF (2012, RO product)                  T=35.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  LADWP AWPF (2012, RO product)                  T=45.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  Figshare RW (2025, paired study)               T=25.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  Figshare RW (2025, paired study)               T=35.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  Figshare RW (2025, paired study)               T=45.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=25.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=35.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, pair   T=45.0  ERROR Exception: An error occured.
+ERROR: RunString: No database is loaded
+
+  AI-UWM model assumption                        T=None  skipped (no pH (assumption row))
+
+========================================================================================================
+跨库对比 (仅 IEUA RP-1: 唯一 9/9 离子完整且电荷平衡的样本)
+========================================================================================================
+db                    T  CoC_orig            limit(orig)  CoC_ext           limit(ext)  SIcal@1  SIgyp@1  SISiO2a@1  SIQtz@1
+----------------------------------------------------------------------------------------------------------------------------
+vitens.dat         25.0    2.5202                Calcite   2.5202              Calcite  -0.6856  -2.0857    -0.6863   0.5823
+vitens.dat         35.0    2.1033                Calcite   2.1033              Calcite  -0.5519  -2.0904    -0.7661   0.4396
+vitens.dat         45.0    1.7717                Calcite   1.7717              Calcite  -0.4251  -2.0851    -0.8409   0.3059
+phreeqc.dat        25.0    2.5203                Calcite   2.5203              Calcite  -0.6856  -2.0858    -0.6863   0.5823
+phreeqc.dat        35.0    2.1034                Calcite   2.1034              Calcite   -0.552  -2.0905    -0.7661   0.4396
+phreeqc.dat        45.0    1.7718                Calcite   1.7718              Calcite  -0.4251  -2.0851    -0.8409   0.3059
+pitzer.dat         25.0    2.3481                Calcite   2.3481              Calcite  -0.6511  -2.0514     -0.737   0.5815
+pitzer.dat         35.0    1.8777                Calcite   1.8777              Calcite  -0.4809  -2.0453    -0.8206   0.4388
+pitzer.dat         45.0    1.5401                Calcite   1.5401              Calcite  -0.3297  -2.0276    -0.8976    0.305
+
+跨库差异摘要 (25C, 原相集):
+  vitens.dat -> phreeqc.dat @25C (orig phase set): 2.5202 -> 2.5203  (Δ=0.00010000000000021103, 0.003967939052464528%)
+  vitens.dat -> pitzer.dat @25C (orig phase set): 2.5202 -> 2.3481  (Δ=-0.17209999999999992, -6.828823109277039%)
+
+写出 C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A19_水化学包络\T19_db_sensitivity.json

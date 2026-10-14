@@ -1,0 +1,180 @@
+{
+ "IEUA RP-1 (2025, tertiary)": {
+  "none_thermodynamic": {
+   "ratio_x": 1.0,
+   "LSI": 0.0,
+   "source": "热力学平衡（无加药）",
+   "confidence": "high",
+   "target_SI_calcite": 0.0,
+   "db": "vitens.dat",
+   "temp_C": 25.0,
+   "CoC": 2.5202,
+   "SI_at_CoC": {
+    "Calcite": 0.0,
+    "Aragonite": -0.1438,
+    "Dolomite": -0.3524,
+    "Gypsum": -1.4886,
+    "Anhydrite": -1.7919,
+    "SiO2(a)": -0.2834,
+    "Halite": -5.8572,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": 0.9853,
+    "Chalcedony": 0.5562
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": 40.4595,
+    "Anhydrite": 74.9939,
+    "SiO2(a)": 4.8147
+   },
+   "CoC_effective": 2.5202
+  },
+  "LSI_1.5": {
+   "ratio_x": 31.622776601683793,
+   "LSI": 1.5,
+   "source": "阻垢剂典型运行窗口下界",
+   "confidence": "medium",
+   "target_SI_calcite": 1.5,
+   "db": "vitens.dat",
+   "temp_C": 25.0,
+   "CoC": 23.4371,
+   "SI_at_CoC": {
+    "Calcite": 1.5,
+    "Aragonite": 1.3562,
+    "Dolomite": 2.6586,
+    "Gypsum": -0.2696,
+    "Anhydrite": -0.573,
+    "SiO2(a)": 0.7046,
+    "Halite": -4.0619,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": 1.9732,
+    "Chalcedony": 1.5442
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": 40.4595,
+    "Anhydrite": 74.9939,
+    "SiO2(a)": 4.8147
+   },
+   "CoC_effective": 4.8147
+  },
+  "LSI_2.0": {
+   "ratio_x": 100.0,
+   "LSI": 2.0,
+   "source": "阻垢剂运行窗口（LSI 2 量级）",
+   "confidence": "medium",
+   "target_SI_calcite": 2.0,
+   "db": "vitens.dat",
+   "temp_C": 25.0,
+   "CoC": 52.0591,
+   "SI_at_CoC": {
+    "Calcite": 2.0,
+    "Aragonite": 1.8562,
+    "Dolomite": 3.6647,
+    "Gypsum": 0.1237,
+    "Anhydrite": -0.1797,
+    "SiO2(a)": 1.0766,
+    "Halite": -3.4186,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": 2.3453,
+    "Chalcedony": 1.9162
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": 40.4595,
+    "Anhydrite": 74.9939,
+    "SiO2(a)": 4.8147
+   },
+   "CoC_effective": 4.8147
+  },
+  "LSI_2.477_300x": {
+   "ratio_x": 300.0,
+   "LSI": 2.477,
+   "source": "Sherwood 1994 / Cognetti 1996: 控制到 300 倍方解石饱和度",
+   "confidence": "low",
+   "target_SI_calcite": 2.477,
+   "db": "vitens.dat",
+   "temp_C": 25.0,
+   "CoC": 111.6338,
+   "SI_at_CoC": {
+    "Calcite": 2.477,
+    "Aragonite": 2.3332,
+    "Dolomite": 4.6222,
+    "Gypsum": 0.5017,
+    "Anhydrite": 0.1983,
+    "SiO2(a)": 1.4592,
+    "Halite": -2.7778,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": 2.7278,
+    "Chalcedony": 2.2987
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": 40.4595,
+    "Anhydrite": 74.9939,
+    "SiO2(a)": 4.8147
+   },
+   "CoC_effective": 4.8147
+  },
+  "LSI_3.0": {
+   "ratio_x": 1000.0,
+   "LSI": 3.0,
+   "source": "阻垢剂先进配方上界",
+   "confidence": "low",
+   "target_SI_calcite": 3.0,
+   "db": "vitens.dat",
+   "temp_C": 25.0,
+   "CoC": 251.2315,
+   "SI_at_CoC": {
+    "Calcite": 3.0,
+    "Aragonite": 2.8562,
+    "Dolomite": 5.6632,
+    "Gypsum": 0.9203,
+    "Anhydrite": 0.6169,
+    "SiO2(a)": 1.9298,
+    "Halite": -2.022,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": 3.1985,
+    "Chalcedony": 2.7694
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": 40.4595,
+    "Anhydrite": 74.9939,
+    "SiO2(a)": 4.8147
+   },
+   "CoC_effective": 4.8147
+  }
+ },
+ "LADWP AWPF (2012, RO product)": {
+  "skipped": true,
+  "missing": []
+ },
+ "Figshare RW (2025, paired study)": {
+  "skipped": true,
+  "missing": [
+   "SO4",
+   "alkalinity",
+   "silica"
+  ]
+ },
+ "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)": {
+  "skipped": true,
+  "missing": [
+   "SO4",
+   "alkalinity",
+   "silica"
+  ]
+ },
+ "AI-UWM model assumption": {
+  "skipped": true,
+  "missing": [
+   "Ca",
+   "Na",
+   "SO4",
+   "alkalinity",
+   "silica",
+   "pH"
+  ]
+ }
+}

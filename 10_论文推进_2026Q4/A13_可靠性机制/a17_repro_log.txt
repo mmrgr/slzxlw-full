@@ -1,0 +1,46 @@
+==============================================================================
+A17 / E1: 三供给状态反例检验 (shortage / binding / surplus)
+==============================================================================
+
+完成 1152 情景 (主扫描 chi_label∈['free', '0.98', '0.50']; 另含外推档 0.25)
+[自检1] 单口径恒等式 dS_pot = M1-M0 最大残差 = 6.384e+04 ML (仅在 A 态应成立)
+[自检2] ★ 统一通式 dS = 挤占位移 - 质量惩罚 - x_ai 最大残差 = 1.164e-10 ML  (应 ~1e-11)
+[自检3] A 态(a 池用尽, n=312) 退化残差 = 1.455e-11 ML
+[自检4] C 态(c 未挤占, n=446) 退化残差 = 1.455e-11 ML
+
+[1] ★ 按【分配实际状态】分组的 dS_pot 符号
+                  n   dS_min    dS_max  dS_mean  n_neg  n_pos  unused_mean
+state_by_alloc                                                            
+shortage        706 -95374.8  598752.3  25178.7    320    306      10717.3
+surplus         446 -98158.5   33217.4 -15281.9    429     17      32960.1
+
+[1b] ★ chi 极限检验 (水质不约束 => 纯再分配)
+  limit_scale= free: n= 288  max|dS_pot|=22358.5464 ML  中位=  -7650.7  范围[-22359, 0]
+  limit_scale= 0.98: n= 288  max|dS_pot|=22490.1708 ML  中位=  -5594.3  范围[-22490, 9839]
+  limit_scale= 0.50: n= 288  max|dS_pot|=73875.3992 ML  中位=  -5763.1  范围[-30914, 73875]
+  limit_scale= 0.25: n= 288  max|dS_pot|=598752.3264 ML  中位=  24897.9  范围[-98158, 598752] (外推压力档, 不代表实测运行)
+  >>> 'free' (limit_scale=1e6, CoC=设计值) 的 max|dS_pot| = 22358.5464 ML  —— 应为 0 (纯再分配)
+
+[2] ★ 核心反例: 同样 AI 负荷, 余量态 vs 短缺态
+  D-HA phi=0.4: shortage dS∈[-74839,560523] | surplus dS∈[-66461,33217]
+  D-HA phi=0.8: shortage dS∈[-95375,598752] | surplus dS∈[-30914,-15489]
+  D-CO phi=0.4: shortage dS∈[-72940,506902] | surplus dS∈[-65725,32674]
+  D-CO phi=0.8: shortage dS∈[-85849,546270] | surplus dS∈[-98158,-15325]
+
+  surplus 态: n=446, dS_pot<0 的个数 = 429
+  shortage 态: n=706, dS_pot<0 的个数 = 320
+
+[3] surplus 态下 AI 是否真的不挤占既有用户?
+  既有用户 B2 拿满其需求的比例 = 1.000
+  B2 下闲置再生水 均值 = 32960 ML
+  C (既有用户须补回) 均值 = 0.0 ML  -> 应为 ~0 (未挤占)
+  F (AI 释放自来水) 均值 = 15282 ML
+  => dS_pot 均值 = -15281.9 ML
+
+[4] 状态边界是否由外生量决定
+  D-HA: 理论临界 pool_scale = elig/P0 = 2.384
+    实测: {0.5: 'shortage', 1.0: 'shortage', 1.5: 'shortage', 2.0: 'shortage,surplus', 2.2: 'shortage,surplus', 2.4: 'shortage,surplus', 2.6: 'shortage,surplus', 3.0: 'shortage,surplus', 4.0: 'shortage,surplus'}
+  D-CO: 理论临界 pool_scale = elig/P0 = 2.567
+    实测: {0.5: 'shortage', 1.0: 'shortage', 1.5: 'shortage', 2.0: 'shortage,surplus', 2.2: 'shortage,surplus', 2.4: 'shortage,surplus', 2.6: 'shortage,surplus', 3.0: 'shortage,surplus', 4.0: 'shortage,surplus'}
+
+完成 64.6s

@@ -1,0 +1,185 @@
+{
+ "experiment": "A18/E2 finite-supply counterfactual on the full daily engine",
+ "engine": "aiuwm.full_engine.FullAIUWMModel (read-only; instrumented subclass)",
+ "n_scenarios": 68,
+ "n_days_per_scenario": 730,
+ "phi_ai": 0.7,
+ "dc_capacity_mw": 1000.0,
+ "natural_abstraction_cap_ml_day": {
+  "ha": 380.0,
+  "co": 400.0
+ },
+ "path_efficiency": {
+  "ha": 0.84865761288,
+  "co": 0.84865761288
+ },
+ "loss_leverage_factor": {
+  "ha": 1.1783315023904697,
+  "co": 1.1783315023904697
+ },
+ "old_conclusion_operational_definition": "dS_pot = C - F > 0, i.e. AI reclaimed-water use raises city potable abstraction (A13c/A17 emission-claim balance, state A).",
+ "verdict": {
+  "old_conclusion_keeps_when_unconstrained": true,
+  "converts_to_service_gap_when_scarce": true,
+  "sign_reversal_in_surplus_state": true,
+  "ai_itself_curtailed": true,
+  "cap_engaged_while_no_service_gap": true,
+  "ledger_reidentified_as_delivered_not_abstraction": true
+ },
+ "three_account_divergence": {
+  "requested_eq_delivered_when_unconstrained": true,
+  "requested_minus_delivered_equals_unmet_when_constrained": true,
+  "abstraction_eq_delivered_ever": false,
+  "max_requested_minus_delivered_ml": 103413.92469107284,
+  "max_abstraction_minus_delivered_ml": 33295.08838052949,
+  "min_abstraction_minus_delivered_ml": 16089.655274835153,
+  "marginal_abstraction_over_delivered": {
+   "ha": 1.1783315023904697,
+   "co": 1.1783315023904697
+  },
+  "note": "requested == delivered only while the potable supply path is unconstrained; abstraction never equals delivered because of conveyance/treatment losses. The three accounts are distinct quantities and must never be merged."
+ },
+ "critical_conditions": {
+  "ha": {
+   "w_nat_ml_day": 380.0,
+   "w_engage_ml_day": 342.0,
+   "w_engage_frac_of_nat": 0.9,
+   "w_gap_ml_day": 323.0,
+   "w_gap_frac_of_nat": 0.85,
+   "w_adequate_ml_day": 342.0,
+   "w_adequate_frac_of_nat": 0.9,
+   "w_star_account_break_ml_day": 304.0,
+   "thresholds_are_nested": true,
+   "buffered_band_ml_day": [
+    323.0,
+    342.0
+   ],
+   "unconstrained_dS_pot_ml": 880.7790463549536,
+   "unconstrained_d_abstraction_ml": 1037.8496969654807,
+   "unconstrained_peak_abstraction_ml_day": 352.3512586878901,
+   "max_phantom_ml": 6712.821105075747,
+   "min_phantom_ml": -157.07065061052708,
+   "max_service_gap_essential_ml": 62080.44523857806,
+   "max_dc_curtailment_ml": 8519.020943419806,
+   "loss_leverage_factor": 1.1783315023904697
+  },
+  "co": {
+   "w_nat_ml_day": 400.0,
+   "w_engage_ml_day": 340.0,
+   "w_engage_frac_of_nat": 0.85,
+   "w_gap_ml_day": 320.0,
+   "w_gap_frac_of_nat": 0.8,
+   "w_adequate_ml_day": 340.0,
+   "w_adequate_frac_of_nat": 0.85,
+   "w_star_account_break_ml_day": 300.0,
+   "thresholds_are_nested": true,
+   "buffered_band_ml_day": [
+    320.0,
+    340.0
+   ],
+   "unconstrained_dS_pot_ml": 880.7360598751511,
+   "unconstrained_d_abstraction_ml": 1037.7990446421318,
+   "unconstrained_peak_abstraction_ml_day": 343.36789477273203,
+   "max_phantom_ml": 6120.874323392949,
+   "min_phantom_ml": -157.06298476698066,
+   "max_service_gap_essential_ml": 56050.7352299916,
+   "max_dc_curtailment_ml": 7811.776588649487,
+   "loss_leverage_factor": 1.1783315023904697
+  }
+ },
+ "structural_findings": {
+  "F1_loss_leverage": {
+   "statement": "marginal d_abstraction = d_delivered / eta_path",
+   "eta_path": {
+    "ha": 0.84865761288,
+    "co": 0.84865761288
+   },
+   "observed_ratio_unconstrained": {
+    "ha": null,
+    "co": 1.1783315023904253
+   }
+  },
+  "F2_C_decomposition": {
+   "statement": "C = x_AI - (pool(B1) - pool(B2)) exactly",
+   "max_decomp_residual_ml": 1.0913936421275139e-11,
+   "max_pool_drift_ml": 20303.694603872682,
+   "max_pool_drift_share_of_C": 1761.5797705066282
+  }
+ },
+ "surplus_arm": {
+  "config": {
+   "WWTW1.central_reuse_fraction": 0.6,
+   "CENTRAL_REUSE.treatment_capacity_ml_day": 200.0
+  },
+  "n_scenarios": 10,
+  "n_dS_pot_negative": 10,
+  "n_d_abstraction_negative": 10,
+  "n_delivery_constrained": 0,
+  "n_b2_incumbent_saturated": 10,
+  "n_b2_buffer_idle_positive": 10,
+  "dS_pot_ml": -19141.812698028996,
+  "d_abstraction_ml": -22541.168039615077
+ },
+ "proposition_H": {
+  "ha": {
+   "H1_ledger_identity_holds": true,
+   "H2_keeps_when_supply_adequate": true,
+   "H3_service_gap_when_scarce": true,
+   "H4_sign_reversal_in_surplus": true,
+   "w_gap_ml_day": 342.0,
+   "n_H1": 1,
+   "n_H2": 4,
+   "n_H3": 7,
+   "n_H4": 5,
+   "n_falsifiers_H1": 0,
+   "n_falsifiers_H2": 0,
+   "n_falsifiers_H3": 0,
+   "n_falsifiers_H4": 0,
+   "H_holds": true
+  },
+  "co": {
+   "H1_ledger_identity_holds": true,
+   "H2_keeps_when_supply_adequate": true,
+   "H3_service_gap_when_scarce": true,
+   "H4_sign_reversal_in_surplus": true,
+   "w_gap_ml_day": 340.0,
+   "n_H1": 1,
+   "n_H2": 5,
+   "n_H3": 6,
+   "n_H4": 5,
+   "n_falsifiers_H1": 0,
+   "n_falsifiers_H2": 0,
+   "n_falsifiers_H3": 0,
+   "n_falsifiers_H4": 0,
+   "H_holds": true
+  }
+ },
+ "a13c_bridge": {
+  "ha": {
+   "a13c_P0_ml": 24404.451231393024,
+   "a13c_elig_ml": 58183.297999999995,
+   "a13c_elig_over_P0": 2.3841264631738595,
+   "a13c_dS_pot_ml": 2741.071717294857,
+   "a13c_C_ml": 10945.657899651702,
+   "a13c_F_ml": 8204.586182356845,
+   "engine_P0_ml": 24404.451231393024,
+   "engine_dS_pot_ml": 880.7790463549536,
+   "engine_state_by_unused": "shortage",
+   "sign_agreement": true
+  },
+  "co": {
+   "a13c_P0_ml": 22413.97659165322,
+   "a13c_elig_ml": 57530.252,
+   "a13c_elig_over_P0": 2.566713307866298,
+   "a13c_dS_pot_ml": 2434.564117651895,
+   "a13c_C_ml": 9734.662334608474,
+   "a13c_F_ml": 7300.09821695658,
+   "engine_P0_ml": 22413.97659165322,
+   "engine_dS_pot_ml": 880.7360598751511,
+   "engine_state_by_unused": "shortage",
+   "sign_agreement": true
+  }
+ },
+ "runtime_s": 71.6,
+ "discipline_note": "不使用已撤回的 psi / Delta / phi* 概念。需求、交付、取水三账并列报出, 不合并。全部量取自引擎执行中当场产生的中间量 (instrumented 子类), C = r_inc(B2)-r_inc(B1) 按定义即既有用户须补回量。natural 臂用项目自带再生水产能 (A17 短缺态); surplus 臂用引擎原生键 WWTW1.central_reuse_fraction / CENTRAL_REUSE.treatment_capacity_ml_day 制造未使用余量 (A17 余量态)。W_cap 直接改写 RES1.abstraction_capacity_ml_day。"
+}

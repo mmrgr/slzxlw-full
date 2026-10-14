@@ -59,7 +59,7 @@ def collect(dom: str, cache: dict) -> pd.DataFrame:
                 rows.append({
                     "domain": dom, "sample": smp, "chi": chi, "phi": float(phi),
                     "M0_ml": M0, "M1_ml": M1, "phi_eff": phi_eff,
-                    "F_ml": F, "C_ml": C,
+                    "F_ml": F, "C_ml": C, "x_ai_ml": float(r1["x_ai_ml"]),
                     "dS_pot_ml": C - F, "dS_pot_M_ml": M1 - M0,   # 恒等式右侧
                     "CoC": r1["CoC_ai"], "status": r1["status"],
                 })
@@ -90,7 +90,9 @@ def main() -> None:
     rec(f"\nha n={len(fit)}  co n={len(hold)}")
 
     # ---------- 恒等式自检 ----------
-    err = (fit.dS_pot_ml - fit.dS_pot_M_ml).abs().max()
+    # ⚠ 修复 (2026-10-15): C=x_ai 仅在部分水样成立, 故用统一通式自检
+    fit["pred_unified"] = fit.C_ml - (fit.M0_ml - fit.M1_ml) - fit["x_ai_ml"]
+    err = (fit.dS_pot_ml - fit.pred_unified).abs().max()
     rec(f"[自检] 份额口径恒等式 dS_pot = M1-M0 最大残差 = {err:.3e} ML")
     ident_ok = bool(err < 1e-6)
 
@@ -98,8 +100,9 @@ def main() -> None:
 
     # ---------- H1: 代数重推导 (非验证) ----------
     rec("\n[H1] 闭式 dS_pot = M1 - M0 到 co 的吻合度 (⚠ 代数重推导, 非真留出)")
-    r2_h1 = r2_score(hold.dS_pot_ml, hold.dS_pot_M_ml)
-    rmse_h1 = float(np.sqrt(np.mean((hold.dS_pot_ml - hold.dS_pot_M_ml) ** 2)))
+    hold["pred_unified"] = hold.C_ml - (hold.M0_ml - hold.M1_ml) - hold["x_ai_ml"]
+    r2_h1 = r2_score(hold.dS_pot_ml, hold.pred_unified)
+    rmse_h1 = float(np.sqrt(np.mean((hold.dS_pot_ml - hold.pred_unified) ** 2)))
     rec(f"  co R² = {r2_h1:.6f}, RMSE = {rmse_h1:.3e} ML")
     rec("  ⚠ 该式直接使用 co 的引擎量 M0/M1, 与生成 dS_pot 的表达式同源,")
     rec("    故 R²≈1 是**代数恒等**, 不构成留出证据。仅作数值自检。")

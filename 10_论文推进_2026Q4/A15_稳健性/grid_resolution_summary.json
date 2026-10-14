@@ -32,15 +32,15 @@
    "median_abs_shift": 0.0
   },
   "Figshare RW (2025, paired study)": {
-   "n_chi_compared": 11,
-   "n_boundary_within_1_step": 11,
+   "n_chi_compared": 6,
+   "n_boundary_within_1_step": 6,
    "share_within_1_step": 1.0,
    "max_boundary_shift": 0.015625,
-   "median_abs_shift": 0.0
+   "median_abs_shift": 0.015625
   },
   "AI-UWM model assumption": {
-   "n_chi_compared": 11,
-   "n_boundary_within_1_step": 11,
+   "n_chi_compared": 13,
+   "n_boundary_within_1_step": 13,
    "share_within_1_step": 1.0,
    "max_boundary_shift": 0.015625,
    "median_abs_shift": 0.0
@@ -49,8 +49,8 @@
  "convergence_metric_note": "第一版误用'可行点计数相同'作判据 —— 那是错的: chi 宽松时几乎全域可行, 网格越细可行点必然越多, 计数永不相等, 会把'分辨率提高'误报成'结论不稳定'。现判据改为**边界位置 rho_min_feasible 的位移 <= 1 个网格步长**, 因为瓶颈识别的输出是边界在哪里。",
  "nonmonotone_at_193": {
   "n_curves": 39,
-  "n_nonmonotone": 0,
-  "share": 0.0
+  "n_nonmonotone": 11,
+  "share": 0.28205128205128205
  },
  "bottleneck_reproducibility": {
   "engine_fields": [
@@ -87,10 +87,12 @@
  "coc_ratio_stats": {
   "min": 0.2000002,
   "max": 1.0,
-  "median": 0.4165671893908101
+  "median": 0.36004250272743055
  },
  "status_counts": {
-  "converged_unique": 14196
+  "converged_unique": 13655,
+  "non_unique": 483,
+  "no_convergence": 58
  },
  "gates": [
   {
@@ -102,8 +104,8 @@
   },
   {
    "gate": "P1-非单调: 不存在非单调可行域",
-   "passed": true,
-   "value": "非单调曲线数 = 0/39",
+   "passed": false,
+   "value": "非单调曲线数 = 11/39",
    "rule": "非单调数 = 0 才能支持'首个失败点即边界'的既有口径",
    "evidence": "最细网格 193 点; 若 >0 则既有瓶颈识别口径在那些 chi 上失效"
   },
@@ -115,5 +117,5 @@
    "evidence": "若为 False, 该口径在管线外不可复现, 应改为报告引擎原生的 quality_solver_status + CoC 截断"
   }
  ],
- "runtime_s": 232.4
+ "runtime_s": 465.7
 }

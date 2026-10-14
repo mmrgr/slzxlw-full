@@ -1,0 +1,1554 @@
+ 
+ 
+ 
+Prepared for the U.S. General Services Administration and 
+the U.S. Department of Energy 
+By the National Renewable Energy Laboratory 
+AUGUST 2023 
+Blowdown Recovery System for 
+Cooling Tower Water Treatment 
+DAVID SICKINGER AND GREGG TOMBERLIN 
+NREL/TP-2C00-86615 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+i
+Disclaimer 
+This document was prepared as an account of work sponsored by the United States Government. While this 
+document is believed to contain correct information, neither the United States Government nor any agency 
+thereof, nor the National Renewable Energy Laboratory (NREL), nor any of their employees, makes any 
+warranty, express or implied, or assumes any legal responsibility for the accuracy, completeness or 
+usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not 
+infringe privately owned rights. Reference herein to any specific commercial product, process or service by 
+its trade name, trademark, manufacturer, or otherwise does not constitute or imply its endorsement, 
+recommendation or favoring by the United States Government or any agency thereof, or NREL. The views 
+and opinions of authors expressed herein do not necessarily state or reflect those of the United States 
+Government or any agency thereof or NREL. 
+The work described in this report was funded by the U.S. General Services Administration (GSA) and the U.S. 
+Department of Energy (DOE) under Contract No. 47PA0118C0007. 
+Acknowledgments 
+The authors acknowledge and thank GSA (the demonstration facility agency), DOE staff, and NREL staff. 
+GSA Region 9: Jacob Lewis and Isaac Atay 
+GSA's Green Proving Ground program: Jessica Higgins, Jay Fine, and Kevin Powell 
+Mountain Energy Partnership: Greg Barker and Paul Norton 
+National Renewable Energy Laboratory: David Sickinger and Gregg Tomberlin 
+Aqualogix: Donald Hofmann and Mike Richardson 
+Tenfold Information Design Services: Andrea Silvestri and Donna Creason 
+ 
+For more information contact: 
+Isaac Atay  
+U.S. General Services Administration 
+Email: isaac.atay@gsa.gov 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GSA’s Green Proving Ground program and DOE’s High Impact Technology (HIT) Catalyst program 
+enable federal and commercial building owners and operators to make sound investment decisions in 
+next generation building technologies based on their real-world performance. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ii
+Executive Summary 
+From 2014–2017, the U.S. General Services Administration’s (GSA’s) average nationwide water rates 
+increased 41%. Rapidly escalating costs, mandated water-reduction targets, and the fact that an average 
+of 28% of commercial office building water use is associated with heating and cooling led the GSA Green 
+Proving Ground (GPG) program to select alternative water treatment (AWT) technologies for in-field 
+validation.1 This report summarizes the latest AWT evaluation completed in 2022.  
+Blowdown Recovery (BDR) System for Cooling Tower Water Treatment 
+This GPG program project assessed the performance of an AWT system provided by Aqualogix for 
+treating cooling tower blowdown at the Lloyd D. George U.S. Courthouse in Las Vegas, Nevada. This 
+AWT technology is a BDR system that optimizes tower water system performance by capturing and 
+purifying a percentage of the blowdown. This water is returned to the condenser water system as very 
+low conductivity, zero hardness makeup water. The BDR system incorporates side stream filtration, 
+carbon filtration, reverse osmosis (RO) demineralization, and a control system. Unlike some other AWT 
+systems evaluated by the GPG program to date, this AWT system does not replace the legacy water 
+treatment system but is used in addition to chemical water treatment. An appealing aspect of this AWT 
+technology is that the conductivity setpoint for tower blowdown remains unchanged, thus minimizing 
+changes to established tower water system operation.  
+Evaluation and Summary 
+The main focus of this assessment was to evaluate the performance of the BDR system operating. The 
+evaluation was designed to test the manufacturer’s claim that this BDR system technology will reduce 
+blowdown (the flushing of cooling tower water with high concentrations of minerals) by more than 45%, 
+will reduce water consumption by more than 15%, and will deliver a payback in under 5 years. The AWT 
+system was installed in May 2021, and the evaluation ran through October 2022. 
+The key takeaway from this evaluation is that this AWT system is beneficial in reducing water usage. 
+During this project’s assessment phase, the Colorado River was facing the worst drought in the river 
+basin’s recorded history, and this is where the Las Vegas Valley gets about 90% of its water.2 Thus, the 
+GSA Pacific Rim Region (R-9) is implementing AWT technologies that reduce cooling tower water use. 
+Table ES-1 presents a summary of the completed evaluation, including both quantitative and qualitative 
+metrics. The cost of the BDR system installed for this project was $35,403 (including $688 for shipping 
+and $1,473 for training), and the installation added another $11,422, for a total capital expenditure of 
+$46,825. 
+ 
+ 
+ 
+1 GPG Findings 044 and report found at: https://www.gsa.gov/governmentwide-initiatives/climate-action-and-sustainability/center-for-emerging-
+building-technologies/published-findings/water/awt-gsa-guidance-for-cooling-towers.  
+2 Las Vegas Valley Water District drought and conservation measures page at: https://www.lvvwd.com/conservation/measures/index.html. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+iii
+Table ES-1: Performance Objectives 
+QUANTITATIVE 
+OBJECTIVES 
+METRICS and DATA 
+SUCCESS CRITERIA 
+MEASUREMENT AND 
+VERIFICATION (M&V) 
+Results 
+Water/Sewer 
+Savings 
+Metered water consumption. 
+Metered blowdown. 
+Ambient temperature and 
+humidity. 
+>15% makeup water savings. 
+>45% blowdown savings. 
+16% makeup water savings. 
+53% blowdown savings. 
+Maintenance 
+Savings 
+Maintenance records for 
+current cost of chemicals and 
+labor. Maintenance records 
+during demonstration period 
+and estimated future for the 
+BDR system.  
+No increase in legacy 
+chemical costs excluding 
+antiscalant.  
+Less than 8 hours per year in 
+maintenance costs for 
+cleaning and maintaining the 
+new BDR system. 
+Using estimate from vendor 
+on membrane replacement, 
+site plans to replace every 5 
+years. 
+Water Quality 
+Water quality testing. 
+No degradation in water 
+quality (see Table 6 for listing 
+of water quality metrics). 
+No substantial changes in 
+water quality attributed to 
+the AWT. 
+Cost 
+Effectiveness3 
+Simple payback. 
+Savings-to-investment ratio 
+(SIR) over 15 years. 
+<5-year payback. 
+>1.0 SIR. 
+Testbed: 
+   4.8-year payback. 
+   3.1 SIR. 
+ 
+Target Load: 
+   2.8-year payback. 
+   5.3 SIR. 
+Deployment 
+Potential 
+Energy and water savings 
+across climate zones with 
+assumed site water quality. 
+Payback and savings are 
+achieved in most climate 
+zones given the building load 
+size and the water quality. 
+Deployable across all climate 
+zones. 
+QUALITATIVE 
+OBJECTIVES 
+METRICS and DATA 
+SUCCESS CRITERIA 
+M&V Results 
+Ease of 
+Installation 
+Interview with installer. 
+Time required to install and 
+configure. 
+Labor associated with 
+installation. 
+<5 days to install and 
+commission. 
+BDR installation went 
+smoothly, occurred in under 
+5 days. 
+Site Safety 
+Chemicals. 
+No new safety issues as 
+reported by facility 
+operators. 
+Staff reported no safety 
+issues or concerns with the 
+BDR system. 
+ 
+3 BDR Testbed based on load of 1.6 million annual ton-hours, water rate of $18.97 per kGal, and electric rate of $0.10 kWh. The BDR Target Load for 
+the AWT system deployed was 3 million annual ton-hours, GSA average water rate of $16.76 per kGal, and GSA average electric rate $0.11 kWh.  
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+iv
+QUANTITATIVE 
+OBJECTIVES 
+METRICS and DATA 
+SUCCESS CRITERIA 
+MEASUREMENT AND 
+VERIFICATION (M&V) 
+Results 
+Operability 
+Interview with operations 
+and maintenance (O&M) 
+staff. 
+Usability opinion of facility 
+operators. 
+Facility operators have few 
+or no issues with technology. 
+Staff felt prototype BDR 
+tested with some early 
+operational issues. All issues 
+were addressed, and staff 
+continue to use technology. 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+v 
+Table of Contents 
+EXECUTIVE SUMMARY 
+II 
+I. 
+INTRODUCTION 
+1 
+A. 
+What We Studied .............................................................................................................. 1 
+B. 
+Why We Studied It ............................................................................................................ 4 
+II. 
+EVALUATION PLAN 
+4 
+A. 
+Evaluation Design .............................................................................................................. 4 
+B. 
+TestBed Site ...................................................................................................................... 6 
+C. 
+Methodology ..................................................................................................................... 8 
+III. 
+DEMONSTRATION RESULTS 
+10 
+A. 
+Quantitative Results ........................................................................................................ 10 
+B. 
+Qualitative Results .......................................................................................................... 15 
+IV. 
+SUMMARY FINDINGS AND CONCLUSIONS 
+18 
+A. 
+Overall Technology Assessment at Demonstration Facility ............................................ 18 
+B. 
+Lessons Learned and Best Practices ................................................................................ 18 
+C. 
+Deployment Recommendations ..................................................................................... 18 
+V. 
+APPENDICES 
+19 
+A. 
+Operating Cycles vs Effective Cycles (credit: Aqualogix) ................................................ 19 
+B. 
+Manufacturer Cut Sheet ................................................................................................. 23 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+vi
+List of Tables 
+Table ES-1: Performance Objectives .............................................................................................................. iii 
+Table 1: Monitoring Points and Instrumentation .........................................................................................8 
+Table 2: Final Testing Schedule .......................................................................................................................9 
+Table 3: Quantitative Objectives and Results ............................................................................................. 10 
+Table 4: Water Savings .................................................................................................................................. 11 
+Table 5: Water/Sewer Savings: Success Criteria by Evaluation Phase .................................................... 11 
+Table 6: Water Quality Criteria (as defined by GSA) ................................................................................. 13 
+Table 7: Economic Assessment Worksheet ................................................................................................ 14 
+Table 8: Qualitative Objectives and Results ............................................................................................... 15 
+Table A-1: Partial Softening: Increase CoC While Maintaining Hardness of 400 ppm ......................... 20 
+Table A-2: BDR and PWS Systems Combined: Higher Effective CoC and Sewer Reduction ................ 22 
+ 
+List of Figures 
+Figure 1: Simple comparison without (left) and with (right) a BDR ...........................................................1 
+Figure 2: BDR system installed at the Lloyd D. George U.S. Courthouse ..................................................2 
+Figure 3: PWS system installed at the Lloyd D. George U.S. Courthouse ..................................................2 
+Figure 4: Schematic of BDR and PWS equipment (credit: Aqualogix) .......................................................3 
+Figure 5: Location of the Lloyd D. George U.S. Courthouse (credit: MapQuest) .....................................6 
+Figure 6: Picture of the Lloyd D. George U.S. Courthouse (credit: Gregg Tomberlin, NREL) ..................7 
+Figure 7: Average daily temperature range for Las Vegas, NV (credit: Weather Spark) .........................7 
+Figure 8: Evaluation daily temperature range in 2022 for Las Vegas, NV (credit: Weather Spark) .......9 
+Figure 9: BDR system in shipping crate ....................................................................................................... 16 
+Figure 10: Piping unique to this testbed: metered drain (left), overflow repiped (right) .................... 17 
+Figure 11: Retrofit to original BDR test unit to add self-cleaning functionality .................................... 17 
+Figure 12: BDRS production unit (credit: Aqualogix) ................................................................................. 18 
+Figure B-1: Aqualogix typical installation drawing (credit: Aqualogix) ................................................... 23 
+Figure B-2: Aqualogix customized BDR retrofit onto existing PWS for site (credit: Aqualogix) .......... 24 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+1 
+I. Introduction 
+A. WHAT WE STUDIED 
+Cooling Tower Background 
+“Many multistory commercial buildings larger than 200,000 ft2 rely on central chilled water plants to 
+deliver the required air conditioning to the building. A key component of water cooled by chilled water 
+plants is a cooling tower, which cascades water across a medium (a fill) that is designed to maximize 
+exposure of water droplets to the surrounding air, with the resulting evaporation cooling the water and 
+allowing heat to be effectively transferred to the atmosphere. But as water is evaporated, minerals and 
+chemicals become concentrated in the water that remains, which can lead to accelerated scale (mineral 
+deposits) and corrosion problems. Biological growth in the cooling tower water also presents challenges 
+and can lead to fouling, biocorrosion, and potential negative health impacts. The typical approach to 
+controlling scale, corrosion, and biological growth is a combination of chemical treatment, careful 
+monitoring, and blowdown—discharging water to the sanitary sewer from the bottom of the cooling 
+tower basin, where dissolved solids are most concentrated. Makeup water is introduced to dilute the 
+remaining solids and chemicals and to replace water lost through blowdown and evaporation.”4 
+Blowdown Recovery (BDR) System for Cooling Tower Water Treatment 
+This U.S. General Services Administration (GSA) Green Proving Ground (GPG) program project assessed 
+the performance of an alternative water treatment (AWT) system for treating cooling tower blowdown. 
+The blowdown recovery (BDR) system optimizes tower water system performance by capturing and 
+purifying a percentage of the blowdown. This water (permeate) is returned to the condenser water 
+system as very low conductivity, zero hardness makeup water (Figure 1). The BDR system incorporates 
+side stream filtration, carbon filtration, reverse osmosis (RO) demineralization, and a control system. An 
+appealing aspect of this AWT technology is that the conductivity setpoint for tower blowdown remains 
+unchanged, thus minimizing changes to established tower water system operation. 
+ 
+Figure 1: Simple comparison without (left) and with (right) a BDR 
+ 
+4 GPG Findings 044, from full report at: https://www.gsa.gov/governmentwide-initiatives/climate-action-and-sustainability/center-for-emerging-
+building-technologies/published-findings/water/awt-gsa-guidance-for-cooling-towers.  
+BDR
+BLOWDOWN
+(concentrate to sewer)
+WATER
+(permeate)
+BLOWDOWN
+(tower)
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+2 
+The AWT system for this project was provided by Aqualogix and was a customized retrofit of a BDR onto 
+an existing partial water softening (PWS) system. The skid-mounted BDR system includes an RO system 
+with associated filtration and pumps, a chemical bulk tank with pump for antiscalant, and a 250-gallon 
+makeup reservoir. The equipment is 10 feet long and 3 feet wide, requiring a footprint of 300 ft2. The 
+skid weight is 920 lb dry weight (2,400 lb wet weight). Figure 2 shows two views of the BDR system. 
+      
+ 
+Figure 2: BDR system installed at the Lloyd D. George U.S. Courthouse 
+The PWS system installed during a prior GSA GPG program project5 conducted at this site is shown in 
+Figure 3. The schematic in Figure 4 shows how the BDR and PWS systems were integrated together. 
+ 
+Figure 3: PWS system installed at the Lloyd D. George U.S. Courthouse 
+ 
+5 GPG Findings 045 and report found at: https://www.gsa.gov/governmentwide-initiatives/climate-action-and-sustainability/center-for-emerging-
+building-technologies/published-findings/water/awt-monitoring-partial-softening.  
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+3 
+ 
+Figure 4: Schematic of BDR and PWS equipment (credit: Aqualogix) 
+ 
+Unlike other AWT systems evaluated by the GPG program to date, the BDR and PWS systems do not 
+replace the legacy water treatment system but are used in addition to chemical water treatment. The 
+focus of this assessment was to evaluate the performance of the BDR system operating independently, 
+so the PWS system was temporarily turned off to support data collection in the 2021 evaluation. Refer 
+to Appendix A for additional details on how BDR and PWS systems can work in tandem. 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+4 
+B. WHY WE STUDIED IT 
+Cooling tower-related water consumption is one of largest potable water loads within buildings in the 
+United States—an average of 28% of commercial office building water use is associated with heating 
+and cooling. From 2014–2017, GSA’s average nationwide water rates increased 41%. Rapidly escalating 
+costs and mandated water-reduction targets led the GSA GPG program to select AWT technologies for 
+in-field validation.6 
+Cooling towers can be found in all states throughout the country, and it is assumed the BDR system 
+technology could save water in all climate zones. Facilities with higher cooling tower utilization 
+consequently have greater potential for cooling tower water savings, and locations with high water rates 
+should generate the largest annual cost savings. 
+II. Evaluation Plan 
+A. EVALUATION DESIGN   
+The testbed was designed to evaluate the manufacturer’s claim that the BDR system technology will 
+reduce blowdown by more than 45%, will reduce water consumption by more than 15%, and will deliver 
+payback in under 5 years. Additional evaluation criteria included ease of installation (<5 days) and the 
+ease of use for facility operators. 
+GSA identified the following main objectives in the evaluation plan: 
+1. Verify cooling tower water savings 
+2. Verify cooling tower operations and maintenance (O&M) costs and plant acceptance 
+3. Verify cost-effectiveness. 
+OBJECTIVE 1: VERIFY COOLING TOWER WATER SAVINGS 
+The most important M&V objective was to verify the water savings. The measurements that most 
+directly figure into the verification of water savings are: 
+• 
+Cooling tower makeup water consumption 
+• 
+Cooling tower blowdown water 
+Typical water-related costs are for the water makeup to the cooling tower which is a result of 
+evaporation losses, drift losses, and blowdown. Secondly, there is often a cost to discharge the 
+blowdown water. This cost is generally combined as a single fee, but it is important to measure both 
+flow rates associated with makeup water into the system and blowdown water out of the system. Flow 
+meters were installed on both lines to measure the amount of water in and out of the system.  
+ 
+ 
+ 
+6 GPG Findings 044 and report found at: https://www.gsa.gov/governmentwide-initiatives/climate-action-and-sustainability/center-for-emerging-
+building-technologies/published-findings/water/awt-gsa-guidance-for-cooling-towers.  
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+5 
+The flows are measured with meters, and the tons of heat rejected are calculated as: 
+Evaporated Water (gallons) x 8.345 (lb/gallon) x heat of vaporization (Btu/lb)/12,000 (Btu/ton) 
+and: 
+Evaporated Gallons = Makeup (gallons) – blowdown (gallons) – leakage (gallons) 
+This allowed all water consumption to be normalized by expressing water consumption per heat 
+rejected by the cooling tower as gallons per MMBtu. In doing so, we were able to offer an effective 
+comparison between the baseline and demonstration periods.  
+Additionally, a factor was applied to account for water losses in the system due to drift and minor 
+leakages. During the baseline data period, cycles of concentration (CoC) were measured using both 
+water balance and conductivity methods that are defined as: 
+𝐶𝐶𝐶𝐶𝐶𝐶 (𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊 𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵) =
+𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀
+𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵+ 𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙 
+ 
+𝐶𝐶𝐶𝐶𝐶𝐶 (𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶) = 𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵 𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶
+𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶𝐶 
+System losses are not directly measured but can be estimated using these two CoC equations. The 
+makeup and blowdown flows are measured utilizing flow meters. The system losses are estimated by 
+inputting a value in the denominator of the first equation that yields a CoC identical to the one 
+calculated in the second equation. For various data points at different loads, this value will be different. 
+During a prior PWS evaluation, it was found that the losses are closely estimated at various loads using 
+the following equation: 
+% losses = 0.0014  x  evaporation rate (lpm) + 0.0118 
+Appendix A explores the subtle details of evaluating CoC based on the water balance (volume) method 
+for a BDR system. The manufacturer has found it helpful to define Operating CoC vs Effective CoC. 
+Within the main body of this report, when BDR is operational, the CoC (Water Balance) is calculated 
+utilizing Blowdown (concentrate to sewer) in the formula--refer to label in Figure 1. 
+Monthly water reports included conductivity, pH, alkalinity, hardness, and CoC. 
+OBJECTIVE 2: VERIFY COOLING TOWER O&M COSTS AND PLANT ACCEPTANCE 
+To verify the O&M costs, the following data was collected: 
+• 
+Estimated cost for cleaning the existing baseline system 
+• 
+Cost of O&M labor and chemicals for the existing baseline system 
+• 
+Estimated O&M labor and materials cost for maintaining the BDR system.  
+The operation of the water treatment system was monitored over the demonstration period to ensure 
+that the operation of the units would not cause any unforeseen issues. O&M staff were interviewed to 
+understand any issues related to the system. The maintenance requirements in terms of personnel labor 
+were documented for both the baseline and demonstration periods. Prior maintenance logs and costs 
+were reviewed. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+6 
+OBJECTIVE 3: VERIFY COST-EFFECTIVENESS 
+The cost-effectiveness was evaluated at the selected facility based on the water and sewer savings, 
+equipment and installation costs, and O&M costs versus the incumbent water treatment methodology. 
+The measured performance for these metrics was compared to the manufacturer’s claims for the 
+system being evaluated as a part of this demonstration. 
+The quantitative and qualitative performance objectives for the project are provided in Table 3 and 
+Table 8, respectively.  
+B. TESTBED SITE 
+Candidates for this technology are buildings or other installations that have a cooling tower used for 
+evaporative cooling on-site. The testbed site selected for this evaluation project was the Lloyd D. George 
+U.S. Courthouse located at 333 Las Vegas Boulevard South in Las Vegas, Nevada, as shown on the map in 
+Figure 5 and pictured in Figure 6. 
+ 
+ 
+Figure 5: Location of the Lloyd D. George U.S. Courthouse (credit: MapQuest) 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+7 
+ 
+Figure 6: Picture of the Lloyd D. George U.S. Courthouse (credit: Gregg Tomberlin, NREL) 
+The building is approximately 450,000 square feet and has a relatively long cooling season. The building 
+currently uses three chillers. Two chillers are rated at 350 tons and one at 450 tons. The condensers for 
+the chillers use water from three cooling tower cells located on the roof of the building. The cooling 
+system prior to installation of the partial water softening system typically ran at 2.8 CoC. After 
+installation of the PWS system, the cooling system typically ran at about 4.2 CoC. GSA O&M procedures 
+require that cooling towers have a CoC of 2 or greater (met throughout). A higher CoC correlates with 
+less blowdown and reduced makeup water consumption for the cooling tower. 
+The Colorado River is facing the worst drought in the river basin’s recorded history, and this is where the 
+Las Vegas Valley gets about 90% of its water.7 So the GSA Pacific Rim Region (R-9) is implementing AWT 
+technologies that reduce cooling tower water use. 
+The annual daily range of high and low temperatures for Las Vegas, Nevada, is shown in Figure 7. 
+ 
+Figure 7: Average daily temperature range for Las Vegas, NV (credit: Weather Spark) 
+ 
+7 Las Vegas Valley Water District drought and conservation measures page at: https://www.lvvwd.com/conservation/measures/index.html. 
+hot
+cool
+cool
+Jan
+Feb
+Mar
+Apr
+May
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Dec
+0°F
+0°F
+10°F
+10°F
+20°F
+20°F
+30°F
+30°F
+40°F
+40°F
+50°F
+50°F
+60°F
+60°F
+70°F
+70°F
+80°F
+80°F
+90°F
+90°F
+100°F
+100°F
+110°F
+110°F
+Dec 26
+56°F
+Jul 13
+105°F
+38°F
+80°F
+Jun 3
+95°F
+Sep 16
+95°F
+Feb 24
+66°F
+70°F
+71°F
+46°F
+45°F
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+8 
+C. METHODOLOGY 
+Quantitative Study Design 
+Two key measurements to assess water usage of a cooling tower are the blowdown water flow and the 
+makeup water flow. New meters to measure both flow rates were installed at the beginning of this 
+project. To determine the metrics described previously, the data points listed in Table 1 were collected 
+using the indicated instruments. Data was logged every minute during the testing periods. 
+Table 1: Monitoring Points and Instrumentation 
+Monitoring Point 
+Sensor/Monitor 
+Notes 
+Blowdown water meter. 
+New totalizing flow meter in addition to the existing 
+FTB4100 series totalizing flow meter from PWS project. 
+Data from new 4-20 mA output card. 
+Blowdown conductivity. 
+ Existing site meter. 
+Data from new 4-20 mA output card. 
+Blowdown PH. 
+ Existing site meter. 
+Data from new 4-20 mA output card. 
+Blowdown ORP. 
+ Existing site meter. 
+Data from new 4-20 mA output card. 
+Makeup water meter. 
+New totalizing flow meter in addition to the existing 
+FTB4100 series totalizing flow meter from PWS project. 
+Data from new 4-20 mA output card. 
+Ambient dry bulb temperature. 
+ Monitor located outside. 
+ 
+Ambient relative humidity. 
+ Monitor located outside. 
+ 
+Cooling tower basin corrosivity. 
+AWT internal corrosion monitoring device checked with 
+new PH and conductivity meters. 
+Located on AWT skid. Data to be 
+downloaded and transferred to NREL.  
+Cooling tower overflow. 
+Level switches that will sense an overflow of the cooling 
+tower basin and alert staff. 
+ 
+AWT blowdown and regen flow 
+rate. 
+Totalizing flow meter at the AWT skid discharge. 
+ 
+Water input to AWT skid. 
+Totalizing flow meter at the AWT skid discharge. 
+ 
+AWT skid energy usage. 
+Meter at AWT skid. 
+ 
+Data logging equipment. 
+ Two Campbell Scientific CR1000 data loggers with cell 
+phone modem, required peripheries, and other supplies. 
+ 
+ 
+Data was collected remotely at NREL’s office in Golden, Colorado. Information was sent via a modem 
+connection from a data logger. Installation of instrumentation took place prior to baseline testing and 
+was noninvasive. Commissioning took place immediately after installation, and data was collected until 
+the end of the 2022 AWT evaluation period. 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+9 
+Qualitative Study Design  
+To assess whether the technology was well received by the system operators and maintenance staff, key 
+staff members were interviewed as to their satisfaction with the operation of the new system. Operator 
+logs were reviewed during both the baseline and testing periods. Any maintenance records or costs 
+were considered as to their relevance to the technology implementation. 
+Data Analysis 
+The effectiveness of the technology was demonstrated by comparison between the measured metrics 
+with and without the AWT technology installed. The initial testing period—the baseline test period—was 
+conducted before the AWT technology was installed.  
+After all instrumentation was installed and tested, the baseline test period data collection began. The 
+demonstration test period with the AWT technology installed and operational began after adequate 
+baseline data had been collected. Due to various issues in 2021 that are discussed later, the testing 
+period was extended into 2022. The final testing schedule is shown in Table 2, along with the historical 
+weather data highlighted in Figure 8 for the 2022 evaluation period, which spanned August 1 through 
+October 14 (as highlighted by green box). 
+Table 2: Final Testing Schedule 
+ 
+ 
+Baseline 
+2021 
+Evaluation 
+2022 
+Evaluation 
+ 
+Units 
+Testing Period 
+30 
+15 
+57 
+days 
+ 
+ 
+Figure 8: Evaluation daily temperature range in 2022 for Las Vegas, NV (credit: Weather Spark) 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+10
+III. Demonstration Results 
+A. QUANTITATIVE RESULTS 
+Quantitative results are discussed below relative to the objectives set out at the start of the evaluation 
+and are summarized in Table 3. 
+Table 3: Quantitative Objectives and Results 
+QUANTITATIVE 
+OBJECTIVES 
+ 
+METRICS and DATA 
+ 
+SUCCESS CRITERIA 
+ 
+M&V Results 
+Water/Sewer 
+Savings 
+Metered water consumption. 
+Metered blowdown. 
+Ambient temperature and 
+humidity. 
+>15% makeup water savings. 
+>45% blowdown savings. 
+16% makeup water savings. 
+53% blowdown savings. 
+Maintenance 
+Savings 
+Maintenance records for 
+current cost of chemicals and 
+labor. Maintenance records 
+during demonstration period 
+and estimated future for the 
+BDR system. 
+No increase in legacy 
+chemical costs excluding 
+antiscalant.  
+Less than 8 hours per year in 
+maintenance costs for 
+cleaning and maintaining the 
+new BDR system. 
+Using estimate from vendor 
+on membrane replacement, 
+site plans to replace every 5 
+years. 
+Water Quality 
+Water quality testing. 
+No degradation in water 
+quality, including pH, 
+hardness, alkalinity, silica 
+high range, chloride anions, 
+salt anions, sulfate anions, 
+phosphate, copper, iron, and 
+biological growth.  
+No substantial changes in 
+water quality attributed to 
+the AWT. 
+Cost 
+Effectiveness8 
+Simple payback. 
+SIR over 15 years. 
+<5-year payback. 
+>1.0 SIR. 
+Testbed: 
+   4.8-year payback. 
+   3.1 SIR. 
+ 
+Target Load: 
+   2.8-year payback. 
+   5.3 SIR. 
+Deployment 
+Potential 
+Energy and water savings 
+across climate zones with 
+assumed site water quality. 
+Payback and savings are 
+achieved in most climate 
+zones given the building load 
+size and the water quality. 
+Deployable across all climate 
+zones. 
+ 
+8 BDR Testbed based on load of 1.6 million annual ton-hours, water rate of $18.97 per kGal, and electric rate of $0.10 kWh. The BDR Target Load for 
+the AWT system deployed was 3 million annual ton-hours, GSA average water rate of $16.76 per kGal, and GSA average electric rate $0.11 kWh. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+11
+WATER SAVINGS 
+Makeup water and blowdown were metered prior to the installation of the AWT system to develop a 
+baseline, and these were measured throughout the 2021 and 2022 evaluations. The PWS system was 
+turned off to support data collection in the 2021 evaluation. Based on 2021 data analysis, both the BDR 
+and PWS systems were in operation during the 2022 evaluation as BDR system performance could be 
+analyzed. The evaporation, evaporation heat, and normalized water consumption per heat rejected by 
+the cooling tower are shown in Table 4, along with CoC based on the water balance (volume) method: 
+𝐶𝐶𝐶𝐶𝐶𝐶 (𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊 𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵) =
+𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀
+𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵𝐵+ 𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙𝑙 
+GSA O&M procedures require that cooling towers have a CoC of 2 or greater (met throughout). A higher 
+CoC correlates with less blowdown and reduced makeup water consumption for the cooling tower. The 
+success criteria by evaluation phase are shown in Table 5. 
+Table 4: Water Savings 
+ 
+ 
+Baseline 
+2021 
+Evaluation 
+2022 
+Evaluation 
+ 
+Units 
+Testing Period 
+30 
+15  
+57 
+days 
+Blowdown 
+128,114 
+43,081 
+112,194 
+gallons 
+Makeup 
+394,456 
+239,086 
+706,695 
+gallons 
+Drift Losses 
+12,030 
+11,926 
+31,855 
+gallons 
+Evaporation 
+254,312 
+184,079 
+562,646 
+gallons 
+Evaporative Heat 
+2,217 
+1,604 
+4,904 
+MMBtu 
+Water Consumption 
+per Heat Rejected 
+177.9 
+149.0 
+144.1 
+gallons per 
+MMBtu 
+CoC Water Balance 
+(volume method) 
+2.8 
+4.34 
+4.91 
+ 
+ 
+Table 5: Water/Sewer Savings: Success Criteria by Evaluation Phase 
+ 
+Success Criteria 
+2021 BDR 
+Evaluation 
+2022 BDR 
+Evaluation 
+Water Consumption Reduced Percentage 
+16.2% 
+16% 
+Blowdown Reduced Percentage 
+53.5% 
+53% 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+12
+Useful metrics from the 2021 evaluation, which spanned June 1 through August 28, for BDR system 
+performance analysis was shortened to a single consecutive 15-day stretch due to these two events: 
+1. The water treatment company for the Lloyd D. George U.S. Courthouse did not properly 
+maintain chemicals in the cooling tower loop for most of the 2021 evaluation. The facility 
+chemical tank with chlorine/bromine was found empty in the July timeframe. While this was 
+unrelated to the BDR system, it did negatively impact the metrics, as the BDR system was 
+designed to work in tandem with proper chemical water treatment. The BDR system required 
+more frequent RO membrane cleanings during the 2021 evaluation, as the system was 
+compensating for improper facility chemical treatment. The Aqualogix team helped identify 
+these water treatment issues. 
+2. A site power outage event on August 28 led to a water overflow event at the BDR reservoir tank 
+when systems powered back on. Post-event analysis determined this event was caused by how 
+the drain was metered specifically to support this evaluation. The BDR system was turned off 
+until the metered drain could be repiped to prevent a similar event from occurring. More details 
+are provided in the Operability section.  
+The BDR system showed encouraging performance during the 2021 evaluation, so the team decided to 
+extend testing into 2022. A new water treatment company was brought on board and officially took 
+over responsibility on July 1, 2022. The chemical water treatment issues were addressed, and the 2022 
+evaluation spanned August 1 through October 14. There were two short pauses during the 2022 
+evaluation window, although useful metrics were collected for a combined 57-day analysis. 
+MAINTENANCE SAVINGS 
+To verify the O&M costs or savings, the following data was collected: 
+• 
+Estimated changes in labor costs for cleaning cooling towers and condenser tubes 
+• 
+Cost of O&M labor and chemicals for the existing baseline system 
+• 
+Estimated O&M labor and materials cost for maintaining the AWT system, as provided by the 
+vendor. 
+The operation of the water treatment system was monitored over the demonstration period to ensure 
+that the operation of the unit did not cause any problematic issues. O&M staff were interviewed to 
+understand any issues related to the system. 
+O&M for the unit consists primarily of semi-annual system checks and annual instrument calibration. No 
+increase in legacy chemical costs was necessary, excluding antiscalant for the BDR system. These items 
+can be contracted through the vendor, with the majority of the costs being travel to the site. The AWT 
+supplier will provide training to do this work for a one-time fee of $1,473 (including materials and 
+special tools) that was included in the capital cost. An increase in annual maintenance was included at 
+$475 per year to cover the labor for the system checks and annual calibration and replacing membranes 
+every 5 years (that averages out to $125 per year). An estimate was provided by the vendor on 
+membrane replacement and site plans to replace it every 5 years. 
+The BDR system was retrofitted between the 2021 and 2022 evaluations to add a self-cleaning 
+functionality for the RO membranes. This added feature keeps the amount of O&M labor to a minimum. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+13
+WATER QUALITY 
+On a monthly basis, cooling towers are tested for effectiveness of water treatment—including alkalinity, 
+pH, conductivity, scale, and corrosion inhibitors. Chemicals and biological treatment dosage and water 
+blowdown rates are adjusted, as required. GSA has developed water chemistry standards, shown in 
+Table 6, as a guideline to determine the acceptability of cooling tower basin water quality for a given 
+water treatment technology. It should be noted that adherence to these ranges is not the only indicator 
+of a technology’s success. The operation of a water treatment technology is unique, and the function of 
+the materials used in the design may result in water quality that falls outside the ranges defined in the 
+project specifications. 
+There were no negative changes to water quality attributed to the BDR system in 2021. Under the 
+direction of the new water treatment company that took over in 2022, water quality met all the criteria. 
+Table 6: Water Quality Criteria (as defined by GSA) 
+Test 
+Acceptable Ranges 
+Total Alkalinity (ppm) 
+100–1,000 
+pH 
+7.3–9.0 
+Chloride (ppm) 
+10–500 
+Cycles of Concentration (CoC) 
+>2 
+Total Hardness (ppm) 
+500–1,500 
+Conductivity (mmHOS) 
+<2,400 
+Bacteria Count (cfu) 
+<80,000 
+Iron (ppm) 
+<4 
+Calcium Hardness (ppm) 
+<500 
+Magnesium Hardness (ppm) 
+<100 
+Chlorides (ppm) 
+<250 
+Salt (ppm) 
+<410 
+Sulfates (ppm) 
+<250 
+Silica (ppm) 
+<150 
+ORP (mV) 
+>300 
+90-Day Copper Coupon (mpy) 
+<0.2 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+14
+COST-EFFECTIVENESS 
+The primary savings on the project were due to water savings. No reduction in cleaning labor costs were 
+identified during the testing. The cooling towers were neither more difficult to clean nor required more 
+frequent cleaning, but there were no reductions in either metric. 
+The cost of the BDR system installed for this project was $35,403 (including $688 for shipping and 
+$1,473 for training), and the installation added another $11,422, for a total capital expenditure of 
+$46,825. Cost savings are realized from water savings. 
+The measured 1.6-million-ton hour annual load at the testbed site was lower than the expected target 
+load of 3 million-ton hours. So Table 7 also shows a column assuming the target load and 2017 GSA 
+average water costs of $16.76 per kGal (the 2017 rate was used to be consistent with other GPG AWT 
+evaluations).  
+Table 7: Economic Assessment Worksheet 
+Description 
+Testbed 
+Target Load and 
+GSA Utility Rates 
+Notes 
+Equipment cost ($) 
+$35,403 
+$35,403 
+Includes startup. Assumes $688 
+shipping and $1,473 for training. 
+Installation cost ($) 
+$11,422 
+$11,422 
+Assumes 120-V config for BDR, 
+and no tie-in with Building 
+Automation System. 
+Annual maintenance increase ($) 
+$475 
+$475 
+Includes $350 annual support, 
+membranes replaced every 5 
+years ($125 per membrane). 
+Annual water savings (gal) 
+554,880 
+1,040,400 
+Testbed had 1.6 million annual 
+ton-hours (or 187-ton avg load); 
+Target Load was 3 million annual 
+ton-hours. 
+Annual water cost savings ($) 
+$10,526 
+$17,437 
+Testbed water cost $18.97 kGal; 
+GSA avg. water rate $16.76 kGal. 
+Annual technology electricity 
+use (kWh) 
+3,541 
+3,541 
+8,760 hours at 0.404 kW for BDR. 
+Annual increase in electricity ($) 
+354 
+390 
+Testbed electric rate $0.10 kWh; 
+GSA avg. electric rate $0.11 kWh. 
+Total annual savings ($) 
+$9,697 
+$16,573 
+ 
+Payback (years) 
+4.8 
+2.8 
+ 
+SIR (15 years) 
+3.1 
+5.3 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+15
+B. QUALITATIVE RESULTS 
+To assess whether the technology was well received by the system operators and maintenance staff, key 
+staff members (property and building managers, O&M staff, and new water treatment company) were 
+interviewed as to their satisfaction with the operation of the new system.  
+Qualitative results are discussed below relative to the objectives set out at the start of the evaluation 
+and are summarized in Table 8. 
+Table 8: Qualitative Objectives and Results 
+QUALITATIVE 
+OBJECTIVES 
+ 
+METRICS and DATA 
+ 
+SUCCESS CRITERIA 
+ 
+M&V Results 
+Ease of 
+Installation 
+Interview with installer. 
+Time required to install and 
+configure. 
+Labor associated with installation. 
+<5 days to install and 
+commission. 
+BDR installation went 
+smoothly, occurred in under 
+5 days. 
+Site Safety 
+Chemicals. 
+No new safety issues as 
+reported by facility 
+operators. 
+Staff reported no safety 
+issues or concerns with the 
+BDR system. 
+Operability 
+Interview with O&M staff. 
+Usability opinion of facility 
+operators. 
+Facility operators have 
+few or no issues with 
+technology. 
+Staff felt prototype BDR 
+tested with some early 
+operational issues. All issues 
+were addressed, and staff 
+continue to use technology. 
+ 
+EASE OF INSTALLATION 
+The AWT system was shipped in a crate (Figure 9) that fit through a 3-ft wide door. Setting the skid, 
+wiring, and plumbing was straightforward. The installation is separate from the main cooling system, 
+only treating a portion of the flow. If the skid can be located close to the cooling water supply and return 
+piping, the side stream piping runs are short. The ties into the cooling water systems do not take much 
+time or expense. For the Lloyd D. George U.S. Courthouse, the skid footprint was 300 ft2. The skid weight 
+is 920 lb dry weight (2,400 lb wet weight). Most buildings are capable of handling equipment of this size 
+without issue. The target goal was to complete the installation in less than 5 days, which was met. After 
+the decision was made on 120/240/480 V for the BDR pump, then the electrical run was 
+straightforward. The implementation of the technology, including installation and commissioning, was 
+satisfactory. 
+From a logistical standpoint, this system is easily deployed, installed, and operated. The technology fits 
+onto a small footprint skid that can be set in place, installed, and commissioned in a short period of 
+time. Piping to and from the skid is the hardest cost to predict, although the skid blowdown just needs a 
+nearby drain location for discharge. Makeup water to the skid from city water will depend upon the 
+location of the skid relative to a local tie-in point. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+16
+ 
+Figure 9: BDR system in shipping crate 
+SITE SAFETY 
+Site safety concerns are minimal with this AWT system. Staff reported no safety issues or concerns. The 
+electrical system has disconnects on the skid, so staff felt comfortable with the setup. And there were 
+no concerns with selection of the antiscalant selected for use in the BDR chemical bulk tank. 
+OPERABILITY 
+The key staff member from the new water treatment company mentioned the BDR conceptually makes 
+sense, although this was a new scenario working around demonstration hardware and additional 
+training was requested. Because the company joined the project later (July 2022), it wanted to see BDR 
+in operation for a full year before making a final decision on effectiveness. The company felt more 
+comfortable with the PWS system, as it is more common in the industry. 
+Managers and O&M staff felt the installed BDR system was at a prototype stage versus well-tested. 
+There were some leak events during the 2021 and 2022 evaluations that influenced their perspective, 
+but those issues were resolved. A water overflow event occurred at the BDR reservoir tank after a site 
+power failure in 2021. Post-event analysis determined this event was caused by piping unique to this 
+testbed, as shown in Figure 10, with a check-valve on the metered drain line not functioning when both 
+the PWS and BDR systems returned to operation. With the final discharge to drain being restricted by 
+the meter placement, the BDR tank filled to overflow at the top. The tank overflow line was repiped to 
+match a normal installation, so it is now open to the drain to prevent a similar event from occurring.  
+There were two other smaller leaks in 2022 after the BDR system was retrofitted to add a self-cleaning 
+functionality for the RO membranes. Some short straight sections of pipe near the membranes, as 
+shown in Figure 11, and the pump had to be replaced with machined stock pipe. Aqualogix was quick to 
+implement these fixes, and the system has been in operation without any additional incidents as of 
+publication of this report.  
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+17
+      
+ 
+Figure 10: Piping unique to this testbed: metered drain (left), overflow repiped (right) 
+ 
+      
+ 
+Figure 11: Retrofit to original BDR test unit to add self-cleaning functionality 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+18
+IV. Summary Findings and Conclusions 
+A. OVERALL TECHNOLOGY ASSESSMENT AT DEMONSTRATION FACILITY 
+The key takeaways from this evaluation that started in May 2021 and ran through October 2022 are: 
+• 
+Water savings from the BDR system exceeded the success criteria, reaching 16% makeup water 
+savings and 53% blowdown savings while meeting GSA water standards and payback targets. 
+• 
+Another takeaway from the evaluation of the BDR system is that the conductivity setpoint for 
+blowdown remains unchanged. 
+B. LESSONS LEARNED AND BEST PRACTICES 
+The team recognized contributing factors played a role in the 2021 events, from having to replace the 
+water treatment company to the customized retrofit of a BDR onto an existing PWS system with unique 
+metering to support this evaluation. Based on the 2022 evaluation, GSA R-9 regional staff view this AWT 
+system as beneficial in reducing water usage and are continuing to use this technology. Lessons learned: 
+• 
+Importance of a water treatment company properly maintaining cooling tower systems, as that 
+impacts performance of both the AWT and chemical water treatment systems. 
+• 
+Variation in payback is influenced by water rates and whether the AWT is operating near target 
+load. 
+• 
+BDR with self-cleaning functionality reduced the amount of O&M labor. 
+• 
+Minimize the number of fittings as best practice. The manufacturer now offers a modular BDRS 
+design with simplified piping when BDR and PWS systems are combined, as shown in Figure 12. 
+      
+ 
+Figure 12: BDRS production unit (credit: Aqualogix) 
+C. DEPLOYMENT RECOMMENDATIONS 
+The BDR is deployable across all climate zones and the system can be scaled to meet various cooling 
+loads. From a logistical standpoint, this system is easily deployed, installed, operated, and maintained. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+19
+V. Appendices 
+A. OPERATING CYCLES VS EFFECTIVE CYCLES (CREDIT: AQUALOGIX) 
+Water savings measures using blowdown recovery (BDR) and/or partial water softening (PWS) systems 
+reduce sewer discharge and lower city water makeup demand. A commonly used performance metric is 
+cycles of concentration. However, where BDR is employed, a distinction must be made between the 
+cycles of concentration at which the cooling system is operating, and the effective cycles yielded from 
+the secondary processing of the blowdown. 
+The following examples are intended to illustrate this difference. 
+Baseline (before any AWT) 
+ 
+EVAPORATION
+CITY MAKEUP
+COOLING
+TOWER
+2.8
+Operating
+Cycles
+To Sewer
+M
+B
+ 
+ 
+ 
+In the original baseline condition, the 
+cooling system is operating at the limits set 
+by the water treatment provider (e.g., 
+hardness, conductivity, silica). 
+ 
+The operating cycles are calculated by 
+dividing the makeup by the blowdown 
+volume: 
+ 
+Operating Cycles = M / B 
+ 
+Note that drift (a small loss of water droplets at the 
+cooling tower) has been ignored for simplicity in these 
+examples. 
+ 
+BDR System 
+ 
+ 
+ 
+ 
+EVAPORATION
+CITY MAKEUP
+COOLING
+TOWER
+2.8
+Operating
+Cycles
+Blowdown
+Recovery 
+Unit
+PERMEATE
+To Sewer
+4.9
+Effective
+Cycles
+M1
+B
+C
+M2
+ 
+ 
+ 
+With BDR, the cooling system is operated 
+at the same operational limits set by the 
+water treatment provider, as in the 
+baseline operation above. 
+ 
+The operating cycles remain the same: 
+ 
+Operating Cycles = M1 / B 
+ 
+Using a BDR, the blowdown no longer goes 
+to the sewer. Rather, the BDR unit returns 
+a percentage of the received blowdown 
+back to the cooling system as purified 
+makeup (“permeate”). Only the 
+concentrate from the BDR goes to the 
+sewer. 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+20
+The concentrate can be viewed as the new 
+blowdown, allowing an “Effective Cycles” 
+to be calculated: 
+ 
+Effective Cycles = M2 / C 
+ 
+PWS System 
+ 
+ 
+EVAPORATION
+CITY 
+MAKEUP
+COOLING
+TOWER
+4.9
+Operating
+Cycles
+SOFT 
+MAKEUP
+High Hardness
+High Conductivity
+Low Hardness
+High Conductivity
+Very High Hardness
+Very High Conductivity
+To Sewer
+B
+M
+Moderate  Hardness
+High Conductivity
+Hardness less than,
+or equal to,
+the Original Baseline
+ 
+ 
+ 
+Partial softening is used to allow higher 
+operating cycles in the cooling system, 
+without exceeding the hardness limit 
+specified by the water treatment provider 
+for the original baseline operation. 
+ 
+This is accomplished by blending softened 
+water with the city makeup to reduce the 
+overall makeup hardness (allowing higher 
+cycles at the same hardness limit). 
+ 
+The operating cycles are calculated by 
+dividing the makeup by the blowdown 
+volume: 
+ 
+Operating Cycles = M / B 
+ 
+ 
+Table A-1 illustrates how partial softening allows an increase from 4 to 8 cycles while maintaining 400 
+ppm hardness in the cooling water: 
+ 
+Table A-1: Partial Softening: Increase CoC While Maintaining Hardness of 400 ppm 
+City Water 
+Total Hardness 
+Percent 
+Softened 
+Makeup 
+Total Hardness 
+Total Hardness 
+Limit (ppm) 
+CoC 
+Operating 
+100 
+0 
+100  
+400 
+4.0 
+100 
+10 
+90 
+400 
+4.4 
+100 
+20 
+80 
+400 
+5.0 
+100 
+30 
+70 
+400 
+5.7 
+100 
+40 
+60 
+400 
+6.7 
+100 
+50 
+50 
+ 
+ 
+400 
+8.0 
+ 
+For a complete discussion of partial-softening, refer to NREL/TP-7A40-76756,  
+Continuous Monitoring and Partial Water Softening for Cooling Tower Water Treatment. 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+21
+BDR and PWS systems combined 
+ 
+ 
+EVAPORATION
+CITY 
+MAKEUP
+COOLING
+TOWER
+4.9
+Operating
+Cycles
+SOFT 
+MAKEUP
+Blowdown
+Recovery 
+Unit
+High Hardness
+High Conductivity
+Low Hardness
+High Conductivity
+Low Hardness
+Very Low Conductivity
+Very High Hardness
+Very High Conductivity
+To Sewer
+B
+M2
+C
+M1
+9.5
+Effective
+Cycles
+ 
+ 
+ 
+Partial softening is used to allow higher 
+operating cycles in the cooling system, 
+without exceeding the hardness limit 
+specified by the water treatment provider 
+for the original baseline operation. 
+ 
+The operating cycles are calculated by 
+dividing the makeup by the blowdown 
+volume: 
+ 
+Operating Cycles = M1 / B 
+ 
+When combining partial softening with 
+BDR, the blowdown no longer goes to the 
+sewer. Rather, the BDR unit returns a 
+percentage of the received blowdown back 
+to the cooling system as purified makeup 
+(“permeate”). Only the concentrate from 
+the BDR goes to the sewer. 
+ 
+The concentrate can be viewed as the new 
+blowdown, allowing an “Effective Cycles” 
+to be calculated: 
+ 
+Effective Cycles = M2 / C 
+ 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+22
+Table A-2 shows how BDR can be combined with partial softening to achieve higher effective cycles of 
+concentration and overall sewer reduction. These calculations are based on average evaporative load of 
+400 tons, baseline operating CoC of 2.8, and average BDR recovery rate of 53% (based on Table 5). 
+Table A-2: BDR and PWS Systems Combined: Higher Effective CoC and Sewer Reduction  
+Operating 
+Cycles 
+Evaporation 
+(gallons/year) 
+Blowdown 
+(gallons/year) 
+Concentration 
+(gallons/year) 
+Effective 
+CoC 
+Sewer 
+Reduction 
+3.3 
+6,307,200 
+2,742,261 
+1,261,440 
+6.0 
+64% 
+3.8 
+6,307,200 
+2,252,261 
+1,036,183 
+7.1 
+70% 
+4.3 
+6,307,200 
+1,911,273 
+879,185 
+8.2 
+75% 
+4.8 
+6,307,200 
+1,659,789 
+763,503 
+9.3 
+78% 
+5.3 
+6,307,200 
+1,466,791 
+674,724 
+10.3 
+81% 
+5.8 
+6,307,200 
+1,314,000 
+604,440 
+11.4 
+83% 
+6.3 
+6,307,200 
+1,190,038 
+ 
+ 547,417 
+12.5 
+84% 
+6.8 
+6,307,200 
+1,087,448 
+500,226 
+13.6 
+86% 
+7.3 
+6,307,200 
+1,001,143 
+460,526 
+14.7 
+87% 
+7.8 
+6,307,200 
+927,529 
+426,526 
+15.8 
+88% 
+8.3 
+6,307,200 
+864,000 
+397,440 
+16.9 
+89% 
+8.8 
+6,307,200 
+808,615 
+371,963 
+18.0 
+89% 
+9.3 
+6,307,200 
+759,904 
+349,556 
+19.0 
+90% 
+9.8 
+6,307,200 
+716,727 
+329,695 
+20.1 
+91% 
+10.3 
+6,307,200 
+678,194 
+311,969 
+21.2 
+91% 
+10.8 
+6,307,200 
+643,592 
+296,052 
+22.3 
+92% 
+11.3 
+6,307,200 
+612,350 
+281,681 
+23.4 
+92% 
+11.8 
+6,307,200 
+584,000 
+268,640 
+24.5 
+92% 
+12.3 
+6,307,200 
+558,159 
+256,753 
+25.6 
+93% 
+ 
+ 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+23
+B. MANUFACTURER CUT SHEET 
+ 
+Figure B-1: Aqualogix typical installation drawing (credit: Aqualogix) 
+
+BLOWDOWN RECOVERY SYSTEM FOR COOLING TOWER WATER TREATMENT 
+ 
+24
+ 
+ 
+Figure B-2: Aqualogix customized BDR retrofit onto existing PWS for site (credit: Aqualogix) 

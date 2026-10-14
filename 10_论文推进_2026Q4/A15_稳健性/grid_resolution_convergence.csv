@@ -51,107 +51,107 @@
 "IEUA RP-1 (2025, tertiary)",193,1.012228036959277,190,False,1,0.046875,3.0
 "IEUA RP-1 (2025, tertiary)",193,1.1904281800020475,193,False,0,0.0,3.0
 "IEUA RP-1 (2025, tertiary)",193,1.4,193,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",25,0.2,24,False,1,0.125,3.0
+"Figshare RW (2025, paired study)",25,0.2,25,False,0,0.0,3.0
 "Figshare RW (2025, paired study)",25,0.23520948571590294,0,False,0,,
 "Figshare RW (2025, paired study)",25,0.2766175108536977,0,False,0,,
-"Figshare RW (2025, paired study)",25,0.3253153123395572,20,False,1,0.625,3.0
-"Figshare RW (2025, paired study)",25,0.3825862365544778,22,False,1,0.375,3.0
-"Figshare RW (2025, paired study)",25,0.4499395597098075,23,False,1,0.25,3.0
-"Figshare RW (2025, paired study)",25,0.5291502622129182,24,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",25,0.6223058052076782,24,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",25,0.7318611420045942,24,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",25,0.8607034141317699,24,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",25,1.012228036959277,24,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",25,1.1904281800020475,25,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",25,1.4,25,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",49,0.2,48,False,1,0.0625,3.0
+"Figshare RW (2025, paired study)",25,0.3253153123395572,0,False,0,,
+"Figshare RW (2025, paired study)",25,0.3825862365544778,0,False,0,,
+"Figshare RW (2025, paired study)",25,0.4499395597098075,0,False,0,,
+"Figshare RW (2025, paired study)",25,0.5291502622129182,0,False,0,,
+"Figshare RW (2025, paired study)",25,0.6223058052076782,0,False,0,,
+"Figshare RW (2025, paired study)",25,0.7318611420045942,15,False,1,1.25,3.0
+"Figshare RW (2025, paired study)",25,0.8607034141317699,20,False,1,0.625,3.0
+"Figshare RW (2025, paired study)",25,1.012228036959277,22,False,1,0.375,3.0
+"Figshare RW (2025, paired study)",25,1.1904281800020475,23,False,1,0.25,3.0
+"Figshare RW (2025, paired study)",25,1.4,24,False,1,0.125,3.0
+"Figshare RW (2025, paired study)",49,0.2,48,True,2,0.0,3.0
 "Figshare RW (2025, paired study)",49,0.23520948571590294,0,False,0,,
 "Figshare RW (2025, paired study)",49,0.2766175108536977,0,False,0,,
-"Figshare RW (2025, paired study)",49,0.3253153123395572,39,False,1,0.625,3.0
-"Figshare RW (2025, paired study)",49,0.3825862365544778,44,False,1,0.3125,3.0
-"Figshare RW (2025, paired study)",49,0.4499395597098075,46,False,1,0.1875,3.0
-"Figshare RW (2025, paired study)",49,0.5291502622129182,47,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",49,0.6223058052076782,47,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",49,0.7318611420045942,48,False,1,0.0625,3.0
-"Figshare RW (2025, paired study)",49,0.8607034141317699,48,False,1,0.0625,3.0
-"Figshare RW (2025, paired study)",49,1.012228036959277,48,False,1,0.0625,3.0
-"Figshare RW (2025, paired study)",49,1.1904281800020475,49,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",49,1.4,49,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",97,0.2,96,False,1,0.03125,3.0
+"Figshare RW (2025, paired study)",49,0.3253153123395572,0,False,0,,
+"Figshare RW (2025, paired study)",49,0.3825862365544778,0,False,0,,
+"Figshare RW (2025, paired study)",49,0.4499395597098075,0,False,0,,
+"Figshare RW (2025, paired study)",49,0.5291502622129182,0,False,0,,
+"Figshare RW (2025, paired study)",49,0.6223058052076782,0,False,0,,
+"Figshare RW (2025, paired study)",49,0.7318611420045942,30,False,1,1.1875,3.0
+"Figshare RW (2025, paired study)",49,0.8607034141317699,40,False,1,0.5625,3.0
+"Figshare RW (2025, paired study)",49,1.012228036959277,43,False,1,0.375,3.0
+"Figshare RW (2025, paired study)",49,1.1904281800020475,45,False,1,0.25,3.0
+"Figshare RW (2025, paired study)",49,1.4,47,False,1,0.125,3.0
+"Figshare RW (2025, paired study)",97,0.2,94,True,6,0.0,3.0
 "Figshare RW (2025, paired study)",97,0.23520948571590294,0,False,0,,
 "Figshare RW (2025, paired study)",97,0.2766175108536977,0,False,0,,
-"Figshare RW (2025, paired study)",97,0.3253153123395572,78,False,1,0.59375,3.0
-"Figshare RW (2025, paired study)",97,0.3825862365544778,88,False,1,0.28125,3.0
-"Figshare RW (2025, paired study)",97,0.4499395597098075,91,False,1,0.1875,3.0
-"Figshare RW (2025, paired study)",97,0.5291502622129182,93,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",97,0.6223058052076782,94,False,1,0.09375,3.0
-"Figshare RW (2025, paired study)",97,0.7318611420045942,95,False,1,0.0625,3.0
-"Figshare RW (2025, paired study)",97,0.8607034141317699,95,False,1,0.0625,3.0
-"Figshare RW (2025, paired study)",97,1.012228036959277,95,False,1,0.0625,3.0
-"Figshare RW (2025, paired study)",97,1.1904281800020475,97,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",97,1.4,97,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",193,0.2,192,False,1,0.015625,3.0
+"Figshare RW (2025, paired study)",97,0.3253153123395572,0,False,0,,
+"Figshare RW (2025, paired study)",97,0.3825862365544778,0,False,0,,
+"Figshare RW (2025, paired study)",97,0.4499395597098075,0,False,0,,
+"Figshare RW (2025, paired study)",97,0.5291502622129182,0,False,0,,
+"Figshare RW (2025, paired study)",97,0.6223058052076782,0,False,0,,
+"Figshare RW (2025, paired study)",97,0.7318611420045942,60,False,1,1.15625,3.0
+"Figshare RW (2025, paired study)",97,0.8607034141317699,79,False,1,0.5625,3.0
+"Figshare RW (2025, paired study)",97,1.012228036959277,85,False,1,0.375,3.0
+"Figshare RW (2025, paired study)",97,1.1904281800020475,90,False,1,0.21875,3.0
+"Figshare RW (2025, paired study)",97,1.4,93,False,1,0.125,3.0
+"Figshare RW (2025, paired study)",193,0.2,186,True,14,0.0,3.0
 "Figshare RW (2025, paired study)",193,0.23520948571590294,0,False,0,,
 "Figshare RW (2025, paired study)",193,0.2766175108536977,0,False,0,,
-"Figshare RW (2025, paired study)",193,0.3253153123395572,156,False,1,0.578125,3.0
-"Figshare RW (2025, paired study)",193,0.3825862365544778,175,False,1,0.28125,3.0
-"Figshare RW (2025, paired study)",193,0.4499395597098075,182,False,1,0.171875,3.0
-"Figshare RW (2025, paired study)",193,0.5291502622129182,185,False,1,0.125,3.0
-"Figshare RW (2025, paired study)",193,0.6223058052076782,187,False,1,0.09375,3.0
-"Figshare RW (2025, paired study)",193,0.7318611420045942,189,False,1,0.0625,3.0
-"Figshare RW (2025, paired study)",193,0.8607034141317699,190,False,1,0.046875,3.0
-"Figshare RW (2025, paired study)",193,1.012228036959277,190,False,1,0.046875,3.0
-"Figshare RW (2025, paired study)",193,1.1904281800020475,193,False,0,0.0,3.0
-"Figshare RW (2025, paired study)",193,1.4,193,False,0,0.0,3.0
-AI-UWM model assumption,25,0.2,24,False,1,0.125,3.0
-AI-UWM model assumption,25,0.23520948571590294,0,False,0,,
-AI-UWM model assumption,25,0.2766175108536977,0,False,0,,
-AI-UWM model assumption,25,0.3253153123395572,20,False,1,0.625,3.0
-AI-UWM model assumption,25,0.3825862365544778,22,False,1,0.375,3.0
-AI-UWM model assumption,25,0.4499395597098075,23,False,1,0.25,3.0
-AI-UWM model assumption,25,0.5291502622129182,24,False,1,0.125,3.0
-AI-UWM model assumption,25,0.6223058052076782,24,False,1,0.125,3.0
-AI-UWM model assumption,25,0.7318611420045942,24,False,1,0.125,3.0
-AI-UWM model assumption,25,0.8607034141317699,24,False,1,0.125,3.0
-AI-UWM model assumption,25,1.012228036959277,24,False,1,0.125,3.0
+"Figshare RW (2025, paired study)",193,0.3253153123395572,0,False,0,,
+"Figshare RW (2025, paired study)",193,0.3825862365544778,0,False,0,,
+"Figshare RW (2025, paired study)",193,0.4499395597098075,0,False,0,,
+"Figshare RW (2025, paired study)",193,0.5291502622129182,0,False,0,,
+"Figshare RW (2025, paired study)",193,0.6223058052076782,0,False,0,,
+"Figshare RW (2025, paired study)",193,0.7318611420045942,120,False,1,1.140625,3.0
+"Figshare RW (2025, paired study)",193,0.8607034141317699,158,False,1,0.546875,3.0
+"Figshare RW (2025, paired study)",193,1.012228036959277,170,False,1,0.359375,3.0
+"Figshare RW (2025, paired study)",193,1.1904281800020475,180,False,1,0.203125,3.0
+"Figshare RW (2025, paired study)",193,1.4,186,False,1,0.109375,3.0
+AI-UWM model assumption,25,0.2,19,True,5,0.5,3.0
+AI-UWM model assumption,25,0.23520948571590294,17,True,9,0.125,3.0
+AI-UWM model assumption,25,0.2766175108536977,18,True,6,0.0,3.0
+AI-UWM model assumption,25,0.3253153123395572,20,True,6,0.0,3.0
+AI-UWM model assumption,25,0.3825862365544778,22,True,5,0.125,3.0
+AI-UWM model assumption,25,0.4499395597098075,22,True,6,0.0,3.0
+AI-UWM model assumption,25,0.5291502622129182,22,True,4,0.0,3.0
+AI-UWM model assumption,25,0.6223058052076782,24,True,2,0.0,3.0
+AI-UWM model assumption,25,0.7318611420045942,24,True,2,0.0,3.0
+AI-UWM model assumption,25,0.8607034141317699,24,True,2,0.0,3.0
+AI-UWM model assumption,25,1.012228036959277,25,False,0,0.0,3.0
 AI-UWM model assumption,25,1.1904281800020475,25,False,0,0.0,3.0
 AI-UWM model assumption,25,1.4,25,False,0,0.0,3.0
-AI-UWM model assumption,49,0.2,48,False,1,0.0625,3.0
-AI-UWM model assumption,49,0.23520948571590294,0,False,0,,
-AI-UWM model assumption,49,0.2766175108536977,0,False,0,,
-AI-UWM model assumption,49,0.3253153123395572,39,False,1,0.625,3.0
-AI-UWM model assumption,49,0.3825862365544778,44,False,1,0.3125,3.0
-AI-UWM model assumption,49,0.4499395597098075,46,False,1,0.1875,3.0
-AI-UWM model assumption,49,0.5291502622129182,47,False,1,0.125,3.0
-AI-UWM model assumption,49,0.6223058052076782,47,False,1,0.125,3.0
-AI-UWM model assumption,49,0.7318611420045942,48,False,1,0.0625,3.0
-AI-UWM model assumption,49,0.8607034141317699,48,False,1,0.0625,3.0
-AI-UWM model assumption,49,1.012228036959277,48,False,1,0.0625,3.0
+AI-UWM model assumption,49,0.2,35,True,13,0.4375,3.0
+AI-UWM model assumption,49,0.23520948571590294,34,True,19,0.0625,3.0
+AI-UWM model assumption,49,0.2766175108536977,37,True,14,0.0,3.0
+AI-UWM model assumption,49,0.3253153123395572,40,True,12,0.0,3.0
+AI-UWM model assumption,49,0.3825862365544778,40,True,13,0.125,3.0
+AI-UWM model assumption,49,0.4499395597098075,43,True,8,0.0,3.0
+AI-UWM model assumption,49,0.5291502622129182,43,True,6,0.0,3.0
+AI-UWM model assumption,49,0.6223058052076782,48,True,2,0.0,3.0
+AI-UWM model assumption,49,0.7318611420045942,46,True,4,0.0,3.0
+AI-UWM model assumption,49,0.8607034141317699,48,True,2,0.0,3.0
+AI-UWM model assumption,49,1.012228036959277,49,False,0,0.0,3.0
 AI-UWM model assumption,49,1.1904281800020475,49,False,0,0.0,3.0
 AI-UWM model assumption,49,1.4,49,False,0,0.0,3.0
-AI-UWM model assumption,97,0.2,96,False,1,0.03125,3.0
-AI-UWM model assumption,97,0.23520948571590294,0,False,0,,
-AI-UWM model assumption,97,0.2766175108536977,0,False,0,,
-AI-UWM model assumption,97,0.3253153123395572,78,False,1,0.59375,3.0
-AI-UWM model assumption,97,0.3825862365544778,88,False,1,0.28125,3.0
-AI-UWM model assumption,97,0.4499395597098075,91,False,1,0.1875,3.0
-AI-UWM model assumption,97,0.5291502622129182,93,False,1,0.125,3.0
-AI-UWM model assumption,97,0.6223058052076782,94,False,1,0.09375,3.0
-AI-UWM model assumption,97,0.7318611420045942,95,False,1,0.0625,3.0
-AI-UWM model assumption,97,0.8607034141317699,95,False,1,0.0625,3.0
-AI-UWM model assumption,97,1.012228036959277,95,False,1,0.0625,3.0
+AI-UWM model assumption,97,0.2,66,True,21,0.4375,3.0
+AI-UWM model assumption,97,0.23520948571590294,70,True,39,0.03125,3.0
+AI-UWM model assumption,97,0.2766175108536977,76,True,22,0.0,3.0
+AI-UWM model assumption,97,0.3253153123395572,80,True,18,0.0,3.0
+AI-UWM model assumption,97,0.3825862365544778,82,True,21,0.03125,3.0
+AI-UWM model assumption,97,0.4499395597098075,87,True,18,0.0,3.0
+AI-UWM model assumption,97,0.5291502622129182,88,True,12,0.0,3.0
+AI-UWM model assumption,97,0.6223058052076782,93,True,8,0.0,3.0
+AI-UWM model assumption,97,0.7318611420045942,91,True,12,0.0,3.0
+AI-UWM model assumption,97,0.8607034141317699,95,True,4,0.0,3.0
+AI-UWM model assumption,97,1.012228036959277,97,False,0,0.0,3.0
 AI-UWM model assumption,97,1.1904281800020475,97,False,0,0.0,3.0
 AI-UWM model assumption,97,1.4,97,False,0,0.0,3.0
-AI-UWM model assumption,193,0.2,192,False,1,0.015625,3.0
-AI-UWM model assumption,193,0.23520948571590294,0,False,0,,
-AI-UWM model assumption,193,0.2766175108536977,0,False,0,,
-AI-UWM model assumption,193,0.3253153123395572,156,False,1,0.578125,3.0
-AI-UWM model assumption,193,0.3825862365544778,175,False,1,0.28125,3.0
-AI-UWM model assumption,193,0.4499395597098075,182,False,1,0.171875,3.0
-AI-UWM model assumption,193,0.5291502622129182,185,False,1,0.125,3.0
-AI-UWM model assumption,193,0.6223058052076782,187,False,1,0.09375,3.0
-AI-UWM model assumption,193,0.7318611420045942,189,False,1,0.0625,3.0
-AI-UWM model assumption,193,0.8607034141317699,190,False,1,0.046875,3.0
-AI-UWM model assumption,193,1.012228036959277,190,False,1,0.046875,3.0
+AI-UWM model assumption,193,0.2,123,True,63,0.4375,3.0
+AI-UWM model assumption,193,0.23520948571590294,136,True,85,0.015625,3.0
+AI-UWM model assumption,193,0.2766175108536977,155,True,44,0.0,3.0
+AI-UWM model assumption,193,0.3253153123395572,164,True,38,0.0,3.0
+AI-UWM model assumption,193,0.3825862365544778,162,True,27,0.015625,3.0
+AI-UWM model assumption,193,0.4499395597098075,178,True,26,0.0,3.0
+AI-UWM model assumption,193,0.5291502622129182,177,True,18,0.0,3.0
+AI-UWM model assumption,193,0.6223058052076782,187,True,12,0.0,3.0
+AI-UWM model assumption,193,0.7318611420045942,186,True,14,0.0,3.0
+AI-UWM model assumption,193,0.8607034141317699,188,True,8,0.0,3.0
+AI-UWM model assumption,193,1.012228036959277,193,False,0,0.0,3.0
 AI-UWM model assumption,193,1.1904281800020475,193,False,0,0.0,3.0
 AI-UWM model assumption,193,1.4,193,False,0,0.0,3.0

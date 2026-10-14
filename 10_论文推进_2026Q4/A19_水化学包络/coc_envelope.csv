@@ -1,0 +1,70 @@
+﻿source,parameter,lower,upper,unit,source_url,type,confidence,note
+"IEUA RP-1 (2025, tertiary reclaimed)",TDS,418,464,mg/L,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测区间 (月均 min-max)
+"IEUA RP-1 (2025, tertiary reclaimed)",chloride,100.0,100.0,mg/L,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测点值
+"IEUA RP-1 (2025, tertiary reclaimed)",Ca,35,49,mg/L,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测区间 (月均 min-max)
+"IEUA RP-1 (2025, tertiary reclaimed)",Mg,6,11,mg/L,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测区间 (月均 min-max)
+"IEUA RP-1 (2025, tertiary reclaimed)",Na,83,91,mg/L,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测区间 (月均 min-max)
+"IEUA RP-1 (2025, tertiary reclaimed)",SO4,47.0,47.0,mg/L,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测点值
+"IEUA RP-1 (2025, tertiary reclaimed)",alkalinity,140.0,140.0,mg/L as CaCO3,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测点值
+"IEUA RP-1 (2025, tertiary reclaimed)",silica,5,27,mg/L,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测区间 (月均 min-max)
+"IEUA RP-1 (2025, tertiary reclaimed)",pH,6.8,7.0,-,https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf,observed,high,实测区间 (月均 min-max)
+"LADWP AWPF (2012, RO product)",TDS,22.0,22.0,mg/L,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",chloride,3.6,3.6,mg/L,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",Ca,0.41,0.41,mg/L,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",Na,6.6,6.6,mg/L,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",SO4,0.96,0.96,mg/L,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",alkalinity,7.1,7.1,mg/L as CaCO3,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",silica,0.52,0.52,mg/L,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",pH,6.4,6.4,-,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+"LADWP AWPF (2012, RO product)",temperature,26.3,26.3,degC,https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,TDS,1378.0,1378.0,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,chloride,313.73,313.73,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,Ca,91.38,91.38,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,Mg,75.36,75.36,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,Na,310.37,310.37,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,SO4,507.2,507.2,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,alkalinity,228.18,228.18,mg/L as CaCO3,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,pH,8.17,8.17,-,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+Figshare RW (2025) — corrected extraction,TP,0.05,0.05,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",TDS,6130.8,6130.8,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",chloride,3222.41,3222.41,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",Ca,36.87,36.87,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",Mg,18.72,18.72,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",Na,2000.13,2000.13,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",SO4,109.51,109.51,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",alkalinity,114.09,114.09,mg/L as CaCO3,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",pH,8.44,8.44,-,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+"Figshare BW (2025) — 非再生水, 仅作边界",TP,0.02,0.02,mg/L,https://doi.org/10.1371/journal.pone.0322846.t002,observed,medium,实测点值
+AI-UWM model assumption (无公开来源),TDS,650.0,650.0,mg/L,UNVERIFIED — 引擎内部占位值,assumption,low,"模型假设, 无公开来源"
+AI-UWM model assumption (无公开来源),chloride,130.0,130.0,mg/L,UNVERIFIED — 引擎内部占位值,assumption,low,"模型假设, 无公开来源"
+允许 CoC — 下界: IEUA 无加药热力学 @25C,CoC,2.52,2.52,sensitivity_ratio,A19/T19_db_sensitivity.json,observed,high,PHREEQC 方解石 SI<=0; vitens.dat; 复现项目原值 2.5202
+允许 CoC — 下界: IEUA 无加药热力学 @35C,CoC,2.1,2.1,sensitivity_ratio,A19/T19_db_sensitivity.json,observed,high,温度敏感性
+允许 CoC — 下界: IEUA 无加药热力学 @45C,CoC,1.77,1.77,sensitivity_ratio,A19/T19_db_sensitivity.json,observed,high,45C 更接近夏季循环水实际; 比 25C 低 30%
+允许 CoC — 上界: GSA 实测加药运行 (baseline),CoC,2.8,2.8,sensitivity_ratio,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,observed,high,"Lloyd D. George 法院, 30 天, 水衡算法"
+允许 CoC — 上界: GSA 实测加药运行 (2021 BDR),CoC,4.34,4.34,sensitivity_ratio,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,observed,high,15 天
+允许 CoC — 上界: GSA 实测加药运行 (2022 BDR),CoC,4.91,4.91,sensitivity_ratio,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,observed,high,57 天
+允许 CoC — 上界: IEUA 加药后由 SiO2(a) 接管,CoC,4.81,4.81,sensitivity_ratio,A19/T19c_coc_envelope_raw.json,observed,medium,"LSI_tol>=1.5 时方解石不再限制, 无定形硅 SI<=0 成为限制相"
+允许 CoC — 上界: IEUA 按 GSA 硅准则 <150 mg/L,CoC,6.25,6.25,sensitivity_ratio,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,medium,150/24 = 6.25 (IEUA 硅 24 mg/L)
+允许 CoC — 上界: IEUA 按聚合物控硅 ~300 mg/L,CoC,12.5,12.5,sensitivity_ratio,https://doi.org/10.5006/mp2017_56_1-44,literature,low,"300/24 = 12.5; 厂商文献, 非独立第三方"
+阻垢剂容忍 — 方解石饱和倍数,CoC,1.0,300.0,x_saturation,https://doi.org/10.5006/c1994-94453,literature,low,300x 上界; 下界 1x = 无加药热力学
+阻垢剂容忍对应 LSI 区间,CoC,0.0,2.477,LSI,https://doi.org/10.5006/c1994-94453,literature,low,LSI = SI_calcite = log10(IAP/Ksp); log10(300)=2.477
+阻垢剂容忍 LSI (先进配方上界),CoC,2.477,3.0,LSI,https://doi.org/10.5006/c1996-96575,literature,low,"同一厂商系会议论文, 非独立第三方"
+加药后替代限制相 — 二氧化硅,CoC,,300.0,mg/L,https://doi.org/10.5006/mp2017_56_1-44,literature,low,高聚物+膦酸盐可把硅控到接近 300 mg/L
+"石膏饱和上界 (Figshare RW, 加药后)",CoC,,7.7,sensitivity_ratio,A19/T19d_corrected_figshare_envelope.json,observed,medium,"LSI_tol>=2.477 时石膏 SI>0 接管, 阻垢剂不覆盖硫酸盐垢"
+GSA Table 6 CoC 下限 (加药运行验收),CoC,2.0,,-,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 总碱度,alkalinity,100.0,1000.0,mg/L as CaCO3,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 pH,pH,7.3,9.0,-,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 氯离子,chloride,10.0,500.0,mg/L,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 总硬度,hardness,500.0,1500.0,mg/L as CaCO3,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 电导率,conductivity,,2400.0,uS/cm,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 二氧化硅,silica,,150.0,mg/L,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 钙硬度,Ca_hardness,,500.0,mg/L as CaCO3,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 镁硬度,Mg_hardness,,100.0,mg/L as CaCO3,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GSA Table 6 硫酸盐,SO4,,250.0,mg/L,https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf,literature,high,公开准则/标准值
+GB/T 50050-2017 循环水 (钙硬度+总碱度),hardness_plus_alkalinity,,1100.0,mg/L as CaCO3,"GB/T 50050-2017《工业循环冷却水处理设计规范》(标准, 无 DOI)",literature,high,公开准则/标准值
+GB/T 19923-2024 补充水 TDS,TDS,,1000.0,mg/L,"GB/T 19923-2024《城市污水再生利用 工业用水水质》(标准, 无 DOI)",literature,high,公开准则/标准值
+Puckorius 1991 适用性上界 pH,pH_index_validity,7.5,,-,https://doi.org/10.5006/1.3585256,literature,high,公开准则/标准值
+判据差异: 比值法(全物种) vs 饱和指数法 (IEUA),CoC,2.52,3.57,sensitivity_ratio,A19/t19c.log,observed,medium,n=1 样本; 比值法高 29-42%（分母口径不同）
+判据差异: 引擎保守物种(仅TDS/Cl) vs 饱和指数,CoC,2.52,4.97,sensitivity_ratio,A19/t19c.log,observed,medium,n=1; 占位限值下的口径差异
+判据差异: 数据库 vitens vs phreeqc.dat (IEUA@25C),CoC,2.5202,2.5203,sensitivity_ratio,A19/T19_db_sensitivity.json,observed,medium,"Δ=+0.004%, 可忽略"
+判据差异: 数据库 vitens vs pitzer.dat (IEUA@25C),CoC,2.3481,2.5202,sensitivity_ratio,A19/T19_db_sensitivity.json,observed,medium,"Δ=-6.8%, pitzer 活度模型不同"

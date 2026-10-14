@@ -1,0 +1,163 @@
+{
+ "script": "T19b_missing_recheck.py",
+ "figshare_header_match": {
+  "old_index": {
+   "Na": 3,
+   "K": 4,
+   "HCO3": null,
+   "Cl": 6,
+   "Ca": 7,
+   "Mg": 8,
+   "SO4": null
+  },
+  "new_index": {
+   "Na": 3,
+   "K": 4,
+   "HCO3": 5,
+   "Cl": 6,
+   "Ca": 7,
+   "Mg": 8,
+   "SO4": 9
+  },
+  "mismatches": [
+   "HCO3",
+   "SO4"
+  ]
+ },
+ "figshare_recomputed": [
+  {
+   "label": "RW",
+   "EC_uS_cm": 2120.0,
+   "pH": 8.17,
+   "TDS_by_EC_x0.65": 1378.0,
+   "old": {
+    "Na": 310.365,
+    "K": 14.076,
+    "HCO3": null,
+    "Cl": 313.733,
+    "Ca": 91.382,
+    "Mg": 75.361,
+    "SO4": null
+   },
+   "new": {
+    "Na": 310.365,
+    "K": 14.076,
+    "HCO3": 278.251,
+    "Cl": 313.733,
+    "Ca": 91.382,
+    "Mg": 75.361,
+    "SO4": 507.197
+   },
+   "alkalinity_new_as_CaCO3": 228.182,
+   "charge_error_pct_old": null,
+   "charge_error_pct_new": 1.206
+  },
+  {
+   "label": "BW (5 g·L-1)",
+   "EC_uS_cm": 9432.0,
+   "pH": 8.44,
+   "TDS_by_EC_x0.65": 6130.8,
+   "old": {
+    "Na": 2000.13,
+    "K": 2.737,
+    "HCO3": null,
+    "Cl": 3222.405,
+    "Ca": 36.874,
+    "Mg": 18.719,
+    "SO4": null
+   },
+   "new": {
+    "Na": 2000.13,
+    "K": 2.737,
+    "HCO3": 139.126,
+    "Cl": 3222.405,
+    "Ca": 36.874,
+    "Mg": 18.719,
+    "SO4": 109.508
+   },
+   "alkalinity_new_as_CaCO3": 114.091,
+   "charge_error_pct_old": null,
+   "charge_error_pct_new": 5.312
+  }
+ ],
+ "ladwp_mg_rows": [
+  {
+   "metric": "magnesium_mg_l",
+   "units": "mg/L",
+   "reported_value": NaN,
+   "detection_limit": 0.1,
+   "qualifier": "ND",
+   "source_table": "Table 4-3",
+   "source_page": "4-19"
+  }
+ ],
+ "ladwp_has_magnesium": true,
+ "ieua_metrics": [
+  "pH",
+  "tds_mg_l",
+  "alkalinity_mg_l_as_caco3",
+  "calcium_mg_l",
+  "chloride_mg_l",
+  "magnesium_mg_l",
+  "sodium_mg_l",
+  "sulfate_mg_l",
+  "silica_mg_l"
+ ],
+ "ieua_has_temperature": false,
+ "ieua_has_phosphate": false,
+ "phreeqc_figshare_rw_corrected": {
+  "ok": true,
+  "label": "Figshare RW (corrected)",
+  "database": "vitens.dat",
+  "SI_at_1x_T25": {
+   "Calcite": 0.864,
+   "Aragonite": 0.72,
+   "Dolomite": 1.978,
+   "Gypsum": -1.092,
+   "Anhydrite": -1.395,
+   "SiO2(a)": null,
+   "Hydroxyapatite": null,
+   "Struvite": null,
+   "Halite": -5.639,
+   "Nahcolite": null,
+   "Trona": null
+  },
+  "CoC_safe_T25": 0.0,
+  "limiting_T25": "already_supersat:Calcite",
+  "SI_at_1x_T35": {
+   "Calcite": 0.984,
+   "Aragonite": 0.848,
+   "Dolomite": 2.302,
+   "Gypsum": -1.108,
+   "Anhydrite": -1.306,
+   "SiO2(a)": null,
+   "Hydroxyapatite": null,
+   "Struvite": null,
+   "Halite": -5.648,
+   "Nahcolite": null,
+   "Trona": null
+  },
+  "CoC_safe_T35": 0.0,
+  "limiting_T35": "already_supersat:Calcite"
+ },
+ "missing_column_discrepancies": [
+  {
+   "source": "Figshare RW (2025, paired study)",
+   "claimed_missing_in_T6": "SO4,alkalinity,silica",
+   "actually_missing_in_source": "silica",
+   "extraction_bug_lost": [
+    "SO4",
+    "alkalinity"
+   ]
+  },
+  {
+   "source": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "claimed_missing_in_T6": "SO4,alkalinity,silica",
+   "actually_missing_in_source": "silica",
+   "extraction_bug_lost": [
+    "SO4",
+    "alkalinity"
+   ]
+  }
+ ]
+}

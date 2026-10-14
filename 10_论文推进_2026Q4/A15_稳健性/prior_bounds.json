@@ -37,7 +37,7 @@
   "median": 0.6016666666666667,
   "span": 0.51
  },
- "drift_by_dp_prior": "<function main.<locals>.span_row at 0x00000270B10A4540>",
+ "drift_by_dp_prior": "<function main.<locals>.span_row at 0x0000019D859B4720>",
  "by_dp_prior": {
   "uniform": {
    "P_gt0_dpA_dp0": [
@@ -88,7 +88,7 @@
   "1.0": 0.62,
   "2.0": 0.6214
  },
- "runtime_s": 3098.6,
+ "runtime_s": 2171.3,
  "discipline_note": "MODEL probabilities under the stated priors and the frozen sample pool; NOT observed event frequencies. The water-sample dimension is drawn uniformly over 5 lab samples of which 1 is non-reclaimed (brackish) and 2 have estimated TDS, so it carries no global-frequency meaning.",
  "gates": [
   {

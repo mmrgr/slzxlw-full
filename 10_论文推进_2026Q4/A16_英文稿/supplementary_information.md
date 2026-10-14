@@ -1,240 +1,206 @@
-# Supplementary Information (A16, v2)
+# Supplementary Information (A16, v3)
 
-Companion to `manuscript_en_v2.md` — *Facility-versus-city accounting of reclaimed-water
-cooling in AI data centres: a discharge–claim balance*.
+Companion to `manuscript_en_v3.md` — *Supply state, not cooling technology, governs the urban
+water outcome of reclaimed-water cooling in AI data centres*.
 
-> **Version note.** This SI replaces the v1 SI, which accompanied a manuscript whose
-> "two opposing channels" mechanism has been **withdrawn** following a method audit
-> (`../A13_可靠性机制/AUDIT_2026-10-14_撤回声明.md`).
+> **Version note.** v3 supersedes v2. Between them, two material defects were found and
+> fixed (see `19_缺陷报告_缓存与桥接_2026-10-15.md`); all numbers here are from corrected runs.
 
 ---
 
 ## S1. Symbol table
 
-| Symbol | Meaning | Unit | Source |
-|---|---|---|---|
-| $M$ | Facility cooling makeup (total) | ML/period | engine |
-| $M_0$ | $M$ in the all-potable counterfactual ($\varphi=0$), same scenario | ML/period | engine |
-| $M_1$ | $M$ in the reclaimed-substitution scenario | ML/period | engine |
-| $E$ | Cooling-tower evaporation | ML/period | engine |
-| $\mathrm{CoC}$ | Cycles of concentration | – | engine |
-| $\varphi$ | Requested reclaimed volume fraction of makeup | – | control |
-| $\varphi_{\rm eff}$ | Realised reclaimed fraction | – | engine |
-| $x_{\rm AI}$ | Reclaimed volume allocated to the data centre | ML/period | allocator |
-| $r_{\rm inc}$ | Reclaimed volume allocated to incumbent users | ML/period | allocator |
-| $P$ | Nominal reclaimed pool (excludes added capacity) | ML/period | engine |
-| $\Delta P$ | **Added** reclaimed capacity | ML/period | control |
-| $F$ | **Discharge**: potable water the data centre stops withdrawing | ML/period | §S2 |
-| $C$ | **Claim**: potable water displaced incumbents must now withdraw | ML/period | §S2 |
-| $dS_{\rm pot}$ | City potable-withdrawal change $=C-F$ | ML/period | §S2 |
-| $\chi$ | Quality severity, $\mathrm{CoC}_{\lim}/\mathrm{CoC}_{\rm design}$ | – | §S4 |
-| $S_{\rm city}$ | Legacy estimand $=S_{\rm AI}+r_{\rm inc}-P$ | ML/period | §S2.3 |
-
-Units: ML = 10³ m³; "period" = the 730-day frozen base unless stated.
-
-**Withdrawn symbols (do not use):** $\psi$ (supply stress), $\Delta$ (unmet demand),
-$\varphi^*$ (critical mixing ratio). See §S9.
-
----
-
-## S2. Estimand
-
-### S2.1 The discharge–claim balance
-
-$$dS_{\rm pot} \;=\; C - F$$
-
-$$F = M_0 - (1-\varphi_{\rm eff})\,M_1
-\qquad
-C = r_{\rm inc}(B_2) - r_{\rm inc}(B_1)$$
-
-> **Critical definitional point.** $C$ must be evaluated **within the same scenario** as the
-> counterfactual — i.e. $r_{\rm inc}$ at $\varphi=0$ under the *same* capacity regime.
-> Using a fixed nominal pool $P$ instead happens to be equivalent when $\Delta P=0$ but is
-> **wrong** when $\Delta P>0$, because the total budget is then $P+\Delta P$. (This defect
-> was found and corrected in the audit.)
-
-### S2.2 Why not the previous formulation
-
-The superseded draft computed $S_{\rm city}=S_{\rm algebra}-\lambda\Delta$ with
-$\Delta=W\max(0,\psi-1)$. That is invalid on two counts:
-
-1. **Category error.** $D_{\rm inc}$ was read from the engine's `gap`, which is
-   `reuse_elig − P0` — the incumbents' unmet **reclaimed-water** demand
-   (`A7_质量分配联合/T2_joint_quality_allocation.py:97-102`), not their **potable** demand.
-2. **Dimensional error.** $S_{\rm city}$ is a *withdrawal change*; $\Delta$ is an
-   *unmet-demand gap*. Subtracting them conflates two different physical quantities,
-   violating the project's own rule that indices A/B/C must never be merged.
-
-### S2.3 Relation to the legacy estimand
-
-$$dS_{\rm pot} = M_1 - M_0 = -(M_0 - M_1)$$
-
-In the fixed-pool regime this equals $-S_{\rm city}$ (up to the quality-penalty term), so
-**$dS_{\rm pot}\ge0 \iff S_{\rm city}\le0$**: the original conclusion is confirmed, now via
-an explicit two-flow balance.
-
----
-
-## S3. Main results and their exactness
-
-| Quantity | Value | Residual |
+| Symbol | Meaning | Unit |
 |---|---|---|
-| Pure displacement: $x_{\rm AI}=r_{\rm inc}(B_2)-r_{\rm inc}(B_1)$ | — | **5.5 × 10⁻¹² ML** |
-| Identity $C-F=M_1-M_0$ | — | **3.3 × 10⁻¹¹ ML** (sign agreement 1.000) |
-| $dS_{\rm pot}\ge0$, all 408 scenarios | 0 negative / 384 positive / 24 zero | — |
-| No-quality-constraint case ($\chi\to\infty$) | $dS_{\rm pot}=0.0000$ ML | 8/8 configurations |
-| $\varphi\to0$ | $dS_{\rm pot}=0$ | 12/12 scenarios |
+| $M_0,M_1$ | facility makeup in the all-potable and reclaimed counterfactuals (same scenario) | ML/period |
+| $E$ | cooling-tower evaporation | ML/period |
+| $\mathrm{CoC}$ | cycles of concentration | – |
+| $\varphi,\varphi_{\rm eff}$ | requested / realised reclaimed fraction of makeup | – |
+| $x_{\rm AI}$ | reclaimed volume allocated to the facility | ML/period |
+| $r_{\rm inc}$ | reclaimed volume allocated to incumbents | ML/period |
+| $P$ | nominal reclaimed pool | ML/period |
+| $\Delta P$ | added reclaimed capacity | ML/period |
+| $F$ | **discharge**: potable the facility stops withdrawing | ML/period |
+| $C$ | **claim**: potable displaced incumbents must withdraw | ML/period |
+| $dS_{\rm pot}$ | city potable-withdrawal change $=C-F$ | ML/period |
+| `limit_scale` | **water-quality limit scaling factor** (not $\chi$) | – |
+| `elig` | committed reclaimed demand $=P_0+\texttt{gap}$ | ML/period |
+| `gap` | incumbents' *unmet reclaimed* demand (engine) | ML/period |
 
-### S3.1 Quality dependence
-
-| $\chi$ | max $dS_{\rm pot}$ (ML) | mean (ML) | realised CoC |
-|---|---:|---:|---|
-| 1.00 | 910 | 494 | 4.40–5.00 |
-| 0.50 | 2 953 | 1 649 | 2.23–2.50 |
-| 0.25 | **29 103** | 19 086 | 1.18–1.25 |
-
-Monotone in quality severity — verified as gate H4.
-
-### S3.2 Regime boundary
-
-| Regime | $F$ vs $C$ | $dS_{\rm pot}$ (ML) |
-|---|---|---|
-| Fixed pool ($\Delta P=0$) | $F\le C$ | ≥ 0 |
-| Added capacity ($\Delta P>0$) | $F$ may exceed $C$ | **−15 030 to −4 639** |
+**Withdrawn symbols:** supply-stress $\psi$, unmet-demand gap $\Delta$, critical ratio
+$\varphi^*$ (traced to two errors documented in S10).
 
 ---
 
-## S3.3 Allocation-rule sensitivity
+## S2. The three accounts
 
-The displacement premise ($x_{\rm AI}\equiv$ incumbent loss) is a property of the model's
-allocator. It is tested against the engine's **native incumbent-protection** parameter
-(`JointQualityRequest.incumbent_reclaimed_ml`, "protected before incremental demand",
-`reclaimed_allocation.py:60`). Coverage: 2 domains × 2 compositions × 5 protection levels ×
-4 mixing ratios = 80 scenarios.
+Measured on the full daily engine (68 runs × 730 days, read-only instrumented subclass):
 
-| protection level | $dS_{\rm pot}$ range (ML) | substantive n | trivial n |
-|---|---:|---:|---:|
-| 0.00 (AI priority = A13c) | 974 – 2 953 | 16 | 0 |
-| 0.25 | 743 – 2 196 | 16 | 0 |
-| 0.50 | 355 – 1 203 | 16 | 0 |
-| 0.75 | — | 0 | 16 |
-| 1.00 | — | 0 | 16 |
-
-- **Pure displacement holds exactly at every level**: $\max|x_{\rm AI}-C| = 0.0$ ML.
-- **$dS_{\rm pot}>0$ in all 48 substantive scenarios** (0 negative).
-- Protection **monotonically reduces** the effect (2 953 → 2 196 → 1 203 ML).
-- **Trivial cases excluded**: at protection $\ge0.75$ the protected claim
-  (0.75 × 33 779 = 25 334 ML) exceeds the pool (24 404 ML), so the pool is fully reserved,
-  the data centre receives **zero** reclaimed water ($x_{\rm AI}=0$, $\varphi_{\rm eff}=0$),
-  and $dS_{\rm pot}=0$ is vacuous. **These 32 cases are reported as non-evidence.**
-
-> **Interpretation.** Protecting incumbent users mitigates the city-level cost but cannot
-> turn it into a net benefit. The **sign** of the effect is not an artefact of the
-> allocation rule within the range where reuse actually occurs.
-
----
-
-## S4. Water chemistry
-
-- Constraint: `coc_mode='quality_limited'`; fixed point solved so blended makeup stays
-  within limits.
-- Independent implementation: PHREEQC via `phreeqpython==1.6.2` with `vitens.dat`;
-  phases Calcite / Dolomite / Gypsum / Anhydrite / SiO₂(a).
-- IEUA tertiary reclaimed water: ratio criterion gives CoC = 3.57; PHREEQC gives **2.52**
-  (calcite-controlled) → the ratio method **overestimates** admissible CoC by ~40%.
-- **Quality tiers used here are anchored to verified values**:
-  $\chi=0.50$ corresponds to the PHREEQC-derived 2.52/5.0 = **0.504** (IEUA).
-  $\chi=1.00$ means the limit does not bind. **$\chi=0.25$ is an extrapolated stress tier**
-  (severer than any observed sample) and is labelled as such.
-- Limits: strict = **GB/T 19923-2024**, baseline/permissive = **GB/T 50050-2017**.
-  The engine placeholder tier (hardness + alkalinity 1,200 > 1,100 mg/L) violates
-  GB/T 50050-2017 and is **retracted**.
-
-**Limitations**
-1. **No antiscalant.** Real towers use scale inhibitors to hold LSI well above calcite
-   saturation. Our constraint is a **no-dosing thermodynamic upper bound**, so the quality
-   cost is a **conservative (high)** estimate.
-2. **Database mismatch.** `vitens.dat` is a **drinking-water** thermodynamic database;
-   reclaimed water contains organics, phosphate and trace metals. "Calcite-dominated" holds
-   **within this database**.
-3. Engine placeholder parameters remain (see §S7).
-
----
-
-## S5. Counterfactual design
-
-| Scenario | Meaning |
+| account | relation |
 |---|---|
-| **B0** | No data centre |
-| **B2** | Data centre, all potable ($\varphi=0$) — the reference for $C$ |
-| **B1** | Data centre, reclaimed at target $\varphi$ |
+| requested vs delivered | equal **only** while the supply path is unconstrained; otherwise difference = unmet demand |
+| delivered vs abstracted | **never equal** — 0 of 68 runs agree |
 
-Matched drivers (same meteorology, load factor, representative day) across B1/B2; the
-primary contrast is B2→B1. Allocation is called from the reviewed repository functions
-(`allocate_shared_surplus`, `allocate_dedicated_incremental`,
-`solve_joint_quality_allocation`); **no rule logic is re-implemented**.
+Path efficiency $\eta_{\rm path} = 0.849$ (both domains); marginal wedge
+$1/\eta_{\rm path} = 1.178$.
 
-**Regimes.** *Fixed pool* ($\Delta P=0$) is the primary regime. *Added capacity*
-($\Delta P>0$) is reported separately because the identity does not hold there.
+**Phantom abstraction** (withdrawal reported that the source cannot physically supply):
+up to **6,713 ML** (D-HA) and **6,121 ML** (D-CO).
 
 ---
 
-## S6. Priors, uncertainty and their limits
+## S3. The identity and its branches
 
-- Morris screening + Sobol variance decomposition on the legacy estimand
-  $y=S_{\rm city}/M_0$: `gap_scale` $S_1=0.417/S_T=0.762$; `pool_scale` 0.265/0.334;
-  `dp_scale` 0.141/0.228; `ai_target` 0.021/0.028.
-- 700-sample LHS under **uniform** priors.
-- **Prior sensitivity** (`prior_bounds.json`, **27 prior combinations** = 3×3×3 over
-  pool/gap/dp priors × 600 LHS samples = 16 200 engine solves, 3 099 s):
+$$dS_{\rm pot} = C - F
+= \bigl(r_{\rm inc}^{B_2}-r_{\rm inc}^{B_1}\bigr) - (M_0-M_1) - x_{\rm AI}$$
 
-| quantity | min | median | max | **span** |
-|---|---:|---:|---:|---:|
-| $P(S_{\rm city}>0\mid\Delta P{=}0)$ | 0.0000 | 0.0000 | 0.0050 | **0.0050** |
-| $P(S_{\rm city}>0\mid\Delta P{=}1)$ | **0.4283** | 0.6383 | **0.7850** | **0.3567** |
-| $P(\Delta P^*\le1)$ | 0.2650 | 0.6017 | 0.7750 | 0.5100 |
+**Residual 5.8 × 10⁻¹¹ ML** across 1,152 scenarios.
 
-> **Two findings.**
-> (i) The **share-only probability is robustly zero**: across all 27 prior combinations it
-> never exceeds 0.0050, and those values are floating-point residuals (§S2.2). The
-> mechanism conclusion is therefore **prior-insensitive**.
-> (ii) The **capacity-inclusive 0.62 is not robust at all**: it spans **0.428–0.785**
-> (range 0.357). The frozen value 0.62 is the *uniform-prior* value and lies inside the
-> range, but the manuscript reports it **only as "under uniform priors"** and never as a
-> real-world probability of benefit. **Red-team item M5/P2 is closed as a concession, not
-> a fix.**
+- If the facility's draw is **entirely** displaced ($C=x_{\rm AI}$): collapses to $dS=M_1-M_0$.
+  Holds for 2 of 4 compositions; **fails** for the other 2 (by up to 24,404 ML), which is why
+  the general form is required.
+- If there is **no** displacement ($C=0$): $dS=-(M_0-M_1)-x_{\rm AI}<0$.
 
-> **Discipline**: all probability statements are **model probabilities under the stated
-> priors**, not observed event frequencies. Note also that the water-sample dimension is
-> drawn uniformly over 5 laboratory samples, one of which is non-reclaimed (brackish) and
-> two of which have estimated TDS, so it carries no global-frequency meaning.
+**Sign criterion** (100% agreement): $dS_{\rm pot}<0 \iff x_{\rm AI}+(M_0-M_1) > C_{\rm disp}$.
+
+### S3.1 Displacement ratio governs the sign
+
+| $C/x_{\rm AI}$ | n | $dS<0$ | range (ML) |
+|---|---:|---:|---|
+| 0.00 | 446 | **429 (96.2%)** | −98,158 … +33,217 |
+| 0.01–0.25 | 88 | 88 | −23,575 … −8,669 |
+| 0.25–0.50 | 68 | 68 | −14,195 … −2,329 |
+| 0.50–0.75 | 16 | 16 | −4,235 … −1,140 |
+| 0.75–1.00 | 268 | 16 | −2,828 … +4,024 |
+
+Ratios 0.01–0.75 are uniformly negative. At the two extremes the identity is exact:
+at ratio 1 there is **no** negative case; at ratio 0 there are 17 positive cases, all
+explained by the criterion below.
+
+### S3.2 The 17 exceptions at zero displacement (physical, not noise)
+
+When $C=0$ the identity reduces to $dS=-(M_0-M_1)-x_{\rm AI}$, so $dS>0$ **iff**
+
+$$M_1-M_0 > x_{\rm AI}$$
+
+i.e. the facility's *quality penalty alone* exceeds the volume it draws from the reclaimed
+pool, making its discharge $F$ **negative**. The facility then withdraws *more* potable water
+than without reuse while displacing nobody. Measured: 17/446 cases, criterion agreement
+**100%**, median penalty/draw ratio 1.44 in the positive group vs 0.00 in the negative group,
+occurring only for the high-salinity composition under severe quality tiers.
+
+> **Reclaimed cooling can raise urban potable withdrawal with zero competition**, purely
+> through its own water-chemistry penalty. Quality is therefore an independent, reversible
+> force — not a correction term on displacement.
 
 ---
 
-## S7. Placeholder and declared-value inventory
+## S4. Water quality and composition
 
-| Item | Status | Action |
+**Switch.** With `limit_scale` = 10⁶ (realised CoC = design 5.000):
+$dS_{\rm pot}=$ **0.000000 ML exactly** in the committed branch (80/80); ≤ 0 in the surplus
+branch. Non-binding quality ⇒ pure reallocation.
+
+**Units correction.** `limit_scale` is a limit-scaling factor, **not**
+$\chi=\mathrm{CoC}_{\lim}/\mathrm{CoC}_{\rm design}$. At `limit_scale` = 1.0 the constraint
+still binds (realised CoC 4.60), so the earlier "non-binding" check was invalid.
+
+**Composition.** With the constraint active, composition changes the outcome:
+
+| composition | realised CoC | mean $dS_{\rm pot}$ (surplus / committed) |
+|---|---|---:|
+| LADWP AWPF (RO, TDS 22) | 2.50–5.00 | −19,726 / −8,510 |
+| IEUA RP-1 (tertiary, TDS 443) | 1.90–2.45 | −12,257 / −4,690 |
+| AI-UWM assumption (TDS 650) | 1.98–3.49 | −16,359 / −7,504 |
+| **Figshare RW (TDS 1,378)** | 1.14–2.46 | **+8,895 / +28,437** |
+
+**A high-salinity source reverses the sign.** Tiers: 0.98 = GSA/NREL 2023 metered upper bound
+(CoC 4.34–4.91); 0.50 = PHREEQC calcite-limited IEUA (2.52/5.0 = 0.504); 0.25 = GB/T
+19923-2024 make-up-water tier, retained **only** as a labelled extrapolation (response there
+reaches 5.99 × 10⁵ ML, outside observed operation).
+
+---
+
+## S5. Finite supply transforms the outcome
+
+Nested thresholds (D-HA; natural cap 380 ML/day):
+
+| threshold | ML/day | share |
+|---|---:|---:|
+| $W_{\rm nat}$ | 380 | 100% |
+| $W_{\rm engage}$ | 342 | 90% |
+| $W_{\rm gap}$ | 323 | 85% |
+| $W^{*}_{\rm break}$ | 304 | 80% |
+
+Four outcomes, all measured: (1) old conclusion holds when supply is adequate;
+(2) **converts to a necessary-service gap** when scarce (up to 62,080 ML);
+(3) sign reverses in the surplus branch; (4) **the data centre is itself curtailed**
+(up to 8,519 ML). Propositions H1–H4 hold in both domains with **zero falsifiers**.
+
+---
+
+## S6. Robustness (all re-run after the cache fix)
+
+| experiment | gates | key result |
 |---|---|---|
-| Engine hardness / alkalinity / SiO₂ placeholders | remain in engine | replace before submission |
-| PUE = 1.3 | placeholder | cite source |
-| Design CoC = 5.0 | arbitrary (red-team C6) | report with effective CoC 5.444 |
-| Assumed TDS = 650 mg/L | placeholder (2 ions only) | cite or bound |
-| Membrane / chemical energy and reagent use | **declared values** | cite (Stillwell 2014 candidate) |
-| Carbon intensity 0.35 kgCO₂e/kWh | engine ratio | replace with grid factor |
-| Cost figures (CNY) | declared values | **relative ordering only** |
-| GSA facility anchor | 102 days, one non-DC facility | magnitude only; **no point prediction** |
-| Antiscalant | **not modelled** | quality cost is conservative |
+| Ablation 2³ (64 cells) | **5/5 pass** | identity residual 3.6e−12; capacity-regime main effect +9,620 ML |
+| Holdout + boundary | **5/5 pass** | true holdout **R² = 0.558** (baseline −0.044); no-quality case exactly 0; penalty monotone in quality (6,478 → 21,674 → 116,581) |
+| Grid resolution | boundary-position criterion: **100% within one grid step** (max shift 0.015625) | **11 of 39 (28%) curves are now non-monotone** |
+| Prior sensitivity | re-run in progress | — |
+
+> **A correction and a new finding.** An earlier assessment reported "only 15.4% of feasible
+> sets agree" and inferred resolution sensitivity; that criterion compared *counts of feasible
+> grid points*, which must grow with refinement, so it was invalid. On the correct
+> boundary-position criterion the boundary moves at most one step in **100%** of cases.
+> However, after the cache fix the composition dimension is live and **non-monotone feasible
+> regions appear in 11/39 curves (28%)** — i.e. there exist parameter intervals where the
+> city-level outcome fails, recovers, and fails again. This was previously invisible (0/39)
+> precisely because composition carried no variation. Non-monotone regions are therefore a
+> **genuine structural feature**, and coarse-grid scans can miss them; we report them rather
+> than rely on first-failure identification.
+
+> The holdout R² of 1.000 is an **algebraic re-derivation** (it reuses the holdout domain's
+> $M_0,M_1$) and is **not** validation. The genuine out-of-sample number is **0.558**.
+
+---
+
+## S7. Model bridging
+
+Periodic representative-day model vs full daily engine, identical inputs, **24 pairs**
+(2 domains × 2 compositions × 3 pool levels × 2 mixing ratios, 730 days each):
+
+| quantity | median relative difference | max |
+|---|---:|---:|
+| $M_0$ | **0.000000** | **0.000000** (identical in 24/24) |
+| $M_1$ | 7.7% | 63.7% |
+| $\varphi_{\rm eff}$ | 0.7% | 17.3% |
+| CoC | 11.2% | 62.1% |
+| **$dS_{\rm pot}$ sign agreement** | **20/24 (83%)** | — |
+
+By composition: **IEUA 12/12** sign agreement; **LADWP 8/12**. The disagreements concentrate
+in the RO-product composition — precisely the one whose chemistry changes the limiting phase.
+
+**Conclusion.** The cooling-physics and water-volume *conventions* are **proven equivalent**
+($M_0$ identical to the last digit in every pair). The residual differences are
+**composition resolution**: the daily engine resolves per-day chemistry and reaches higher
+CoC for pure sources, which the periodic representative-day model averages out. This is a
+quantified, attributed difference — not an unexplained discrepancy.
+
+**Harness defect found and fixed**: the daily arm initially passed facility *makeup* where
+*evaporation* was required, inflating $M_0$ by 1.60×; corrected, the two agree exactly.
+
+Remaining caveat: storage, solute accumulation and treatment delay were **zero in both
+models**, so dynamic-state effects remain untested.
 
 ---
 
 ## S8. Evidence-status disclosure (required)
 
-The engine-side evidence register applies a stricter bar (external observation) than the
-paper side (within-model numerical closure). The difference must be disclosed:
+Engine-side register applies a stricter bar than the paper side. Disclosed:
 
-| Engine claim | Status |
+| engine claim | status |
 |---|---|
-| C3 "reclaimed use always reduces city withdrawal" | **REFUTED_IN_BOUNDED_RUN** |
+| C3 "reclaimed use always reduces city withdrawal" | REFUTED_IN_BOUNDED_RUN |
 | C4 quality feedback vs independent chemistry | NOT_READY |
 | C5 facility makeup/blowdown out-of-sample | NOT_READY |
 | C7 A0–A3 adaptation restores net savings | NOT_READY |
@@ -243,53 +209,29 @@ paper side (within-model numerical closure). The difference must be disclosed:
 
 ---
 
-## S9. Retracted results (audit trail)
+## S9. Defects found and fixed in this round
 
-Following the 2026-10-14 method audit, the following are **withdrawn** and must not be
-cited from any document:
+Both are documented in `19_缺陷报告_缓存与桥接_2026-10-15.md`.
 
-| Retracted claim | Reason |
-|---|---|
-| "Two opposing channels (quality vs reliability)" | Quality channel used mis-specified $D$; "reliability channel" was an artefact of subtracting an unmet-demand gap from a withdrawal change |
-| Supply stress $\psi=(D_{\rm inc}+W_{\rm AI,pot})/W$ | $D_{\rm inc}$ read from `gap` = unmet **reclaimed** demand, not potable demand |
-| $\Delta=W\max(0,\psi-1)$; "3,840 grid points, zero exceptions" | Formula has no physical basis |
-| "Old identity understates urban loss by up to 39,641 ML" | That figure was the maximum of the invalid $\Delta$ |
-| Critical mixing ratio $\varphi^*$; "supply floor" at $W_{\rm scale}\le0.85$ | Dependent on the invalid $\psi$ |
-| "Mechanism is orthogonal to capacity expansion" | Premise was the invalid formula |
-
-**Retained and now independently derived:** $S_{\rm city}\le0$ in the fixed-pool regime.
+1. **Evaluator cache key omitted water composition** → with a shared cache, the first
+   composition's results were reused for all others, and the composition axis carried no
+   variation. After the fix, composition spans both signs of the outcome.
+   *Gate added*: any factor claimed to be swept must be demonstrated to produce variation.
+2. **Bridging harness used makeup where evaporation was required** → 1.60× inflation.
+   *Gate added*: cross-model comparisons must assert equality of shared quantities.
 
 ---
 
-## S10. Negative and failed results (retained)
+## S10. Retracted and negative results (retained)
 
-1. **$dS_{\rm pot}$ never becomes negative in the fixed-pool regime** — reclaimed
-   substitution never reduces urban potable withdrawal when supply is fixed.
-2. **The identity is exact only in the fixed-pool regime.** In the added-capacity regime it
-   fails (deviation up to 1.5 × 10⁴ ML) and the sign reverses; this is reported as a
-   regime boundary, not hidden.
-3. **Cross-domain transfer is weak.** The only genuine holdout — a one-parameter transfer of
-   $\varphi_{\rm eff}$ with the parameter fitted on D-HA and frozen — gives
-   **R² = 0.599** (median absolute error 0.028) against a trivial baseline of −0.034.
-   The identity's own "R² = 1.000" in the holdout domain is an **algebraic re-derivation**
-   (it reuses the holdout domain's $M_0,M_1$) and is **not** validation.
-4. **Ablation gate G5 records a deliberate non-failure**: the identity is *expected* not to
-   hold in the added-capacity regime.
-5. **Grid resolution — corrected assessment.** An earlier version of this analysis reported
-   that only **15.4%** of feasible sets agreed between coarse and fine grids, and inferred
-   that bottleneck identification is resolution-sensitive. **That inference was wrong**: the
-   criterion compared *counts of feasible grid points*, but when the quality limit is loose
-   almost the whole grid is feasible, so a finer grid necessarily contains more feasible
-   points (24 → 48 → 96 → 192) and the counts can never be equal. With the correct criterion
-   — the **displacement of the feasible boundary** $\rho_{\min}$ — the boundary moves by
-   **at most one grid step (0.015625)**, and **100%** of $({\rm sample},\chi)$ curves
-   converge at every refinement level (11/11 × 3 samples). No non-monotone feasible regions
-   were found (**0/39** curves).
-   **Residual limitation**: the published rule "the constraint with the largest exceedance at
-   the first failing grid point" is **not reproducible** from current outputs, because
-   `city_outcome` does not expose per-species concentrations and limits. The manuscript
-   therefore does **not** rest any claim on that rule.
-6. **Earlier retractions (unchanged)**: A3 "+13,974 ML/yr" was a degenerate-day artefact;
-   the τ stress axis is retired; index B (basin net consumption) is
-   `NOT_IDENTIFIABLE_FROM_AVAILABLE_DATA`; the dimensionless "collapse law" is an algebraic
-   identity, not a migratable law.
+**Retracted earlier:** "two opposing channels"; supply-stress $\psi$; critical ratio
+$\varphi^*$; supply floor — all traced to treating the engine's `gap` (unmet *reclaimed*
+demand) as potable demand and subtracting an unmet-demand gap from a withdrawal change.
+
+**Retained negatives:**
+1. In the committed branch with non-binding quality, $dS_{\rm pot}=0$ **exactly** — no saving.
+2. Grid-resolution "15.4% agreement" was a **wrong criterion** (feasible-point counts);
+   the corrected boundary-displacement criterion gives 1-step convergence.
+3. Earlier retractions unchanged: A3 "+13,974 ML/yr" was a degenerate-day artefact; τ axis
+   retired; index B `NOT_IDENTIFIABLE_FROM_AVAILABLE_DATA`; dimensionless "collapse law" is an
+   algebraic identity.

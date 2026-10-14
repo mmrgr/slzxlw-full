@@ -1,0 +1,34 @@
+========================================================================================================
+T19c 允许 CoC 包络：无加药热力学下界 → 加药运行上界
+========================================================================================================
+
+阻垢剂耐受限（LSI ↔ 方解石饱和倍数, 二者同定义 LSI = SI_calcite = log10(IAP/Ksp)）:
+  none_thermodynamic          1.0x  LSI=0.000  conf=high    热力学平衡（无加药）
+  LSI_1.5                    31.6x  LSI=1.500  conf=medium  阻垢剂典型运行窗口下界
+  LSI_2.0                   100.0x  LSI=2.000  conf=medium  阻垢剂运行窗口（LSI 2 量级）
+  LSI_2.477_300x            300.0x  LSI=2.477  conf=low     Sherwood 1994 / Cognetti 1996: 控制到 300 倍方解石饱和度
+  LSI_3.0                  1000.0x  LSI=3.000  conf=low     阻垢剂先进配方上界
+
+--------------------------------------------------------------------------------------------------------
+
+[IEUA RP-1 (2025, tertiary)]
+    none_thermodynamic     LSI_tol=0.000  CoC(SI_calcite=0.000)=2.5202  非阻垢相上界={'Gypsum': 40.4595, 'Anhydrite': 74.9939, 'SiO2(a)': 4.8147}  有效=2.5202
+        SI: Calcite=0.0  Aragonite=-0.1438  Gypsum=-1.4886  SiO2(a)=-0.2834  Halite=-5.8572
+    LSI_1.5                LSI_tol=1.500  CoC(SI_calcite=1.500)=23.4371  非阻垢相上界={'Gypsum': 40.4595, 'Anhydrite': 74.9939, 'SiO2(a)': 4.8147}  有效=4.8147
+        SI: Calcite=1.5  Aragonite=1.3562  Gypsum=-0.2696  SiO2(a)=0.7046  Halite=-4.0619
+    LSI_2.0                LSI_tol=2.000  CoC(SI_calcite=2.000)=52.0591  非阻垢相上界={'Gypsum': 40.4595, 'Anhydrite': 74.9939, 'SiO2(a)': 4.8147}  有效=4.8147
+        SI: Calcite=2.0  Aragonite=1.8562  Gypsum=0.1237  SiO2(a)=1.0766  Halite=-3.4186
+    LSI_2.477_300x         LSI_tol=2.477  CoC(SI_calcite=2.477)=111.6338  非阻垢相上界={'Gypsum': 40.4595, 'Anhydrite': 74.9939, 'SiO2(a)': 4.8147}  有效=4.8147
+        SI: Calcite=2.477  Aragonite=2.3332  Gypsum=0.5017  SiO2(a)=1.4592  Halite=-2.7778
+    LSI_3.0                LSI_tol=3.000  CoC(SI_calcite=3.000)=251.2315  非阻垢相上界={'Gypsum': 40.4595, 'Anhydrite': 74.9939, 'SiO2(a)': 4.8147}  有效=4.8147
+        SI: Calcite=3.0  Aragonite=2.8562  Gypsum=0.9203  SiO2(a)=1.9298  Halite=-2.022
+
+[LADWP AWPF (2012, RO product)]  跳过: 缺 []
+
+[Figshare RW (2025, paired study)]  跳过: 缺 ['SO4', 'alkalinity', 'silica']
+
+[Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)]  跳过: 缺 ['SO4', 'alkalinity', 'silica']
+
+[AI-UWM model assumption]  跳过: 缺 ['Ca', 'Na', 'SO4', 'alkalinity', 'silica', 'pH']
+
+写出 C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A19_水化学包络\T19c_coc_envelope_raw.json

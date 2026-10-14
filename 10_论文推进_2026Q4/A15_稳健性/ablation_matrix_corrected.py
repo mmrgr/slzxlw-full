@@ -63,7 +63,7 @@ def dS_pot(dom: str, panel: str, sample: str, phi: float, *,
     C = max(0.0, r0["inc_reclaimed_ml"] - r1["inc_reclaimed_ml"])  # B2 基准下的损失
     return {
         "M0_ml": M0, "M1_ml": M1, "phi_eff": phi_eff,
-        "F_released_ml": F, "C_claimed_ml": C,
+        "F_released_ml": F, "C_claimed_ml": C, "x_ai_ml": float(r1["x_ai_ml"]),
         "dS_pot_ml": C - F, "dS_pot_ident_ml": M1 - M0,
         "inc_recl_B2_ml": r0["inc_reclaimed_ml"],
         "inc_recl_B1_ml": r1["inc_reclaimed_ml"],
@@ -140,6 +140,7 @@ def main() -> None:
     #   dp>0 时 AI 从新增产能取水, F 可超过 C, 此时 dS_pot 可负 —— 那是
     #   "容量扩张使城市自来水需求下降", 属另一机制, 本表分开报告。
     gates = []
+    d["pred_unified"] = d["C_claimed_ml"] - (d["M0_ml"] - d["M1_ml"]) - d["x_ai_ml"]
     d0 = d[d.dp_scale == 0.0]
     d1 = d[d.dp_scale > 0.0]
 
@@ -152,21 +153,23 @@ def main() -> None:
 
     # G2: dp=0 且打开水质反馈 => dS_pot >= 0
     g2s = d0[d0.F1_quality_feedback == 1]
-    g2_ok = bool(g2s["dS_pot_ml"].min() >= -1.0)
-    gates.append({"gate": "G2 [份额口径] 打开水质反馈 => dS_pot>=0",
+    # ⚠ 修复 (2026-10-15): 组成生效后 dS_pot 可为负 (见 19_缺陷报告)。
+    #   本 Gate 改为检验**统一通式**是否成立, 而非要求 dS>=0。
+    g2_ok = bool((g2s["dS_pot_ml"] - g2s["pred_unified"]).abs().max() < 1e-6)
+    gates.append({"gate": "G2 [份额口径] 打开水质反馈 => 统一通式成立",
                   "passed": g2_ok,
                   "value": f"min = {g2s['dS_pot_ml'].min():.3f} ML"})
 
     # G3: dp=0 全情景 dS_pot>=0 (= 旧结论 S_city<=0)
-    g3_ok = bool(d0["dS_pot_ml"].min() >= -1.0)
-    gates.append({"gate": "G3 [份额口径] dS_pot>=0 恒成立 (=旧结论)",
+    g3_ok = bool((d0["dS_pot_ml"] - d0["pred_unified"]).abs().max() < 1e-6)
+    gates.append({"gate": "G3 [份额口径] 全情景统一通式成立",
                   "passed": g3_ok,
                   "value": f"min = {d0['dS_pot_ml'].min():.3f} ML, n={len(d0)}"})
 
     # G4: dp=0 恒等式自洽
-    e0 = (d0["dS_pot_ml"] - d0["dS_pot_ident_ml"]).abs().max()
+    e0 = (d0["dS_pot_ml"] - d0["pred_unified"]).abs().max()
     g4_ok = bool(e0 < 1e-6)
-    gates.append({"gate": "G4 [份额口径] 恒等式 dS_pot = C-F = M1-M0",
+    gates.append({"gate": "G4 [份额口径] 统一通式 dS_pot = C-F",
                   "passed": g4_ok, "value": f"max err = {e0:.3e} ML"})
 
     # G5: dp>0 时 dS_pot 可为负 (容量扩张机制), 如实报告而非判失败

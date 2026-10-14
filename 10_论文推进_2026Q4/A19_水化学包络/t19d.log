@@ -1,0 +1,47 @@
+====================================================================================================
+T19d 修正后 Figshare 数据的 CoC 包络
+====================================================================================================
+
+[Figshare RW (corrected extraction)]  Ca=91.38 Mg=75.36 Na=310.4 Cl=313.7 SO4=507.2 alk=228.2 pH=8.17  (silica: 源表无)
+   none_thermodynamic     CoC=0.0  有效=0.0  非阻垢相=None  1x 已超目标(该水质本身即结垢型, 需先处理/掺混/加酸)
+      SI@1x: Calcite=0.8636  Dolomite=1.9779  Gypsum=-1.0919  Aragonite=0.7198
+   LSI_1.5                CoC=2.5982  有效=2.5982  非阻垢相={'Gypsum': None, 'Anhydrite': None, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.8636  Dolomite=1.9779  Gypsum=-1.0919  Aragonite=0.7198
+   LSI_2.0                CoC=5.6964  有效=5.6964  非阻垢相={'Gypsum': None, 'Anhydrite': None, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.8636  Dolomite=1.9779  Gypsum=-1.0919  Aragonite=0.7198
+   LSI_2.477_300x         CoC=12.2494  有效=7.6959  非阻垢相={'Gypsum': 7.6959, 'Anhydrite': None, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.8636  Dolomite=1.9779  Gypsum=-1.0919  Aragonite=0.7198
+   LSI_3.0                CoC=28.1631  有效=7.6959  非阻垢相={'Gypsum': 7.6959, 'Anhydrite': 14.0255, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.8636  Dolomite=1.9779  Gypsum=-1.0919  Aragonite=0.7198
+
+[Figshare BW (5 g·L-1) (corrected extraction)]  Ca=36.87 Mg=18.72 Na=2000.1 Cl=3222.4 SO4=109.5 alk=114.1 pH=8.44  (silica: 源表无)
+   none_thermodynamic     CoC=0.0  有效=0.0  非阻垢相=None  1x 已超目标(该水质本身即结垢型, 需先处理/掺混/加酸)
+      SI@1x: Calcite=0.3346  Dolomite=0.7376  Gypsum=-2.323  Aragonite=0.1908
+   LSI_1.5                CoC=5.7278  有效=5.7278  非阻垢相={'Gypsum': None, 'Anhydrite': None, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.3346  Dolomite=0.7376  Gypsum=-2.323  Aragonite=0.1908
+   LSI_2.0                CoC=11.4657  有效=11.4657  非阻垢相={'Gypsum': None, 'Anhydrite': None, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.3346  Dolomite=0.7376  Gypsum=-2.323  Aragonite=0.1908
+   LSI_2.477_300x         CoC=20.1847  有效=20.1847  非阻垢相={'Gypsum': None, 'Anhydrite': None, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.3346  Dolomite=0.7376  Gypsum=-2.323  Aragonite=0.1908
+   LSI_3.0                CoC=33.0824  有效=33.0824  非阻垢相={'Gypsum': None, 'Anhydrite': None, 'SiO2(a)': None}  
+      SI@1x: Calcite=0.3346  Dolomite=0.7376  Gypsum=-2.323  Aragonite=0.1908
+
+====================================================================================================
+GSA (Lloyd D. George 法院, Las Vegas) 实测运行 CoC —— 唯一可访问的运行观测
+====================================================================================================
+                 facility_id     study_id    period_label  period_days  makeup_gal  blowdown_gal  drift_gal  evaporation_gal  heat_rejected_mmbtu  water_per_heat_gal_per_mmbtu  coc_water_balance  source_page
+LLOYD_D_GEORGE_US_COURTHOUSE GSA_BDR_2022        baseline           30      394456        128114      12030           254312                 2217                         177.9               2.80           11
+LLOYD_D_GEORGE_US_COURTHOUSE GSA_BDR_2022 2021_evaluation           15      239086         43081      11926           184079                 1604                         149.0               4.34           11
+LLOYD_D_GEORGE_US_COURTHOUSE GSA_BDR_2022 2022_evaluation           57      706695        112194      31855           562646                 4904                         144.1               4.91           11
+
+  GSA Table 6 水质准则（加药运行下的验收窗）:
+    Total Alkalinity (ppm)           100–1,000
+    pH                               7.3–9.0
+    Chloride (ppm)                   10–500
+    CoC                              >2
+    Total Hardness (ppm)             500–1,500
+    Conductivity (uS/cm)             <2,400
+    Silica (ppm)                     <150
+    Calcium Hardness (ppm)           <500
+    Magnesium Hardness (ppm)         <100
+    Sulfates (ppm)                   <250

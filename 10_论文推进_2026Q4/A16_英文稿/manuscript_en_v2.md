@@ -14,19 +14,20 @@ assumption that doing so relieves pressure on potable supplies. The relevant qua
 not how much water a facility withdraws but how the urban potable balance changes. We
 derive that balance explicitly, as a **discharge–claim** pair: reclaimed substitution
 *discharges* potable water from the facility, while displaced incumbent users *claim*
-potable water in its place. Across 408 paired scenarios spanning two urban domains and
-four published reclaimed-water compositions, we show that these two flows obey an exact
-identity in the fixed-pool regime — the city-level potable withdrawal change equals the
-increase in facility makeup attributable to cooling-water quality, to a residual of
-3.3 × 10⁻¹¹ ML. Three consequences follow. First, **when water quality imposes no
-constraint on cycles of concentration, the city-level effect is exactly zero**: reclaimed
-cooling is then pure reallocation, not saving. Second, when quality does bind, the city's
-potable withdrawal rises, by up to 29,103 ML per period at the severest quality tier
-tested. Third, and conversely, when reclaimed water comes from **genuinely added
-capacity** rather than from incumbents, the discharge exceeds the claim and urban potable
-withdrawal **falls** (−4,639 to −15,030 ML in our tests). The fixed-pool identity is
-therefore not a universal conservation law but a boundary of the allocation regime: it
-holds exactly when reclaimed supply is fixed, and reverses sign when supply is expanded.
+potable water in its place. Across 288 paired scenarios spanning two urban domains and
+three published reclaimed-water compositions, we obtain an exact accounting identity
+(residual 1.1 × 10⁻¹¹ ML) that **unifies two opposite regimes**. When the reclaimed pool
+is already fully committed, the local saving is entirely cancelled and the city's potable
+withdrawal rises; when unused reclaimed water remains, the saving survives and urban
+potable withdrawal genuinely falls, by up to 27,354 ML per period in our tests. Which
+regime a city is in is decided by a single measurable ratio — the committed reclaimed
+demand relative to deliverable supply — and not by the cooling technology. Three
+consequences follow. First, "fixed supply implies no city-level benefit" is **not**
+general: it holds only when the reclaimed pool is already fully used. Second, when water
+quality imposes no constraint on cycles of concentration, the city-level effect is exactly
+zero, so reclaimed cooling is then pure reallocation. Third, and conversely, the widely
+used facility-to-city identity is recovered exactly in the fully-committed regime, so
+prior work is not contradicted — it is located as one branch of a two-branch law.
 
 ---
 

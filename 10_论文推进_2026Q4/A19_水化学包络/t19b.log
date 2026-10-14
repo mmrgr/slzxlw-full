@@ -1,0 +1,70 @@
+====================================================================================================
+T19b 缺失项复核 —— 源数据真缺失 vs 提取 bug
+====================================================================================================
+
+[1] Figshare Table_2.xls 表头（剥离标签后）:
+    col 0  Water Resource                                              
+    col 1  EC(&#956;S&#183;cm-1)                                       
+    col 2  pH                                                          
+    col 3  Na+ (mmol·L-1)                                              
+    col 4  K+ (mmol·L-1)                                               
+    col 5  HCO3- (mmol·L-1)                                            
+    col 6  Cl- (mmol·L-1)                                              
+    col 7  Ca2+ (mmol·L-1)                                             
+    col 8  Mg2+ (mmol·L-1)                                             
+    col 9  SO42- (mmol·L-1)                                            
+    col10  SAR (mmol·L-1)1/2                                           
+    col11  TN (mg·L-1)                                                 
+    col12  TP (mg·L-1)                                                 
+    col13  Pb (mg·L-1)                                                 
+    col14  Cu (mg·L-1)                                                 
+    col15  Zn (mg·L-1)                                                 
+    col16  Cd (mg·L-1)                                                 
+
+    匹配结果对比 (old = T6 v2 的 <b>N<sup 逻辑; new = 剥离标签后匹配):
+      Na    old=   3  new=   3
+      K     old=   4  new=   4
+      HCO3  old=None  new=   5   <== 差异!
+      Cl    old=   6  new=   6
+      Ca    old=   7  new=   7
+      Mg    old=   8  new=   8
+      SO4   old=None  new=   9   <== 差异!
+
+    逐样本重算:
+      [RW] EC=2120.0 pH=8.17  TDS(est)=1378.0
+        old: SO4=None  HCO3->alk=None   电荷误差=None
+        new: SO4=507.197  alk(as CaCO3)=228.182  电荷误差=1.206
+      [BW (5 g·L-1)] EC=9432.0 pH=8.44  TDS(est)=6130.8
+        old: SO4=None  HCO3->alk=None   电荷误差=None
+        new: SO4=109.508  alk(as CaCO3)=114.091  电荷误差=5.312
+
+[2] LADWP AWPF: 项目标注 missing='Mg' —— 核对源文件是否真的没有 Mg
+    列: ['metric', 'units', 'reported_value', 'detection_limit', 'qualifier', 'source_table', 'source_page']
+                  metric         units  reported_value  detection_limit qualifier source_table source_page
+                tds_mg_l          mg/L           22.00            10.00       NaN    Table 4-3        4-19
+           chloride_mg_l          mg/L            3.60             0.50       NaN    Table 4-3        4-19
+            sulfate_mg_l          mg/L            0.96             0.50       NaN    Table 4-3        4-19
+            calcium_mg_l          mg/L            0.41             0.10       NaN    Table 4-3        4-19
+          magnesium_mg_l          mg/L             NaN             0.10        ND    Table 4-3        4-19
+             sodium_mg_l          mg/L            6.60             0.50       NaN    Table 4-3        4-19
+             silica_mg_l          mg/L            0.52             0.04       NaN    Table 4-3        4-19
+           temperature_c            °C           26.30             0.10       NaN    Table 4-3        4-19
+                      pH            su            6.40             0.10       NaN    Table 4-3        4-19
+alkalinity_mg_l_as_caco3 mg/L as CaCO3            7.10             2.00       NaN    Table 4-3        4-19
+    含 'magnes' 的行: [{'metric': 'magnesium_mg_l', 'units': 'mg/L', 'reported_value': nan, 'detection_limit': 0.1, 'qualifier': 'ND', 'source_table': 'Table 4-3', 'source_page': '4-19'}]
+
+[3] IEUA RP-1: 项目样本表没有 temperature 列 —— 核对源文件
+    指标: pH, tds_mg_l, alkalinity_mg_l_as_caco3, calcium_mg_l, chloride_mg_l, magnesium_mg_l, sodium_mg_l, sulfate_mg_l, silica_mg_l
+    含温度: False   含磷酸盐: False
+
+[4] 用修正后的 Figshare RW 重跑 PHREEQC（原报告因'缺 SO4/碱度'直接判为不可跑）
+    [Figshare RW (corrected)] T=25: CoC_safe=0.0 (already_supersat:Calcite)  T=35: CoC_safe=0.0 (already_supersat:Calcite)
+      SI@1x: Calcite=0.864  Aragonite=0.72  Dolomite=1.978  Gypsum=-1.092  Anhydrite=-1.395  Halite=-5.639
+
+[5] 与项目 T6_water_chemistry_samples.csv 的 missing 列对照
+    RW: T6 声称缺 [SO4,alkalinity,silica]  |  源表实际缺 [silica]
+        → 提取 bug 丢失了: ['SO4', 'alkalinity']
+    BW: T6 声称缺 [SO4,alkalinity,silica]  |  源表实际缺 [silica]
+        → 提取 bug 丢失了: ['SO4', 'alkalinity']
+
+写出 C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A19_水化学包络\T19b_missing_recheck.json

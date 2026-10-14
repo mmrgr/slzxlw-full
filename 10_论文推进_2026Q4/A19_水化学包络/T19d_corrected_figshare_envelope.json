@@ -1,0 +1,362 @@
+{
+ "Figshare RW (corrected extraction)": {
+  "none_thermodynamic": {
+   "LSI_tol": 0.0,
+   "ratio_x": 1.0,
+   "confidence": "high",
+   "target_SI_calcite": 0.0,
+   "SI_at_1x": {
+    "Calcite": 0.8636,
+    "Aragonite": 0.7198,
+    "Dolomite": 1.9779,
+    "Gypsum": -1.0919,
+    "Anhydrite": -1.3953,
+    "SiO2(a)": null,
+    "Halite": -5.639,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 0.0,
+   "CoC_effective": 0.0,
+   "note": "1x 已超目标(该水质本身即结垢型, 需先处理/掺混/加酸)"
+  },
+  "LSI_1.5": {
+   "LSI_tol": 1.5,
+   "ratio_x": 31.622776601683793,
+   "confidence": "medium",
+   "target_SI_calcite": 1.5,
+   "SI_at_1x": {
+    "Calcite": 0.8636,
+    "Aragonite": 0.7198,
+    "Dolomite": 1.9779,
+    "Gypsum": -1.0919,
+    "Anhydrite": -1.3953,
+    "SiO2(a)": null,
+    "Halite": -5.639,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 2.5982,
+   "SI_at_CoC": {
+    "Calcite": 1.5,
+    "Aragonite": 1.3562,
+    "Dolomite": 3.251,
+    "Gypsum": -0.5605,
+    "Anhydrite": -0.8639,
+    "SiO2(a)": null,
+    "Halite": -4.8691,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": null,
+    "Anhydrite": null,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 2.5982
+  },
+  "LSI_2.0": {
+   "LSI_tol": 2.0,
+   "ratio_x": 100.0,
+   "confidence": "medium",
+   "target_SI_calcite": 2.0,
+   "SI_at_1x": {
+    "Calcite": 0.8636,
+    "Aragonite": 0.7198,
+    "Dolomite": 1.9779,
+    "Gypsum": -1.0919,
+    "Anhydrite": -1.3953,
+    "SiO2(a)": null,
+    "Halite": -5.639,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 5.6964,
+   "SI_at_CoC": {
+    "Calcite": 2.0,
+    "Aragonite": 1.8562,
+    "Dolomite": 4.2543,
+    "Gypsum": -0.1525,
+    "Anhydrite": -0.4559,
+    "SiO2(a)": null,
+    "Halite": -4.2429,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": null,
+    "Anhydrite": null,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 5.6964
+  },
+  "LSI_2.477_300x": {
+   "LSI_tol": 2.477,
+   "ratio_x": 300.0,
+   "confidence": "low",
+   "target_SI_calcite": 2.477,
+   "SI_at_1x": {
+    "Calcite": 0.8636,
+    "Aragonite": 0.7198,
+    "Dolomite": 1.9779,
+    "Gypsum": -1.0919,
+    "Anhydrite": -1.3953,
+    "SiO2(a)": null,
+    "Halite": -5.639,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 12.2494,
+   "SI_at_CoC": {
+    "Calcite": 2.477,
+    "Aragonite": 2.3332,
+    "Dolomite": 5.2144,
+    "Gypsum": 0.2347,
+    "Anhydrite": -0.0687,
+    "SiO2(a)": null,
+    "Halite": -3.63,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": 7.6959,
+    "Anhydrite": null,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 7.6959
+  },
+  "LSI_3.0": {
+   "LSI_tol": 3.0,
+   "ratio_x": 1000.0,
+   "confidence": "low",
+   "target_SI_calcite": 3.0,
+   "SI_at_1x": {
+    "Calcite": 0.8636,
+    "Aragonite": 0.7198,
+    "Dolomite": 1.9779,
+    "Gypsum": -1.0919,
+    "Anhydrite": -1.3953,
+    "SiO2(a)": null,
+    "Halite": -5.639,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 28.1631,
+   "SI_at_CoC": {
+    "Calcite": 3.0,
+    "Aragonite": 2.8562,
+    "Dolomite": 6.2693,
+    "Gypsum": 0.6651,
+    "Anhydrite": 0.3617,
+    "SiO2(a)": null,
+    "Halite": -2.9413,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": 7.6959,
+    "Anhydrite": 14.0255,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 7.6959
+  }
+ },
+ "Figshare BW (5 g·L-1) (corrected extraction)": {
+  "none_thermodynamic": {
+   "LSI_tol": 0.0,
+   "ratio_x": 1.0,
+   "confidence": "high",
+   "target_SI_calcite": 0.0,
+   "SI_at_1x": {
+    "Calcite": 0.3346,
+    "Aragonite": 0.1908,
+    "Dolomite": 0.7376,
+    "Gypsum": -2.323,
+    "Anhydrite": -2.6264,
+    "SiO2(a)": null,
+    "Halite": -3.8857,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 0.0,
+   "CoC_effective": 0.0,
+   "note": "1x 已超目标(该水质本身即结垢型, 需先处理/掺混/加酸)"
+  },
+  "LSI_1.5": {
+   "LSI_tol": 1.5,
+   "ratio_x": 31.622776601683793,
+   "confidence": "medium",
+   "target_SI_calcite": 1.5,
+   "SI_at_1x": {
+    "Calcite": 0.3346,
+    "Aragonite": 0.1908,
+    "Dolomite": 0.7376,
+    "Gypsum": -2.323,
+    "Anhydrite": -2.6264,
+    "SiO2(a)": null,
+    "Halite": -3.8857,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 5.7278,
+   "SI_at_CoC": {
+    "Calcite": 1.5,
+    "Aragonite": 1.3562,
+    "Dolomite": 3.1045,
+    "Gypsum": -1.3999,
+    "Anhydrite": -1.7033,
+    "SiO2(a)": null,
+    "Halite": -2.4682,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": null,
+    "Anhydrite": null,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 5.7278
+  },
+  "LSI_2.0": {
+   "LSI_tol": 2.0,
+   "ratio_x": 100.0,
+   "confidence": "medium",
+   "target_SI_calcite": 2.0,
+   "SI_at_1x": {
+    "Calcite": 0.3346,
+    "Aragonite": 0.1908,
+    "Dolomite": 0.7376,
+    "Gypsum": -2.323,
+    "Anhydrite": -2.6264,
+    "SiO2(a)": null,
+    "Halite": -3.8857,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 11.4657,
+   "SI_at_CoC": {
+    "Calcite": 2.0,
+    "Aragonite": 1.8562,
+    "Dolomite": 4.1325,
+    "Gypsum": -1.0143,
+    "Anhydrite": -1.3177,
+    "SiO2(a)": null,
+    "Halite": -1.852,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": null,
+    "Anhydrite": null,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 11.4657
+  },
+  "LSI_2.477_300x": {
+   "LSI_tol": 2.477,
+   "ratio_x": 300.0,
+   "confidence": "low",
+   "target_SI_calcite": 2.477,
+   "SI_at_1x": {
+    "Calcite": 0.3346,
+    "Aragonite": 0.1908,
+    "Dolomite": 0.7376,
+    "Gypsum": -2.323,
+    "Anhydrite": -2.6264,
+    "SiO2(a)": null,
+    "Halite": -3.8857,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 20.1847,
+   "SI_at_CoC": {
+    "Calcite": 2.477,
+    "Aragonite": 2.3332,
+    "Dolomite": 5.1198,
+    "Gypsum": -0.6584,
+    "Anhydrite": -0.9618,
+    "SiO2(a)": null,
+    "Halite": -1.2792,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": null,
+    "Anhydrite": null,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 20.1847
+  },
+  "LSI_3.0": {
+   "LSI_tol": 3.0,
+   "ratio_x": 1000.0,
+   "confidence": "low",
+   "target_SI_calcite": 3.0,
+   "SI_at_1x": {
+    "Calcite": 0.3346,
+    "Aragonite": 0.1908,
+    "Dolomite": 0.7376,
+    "Gypsum": -2.323,
+    "Anhydrite": -2.6264,
+    "SiO2(a)": null,
+    "Halite": -3.8857,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC": 33.0824,
+   "SI_at_CoC": {
+    "Calcite": 3.0,
+    "Aragonite": 2.8562,
+    "Dolomite": 6.2001,
+    "Gypsum": -0.291,
+    "Anhydrite": -0.5944,
+    "SiO2(a)": null,
+    "Halite": -0.6682,
+    "Nahcolite": null,
+    "Trona": null,
+    "Quartz": null,
+    "Chalcedony": null
+   },
+   "CoC_non_inhibited_phases": {
+    "Gypsum": null,
+    "Anhydrite": null,
+    "SiO2(a)": null
+   },
+   "CoC_effective": 33.0824
+  }
+ }
+}

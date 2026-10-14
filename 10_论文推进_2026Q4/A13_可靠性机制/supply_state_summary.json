@@ -1,0 +1,40 @@
+{
+ "n_scenarios": 1152,
+ "identity_max_err_ml": 63838.95815696515,
+ "unified_identity_max_err_ml": 1.1641532182693481e-10,
+ "branch_A_deg_residual_ml": 1.4551915228366852e-11,
+ "branch_C_deg_residual_ml": 1.4551915228366852e-11,
+ "n_branch_A": 312,
+ "n_branch_C": 446,
+ "by_state": {
+  "shortage": {
+   "n": 706,
+   "dS_min": -95374.75834139058,
+   "dS_max": 598752.3264003157,
+   "dS_mean": 25178.74968212802,
+   "n_negative": 320,
+   "n_positive": 306,
+   "unused_mean_ml": 10717.298185659498
+  },
+  "surplus": {
+   "n": 446,
+   "dS_min": -98158.47017195159,
+   "dS_max": 33217.38728839575,
+   "dS_mean": -15281.9063623121,
+   "n_negative": 429,
+   "n_positive": 17,
+   "unused_mean_ml": 32960.062011056914
+  }
+ },
+ "surplus_n_negative": 429,
+ "shortage_n_negative": 320,
+ "surplus_C_mean_ml": 0.0,
+ "surplus_F_mean_ml": 15281.906362312102,
+ "surplus_dS_mean_ml": -15281.906362312102,
+ "critical_pool_scale": {
+  "ha": 2.3841264631738595,
+  "co": 2.566713307866298
+ },
+ "runtime_s": 64.6,
+ "discipline_note": "三态由引擎实际分配判别 (既有用户是否拿满 + B2 是否闲置), 不用 pool 名义比较。口径为 A13c 排放—索取平衡 (dS_pot=C-F), 不使用已撤回的 psi/Delta。模型内结论, 非观测频率。"
+}

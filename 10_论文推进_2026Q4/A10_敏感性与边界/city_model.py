@@ -26,7 +26,33 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-REPO = Path(r"C:/Users/mmrgr/Desktop/论文/算力中心/07_代码_AI-UWM引擎/aiuwm_src")
+
+# ---------------------------------------------------------------- 引擎定位
+# 可移植: 优先用环境变量 AIUWM_REPO, 其次按相对布局自动上溯查找, 最后回退老路径。
+# (原实现硬编码本机绝对路径, 妨碍在干净环境中复现 —— 见 18_方法自审与修复报告 §WP0.3)
+def _find_repo() -> Path:
+    import os
+    env = os.environ.get("AIUWM_REPO")
+    if env:
+        p = Path(env)
+        if (p / "src" / "aiuwm").is_dir():
+            return p
+    here = Path(__file__).resolve()
+    # 相对布局: <root>/10_论文推进_2026Q4/A10_敏感性与边界/city_model.py
+    for base in (here.parent, here.parent.parent, here.parent.parent.parent,
+                 here.parent.parent.parent.parent):
+        cand = base / "07_代码_AI-UWM引擎" / "aiuwm_src"
+        if (cand / "src" / "aiuwm").is_dir():
+            return cand
+    # 兜底: 老路径 (仅在上述都失败时)
+    return Path.home() / "Desktop" / "论文" / "算力中心" / "07_代码_AI-UWM引擎" / "aiuwm_src"
+
+
+REPO = _find_repo()
+if not (REPO / "src" / "aiuwm").is_dir():
+    raise RuntimeError(
+        f"未找到 AI-UWM 引擎 (尝试过 AIUWM_REPO 与相对布局)。REPO={REPO}\n"
+        "请设置环境变量 AIUWM_REPO 指向 .../07_代码_AI-UWM引擎/aiuwm_src")
 if str(REPO / "src") not in sys.path:
     sys.path.insert(0, str(REPO / "src"))
 
@@ -140,10 +166,16 @@ def make_evaluators(bl: dict, panel_name: str, q: dict, *,
               tuple(sorted((str(k), round(float(v), 6))
                            for k, v in (bl.get("drivers_rep") or {}).items())))
     n_period = max(float(period_days), 1e-12)
+    # ⚠ 审计修复 (2026-10-15): 缓存键原本**缺少水样化学** `q`。
+    #   后果: 使用共享 cache 时, 第一个水样的结果会被复用给后续所有水样,
+    #   使"多水样"维度完全失效 (实测: 共享 cache 下 3 个水样 CoC 全为 2.3165;
+    #   每次新建 cache 则分别为 2.3165 / 3.0984 / 1.7831)。
+    #   该缺陷曾污染 potable_flows.csv 与 supply_state_regimes.csv。
+    q_key = tuple(sorted((str(k), round(float(v), 6)) for k, v in (q or {}).items()))
 
     def ev_ai(req: JointQualityRequest, trial: float) -> JointPlanEvaluation:
         frac = float(np.clip(req.target_reclaimed_fraction, 0.0, 1.0))
-        key = ("ai", bl_key, round(frac, 9), round(float(trial), 6),
+        key = ("ai", bl_key, q_key, round(frac, 9), round(float(trial), 6),
                panel_name, round(coc_design, 6), round(limit_scale, 9),
                str(cooling_tech), (None if wet_fraction is None else round(wet_fraction, 6)),
                round(float(e_scale), 6), round(n_period, 6))

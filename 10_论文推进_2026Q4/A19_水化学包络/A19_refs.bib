@@ -1,0 +1,266 @@
+% A19_refs.bib — 冷却水化学包络：来源与数据锚定
+% 生成日期: 2026-10-14
+% 核验方式: CrossRef REST API (api.crossref.org) / Semantic Scholar Graph API /
+%           OSTI.GOV 直连 / GSA 官方 PDF 全文提取
+%
+% 标记约定 (verified 字段):
+%   verified = {metadata}           书目元数据经 CrossRef 权威索引确认
+%   verified = {metadata+abstract}  另经出版方摘要确认内容概括
+%   verified = {fulltext+data}      正文/数据经本地或直连全文提取核验
+%   verified = {UNVERIFIED}         条目存在但具体数值未核验 —— 引用其数字前必须取原文
+%
+% 严禁编造。凡核验不到者一律显式标 UNVERIFIED。
+
+% ============================================================
+% 一、实测水质与冷却塔运行数据（observed 类证据）
+% ============================================================
+
+@techreport{GSA2023Blowdown,
+  author      = {{U.S. General Services Administration} and {National Renewable Energy Laboratory}},
+  title       = {Blowdown Recovery System for Cooling Tower Water Treatment},
+  institution = {U.S. General Services Administration, Green Proving Ground},
+  year        = {2023},
+  type        = {Technical Report},
+  url         = {https://www.gsa.gov/system/files/052-Blowdown%20Recovery%20System%20Full%20Report.pdf},
+  note        = {verified={fulltext+data}. Local copy: 07\_代码\_AI-UWM引擎/aiuwm\_src/research\_2026/external\_evidence/gsa\_blowdown\_recovery\_2023/. Facility: Lloyd D. George U.S. Courthouse, Las Vegas NV. Key extracted values: CoC (water balance) baseline 2.8 (30 d), 2021 eval 4.34 (15 d), 2022 eval 4.91 (57 d); Table 6 water-quality criteria: alkalinity 100-1000 ppm, pH 7.3-9.0, chloride 10-500 ppm, CoC >2, total hardness 500-1500 ppm, conductivity <2400 uS/cm, silica <150 ppm, calcium hardness <500 ppm, magnesium hardness <100 ppm, sulfate <250 ppm; partial softening Table A-1 achieves 4->8 cycles at 400 ppm hardness. NOT a data-centre facility. Three aggregate periods, not 12 months of daily rows.}
+}
+
+@techreport{IEUA2025RW,
+  author      = {{Inland Empire Utilities Agency}},
+  title       = {{RW} \& Effluent Water Quality --- {RP-1} Recycled Water Quality, 2025},
+  institution = {Inland Empire Utilities Agency},
+  year        = {2025},
+  url         = {https://www.ieua.org/wp-content/uploads/2026/04/RW-Effluent-Water-Quality-2025.pdf},
+  note        = {verified={fulltext+data} (normalized to RP1\_2025\_normalized.csv). Monthly-average summary: pH 6.9, TDS 443, alkalinity 140 as CaCO3, Ca 45 (35-49), Cl 100, Mg 9 (6-11), Na 88 (83-91), SO4 47, SiO2 24 (5-27 mg/L). CHARGE BALANCE 3.19\% (only sample passing <=10\%). NO temperature and NO phosphate reported. Source context: direct recycled-water facility report; NOT a cooling-tower operating dataset.}
+}
+
+@techreport{LADWP2012AWPF,
+  author      = {{Los Angeles Department of Water and Power}},
+  title       = {Groundwater Replenishment Evaluation Technical Memorandum, Volume 3, Appendix {H}/{M}},
+  institution = {Los Angeles Department of Water and Power},
+  year        = {2012},
+  url         = {https://acquia.ladwp.com/sites/default/files/documents/GWR_MPR_Volume_3_of_3_App_H_M_2012_03_26.pdf},
+  note        = {verified={fulltext+data}. AWPF pilot RO product water, Table 4-3 (p. 4-19). TDS 22, Cl 3.6, SO4 0.96, Ca 0.41, Mg ND (DL 0.10), Na 6.6, SiO2 0.52, temperature 26.3 C, pH 6.4, alkalinity 7.1 as CaCO3. NOTE: magnesium is BELOW DETECTION LIMIT, not truly missing; temperature IS reported in the source but was NOT carried into the project sample table. This is near-RO-permeate quality, not typical reclaimed water.}
+}
+
+@article{Zhao2025Figshare,
+  author  = {Zhao, Jieru and Cui, Bingjian and Wang, Juan and Han, Qibiao and Hu, Chao and Li, Rui and Liu, Chuncheng},
+  title   = {Contribution of silicon fertilizer to soil and growth of {Pak} choi under reclaimed and brackish water cycling irrigation},
+  journal = {PLOS ONE},
+  year    = {2025},
+  volume  = {20},
+  number  = {5},
+  pages   = {e0322846},
+  doi     = {10.1371/journal.pone.0322846},
+  url     = {https://doi.org/10.1371/journal.pone.0322846},
+  note    = {verified={metadata+abstract}. Data table used: Table 2 (figshare article 28948753, file 54279751, DOI 10.1371/journal.pone.0322846.t002), CC BY 4.0. \textbf{NOT a cooling-tower dataset} — an irrigation study. Extraction note: the project's T6 CSV lost SO4 (5.28 mmol/L -> 507.20 mg/L) and HCO3 (4.56 mmol/L -> 228.18 mg/L as CaCO3) due to an HTML-header matching bug; both ARE present in the source table. Source has no silica column; it does carry TN (0.52/1.18) and TP (0.05/0.02 mg/L).}
+}
+
+% ============================================================
+% 二、阻垢剂 / 允许 LSI 与 CoC 上界（literature 类证据）
+% ============================================================
+
+@inproceedings{Sherwood1994,
+  author       = {Sherwood, Nancy S.},
+  title        = {Novel Calcium Carbonate Inhibitor for Maximum Acid-Free Cooling Water Reuse},
+  booktitle    = {CORROSION 1994},
+  organization = {NACE International},
+  year         = {1994},
+  pages        = {1--13},
+  doi          = {10.5006/c1994-94453},
+  url          = {https://doi.org/10.5006/c1994-94453},
+  note         = {verified={metadata+abstract}. Abstract states: an organic inhibitor effective under high calcite saturation and LSI conditions, with performance demonstrated \textbf{up to 300 times calcite saturation}. INDUSTRY/VENDOR source (Calgon Corporation) --- confidence LOW, not independently replicated. This is the basis for the LSI tolerance of log10(300) = 2.477 used in A19.}
+}
+
+@inproceedings{Cognetti1996,
+  author       = {Cognetti, Ann and Parsons, Jennifer and Geraghty, Mike and Vanderpool, Dan},
+  title        = {Operation of Cooling Towers at High Cycles of Concentration: Corrosion and Scale Control},
+  booktitle    = {CORROSION 1996},
+  organization = {NACE International},
+  year         = {1996},
+  pages        = {1--24},
+  doi          = {10.5006/c1996-96575},
+  url          = {https://doi.org/10.5006/c1996-96575},
+  note         = {verified={metadata+abstract}. Abstract: chemistry permitting control of calcium carbonate \textbf{up to and exceeding 300 times saturation}, via PAPEMP. Same vendor lineage as Sherwood1994 (Calgon). confidence LOW. Corroborates rather than independently verifies the 300x figure.}
+}
+
+@article{Perez2017Silica,
+  author  = {Perez, Libardo A. and Amjad, Zahid and Zuhl, Robert W.},
+  title   = {Managing Cooling Water Systems to Prevent Silica Deposition},
+  journal = {Materials Performance},
+  year    = {2017},
+  volume  = {56},
+  number  = {1},
+  pages   = {44--48},
+  doi     = {10.5006/mp2017_56_1-44},
+  url     = {https://doi.org/10.5006/mp2017_56_1-44},
+  note    = {verified={metadata+abstract}. Abstract states high silica make-up water obstructs high-CoC treatment, and that the typical approach (high polymers + phosphonates) can control silica \textbf{approaching 300 mg/L}, but at very high treatment cost. INDUSTRY/VENDOR source (Lubrizol). confidence LOW. Used in A19 only for the "technical upper bound" row, NOT as the envelope upper bound.}
+}
+
+@article{Puckorius1991,
+  author  = {Puckorius, P. R. and Brooke, J. M.},
+  title   = {A New Practical Index for Calcium Carbonate Scale Prediction in Cooling Tower Systems},
+  journal = {Corrosion},
+  year    = {1991},
+  volume  = {47},
+  number  = {4},
+  pages   = {280--284},
+  doi     = {10.5006/1.3585256},
+  url     = {https://doi.org/10.5006/1.3585256},
+  note    = {verified={metadata+abstract}. Abstract explicitly states existing calcium carbonate scaling indices (incl. Langelier and Ryznar) are \textbf{ineffective and inaccurate in concentrated cooling tower water at pH above 7.5}, and proposes the Practical (Puckorius) index. IMPORTANT for A19: this is direct published support for the claim that a single saturation index is NOT a universal CoC ceiling --- it is a scaling-risk indicator whose validity is regime-limited. Cited 62 times.}
+}
+
+@inproceedings{Ritz1996Reclaimed,
+  author       = {Ritz, David B. and Spurell, Chris},
+  title        = {Reclaimed Water for Cooling Tower Make-Up: Concerns, Monitoring and Proven Treatment},
+  booktitle    = {CORROSION 1996},
+  organization = {NACE International},
+  year         = {1996},
+  url          = {https://doi.org/10.5006/c1996-96579},
+  doi          = {10.5006/c1996-96579},
+  note         = {verified={metadata+abstract}. Case study of the first California oil refinery using Title 22 reclaimed water for cooling tower make-up; documents the monitoring and control schemes required. Supports the claim that reclaimed-water CoC limits depend on treatment, monitoring and operation --- not on thermodynamics alone. Numeric CoC limits: UNVERIFIED (abstract gives none).}
+}
+
+@article{Plata2022ZLD,
+  author  = {Plata, Sophia L. and Devenport, Connie L. and Miara, Ariel and Sitterley, Kurban A. and Evans, Anna and Talmadge, Michael and Van Allsburg, Kurt M. and Kurup, Parthiv and Cox, Jordan and Kerber, Samuel and Howell, Andrew and Breckenridge, Richard and Manygoats, Cheyenna and Stokes-Draut, Jennifer R. and Macknick, Jordan and Childress, Amy E.},
+  title   = {Zero Liquid Discharge and Water Reuse in Recirculating Cooling Towers at Power Facilities: Review and Case Study Analysis},
+  journal = {ACS ES\&T Engineering},
+  year    = {2022},
+  volume  = {2},
+  number  = {3},
+  pages   = {508--525},
+  doi     = {10.1021/acsestengg.1c00377},
+  url     = {https://doi.org/10.1021/acsestengg.1c00377},
+  note    = {verified={metadata+abstract}. Peer-reviewed review of recirculating cooling tower water use with two NGCC case studies; notes ZLD water-withdrawal savings (18\%) are comparable to "current efforts to reduce water withdrawals by increasing cycles of concentration". Independent (NREL/EPRI/USC) anchor for the CoC-lever framing. Specific CoC values: UNVERIFIED (abstract gives none).}
+}
+
+@article{Muller2024Blowdown,
+  author  = {M{\"u}ller, Sarah I. and Chapanova, Gergana and Diekow, Thomas and Kaiser, Christian and Hamelink, Lies and Hitsov, Ivaylo P. and Wyseure, Lisa and Moed, David H. and Palmowski, Laurence and Wintgens, Thomas},
+  title   = {Comparison of cooling tower blowdown and enhanced make up water treatment to minimize cooling water footprint},
+  journal = {Journal of Environmental Management},
+  year    = {2024},
+  volume  = {367},
+  pages   = {121949},
+  doi     = {10.1016/j.jenvman.2024.121949},
+  url     = {https://doi.org/10.1016/j.jenvman.2024.121949},
+  note    = {verified={metadata}. Open access (CC BY 4.0 from 2024-11-15). Compares blowdown-side vs make-up-side treatment for minimising cooling water footprint. ERATUM: 10.1016/j.jenvman.2025.128390 (2025-12-27) --- check before citing specific figures. Numeric CoC values: UNVERIFIED (abstract gives none).}
+}
+
+@techreport{Veil2007Reclaimed,
+  author      = {Veil, J. A.},
+  title       = {Use of reclaimed water for power plant cooling},
+  institution = {Argonne National Laboratory (ANL)},
+  year        = {2007},
+  number      = {ANL/EVS/R-07/3},
+  doi         = {10.2172/919332},
+  url         = {https://doi.org/10.2172/919332},
+  note        = {verified={metadata}. \"UNVERIFIED\" for any specific CoC or water-quality number: the full PDF at publications.anl.gov and osti.gov/servlets/purl was blocked by Cloudflare during this audit, so only the abstract and bibliographic record were obtained. Provides the first comprehensive national database of US facilities using reclaimed water for power plant cooling (Chapter 2). Do NOT cite specific values from this report without obtaining the full text.}
+}
+
+% ============================================================
+% 三、标准与准则
+% ============================================================
+
+@standard{GBT50050_2017,
+  title        = {工业循环冷却水处理设计规范 (Code for design of industrial recirculating cooling water treatment)},
+  key          = {GB/T 50050-2017},
+  organization = {中华人民共和国住房和城乡建设部},
+  year         = {2017},
+  type         = {National Standard},
+  note         = {NO DOI (Chinese national standard, not in CrossRef). verified={metadata} via project file A4/T6b\_limits\_cited.py and T6b\_cited\_limits\_summary.json, which record: conductivity <=4000 uS/cm; chloride <=700 mg/L (carbon steel); scaling criterion calcium hardness + total alkalinity <=1100 mg/L as CaCO3. These values are transcribed from the standard as used by the project; the standard text itself was NOT independently re-read during this audit --- treat the numeric transcription as UNVERIFIED at the clause level.}
+}
+
+@standard{GBT19923_2024,
+  title        = {城市污水再生利用 工业用水水质 (The reuse of urban recycling water --- Water quality standard for industrial uses)},
+  key          = {GB/T 19923-2024},
+  organization = {国家市场监督管理总局 and 国家标准化管理委员会},
+  year         = {2024},
+  type         = {National Standard},
+  note         = {NO DOI. Used in A19/A4 only as a MAKE-UP-WATER limit set (strict tier), not as a circulating-water limit. Numeric transcription from A4/T6b\_limits\_cited.py: TDS 1000, chloride 250, hardness 450, alkalinity 350, silica 30 mg/L. Standard text NOT independently re-read --- clause-level verification UNVERIFIED.}
+}
+
+@standard{ISO22449,
+  title        = {Use of reclaimed water in industrial cooling systems},
+  key          = {ISO 22449},
+  organization = {International Organization for Standardization (via BSI)},
+  doi          = {10.3403/bsiso22449},
+  url          = {https://doi.org/10.3403/bsiso22449},
+  note         = {verified={metadata} only --- existence and title confirmed via CrossRef (BSI British Standards record). The standard is PAYWALLED; no numeric limits were obtained. Cited as evidence that an international standard on this exact topic exists. Do NOT attribute any number to it.}
+}
+
+% ============================================================
+% 四、方法学与判据（支撑"饱和指数是风险指标而非硬上限"）
+% ============================================================
+
+@article{Langelier1936,
+  author  = {Langelier, W. F.},
+  title   = {The analytical control of anti-corrosion water treatment},
+  journal = {Journal of the American Water Works Association},
+  year    = {1936},
+  volume  = {28},
+  number  = {10},
+  pages   = {1500--1521},
+  doi     = {10.1002/j.1551-8833.1936.tb13785.x},
+  url     = {https://doi.org/10.1002/j.1551-8833.1936.tb13785.x},
+  note    = {verified={metadata}. Direct CrossRef lookup confirmed: Journal AWWA 28(10):1500--1521, author W. F. Langelier (University of California, Berkeley), cited 562 times. Original definition of the Langelier Saturation Index. Original text NOT read --- historical citation only, no numeric claim attributed.}
+}
+
+@article{Ryznar1944,
+  author  = {Ryznar, J. W.},
+  title   = {A new index for determining amount of calcium carbonate scale formed by a water},
+  journal = {Journal of the American Water Works Association},
+  year    = {1944},
+  volume  = {36},
+  number  = {4},
+  pages    = {472--483},
+  doi     = {10.1002/j.1551-8833.1944.tb20016.x},
+  url     = {https://doi.org/10.1002/j.1551-8833.1944.tb20016.x},
+  note    = {verified={metadata} via CrossRef reference list of 10.1016/j.jece.2026.125305. Cited because Puckorius1991 shows both LSI and RSI are unreliable above pH 7.5 in concentrated cooling water. Original text NOT read.}
+}
+
+@article{Ma2026Predictability,
+  author  = {Ma, Ruoxin and Yang, Duowen and Li, Jiqun and Xu, Hao and Tian, Min-ge},
+  title   = {Predictability boundaries of water-quality variables and {Langelier} {Saturation} {Index}-based scaling-tendency states in operation-regulated industrial circulating cooling water},
+  journal = {Journal of Environmental Chemical Engineering},
+  year    = {2026},
+  volume  = {14},
+  number  = {6},
+  pages   = {125305},
+  doi     = {10.1016/j.jece.2026.125305},
+  url     = {https://doi.org/10.1016/j.jece.2026.125305},
+  note    = {verified={metadata+reference-list}. Peer-reviewed (2026, 49 refs) study treating LSI-based scaling-tendency states as \textbf{regime-limited and operationally regulated} in industrial circulating cooling water --- direct support for the A19 position that a single LSI threshold is not a universal CoC ceiling. Abstract text was NOT retrievable (Semantic Scholar returned abstract: null); only the title, venue, and full reference list were verified. Do not attribute numeric thresholds to it.}
+}
+
+@article{Rossum1983,
+  author  = {Rossum, J. R. and Merrill, D. T.},
+  title   = {An evaluation of the calcium carbonate saturation indexes},
+  journal = {Journal of the American Water Works Association},
+  year    = {1983},
+  volume  = {75},
+  number  = {2},
+  pages   = {95--100},
+  doi     = {10.1002/j.1551-8833.1983.tb05075.x},
+  url     = {https://doi.org/10.1002/j.1551-8833.1983.tb05075.x},
+  note    = {verified={metadata+abstract}. Direct CrossRef lookup confirmed authors John R. Rossum and Douglas T. Merrill, pages 95--100, cited 69 times. Abstract: derives formulas for six saturation indexes, evaluates their ability to determine whether a water is under-/saturated/over-saturated with respect to CaCO3, and states that \"important concepts that are often poorly understood are clarified\". Supports the A19 position that saturation indices are interpretive constructs with known pitfalls.}
+}
+
+% ============================================================
+% 五、热力学数据库（PHREEQC 配套）
+% ============================================================
+
+@misc{PhreeqPython162,
+  author       = {M{\"u}ller, Sebastian and others},
+  title        = {phreeqpython 1.6.2 (Python interface to {PHREEQC} / {IPhreeqc})},
+  year         = {2024},
+  howpublished = {Python Package Index},
+  url          = {https://pypi.org/project/phreeqpython/},
+  note         = {verified={metadata} (installed and executed in this audit; version confirmed via importlib.metadata). Ships exactly FOUR databases: phreeqc.dat (46008 B, 71 phases, 50 master elements), pitzer.dat (31939 B, 72 phases, 28 master elements), vitens.dat (69151 B, 77 phases, 60 master elements), wateq4f\_PWN.dat (107557 B, 325 phases, 80 master elements). \textbf{minteq.v4.dat / minteq.dat / llnl.dat / sit.dat are NOT bundled} --- the MINTEQ test requested in the task could not be performed. wateq4f\_PWN.dat fails to initialise ("ERROR: RunString: No database is loaded").}
+}
+
+@misc{VitensDB,
+  author       = {de Moel, Peter},
+  title        = {vitens.dat / stimela.dat (version 3.1.7) --- {PHREEQC} database for water and waste-water treatment},
+  howpublished = {Bundled with phreeqpython 1.6.2},
+  year         = {2015},
+  note         = {verified={fulltext} (database header read directly). \textbf{NOT a drinking-water standard database.} It is a derivative of the official PHREEQC phreeqc.dat (file date 2015-01-27, Phreeqc Interactive 3.1.7-9213), maintained by Peter de Moel (Omnisys) for the Stimela platform at Delft University of Technology, aimed at water and waste-water treatment modelling. Modifications vs phreeqc.dat: added redox-uncoupled [Fe+2], [Mn+2], [N+3], [N-3], [C-4], [S-2]; added solid Vaterite (CaCO3); updated element\_gfw per CIAAW/IUPAC 2013. CAVEAT: contains the metastable CaCO3 polymorph Vaterite --- do NOT include it in a limiting-phase set (calcite is the stable phase). Struvite, Nahcolite, Trona, Ca3(PO4)2 are ABSENT.}
+}
