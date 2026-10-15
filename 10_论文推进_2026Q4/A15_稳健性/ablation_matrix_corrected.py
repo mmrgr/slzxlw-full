@@ -44,6 +44,9 @@ CHI_ON = 0.5          # 水质反馈开 (有力约束)
 CHI_OFF = 1e6         # 水质反馈关 (限值极宽, CoC 恒为设计值)
 
 
+
+REF_COC_DESIGN = 5.0   # 引擎默认设计 CoC (A26 语义列用)
+
 def dS_pot(dom: str, panel: str, sample: str, phi: float, *,
            chi: float, dp: float, cache: dict) -> dict:
     """城市自来水取水净变化 dS_pot = C - F = M1 - M0 (A13c 口径).
@@ -106,6 +109,10 @@ def main() -> None:
                     "F3_stock_vs_flow": stk,
                     "chi": chi, "dp_scale": dp, "phi": PHI,
                     **r,
+                    # ---- A26 权威语义列 (见 A26_语义统一/CHI_SEMANTICS.md) ----
+                    "limit_scale": float(chi),
+                    "chi_strictness": float(r["CoC_ai"]) / REF_COC_DESIGN,
+                    "quality_binding": bool(float(r["CoC_ai"]) < REF_COC_DESIGN * (1 - 1e-9)),
                 })
     d = pd.DataFrame(rows)
     d.to_csv(HERE / "ablation_matrix.csv", index=False, encoding="utf-8-sig")

@@ -71,6 +71,9 @@ def classify(elig: float, pool: float, tol_frac: float = 0.02) -> str:
     return "binding"
 
 
+COC_DESIGN_REF = 5.0   # 引擎默认设计 CoC (见 city_model.COC_DESIGN_DEFAULT)
+
+
 def run_case(dom: str, sample: str, pool_scale: float, phi: float, *,
              chi: float = 0.5, cache: dict) -> dict:
     """求 B1 与 B2, 返回排放—索取平衡量与三态标签.
@@ -120,6 +123,11 @@ def run_case(dom: str, sample: str, pool_scale: float, phi: float, *,
     return {
         "domain": dom, "sample": sample,
         "pool_scale": float(pool_scale), "phi": float(phi), "chi": float(chi),
+        # ---- A26 权威语义列 (见 A26_语义统一/CHI_SEMANTICS.md) ----
+        # 注: 本脚本的 `chi` **就是** limit_scale; 此处显式并列以便跨表安全。
+        "limit_scale": float(chi),
+        "chi_strictness": float(r1["CoC_ai"]) / float(COC_DESIGN_REF),
+        "quality_binding": bool(float(r1["CoC_ai"]) < COC_DESIGN_REF * (1.0 - 1e-9)),
         "pool_ml": pool, "elig_ml": elig, "inc_demand_ml": inc_demand,
         "state_by_pool": classify(elig, pool),
         # ⚠ 状态判定必须以【是否真的发生挤占】为准, 而不是"池是否有余量":
@@ -364,6 +372,12 @@ def main() -> None:
             dm: float(elig_of(dm) / cm.BASELINES[dm]["P0"]) for dm in DOMS},
         "surplus_threshold_true": thr_true_all,
         "reliable_subset": _reliable_stats(d),
+        "semantics": {
+            "chi_meaning": ("本产物的 `chi` **就是** limit_scale (限值整体缩放因子), "
+                            "**不是** chi=CoC_lim/CoC_design。权威定义见 A26_语义统一/CHI_SEMANTICS.md。"),
+            "authoritative_columns": ["limit_scale", "chi_strictness", "quality_binding"],
+            "chi_strictness_note": "由引擎实测 CoC 反解, 仅具相对意义(依赖占位限值)。",
+        },
         "runtime_s": round(time.time() - t0, 1),
         "discipline_note": (
             "三态由引擎实际分配判别 (既有用户是否拿满 + B2 是否闲置), 不用 pool 名义比较。"

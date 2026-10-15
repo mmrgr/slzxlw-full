@@ -264,7 +264,13 @@ def main() -> int:
                                 "eta_transfer": (s_city / s_ai) if s_ai > 1e-9 else np.nan,
                                 "CoC_ai": float(ai.cycles_of_concentration),
                                 "frac_ai": float(ai.reclaimed_fraction),
+                                # A26: 该列语义随 Q 而变 —— Q1(quality_limited) 为真实求解状态;
+                                # Q0(coc_mode='fixed') **不调用**水质求解器, 其值为占位符。
+                                # 故对 Q0 行该列**不可**用于"是否收敛"的判断。
+                                # 权威词表见 A26_语义统一/CHI_SEMANTICS.md §4.2。
                                 "status": r.status,
+                                "status_is_placeholder": bool(q_mode == "Q0"),
+                                "quality_solver_invoked": bool(q_mode == "Q1"),
                                 "quality_integration_status": r.quality_integration_status,
                                 "closure_residual_ml": float(r.closure_residual_ml),
                                 "fp_residual_ml": float(r.max_fixed_point_residual_ml),

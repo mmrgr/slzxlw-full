@@ -34,6 +34,7 @@ import city_model as cm  # noqa: E402
 SAMPLES = ["IEUA RP-1 (2025, tertiary)", "LADWP AWPF (2012, RO product)",
            "Figshare RW (2025, paired study)", "AI-UWM model assumption"]
 PHI = np.round(np.arange(0.0, 0.81, 0.05), 2)
+REF_COC_DESIGN = 5.0   # 引擎默认设计 CoC (A26 语义列用)
 CHI = (1.0, 0.5, 0.25)
 
 
@@ -58,6 +59,10 @@ def collect(dom: str, cache: dict) -> pd.DataFrame:
                 C = max(0.0, r0["inc_reclaimed_ml"] - r1["inc_reclaimed_ml"])
                 rows.append({
                     "domain": dom, "sample": smp, "chi": chi, "phi": float(phi),
+                    # ---- A26 权威语义列 (见 A26_语义统一/CHI_SEMANTICS.md) ----
+                    "limit_scale": float(chi),
+                    "chi_strictness": float(r1["CoC_ai"]) / REF_COC_DESIGN,
+                    "quality_binding": bool(float(r1["CoC_ai"]) < REF_COC_DESIGN * (1 - 1e-9)),
                     "M0_ml": M0, "M1_ml": M1, "phi_eff": phi_eff,
                     "F_ml": F, "C_ml": C, "x_ai_ml": float(r1["x_ai_ml"]),
                     "dS_pot_ml": C - F, "dS_pot_M_ml": M1 - M0,   # 恒等式右侧

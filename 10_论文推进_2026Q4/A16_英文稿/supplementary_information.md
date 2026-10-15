@@ -76,6 +76,40 @@ The substantive content is the sign structure of $q$:
 
 **$q>0$ is sufficient for a city-level benefit (349/349, no exception).**
 
+### S2b. Parameter-naming hazard and the nominal-vs-actual constraint tier
+
+Two *different* quantities have been called `chi` in this project, with **overlapping numeric
+ranges**:
+
+| definition | formula | range | used by |
+|---|---|---|---|
+| **strictness** | `CoC_realized / CoC_design` | ~0.08–1.0 (continuous) | `T12` surface |
+| **limit scale** | engine limit-scaling factor | 0.25 / 0.5 / 1.0 / 1e6 | A13c, A15, A17, A22, Fig. 1 |
+
+The value `1.0` means "exactly at the design ceiling" in the first convention but "still
+binding" in the second, while the second convention uses `1e6` for the non-binding limit.
+We therefore publish an authoritative semantics table (`A26_语义统一/CHI_SEMANTICS.md`) and add
+three explicit columns to every affected product — `limit_scale`, `chi_strictness`,
+`quality_binding` — without renumbering anything.
+
+**This exposed a disclosure we had been missing: the nominal tier does not determine whether
+the constraint actually binds.**
+
+| nominal `limit_scale` | share of scenarios where the constraint actually binds |
+|---:|---:|
+| 0.25 | 100% |
+| 0.50 | 92% |
+| 0.98 | **58%** |
+| 1.0 | **48%** |
+| 1e6 | **0%** |
+
+So almost half of the scenarios labelled "quality-limited" at 0.98 in fact reach the design
+ceiling and are *not* quality-constrained. Analysing by nominal tier alone therefore mixes two
+different physical regimes. The `quality_binding` column separates them, and we report it
+alongside every tier-based statistic.
+
+---
+
 ### S3.0 Solver-reliability gate (added after the A25 audit)
 
 A full audit found that **58 of 1,152 scenarios (5.03%)** in the main grid did not return
@@ -98,8 +132,10 @@ computed — so they silently contaminate any summary.
 | quantity | all | reliable only |
 |---|---:|---:|
 | scenarios | 1,152 | **1,094** |
-| $dS_{m pot}<0$ | 749 | **729** |
-| $dS_{m pot}>0$ | 323 | **285** |
+| $dS_{
+m pot}<0$ | 749 | **729** |
+| $dS_{
+m pot}>0$ | 323 | **285** |
 | zero-displacement | 446 | **441** |
 | $q>0$ | 349 | **329** |
 | $q>0$ but harmful | **0** | **0** |

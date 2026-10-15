@@ -47,4 +47,4 @@ chi
   [PASS] H4 chi 变小 => 惩罚上升 (单调): max dS_pot by chi(升序) = {0.25: 116581.0, 0.5: 21674.0, 1.0: 6478.0}
   [PASS] H5 phi->0: 仅不约束档 dS->0; 受限档 dS->(M1-M0)!=0 (A25 修正): 受限档小 phi max|dS|=19184.0 ML vs 中位 4449.0 ML
 
-完成 20.2s; 全部 Gate 通过 = True
+完成 21.1s; 全部 Gate 通过 = True

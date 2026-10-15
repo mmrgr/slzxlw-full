@@ -58,6 +58,6 @@
   }
  ],
  "all_gates_pass": true,
- "runtime_s": 20.2,
+ "runtime_s": 21.1,
  "discipline_note": "份额口径下 dS_pot = M1 - M0 >= 0 (旧结论)。H1 是代数重推导, 已明确标注为非验证; H2 是唯一的真留出 (单参数)。不使用已撤回的 psi/Delta。"
 }

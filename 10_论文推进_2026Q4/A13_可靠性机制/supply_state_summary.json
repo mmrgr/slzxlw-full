@@ -72,6 +72,15 @@
   "reliable_n_qpos_but_harmful": 0,
   "note": "头条统计须以 reliable 子集为准; 未收敛情景的分配量为 0, 派生量不可用。"
  },
- "runtime_s": 48.3,
+ "semantics": {
+  "chi_meaning": "本产物的 `chi` **就是** limit_scale (限值整体缩放因子), **不是** chi=CoC_lim/CoC_design。权威定义见 A26_语义统一/CHI_SEMANTICS.md。",
+  "authoritative_columns": [
+   "limit_scale",
+   "chi_strictness",
+   "quality_binding"
+  ],
+  "chi_strictness_note": "由引擎实测 CoC 反解, 仅具相对意义(依赖占位限值)。"
+ },
+ "runtime_s": 52.9,
  "discipline_note": "三态由引擎实际分配判别 (既有用户是否拿满 + B2 是否闲置), 不用 pool 名义比较。口径为 A13c 排放—索取平衡 (dS_pot=C-F), 不使用已撤回的 psi/Delta。模型内结论, 非观测频率。"
 }
