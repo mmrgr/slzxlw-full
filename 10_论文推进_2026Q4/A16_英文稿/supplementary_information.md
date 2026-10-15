@@ -70,11 +70,14 @@ The substantive content is the sign structure of $q$:
 
 | $q$ group | n | withdrawal falls | withdrawal rises | median $dS_{\rm pot}$ |
 |---|---:|---:|---:|---:|
-| $q>0$ | 349 | **349** | **0** | −14,325 |
-| $q\approx0$ | 326 | 208 | 38 | −5,590 |
-| $q<0$ | 477 | 192 | 285 | +1,907 |
+| $q>0$ | 290 | **290** | **0** | −14,496 |
+| $q\approx0$ | 288 | 208 | 0 | −7,651 |
+| $q<0$ | 235 | 133 | 102 | −4,259 |
 
-**$q>0$ is sufficient for a city-level benefit (349/349, no exception).**
+**$q>0$ is sufficient for a city-level benefit (290/290, no exception).**
+
+> Figures are the **A27 cited-limit** run (reliable subset $n=813$). The superseded
+> placeholder-limit figures were 349 / 326 / 477 with 285 harmful cases.
 
 ### S2b. Parameter-naming hazard and the nominal-vs-actual constraint tier
 
@@ -177,16 +180,20 @@ computed — so they silently contaminate any summary.
 
 | quantity | all | reliable only |
 |---|---:|---:|
-| scenarios | 1,152 | **1,094** |
-| $dS_{
-m pot}<0$ | 749 | **729** |
-| $dS_{
-m pot}>0$ | 323 | **285** |
-| zero-displacement | 446 | **441** |
-| $q>0$ | 349 | **329** |
+| scenarios | 1,052 | **813** |
+| $dS_{\rm pot}<0$ | — | **631** |
+| $dS_{\rm pot}>0$ | — | **102** |
+| zero-displacement | — | 372 |
+| $q>0$ | — | **290** |
 | $q>0$ but harmful | **0** | **0** |
 | criterion agreement | 1.0000 | **1.0000** |
-| identity residual (ML) | 1.16e−10 | **1.16e−10** |
+| identity residual (ML) | — | **2.55e−11** |
+
+> This table reflects the **A27 cited-limit** run. The earlier placeholder-limit run gave
+> scenarios 1,152 / reliable 1,094, $dS<0$ 729, $dS>0$ 285, zero-displacement 441,
+> $q>0$ 329, residual 1.16e−10. Both runs agree on the two qualitative facts that
+> matter: criterion agreement is exactly 1.0000, and there are **zero**
+> $q>0$-but-harmful cases.
 
 > **An algebraic relation cannot certify its own inputs.** The residual and the criterion
 > agreement are *identical* on both sets, because they are rearrangements that hold for any
@@ -451,19 +458,33 @@ Observed treated volume (n = 10,826): median 3.0, P75 16.8, P90 44.4, P95 77.8 M
 
 ## S7. Model bridging
 
-Periodic representative-day model vs full daily engine, identical inputs, **24 pairs**
-(2 domains × 2 compositions × 3 pool levels × 2 mixing ratios, 730 days each):
+Periodic representative-day model vs full daily engine, identical inputs, **36 pairs**
+(2 domains × 3 compositions × 3 pool levels × 2 mixing ratios, aggregated over 730 days).
+Re-run after the A27 cited-limit switch of §S2a:
 
-| quantity | median relative difference | max |
-|---|---:|---:|
-| $M_0$ | **0.000000** | **0.000000** (identical in 24/24) |
-| $M_1$ | 7.7% | 63.7% |
-| $\varphi_{\rm eff}$ | 0.7% | 17.3% |
-| CoC | 11.2% | 62.1% |
-| **$dS_{\rm pot}$ sign agreement** | **20/24 (83%)** | — |
+| quantity | value |
+|---|---:|
+| $M_0$ | agrees to the last digit in **36/36** (median relative difference 5.1e−16) |
+| $dS_{\rm pot}$ sign agreement | **24/36 (66.7%)** |
 
-By composition: **IEUA 12/12** sign agreement; **LADWP 8/12**. The disagreements concentrate
-in the RO-product composition — precisely the one whose chemistry changes the limiting phase.
+By composition:
+
+| composition | sign agreement | missing species (§S3.3) |
+|---|---:|---|
+| IEUA RP-1 | **12/12** | none |
+| LADWP AWPF | 8/12 | none |
+| **Figshare RW** | **4/12** | **alkalinity, silica** |
+
+> **A correction.** An earlier version of this section reported 24 pairs with 20/24 (83%)
+> agreement over 2 compositions. Those figures were (a) taken on a smaller pair set, (b)
+> measured under the withdrawn placeholder limits, and (c) stated as if the two models were
+> interchangeable. The re-run gives **24/36 (66.7%)**, and the disagreement is
+> **structurally concentrated**: 8 of Figshare RW's 12 pairs diverge, including *every* pair at
+> $pool\_scale \ge 2$, while the only composition with a complete five-species panel (IEUA)
+> agrees 12/12. Because the two models resolve an absent species differently, the divergence
+> tracks composition completeness. We therefore report bridging as a **partial** equivalence
+> check — exact on $M_0$, unreliable on $dS$ sign for incomplete compositions — and not as a
+> validated agreement.
 
 **Conclusion.** The cooling-physics and water-volume *conventions* are **proven equivalent**
 ($M_0$ identical to the last digit in every pair). The residual differences are

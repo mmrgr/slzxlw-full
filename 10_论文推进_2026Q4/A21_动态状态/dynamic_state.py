@@ -52,7 +52,16 @@ def run_case(dom: str, storage_ml: float, *, quality_state: bool,
              reuse_fraction: float = 0.6, treatment_capacity_ml_day: float = 200.0,
              tds_limits: float = 1100.0, reclaimed_tds: float = 900.0,
              potable_tds: float = 200.0) -> dict:
-    """单情景：设定储冷容量与水质状态开关，跑完整日尺度引擎。"""
+    """单情景：设定储冷容量与水质状态开关，跑完整日尺度引擎。
+
+    A28 限值口径说明:
+      tds_limits 默认 1100 mg/L 是 GB/T 50050-2017 结垢判据
+      (钙硬度+总甲基橙碱度 <= 1100 mg/L, as CaCO3) 在单物种接口下的代理设定。
+      它与 city_model.PANEL_B 的五物种引用档 (TDS 2200 / Cl 700 / hardness 750 /
+      alkalinity 350 / silica 175) 不是同一个量, 不应直接比较。
+      A21 的结论关于两条求解路径的定性分歧 (CoC 塌陷 vs 维持),
+      不依赖该限值绝对大小; 限值只为两条路径提供共同约束。
+    """
     proj, ts = load(dom)
     proj = copy.deepcopy(proj)
     dc = proj["components"]["AI_DC1"]

@@ -511,9 +511,20 @@ reported separately and never merged.
 > reverses the committed-regime result. Every number in this manuscript is from the
 > corrected runs. (ii) The daily-model bridging harness initially passed facility *makeup*
 > where *evaporation* was required, inflating results by 1.60×; with the correct basis the
-> periodic and daily models agree **exactly** ($M_0$ identical to the last digit in **24/24**
-> paired runs, median and maximum relative difference both 0.000000). Both defects are
+> periodic and daily models agree **exactly** on $M_0$ (identical to the last digit in **36/36**
+> paired runs, median relative difference 5.1 × 10⁻¹⁶). Both defects are
 > documented in `A20_模型桥接/` and `19_缺陷报告_缓存与桥接_2026-10-15.md`.
+
+> **Where the bridging disagreement sits.** The sign of $dS_{\rm pot}$ agrees in **24 of 36
+> pairs (0.667)**, and the disagreement is **not** random. It concentrates exactly on
+> (a) the **Figshare RW** composition — 8 of its 12 pairs diverge, including every pair at
+> $pool\_scale \ge 2$ — and (b) the **LADWP** pairs at $pool\_scale = 1$, where the two models
+> fall on opposite sides of zero by small margins. IEUA, the only composition with a complete
+> five-species panel, agrees in **12 of 12**. We read this as a consequence of the data gap
+> documented in §3/S3.3 rather than a failure of the identity: the models agree **exactly** on
+> $M_0$ everywhere, the disagreement tracks composition completeness, and the
+> highest-utilisation tier is where the two treatments of an absent species diverge most.
+> We therefore report bridging as a **partial** equivalence check, not a validated agreement.
 
 **Quality tiers.** As anchored in Results §5; the extrapolation tier is flagged in the data.
 
