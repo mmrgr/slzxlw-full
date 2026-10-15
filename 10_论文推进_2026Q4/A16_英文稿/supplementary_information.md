@@ -458,33 +458,30 @@ Observed treated volume (n = 10,826): median 3.0, P75 16.8, P90 44.4, P95 77.8 M
 
 ## S7. Model bridging
 
-Periodic representative-day model vs full daily engine, identical inputs, **36 pairs**
-(2 domains × 3 compositions × 3 pool levels × 2 mixing ratios, aggregated over 730 days).
-Re-run after the A27 cited-limit switch of §S2a:
+Periodic representative-day model vs full daily engine, identical inputs, **24 pairs**
+(2 domains × 2 compositions × 3 pool levels × 2 mixing ratios, `limit_scale` = 0.5,
+aggregated over 730 days). Current run: `bridging_comparison_v2.csv` /
+`bridging_summary_v2.json` (2026-10-15, after the A27 cited-limit switch of §S2a).
 
 | quantity | value |
 |---|---:|
-| $M_0$ | agrees to the last digit in **36/36** (median relative difference 5.1e−16) |
-| $dS_{\rm pot}$ sign agreement | **24/36 (66.7%)** |
+| $M_0$ | identical to the last digit in **24/24** (median relative difference 5.1e−16) |
+| $dS_{\rm pot}$ sign agreement | **23/24 (0.958)** |
 
-By composition:
+By composition: **IEUA RP-1 12/12**; **LADWP AWPF 11/12**.
 
-| composition | sign agreement | missing species (§S3.3) |
-|---|---:|---|
-| IEUA RP-1 | **12/12** | none |
-| LADWP AWPF | 8/12 | none |
-| **Figshare RW** | **4/12** | **alkalinity, silica** |
+> **Correction (A28).** An earlier version reported 36 pairs with 20/24 (83%) and later 24/36
+> (66.7%) agreement, and attributed the disagreement to Figshare RW's missing alkalinity and
+> silica. Those figures came from `bridging_comparison.csv`, generated **2026-10-14 — before the
+> A27 placeholder→cited-limit switch** — and conflated two scripts (`bridging_experiment.py`
+> writes the 36-pair file; `bridging_v2.py` writes the 24-pair file). The current 24-pair run
+> gives **23/24 (0.958)**, and **Figshare RW is not in it**, so the composition-completeness
+> attribution is **withdrawn**. Bridging remains a **partial** equivalence check: exact on
+> $M_0$, not a validated agreement on $dS$ sign.
 
-> **A correction.** An earlier version of this section reported 24 pairs with 20/24 (83%)
-> agreement over 2 compositions. Those figures were (a) taken on a smaller pair set, (b)
-> measured under the withdrawn placeholder limits, and (c) stated as if the two models were
-> interchangeable. The re-run gives **24/36 (66.7%)**, and the disagreement is
-> **structurally concentrated**: 8 of Figshare RW's 12 pairs diverge, including *every* pair at
-> $pool\_scale \ge 2$, while the only composition with a complete five-species panel (IEUA)
-> agrees 12/12. Because the two models resolve an absent species differently, the divergence
-> tracks composition completeness. We therefore report bridging as a **partial** equivalence
-> check — exact on $M_0$, unreliable on $dS$ sign for incomplete compositions — and not as a
-> validated agreement.
+> **Open item.** The older 36-pair run (which does include Figshare RW) has **not** been re-run
+> after A27 and must not be cited. Re-running `bridging_experiment.py` to test whether the
+> composition-completeness pattern survives under cited limits is a straightforward next step.
 
 **Conclusion.** The cooling-physics and water-volume *conventions* are **proven equivalent**
 ($M_0$ identical to the last digit in every pair). The residual differences are
