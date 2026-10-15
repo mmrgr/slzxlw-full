@@ -1,0 +1,25 @@
+{
+ "exact_condition": "零挤占 ⟺ (pool >= gap + x_ai_B1) OR (x_ai_B1 = 0)",
+ "derivation": "inc_B2 = min(gap, pool); inc_B1 = min(gap, pool - x_ai_B1). 分 pool>=gap 与 pool<gap 两支求解等式 inc_B1 = inc_B2 即得。",
+ "findings": {
+  "ha": {
+   "n": 576,
+   "agree_A_first_branch_only": 0.9704861111111112,
+   "agree_B_full_criterion": 0.9652777777777778,
+   "agree_C_A17_elig_over_P0": 0.7795138888888888,
+   "n_zero_disp": 241,
+   "n_xai_zero": 20
+  },
+  "co": {
+   "n": 576,
+   "agree_A_first_branch_only": 0.9774305555555556,
+   "agree_B_full_criterion": 0.96875,
+   "agree_C_A17_elig_over_P0": 0.7899305555555556,
+   "n_zero_disp": 205,
+   "n_xai_zero": 18
+  }
+ },
+ "verdict": "判据B(完整) 应达 ~1.0; 判据C(A17 的 elig/P0) 明显更低。⇒ A17 的 critical_pool_scale = (P0+gap)/P0 **不是** surplus 门槛, 应更正。",
+ "impact": "A24b 外部效度检验使用【经验测量阈值】(2.0 / 2.2 / 2.4), 非该闭式值 ⇒ 结果不受影响。但 A17 文档、summary 中的 critical_pool_scale 须加注更正。",
+ "discipline_note": "用现行 supply_state_regimes.csv 与 BASELINES 独立重算; 未改引擎。"
+}

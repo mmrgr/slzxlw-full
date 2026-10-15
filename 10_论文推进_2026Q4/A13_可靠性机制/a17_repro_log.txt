@@ -37,10 +37,16 @@ surplus         446 -98158.5   33217.4 -15281.9    429     17      32960.1
   F (AI 释放自来水) 均值 = 15282 ML
   => dS_pot 均值 = -15281.9 ML
 
-[4] 状态边界是否由外生量决定
-  D-HA: 理论临界 pool_scale = elig/P0 = 2.384
-    实测: {0.5: 'shortage', 1.0: 'shortage', 1.5: 'shortage', 2.0: 'shortage,surplus', 2.2: 'shortage,surplus', 2.4: 'shortage,surplus', 2.6: 'shortage,surplus', 3.0: 'shortage,surplus', 4.0: 'shortage,surplus'}
-  D-CO: 理论临界 pool_scale = elig/P0 = 2.567
-    实测: {0.5: 'shortage', 1.0: 'shortage', 1.5: 'shortage', 2.0: 'shortage,surplus', 2.2: 'shortage,surplus', 2.4: 'shortage,surplus', 2.6: 'shortage,surplus', 3.0: 'shortage,surplus', 4.0: 'shortage,surplus'}
+[4] 状态边界是否由外生量决定 (A25 已修正)
+  D-HA:
+    旧公式 elig/P0 = 2.384  (与实测零挤占吻合率 0.780)  <- 不是门槛
+    真实门槛 gap/P0 + x_ai/P0 ∈ [1.384, 5.176], 中位 1.882
+    真实判据吻合率 = 0.970
+    实测首个 surplus 的 pool_scale = 2.0
+  D-CO:
+    旧公式 elig/P0 = 2.567  (与实测零挤占吻合率 0.790)  <- 不是门槛
+    真实门槛 gap/P0 + x_ai/P0 ∈ [1.567, 5.332], 中位 2.091
+    真实判据吻合率 = 0.977
+    实测首个 surplus 的 pool_scale = 2.0
 
-完成 64.6s
+完成 48.3s

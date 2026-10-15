@@ -38,6 +38,13 @@ def main() -> None:
     qp22 = json.loads((A22 / "q_predictors_summary.json").read_text(encoding="utf-8"))
     mq22 = json.loads((A22 / "missing_quality_fullscan_summary.json").read_text(encoding="utf-8"))
     qt23 = json.loads((A22 / "q_theory_summary.json").read_text(encoding="utf-8"))
+    _qg = pd.read_csv(A22 / "q_predictors_grid.csv", encoding="utf-8-sig")
+    _qg = _qg[_qg.status == "converged_unique"].copy()
+    _qg["q"] = (_qg.M0_ml - _qg.M1_ml) / _qg.M1_ml
+    _TDS = {"IEUA RP-1 (2025, tertiary)": 443.0, "LADWP AWPF (2012, RO product)": 22.0,
+            "Figshare RW (2025, paired study)": 1378.0, "AI-UWM model assumption": 650.0}
+    _pred = np.array([_TDS[s_] < 180.0 for s_ in _qg["sample"]])
+    qp22_reliable = float((_pred == (_qg["q"] > 1e-9).values).mean())
     A24 = ROOT / "A24_外部锚定"
     ea24 = json.loads((A24 / "external_anchor_summary.json").read_text(encoding="utf-8"))
     ev24 = json.loads((A24 / "external_validity_summary.json").read_text(encoding="utf-8"))
@@ -81,6 +88,12 @@ def main() -> None:
         ("A24 实测污水厂数 = 10826", ea24["WWTP_scale"]["n"], 10826, 0),
         ("A24 负荷率中位 0.594", ea24["load_rate"]["median"], 0.5943, 0.002),
         ("A24 设计能力中位 8.0 ML/d", ea24["WWTP_scale"]["median"], 0.8, 0.01),
+        ("A25 主网格可靠情景数 = 1094", ss[ss.status == "converged_unique"].shape[0], 1094, 0),
+        ("A25 主网格剔除数 = 58", int((ss.status != "converged_unique").sum()), 58, 0),
+        ("A25 A13c 可靠情景数 = 373",
+         int((pd.read_csv(ROOT / "A13_可靠性机制" / "potable_flows.csv",
+                          encoding="utf-8-sig")["status"] == "converged_unique").sum()), 373, 0),
+        ("A25 A22 可靠子集准确率 = 0.803", qp22_reliable, 0.803, 0.002),
         ("A24b committed 占比 ~98% (r=0.5)",
          ev24["headline"]["committed_ha_pct"], 98.32, 5.0),
         ("A24b surplus 占比 ~2% (r=0.5)",
@@ -90,7 +103,7 @@ def main() -> None:
         ("A22 ρ(κ-1)-q 残差 (恒等式)", dc22["identity_residual"], 1.33e-15, 1e-14),
         ("A22 q>0 组有益数 = n (零例外)",
          dc22["q_sign_groups"][0]["n_beneficial"], dc22["q_sign_groups"][0]["n"], 0),
-        ("A22 最佳单变量准确率 0.768",
+        ("A22 最佳单变量准确率(全样本) 0.768",
          qp22["best_single_predictor"]["acc"], 0.768, 0.005),
         ("A22 缺失填补符号翻转 = 0", mq22["total_sign_flips_nonzero"], 0, 0),
         ("A23 q 闭式最大差异", qt23["closed_form_max_diff"], 5.6e-17, 1e-15),
@@ -115,8 +128,9 @@ def main() -> None:
         ("A17 判据为恒等式重排 (吻合率 1.000)",
          bool((((ss["x_ai_B1_ml"] + (ss["M0_ml"] - ss["M1_ml"])) > ss["displaced_ml"])
                == (ss["dS_pot_ml"] < -1e-6)).mean() == 1.0)),
-        ("A17 纯挤占仍有负值 (114 例, 组成驱动)",
-         bool(int((ss[(ss.displaced_ml - ss["x_ai_B1_ml"]).abs() < 1.0]["dS_pot_ml"] < -1e-6).sum()) > 0)),
+        ("A17 纯挤占仍有负值 (组成驱动)",
+         bool(int((ss[(ss.status == "converged_unique")
+                       & ((ss.displaced_ml - ss["x_ai_B1_ml"]).abs() < 1.0)]["dS_pot_ml"] < -1e-6).sum()) > 0)),
         ("free 档符号单向 (0 个正值)",
          bool(int((ss[ss.chi_label == "free"]["dS_pot_ml"] > 1e-6).sum()) == 0)),
         ("A21 两路径 CoC 定性分歧 (volume-only 塌陷)",

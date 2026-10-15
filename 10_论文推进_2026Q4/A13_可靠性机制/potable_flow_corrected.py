@@ -104,8 +104,16 @@ def potable_flows(dom: str, panel: str, sample: str, phi: float, *,
     C = max(0.0, r0["inc_reclaimed_ml"] - inc_recl)
 
     dS_pot = C - F                           # 城市自来水取水净变化
+    # ⚠ A25 审计(2026-10-16): 本脚本的 `chi` 直接传给 limit_scale, 因此 chi=1.00 表示
+    #   limit_scale=1.0 —— 该档 **仍然受水质约束** (CoC≈4.60 < 设计值 5.0)。
+    #   它与 A17 的 chi_label="free" (limit_scale=1e6, CoC=设计值, 真正不约束) **语义不同**,
+    #   两者不可混用或直接比较。此处显式输出 limit_scale 与是否约束的标签以杜绝歧义。
+    _ls = float(chi)
     return {
         "domain": dom, "sample": sample, "phi": float(phi), "chi": float(chi),
+        "limit_scale": _ls,
+        "chi_semantics": ("unconstrained" if _ls >= 1e3
+                          else "binding"),
         "M0_ml": M0, "M1_ml": M1, "phi_eff": phi1,
         "Wpot_ai_B2_ml": Wpot_ai_B2, "Wpot_ai_B1_ml": Wpot_ai_B1,
         "F_released_ml": F, "C_claimed_ml": C, "dS_pot_ml": dS_pot,
@@ -132,6 +140,8 @@ def main() -> None:
     rows = []
     for dom in ("ha", "co"):
         for smp in SAMPLES:
+            # ⚠ chi 即 limit_scale: 1.0 仍受约束(CoC≈4.60); 本脚本无"不约束"档。
+            #   若需不约束极限, 必须显式用 limit_scale=1e6 (见 A17 的 free 档)。
             for chi in (1.0, 0.5, 0.25):
                 for phi in np.round(np.arange(0.0, 0.81, 0.05), 2):
                     try:

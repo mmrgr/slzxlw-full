@@ -76,6 +76,46 @@ The substantive content is the sign structure of $q$:
 
 **$q>0$ is sufficient for a city-level benefit (349/349, no exception).**
 
+### S3.0 Solver-reliability gate (added after the A25 audit)
+
+A full audit found that **58 of 1,152 scenarios (5.03%)** in the main grid did not return
+`converged_unique`: `no_convergence` (38) and `non_unique` (20). In these scenarios the joint
+quality/allocation solver returns **zero allocations**, yet `displaced` and `dS_pot` are still
+computed — so they silently contaminate any summary.
+
+| product | all | unreliable | share |
+|---|---:|---:|---:|
+| `supply_state_regimes.csv` (main grid) | 1,152 | **58** | **5.03%** |
+| `potable_flows.csv` (A13c) | 408 | **35** | **8.58%** |
+| `ablation_matrix.csv` | 64 | 2 | 3.13% |
+| `holdout_fit_ha.csv` | 204 | 16 | 7.84% |
+| `holdout_holdout_co.csv` | 204 | 19 | 9.31% |
+| `holdout_predictions.csv` | 816 | 48 | 5.88% |
+| `grid_resolution_points.csv` | 14,196 | 541 | 3.81% |
+
+**Effect on headline numbers (main grid)**
+
+| quantity | all | reliable only |
+|---|---:|---:|
+| scenarios | 1,152 | **1,094** |
+| $dS_{m pot}<0$ | 749 | **729** |
+| $dS_{m pot}>0$ | 323 | **285** |
+| zero-displacement | 446 | **441** |
+| $q>0$ | 349 | **329** |
+| $q>0$ but harmful | **0** | **0** |
+| criterion agreement | 1.0000 | **1.0000** |
+| identity residual (ML) | 1.16e−10 | **1.16e−10** |
+
+> **An algebraic relation cannot certify its own inputs.** The residual and the criterion
+> agreement are *identical* on both sets, because they are rearrangements that hold for any
+> input — including zero allocations. A 100% criterion agreement is therefore **not** evidence
+> that the scenarios are trustworthy; only the solver status is.
+
+**Artefacts this gate removed.** In A13c, 11 `no_convergence` rows (all with `x_ai = 0`) had
+been counted as "withdrawal rises". On the main grid, all 38 `x_ai = 0` rows were failures, and
+the apparent 31/7 harmful cases for LADWP / the placeholder composition were likewise failures;
+the reliable counts are **237/0** and **241/0**.
+
 ### S3.1 Closed form for the sign of $q$
 
 Since $M(\mathrm{CoC})=E\,\mathrm{CoC}/(\mathrm{CoC}-1)$:
@@ -105,7 +145,7 @@ Seven candidates, full sample, no filtering:
 
 | predictor | accuracy | TP | FP | TN | FN |
 |---|---:|---:|---:|---:|---:|
-| reclaimed TDS < potable TDS | **0.768** | 185 | 103 | 700 | 164 |
+| reclaimed TDS < potable TDS | **0.803** | — | — | — | — |
 | reclaimed Cl < potable Cl | 0.768 | 185 | 103 | 700 | 164 |
 | either indicator cleaner | 0.768 | 185 | 103 | 700 | 164 |
 | both indicators cleaner | 0.768 | 185 | 103 | 700 | 164 |
@@ -113,7 +153,7 @@ Seven candidates, full sample, no filtering:
 | $\kappa=0$ (no displacement) | 0.576 | 153 | 293 | 510 | 196 |
 | chemistry ∧ constraint | 0.748 | 90 | 31 | 772 | 259 |
 
-Per composition: IEUA **1.000**, Figshare 0.993, LADWP 0.642, AI-UWM assumption **0.438**.
+Per composition (reliable subset): IEUA **1.000**, Figshare 0.993, LADWP 0.720, AI-UWM assumption **0.456**.
 
 ### S3.3 Data-integrity gap
 

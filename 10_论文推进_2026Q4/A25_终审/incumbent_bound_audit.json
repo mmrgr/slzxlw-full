@@ -1,0 +1,137 @@
+{
+ "question": "incumbent 的可主张上界是 gap 还是 P0+gap?",
+ "evidence": "city_model.solve_city 传 max_reclaimed_ml=max(inc_claim, gap, 1e-9) 且 inc_claim=0 ⇒ 上界是 gap; A17 自身也写 inc_demand = bl['gap']。",
+ "conclusion": "A17 的 elig = P0 + gap 把 incumbent 上界**高估了一个 P0**, 导致 critical_pool_scale = (P0+gap)/P0 比真实 surplus 门槛高约 1.0。真实门槛为 pool >= gap + x_ai_B1, 即 pool_scale >= gap/P0 + x_ai_B1/P0。",
+ "by_domain": {
+  "ha": {
+   "P0": 24404.451231393024,
+   "gap": 33778.84676860697,
+   "P0_plus_gap": 58183.297999999995,
+   "gap_over_P0": 1.3841264631738597,
+   "rows": [
+    {
+     "pool": 21964.00610825372,
+     "pool_over_P0": 0.9,
+     "inc_reclaimed": 13772.69092216889,
+     "saturated": false,
+     "x_ai": 8191.315186084832
+    },
+    {
+     "pool": 29285.341477671627,
+     "pool_over_P0": 1.2,
+     "inc_reclaimed": 18302.469517659858,
+     "saturated": false,
+     "x_ai": 10982.87196001177
+    },
+    {
+     "pool": 33778.20094937109,
+     "pool_over_P0": 1.3841,
+     "inc_reclaimed": 21066.90883973231,
+     "saturated": false,
+     "x_ai": 12711.292109638778
+    },
+    {
+     "pool": 39047.12197022884,
+     "pool_over_P0": 1.6,
+     "inc_reclaimed": 24293.89881784368,
+     "saturated": false,
+     "x_ai": 14753.22315238516
+    },
+    {
+     "pool": 48808.90246278605,
+     "pool_over_P0": 2.0,
+     "inc_reclaimed": 30229.59349272386,
+     "saturated": false,
+     "x_ai": 18579.30897006219
+    },
+    {
+     "pool": 58182.65218076411,
+     "pool_over_P0": 2.3841,
+     "inc_reclaimed": 33778.84676860697,
+     "saturated": true,
+     "x_ai": 20911.784950116642
+    },
+    {
+     "pool": 63451.57320162187,
+     "pool_over_P0": 2.6,
+     "inc_reclaimed": 33778.84676860697,
+     "saturated": true,
+     "x_ai": 20911.784950116642
+    },
+    {
+     "pool": 73213.35369417907,
+     "pool_over_P0": 3.0,
+     "inc_reclaimed": 33778.84676860697,
+     "saturated": true,
+     "x_ai": 20911.784950116642
+    }
+   ]
+  },
+  "co": {
+   "P0": 22413.97659165322,
+   "gap": 35116.27540834678,
+   "P0_plus_gap": 57530.252,
+   "gap_over_P0": 1.5667133078662978,
+   "rows": [
+    {
+     "pool": 20172.578932487897,
+     "pool_over_P0": 0.9,
+     "inc_reclaimed": 12898.456655122538,
+     "saturated": false,
+     "x_ai": 7274.122277365358
+    },
+    {
+     "pool": 26896.77190998386,
+     "pool_over_P0": 1.2,
+     "inc_reclaimed": 17148.225857378053,
+     "saturated": false,
+     "x_ai": 9748.546052605809
+    },
+    {
+     "pool": 31023.185000507223,
+     "pool_over_P0": 1.3841,
+     "inc_reclaimed": 19743.698362152252,
+     "saturated": false,
+     "x_ai": 11279.48663835497
+    },
+    {
+     "pool": 35862.362546645156,
+     "pool_over_P0": 1.6,
+     "inc_reclaimed": 22775.33226392384,
+     "saturated": false,
+     "x_ai": 13087.030282721313
+    },
+    {
+     "pool": 44827.95318330644,
+     "pool_over_P0": 2.0,
+     "inc_reclaimed": 28357.129791097082,
+     "saturated": false,
+     "x_ai": 16470.823392209357
+    },
+    {
+     "pool": 53437.161592160446,
+     "pool_over_P0": 2.3841,
+     "inc_reclaimed": 33673.96146756964,
+     "saturated": false,
+     "x_ai": 19763.2001245908
+    },
+    {
+     "pool": 58276.339138298375,
+     "pool_over_P0": 2.6,
+     "inc_reclaimed": 35116.27540834678,
+     "saturated": true,
+     "x_ai": 20668.284428367333
+    },
+    {
+     "pool": 67241.92977495966,
+     "pool_over_P0": 3.0,
+     "inc_reclaimed": 35116.27540834678,
+     "saturated": true,
+     "x_ai": 20668.284428367333
+    }
+   ]
+  }
+ },
+ "impact": "A24b 的外部效度检验**不受影响**(它用经验测量阈值 2.0/2.2/2.4, 非该闭式值)。但 A17 文档与 summary 中的 critical_pool_scale 必须更正/加注。",
+ "discipline_note": "直接调用 city_model.solve_city 独立验证; 未改引擎。"
+}

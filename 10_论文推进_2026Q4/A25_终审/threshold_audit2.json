@@ -1,0 +1,29 @@
+{
+ "problem_A": {
+  "n_odd": 38,
+  "displaced_vs_inc_diff": 7.275957614183426e-12
+ },
+ "problem_B": {
+  "ha": {
+   "gap_over_P0": 1.3841264631738597,
+   "thr_min": 1.3841264631738597,
+   "thr_median": 1.8817423108544429,
+   "thr_max": 5.175554104085405,
+   "z_thr_max": 3.447751322232949,
+   "z_thr_median": 1.8713337351402588,
+   "grid_min_scale_with_surplus": 2.0
+  },
+  "co": {
+   "gap_over_P0": 1.5667133078662978,
+   "thr_min": 1.5667133078662978,
+   "thr_median": 2.0911278895939347,
+   "thr_max": 5.332116060896377,
+   "z_thr_max": 3.7848351582507114,
+   "z_thr_median": 2.081411577232421,
+   "grid_min_scale_with_surplus": 2.0
+  }
+ },
+ "finding": "A17 的 critical_pool_scale = elig/P0 = (P0+gap)/P0 **不是** surplus 门槛, 比真实门槛 (gap/P0 + x_ai/P0) 高出一个 P0。真实门槛随 phi/chi/水样变化。",
+ "impact": "A17 文档与 summary 的 critical_pool_scale 须加注更正。A24b 用的是经验/真实门槛, 结论(committed 占绝对多数)对阈值选择稳健。",
+ "discipline_note": "独立重算; 未改引擎。"
+}

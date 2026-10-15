@@ -145,6 +145,15 @@ Total runtime: under 1 minute for the corrected scripts (the obsolete
   mechanism; the project's original conclusion was independently re-derived and confirmed.
 - Every number in `manuscript_en_v2.md` is traceable to a row above.
 - Retractions are preserved in place and cross-referenced rather than deleted.
-- Negative results are retained: `dS_pot` never negative in the fixed-pool regime; the
-  identity fails in the added-capacity regime (expected, reported); the genuine holdout is
-  only R² = 0.599; grid resolution affects bottleneck identification.
+- Negative results are retained: the identity fails in the added-capacity regime (expected,
+  reported); the genuine holdout is only R² = 0.56; grid resolution affects bottleneck
+  identification.
+- **RETRACTED (A25 audit, 2026-10-16)**: the earlier statement "`dS_pot` never negative in
+  the fixed-pool regime" no longer holds. After the composition cache-key fix, the reliable
+  subset of A13c (n = 373, `pool = P0`) contains **121 negative values** (LADWP 59/91 and the
+  AI-UWM placeholder 58/90 negative; Figshare RW 90/96 and IEUA 96/96 positive). The earlier
+  "zero negatives" was an artefact of the composition dimension being inactive. See
+  `A25_终审/A25_全面终审报告.md` §3.
+- **Solver-status gate (new)**: every product must report `n_all / n_reliable / n_excluded`;
+  scenarios with `status != converged_unique` are excluded from headline statistics
+  (A17: 58/1152; A13c: 35/408). See `A25_终审/A25_全面终审报告.md` §1.

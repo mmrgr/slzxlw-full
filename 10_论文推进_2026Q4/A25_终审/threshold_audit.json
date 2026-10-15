@@ -1,0 +1,30 @@
+{
+ "finding": "A17 的 critical_pool_scale = elig/P0 = (P0+gap)/P0 **不是** surplus(零挤占)门槛。真正的门槛是 pool_scale >= gap/P0 + x_ai_B1/P0, 随 phi/chi/水样变化, 而非常数。",
+ "correct_criterion": "零挤占 <=> pool >= gap + x_ai_B1",
+ "by_domain": [
+  {
+   "domain": "ha",
+   "P0": 24404.451231393024,
+   "gap": 33778.84676860697,
+   "gap_over_P0": 1.3841264631738597,
+   "elig_over_P0_reported": 2.3841264631738595,
+   "agree_true_criterion": 0.9704861111111112,
+   "agree_A17_criterion": 0.7795138888888888,
+   "thr_true_min": 1.3841264631738597,
+   "thr_true_max": 5.175554104085405
+  },
+  {
+   "domain": "co",
+   "P0": 22413.97659165322,
+   "gap": 35116.27540834678,
+   "gap_over_P0": 1.5667133078662978,
+   "elig_over_P0_reported": 2.566713307866298,
+   "agree_true_criterion": 0.9774305555555556,
+   "agree_A17_criterion": 0.7899305555555556,
+   "thr_true_min": 1.5667133078662978,
+   "thr_true_max": 5.332116060896377
+  }
+ ],
+ "implication": "A17 报告的 2.384/2.567 只在 x_ai_B1 = P0 这一特殊情形下等于真实门槛; 故不能作为 surplus 的临界值使用。A24b 已改用经验测量阈值(2.0/2.2/2.4), 该结果不受此问题影响。但 A17 文档与 summary 中的 critical_pool_scale 应更正。",
+ "discipline_note": "用现行 supply_state_regimes.csv 与 BASELINES 独立重算; 未改引擎。"
+}

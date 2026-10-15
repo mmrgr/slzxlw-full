@@ -1,0 +1,12 @@
+{
+ "status_counts": {
+  "converged_unique": 1094,
+  "no_convergence": 38,
+  "non_unique": 20
+ },
+ "n_unreliable": 58,
+ "share_unreliable_pct": 5.034722222222222,
+ "unreliable_all_zero_alloc": false,
+ "criterion_agreement_all": 1.0,
+ "criterion_agreement_clean": 1.0
+}

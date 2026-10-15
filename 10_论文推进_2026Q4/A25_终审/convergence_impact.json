@@ -1,0 +1,138 @@
+{
+ "A17 supply_state_regimes": {
+  "n_all": 1152,
+  "n_ok": 1094,
+  "n_excluded": 58,
+  "share_excluded_pct": 5.03,
+  "n_dS_neg": {
+   "all": 749,
+   "ok": 729,
+   "unchanged": false
+  },
+  "n_dS_pos": {
+   "all": 323,
+   "ok": 285,
+   "unchanged": false
+  },
+  "n_zero_disp": {
+   "all": 446,
+   "ok": 441,
+   "unchanged": false
+  },
+  "n_xai_zero": {
+   "all": 38,
+   "ok": 0,
+   "unchanged": false
+  },
+  "n_q_pos": {
+   "all": 349,
+   "ok": 329,
+   "unchanged": false
+  },
+  "n_qpos_but_harmful": {
+   "all": 0,
+   "ok": 0,
+   "unchanged": true
+  },
+  "identity_resid_max": {
+   "all": 1.1641532182693481e-10,
+   "ok": 1.1641532182693481e-10,
+   "unchanged": true
+  },
+  "criterion_agreement": {
+   "all": 1.0,
+   "ok": 1.0,
+   "unchanged": true
+  }
+ },
+ "A13c potable_flows": {
+  "n_all": 408,
+  "n_ok": 373,
+  "n_excluded": 35,
+  "share_excluded_pct": 8.58,
+  "n_rows": {
+   "all": 408,
+   "ok": 373,
+   "unchanged": false
+  },
+  "mean_dS_pot_ml": {
+   "all": 3812.789,
+   "ok": 3488.21,
+   "unchanged": false
+  },
+  "mean_C_claimed_ml": {
+   "all": 8022.897,
+   "ok": 8093.368,
+   "unchanged": false
+  },
+  "mean_x_ai_ml": {
+   "all": 7399.084,
+   "ok": 8093.368,
+   "unchanged": false
+  },
+  "mean_M0_ml": {
+   "all": 56139.756,
+   "ok": 55085.917,
+   "unchanged": false
+  },
+  "mean_M1_ml": {
+   "all": 59328.733,
+   "ok": 58574.127,
+   "unchanged": false
+  },
+  "mean_phi": {
+   "all": 0.4,
+   "ok": 0.425,
+   "unchanged": false
+  }
+ },
+ "A15 ablation_matrix": {
+  "n_all": 64,
+  "n_ok": 62,
+  "n_excluded": 2,
+  "share_excluded_pct": 3.12,
+  "n_rows": {
+   "all": 64,
+   "ok": 62,
+   "unchanged": false
+  }
+ },
+ "A15 holdout_fit_ha.csv": {
+  "n_all": 204,
+  "n_ok": 188,
+  "n_excluded": 16,
+  "share_excluded_pct": 7.84,
+  "n_rows": {
+   "all": 204,
+   "ok": 188,
+   "unchanged": false
+  }
+ },
+ "A15 holdout_holdout_co.csv": {
+  "n_all": 204,
+  "n_ok": 185,
+  "n_excluded": 19,
+  "share_excluded_pct": 9.31,
+  "n_rows": {
+   "all": 204,
+   "ok": 185,
+   "unchanged": false
+  }
+ },
+ "A15 grid_resolution_points": {
+  "n_all": 14196,
+  "n_ok": 13655,
+  "n_excluded": 541,
+  "share_excluded_pct": 3.81,
+  "n_rows": {
+   "all": 14196,
+   "ok": 13655,
+   "unchanged": false
+  },
+  "n_feasible": {
+   "all": 9908,
+   "ok": 9908,
+   "unchanged": true
+  }
+ }
+}

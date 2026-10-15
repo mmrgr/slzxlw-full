@@ -31,10 +31,47 @@
  "surplus_C_mean_ml": 0.0,
  "surplus_F_mean_ml": 15281.906362312102,
  "surplus_dS_mean_ml": -15281.906362312102,
- "critical_pool_scale": {
+ "critical_pool_scale_OLD_NOT_A_THRESHOLD": {
   "ha": 2.3841264631738595,
   "co": 2.566713307866298
  },
- "runtime_s": 64.6,
+ "surplus_threshold_true": {
+  "ha": {
+   "old_formula_elig_over_P0": 2.3841264631738595,
+   "old_accuracy": 0.7795138888888888,
+   "true_threshold_min": 1.3841264631738597,
+   "true_threshold_median": 1.8817423108544429,
+   "true_threshold_max": 5.175554104085405,
+   "true_criterion_accuracy": 0.9704861111111112,
+   "observed_first_surplus_pool_scale": 2.0
+  },
+  "co": {
+   "old_formula_elig_over_P0": 2.566713307866298,
+   "old_accuracy": 0.7899305555555556,
+   "true_threshold_min": 1.5667133078662978,
+   "true_threshold_median": 2.0911278895939347,
+   "true_threshold_max": 5.332116060896377,
+   "true_criterion_accuracy": 0.9774305555555556,
+   "observed_first_surplus_pool_scale": 2.0
+  }
+ },
+ "reliable_subset": {
+  "n_all": 1152,
+  "n_reliable": 1094,
+  "n_excluded": 58,
+  "excluded_share_pct": 5.03,
+  "status_counts": {
+   "converged_unique": 1094,
+   "no_convergence": 38,
+   "non_unique": 20
+  },
+  "reliable_n_dS_neg": 729,
+  "reliable_n_dS_pos": 285,
+  "reliable_n_zero_disp": 441,
+  "reliable_n_q_pos": 329,
+  "reliable_n_qpos_but_harmful": 0,
+  "note": "头条统计须以 reliable 子集为准; 未收敛情景的分配量为 0, 派生量不可用。"
+ },
+ "runtime_s": 48.3,
  "discipline_note": "三态由引擎实际分配判别 (既有用户是否拿满 + B2 是否闲置), 不用 pool 名义比较。口径为 A13c 排放—索取平衡 (dS_pot=C-F), 不使用已撤回的 psi/Delta。模型内结论, 非观测频率。"
 }
