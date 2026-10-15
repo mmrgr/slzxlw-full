@@ -139,6 +139,15 @@ def main() -> None:
     # ⚠ 关键: 恒等式 dS_pot = C - F = M1 - M0 **仅在份额口径 (dp=0)** 成立。
     #   dp>0 时 AI 从新增产能取水, F 可超过 C, 此时 dS_pot 可负 —— 那是
     #   "容量扩张使城市自来水需求下降", 属另一机制, 本表分开报告。
+    # ---- A25: 求解器状态门禁 (未收敛情景分配量为 0, 必须剔除) ----
+    _d_all = d.copy()
+    d = d[d["status"].astype(str) == "converged_unique"].copy()
+    _n_all, _n_ok = int(len(_d_all)), int(len(d))
+    rec(f"\n[A25 门禁] 全样本 {_n_all} -> 可靠 {_n_ok} "
+        f"(剔除 {_n_all - _n_ok} 个未收敛/多解情景)")
+    if len(d) == 0:
+        raise SystemExit("可靠子集为空")
+
     gates = []
     d["pred_unified"] = d["C_claimed_ml"] - (d["M0_ml"] - d["M1_ml"]) - d["x_ai_ml"]
     d0 = d[d.dp_scale == 0.0]
@@ -187,6 +196,8 @@ def main() -> None:
     summary = {
         "design": "2^3 全因子: 水质反馈 x 供给竞争 x 存量/增量; phi=0.7",
         "n_rows": int(len(d)),
+        "n_rows_all": int(len(_d_all)),
+        "n_excluded_unreliable": int(len(_d_all) - len(d)),
         "phi": PHI, "chi_on": CHI_ON, "chi_off_label": "1e6 (限值极宽)",
         "identity_max_err_share_only_ml": float(e0),
         "identity_max_err_flow_ml": float(e1),

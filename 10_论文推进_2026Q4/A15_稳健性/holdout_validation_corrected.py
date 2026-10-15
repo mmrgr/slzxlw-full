@@ -98,6 +98,12 @@ def main() -> None:
 
     gates = []
 
+    # ---- A25: 求解器状态门禁 (未收敛情景分配量为 0, phi_eff=0, 必须剔除) ----
+    _na, _nb = int(len(fit)), int(len(hold))
+    fit = fit[fit["status"].astype(str) == "converged_unique"].copy()
+    hold = hold[hold["status"].astype(str) == "converged_unique"].copy()
+    rec(f"\n[A25 门禁] 拟合域 {_na}->{len(fit)}, 留出域 {_nb}->{len(hold)} (剔除未收敛)")
+
     # ---------- H1: 代数重推导 (非验证) ----------
     rec("\n[H1] 闭式 dS_pot = M1 - M0 到 co 的吻合度 (⚠ 代数重推导, 非真留出)")
     hold["pred_unified"] = hold.C_ml - (hold.M0_ml - hold.M1_ml) - hold["x_ai_ml"]
@@ -157,12 +163,31 @@ def main() -> None:
                   "value": f"max dS_pot by chi(升序) = {agg.round(0).to_dict()}"})
 
     # ---------- 边界: phi -> 0 ----------
-    rec("\n[H5] 边界: phi->0 时 dS_pot -> 0")
-    z = fit[np.isclose(fit.phi, 0.0)]
-    h5_ok = bool(z.dS_pot_ml.abs().max() < 1e-6)
-    rec(f"  phi=0 的 {len(z)} 个情景 max |dS_pot| = {z.dS_pot_ml.abs().max():.3e} ML")
-    gates.append({"gate": "H5 phi=0 => dS_pot=0", "passed": h5_ok,
-                  "value": f"max |dS_pot| = {z.dS_pot_ml.abs().max():.3e} ML"})
+    # A25 修正两点:
+    #  (i)  原实现 z = fit[phi==0]; 但本数据集无 phi=0 行(phi 从 0.05 起) => z 空 => nan;
+    #       修复前之所以"PASS 且值 0.000", 是因为 phi=0 行全部是未收敛情景
+    #       (分配量为 0 => dS 恒 0) —— 用垃圾数据通过的门禁。
+    #  (ii) 原期望 "phi->0 => dS->0" 物理上错误。实测 chi=0.25, phi=0.05:
+    #       M0=104948, M1=93414 => dS = M1-M0 = -11535 ML。
+    #       正确: 仅当水质不约束(M0=M1)时 phi->0 才 dS->0; 受限档 dS->(M1-M0)!=0。
+    rec("\n[H5] 边界: phi->0 时 dS_pot 的行为 (A25 修正)")
+    rec(f"  无 phi=0 行 (最小 phi={fit.phi.min():.2f}) => 原 phi=0 断言 VACUOUS, 不计通过")
+    low = fit[fit.phi <= 0.10]
+    med = float(fit.dS_pot_ml.abs().median()) or 1.0
+    free_ok = bool(h3_ok)           # 不约束档由 H3 (limit_scale=1e6) 验证
+    bound_ok = bool(low.dS_pot_ml.abs().max() >= 0.5 * med) if len(low) else False
+    rec(f"  (a) 不约束档 (limit_scale=1e6, H3 已验) dS=0: {free_ok}")
+    rec(f"  (b) 受限档 phi<=0.10 n={len(low)}: max|dS| = "
+        f"{low.dS_pot_ml.abs().max() if len(low) else float('nan'):.1f} ML "
+        f"(全样本中位 |dS| = {med:.1f} ML) => 小 phi 已显著 = {bound_ok}")
+    rec("  => 'phi->0 => dS->0' 仅在水质不约束时成立; 受限档 dS->(M1-M0)!=0")
+    h5_ok = bool(free_ok and bound_ok)
+    gates.append({
+        "gate": "H5 phi->0: 仅不约束档 dS->0; 受限档 dS->(M1-M0)!=0 (A25 修正)",
+        "passed": h5_ok,
+        "value": f"受限档小 phi max|dS|="
+                 f"{low.dS_pot_ml.abs().max() if len(low) else float('nan'):.1f} ML "
+                 f"vs 中位 {med:.1f} ML"})
 
     rec("\n[Gates]")
     for g in gates:
@@ -184,7 +209,16 @@ def main() -> None:
                             "trivial_baseline_R2": r2_base},
         "H3_no_quality_constraint_max_abs_dS": float(w.dS_pot_ml.abs().max()),
         "H4_chi_monotone": bool(h4_ok),
-        "H5_phi0_max_abs_dS": float(z.dS_pot_ml.abs().max()),
+        "H5_phi0_boundary": {
+            "phi0_rows_present": False,
+            "note": ("A25: 本数据集无 phi=0 行; 原 'phi=0 => dS=0' 断言 VACUOUS 且物理上错误。"
+                     "正确表述: 仅水质不约束(limit_scale=1e6)时 phi->0 才 dS->0;"
+                     "受限档 dS->(M1-M0)!=0。"),
+            "bound_max_abs_dS_phi_le_0p10": float(low.dS_pot_ml.abs().max()),
+            "median_abs_dS_all": float(med),
+        },
+        "solver_gate": {"n_fit_all": _na, "n_fit_reliable": int(len(fit)),
+                        "n_holdout_all": _nb, "n_holdout_reliable": int(len(hold))},
         "gates": gates,
         "all_gates_pass": bool(all(g["passed"] for g in gates)),
         "runtime_s": round(time.time() - t0, 1),

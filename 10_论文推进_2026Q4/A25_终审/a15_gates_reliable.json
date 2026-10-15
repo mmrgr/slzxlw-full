@@ -1,0 +1,58 @@
+{
+ "ablation": {
+  "n_all": 64,
+  "n_ok": 62,
+  "all": {
+   "unified_resid_max": 7.275957614183426e-12,
+   "n": 64
+  },
+  "ok": {
+   "unified_resid_max": 7.275957614183426e-12,
+   "n": 62
+  },
+  "unchanged": false
+ },
+ "holdout_R2": {
+  "all": 0.974571,
+  "ok": 1.0
+ },
+ "holdout_fit_ha": {
+  "n_all": 204,
+  "n_ok": 188,
+  "all": {
+   "n": 204,
+   "ident_resid_max": 2.9103830456733704e-11
+  },
+  "ok": {
+   "n": 188,
+   "ident_resid_max": 2.9103830456733704e-11
+  },
+  "unchanged": false
+ },
+ "holdout_holdout_co": {
+  "n_all": 204,
+  "n_ok": 185,
+  "all": {
+   "n": 204,
+   "ident_resid_max": 1.4551915228366852e-11
+  },
+  "ok": {
+   "n": 185,
+   "ident_resid_max": 1.4551915228366852e-11
+  },
+  "unchanged": false
+ },
+ "grid_resolution": {
+  "n_all": 14196,
+  "n_ok": 13655,
+  "all": {
+   "n_feasible": 9908,
+   "n": 14196
+  },
+  "ok": {
+   "n_feasible": 9908,
+   "n": 13655
+  },
+  "unchanged": false
+ }
+}

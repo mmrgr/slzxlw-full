@@ -1,24 +1,35 @@
 {
  "estimand": "dS_pot = C - F (份额口径 dp=0)",
- "n_fit_ha": 204,
- "n_holdout_co": 204,
+ "n_fit_ha": 188,
+ "n_holdout_co": 185,
  "identity_max_err_ml": 1.4551915228366852e-11,
  "H1_algebraic_rederivation": {
   "co_R2": 1.0,
-  "co_RMSE_ml": 3.7713722951522014e-12,
+  "co_RMSE_ml": 3.9603049252536795e-12,
   "is_validation": false,
   "caveat": "使用 co 引擎量 M0/M1, 与生成式同源"
  },
  "H2_true_holdout": {
-  "frozen_param_a": 0.38458857535862123,
+  "frozen_param_a": 0.39306200426063015,
   "fitted_on": "ha",
-  "co_R2_phi_eff": 0.5581982722260534,
-  "co_median_abs_err": 0.02680300201816664,
-  "trivial_baseline_R2": -0.04437044221300113
+  "co_R2_phi_eff": 0.5574087813517391,
+  "co_median_abs_err": 0.02458284368861978,
+  "trivial_baseline_R2": -0.049851897098937004
  },
  "H3_no_quality_constraint_max_abs_dS": 0.0,
  "H4_chi_monotone": true,
- "H5_phi0_max_abs_dS": 0.0,
+ "H5_phi0_boundary": {
+  "phi0_rows_present": false,
+  "note": "A25: 本数据集无 phi=0 行; 原 'phi=0 => dS=0' 断言 VACUOUS 且物理上错误。正确表述: 仅水质不约束(limit_scale=1e6)时 phi->0 才 dS->0;受限档 dS->(M1-M0)!=0。",
+  "bound_max_abs_dS_phi_le_0p10": 19184.022312512458,
+  "median_abs_dS_all": 4448.954499680864
+ },
+ "solver_gate": {
+  "n_fit_all": 204,
+  "n_fit_reliable": 188,
+  "n_holdout_all": 204,
+  "n_holdout_reliable": 185
+ },
  "gates": [
   {
    "gate": "H1 恒等式自检 (非留出)",
@@ -28,7 +39,7 @@
   {
    "gate": "H2 phi_eff 单参数律优于平凡基线",
    "passed": true,
-   "value": "律 R²=0.558198 vs 基线 R²=-0.044370"
+   "value": "律 R²=0.557409 vs 基线 R²=-0.049852"
   },
   {
    "gate": "H3 无水质约束 => dS_pot=0 (纯再分配)",
@@ -41,12 +52,12 @@
    "value": "max dS_pot by chi(升序) = {0.25: 116581.0, 0.5: 21674.0, 1.0: 6478.0}"
   },
   {
-   "gate": "H5 phi=0 => dS_pot=0",
+   "gate": "H5 phi->0: 仅不约束档 dS->0; 受限档 dS->(M1-M0)!=0 (A25 修正)",
    "passed": true,
-   "value": "max |dS_pot| = 0.000e+00 ML"
+   "value": "受限档小 phi max|dS|=19184.0 ML vs 中位 4449.0 ML"
   }
  ],
  "all_gates_pass": true,
- "runtime_s": 21.7,
+ "runtime_s": 20.2,
  "discipline_note": "份额口径下 dS_pot = M1 - M0 >= 0 (旧结论)。H1 是代数重推导, 已明确标注为非验证; H2 是唯一的真留出 (单参数)。不使用已撤回的 psi/Delta。"
 }

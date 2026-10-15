@@ -1,6 +1,8 @@
 {
  "design": "2^3 全因子: 水质反馈 x 供给竞争 x 存量/增量; phi=0.7",
- "n_rows": 64,
+ "n_rows": 62,
+ "n_rows_all": 64,
+ "n_excluded_unreliable": 2,
  "phi": 0.7,
  "chi_on": 0.5,
  "chi_off_label": "1e6 (限值极宽)",
@@ -49,7 +51,7 @@
   {
    "gate": "G3 [份额口径] 全情景统一通式成立",
    "passed": true,
-   "value": "min = -5465.343 ML, n=32"
+   "value": "min = -5465.343 ML, n=30"
   },
   {
    "gate": "G4 [份额口径] 统一通式 dS_pot = C-F",
@@ -65,12 +67,12 @@
  "all_gates_pass": true,
  "dS_pot_range_share_only_ml": [
   -5465.342603093173,
-  22413.97659165322
+  19926.337742460666
  ],
  "dS_pot_range_flow_ml": [
   -23585.637455572123,
   38090.161192219406
  ],
- "runtime_s": 1.9,
+ "runtime_s": 1.8,
  "discipline_note": "份额口径 (dp=0): dS_pot = C - F = M1 - M0 >= 0, 即旧结论 S_city<=0; 含容量扩张口径 (dp>0): 恒等式不适用, dS_pot 可负 (AI 从新增产能取水, 释放量超过既有用户索取量)。两口径必须分开报告, 不得合并。"
 }

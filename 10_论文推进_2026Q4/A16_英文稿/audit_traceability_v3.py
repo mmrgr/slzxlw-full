@@ -77,7 +77,10 @@ def main() -> None:
         ("A17 统一通式残差", e_ss, 1.2e-10, 1e-9),
         ("不变量 free 档 A 态 max|dS|", inv, 0.0, 1e-9),
         ("组成有效变异占比", comp_share, 1.0, 1e-6),
-        ("消融格点", ab["n_rows"], 64, 0),
+        ("消融格点 (可靠子集)", ab["n_rows"], 62, 0),
+        ("消融剔除未收敛数", ab.get("n_excluded_unreliable", -1), 2, 0),
+        ("留出拟合域可靠数", ho["solver_gate"]["n_fit_reliable"], 188, 0),
+        ("留出留出域可靠数", ho["solver_gate"]["n_holdout_reliable"], 185, 0),
         ("留出真 R2 0.558", ho["H2_true_holdout"]["co_R2_phi_eff"], 0.5582, 0.01),
         ("留出基线 -0.044", ho["H2_true_holdout"]["trivial_baseline_R2"], -0.0444, 0.01),
         ("网格 1 步内收敛份额", min(v["share_within_1_step"]

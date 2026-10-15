@@ -229,6 +229,8 @@ Two consequences, both material:
 > respectively; those were all failures, and the reliable counts are **237/0** and **241/0**.
 > (`A25_终审/A25_全面终审报告.md`)
 
+**A boundary condition we had stated incorrectly.** An earlier robustness gate asserted "phi -> 0 implies dS_pot -> 0". Two things were wrong. First, the gate was **vacuous**: it selected rows with phi = 0, but the scan starts at phi = 0.05, so the selection was empty - and the rows that did have phi = 0 were all solver failures whose `dS = 0` merely reflected zero allocations. Second, and more importantly, the expectation is **physically wrong** under a binding quality constraint. At `limit_scale` = 0.25 and phi = 0.05 we measure M0 = 104,948 ML against M1 = 93,414 ML, so dS = M1 - M0 = -11,535 ML: a 5% blend already produces a large effect, because the quality penalty is **not linear in phi**. The correct statement is that phi -> 0 implies dS -> 0 **only in the non-binding limit** (`limit_scale` -> 10^6, where M0 = M1); under a binding limit dS -> (M1 - M0) != 0 for any phi. The gate was replaced with a test of the correct statement (which passes), and the vacuous formulation was retired.
+
 ### 4. Finite supply transforms the effect rather than merely moving it
 
 Imposing a potable-supply cap $W_{\rm cap}$ (D-HA natural cap 380 ML/day) yields nested
@@ -380,14 +382,14 @@ this with the observed distribution of *actual treated volume × reclaimed yield
 | test | result |
 |---|---|
 | Ablation 2³ factorial (64 cells) | 5/5 gates; identity residual 3.6 × 10⁻¹² |
-| Cross-domain holdout (genuine, 1-parameter) | **R² = 0.558** vs baseline −0.044 |
+| Cross-domain holdout (genuine, 1-parameter) | **R² = 0.557** vs baseline −0.050 |
 | No-quality extreme | $dS_{\rm pot} = 0$ exactly |
 | Quality monotonicity | 6,478 → 21,674 → 116,581 ML as quality tightens |
 | Finite-supply propositions H1–H4 | hold in both domains, **0 falsifiers** |
 
 > The identity's own cross-domain "R² = 1.000" is an **algebraic re-derivation** (it reuses
 > the holdout domain's $M_0,M_1$) and is **not** validation; the genuine out-of-sample number
-> is 0.558. A further caveat that bounds our claims: storage, solute accumulation and
+> is 0.557 (0.5574 on the solver-reliable subset, vs 0.5582 unfiltered). A further caveat that bounds our claims: storage, solute accumulation and
 > treatment delay were zero in **both** models, so dynamic-state effects remain untested.
 
 ---

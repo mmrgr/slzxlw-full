@@ -117,5 +117,5 @@
    "evidence": "若为 False, 该口径在管线外不可复现, 应改为报告引擎原生的 quality_solver_status + CoC 截断"
   }
  ],
- "runtime_s": 465.7
+ "runtime_s": 407.1
 }
