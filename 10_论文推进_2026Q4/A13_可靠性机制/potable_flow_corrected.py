@@ -114,6 +114,9 @@ def potable_flows(dom: str, panel: str, sample: str, phi: float, *,
         "limit_scale": _ls,
         "chi_semantics": ("unconstrained" if _ls >= 1e3
                           else "binding"),
+        # A27: 引擎 CoC 下限 1.000001; 触底则补水退化为天文数字(可达 2e10 ML),
+        #      情景无物理意义, 统计时必须剔除。
+        "coc_floor_degenerate": bool(float(r1["CoC_ai"]) <= 1.000001 + 1e-9),
         "M0_ml": M0, "M1_ml": M1, "phi_eff": phi1,
         "Wpot_ai_B2_ml": Wpot_ai_B2, "Wpot_ai_B1_ml": Wpot_ai_B1,
         "F_released_ml": F, "C_claimed_ml": C, "dS_pot_ml": dS_pot,

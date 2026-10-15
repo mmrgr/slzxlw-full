@@ -113,6 +113,7 @@ def main() -> None:
                     "limit_scale": float(chi),
                     "chi_strictness": float(r["CoC_ai"]) / REF_COC_DESIGN,
                     "quality_binding": bool(float(r["CoC_ai"]) < REF_COC_DESIGN * (1 - 1e-9)),
+                    "coc_floor_degenerate": bool(float(r["CoC_ai"]) <= 1.000001 + 1e-9),
                 })
     d = pd.DataFrame(rows)
     d.to_csv(HERE / "ablation_matrix.csv", index=False, encoding="utf-8-sig")
@@ -149,6 +150,8 @@ def main() -> None:
     # ---- A25: 求解器状态门禁 (未收敛情景分配量为 0, 必须剔除) ----
     _d_all = d.copy()
     d = d[d["status"].astype(str) == "converged_unique"].copy()
+    if "coc_floor_degenerate" in d.columns:
+        d = d[~d["coc_floor_degenerate"].astype(bool)].copy()
     _n_all, _n_ok = int(len(_d_all)), int(len(d))
     rec(f"\n[A25 门禁] 全样本 {_n_all} -> 可靠 {_n_ok} "
         f"(剔除 {_n_all - _n_ok} 个未收敛/多解情景)")

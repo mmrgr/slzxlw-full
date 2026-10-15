@@ -128,6 +128,10 @@ def run_case(dom: str, sample: str, pool_scale: float, phi: float, *,
         "limit_scale": float(chi),
         "chi_strictness": float(r1["CoC_ai"]) / float(COC_DESIGN_REF),
         "quality_binding": bool(float(r1["CoC_ai"]) < COC_DESIGN_REF * (1.0 - 1e-9)),
+        # ---- A27 退化检测 ----
+        # 引擎 CoC 下限为 1.000001。当限值严于/等于水源浓度时 CoC 被钉在下限,
+        # 补水退化为天文数字 (实测可达 2e10 ML), 该情景**无物理意义**。
+        "coc_floor_degenerate": bool(float(r1["CoC_ai"]) <= 1.000001 + 1e-9),
         "pool_ml": pool, "elig_ml": elig, "inc_demand_ml": inc_demand,
         "state_by_pool": classify(elig, pool),
         # ⚠ 状态判定必须以【是否真的发生挤占】为准, 而不是"池是否有余量":
@@ -155,6 +159,10 @@ def _reliable_stats(d) -> dict:
     import pandas as _pd
     st = d["status"].astype(str) if "status" in d.columns else _pd.Series(["?"] * len(d))
     ok = d[st == "converged_unique"]
+    # A27: 再剔除 CoC 触下限的退化情景 (补水可达 2e10 ML, 无物理意义)
+    if "coc_floor_degenerate" in d.columns:
+        _deg = ok["coc_floor_degenerate"].astype(bool)
+        ok = ok[~_deg]
     def _n(df, mask):
         return int(mask.sum()) if len(df) else 0
     q_all = (d["M0_ml"] - d["M1_ml"]) / d["M1_ml"] if "M1_ml" in d.columns else None
@@ -171,7 +179,10 @@ def _reliable_stats(d) -> dict:
         "reliable_n_q_pos": int((q_ok > 1e-9).sum()) if q_ok is not None else None,
         "reliable_n_qpos_but_harmful": int(((q_ok > 1e-9) & (ok["dS_pot_ml"] > 1e-6)).sum())
         if q_ok is not None else None,
-        "note": ("头条统计须以 reliable 子集为准; 未收敛情景的分配量为 0, 派生量不可用。"),
+        "n_coc_floor_degenerate": int(d.get("coc_floor_degenerate",
+                                             _pd.Series([False] * len(d))).sum()),
+        "note": ("头条统计须以 reliable 子集为准; 未收敛情景的分配量为 0, 派生量不可用; "
+                 "CoC 触下限(<=1.000001)的退化情景亦已剔除 (A27)。"),
     }
 
 

@@ -63,6 +63,8 @@ def collect(dom: str, cache: dict) -> pd.DataFrame:
                     "limit_scale": float(chi),
                     "chi_strictness": float(r1["CoC_ai"]) / REF_COC_DESIGN,
                     "quality_binding": bool(float(r1["CoC_ai"]) < REF_COC_DESIGN * (1 - 1e-9)),
+                    # A27: 引擎 CoC 下限 1.000001; 触底则补水退化为天文数字, 情景无意义
+                    "coc_floor_degenerate": bool(float(r1["CoC_ai"]) <= 1.000001 + 1e-9),
                     "M0_ml": M0, "M1_ml": M1, "phi_eff": phi_eff,
                     "F_ml": F, "C_ml": C, "x_ai_ml": float(r1["x_ai_ml"]),
                     "dS_pot_ml": C - F, "dS_pot_M_ml": M1 - M0,   # 恒等式右侧
@@ -99,7 +101,14 @@ def main() -> None:
     fit["pred_unified"] = fit.C_ml - (fit.M0_ml - fit.M1_ml) - fit["x_ai_ml"]
     err = (fit.dS_pot_ml - fit.pred_unified).abs().max()
     rec(f"[自检] 份额口径恒等式 dS_pot = M1-M0 最大残差 = {err:.3e} ML")
-    ident_ok = bool(err < 1e-6)
+    # ⚠ A27 修正: 绝对容差在 M0 量级达 2e10 ML 时会因**浮点消去**而误判
+    #   (M0-M1 是两个 ~2e10 数相减, 绝对误差 ~1e-6, 但相对误差仅 ~1e-16)。
+    #   正确判据应为**相对**残差: |残差| / max(|各项|) < 100*eps。
+    _scale = float(max(hold.M0_ml.abs().max(), hold.M1_ml.abs().max(),
+                       hold["x_ai_ml"].abs().max(), hold.C_ml.abs().max(), 1.0))
+    rel_err = float(err / _scale)
+    ident_ok = bool(rel_err < 1e-13) or bool(err < 1e-6)
+    rec(f"  相对残差 = {rel_err:.3e} (量级 {_scale:.3e} ML; 机器 eps ~2.2e-16)")
 
     gates = []
 
@@ -107,6 +116,11 @@ def main() -> None:
     _na, _nb = int(len(fit)), int(len(hold))
     fit = fit[fit["status"].astype(str) == "converged_unique"].copy()
     hold = hold[hold["status"].astype(str) == "converged_unique"].copy()
+    # A27: 再剔除 CoC 触下限的退化情景
+    if "coc_floor_degenerate" in fit.columns:
+        fit = fit[~fit["coc_floor_degenerate"].astype(bool)].copy()
+    if "coc_floor_degenerate" in hold.columns:
+        hold = hold[~hold["coc_floor_degenerate"].astype(bool)].copy()
     rec(f"\n[A25 门禁] 拟合域 {_na}->{len(fit)}, 留出域 {_nb}->{len(hold)} (剔除未收敛)")
 
     # ---------- H1: 代数重推导 (非验证) ----------
@@ -118,7 +132,7 @@ def main() -> None:
     rec("  ⚠ 该式直接使用 co 的引擎量 M0/M1, 与生成 dS_pot 的表达式同源,")
     rec("    故 R²≈1 是**代数恒等**, 不构成留出证据。仅作数值自检。")
     gates.append({"gate": "H1 恒等式自检 (非留出)", "passed": ident_ok,
-                  "value": f"max err {err:.3e} ML; co R²={r2_h1:.6f} (代数重推导)"})
+                  "value": f"max err {err:.3e} ML (相对 {rel_err:.2e}); co R²={r2_h1:.6f} (代数重推导)"})
 
     # ---------- H2: 真留出 (单参数) ----------
     rec("\n[H2] 真留出: 在 ha 锁定 1 参数 phi_eff ≈ a*phi, 冻结后预测 co")

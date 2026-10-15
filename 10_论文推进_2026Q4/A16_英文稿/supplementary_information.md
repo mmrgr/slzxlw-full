@@ -110,6 +110,52 @@ alongside every tier-based statistic.
 
 ---
 
+### S2a. Cooling-water limits: cited standards replace placeholders
+
+All earlier runs used the engine's **placeholder** limit set, which (i) carried no citation and
+(ii) **violated GB/T 50050-2017** on the scaling side: calcium hardness plus alkalinity gave
+700 + 500 = **1200 mg/L against the standard's 1100 mg/L criterion**. We replaced it with the
+verified cited sets (`A4_水化学参数域/T6b_limits_cited.py`):
+
+| tier | TDS | Cl | hardness | alkalinity | silica | hard+alk | source |
+|---|---:|---:|---:|---:|---:|---:|---|
+| ~~placeholder~~ (withdrawn) | 2200 | 500 | 700 | 500 | 150 | **1200 ✗** | none |
+| **baseline (adopted)** | 2200 | 700 | 750 | 350 | 175 | **1100 ✓** | GB/T 50050-2017 (circulating) |
+| permissive | 2600 | 1000 | 750 | 350 | 175 | 1100 ✓ | GB/T 50050-2017 (C-steel Cl relaxation) |
+| strict | 1000 | 250 | 450 | 350 | 30 | 800 | GB/T 19923-2024 (make-up water) |
+
+**Effect (same grid):**
+
+| quantity | placeholder | **cited** |
+|---|---:|---:|
+| reliable scenarios | 1,094 | **813** |
+| withdrawal falls | 729 | **631** |
+| **withdrawal rises** | **285** | **102** |
+| zero-displacement | 441 | 372 |
+| $q>0$ | 329 | 290 |
+| $q>0$ but harmful | 0 | **0** |
+| identity residual (ML) | 1.16e−10 | **2.55e−11** |
+| criterion agreement | 1.0000 | **1.0000** |
+
+> The placeholder was **overstating harm**: it set the scaling-side limits *looser* and the
+> chloride limit *tighter* than the standard, and the net effect was to report 285 adverse cases
+> where a compliant limit set supports 102.
+
+### S2a-bis. Degenerate scenarios (a new gate)
+
+At `limit_scale` = 0.25 the cited limits are stricter than the source water itself — for IEUA,
+alkalinity 87.5 mg/L against a water concentration of 140 mg/L (ratio **0.625 < 1**) — so the
+engine's CoC floor (1.000001) is reached and makeup degenerates to ≈ 2 × 10¹⁰ ML. These **188
+scenarios are physically meaningless** and are now excluded alongside solver failures.
+
+> **Numerical caution.** After the switch the identity residual *appeared* to worsen to
+> 2.8 × 10⁻⁶. This is **catastrophic cancellation**, not modelling error: `M₀ − M₁` subtracts
+> two numbers of order 2 × 10¹⁰, so an absolute residual of 1e−6 is a *relative* residual of
+> 1.4 × 10⁻¹⁶ — machine precision. Gates on such quantities must use **relative** tolerances.
+> With both gates the residual is 2.55 × 10⁻¹¹ and the criterion agreement is again exactly 1.0000.
+
+---
+
 ### S3.0 Solver-reliability gate (added after the A25 audit)
 
 A full audit found that **58 of 1,152 scenarios (5.03%)** in the main grid did not return

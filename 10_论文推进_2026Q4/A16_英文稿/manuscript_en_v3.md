@@ -18,7 +18,7 @@ replace them with an explicit three-account ledger — *requested*, *delivered* 
 *abstracted* — whose quantities are shown to be mutually unequal across 68 engine runs
 (0/68 rows agree; path efficiency 0.849, so abstraction exceeds delivery by a factor
 1.17–1.18 at the margin). We then derive an exact accounting identity
-(residual 2.9 × 10⁻¹¹ ML, 1,094 solver-reliable scenarios) that **unifies two opposite regimes**. When the
+(residual 2.5 × 10⁻¹¹ ML, 813 solver-reliable scenarios under cited limits) that **unifies two opposite regimes**. When the
 reclaimed pool is already committed to incumbent users, a data centre's reclaimed draw is
 fully displaced: the city's potable withdrawal does not fall, and the old facility-to-city
 identity is recovered exactly. When unused reclaimed water remains, the draw is *not*
@@ -27,7 +27,7 @@ our tests. We show that the sign of the outcome is decided by a **decision inequ
 the net discharge must outweigh the water-quality effect — and we **explicitly downgrade this
 to an accounting convention rather than a discovery**, since it is an algebraic rearrangement
 of the underlying identity. What is substantive is the sign structure beneath it: reuse lowers
-facility makeup in 329 of 1,094 scenarios, and in **all 329** the city benefits, with no
+facility makeup in 290 of 813 scenarios, and in **all 290** the city benefits, with no
 exception; when reuse instead raises makeup, the outcome is a genuine contest that goes both
 ways. We do **not** claim a single external predictor for that sign — the best of seven
 candidates reaches only 0.77 accuracy. Imposing a finite potable-supply cap shows the effect
@@ -94,7 +94,7 @@ $$\boxed{\;dS_{\rm pot}
 -\underbrace{(M_0-M_1)}_{\text{quality penalty}}
 -\underbrace{x_{\rm AI}}_{\text{facility's reclaimed draw}}\;}$$
 
-verified to **5.8 × 10⁻¹¹ ML** across 1,094 solver-reliable scenarios. In the special case where the
+verified to **2.5 × 10⁻¹¹ ML** across 813 solver-reliable scenarios. In the special case where the
 facility's draw is *entirely* displaced ($C=x_{\rm AI}$), this collapses to
 $dS_{\rm pot}=M_1-M_0$, the form used in our earlier fixed-pool analysis; that collapse holds
 for two of the four compositions tested but **not** for the other two, which is why the
@@ -135,16 +135,16 @@ q=\frac{M_0-M_1}{M_1}$$
 > identity**, not an empirical law. It is an accounting convention: city withdrawal falls
 > exactly when the net discharge $\rho(\kappa-1)$ is outweighed by the quality effect $q$.
 
-What *is* substantive is the sign structure of $q$. Treating it as a classifier over 1,094
+What *is* substantive is the sign structure of $q$. Treating it as a classifier over 813
 solver-reliable scenarios:
 
 | $q$ group | n | withdrawal **falls** | withdrawal **rises** | median $dS_{\rm pot}$ |
 |---|---:|---:|---:|---:|
-| **$q>0$** (reuse lowers makeup) | 329 | **329** | **0** | −11,311 |
+| **$q>0$** (reuse lowers makeup) | 290 | **290** | **0** | −14,496 |
 | $q\approx0$ | 288 | 208 | 0 | −7,651 |
-| $q<0$ (reuse raises makeup) | 477 | 192 | 285 | +1,907 |
+| $q<0$ (reuse raises makeup) | 235 | 133 | 102 | −4,259 |
 
-**$q>0$ is a sufficient condition for a city-level benefit: 329 of 329, with no exception.**
+**$q>0$ is a sufficient condition for a city-level benefit: 290 of 290, with no exception.**
 When $q<0$, the outcome is a genuine contest between the discharge relief and the quality
 penalty, and both signs occur.
 
@@ -152,10 +152,10 @@ Composition modulates the sign strongly (solver-reliable subset):
 
 | composition | $dS_{\rm pot}<0$ | $dS_{\rm pot}>0$ |
 |---|---:|---:|
-| LADWP AWPF (RO product, TDS 22) | 237 | **0** |
-| AI-UWM placeholder (TDS 650) | 241 | **0** |
-| IEUA RP-1 (tertiary, TDS 443) | 153 | 115 |
-| **Figshare RW (TDS 1,378)** | **98** | **170** |
+| LADWP AWPF (RO product, TDS 22) | 183 | **0** |
+| AI-UWM placeholder (TDS 650) | 184 | **0** |
+| IEUA RP-1 (tertiary, TDS 443) | 148 | 48 |
+| **Figshare RW (TDS 1,378)** | **116** | **54** |
 
 > **Note.** The two low-salinity compositions have *no* harmful case at all, whereas the
 > high-salinity source reverses the sign in a majority of scenarios. An earlier count
@@ -203,6 +203,39 @@ missing species from observed-source medians across 192 scenarios changes makeup
 > published observations as a "water composition"; we therefore flag it and recommend
 > exclusion or explicit labelling in the next revision. The gap is real but does **not**
 > alter our qualitative conclusions.
+
+### 3b-bis. The cooling-water limits are now taken from cited standards
+
+Earlier runs used the engine's **placeholder** limit set, which had two defects: it carried no
+citation, and on the scaling side it **violated** GB/T 50050-2017 — calcium hardness plus
+alkalinity totalled 700 + 500 = **1200 mg/L against the standard's 1100 mg/L criterion**. We
+therefore replaced it with the verified, fully cited sets in `A4_水化学参数域/T6b_limits_cited.py`:
+
+| tier | limits (TDS / Cl / hardness / alkalinity / silica) | hardness+alkalinity | source |
+|---|---|---:|---|
+| ~~placeholder~~ | 2200 / 500 / 700 / 500 / 150 | **1200 ✗** | none (withdrawn) |
+| **baseline (adopted)** | 2200 / 700 / 750 / 350 / 175 | **1100 ✓** | GB/T 50050-2017, circulating water |
+| permissive | 2600 / 1000 / 750 / 350 / 175 | 1100 ✓ | GB/T 50050-2017, carbon-steel-only chlorine relaxation |
+| strict | 1000 / 250 / 450 / 350 / 30 | 800 | GB/T 19923-2024, make-up water |
+
+**This changes the numbers, and we report the change rather than quietly replacing them.** On
+the same grid, switching from placeholder to cited limits moves the reliable scenario count
+from 1,094 to **813**, reduces the "withdrawal rises" count from 285 to **102**, and raises the
+beneficial count from 729 to **631**. The placeholder was therefore **overstating harm**: under
+non-compliant scaling limits more cases appeared adverse than a compliant limit set supports.
+
+**A second gate this exposed.** At the tightest tier (`limit_scale` = 0.25) the cited limits are
+stricter than the source water itself (for IEUA, alkalinity 87.5 mg/L against a water
+concentration of 140 mg/L, ratio 0.625 < 1), so the engine's CoC floor of 1.000001 is hit and
+makeup degenerates to ~2 × 10¹⁰ ML. Those 188 scenarios are **physically meaningless** and are
+now excluded alongside solver failures. With both gates the identity residual returns to
+**2.5 × 10⁻¹¹ ML** (relative 2.9 × 10⁻¹⁶, i.e. machine precision) and the sign criterion is
+again exact at **1.0000**.
+
+> **A numerical lesson worth stating.** The residual first *appeared* to degrade to 2.8 × 10⁻⁶
+> after the switch. That was not a modelling error but **catastrophic cancellation**: `M₀ − M₁`
+> subtracts two numbers of order 2 × 10¹⁰, so an absolute residual of 1e−6 corresponds to a
+> *relative* residual of 1e−16. Gates on such quantities must use **relative** tolerances.
 
 ### 3c. Solver reliability gate
 
@@ -466,7 +499,7 @@ the daily branch used facility *makeup* instead of *evaporation* as its referenc
 **Estimand.** $dS_{\rm pot}=C-F$, with the unified form of Results §2. Three accounts are
 reported separately and never merged.
 
-**Design.** 1,094 solver-reliable paired scenarios (2 domains × 4 water compositions × 9 pool levels ×
+**Design.** 813 solver-reliable paired scenarios (2 domains × 4 water compositions × 9 pool levels ×
 4 mixing ratios × 3 quality tiers) plus a labelled extrapolation tier; 68 full-engine runs
 (730 days) for the three-account and finite-supply experiments.
 

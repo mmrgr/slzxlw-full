@@ -1,0 +1,57 @@
+{
+ "issue": "city_model.PANELS 用无引用的引擎占位限值, 且在结垢侧违反 GB/T 50050-2017 (钙硬度+总碱度 1200 > 1100)。",
+ "placeholder": {
+  "TDS": 2200.0,
+  "chloride": 500.0,
+  "hardness": 700.0,
+  "alkalinity": 500.0,
+  "silica": 150.0
+ },
+ "cited_tiers": {
+  "strict": {
+   "limits": {
+    "TDS": 1000.0,
+    "chloride": 250.0,
+    "hardness": 450.0,
+    "alkalinity": 350.0,
+    "silica": 30.0
+   },
+   "label": "GB/T 19923-2024 再生水作工业用水 (间冷开式循环冷却水补充水)",
+   "citation": "GB/T 19923-2024《城市污水再生利用 工业用水水质》表 1"
+  },
+  "baseline": {
+   "limits": {
+    "TDS": 2200.0,
+    "chloride": 700.0,
+    "hardness": 750.0,
+    "alkalinity": 350.0,
+    "silica": 175.0
+   },
+   "label": "GB/T 50050-2017 循环冷却水控制指标 (间冷开式, 碳钢换热器)",
+   "citation": "GB/T 50050-2017《工业循环冷却水处理设计规范》"
+  },
+  "permissive": {
+   "limits": {
+    "TDS": 2600.0,
+    "chloride": 1000.0,
+    "hardness": 750.0,
+    "alkalinity": 350.0,
+    "silica": 175.0
+   },
+   "label": "GB/T 50050-2017 循环水 (仅碳钢部件 → Cl⁻ 放宽; 电导率上界)",
+   "citation": "GB/T 50050-2017《工业循环冷却水处理设计规范》"
+  }
+ },
+ "n_comparisons": 72,
+ "coc_delta_by_tier": {
+  "baseline": 0.0,
+  "permissive": 0.0,
+  "strict": -1.324
+ },
+ "q_sign_flips_by_tier": {
+  "baseline": 14,
+  "permissive": 14,
+  "strict": 10
+ },
+ "discipline_note": "只做影响评估; 未改 city_model; 引用的限值集来自 A4/T6b (已核验)。"
+}

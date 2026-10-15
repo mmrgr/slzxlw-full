@@ -8,14 +8,15 @@
   {
    "label": "potable_flows",
    "source": "A13_可靠性机制\\potable_flows.csv",
-   "source_sha256_16": "b7bbdd1f98c63f6c",
+   "source_sha256_16": "766cca7c416286de",
    "output": "A16_英文稿\\figures\\fig1_v2_source_potable_flows.csv",
    "n_all": 408,
-   "n_reliable": 373,
-   "n_dropped": 35,
+   "n_reliable": 372,
+   "n_dropped": 36,
    "dropped_status": {
     "quality_not_converged": 24,
-    "no_convergence": 11
+    "no_convergence": 8,
+    "non_unique": 4
    },
    "n_phi0_rows_in_source": 24,
    "n_phi0_dropped": 24,
@@ -24,13 +25,14 @@
   {
    "label": "ablation",
    "source": "A15_稳健性\\ablation_matrix.csv",
-   "source_sha256_16": "595ba02c97e4f3da",
+   "source_sha256_16": "52212a1824a5e82b",
    "output": "A16_英文稿\\figures\\fig1_v2_source_ablation.csv",
    "n_all": 64,
-   "n_reliable": 62,
-   "n_dropped": 2,
+   "n_reliable": 58,
+   "n_dropped": 6,
    "dropped_status": {
-    "no_convergence": 2
+    "no_convergence": 4,
+    "non_unique": 2
    },
    "n_phi0_rows_in_source": 0,
    "n_phi0_dropped": 0,

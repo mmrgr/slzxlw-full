@@ -4,24 +4,24 @@ A15 消融矩阵 (修正版): 基于 A13c 的合法口径
 
 完成 64 行 (2 域 x 4 水样 x 2^3 因子)
 
-[自检] |(C-F) - (M1-M0)| 最大 = 2.241e+04 ML  (应为 ~0)
+[自检] |(C-F) - (M1-M0)| 最大 = 3.378e+04 ML  (应为 ~0)
 
 [主效应] dS_pot 对各因子的平均效应 (ML)
-  F1_quality_feedback        on=    2658.9  off=   -6185.4  effect=   +8844.3
-  F2_supply_competition      on=   -1763.3  off=   -1763.3  effect=      +0.0
-  F3_stock_vs_flow           on=    3046.5  off=   -6573.0  effect=   +9619.5
+  F1_quality_feedback        on=    -655.4  off=   -6185.4  effect=   +5530.0
+  F2_supply_competition      on=   -3420.4  off=   -3420.4  effect=      +0.0
+  F3_stock_vs_flow           on=     216.9  off=   -7057.7  effect=   +7274.6
 
 [分域] 水质反馈效应
-  D-HA: on=     336.3 off=   -7515.0 effect=   +7851.3
-  D-CO: on=    4981.5 off=   -4855.8 effect=   +9837.3
+  D-HA: on=    5201.2 off=   -7515.0 effect=  +12716.2
+  D-CO: on=   -6512.0 off=   -4855.8 effect=   -1656.2
 
-[A25 门禁] 全样本 64 -> 可靠 62 (剔除 2 个未收敛/多解情景)
+[A25 门禁] 全样本 64 -> 可靠 58 (剔除 6 个未收敛/多解情景)
 
 [Gates]
   [PASS] G1 [份额口径] 关闭水质反馈 => dS_pot=0 (纯再分配): max |dS_pot| = 0.000 ML
-  [PASS] G2 [份额口径] 打开水质反馈 => 统一通式成立: min = -5465.343 ML
-  [PASS] G3 [份额口径] 全情景统一通式成立: min = -5465.343 ML, n=30
-  [PASS] G4 [份额口径] 统一通式 dS_pot = C-F: max err = 3.638e-12 ML
-  [PASS] G5 [含容量扩张口径] 恒等式不适用 (预期): dS_pot range [-23586, 38090] ML; 恒等式偏差 1.503e+04 ML (F 可超过 C, 属容量扩张机制)
+  [PASS] G2 [份额口径] 打开水质反馈 => 统一通式成立: min = -12431.934 ML
+  [PASS] G3 [份额口径] 全情景统一通式成立: min = -12431.934 ML, n=30
+  [PASS] G4 [份额口径] 统一通式 dS_pot = C-F: max err = 5.457e-12 ML
+  [PASS] G5 [含容量扩张口径] 恒等式不适用 (预期): dS_pot range [-29001, 15936] ML; 恒等式偏差 1.503e+04 ML (F 可超过 C, 属容量扩张机制)
 
-完成 1.9s; 全部 Gate 通过 = True
+完成 1.7s; 全部 Gate 通过 = True

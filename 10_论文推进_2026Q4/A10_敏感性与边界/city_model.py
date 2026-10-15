@@ -69,10 +69,40 @@ R2 = REPO / "examples" / "cawcc_r2"
 DOMAINS = ("ha", "co")
 N_DAYS = 730
 
-# 引擎冷却水质限值占位值 (审计 B3: 会在论文定稿前替换为带引用的准则)
-PANEL_A = {"TDS": 2200.0, "chloride": 500.0}
-PANEL_B = {"TDS": 2200.0, "chloride": 500.0, "hardness": 700.0,
-           "alkalinity": 500.0, "silica": 150.0}
+# ----------------------------------------------------------------- 冷却水质限值
+# A27 (2026-10-16): **占位限值已被带引用的准则值取代**。
+#   原占位值 {TDS 2200, Cl 500, hardness 700, alkalinity 500, silica 150} 存在两处问题
+#   (审计 B3 / A19 化学审计):
+#     (i) 无引用;
+#     (ii) 在**结垢侧违反** GB/T 50050-2017 —— 钙硬度+总碱度 = 700+500 = 1200 > 1100 mg/L。
+#   现默认使用 A4_水化学参数域/T6b_limits_cited.py 中 **source_verified=True** 的引用档:
+#     baseline   = GB/T 50050-2017 循环冷却水 (2200/700/750/350/175; 合计 1100 ✓)  <- 默认
+#     permissive = 同上, 仅碳钢部件放宽 Cl⁻ 至 1000 与电导率上界 TDS 2600
+#     strict     = GB/T 19923-2024 补充水口径 (1000/250/450/350/30)
+#     placeholder= 旧无引用占位档, **仅供复现已发表数字**, 不得用于新结论
+#   选择方式: city_model.LIMIT_SET = "baseline" | "permissive" | "strict" | "placeholder"
+LIMIT_SET = "baseline"
+
+PLACEHOLDER_LIMITS = {"TDS": 2200.0, "chloride": 500.0, "hardness": 700.0,
+                      "alkalinity": 500.0, "silica": 150.0}
+
+
+def _load_cited_limits() -> dict:
+    """从 A4/T6b 载入已核验的引用限值集 (含占位档以支持复现)。"""
+    import importlib.util as _ilu
+    p = ROOT / "A4_水化学参数域" / "T6b_limits_cited.py"
+    spec = _ilu.spec_from_file_location("_t6b_limits", p)
+    mod = _ilu.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    out = {k: dict(v["limits"]) for k, v in mod.CITED_LIMIT_SETS.items()}
+    out["placeholder"] = dict(PLACEHOLDER_LIMITS)
+    return out
+
+
+CITED_LIMIT_SETS = _load_cited_limits()
+
+PANEL_A = {"TDS": 2200.0, "chloride": 500.0}          # 引擎 2 物种面板 (保留, 未受影响)
+PANEL_B = dict(CITED_LIMIT_SETS[LIMIT_SET])           # 5 物种面板 -> 引用档
 POTABLE_EXTRA = {"hardness": 120.0, "alkalinity": 100.0, "silica": 10.0}
 PANELS = {"A_engine2": PANEL_A, "B_full": PANEL_B}
 

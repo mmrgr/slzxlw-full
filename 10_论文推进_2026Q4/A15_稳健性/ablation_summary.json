@@ -1,40 +1,40 @@
 {
  "design": "2^3 全因子: 水质反馈 x 供给竞争 x 存量/增量; phi=0.7",
- "n_rows": 62,
+ "n_rows": 58,
  "n_rows_all": 64,
- "n_excluded_unreliable": 2,
+ "n_excluded_unreliable": 6,
  "phi": 0.7,
  "chi_on": 0.5,
  "chi_off_label": "1e6 (限值极宽)",
- "identity_max_err_share_only_ml": 3.637978807091713e-12,
+ "identity_max_err_share_only_ml": 5.4569682106375694e-12,
  "identity_max_err_flow_ml": 15030.055694179082,
  "main_effects": {
   "F1_quality_feedback": {
-   "on_mean": 2658.863942543935,
+   "on_mean": -655.4199644854425,
    "off_mean": -6185.433367284684,
-   "effect_ml": 8844.29730982862
+   "effect_ml": 5530.013402799242
   },
   "F2_supply_competition": {
-   "on_mean": -1763.2847123703746,
-   "off_mean": -1763.2847123703746,
+   "on_mean": -3420.4266658850634,
+   "off_mean": -3420.4266658850634,
    "effect_ml": 0.0
   },
   "F3_stock_vs_flow": {
-   "on_mean": 3046.4635043685953,
-   "off_mean": -6573.032929109344,
-   "effect_ml": 9619.49643347794
+   "on_mean": 216.85133150785998,
+   "off_mean": -7057.704663277986,
+   "effect_ml": 7274.5559947858455
   }
  },
  "quality_effect_by_domain": {
   "ha": {
-   "on": 336.2503514728769,
+   "on": 5201.17340577223,
    "off": -7515.027847089542,
-   "effect": 7851.278198562419
+   "effect": 12716.20125286177
   },
   "co": {
-   "on": 4981.477533614995,
+   "on": -6512.013334743113,
    "off": -4855.838887479826,
-   "effect": 9837.31642109482
+   "effect": -1656.1744472632872
   }
  },
  "gates": [
@@ -46,33 +46,33 @@
   {
    "gate": "G2 [份额口径] 打开水质反馈 => 统一通式成立",
    "passed": true,
-   "value": "min = -5465.343 ML"
+   "value": "min = -12431.934 ML"
   },
   {
    "gate": "G3 [份额口径] 全情景统一通式成立",
    "passed": true,
-   "value": "min = -5465.343 ML, n=30"
+   "value": "min = -12431.934 ML, n=30"
   },
   {
    "gate": "G4 [份额口径] 统一通式 dS_pot = C-F",
    "passed": true,
-   "value": "max err = 3.638e-12 ML"
+   "value": "max err = 5.457e-12 ML"
   },
   {
    "gate": "G5 [含容量扩张口径] 恒等式不适用 (预期)",
    "passed": true,
-   "value": "dS_pot range [-23586, 38090] ML; 恒等式偏差 1.503e+04 ML (F 可超过 C, 属容量扩张机制)"
+   "value": "dS_pot range [-29001, 15936] ML; 恒等式偏差 1.503e+04 ML (F 可超过 C, 属容量扩张机制)"
   }
  ],
  "all_gates_pass": true,
  "dS_pot_range_share_only_ml": [
-  -5465.342603093173,
-  19926.337742460666
+  -12431.934433745664,
+  6742.664411718257
  ],
  "dS_pot_range_flow_ml": [
-  -23585.637455572123,
-  38090.161192219406
+  -29000.502888352636,
+  15936.46552733918
  ],
- "runtime_s": 1.9,
+ "runtime_s": 1.7,
  "discipline_note": "份额口径 (dp=0): dS_pot = C - F = M1 - M0 >= 0, 即旧结论 S_city<=0; 含容量扩张口径 (dp>0): 恒等式不适用, dS_pot 可负 (AI 从新增产能取水, 释放量超过既有用户索取量)。两口径必须分开报告, 不得合并。"
 }

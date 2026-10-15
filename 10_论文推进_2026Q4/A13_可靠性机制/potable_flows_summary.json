@@ -1,10 +1,10 @@
 {
  "n_scenarios": 408,
  "F_equals_C_exact": false,
- "max_abs_F_minus_C_ml": 116581.09354390192,
- "max_rel_F_minus_C": 4.777042205888085,
- "n_dS_nonzero": 318,
- "max_abs_dS_pot_ml": 116581.09354390192,
- "runtime_s": 19.8,
+ "max_abs_F_minus_C_ml": 24404.451231393024,
+ "max_rel_F_minus_C": 1.0,
+ "n_dS_nonzero": 324,
+ "max_abs_dS_pot_ml": 24404.451231393024,
+ "runtime_s": 20.3,
  "discipline_note": "本模块只使用引擎直接给出的量 (M, phi_eff, x_ai, inc_recl, pool), 不引入任何自造的 psi/Delta。dS_pot = C - F 是城市自来水取水的净变化, 与 S_city (代数账) 是两条不同的账, 不合并。"
 }

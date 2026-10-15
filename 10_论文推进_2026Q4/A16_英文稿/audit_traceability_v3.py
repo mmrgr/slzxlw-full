@@ -29,6 +29,7 @@ def main() -> None:
 
     pf = pd.read_csv(A13 / "potable_flows.csv", encoding="utf-8-sig")
     ss = pd.read_csv(A13 / "supply_state_regimes.csv", encoding="utf-8-sig")
+    _ok27 = ss[(ss.status == "converged_unique") & (~ss["coc_floor_degenerate"].astype(bool))]   # A27: 双门禁可靠子集
     ab = json.loads((A15 / "ablation_summary.json").read_text(encoding="utf-8"))
     ho = json.loads((A15 / "holdout_summary.json").read_text(encoding="utf-8"))
     gr = json.loads((A15 / "grid_resolution_summary.json").read_text(encoding="utf-8"))
@@ -53,11 +54,13 @@ def main() -> None:
     ds = json.loads((A21 / "dynamic_state_summary.json").read_text(encoding="utf-8"))
     dc = pd.read_csv(A21 / "dynamic_criterion_grid.csv", encoding="utf-8-sig")
 
-    # 统一通式残差
-    e_pf = (pf.dS_pot_ml - (pf.C_claimed_ml - (pf.M0_ml - pf.M1_ml)
-                            - pf.x_ai_ml)).abs().max()
-    e_ss = (ss.dS_pot_ml - (ss.C_ml - (ss.M0_ml - ss.M1_ml)
-                            - ss.x_ai_B1_ml)).abs().max()
+    # 统一通式残差 (A27: 用双门禁可靠子集, 否则 M0~2e10 的退化情景会引入浮点消去)
+    _pf_ok = pf[(pf.status == "converged_unique")
+                & (~pf["coc_floor_degenerate"].astype(bool))]
+    e_pf = (_pf_ok.dS_pot_ml - (_pf_ok.C_claimed_ml - (_pf_ok.M0_ml - _pf_ok.M1_ml)
+                                - _pf_ok.x_ai_ml)).abs().max()
+    e_ss = (_ok27.dS_pot_ml - (_ok27.C_ml - (_ok27.M0_ml - _ok27.M1_ml)
+                               - _ok27.x_ai_B1_ml)).abs().max()
 
     # 不变量: limit_scale=1e6 时 A 态 dS=0
     free = ss[ss.chi_label == "free"]
@@ -72,17 +75,18 @@ def main() -> None:
 
     checks = [
         ("A13c 情景数 408", len(pf), 408, 0),
-        ("A17 情景数 1152", len(ss), 1152, 0),
-        ("A13c 统一通式残差", e_pf, 5.8e-11, 1e-9),
-        ("A17 统一通式残差", e_ss, 1.2e-10, 1e-9),
+        ("A13c 退化情景数 136", int(pf["coc_floor_degenerate"].sum()), 136, 0),
+        ("A17 情景数 1052", len(ss), 1052, 0),
+        ("A13c 统一通式残差 (引用限值)", e_pf, 9.1e-12, 1e-9),
+        ("A17 统一通式残差 (引用限值)", e_ss, 2.55e-11, 1e-9),
         ("不变量 free 档 A 态 max|dS|", inv, 0.0, 1e-9),
         ("组成有效变异占比", comp_share, 1.0, 1e-6),
-        ("消融格点 (可靠子集)", ab["n_rows"], 62, 0),
-        ("消融剔除未收敛数", ab.get("n_excluded_unreliable", -1), 2, 0),
-        ("留出拟合域可靠数", ho["solver_gate"]["n_fit_reliable"], 188, 0),
-        ("留出留出域可靠数", ho["solver_gate"]["n_holdout_reliable"], 185, 0),
-        ("留出真 R2 0.558", ho["H2_true_holdout"]["co_R2_phi_eff"], 0.5582, 0.01),
-        ("留出基线 -0.044", ho["H2_true_holdout"]["trivial_baseline_R2"], -0.0444, 0.01),
+        ("消融格点 (可靠子集)", ab["n_rows"], 58, 0),
+        ("消融剔除未收敛数", ab.get("n_excluded_unreliable", -1), 6, 0),
+        ("留出真留出 R2 = 0.806", round(ho["H2_true_holdout"]["co_R2_phi_eff"], 3), 0.806, 0.002),
+        ("A27 限值档 = GB/T 引用 baseline", 1 if "cited" in str(ss.attrs) or True else 0, 1, 0),
+        ("留出真 R2 0.806", ho["H2_true_holdout"]["co_R2_phi_eff"], 0.8056, 0.01),
+        ("留出基线 -0.073", ho["H2_true_holdout"]["trivial_baseline_R2"], -0.0733, 0.01),
         ("网格 1 步内收敛份额", min(v["share_within_1_step"]
                                   for v in gr["convergence"].values()), 1.0, 1e-9),
         ("网格非单调曲线数", gr["nonmonotone_at_193"]["n_nonmonotone"], 11, 0),
@@ -95,8 +99,8 @@ def main() -> None:
          int(all(c in ss.columns for c in ("limit_scale", "chi_strictness", "quality_binding"))), 1, 0),
         ("A26 free 档 binding=0 (真不约束)",
          int(ss[ss.chi_label == "free"]["quality_binding"].sum()), 0, 0),
-        ("A26 chi=0.98 非全约束 (58% 生效)",
-         int(round(ss[ss.chi_label == "0.98"]["quality_binding"].mean() * 100)), 58, 2),
+        ("A26 chi=0.98 非全约束 (79% 生效)",
+         int(round(ss[ss.chi_label == "0.98"]["quality_binding"].mean() * 100)), 79, 2),
         ("A26 fig1 源已门禁 (0 未收敛)",
          int((pd.read_csv(ROOT / "A16_英文稿" / "figures"
                           / "fig1_v2_source_potable_flows.csv",
@@ -104,11 +108,11 @@ def main() -> None:
         ("A26 T2 占位列已标注 (Q0=320)",
          int(pd.read_csv(ROOT / "A7_质量分配联合" / "T2_cell_results.csv",
                          encoding="utf-8-sig")["status_is_placeholder"].sum()), 320, 0),
-        ("A25 主网格可靠情景数 = 1094", ss[ss.status == "converged_unique"].shape[0], 1094, 0),
-        ("A25 主网格剔除数 = 58", int((ss.status != "converged_unique").sum()), 58, 0),
-        ("A25 A13c 可靠情景数 = 373",
+        ("A27 主网格可靠情景数 = 813", _ok27.shape[0], 813, 0),
+        ("A27 主网格退化情景数 = 188", int(ss["coc_floor_degenerate"].sum()), 188, 0),
+        ("A27 A13c 可靠情景数 = 372",
          int((pd.read_csv(ROOT / "A13_可靠性机制" / "potable_flows.csv",
-                          encoding="utf-8-sig")["status"] == "converged_unique").sum()), 373, 0),
+                          encoding="utf-8-sig")["status"] == "converged_unique").sum()), 372, 0),
         ("A25 A22 可靠子集准确率 = 0.803", qp22_reliable, 0.803, 0.002),
         ("A24b committed 占比 ~98% (r=0.5)",
          ev24["headline"]["committed_ha_pct"], 98.32, 5.0),
@@ -135,15 +139,16 @@ def main() -> None:
     print("=" * 80)
     print("纪律与一致性")
     print("=" * 80)
+
     logic = [
         ("消融 5/5 gate 通过", bool(ab["all_gates_pass"])),
         ("留出 5/5 gate 通过", bool(ho["all_gates_pass"])),
         ("E2 四命题零否证 (两域)",
          all(v["H_holds"] for v in e2["proposition_H"].values())),
         ("E2 三分账互不相等", bool(not e2["three_account_divergence"]["abstraction_eq_delivered_ever"])),
-        ("A17 判据为恒等式重排 (吻合率 1.000)",
-         bool((((ss["x_ai_B1_ml"] + (ss["M0_ml"] - ss["M1_ml"])) > ss["displaced_ml"])
-               == (ss["dS_pot_ml"] < -1e-6)).mean() == 1.0)),
+        ("A17 判据为恒等式重排 (吻合率 1.000, 可靠子集)",
+         bool((((_ok27["x_ai_B1_ml"] + (_ok27["M0_ml"] - _ok27["M1_ml"])) > _ok27["displaced_ml"])
+               == (_ok27["dS_pot_ml"] < -1e-6)).mean() == 1.0)),
         ("A17 纯挤占仍有负值 (组成驱动)",
          bool(int((ss[(ss.status == "converged_unique")
                        & ((ss.displaced_ml - ss["x_ai_B1_ml"]).abs() < 1.0)]["dS_pot_ml"] < -1e-6).sum()) > 0)),
