@@ -1,0 +1,129 @@
+### C1-Shen Nature Water reclaimed water China [CrossRef]
+10.1038/s44221-026-00727-5   | China’s centralized wastewater treatment system reaches efficiency limits in tackling water scarcity   | Nature Water   | 2026   | journal-article   | Shen, Shen, Zhong
+10.5194/egusphere-egu23-14904   | Reusing reclaimed water for irrigation: sustainability solution to alleviate growing water scarcity under climate change   |    | 2023   | posted-content   | Arfa, Blanco, González-Rosell
+10.5004/dwt.2011.2107   | Application of UV disinfection in municipal wastewater treatment plants for agricultural use of reclaimed wastewater in    | Desalination and Water Treatment   | 2011   | journal-article   | Evcimen, Kerc
+10.1016/j.watres.2007.04.021   | Trihalomethane occurrence in chlorinated reclaimed water at full-scale wastewater treatment plants in NE Spain   | Water Research   | 2007   | journal-article   | Matamoros, Mujeriego, Bayona
+10.3403/30387228   | Water Reuse in Urban Areas -- Guidelines for reclaimed water treatment: Design principles of a RO treatment system of mu   |    | None   | standard   | 
+
+### C1-Shen Nature Water reclaimed water China [OpenAlex]
+10.3390/w12092347   | Water Supply and Water Scarcity   | Water   | 2020   | article   | Vasileios A. Tzanakakis, Nikolaos V. Paranychianakis, Andreas N. Angelakιs
+10.3390/agronomy15040941   | Reuse of Treated Wastewater to Address Water Scarcity in Viticulture: A Comprehensive Review   | Agronomy   | 2025   | article   | Cátia Costa, Cristina C.R. Carlos, Ana Alexandra Oliveira
+10.3390/w18040526   | Factors and Mechanisms Influencing Reclaimed Water Prices in China   | Water   | 2026   | article   | Zhiying Shao, Kaiyuan He, Yufei Han
+10.3390/su151712977   | Urbanization and the Emerging Water Crisis: Identifying Water Scarcity and Environmental Risk with Multiple Applications   | Sustainability   | 2023   | article   | Caimin Wu, Wei Liu, Hongbing Deng
+
+### C1b-OpenAlex [OpenAlex]
+10.3390/w18040526   | Factors and Mechanisms Influencing Reclaimed Water Prices in China   | Water   | 2026   | article   | Zhiying Shao, Kaiyuan He, Yufei Han
+10.3390/su152014949   | Wastewater Treatment in Central Asia: Treatment Alternatives for Safe Water Reuse   | Sustainability   | 2023   | article   | Marzhan Seitovna Kalmakhanova, José L. Diaz de Tuesta, Arindam Malakar
+10.30564/jees.v8i8.13505   | Cost-Optimized Pathways for Carbon-Neutral Wastewater Treatment in China by 2035   | Journal of Environmental & Earth Sciences   | 2026   | article   | Hong Tao Li, Ling Huang, Hai Bo Zhang
+10.3390/ijerph17010170   | Wastewater Treatment by Advanced Oxidation Process and Their Worldwide Research Trends   | International Journal of Environmental Research and Public Health   | 2019   | article   | José Antonio Garrido-Cárdenas, Belén Esteban-García, Ana Agüera
+10.3390/w10040491   | Nitrogen and Organics Removal during Riverbank Filtration along a Reclaimed Water Restored River in Beijing, China   | Water   | 2018   | article   | Weiyan Pan, Quanzhong Huang, Guanhua Huang
+
+### C2-DC WWTP symbiosis [CrossRef]
+10.1016/j.ese.2026.100702   | Global data–water symbiosis reduces AI infrastructure's carbon and water footprint   | Environmental Science and Ecotechnology   | 2026   | journal-article   | Wang, Zhang, Xu
+10.36851/ai-edu.vi.5448   | Environmental Impact of Generative AI: Carbon and Water Footprint   | AI-EDU Arxiv   | 2025   | journal-article   | Sidorkin
+10.2139/ssrn.5064473   | AI Uses How Much Water? Navigating Regulation Of AI Data Centers' Water Footprint Post-Watershed Loper Bright Decision   |    | 2025   | posted-content   | Garcia
+10.2175/193864717821495816   | Thermal Hydrolysis Reduces Carbon Footprint of Biosolids treatment   | Proceedings of the Water Environment Federation   | 2017   | journal-article   | Barber
+10.2139/ssrn.7572018   | Beyond Carbon: The Water Footprint of AI Systems   |    | 2026   | posted-content   | Di Maio, Masciari, Napolitano
+
+### C2-DC WWTP symbiosis [OpenAlex]
+10.1016/j.ese.2026.100702   | Global data–water symbiosis reduces AI infrastructure's carbon and water footprint   | Environmental Science and Ecotechnology   | 2026   | article   | Aijie Wang, Congchao Zhang, Tiefu Xu
+10.70269/10.70269/4356461861   | STRATEGIES FOR SUSTAINABLE AGRICULTURE: THE WATER FOOTPRINT PERSPECTIVE   | Bidge Yayınları eBooks   | 2025   | book-chapter   | Tuğba Yeter, Ceren Görgişen, Gonca KARACA BİLGEN
+10.1088/1755-1315/558/4/042014   | Research on Low-Carbon Campus Based on Carbon Footprint Model   | IOP Conference Series Earth and Environmental Science   | 2020   | conference-paper   | Jiapeng Li, Ping Yi Sun, Xuan Zhang
+10.5281/zenodo.20184441   | HCTGS v22 THE SYMBIOSIS ENGINE   | Zenodo (CERN European Organization for Nuclear Research)   | 2026   | preprint   | Ilir Mehmetaj
+
+### C3-AI server energy water carbon scenarios spatial uncertainty [CrossRef]
+ERR   | HTTPError HTTP Error 429: Too Many Requests   |    | 
+
+### C3-AI server energy water carbon scenarios spatial uncertainty [OpenAlex]
+10.1016/j.jclepro.2025.146528   | Sustainable AI infrastructure: A scenario-based forecast of water footprint under uncertainty   | Journal of Cleaner Production   | 2025   | article   | Manuel Herrera, Xiang Xie, Andrea Menapace
+   | Liquid versus Air: Life Cycle Carbon of Cooling Down AI Data Centers   | Digital Access to Scholarship at Harvard (DASH) (Harvard University)   | 2025   | dissertation   | Hassel, William J.
+10.48550/arxiv.2606.21760   | AI Data Centers and the Water Use Feedback Loop   | arXiv (Cornell University)   | 2026   | preprint   | Basit A. Akinade, Amobichukwu Chukwudi Amanambu, Jonathan Frame
+   | Data-driven low-carbon operation of energy systems under uncertainty   | PolyU Institutional Research Archive (Hong Kong Polytechnic University)   | None   | dissertation   | Yijie Yang
+
+### C4-DC cooling LCA [CrossRef]
+10.1201/b19138-15   | Metacomparison of the Life Cycle Environmental Impacts of Bio-Based Products   | Environmental Life Cycle Assessment   | 2015   | book-chapter   | 
+10.1021/acsomega.6c04677.s001   | Environmental Impacts and Life Cycle Assessment of Recycled Plastic Bricks   |    | None   | component   | 
+10.3390/su18115671   | Carbon Accounting and Beyond: An Evidence-Based Life Cycle Assessment of the Environmental Impacts of Data Center IT Equ   | Sustainability   | 2026   | journal-article   | Smith, Mann, Lal
+10.1021/acsfoodscitech.4c00281.s001   | Environmental Impacts of Cultured Meat: A Cradle-to-Gate Life Cycle Assessment   |    | None   | component   | 
+10.1016/j.enbuild.2023.113006   | Life cycle assessment of a climate-friendly data center cooling device   | Energy and Buildings   | 2023   | journal-article   | Isler-Kaya, Karaosmanoglu
+
+### C4-DC cooling LCA [OpenAlex]
+   | Energy and Water Environmental Trade-Offs of Data Center Cooling Technologies   | Research Open (London South Bank University)   | 2017   | conference-paper   | Deborah Andrews, Sophia Flucker, Beth Whitehead
+   | Further study of Life Cycle Assessment of a high density data center cooling system – Teliasonera’s “Green Room” concept   | KTH Publication Database DiVA (KTH Royal Institute of Technology)   | 2013   | dissertation   | Shan Wang
+10.31219/osf.io/er9py   | Assessing the Environmental Sustainability of Cloud Computing: A Life Cycle Assessment Approach   |    | 2023   | preprint   | Mingxuan Liu, Yan Zhang, Xiaoping Wang
+10.1038/s41586-025-08832-3   | Using life cycle assessment to drive innovation for sustainable cool clouds   | Nature   | 2025   | article   | Husam A. Alissa, Teresa A. Nick, Ashish Raniwala
+
+### C5-300 cities water stress wastewater GHG [CrossRef]
+10.2166/9781780406312_017   | Greenhouse gas emissions from wastewater treatment facilities   | Greenhouse Gas Emission and Mitigation in Municipal Wastewat   | 2018   | book-chapter   | Zhan
+10.2166/9781780406312_029   | IPCC framework for calculating greenhouse gas emissions from wastewater treatment   | Greenhouse Gas Emission and Mitigation in Municipal Wastewat   | 2018   | book-chapter   | Dennehy, Zhan
+10.2166/9781780406312_053   | Measurement of direct greenhouse gas emissions in WWTPs   | Greenhouse Gas Emission and Mitigation in Municipal Wastewat   | 2018   | book-chapter   | Zhan
+10.1038/s44221-023-00087-4   | Decoupling wastewater-related greenhouse gas emissions and water stress alleviation across 300 cities in China is challe   | Nature Water   | 2023   | journal-article   | Chen, Zhang, Liu
+10.2139/ssrn.6840237   | Plant-wide study of greenhouse gas emissions and biological CO2 mitigation in municipal wastewater treatment plant   |    | 2026   | posted-content   | Kim, Cui
+
+### C5-300 cities water stress wastewater GHG [OpenAlex]
+10.1038/s41598-025-31704-9   | Analysis of greenhouse gas emissions from urban wastewater treatment during recent years in China   | Scientific Reports   | 2025   | article   | Ke Liang Zhou
+10.3390/w11050906   | Analysis of Greenhouse Gas Emissions in Centralized and Decentralized Water Reclamation with Resource Recovery Strategie   | Water   | 2019   | article   | Mounia Lahmouri, Jörg E. Drewes, Daphne Gondhalekar
+10.3390/w15162871   | Greenhouse Gases Emissions of Constructed Wetlands: Mechanisms and Affecting Factors   | Water   | 2023   | article   | Xiaoxue Yin, Cancan Jiang, Shengjun Xu
+10.1038/s41545-025-00540-9   | China’s enhanced wastewater treatment capacity may accelerate greenhouse gas emissions from rural domestic pollution   | npj Clean Water   | 2025   | article   | Tianxiang Wang, Guangyu Su, Simiao Wang
+
+### C6-urban unit process model decentralized [CrossRef]
+10.1007/978-3-319-71025-9_178-1   | Urban Water Reclamation with Resource Recovery as a Cornerstone of Urban Climate Change Resilience   | Handbook of Climate Change Resilience   | 2018   | book-chapter   | Gondhalekar, Al-Azzawi, Drewes
+10.1007/978-3-319-93336-8_178   | Urban Water Reclamation with Resource Recovery as a Cornerstone of Urban Climate Change Resilience   | Handbook of Climate Change Resilience   | 2019   | book-chapter   | Gondhalekar, Al-Azzawi, Drewes
+10.1016/j.jwpe.2020.101383   | Investigating the feasibility and logistics of a decentralized urine treatment and resource recovery system   | Journal of Water Process Engineering   | 2020   | journal-article   | Chipako, Randall
+10.1002/9781394274314.ch14   | Decentralized Systems for Resource Recovery: Water Recovery Strategies from Wastewater   | Wastewater to Resource Recovery   | 2025   | other   | Patel, Arkatkar, Pardeshi
+10.1002/9780470949962.ch7   | Treatment and Resource Recovery Unit Processes   | Water Centric Sustainable Communities   | 2010   | other   | 
+
+### C6-urban unit process model decentralized [OpenAlex]
+10.3390/resources6020022   | Integrated, Decentralized Wastewater Management for Resource Recovery in Rural and Peri-Urban Areas   | Resources   | 2017   | article   | Andrea G. Capodaglio
+10.1038/s44221-024-00303-9   | Using water and wastewater decentralization to enhance the resilience and sustainability of cities   | Nature Water   | 2024   | article   | Manel Garrido‐Baserba, David L. Sedlak, María Molinos‐Senante
+10.3390/su11030918   | Sustainable and Resilient Urban Water Systems: The Role of Decentralization and Planning   | Sustainability   | 2019   | article   | Nancey Green Leigh, Heonyeong Lee
+10.3390/su10103546   | Effect of Nutrient Removal and Resource Recovery on Life Cycle Cost and Environmental Impacts of a Small Scale Water Res   | Sustainability   | 2018   | article   | Ben Morelli, Sarah A. Cashman, Xin Cissy Ma
+
+### C7-AI DC water quality fit for purpose [CrossRef]
+ERR   | HTTPError HTTP Error 429: Too Many Requests   |    | 
+
+### C7-AI DC water quality fit for purpose [OpenAlex]
+10.4236/jep.2026.174010   | Navigating Environmental Concerns Confronting U.S. Data Centers Related to Water Quantity and Quality   | Journal of Environmental Protection   | 2026   | article   | Shirin Estahbanati, Angela Liang Cutting, Robert F. Chimchirian
+10.2139/ssrn.7467658   | Evaluating the Compatibility of Current U.S. Water Infrastructure with Future Data Center Demand   | SSRN Electronic Journal   | 2026   | preprint   | May M. Wu, Udayan Singh, Hannah Kim
+10.48550/arxiv.2606.21760   | AI Data Centers and the Water Use Feedback Loop   | arXiv (Cornell University)   | 2026   | preprint   | Basit A. Akinade, Amobichukwu Chukwudi Amanambu, Jonathan Frame
+   | Thirst for Data: State Responses to Data Center Water Use   | Colorado Law Scholarly Commons (University of Colorado Colorado Springs)   | 2026   | article   | Daniel Anderson, Sydney Stellato
+
+### C8-DC workload water determinants [CrossRef]
+10.1109/grid.2010.5697800   | Power consumption and efficiency of cooling in a Data Center   | 2010 11th IEEE/ACM International Conference on Grid Computin   | 2010   | proceedings-article   | Itoh, Kodama, Shimizu
+10.1002/9781119597537.ch14   | RACK‐LEVEL COOLING AND SERVER‐LEVEL COOLING   | Data Center Handbook   | 2021   | other   | Huang, Yang, Li
+10.1016/j.egypro.2017.03.581   | Cooling Energy Consumption Investigation of Data Center IT Room with Vertical Placed Server   | Energy Procedia   | 2017   | journal-article   | Zhang, Lindberg, Xiong
+10.2139/ssrn.5260366   | Numerical Study on an Air-Cooling and Liquid-Cooling Combined Server for High-Temperature Data Center Application   |    | 2025   | posted-content   | Wang, Tao
+10.1016/j.enbuild.2014.10.058   | Simplified server model to simulate data center cooling energy consumption   | Energy and Buildings   | 2015   | journal-article   | Ham, Kim, Choi
+
+### C8-DC workload water determinants [OpenAlex]
+10.1016/j.resconrec.2025.108310   | The water use of data center workloads: A review and assessment of key determinants   | Resources Conservation and Recycling   | 2025   | article   | Nuoa Lei, Jun Lu, Arman Shehabi
+10.48550/arxiv.2609.25437   | Data center cooling choices shift water impacts across the grid: An integrated water-energy model for sustainable data c   | arXiv (Cornell University)   | 2026   | preprint   | Garrett Alston, Nancy Love, Rabab Haider
+10.1088/1748-9326/abfba1   | The environmental footprint of data centers in the United States   | Environmental Research Letters   | 2021   | article   | Md Abu Bakar Siddik, Arman Shehabi, Landon T. Marston
+10.48550/arxiv.2606.21760   | AI Data Centers and the Water Use Feedback Loop   | arXiv (Cornell University)   | 2026   | preprint   | Basit A. Akinade, Amobichukwu Chukwudi Amanambu, Jonathan Frame
+
+### C9-DC cooling urban sustainability review [CrossRef]
+10.3390/su17010142   | Understanding Urban Cooling of Blue–Green Infrastructure: A Review of Spatial Data and Sustainable Planning Optimization   | Sustainability   | 2024   | journal-article   | Budzik, Sylla, Kowalczyk
+10.1002/9781118937563.ch25   | Free Cooling Technologies in Data Centers   | Data Center Handbook   | 2014   | other   | Des Champs, Dunnavant
+10.1016/j.energy.2024.132846   | Enhancing data center cooling efficiency and ability: A comprehensive review of direct liquid cooling technologies   | Energy   | 2024   | journal-article   | Kong, Zhang, Tang
+10.21275/sr25816234249   | Transforming High-Energy Data Center Sites: Sustainability with Predictive Analytics and Futuristic Technologies   | International Journal of Science and Research (IJSR)   | 2025   | journal-article   | Osibo
+10.3390/su10030712   | Cooling Effects and Regulating Ecosystem Services Provided by Urban Trees—Novel Analysis Approaches Using Urban Tree Cad   | Sustainability   | 2018   | journal-article   | Scholz, Hof, Schmitt
+
+### C9-DC cooling urban sustainability review [OpenAlex]
+10.3390/buildings15030504   | Urban Sustainability Through Pavement Technologies: Reducing Urban Heat Islands with Cool Pavements   | Buildings   | 2025   | article   | Mohammad Javad Amani, Rashid Tanzadeh, Fereidoon Moghadas Nejad
+10.3390/su17010142   | Understanding Urban Cooling of Blue–Green Infrastructure: A Review of Spatial Data and Sustainable Planning Optimization   | Sustainability   | 2024   | article   | Grzegorz Budzik, Marta Sylla, Tomasz Kowalczyk
+10.3389/frsc.2025.1583316   | Understanding the transformative potential of solar thermal technology for urban sustainability   | Frontiers in Sustainable Cities   | 2025   | article   | Stefania Guarino, Valerio Lo Brano, Jan Kośny
+10.3390/su16167222   | Optimization Control Strategies and Evaluation Metrics of Cooling Systems in Data Centers: A Review   | Sustainability   | 2024   | article   | Qiankun Chang, Yuanfeng Huang, Kaiyan Liu
+
+### C10-daily urban water metabolism [CrossRef]
+10.33140/aewmr.05.01.08   | Study on the Balance of Oxygen in Supply and Demand in Wastewater Treatment Plant   | Advance in Environmental Waste Management &amp; Recycling   | 2022   | journal-article   | 
+10.1201/b19646-102   | Sustainable Reuse and Recycling of Treated Urban Wastewater   | Urban Water Reuse Handbook   | 2016   | book-chapter   | 
+10.1201/b15857-5   | Urban Water Supply and Demand   | Urban Water Engineering and Management   | 2010   | book-chapter   | 
+10.2166/ws.2016.102   | A stochastic model for daily residential water demand   | Water Supply   | 2016   | journal-article   | Gargano, Tricarico, del Giudice
+10.18174/680248   | RainOasis: a dynamic model to match seasonal water demand and supply to sustain Urban Green during future droughts   |    | None   | dissertation   | de Vos
+
+### C10-daily urban water metabolism [OpenAlex]
+10.1016/j.proeng.2014.02.014   | Urban Water System Metabolism Assessment Using WaterMet2 Model   | Procedia Engineering   | 2014   | conference-paper   | Kourosh Behzadian, Zoran S. Kapelan, Govindarajan Venkatesh
+10.1016/j.resconrec.2015.03.015   | Modelling metabolism based performance of an urban water system using WaterMet2   | Resources Conservation and Recycling   | 2015   | article   | Kourosh Behzadian, Zoran S. Kapelan
+10.1016/j.watres.2018.01.070   | Understanding urban water performance at the city-region scale using an urban water metabolism evaluation framework   | Water Research   | 2018   | article   | Marguerite Anne Renouf, Steven John Kenway, Ka Leung Lam
+10.3390/su151914549   | Puebla City Water Supply from the Perspective of Urban Water Metabolism   | Sustainability   | 2023   | article   | David Pérez-González, Gian Carlo Delgado Ramos, Lilia Cedillo Ramírez
+

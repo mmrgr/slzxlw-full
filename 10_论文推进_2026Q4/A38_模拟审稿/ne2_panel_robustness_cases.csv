@@ -1,0 +1,61 @@
+﻿panel,domain,sample,species,mult,status,dS,dS_base
+baseline,ha,"IEUA RP-1 (2025, tertiary)",TDS,0.5,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",TDS,2.0,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",chloride,0.5,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",chloride,2.0,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",hardness,0.5,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",hardness,2.0,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",alkalinity,0.5,OK,0.0,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",alkalinity,2.0,OK,-30.038687410149997,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",silica,0.5,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"IEUA RP-1 (2025, tertiary)",silica,2.0,OK,-4.194192342420159,-4.194192342420159
+baseline,ha,"LADWP AWPF (2012, RO product)",TDS,0.5,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",TDS,2.0,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",chloride,0.5,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",chloride,2.0,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",hardness,0.5,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",hardness,2.0,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",alkalinity,0.5,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",alkalinity,2.0,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",silica,0.5,OK,0.0,0.0
+baseline,ha,"LADWP AWPF (2012, RO product)",silica,2.0,OK,0.0,0.0
+permissive,ha,"IEUA RP-1 (2025, tertiary)",TDS,0.5,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",TDS,2.0,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",chloride,0.5,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",chloride,2.0,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",hardness,0.5,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",hardness,2.0,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",alkalinity,0.5,OK,0.0,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",alkalinity,2.0,OK,-30.038687410149997,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",silica,0.5,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"IEUA RP-1 (2025, tertiary)",silica,2.0,OK,-4.194192342420159,-4.194192342420159
+permissive,ha,"LADWP AWPF (2012, RO product)",TDS,0.5,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",TDS,2.0,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",chloride,0.5,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",chloride,2.0,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",hardness,0.5,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",hardness,2.0,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",alkalinity,0.5,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",alkalinity,2.0,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",silica,0.5,OK,0.0,0.0
+permissive,ha,"LADWP AWPF (2012, RO product)",silica,2.0,OK,0.0,0.0
+strict,ha,"IEUA RP-1 (2025, tertiary)",TDS,0.5,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",TDS,2.0,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",chloride,0.5,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",chloride,2.0,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",hardness,0.5,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",hardness,2.0,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",alkalinity,0.5,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",alkalinity,2.0,OK,-30.642913881043803,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",silica,0.5,OK,-2.7010471202135804,-30.642913881043803
+strict,ha,"IEUA RP-1 (2025, tertiary)",silica,2.0,OK,-28210922.485750016,-30.642913881043803
+strict,ha,"LADWP AWPF (2012, RO product)",TDS,0.5,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",TDS,2.0,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",chloride,0.5,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",chloride,2.0,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",hardness,0.5,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",hardness,2.0,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",alkalinity,0.5,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",alkalinity,2.0,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",silica,0.5,OK,2.821093658889751,2.821093658889751
+strict,ha,"LADWP AWPF (2012, RO product)",silica,2.0,OK,2.821093658889751,2.821093658889751

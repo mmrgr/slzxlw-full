@@ -83,7 +83,7 @@ check("M5 退化全在 chi=0.25",
 
 # ---------------- D1 外部数据 ----------------
 print("\n[D1] 外部数据 (Shen 2026)")
-EXT = Path(r"C:/Users/mmrgr/Desktop/论文/_ext_data/source_data/Source_data.xlsx")
+EXT = Path(__file__).resolve().parents[3] / "_ext_data" / "source_data" / "Source_data.xlsx"
 if EXT.exists():
     x = pd.ExcelFile(EXT)
     d = x.parse("WWTP_data_2020", header=0)

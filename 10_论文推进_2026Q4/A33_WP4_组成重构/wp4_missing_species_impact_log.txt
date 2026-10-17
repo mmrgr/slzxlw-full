@@ -1,0 +1,56 @@
+============================================================================================
+WP4-2  「缺失物种按 0」偏差的方向与幅度 (任务 B)
+============================================================================================
+
+[0] 填充区间 (来源: 权威表内**完整物种水样** IEUA/LADWP 的观测; 非自造)
+  species              lo        mid         hi  n_donors  捐赠值
+  TDS                  22      232.5        443         2  [443, 22]
+  chloride            3.6       51.8        100         2  [100, 3.6]
+  hardness          1.024      75.23      149.4         2  [149.427, 1.02377]
+  alkalinity          7.1      73.55        140         2  [140, 7.1]
+  silica             0.52      12.26         24         2  [24, 0.52]
+  ⚠ 区间为该物种在**其他真实水样**中的取值范围, 用于界定偏差方向,
+    不是对缺测水样真实浓度的估计。
+
+[1] 逐水样偏差扫描 (phi=0.6; 处理 A=按0现状 / B=区间下界 / C=区间中位 / D=区间上界 / E=2×上界压力档)
+
+[2] ★ 偏差方向与幅度 (q 与 dS_pot 的符号是否翻转)
+  group              sample                           treat            n        q中位         dS中位     q符号    dS符号
+  INCOMPLETE         Figshare RW (2025, paired study) A_zero           6   -0.20511   -1.135e+04     neg     neg
+  INCOMPLETE         Figshare RW (2025, paired study) B_impute_lo      6   -0.20511   -1.135e+04     neg     neg
+  INCOMPLETE         Figshare RW (2025, paired study) C_impute_mid     6   -0.20511   -1.135e+04     neg     neg
+  INCOMPLETE         Figshare RW (2025, paired study) D_impute_hi      6   -0.20511   -1.135e+04     neg     neg
+  INCOMPLETE         Figshare RW (2025, paired study) E_impute_2x_hi   6   -0.32851        -6551     neg     neg
+  INCOMPLETE         AI-UWM model assumption          A_zero           6    0.10985    -1.83e+04     pos     neg
+  INCOMPLETE         AI-UWM model assumption          B_impute_lo      6    0.10682    -1.83e+04     pos     neg
+  INCOMPLETE         AI-UWM model assumption          C_impute_mid     6    0.05696   -1.738e+04     pos     neg
+  INCOMPLETE         AI-UWM model assumption          D_impute_hi      6   -0.08224   -1.468e+04     neg     neg  ←q翻转
+  INCOMPLETE         AI-UWM model assumption          E_impute_2x_hi   6   -0.32851        -6551     neg     neg  ←q翻转
+  BRACKISH_CONTROL   Figshare BW (5 g·L<sup>-1</sup>) A_zero           6   -0.85088    1.274e+05     neg     pos
+  BRACKISH_CONTROL   Figshare BW (5 g·L<sup>-1</sup>) B_impute_lo      6   -0.85088    1.274e+05     neg     pos
+  BRACKISH_CONTROL   Figshare BW (5 g·L<sup>-1</sup>) C_impute_mid     6   -0.85088    1.274e+05     neg     pos
+  BRACKISH_CONTROL   Figshare BW (5 g·L<sup>-1</sup>) D_impute_hi      6   -0.85088    1.274e+05     neg     pos
+  BRACKISH_CONTROL   Figshare BW (5 g·L<sup>-1</sup>) E_impute_2x_hi   6   -0.85088    1.274e+05     neg     pos
+
+[3] ★ 与完整物种水样 (主口径基准) 的对比 @phi=0.6
+  ha|IEUA RP-1 (202        q=-0.04392  CoC1=3.1537  dS=-7585 ML
+  co|IEUA RP-1 (202        q=-0.03953  CoC1=3.1852  dS=-6728 ML
+  ha|LADWP AWPF (20        q=+0.10694  CoC1=4.7772  dS=-1.093e+04 ML
+  co|LADWP AWPF (20        q=+0.09568  CoC1=4.6005  dS=-9767 ML
+  (基准水样组成完整, 无需填补, 故其 q/dS 不受本偏差影响)
+
+[4] ★ 裁定: 不完整水样能否用于任何结论?
+  不完整水样数 = 2 (Figshare RW, AI-UWM assumption)
+  处理组行数 = 10; 出现符号翻转的行数 = 2
+  ✗ 存在符号翻转 ⇒ 「缺失按 0」的偏差**足以改变结论符号**
+      AI-UWM model assumption            D_impute_hi    q:neg dS:neg
+      AI-UWM model assumption            E_impute_2x_hi q:neg dS:neg
+  无论翻转与否: 不完整水样**不得**进入主图或主结论; 只能进 SI 并标注缺失项与偏差方向。
+
+[5] 苦咸水对照 (Figshare BW, 非再生水)
+  A_zero         q中位=-0.85088 dS中位=+1.274e+05 CoC1中位=1.1193 退化=0
+  B_impute_lo    q中位=-0.85088 dS中位=+1.274e+05 CoC1中位=1.1193 退化=0
+  C_impute_mid   q中位=-0.85088 dS中位=+1.274e+05 CoC1中位=1.1193 退化=0
+  D_impute_hi    q中位=-0.85088 dS中位=+1.274e+05 CoC1中位=1.1193 退化=0
+  E_impute_2x_hi q中位=-0.85088 dS中位=+1.274e+05 CoC1中位=1.1193 退化=0
+  ⇒ Figshare BW 为苦咸水(非再生水), 必须**完全排除**在任何再生水组成统计之外。

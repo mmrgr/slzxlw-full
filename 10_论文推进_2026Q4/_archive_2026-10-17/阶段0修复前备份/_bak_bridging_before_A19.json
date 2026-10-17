@@ -1,0 +1,7 @@
+{
+ "n_pairs": 24,
+ "M0_median_rel_diff": 5.082110955397879e-16,
+ "sign_agreement": 0.9583333333333334,
+ "runtime_s": 1002.0,
+ "discipline_note": "两模型对同一输入求解; 逐日模型用当日蒸发作 e_ref (修正此前用 M 当 e_ref 的 harness bug)。口径 = 排放-索取平衡; 不使用已撤回的 psi/Delta。"
+}

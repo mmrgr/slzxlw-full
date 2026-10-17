@@ -1,0 +1,182 @@
+============================================================================================
+WP5 任务 A: 全局敏感性 (Morris 筛选 + Sobol 方差分解) —— 现行 baseline 限值 + 完整物种水样
+============================================================================================
+
+[0] 权威水样 (唯一来源 city_model.load_samples(), 不自造任何化学数值)
+  city_model.LIMIT_SET = 'baseline';  PANEL B_full 引用限值 = {"TDS": 2200.0, "chloride": 700.0, "hardness": 750.0, "alkalinity": 350.0, "silica": 175.0}
+  权威表 5 条; 面板 B_full 要求物种 ['TDS', 'chloride', 'hardness', 'alkalinity', 'silica']
+    IEUA RP-1 (2025, tertiary)                               n=5 缺失=-                        COMPLETE
+    LADWP AWPF (2012, RO product)                            n=5 缺失=-                        COMPLETE
+    Figshare RW (2025, paired study)                         n=4 缺失=silica                   INCOMPLETE
+    Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)    n=3 缺失=alkalinity,silica        INCOMPLETE
+    AI-UWM model assumption                                  n=2 缺失=hardness,alkalinity,silica INCOMPLETE
+  ⇒ 主口径 (完整物种) 水样 = ['IEUA RP-1 (2025, tertiary)', 'LADWP AWPF (2012, RO product)']
+  ⇒ 禁用水样 (苦咸水非再生水) = ['Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)']  —— 本脚本根本不纳入
+
+[0b] 口径自检
+  锚点复现 (ha|IEUA|ps=1|phi=0.6): WP5 = -7585.088416 ML, WP4 = -7585.088416 ML, 相对差 = 0.000e+00 => ✓ 口径一致 (相对容差 1e-09)
+  锚点门禁: B2=converged_unique B1_healthy=True CoC0=3.5000 CoC1=3.1537 reliable=True
+  锚点恒等式残差 (相对): dS == C - F  -> 0.000e+00
+  ⚠ 口径对照: 本模块在'城市水量会计'口径下求解 (S_city = S_AI + inc_recl - pool), dS_pot = S_city(B2) - S_city(B1);
+     冻结基座 (pool=P0, gap=gap_0, dp=0, e_scale=1) 处与 WP4/A13 的 C-F 口径**逐位一致** (见上)。
+  共享 cache 下各水样 CoC1@(ha,phi=0.6) = {'IEUA RP-1 (2025, tertiary)': 3.153733, 'LADWP AWPF (2012, RO product)': 4.777245} => ✓ 缓存键含 q, 组成维度有效
+
+[1] ★ Morris 轨迹筛选 (压力域边界, 十二维)
+  归一化盒上 8 级网格, 32 条轨迹, 每维步长 Δ = 0.5714
+  参数: ['phi', 'pool_scale', 'gap_scale', 'dp_scale', 'e_scale', 'coc_design', 'limit_scale', 'x_TDS', 'x_chloride', 'x_hardness', 'x_alkalinity', 'x_silica']
+
+  --- ha|IEUA ---  有效/不可辨识: 414/2 (0.5% 门禁失败)
+      不可辨识原因: {'B2_NOT_CONVERGED_UNIQUE:non_unique': 1, 'B2_NOT_CONVERGED_UNIQUE:no_convergence': 1}
+   parameter          mu    mu_star      sigma  mu_abs_ratio  n_effects  n_nan_effects
+ limit_scale -40944.4973 45061.5270 92110.1613        0.9086         31              1
+x_alkalinity  24840.7097 24840.7097 55236.1663        1.0000         32              0
+         phi -12693.9881 14489.1144 11476.1380        0.8761         31              1
+   gap_scale   4871.0007 11591.9768 16277.5305        0.4202         32              0
+  pool_scale  -1540.8345 10634.3583 26981.6923        0.1449         31              1
+     e_scale   1052.1203  8710.1449 19505.7880        0.1208         32              0
+    dp_scale   1635.4297  5266.2860 16855.7407        0.3105         32              0
+  coc_design   2033.5886  2033.5886  2368.3588        1.0000         32              0
+       x_TDS    202.0183   202.0183  1026.2714        1.0000         32              0
+    x_silica     92.4247    92.4247   522.8328        1.0000         32              0
+  x_hardness     14.8470    14.8470    82.6644        1.0000         31              1
+  x_chloride      0.0000     0.0000     0.0000           NaN         32              0
+
+  --- ha|LADWP ---  有效/不可辨识: 415/1 (0.2% 门禁失败)
+      不可辨识原因: {'B2_NOT_CONVERGED_UNIQUE:no_convergence': 1}
+   parameter          mu    mu_star      sigma  mu_abs_ratio  n_effects  n_nan_effects
+         phi -18700.0182 18700.0182  8672.0397        1.0000         32              0
+ limit_scale  13802.9288 13802.9288 19389.8338        1.0000         31              1
+   gap_scale  10450.1886 10450.1886  7318.6381        1.0000         32              0
+  pool_scale  -9792.9213  9792.9213  9028.1200        1.0000         32              0
+     e_scale  -7619.4670  7619.4670  5507.0817        1.0000         32              0
+    dp_scale  -2539.3873  2539.3873  2385.2295        1.0000         32              0
+  coc_design    745.9172  1042.2483  1218.6757        0.7157         32              0
+x_alkalinity    129.2902   129.2902   513.0387        1.0000         31              1
+       x_TDS      0.0000     0.0000     0.0000           NaN         32              0
+  x_chloride      0.0000     0.0000     0.0000           NaN         32              0
+  x_hardness      0.0000     0.0000     0.0000           NaN         32              0
+    x_silica      0.0000     0.0000     0.0000           NaN         32              0
+
+  --- co|IEUA ---  有效/不可辨识: 415/1 (0.2% 门禁失败)
+      不可辨识原因: {'B2_NOT_CONVERGED_UNIQUE:non_unique': 1}
+   parameter          mu    mu_star      sigma  mu_abs_ratio  n_effects  n_nan_effects
+ limit_scale -36526.1567 40251.7995 82840.4209        0.9074         31              1
+x_alkalinity  22330.0332 22330.0332 49765.2201        1.0000         32              0
+         phi -11104.2261 13079.7275 10822.0813        0.8490         32              0
+   gap_scale   5175.5606 11723.3274 16258.9604        0.4415         32              0
+  pool_scale  -2002.8804  9963.4938 24052.2512        0.2010         32              0
+     e_scale    912.0107  7824.0300 17741.7750        0.1166         32              0
+    dp_scale   1322.9356  4942.8596 15368.4575        0.2676         32              0
+  coc_design   1930.0846  1930.0846  2335.5962        1.0000         32              0
+       x_TDS    131.4750   131.4750   632.7951        1.0000         32              0
+    x_silica     48.8016    48.8016   276.0634        1.0000         32              0
+  x_hardness     16.9666    16.9666    94.4661        1.0000         31              1
+  x_chloride      0.0000     0.0000     0.0000           NaN         32              0
+
+  --- co|LADWP ---  有效/不可辨识: 415/1 (0.2% 门禁失败)
+      不可辨识原因: {'B2_NOT_CONVERGED_UNIQUE:no_convergence': 1}
+   parameter          mu    mu_star      sigma  mu_abs_ratio  n_effects  n_nan_effects
+         phi -17254.5688 17254.5688  8637.3884        1.0000         32              0
+ limit_scale  13010.5902 13010.5902 18421.8254        1.0000         32              0
+   gap_scale  11462.7318 11462.7318  7635.3097        1.0000         32              0
+  pool_scale  -9561.0251  9561.0251  8644.3412        1.0000         32              0
+     e_scale  -6911.1122  6911.1122  5040.3560        1.0000         31              1
+    dp_scale  -2640.5599  2640.5599  2250.2043        1.0000         32              0
+  coc_design    657.8785   952.9126  1116.5867        0.6904         32              0
+x_alkalinity    140.5395   140.5395   504.2669        1.0000         32              0
+       x_TDS      0.0000     0.0000     0.0000           NaN         32              0
+  x_chloride      0.0000     0.0000     0.0000           NaN         32              0
+  x_hardness      0.0000     0.0000     0.0000           NaN         32              0
+    x_silica      0.0000     0.0000     0.0000           NaN         32              0
+
+[2] ★ Sobol 方差分解 (Saltelli, 引擎 aiuwm.sobol_sensitivity)
+  计算量控制: 全 12 维需 256×(12+2) = 3584 次求解;
+  本书取 Morris 排名前 7 维 -> 256×(7+2) = 2304 次求解。**降维是显式声明的取舍**: Sobol 指数只对这 7 维的**条件方差**有效, 未纳入维度的方差被并入 ST。
+  Sobol 子集参数 (按 Morris mu_star 排序): ['limit_scale', 'x_alkalinity', 'phi', 'gap_scale', 'pool_scale', 'e_scale', 'dp_scale']
+
+  --- ha|IEUA ---  NaN 普查: 0/512 (0.0%) => OK (设计内无门禁失败点; 指数直接复用引擎 aiuwm.sobol_sensitivity)
+   parameter       S1      ST
+ limit_scale  0.17201 0.94441
+x_alkalinity  0.03668 0.68162
+  pool_scale  0.01337 0.25102
+         phi -0.00226 0.15149
+     e_scale  0.00255 0.06741
+   gap_scale  0.00040 0.02895
+    dp_scale  0.00026 0.01215
+
+  --- ha|LADWP ---  NaN 普查: 7/512 (1.37%) => NOT_IDENTIFIABLE: Saltelli 设计含门禁失败点, NaN 会污染方差, Sobol 指数不可解释 —— 如实报出, 不插补、不蒙混
+   parameter  S1  ST
+ limit_scale NaN NaN
+x_alkalinity NaN NaN
+         phi NaN NaN
+   gap_scale NaN NaN
+  pool_scale NaN NaN
+     e_scale NaN NaN
+    dp_scale NaN NaN
+
+  --- co|IEUA ---  NaN 普查: 0/512 (0.0%) => OK (设计内无门禁失败点; 指数直接复用引擎 aiuwm.sobol_sensitivity)
+   parameter       S1      ST
+ limit_scale  0.16760 0.94309
+x_alkalinity  0.03746 0.68943
+  pool_scale  0.01221 0.25049
+         phi -0.00251 0.16607
+     e_scale  0.00201 0.06882
+   gap_scale  0.00070 0.03288
+    dp_scale  0.00025 0.01259
+
+  --- co|LADWP ---  NaN 普查: 6/512 (1.17%) => NOT_IDENTIFIABLE: Saltelli 设计含门禁失败点, NaN 会污染方差, Sobol 指数不可解释 —— 如实报出, 不插补、不蒙混
+   parameter  S1  ST
+ limit_scale NaN NaN
+x_alkalinity NaN NaN
+         phi NaN NaN
+   gap_scale NaN NaN
+  pool_scale NaN NaN
+     e_scale NaN NaN
+    dp_scale NaN NaN
+
+[3] ★ 符号翻转诊断: 哪个参数最能改变 dS_pot 的【符号】
+  parameter           冻结值    n可靠     负     正     符号可变        首个翻转点                   dS范围(ML)
+  x_alkalinity      1.000    162   138    24     True        2.615         [-1.101e+04, 5375]
+  phi               0.600    163   163     0    False           NA        [-1.382e+04, -2237]
+  pool_scale        1.000    163   163     0    False           NA        [-1.985e+04, -2653]
+  gap_scale         1.000    163   163     0    False           NA        [-1.659e+04, -2879]
+  dp_scale          0.000    163   163     0    False           NA        [-1.603e+04, -6728]
+  e_scale           1.000    162   162     0    False           NA        [-1.573e+04, -5970]
+  coc_design        5.000    164   164     0    False           NA        [-1.093e+04, -6728]
+  limit_scale       1.000    163   163     0    False           NA       [-3.645e+04, -398.9]
+  x_TDS             1.000    164   164     0    False           NA        [-1.093e+04, -6728]
+  x_chloride        1.000    164   164     0    False           NA        [-1.093e+04, -6728]
+  x_hardness        1.000    164   164     0    False           NA        [-1.093e+04, -6728]
+  x_silica          1.000    164   164     0    False           NA        [-1.093e+04, -6728]
+  ⇒ 能改变 dS_pot **符号** 的参数 = ['x_alkalinity']
+
+[4] ★ 三层不确定性分解 (参数 / 结构 / 情景 —— 分开报告, 不混成单一误差条)
+
+  (a) 参数不确定性 (条件于给定 域×水样, Morris/Sobol 已在 §1-§2 给出)
+      ha|IEUA                有效 414/416 (0.48% 门禁失败)
+      ha|LADWP               有效 415/416 (0.24% 门禁失败)
+      co|IEUA                有效 415/416 (0.24% 门禁失败)
+      co|LADWP               有效 415/416 (0.24% 门禁失败)
+      主配置 ha|IEUA 前 3 名 (mu_star): [('limit_scale', 45061.52704496675), ('x_alkalinity', 24840.70965586628), ('phi', 14489.11436613041)]
+
+  (b) 结构不确定性 (口径/面板/F 式)
+      (b1) 面板结构 (A_engine2 2 物种 vs B_full 5 物种, phi=0.6, ps=1, ls=1):
+          ha|IEUA RP-1 (2025, tertiary)   B_full dS= -7585.0884 A_engine2 dS= -8096.0278 Δ= +510.9394 (相对 6.74e-02) 符号翻转=否
+          ha|LADWP AWPF (2012, RO produ   B_full dS=-10931.7016 A_engine2 dS= -8096.0278 Δ=-2835.6738 (相对 2.59e-01) 符号翻转=否
+          co|IEUA RP-1 (2025, tertiary)   B_full dS= -6727.5395 A_engine2 dS= -7187.0286 Δ= +459.4892 (相对 6.83e-02) 符号翻转=否
+          co|LADWP AWPF (2012, RO produ   B_full dS= -9767.1986 A_engine2 dS= -7187.0286 Δ=-2580.1700 (相对 2.64e-01) 符号翻转=否
+      (b2) F 式结构: WP2/WP4 式 F=(M0-M1)+x_ai  vs  A13 式 F=M0-(1-phi_eff)M1
+           n=15, 最大相对差 = 4.738e-16 => ✓ 实测恒等 (x_ai ≡ phi_eff*M1)
+      (b3) 体积口径 vs 固定池口径: 冻结基座相对差 = 0.000e+00 => 恒等 (见 §0b)
+
+  (c) 情景不确定性 (水样 × 域; 同一参数点集上的确定性方差分解)
+      参数点集: 40 个 (压力域均匀抽样, seed=20261016); 情景 = [('ha', 'IEUA RP-1 (2025, tertiary)'), ('ha', 'LADWP AWPF (2012, RO product)'), ('co', 'IEUA RP-1 (2025, tertiary)'), ('co', 'LADWP AWPF (2012, RO product)')]
+      n_all=160  n_eff=160 (门禁失败 0)
+      情景【间】方差占比 = 3.849% (SS_between=5.865e+09)
+      情景【内】即参数方差占比 = 96.151% (SS_within=1.465e+11)
+      组均值:
+          co|IEUA RP-1 (2025, tertiary)      n=40  mean=    -2237.22 ML sd=39845.78 range=[-2.492e+04, 2.397e+05] 负/零/正=36/0/4
+          co|LADWP AWPF (2012, RO product)   n=40  mean=   -13786.57 ML sd=10337.22 range=[-5.46e+04, -1822] 负/零/正=40/0/0
+          ha|IEUA RP-1 (2025, tertiary)      n=40  mean=    -2402.92 ML sd=44064.28 range=[-2.522e+04, 2.654e+05] 负/零/正=36/0/4
+          ha|LADWP AWPF (2012, RO product)   n=40  mean=   -15008.25 ML sd=10961.57 range=[-5.834e+04, -2078] 负/零/正=40/0/0
+      裁定: 参数方差主导 (情景间不主导)

@@ -1,0 +1,355 @@
+{
+ "task": "WP4-2 缺失物种按 0 的偏差方向与幅度",
+ "phi_used": 0.6,
+ "pool_grid": [
+  1.0,
+  2.0,
+  3.0
+ ],
+ "panel": "B_full",
+ "core_species": [
+  "TDS",
+  "chloride",
+  "hardness",
+  "alkalinity",
+  "silica"
+ ],
+ "fill_ranges_from_donors": {
+  "TDS": {
+   "lo": 22.0,
+   "mid": 232.5,
+   "hi": 443.0,
+   "n_donors": 2,
+   "donor_values": [
+    443.0,
+    22.0
+   ]
+  },
+  "chloride": {
+   "lo": 3.6,
+   "mid": 51.8,
+   "hi": 100.0,
+   "n_donors": 2,
+   "donor_values": [
+    100.0,
+    3.6
+   ]
+  },
+  "hardness": {
+   "lo": 1.0237699999999998,
+   "mid": 75.225385,
+   "hi": 149.427,
+   "n_donors": 2,
+   "donor_values": [
+    149.427,
+    1.0237699999999998
+   ]
+  },
+  "alkalinity": {
+   "lo": 7.1,
+   "mid": 73.55,
+   "hi": 140.0,
+   "n_donors": 2,
+   "donor_values": [
+    140.0,
+    7.1
+   ]
+  },
+  "silica": {
+   "lo": 0.52,
+   "mid": 12.26,
+   "hi": 24.0,
+   "n_donors": 2,
+   "donor_values": [
+    24.0,
+    0.52
+   ]
+  }
+ },
+ "fill_donor_note": "填充区间由权威表内完整物种水样 (IEUA/LADWP) 的观测导出, 非自造; 用于界定偏差方向, 不是对缺测真实浓度的估计。",
+ "complete_samples_baseline": {
+  "ha|IEUA RP-1 (202": {
+   "q": -0.04391839946061372,
+   "dS_pot_ml": -7585.088415776312,
+   "CoC1": 3.153732761924444
+  },
+  "co|IEUA RP-1 (202": {
+   "q": -0.03953392425924542,
+   "dS_pot_ml": -6727.539465343098,
+   "CoC1": 3.185192138148257
+  },
+  "ha|LADWP AWPF (20": {
+   "q": 0.10694408175677057,
+   "dS_pot_ml": -10931.701631054693,
+   "CoC1": 4.777245272480842
+  },
+  "co|LADWP AWPF (20": {
+   "q": 0.09568322954032574,
+   "dS_pot_ml": -9767.19864029546,
+   "CoC1": 4.600469431524535
+  }
+ },
+ "by_treatment": [
+  {
+   "group": "INCOMPLETE",
+   "sample": "Figshare RW (2025, paired study)",
+   "treatment": "A_zero",
+   "n_rel": 6,
+   "q_median": -0.2051057969987665,
+   "dS_median_ml": -11345.222474933074,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 2.315446968315384,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "Figshare RW (2025, paired study)",
+   "treatment": "B_impute_lo",
+   "n_rel": 6,
+   "q_median": -0.2051057969987665,
+   "dS_median_ml": -11345.222474933074,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 2.315446968315384,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "Figshare RW (2025, paired study)",
+   "treatment": "C_impute_mid",
+   "n_rel": 6,
+   "q_median": -0.2051057969987665,
+   "dS_median_ml": -11345.222474933074,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 2.315446968315384,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "Figshare RW (2025, paired study)",
+   "treatment": "D_impute_hi",
+   "n_rel": 6,
+   "q_median": -0.2051057969987665,
+   "dS_median_ml": -11345.222474933074,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 2.315446968315384,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "Figshare RW (2025, paired study)",
+   "treatment": "E_impute_2x_hi",
+   "n_rel": 6,
+   "q_median": -0.32850641581043605,
+   "dS_median_ml": -6550.78225366462,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.9224502409660569,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "AI-UWM model assumption",
+   "treatment": "A_zero",
+   "n_rel": 6,
+   "q_median": 0.10985008925089441,
+   "dS_median_ml": -18295.79560951631,
+   "q_sign": "pos",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 4.825665347838722,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "AI-UWM model assumption",
+   "treatment": "B_impute_lo",
+   "n_rel": 6,
+   "q_median": 0.10681569142883977,
+   "dS_median_ml": -18295.79560951631,
+   "q_sign": "pos",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 4.775154152357364,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "AI-UWM model assumption",
+   "treatment": "C_impute_mid",
+   "n_rel": 6,
+   "q_median": 0.05696344373992178,
+   "dS_median_ml": -17376.027149404777,
+   "q_sign": "pos",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 4.081534865159009,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "AI-UWM model assumption",
+   "treatment": "D_impute_hi",
+   "n_rel": 6,
+   "q_median": -0.08223652827367188,
+   "dS_median_ml": -14676.907196444532,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": true,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 2.903363503338272,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "AI-UWM model assumption",
+   "treatment": "E_impute_2x_hi",
+   "n_rel": 6,
+   "q_median": -0.32850641581043605,
+   "dS_median_ml": -6550.78225366462,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": true,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.9224502409660569,
+   "n_degenerate": 0
+  },
+  {
+   "group": "BRACKISH_CONTROL",
+   "sample": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "treatment": "A_zero",
+   "n_rel": 6,
+   "q_median": -0.8508755738532313,
+   "dS_median_ml": 127426.44441113586,
+   "q_sign": "neg",
+   "dS_sign": "pos",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.119253068715277,
+   "n_degenerate": 0
+  },
+  {
+   "group": "BRACKISH_CONTROL",
+   "sample": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "treatment": "B_impute_lo",
+   "n_rel": 6,
+   "q_median": -0.8508755738532313,
+   "dS_median_ml": 127426.44441113586,
+   "q_sign": "neg",
+   "dS_sign": "pos",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.119253068715277,
+   "n_degenerate": 0
+  },
+  {
+   "group": "BRACKISH_CONTROL",
+   "sample": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "treatment": "C_impute_mid",
+   "n_rel": 6,
+   "q_median": -0.8508755738532313,
+   "dS_median_ml": 127426.44441113586,
+   "q_sign": "neg",
+   "dS_sign": "pos",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.119253068715277,
+   "n_degenerate": 0
+  },
+  {
+   "group": "BRACKISH_CONTROL",
+   "sample": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "treatment": "D_impute_hi",
+   "n_rel": 6,
+   "q_median": -0.8508755738532313,
+   "dS_median_ml": 127426.44441113586,
+   "q_sign": "neg",
+   "dS_sign": "pos",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.119253068715277,
+   "n_degenerate": 0
+  },
+  {
+   "group": "BRACKISH_CONTROL",
+   "sample": "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+   "treatment": "E_impute_2x_hi",
+   "n_rel": 6,
+   "q_median": -0.8508755738532313,
+   "dS_median_ml": 127426.44441113586,
+   "q_sign": "neg",
+   "dS_sign": "pos",
+   "q_sign_flip_vs_zero": false,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.119253068715277,
+   "n_degenerate": 0
+  }
+ ],
+ "n_incomplete_units": 2,
+ "n_incomplete_treatment_rows": 10,
+ "n_sign_flips_incomplete": 2,
+ "sign_flip_rows": [
+  {
+   "group": "INCOMPLETE",
+   "sample": "AI-UWM model assumption",
+   "treatment": "D_impute_hi",
+   "n_rel": 6,
+   "q_median": -0.08223652827367188,
+   "dS_median_ml": -14676.907196444532,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": true,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 2.903363503338272,
+   "n_degenerate": 0
+  },
+  {
+   "group": "INCOMPLETE",
+   "sample": "AI-UWM model assumption",
+   "treatment": "E_impute_2x_hi",
+   "n_rel": 6,
+   "q_median": -0.32850641581043605,
+   "dS_median_ml": -6550.78225366462,
+   "q_sign": "neg",
+   "dS_sign": "neg",
+   "q_sign_flip_vs_zero": true,
+   "dS_sign_flip_vs_zero": false,
+   "CoC1_median": 1.9224502409660569,
+   "n_degenerate": 0
+  }
+ ],
+ "verdict": "INCOMPLETE_SAMPLES_UNUSABLE_FOR_ANY_SIGN_CLAIM: 缺失按 0 的偏差可翻转 q 与/或 dS_pot 的符号",
+ "n_eff_incomplete": 60,
+ "zero_value_convention": "|dS_pot| < 1e-06 ML 记为 0",
+ "recommendation": {
+  "main_text_figures": [
+   "IEUA RP-1 (2025, tertiary)",
+   "LADWP AWPF (2012, RO product)"
+  ],
+  "SI_only_with_missing_flagged": [
+   "Figshare RW (2025, paired study)",
+   "AI-UWM model assumption"
+  ],
+  "must_exclude_entirely": [
+   "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study) — 苦咸水, 非再生水"
+  ]
+ },
+ "runtime_s": 6.7,
+ "discipline_note": "引擎只读; 填充值全部由权威表内观测导出并显式标注; 主口径与次口径严格分开; 缺失物种显式列出; 报 n_eff 与零值约定。"
+}

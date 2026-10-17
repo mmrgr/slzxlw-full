@@ -1,0 +1,98 @@
+{
+ "task": "WP11 真实再生水产能部署",
+ "source": "C:\\Users\\mmrgr\\Desktop\\论文\\_ext_data\\source_data\\Source_data.xlsx",
+ "sheet": "Source data 4",
+ "n_blocks": 2,
+ "blocks_are_same": false,
+ "merge_note": "blocks differ; using block 1 only",
+ "n_rows_used": 597,
+ "investment": {
+  "n": 597,
+  "n_zero": 0,
+  "n_positive": 597,
+  "min": 1507.0,
+  "p25": 8650.0,
+  "median": 15444.0,
+  "p75": 30734.0,
+  "max": 489967.0,
+  "sum": 18176402.0,
+  "unit": "万元"
+ },
+ "wwtp_expansion": {
+  "n": 597,
+  "n_zero": 7,
+  "n_positive": 590,
+  "min": 0.0,
+  "p25": 10300.0,
+  "median": 25000.0,
+  "p75": 50000.0,
+  "max": 1250000.0,
+  "sum": 27666059.0,
+  "unit": "m3/d"
+ },
+ "pipeline": {
+  "n": 597,
+  "n_zero": 351,
+  "n_positive": 246,
+  "min": 0.0,
+  "p25": 0.0,
+  "median": 0.0,
+  "p75": 22000.0,
+  "max": 15000000.0,
+  "sum": 52798232.14,
+  "unit": "m"
+ },
+ "reclaimed_capacity": {
+  "n": 597,
+  "n_zero": 586,
+  "n_positive": 11,
+  "min": 0.0,
+  "p25": 0.0,
+  "median": 0.0,
+  "p75": 0.0,
+  "max": 80000.0,
+  "sum": 365400.0,
+  "unit": "m3/d"
+ },
+ "effluent_upgrade": {
+  "n": 597,
+  "n_zero": 585,
+  "n_positive": 12,
+  "min": 0.0,
+  "p25": 0.0,
+  "median": 0.0,
+  "p75": 0.0,
+  "max": 600000.0,
+  "sum": 1327000.0,
+  "unit": "m3/d"
+ },
+ "reclaimed_capacity_positive_only": {
+  "n_positive": 11,
+  "median": 30000.0,
+  "p25": 12500.0,
+  "p75": 47000.0,
+  "max": 80000.0,
+  "sum": 365400.0
+ },
+ "investment_intensity": {
+  "n": 11,
+  "median": 11366.333333333334,
+  "p25": 9588.661458333332,
+  "p75": 13623.75,
+  "unit": "CNY per (m3/d)"
+ },
+ "supported_claims": [
+  "现实中再生水产能以**项目级**方式部署, 且单项目产能与本文模型域量级可比",
+  "**有正产能**的 11 个项目: 中位 3e+04 m³/d、max 8e+04 m³/d ⇒ 可作为**部署量级**锚点",
+  "该表提供**投资强度**数量级 (中位 ~1.1e4 元 per m³/d), 支持【扩产需资本支出】的定性陈述"
+ ],
+ "unsupported_claims": [
+  "**不可**推断需求侧 (该表无需求量/合同字段)",
+  "**不可**做投资回报/NPV (无寿命、折现率、运营成本)",
+  "**不可**据单项目产能断言某城市的总扩产潜力 (项目集非全量)",
+  "**不可**把该表的产能直接代入本文模型 (口径与合成域不同)",
+  "该表**横向拼接两块且不一致** ⇒ 不得简单相加求总量"
+ ],
+ "runtime_s": 1.2,
+ "discipline_note": "外部数据只读; 缺失显式统计; 两块不一致时取保守口径; 不做需求侧或投资结论"
+}

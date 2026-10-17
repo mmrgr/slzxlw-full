@@ -1,0 +1,158 @@
+{
+ "generated": "2026-10-16T03:16:10",
+ "figures": {
+  "Fig. 1": {
+   "question": "研究边界如何划定? 三种反事实 (B0/B1/B2) 与三分账是什么?",
+   "sources": [
+    "A13_可靠性机制/supply_state_regimes.csv",
+    "A26_语义统一/CHI_SEMANTICS.md"
+   ],
+   "script": "make_fig1.py",
+   "hashes": {
+    "Fig1_boundary_counterfactuals.pdf": "fae95a5eef80421d",
+    "Fig1_boundary_counterfactuals.png": "8801082eed3c98c0"
+   }
+  },
+  "Fig. 2": {
+   "question": "掺混如何改变 CoC? 哪个物种绑定 CoC?",
+   "sources": [
+    "A33_WP4_组成重构/wp4_results.csv",
+    "A4_水化学参数域/T6_coc_limits.csv",
+    "A4_水化学参数域/T6_water_chemistry_samples.csv",
+    "A27_引用限值/A27_引用限值报告.md"
+   ],
+   "script": "make_fig2.py",
+   "hashes": {
+    "Fig2_water_quality_coc.pdf": "0dc59c12e7c62b21",
+    "Fig2_water_quality_coc.png": "34a7f338927d79b0"
+   }
+  },
+  "Fig. 3": {
+   "question": "dS_pot 的符号结构是什么? q>0 组是否有害?",
+   "sources": [
+    "A13_可靠性机制/supply_state_regimes.csv",
+    "A33_WP4_组成重构/wp4_results.csv",
+    "A13_可靠性机制/COLUMN_NAMES_CORRECTED.md"
+   ],
+   "script": "make_fig3.py",
+   "hashes": {
+    "Fig3_city_results_signs.pdf": "aff1cfb1ee726293",
+    "Fig3_city_results_signs.png": "5b1b7b280b927870"
+   }
+  },
+  "Fig. 4": {
+   "question": "仅用干预前可观测量能否预测 dS_pot 符号?",
+   "sources": [
+    "A31_WP2_假设冻结/wp2_e3_independent_prediction_summary.json",
+    "A31_WP2_假设冻结/wp2_e3b_combined_prediction_summary.json",
+    "A31_WP2_假设冻结/wp2_e3_predictions.csv",
+    "A31_WP2_假设冻结/wp2_e3b_features.csv"
+   ],
+   "script": "make_fig4.py",
+   "hashes": {
+    "Fig4_independent_prediction.pdf": "30d8a7446f2c7d0a",
+    "Fig4_independent_prediction.png": "e6126f94b2b5a537"
+   }
+  },
+  "Fig. 5": {
+   "question": "哪个参数主导 dS_pot? 交互多强? 极端事件会翻转吗?",
+   "sources": [
+    "A34_WP5_敏感性与极端事件/wp5_morris.csv",
+    "A34_WP5_敏感性与极端事件/wp5_sobol.csv",
+    "A34_WP5_敏感性与极端事件/wp5_extreme_cases.csv",
+    "A34_WP5_敏感性与极端事件/wp5_extreme_summary.json"
+   ],
+   "script": "make_fig5.py",
+   "hashes": {
+    "Fig5_sensitivity_extremes.pdf": "28e91a12d3aa399d",
+    "Fig5_sensitivity_extremes.png": "e35e2aeb815039a1"
+   }
+  },
+  "Fig. 6": {
+   "question": "真实设施中 committed 分支占比是多少?",
+   "sources": [
+    "A30_WP0取证/a24b_partial_id_summary.json",
+    "A30_WP0取证/a24b_capacity_table.csv"
+   ],
+   "script": "make_fig6.py",
+   "hashes": {
+    "Fig6_external_anchor_partial_id.pdf": "4940a2e6f840ee00",
+    "Fig6_external_anchor_partial_id.png": "85b1b95140345da9"
+   }
+  }
+ },
+ "verified_numbers": [
+  {
+   "quantity": "严格符号 dS_pot 计数",
+   "value": "643 负 / 134 正 / 36 零",
+   "scope": "n_eff=813",
+   "note": "复现; 必须用 dS==0.0 精确判零。容差 1e-9 得 631/102 (旧口径, n=733)"
+  },
+  {
+   "quantity": "q 分组",
+   "value": "290 / 288 / 235",
+   "scope": "n_eff=813",
+   "note": "复现; q=(M0-M1)/M1, 该列需自行计算, 源文件无 q 列"
+  },
+  {
+   "quantity": "q>0 组有害计数",
+   "value": "0 / 290",
+   "scope": "n_eff=813",
+   "note": "复现; 无正例 ⇒ 不具鉴别力"
+  },
+  {
+   "quantity": "恒等式残差",
+   "value": "2.546585164964e-11",
+   "scope": "n_eff=813",
+   "note": "复现 (相对 2.93e-16); 须用 max(0,inc_B2-inc_B1)-(M0-M1)-x_ai_B1 重建"
+  },
+  {
+   "quantity": "WP4 城市级",
+   "value": "47/47 全部有益; q 分组 23/24",
+   "scope": "n_eff=47",
+   "note": "复现; 双门禁后 60 → 47, 剔除 13"
+  },
+  {
+   "quantity": "E3 仅化学",
+   "value": "0.6712 vs 基线 0.8608",
+   "scope": "n_eff=733",
+   "note": "来自 summary.json"
+  },
+  {
+   "quantity": "E3b 联合 C4",
+   "value": "0.9059 全样本; 折外 0.9009 vs 0.8594",
+   "scope": "n_eff=733",
+   "note": "复现 tp/fp/tn/fn = 602/40/62/29 (须在剔除 80 近零行的子集上)"
+  },
+  {
+   "quantity": "Sobol ΣS1",
+   "value": "0.223 (ha) / 0.218 (co)",
+   "scope": "Saltelli ha|IEUA",
+   "note": "复现 ≈0.22"
+  },
+  {
+   "quantity": "极端事件翻转",
+   "value": "0 / 8",
+   "scope": "n_eff=64",
+   "note": "复现 (4 热浪 + 4 干旱, 0 翻转)"
+  },
+  {
+   "quantity": "碱度保守界比",
+   "value": "2.500 (IEUA); 49.3 (LADWP)",
+   "scope": "baseline 限值档",
+   "note": "复现; 静态余量比, 非动态临界值"
+  },
+  {
+   "quantity": "碱度动态翻转临界",
+   "value": "≈ 2.615×",
+   "scope": "41 点 × 2 域 × 2 水样",
+   "note": "来自 WP5 报告表; 无观测支撑"
+  },
+  {
+   "quantity": "committed 占比界",
+   "value": "[0%, 100%] 不可识别",
+   "scope": "n=10826 (仅产能)",
+   "note": "来自 a24b_partial_id_summary.json (WITHDRAWN_AS_UNIDENTIFIED)"
+  }
+ ]
+}

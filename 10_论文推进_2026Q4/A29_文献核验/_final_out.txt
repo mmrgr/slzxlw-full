@@ -1,0 +1,67 @@
+##### NOVELTY SCREEN: does anyone already do CoC / quality-constrained reclaimed-water DC cooling? #####
+### cycles of concentration water quality constraint cooling tower reclaimed water data center
+  10.5821/dissertation-2117-95437    | Reclaimed water use pilot scale practices in the Catalonian region. Viability quantitative P |                                          | 2014 | dissertation
+  10.2172/6616286                    | Cooling towers: a bibliography                                                               |                                          | 1981 | report
+  10.4236/jep.2026.174010            | Navigating Environmental Concerns Confronting U.S. Data Centers Related to Water Quantity an | Journal of Environmental Protection      | 2026 | article
+  10.5281/zenodo.5017582             | SWOT Analysis of Reclaimed Water Use for Irrigation in Southern Spain                        | Zenodo (CERN European Organization for N | 2020 | article
+  10.2139/ssrn.7467658               | Evaluating the Compatibility of Current U.S. Water Infrastructure with Future Data Center De | SSRN Electronic Journal                  | 2026 | preprint
+  10.7753/ijsea1510.1008             | Assessing Water Consumption and Cooling Efficiency Challenges Associated with Large-Scale Da | International Journal of Science and Eng | 2026 | article
+
+### water quality composition limits cooling water reuse concentration ratio economic optimum
+                                     | Water Quality Management in Aquaculture                                                      | Eprints@CMFRI Open Access Institutional  | 1985 | article
+  10.2175/106143004x142095           | Water Reclamation and Reuse                                                                  | Water Environment Research               | 2004 | article
+  10.1016/j.wri.2022.100188          | Municipal reclaimed water as makeup water for cooling systems: Water efficiency, biohazards, | Water Resources and Industry             | 2022 | article
+                                     | Membrane hybrid system in high quality water reuse                                           | UTS ePRESS (University of Technology Syd | 2015 | dissertation
+  10.1002/tqem.22109                 | Urban waste water management paradigm evolution: Decentralization, resource recovery, and wa | Environmental Quality Management         | 2023 | article
+  10.1007/s10653-026-03244-2         | Integrated framework assessment of water reuse feasibility in mining                         | Environmental Geochemistry and Health    | 2026 | article
+
+### cooling tower blowdown salinity constraint reuse benefit sign reversal
+  10.2172/935386                     | Use of Produced Water in Recirculated Cooling Systems at Power Generating Facilities         |                                          | 2006 | report
+                                     | Proceedings of the Military Applications for Emerging Water Use Technologies Workshop        | US Army Corps of Engineers: Engineer Res | 2009 | other
+                                     | Fouling and its control in membrane distillation for the treatment of reverse osmosis brine  | Victoria University Research Repository  | 2019 | dissertation
+
+##### C3 energy water carbon scenario spatial uncertainty #####
+### AI data center energy water carbon scenarios spatially explicit uncertainty analysis United States
+  10.21203/rs.3.rs-8272920/v1        | Technoeconomic Analysis of Microgrids for AI Data Centers in the Continental United States   | Research Square                          | 2025 | preprint
+  10.1016/j.jclepro.2025.146528      | Sustainable AI infrastructure: A scenario-based forecast of water footprint under uncertaint | Journal of Cleaner Production            | 2025 | article
+  10.48550/arxiv.2606.21760          | AI Data Centers and the Water Use Feedback Loop                                              | arXiv (Cornell University)               | 2026 | preprint
+  10.48550/arxiv.2608.09882          | Environmental and Economic Implications of Artificial Intelligence Data Centers in the Unite | arXiv (Cornell University)               | 2026 | preprint
+  10.1109/greentech68285.2026.11471545 | Waste-to-Energy-Coupled AI Data Centers: Cooling Efficiency and Grid Resilience              | IEEE Green Technologies Conference (Gree | 2026 | conference-paper
+                                     | Data-driven low-carbon operation of energy systems under uncertainty                         | PolyU Institutional Research Archive (Ho | None | dissertation
+
+##### C6 unit process model city scale #####
+### unit process based model urban water system greenhouse gas cost decentralized city scale assessment
+  10.1002/2013wr015233               | Multiobjective optimization of cluster‐scale urban water systems investigating alternative w | Water Resources Research                 | 2014 | article
+  10.1038/s44221-024-00303-9         | Using water and wastewater decentralization to enhance the resilience and sustainability of  | Nature Water                             | 2024 | article
+  10.14711/thesis-991013222947203412 | Modeling and Optimizing the Integration of Decentralized Water Technologies into the Urban W |                                          | 2023 | dissertation
+  10.1016/j.wroa.2018.100015         | Holistic analysis of urban water systems in the Greater Cincinnati region: (1) life cycle as | Water Research X                         | 2018 | article
+  10.1002/wat2.1529                  | Greenhouse gas emissions associated with urban water infrastructure: What we have learnt fro | Wiley Interdisciplinary Reviews Water    | 2021 | article
+  10.1088/1748-9326/aabef0           | Spatial optimization for decentralized non-potable water reuse                               | Environmental Research Letters           | 2018 | article
+
+##### C9 cooling + urban sustainability review #####
+### data center cooling technologies review water energy urban sustainability cities
+  10.1016/j.heliyon.2019.e01339      | Urban green space cooling effect in cities                                                   | Heliyon                                  | 2019 | article
+  10.1016/j.rser.2019.06.005         | A review of assessment methods for the urban environment and its energy sustainability to gu | Renewable and Sustainable Energy Reviews | 2019 | article
+  10.3390/buildings15030504          | Urban Sustainability Through Pavement Technologies: Reducing Urban Heat Islands with Cool Pa | Buildings                                | 2025 | article
+  10.3390/en16196903                 | Energy Management Systems in Sustainable Smart Cities Based on the Internet of Energy: A Tec | Energies                                 | 2023 | article
+  10.1007/s11269-015-1139-z          | Assessment of the Sustainability of Water Resources Management: A Critical Review of the Cit | Water Resources Management               | 2015 | article
+  10.1007/s13593-014-0273-y          | Urban vegetable for food security in cities. A review                                        | Agronomy for Sustainable Development     | 2014 | article
+
+##### C10 daily urban water metabolism #####
+### urban water metabolism model daily time resolution water supply wastewater recycle city
+  10.3390/su151914549                | Puebla City Water Supply from the Perspective of Urban Water Metabolism                      | Sustainability                           | 2023 | article
+  10.1016/j.proeng.2014.02.014       | Urban Water System Metabolism Assessment Using WaterMet2 Model                               | Procedia Engineering                     | 2014 | conference-paper
+  10.1016/j.resconrec.2015.03.015    | Modelling metabolism based performance of an urban water system using WaterMet2              | Resources Conservation and Recycling     | 2015 | article
+  10.1016/j.watres.2018.01.070       | Understanding urban water performance at the city-region scale using an urban water metaboli | Water Research                           | 2018 | article
+  10.17159/sajs.2021/8630            | The urban water metabolism of Cape Town: Towards becoming a water sensitive city             | South African Journal of Science         | 2021 | article
+  10.4324/9781003057574-26           | Urban metabolism and Water Sensitive Cities governance                                       | Routledge eBooks                         | 2022 | book-chapter
+
+##### Xiao / peak-demand competitors already known #####
+### data centers public water systems peak demand capacity expansion
+  10.48550/arxiv.2603.02705          | Small Bottle, Big Pipe: Quantifying and Addressing the Impact of Data Centers on Public Wate | arXiv (Cornell University)               | 2026 | preprint
+  10.48550/arxiv.2605.29053          | Grid Capacity Expansion under Data Centers and Electrified Manufacturing Large Loads         | arXiv (Cornell University)               | 2026 | preprint
+                                     | Demand Management Strategies of North Carolina Public Water Systems                          | DukeSpace (Duke University)              | 2008 | article
+  10.2172/981725                     | Demand Response and Open Automated Demand Response Opportunities for Data Centers            |                                          | 2009 | report
+  10.1016/j.resconrec.2026.109144    | Data-center expansion and the dynamic regional redistribution of the water-energy-food stres | Resources Conservation and Recycling     | 2026 | article
+  10.22004/ag.econ.32412             | BENEFITS OF WILDERNESS EXPANSION WITH EXCESS DEMAND FOR INDIAN PEAKS                         | RePEc: Research Papers in Economics      | 1982 | article
+

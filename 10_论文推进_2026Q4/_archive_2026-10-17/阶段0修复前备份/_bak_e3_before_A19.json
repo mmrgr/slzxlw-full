@@ -1,0 +1,104 @@
+{
+ "purpose": "仅用干预前可观测量预测 dS_pot 符号, 区分'记账一致性'与'独立预测'",
+ "input_whitelist": [
+  "c_pot",
+  "c_rec",
+  "chi",
+  "domain",
+  "limit_scale",
+  "limits",
+  "phi",
+  "pool_scale",
+  "sample"
+ ],
+ "forbidden_inputs": [
+  "x_ai_B1_ml",
+  "M0_ml",
+  "M1_ml",
+  "C_ml",
+  "F_ml",
+  "dS_pot_ml",
+  "dS_ident_ml",
+  "phi_eff",
+  "CoC_ai"
+ ],
+ "predictor_signature_only": [
+  "rec_chem",
+  "phi"
+ ],
+ "n_all_reliable": 813,
+ "n_eff_excluding_zero": 733,
+ "majority_baseline_acc": 0.8608458390177354,
+ "random_baseline_acc": 0.8526603001364257,
+ "predictors": {
+  "P1 化学(全部物种更干净)": {
+   "acc": 0.3888130968622101,
+   "tp": 183,
+   "fp": 0,
+   "tn": 102,
+   "fn": 448
+  },
+  "P2 q>0 (CoC判据)": {
+   "acc": 0.6712141882673943,
+   "tp": 390,
+   "fp": 0,
+   "tn": 102,
+   "fn": 241
+  },
+  "P3 联合(=P2)": {
+   "acc": 0.6712141882673943,
+   "tp": 390,
+   "fp": 0,
+   "tn": 102,
+   "fn": 241
+  }
+ },
+ "by_sample": [
+  {
+   "sample": "AI-UWM model assumption",
+   "n_species": 2,
+   "n": 184,
+   "acc": 1.0,
+   "completeness": "INCOMPLETE(2)"
+  },
+  {
+   "sample": "Figshare RW (2025, paired study)",
+   "n_species": 3,
+   "n": 170,
+   "acc": 0.45294117647058824,
+   "completeness": "INCOMPLETE(3)"
+  },
+  {
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "n_species": 5,
+   "n": 196,
+   "acc": 0.24489795918367346,
+   "completeness": "COMPLETE(5)"
+  },
+  {
+   "sample": "LADWP AWPF (2012, RO product)",
+   "n_species": 5,
+   "n": 183,
+   "acc": 1.0,
+   "completeness": "COMPLETE(5)"
+  }
+ ],
+ "verdict": "NOT_PREDICTIVE",
+ "limits_used": {
+  "TDS": 2200.0,
+  "chloride": 700.0,
+  "hardness": 750.0,
+  "alkalinity": 350.0,
+  "silica": 175.0
+ },
+ "potable_used": {
+  "TDS": 180.0,
+  "chloride": 35.0,
+  "hardness": 120.0,
+  "alkalinity": 100.0,
+  "silica": 10.0
+ },
+ "zero_convention": "strict sign; |dS|<=1e-9 excluded as zero",
+ "runtime_s": 0.0,
+ "discipline_note": "预测器不接受任何模拟后量; 报 n_eff; 相对容差"
+}

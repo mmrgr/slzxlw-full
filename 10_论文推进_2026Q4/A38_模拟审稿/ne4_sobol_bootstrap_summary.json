@@ -1,0 +1,241 @@
+{
+ "task": "NE-4 (红队 NE-4 / 审稿人2)",
+ "method": "Saltelli 设计 + Sobol 估计器 + bootstrap(400) 95% 区间",
+ "seed": 20261016,
+ "N_base": 128,
+ "d": 7,
+ "params": [
+  "limit_scale",
+  "phi",
+  "pool_scale",
+  "gap_scale",
+  "e_scale",
+  "coc_design",
+  "x_alkalinity"
+ ],
+ "bounds": {
+  "limit_scale": [
+   0.5,
+   3.0
+  ],
+  "phi": [
+   0.0,
+   1.0
+  ],
+  "pool_scale": [
+   0.5,
+   3.0
+  ],
+  "gap_scale": [
+   0.5,
+   3.0
+  ],
+  "e_scale": [
+   0.8,
+   1.6
+  ],
+  "coc_design": [
+   3.0,
+   6.0
+  ],
+  "x_alkalinity": [
+   0.5,
+   3.0
+  ]
+ },
+ "configs": {
+  "ha|IEUA RP-1 (2025, tertiary)": {
+   "status": "OK",
+   "n_valid": 117,
+   "n_valid_raw": 128,
+   "n_degenerate": 11,
+   "sum_S1": 0.18767182624723378,
+   "sum_ST": 1.3812240847036168,
+   "coherent": true,
+   "indices": [
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "parameter": "limit_scale",
+     "S1": 0.0836591341714217,
+     "S1_lo": 0.022800145349726502,
+     "S1_hi": 0.1612396770644655,
+     "ST": 0.3300659958634294,
+     "ST_lo": 0.07460987003117138,
+     "ST_hi": 0.7921875646956735,
+     "ST_significant": true
+    },
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "parameter": "phi",
+     "S1": 0.08323654890486015,
+     "S1_lo": 0.016710578438806113,
+     "S1_hi": 0.18642965463840136,
+     "ST": 0.9255884422488355,
+     "ST_lo": 0.05123528193190129,
+     "ST_hi": 2.568418822638699,
+     "ST_significant": true
+    },
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "parameter": "pool_scale",
+     "S1": 0.0,
+     "S1_lo": 0.0,
+     "S1_hi": 0.0,
+     "ST": 0.0,
+     "ST_lo": 0.0,
+     "ST_hi": 0.0,
+     "ST_significant": false
+    },
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "parameter": "gap_scale",
+     "S1": 0.0,
+     "S1_lo": 0.0,
+     "S1_hi": 0.0,
+     "ST": 0.0,
+     "ST_lo": 0.0,
+     "ST_hi": 0.0,
+     "ST_significant": false
+    },
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "parameter": "e_scale",
+     "S1": 0.0,
+     "S1_lo": 0.0,
+     "S1_hi": 0.0,
+     "ST": 0.0,
+     "ST_lo": 0.0,
+     "ST_hi": 0.0,
+     "ST_significant": false
+    },
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "parameter": "coc_design",
+     "S1": -0.0005022506515225648,
+     "S1_lo": -0.002476434488526268,
+     "S1_hi": 0.0014647453048150173,
+     "ST": 0.00039589241495785417,
+     "ST_lo": 0.0002068680116139958,
+     "ST_hi": 0.0005949198293560318,
+     "ST_significant": true
+    },
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "parameter": "x_alkalinity",
+     "S1": 0.021278393822474474,
+     "S1_lo": 0.006556518305180387,
+     "S1_hi": 0.03940690614056284,
+     "ST": 0.12517375417639393,
+     "ST_lo": 0.014551648498533394,
+     "ST_hi": 0.3046701782035089,
+     "ST_significant": true
+    }
+   ]
+  },
+  "ha|LADWP AWPF (2012, RO product)": {
+   "status": "OK",
+   "n_valid": 128,
+   "n_valid_raw": 128,
+   "n_degenerate": 0,
+   "sum_S1": 0.580917022153585,
+   "sum_ST": 1.1715624712746877,
+   "coherent": true,
+   "indices": [
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "parameter": "limit_scale",
+     "S1": 0.46844383590052974,
+     "S1_lo": 0.13686119293588186,
+     "S1_hi": 0.9232812061499137,
+     "ST": 0.8912850356413322,
+     "ST_lo": 0.5261556894956672,
+     "ST_hi": 1.3326107383407992,
+     "ST_significant": true
+    },
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "parameter": "phi",
+     "S1": 0.10511232132718507,
+     "S1_lo": -0.030771551378628224,
+     "S1_hi": 0.3513205632011619,
+     "ST": 0.24261723574001712,
+     "ST_lo": 0.08421411373703616,
+     "ST_hi": 0.48805793840711026,
+     "ST_significant": true
+    },
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "parameter": "pool_scale",
+     "S1": 0.0,
+     "S1_lo": 0.0,
+     "S1_hi": 0.0,
+     "ST": 0.0,
+     "ST_lo": 0.0,
+     "ST_hi": 0.0,
+     "ST_significant": false
+    },
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "parameter": "gap_scale",
+     "S1": 0.0,
+     "S1_lo": 0.0,
+     "S1_hi": 0.0,
+     "ST": 0.0,
+     "ST_lo": 0.0,
+     "ST_hi": 0.0,
+     "ST_significant": false
+    },
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "parameter": "e_scale",
+     "S1": 0.0,
+     "S1_lo": 0.0,
+     "S1_hi": 0.0,
+     "ST": 0.0,
+     "ST_lo": 0.0,
+     "ST_hi": 0.0,
+     "ST_significant": false
+    },
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "parameter": "coc_design",
+     "S1": 0.005725094067916215,
+     "S1_lo": -0.040804564548401895,
+     "S1_hi": 0.0520287176468251,
+     "ST": 0.03679167108324501,
+     "ST_lo": 0.019972462615494648,
+     "ST_hi": 0.05794005546678075,
+     "ST_significant": true
+    },
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "parameter": "x_alkalinity",
+     "S1": 0.0016357708579539559,
+     "S1_lo": -2.7726799891583296e-05,
+     "S1_hi": 0.0045860435122703925,
+     "ST": 0.0008685288100933143,
+     "ST_lo": 0.00020055708082232154,
+     "ST_hi": 0.001802822693225552,
+     "ST_significant": true
+    }
+   ]
+  }
+ },
+ "verdict": "SOBOL_WITH_CI_AVAILABLE",
+ "runtime_s": 1.1,
+ "discipline_note": "city_model 只读; 完整物种水样; 失败点标 NOT_IDENTIFIABLE 不插补; 固定种子; 相对容差"
+}

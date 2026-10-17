@@ -1,0 +1,840 @@
+﻿domain,sample,phi,pool_scale,ds_pot,ds_sign,n_species,P1_all_cleaner,P2_q_pos,P3_pred_benefit,coc_calc_0,coc_calc_1
+ha,"IEUA RP-1 (2025, tertiary)",0.2,0.5,1.8189894035458565e-12,zero,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,0.5,292.4915238017875,harm,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,0.5,1452.3768836499255,harm,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,0.5,0.0,zero,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,0.5,508.19396068887,harm,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,0.5,2381.6410090723057,harm,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,0.5,-9.094947017729282e-13,zero,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,0.5,673.1112588089172,harm,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,0.5,3017.6942800892093,harm,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,0.5,0.0,zero,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,0.5,802.9562820609326,harm,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,0.5,3477.242598644372,harm,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,1.0,3.637978807091713e-12,zero,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,1.0,590.0529413689655,harm,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,1.0,2973.763795698178,harm,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,1.0,0.0,zero,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,1.0,1029.7413250113675,harm,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,1.0,4912.234565492012,harm,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,1.0,-1.8189894035458565e-12,zero,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,1.0,1366.9700682284893,harm,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,1.0,6233.426782175689,harm,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,1.0,0.0,zero,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,1.0,1632.4063643949576,harm,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,1.0,7178.305047484862,harm,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,1.5,-2827.8300784825624,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,1.5,-1935.0365605131483,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,1.5,1739.748158017508,harm,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,1.5,-2827.8300784825587,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,1.5,-1262.8472934310305,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,1.5,4768.843862967438,harm,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,1.5,-2827.8300784825624,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,1.5,-745.8071018364244,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,1.5,6819.687301278667,harm,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,1.5,-2827.830078482566,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,1.5,-339.1027160754056,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,1.5,8268.91142994765,harm,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.0,-5589.636611053356,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.0,-5466.025409341055,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.0,-5477.008100341802,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.0,-11179.273222106713,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.0,-11284.048254696794,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.0,-4591.107301996843,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.0,-15030.055694179078,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.0,-12211.35835343768,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.0,-1771.9766326904428,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.0,-15030.055694179078,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.0,-11657.812674329603,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.0,193.4249744175613,harm,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.2,-5589.636611053356,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.2,-5466.025409341055,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.2,-5477.008100341802,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.2,-11179.273222106713,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.2,-11284.048254696794,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.2,-8290.195618564707,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.2,-16768.90983316007,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.2,-16791.433244116764,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.2,-5154.457791498287,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.2,-19910.945940457685,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.2,-16177.620391877324,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.2,-2980.883080793239,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.4,-5589.636611053356,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.4,-5466.025409341055,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.4,-5477.008100341802,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.4,-11179.273222106713,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.4,-11284.048254696794,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.4,-11963.4068172485,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.4,-16768.90983316007,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.4,-17492.51771454201,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.4,-8506.464618959188,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.4,-22358.546444213425,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.4,-20693.01915952512,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.4,-6124.412751091546,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.6,-5589.636611053356,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.6,-5466.025409341055,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,2.6,-5477.008100341802,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.6,-11179.273222106713,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.6,-11284.048254696794,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,2.6,-12310.4796194082,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.6,-16768.90983316007,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.6,-17492.51771454201,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,2.6,-11828.386857652604,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.6,-22358.546444213425,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.6,-24135.69437250231,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,2.6,-9237.979586368074,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,3.0,-5589.636611053356,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,3.0,-5466.025409341055,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,3.0,-5477.008100341802,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,3.0,-11179.273222106713,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,3.0,-11284.048254696794,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,3.0,-12310.4796194082,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,3.0,-16768.90983316007,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,3.0,-17492.51771454201,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,3.0,-18383.747039629598,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,3.0,-22358.546444213425,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,3.0,-24135.69437250231,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,3.0,-15378.601448127676,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.2,4.0,-5589.636611053356,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,4.0,-5466.025409341055,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.2,4.0,-5477.008100341802,benefit,5,False,False,False,3.5,3.240740740740741
+ha,"IEUA RP-1 (2025, tertiary)",0.4,4.0,-11179.273222106713,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,4.0,-11284.048254696794,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.4,4.0,-12310.4796194082,benefit,5,False,False,False,3.5,3.0172413793103448
+ha,"IEUA RP-1 (2025, tertiary)",0.6,4.0,-16768.90983316007,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,4.0,-17492.51771454201,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.6,4.0,-21135.9923713852,benefit,5,False,False,False,3.5,2.8225806451612905
+ha,"IEUA RP-1 (2025, tertiary)",0.8,4.0,-22358.546444213425,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,4.0,-24135.69437250231,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"IEUA RP-1 (2025, tertiary)",0.8,4.0,-30266.11669319304,benefit,5,False,False,False,3.5,2.6515151515151514
+ha,"LADWP AWPF (2012, RO product)",0.2,0.5,1.8189894035458565e-12,zero,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,0.5,-660.341088467676,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,0.5,-3125.2146534143303,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,0.5,0.0,zero,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,0.5,-1130.6360980731388,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,0.5,-9.094947017729282e-13,zero,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,0.5,-1485.8499743669609,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,0.5,-6262.208252588394,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,0.5,0.0,zero,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,0.5,-1765.0995885016728,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,0.5,-7199.59796173138,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,1.0,3.637978807091713e-12,zero,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,1.0,-1295.2008012904407,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,1.0,-5935.462033803884,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,1.0,0.0,zero,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,1.0,-2195.2371313720614,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,1.0,-9286.89988222704,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,1.0,-1.8189894035458565e-12,zero,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,1.0,-11544.3989118605,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,1.0,0.0,zero,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,1.0,-3316.6082383671783,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,1.0,-13205.661703026217,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,1.5,-2827.8300784825624,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,1.5,-4733.638384911435,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,1.5,-11294.6631710434,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,1.5,-2827.8300784825587,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,1.5,-6025.686174780385,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,1.5,-2827.8300784825624,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,1.5,-6144.438316849741,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,1.5,-18784.88691029069,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,1.5,-2827.830078482566,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,1.5,-6144.438316849744,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,1.5,-20953.913386081545,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,2.0,-5589.636611053356,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.0,-7895.403812944369,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.0,-17630.682615598012,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,2.0,-11179.273222106713,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.0,-14495.881460473893,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.0,-29582.479916099783,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,2.0,-15030.055694179078,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,2.0,-18346.663932546257,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,2.0,-15030.055694179078,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.0,-18346.663932546257,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.0,-37147.716450189895,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,2.2,-5589.636611053356,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.2,-7895.403812944369,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.2,-17630.682615598012,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,2.2,-11179.273222106713,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.2,-14495.881460473893,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.2,-29582.479916099783,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,2.2,-16768.90983316007,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,2.2,-20085.518071527247,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,2.2,-38272.4499502816,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,2.2,-19910.945940457685,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.2,-23227.554178824863,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.2,-42155.45852007957,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,2.4,-5589.636611053356,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.4,-7895.403812944369,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.4,-17630.682615598012,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,2.4,-11179.273222106713,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.4,-14495.881460473893,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.4,-29582.479916099783,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,2.4,-16768.90983316007,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,2.4,-20085.518071527247,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,2.4,-38272.4499502816,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,2.4,-22358.546444213425,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.4,-25675.154682580604,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.4,-44603.05902383531,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,2.6,-5589.636611053356,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.6,-7895.403812944369,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,2.6,-17630.682615598012,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,2.6,-11179.273222106713,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.6,-14495.881460473893,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,2.6,-29582.479916099783,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,2.6,-16768.90983316007,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,2.6,-20085.518071527247,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,2.6,-38272.4499502816,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,2.6,-22358.546444213425,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.6,-25675.154682580604,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,2.6,-44603.05902383531,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,3.0,-5589.636611053356,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,3.0,-7895.403812944369,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,3.0,-17630.682615598012,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,3.0,-11179.273222106713,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,3.0,-14495.881460473893,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,3.0,-29582.479916099783,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,3.0,-16768.90983316007,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,3.0,-20085.518071527247,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,3.0,-38272.4499502816,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,3.0,-22358.546444213425,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,3.0,-25675.154682580604,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,3.0,-44603.05902383531,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.2,4.0,-5589.636611053356,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,4.0,-7895.403812944369,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.2,4.0,-17630.682615598012,benefit,5,True,True,True,3.5,4.298698108572832
+ha,"LADWP AWPF (2012, RO product)",0.4,4.0,-11179.273222106713,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,4.0,-14495.881460473893,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.4,4.0,-29582.479916099783,benefit,5,True,True,True,3.5,5.569700827498409
+ha,"LADWP AWPF (2012, RO product)",0.6,4.0,-16768.90983316007,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,4.0,-20085.518071527247,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.6,4.0,-38272.4499502816,benefit,5,True,True,True,3.5,7.907817442385902
+ha,"LADWP AWPF (2012, RO product)",0.8,4.0,-22358.546444213425,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,4.0,-25675.154682580604,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"LADWP AWPF (2012, RO product)",0.8,4.0,-44603.05902383531,benefit,5,True,True,True,3.5,13.629283489096576
+ha,"Figshare RW (2025, paired study)",0.2,0.5,1.8189894035458565e-12,zero,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,0.5,955.351888273768,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,0.5,4902.748140726928,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,0.5,0.0,zero,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,0.5,1676.157177277575,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,0.5,8164.968422611091,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,0.5,-9.094947017729282e-13,zero,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,0.5,2230.900619715334,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,0.5,10369.996864151468,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,0.5,0.0,zero,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,0.5,2667.1847330285746,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,0.5,11924.053619493823,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,1.0,3.637978807091713e-12,zero,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,1.0,1965.289406840242,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,1.0,10592.828829602391,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,1.0,0.0,zero,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,1.0,3497.173578255868,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,1.0,17949.437634947906,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,1.0,-1.8189894035458565e-12,zero,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,1.0,4684.519629804463,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,1.0,22734.60381254481,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,1.0,0.0,zero,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,1.0,5613.780212249771,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,1.0,25949.99356251944,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,1.5,-2827.8300784825624,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,1.5,205.83422373902067,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,1.5,14358.83800552332,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,1.5,-2827.8300784825587,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,1.5,2646.450448820997,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,1.5,26570.973263151463,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,1.5,-2827.8300784825624,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,1.5,4545.179131180987,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,1.5,34066.555585981114,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,1.5,-2827.830078482566,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,1.5,6018.068417155122,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,1.5,38847.74493870601,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,2.0,-5589.636611053356,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.0,-3527.3023837865694,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.0,9777.865830531877,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,2.0,-11179.273222106713,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.0,-7411.619475922194,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.0,27405.913882670346,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,2.0,-15030.055694179078,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.0,-4724.797908771368,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.0,37504.34153009708,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,2.0,-15030.055694179078,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.0,-2667.066628528042,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.0,43642.88987652444,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,2.2,-5589.636611053356,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.2,-3527.3023837865694,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.2,9777.865830531877,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,2.2,-11179.273222106713,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.2,-7872.797286207457,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.2,28147.67096577238,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,2.2,-16768.90983316007,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.2,-8363.291571580281,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.2,39218.99821444753,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,2.2,-19910.945940457685,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.2,-6062.722568545079,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.2,45834.35730541619,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,2.4,-5589.636611053356,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.4,-3527.3023837865694,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.4,9777.865830531877,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,2.4,-11179.273222106713,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.4,-7872.797286207457,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.4,29102.20565162516,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,2.4,-16768.90983316007,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.4,-11961.829639548854,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.4,41097.86998520134,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,2.4,-22358.546444213425,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.4,-9391.92502064444,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.4,48153.07792766622,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,2.6,-5589.636611053356,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.6,-3527.3023837865694,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,2.6,9777.865830531877,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,2.6,-11179.273222106713,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.6,-7872.797286207457,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,2.6,30254.894074264896,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,2.6,-16768.90983316007,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.6,-13413.715824308638,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,2.6,43123.15602128218,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,2.6,-22358.546444213425,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.6,-12106.314126932804,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,2.6,50583.01902424076,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,3.0,-5589.636611053356,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,3.0,-3527.3023837865694,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,3.0,9777.865830531877,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,3.0,-11179.273222106713,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,3.0,-7872.797286207457,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,3.0,33095.68505048446,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,3.0,-16768.90983316007,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,3.0,-13413.715824308638,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,3.0,47550.16214559169,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,3.0,-22358.546444213425,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,3.0,-17329.069786977645,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,3.0,55722.847448837085,harm,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.2,4.0,-5589.636611053356,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,4.0,-3527.3023837865694,benefit,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.2,4.0,9777.865830531877,harm,4,False,False,False,3.5,2.7858257187430358
+ha,"Figshare RW (2025, paired study)",0.4,4.0,-11179.273222106713,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,4.0,-7872.797286207457,benefit,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.4,4.0,41465.5783253402,harm,4,False,False,False,3.5,2.31371304669734
+ha,"Figshare RW (2025, paired study)",0.6,4.0,-16768.90983316007,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,4.0,-13413.715824308638,benefit,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.6,4.0,60244.11881243696,harm,4,False,False,False,3.5,1.9784294661632036
+ha,"Figshare RW (2025, paired study)",0.8,4.0,-22358.546444213425,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,4.0,-20073.338501506518,benefit,4,False,False,False,3.5,1.6490229977246675
+ha,"Figshare RW (2025, paired study)",0.8,4.0,69748.77421712712,harm,4,False,False,False,3.5,1.6490229977246675
+ha,AI-UWM model assumption,0.2,0.5,1.8189894035458565e-12,zero,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,0.5,-709.7444013210898,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,0.5,0.0,zero,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,0.5,-1214.2779907191943,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,0.5,-5340.856807950004,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,0.5,-9.094947017729282e-13,zero,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,0.5,-1595.0786864135662,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,0.5,-6699.280217233455,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,0.5,0.0,zero,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,0.5,-1894.389216770066,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,0.5,-7699.813123293535,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,1.0,3.637978807091713e-12,zero,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,1.0,-1390.07415147145,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,1.0,0.0,zero,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,1.0,-2352.4039999539345,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,1.0,-9888.428236038377,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,1.0,-1.8189894035458565e-12,zero,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,1.0,-3070.9694258373947,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,1.0,-12272.0945901461,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,1.0,0.0,zero,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,1.0,-3316.6082383671783,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,1.0,-14024.511926082789,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,1.5,-2827.8300784825624,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,1.5,-4870.343488295319,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,1.5,-11839.225626419804,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,1.5,-2827.8300784825587,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,1.5,-6144.438316849737,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,1.5,-2827.8300784825624,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,1.5,-6144.438316849741,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,1.5,-19687.370128580293,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,1.5,-2827.830078482566,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,1.5,-6144.438316849744,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,1.5,-18331.604725817244,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,2.0,-5589.636611053356,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.0,-8011.410043612137,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.0,-18089.050068094348,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,2.0,-11179.273222106713,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.0,-14495.881460473893,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.0,-30056.74502337218,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,2.0,-15030.055694179078,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,2.0,-18055.264126241545,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,2.0,-15030.055694179078,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,2.0,-17264.145717960284,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,2.0,-27341.650249919643,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,2.2,-5589.636611053356,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.2,-8011.410043612137,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.2,-18089.050068094348,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,2.2,-11179.273222106713,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.2,-14495.881460473893,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.2,-30056.74502337218,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,2.2,-16768.90983316007,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,2.2,-19903.96790741664,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,2.2,-33092.566459519345,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,2.2,-19910.945940457685,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,2.2,-30864.32717731505,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,2.4,-5589.636611053356,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.4,-8011.410043612137,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.4,-18089.050068094348,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,2.4,-11179.273222106713,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.4,-14495.881460473893,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.4,-30056.74502337218,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,2.4,-16768.90983316007,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,2.4,-19903.96790741664,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,2.4,-35137.548358112654,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,2.4,-22358.546444213425,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,2.4,-25278.576680672835,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,2.6,-5589.636611053356,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.6,-8011.410043612137,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,2.6,-18089.050068094348,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,2.6,-11179.273222106713,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.6,-14495.881460473893,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,2.6,-30056.74502337218,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,2.6,-16768.90983316007,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,2.6,-19903.96790741664,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,2.6,-35137.548358112654,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,2.6,-22358.546444213425,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,2.6,-25278.576680672835,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,3.0,-5589.636611053356,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,3.0,-8011.410043612137,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,3.0,-18089.050068094348,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,3.0,-11179.273222106713,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,3.0,-14495.881460473893,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,3.0,-30056.74502337218,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,3.0,-16768.90983316007,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,3.0,-19903.96790741664,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,3.0,-35137.548358112654,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,3.0,-22358.546444213425,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,3.0,-25278.576680672835,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,3.0,-41449.31239352221,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.2,4.0,-5589.636611053356,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,4.0,-8011.410043612137,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.2,4.0,-18089.050068094348,benefit,2,False,True,True,3.5,4.375
+ha,AI-UWM model assumption,0.4,4.0,-11179.273222106713,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,4.0,-14495.881460473893,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.4,4.0,-30056.74502337218,benefit,2,False,True,True,3.5,5.833333333333333
+ha,AI-UWM model assumption,0.6,4.0,-16768.90983316007,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,4.0,-19903.96790741664,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.6,4.0,-35137.548358112654,benefit,2,False,True,True,3.5,4.761904761904762
+ha,AI-UWM model assumption,0.8,4.0,-22358.546444213425,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,4.0,-25278.576680672835,benefit,2,False,True,True,3.5,3.9568345323741005
+ha,AI-UWM model assumption,0.8,4.0,-41449.31239352221,benefit,2,False,True,True,3.5,3.9568345323741005
+co,"IEUA RP-1 (2025, tertiary)",0.2,0.5,1.8189894035458565e-12,zero,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,0.5,256.93072361640407,harm,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,0.5,1278.6639011393108,harm,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,0.5,0.0,zero,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,0.5,448.79755679139816,harm,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,0.5,2111.1818810506384,harm,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,0.5,9.094947017729282e-13,zero,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,0.5,596.9669735086673,harm,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,0.5,2688.657442294309,harm,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,0.5,0.0,zero,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,0.5,714.5713367635326,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,0.5,3110.0750844603417,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,1.0,3.637978807091713e-12,zero,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,1.0,517.846427553839,harm,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,1.0,2612.0615852687624,harm,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,1.0,0.0,zero,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,1.0,908.2665515109002,harm,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,1.0,4343.403280187318,harm,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,1.0,-1.8189894035458565e-12,zero,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,1.0,1210.7372276973,harm,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,1.0,5541.196452593735,harm,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,1.0,0.0,zero,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,1.0,1450.8327380624996,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,1.0,6407.896875128437,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,1.5,7.275957614183426e-12,zero,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,1.5,782.8247825493163,harm,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,1.5,4002.699817563644,harm,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,1.5,0.0,zero,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,1.5,1378.6606885681322,harm,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,1.5,6700.733397312088,harm,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,1.5,7.275957614183426e-12,zero,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,1.5,1841.661886801492,harm,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,1.5,8558.757381982497,harm,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,1.5,1.8189894035458565e-12,zero,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,1.5,2209.106616475481,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,1.5,9889.67919697921,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.0,-5524.890850398744,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.0,-5403.427644609899,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.0,-4258.532493659688,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.0,-9711.677774959657,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.0,-7851.442322418894,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.0,-524.9799498841894,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.0,-9711.67777495966,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.0,-7221.596417941724,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.0,2029.290691427668,harm,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.0,-9711.677774959651,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.0,-6721.995963590496,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.0,3837.989168158223,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.2,-5524.890850398744,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.2,-5403.427644609899,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.2,-5418.05960984977,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.2,-11049.781700797492,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.2,-11154.494154806394,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.2,-3976.701549261212,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.2,-14194.473093290298,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.2,-11440.051477825047,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.2,-1134.8876405475603,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.2,-14194.4730932903,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.2,-10886.258947360562,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.2,867.473485184586,harm,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.4,-5524.890850398744,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.4,-5403.427644609899,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.4,-5418.05960984977,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.4,-11049.781700797492,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.4,-11154.494154806394,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.4,-7407.217840494181,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.4,-16574.67255119623,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.4,-15655.634354530072,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.4,-4273.1891522209335,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.4,-18677.26841162093,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.4,-15046.898354677676,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.4,-2076.238288363562,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.6,-5524.890850398744,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.6,-5403.427644609899,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,2.6,-5418.05960984977,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.6,-11049.781700797492,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.6,-11154.494154806394,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,2.6,-10816.39439201189,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.6,-16574.67255119623,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.6,-17291.135105988647,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,2.6,-7385.833275169538,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.6,-22099.56340159498,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.6,-19203.90069644961,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,2.6,-4993.712556980368,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,3.0,-5524.890850398744,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,3.0,-5403.427644609899,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,3.0,-5418.05960984977,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,3.0,-11049.781700797492,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,3.0,-11154.494154806394,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,3.0,-12176.566649614302,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,3.0,-16574.67255119623,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,3.0,-17291.135105988647,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,3.0,-13535.192908518193,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,3.0,-22099.56340159498,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,3.0,-23857.013976145245,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,3.0,-10752.335409354073,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.2,4.0,-5524.890850398744,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,4.0,-5403.427644609899,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.2,4.0,-5418.05960984977,benefit,5,False,False,False,3.5,3.240740740740741
+co,"IEUA RP-1 (2025, tertiary)",0.4,4.0,-11049.781700797492,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,4.0,-11154.494154806394,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.4,4.0,-12176.566649614302,benefit,5,False,False,False,3.5,3.0172413793103448
+co,"IEUA RP-1 (2025, tertiary)",0.6,4.0,-16574.67255119623,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,4.0,-17291.135105988647,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.6,4.0,-20902.773480234944,benefit,5,False,False,False,3.5,2.8225806451612905
+co,"IEUA RP-1 (2025, tertiary)",0.8,4.0,-22099.56340159498,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,4.0,-23857.013976145245,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"IEUA RP-1 (2025, tertiary)",0.8,4.0,-24733.236416772597,benefit,5,False,False,False,3.5,2.6515151515151514
+co,"LADWP AWPF (2012, RO product)",0.2,0.5,1.8189894035458565e-12,zero,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,0.5,-581.7671570855946,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,0.5,-2771.9412882989054,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,0.5,0.0,zero,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,0.5,-1002.5528293846656,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,0.5,-4461.915050598587,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,0.5,9.094947017729282e-13,zero,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,0.5,-1323.640029222183,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,0.5,-5629.023955182325,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,0.5,0.0,zero,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,0.5,-1577.9213699231975,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,0.5,-6494.067747015195,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,1.0,3.637978807091713e-12,zero,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,1.0,-1143.370345356081,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,1.0,-5290.6069549951135,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,1.0,0.0,zero,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,1.0,-1951.9898460041804,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,1.0,-8358.205695979752,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,1.0,-1.8189894035458565e-12,zero,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,1.0,-2563.244635725463,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,1.0,-10448.933227147723,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,1.0,0.0,zero,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,1.0,-3045.776378751385,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,1.0,-11997.6660128351,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,1.5,7.275957614183426e-12,zero,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,1.5,-1685.6906394075668,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,1.5,0.0,zero,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,1.5,-2851.312096812282,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,1.5,-11754.762442076048,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,1.5,7.275957614183426e-12,zero,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,1.5,-3278.1913719179647,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,1.5,1.8189894035458565e-12,zero,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,1.5,-3278.19137191797,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,1.5,-16593.075108438894,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,2.0,-5524.890850398744,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,2.0,-17421.103090978526,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,2.0,-9711.677774959657,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.0,-12989.869146877629,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.0,-24427.83389178716,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,2.0,-9711.67777495966,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.0,-12989.869146877634,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.0,-27722.1052531924,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,2.0,-9711.677774959651,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,2.0,-12989.869146877623,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,2.2,-5524.890850398744,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,2.2,-17421.103090978526,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,2.2,-11049.781700797492,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.2,-14327.973072715464,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.2,-29234.2186512058,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,2.2,-14194.473093290298,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.2,-17472.66446520827,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.2,-33437.14208767867,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,2.2,-14194.4730932903,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,2.2,-17472.664465208272,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,2.2,-35920.341855160426,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,2.4,-5524.890850398744,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,2.4,-17421.103090978526,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,2.4,-11049.781700797492,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.4,-14327.973072715464,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.4,-29234.2186512058,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,2.4,-16574.67255119623,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.4,-19852.8639231142,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.4,-37825.00768549337,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,2.4,-18677.26841162093,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,2.4,-21955.459783538907,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,2.4,-40664.11882327458,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,2.6,-5524.890850398744,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,2.6,-17421.103090978526,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,2.6,-11049.781700797492,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.6,-14327.973072715464,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,2.6,-29234.2186512058,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,2.6,-16574.67255119623,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.6,-19852.8639231142,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,2.6,-37825.00768549337,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,2.6,-22099.56340159498,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,2.6,-25377.754773512952,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,2.6,-44086.41381324863,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,3.0,-5524.890850398744,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,3.0,-17421.103090978526,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,3.0,-11049.781700797492,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,3.0,-14327.973072715464,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,3.0,-29234.2186512058,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,3.0,-16574.67255119623,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,3.0,-19852.8639231142,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,3.0,-37825.00768549337,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,3.0,-22099.56340159498,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,3.0,-25377.754773512952,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,3.0,-44086.41381324863,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.2,4.0,-5524.890850398744,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.2,4.0,-17421.103090978526,benefit,5,True,True,True,3.5,4.298698108572832
+co,"LADWP AWPF (2012, RO product)",0.4,4.0,-11049.781700797492,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,4.0,-14327.973072715464,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.4,4.0,-29234.2186512058,benefit,5,True,True,True,3.5,5.569700827498409
+co,"LADWP AWPF (2012, RO product)",0.6,4.0,-16574.67255119623,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,4.0,-19852.8639231142,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.6,4.0,-37825.00768549337,benefit,5,True,True,True,3.5,7.907817442385902
+co,"LADWP AWPF (2012, RO product)",0.8,4.0,-22099.56340159498,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,4.0,-25377.754773512952,benefit,5,True,True,True,3.5,13.629283489096576
+co,"LADWP AWPF (2012, RO product)",0.8,4.0,-44086.41381324863,benefit,5,True,True,True,3.5,13.629283489096576
+co,"Figshare RW (2025, paired study)",0.2,0.5,1.8189894035458565e-12,zero,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,0.5,837.5203525097004,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,0.5,4294.366414938575,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,0.5,0.0,zero,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,0.5,1476.2249254420285,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,0.5,7198.545775752567,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,0.5,9.094947017729282e-13,zero,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,0.5,1972.82973730081,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,0.5,9196.16633347874,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,0.5,0.0,zero,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,0.5,2366.9114571981254,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,0.5,10623.87153740852,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,1.0,3.637978807091713e-12,zero,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,1.0,1717.753283053411,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,1.0,9208.715651226155,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,1.0,0.0,zero,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,1.0,3067.810066666447,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,1.0,15719.467662927673,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,1.0,-1.8189894035458565e-12,zero,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,1.0,4125.908789171155,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,1.0,20068.74794523386,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,1.0,0.0,zero,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,1.0,4963.103543615922,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,1.0,23050.908477102887,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,1.5,7.275957614183426e-12,zero,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,1.5,2643.4242313968825,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,1.5,14830.161542113749,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,1.5,0.0,zero,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,1.5,4783.223255827965,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,1.5,25624.32813294982,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,1.5,7.275957614183426e-12,zero,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,1.5,6469.343006743489,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,1.5,32502.218911108783,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,1.5,1.8189894035458565e-12,zero,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,1.5,7795.165182722427,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,1.5,36998.56662532902,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,2.0,-5524.890850398744,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.0,-3489.126028548209,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.0,11533.942658641234,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,2.0,-9711.677774959657,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.0,-3080.7887248391453,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.0,27178.992476651994,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,2.0,-9711.67777495966,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.0,-700.3624249278218,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.0,36567.412647640886,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,2.0,-9711.677774959651,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.0,1153.5985857646083,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.0,42424.97862697672,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,2.2,-5524.890850398744,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.2,-3489.126028548209,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.2,9857.9379563857,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,2.2,-11049.781700797492,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.2,-6785.642350404723,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.2,27563.61755945012,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,2.2,-14194.473093290298,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.2,-4109.399838017554,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.2,37914.80174790271,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,2.2,-14194.4730932903,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.2,-2034.8914528531716,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.2,44262.21560024041,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,2.4,-5524.890850398744,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.4,-3489.126028548209,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.4,9638.157455539018,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,2.4,-11049.781700797492,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.4,-7786.768907587546,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.4,28141.4994799114,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,2.4,-16574.67255119623,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.4,-7485.475929432592,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.4,39420.65125135799,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,2.4,-18677.26841162093,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.4,-5185.992474550632,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.4,46225.46965328723,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,2.6,-5524.890850398744,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.6,-3489.126028548209,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,2.6,9638.157455539018,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,2.6,-11049.781700797492,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.6,-7786.768907587546,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,2.6,28902.497581842497,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,2.6,-16574.67255119623,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.6,-10828.42232698114,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,2.6,41069.92709634897,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,2.6,-22099.56340159498,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.6,-8300.171716685329,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,2.6,48300.24948068638,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,3.0,-5524.890850398744,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,3.0,-3489.126028548209,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,3.0,9638.157455539018,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,3.0,-11049.781700797492,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,3.0,-7786.768907587546,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,3.0,30930.40211928072,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,3.0,-16574.67255119623,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,3.0,-13265.213909927166,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,3.0,44743.85288465493,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,3.0,-22099.56340159498,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,3.0,-13436.286734825291,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,3.0,52734.56864826822,harm,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.2,4.0,-5524.890850398744,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,4.0,-3489.126028548209,benefit,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.2,4.0,9638.157455539018,harm,4,False,False,False,3.5,2.7858257187430358
+co,"Figshare RW (2025, paired study)",0.4,4.0,-11049.781700797492,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,4.0,-7786.768907587546,benefit,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.4,4.0,38441.32808974865,harm,4,False,False,False,3.5,2.31371304669734
+co,"Figshare RW (2025, paired study)",0.6,4.0,-16574.67255119623,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,4.0,-13265.213909927166,benefit,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.6,4.0,55595.90783215566,harm,4,False,False,False,3.5,1.9784294661632036
+co,"Figshare RW (2025, paired study)",0.8,4.0,-22099.56340159498,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,4.0,-19852.03300781644,benefit,4,False,False,False,3.5,1.6490229977246675
+co,"Figshare RW (2025, paired study)",0.8,4.0,65042.77057573952,harm,4,False,False,False,3.5,1.6490229977246675
+co,AI-UWM model assumption,0.2,0.5,1.8189894035458565e-12,zero,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,0.5,-625.3886194405095,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,0.5,-2973.020991626905,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,0.5,0.0,zero,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,0.5,-1076.9507370770862,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,0.5,-4778.829553892966,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,0.5,9.094947017729282e-13,zero,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,0.5,-1421.2844091397328,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,0.5,-6025.002736210572,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,0.5,0.0,zero,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,0.5,-1693.9211027464553,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,0.5,-6948.899353604013,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,1.0,3.637978807091713e-12,zero,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,1.0,-1227.492463440376,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,1.0,-5654.987954812252,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,1.0,0.0,zero,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,1.0,-2092.624895705543,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,1.0,-8908.091130756211,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,1.0,-1.8189894035458565e-12,zero,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,1.0,-2745.6172224206293,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,1.0,-11119.481731043372,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,1.0,0.0,zero,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,1.0,-3260.790502789907,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,1.0,-12756.25183080361,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,1.5,7.275957614183426e-12,zero,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,1.5,-1807.4045698807604,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,1.5,-8078.6679542579,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,1.5,0.0,zero,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,1.5,-3050.7504963338,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,1.5,-12469.933701633832,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,1.5,7.275957614183426e-12,zero,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,1.5,-3278.1913719179647,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,1.5,-15390.79420005708,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,1.5,1.8189894035458565e-12,zero,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,1.5,-3278.19137191797,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,1.5,-16193.204161005471,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,2.0,-5524.890850398744,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.0,-7917.181863958343,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.0,-17873.922277156715,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,2.0,-9711.677774959657,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.0,-12989.869146877629,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.0,-25255.65926143209,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,2.0,-9711.67777495966,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,2.0,-12989.869146877634,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,2.0,-9711.677774959651,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,2.0,-12390.27487731593,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,2.0,-23134.978265334827,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,2.2,-5524.890850398744,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.2,-7917.181863958343,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.2,-17873.922277156715,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,2.2,-11049.781700797492,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.2,-14327.973072715464,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.2,-29702.85563496593,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,2.2,-14194.473093290298,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,2.2,-14194.4730932903,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,2.2,-16446.653254302095,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,2.4,-5524.890850398744,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.4,-7917.181863958343,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.4,-17873.922277156715,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,2.4,-11049.781700797492,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.4,-14327.973072715464,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.4,-29702.85563496593,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,2.4,-16574.67255119623,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,2.4,-19674.942246610997,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,2.4,-18677.26841162093,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,2.4,-20494.678946870903,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,2.4,-29709.957829223506,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,2.6,-5524.890850398744,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.6,-7917.181863958343,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,2.6,-17873.922277156715,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,2.6,-11049.781700797492,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.6,-14327.973072715464,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,2.6,-29702.85563496593,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,2.6,-16574.67255119623,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,2.6,-19674.942246610997,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,2.6,-34736.020930158425,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,2.6,-22099.56340159498,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,2.6,-24534.27740089611,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,2.6,-32939.59915838544,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,3.0,-5524.890850398744,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,3.0,-7917.181863958343,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,3.0,-17873.922277156715,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,3.0,-11049.781700797492,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,3.0,-14327.973072715464,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,3.0,-29702.85563496593,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,3.0,-16574.67255119623,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,3.0,-19674.942246610997,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,3.0,-34736.020930158425,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,3.0,-22099.56340159498,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,3.0,-24986.909929211317,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,3.0,-39285.096969083184,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.2,4.0,-5524.890850398744,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,4.0,-7917.181863958343,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.2,4.0,-17873.922277156715,benefit,2,False,True,True,3.5,4.375
+co,AI-UWM model assumption,0.4,4.0,-11049.781700797492,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,4.0,-14327.973072715464,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.4,4.0,-29702.85563496593,benefit,2,False,True,True,3.5,5.833333333333333
+co,AI-UWM model assumption,0.6,4.0,-16574.67255119623,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,4.0,-19674.942246610997,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.6,4.0,-34736.020930158425,benefit,2,False,True,True,3.5,4.761904761904762
+co,AI-UWM model assumption,0.8,4.0,-22099.56340159498,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,4.0,-24986.909929211317,benefit,2,False,True,True,3.5,3.9568345323741005
+co,AI-UWM model assumption,0.8,4.0,-40974.21142835698,benefit,2,False,True,True,3.5,3.9568345323741005

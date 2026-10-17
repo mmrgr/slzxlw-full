@@ -1,0 +1,69 @@
+{
+ "task": "task-1 / WP3-1",
+ "path_under_test": "volume-only (quality_state_enabled=False)",
+ "test_construction": "不用存量闭合 dS=I-O (该路径无溶质存量状态, 不适用); 改检验两条稳态恒等式: (A) G=E+D+B (G=gross_makeup); (B) CoC_engine == G/(B+D)。由 (B) 即蕴含盐分通量平衡, 故这是该路径唯一有内容的守恒类检验。",
+ "not_applicable_note": "存量闭合 NOT_APPLICABLE_BY_CONSTRUCTION: 回路浓度被定义为补水浓度xCoC 的瞬时值(full_engine.py:1526-1529), 无存量状态变量。既不得报 PASS, 也不得报 FAIL。",
+ "caliber_trap": "必须用 gross_makeup_ml。external_makeup_ml 是毛补水减去内部回收水返回后的净外部取水量, 误用它作水量闭合会得到约 5.6% 的假性不闭合残差(实测 M-(E+D+B) = -2766.26 ML, 恰等于内部回收量; 而 G-(E+D+B) = 0.0 精确)。",
+ "tolerance": "relative 1e-9 (量级可达 1e5 kg, 遵门禁第5条)",
+ "verdict": "PASS",
+ "cases": [
+  {
+   "domain": "ha",
+   "storage_ml": 0.0,
+   "status": "IDENTIFIED",
+   "water_residual_rel_gross": 1.828863681257488e-16,
+   "water_pass": true,
+   "faux_residual_rel_if_external_used": 0.05274455601761975,
+   "coc_calc_mean": 1.823413842797598,
+   "coc_engine_mean": 1.8234138427975977,
+   "coc_relative_error": 2.503048273700353e-16,
+   "coc_pass": true,
+   "overall": "PASS",
+   "n_days": 730
+  },
+  {
+   "domain": "ha",
+   "storage_ml": 200.0,
+   "status": "IDENTIFIED",
+   "water_residual_rel_gross": 0.0,
+   "water_pass": true,
+   "faux_residual_rel_if_external_used": 0.056343636363636346,
+   "coc_calc_mean": 1.7741935483870963,
+   "coc_engine_mean": 1.7741935483870963,
+   "coc_relative_error": 2.503048273700353e-16,
+   "coc_pass": true,
+   "overall": "PASS",
+   "n_days": 730
+  },
+  {
+   "domain": "co",
+   "storage_ml": 0.0,
+   "status": "IDENTIFIED",
+   "water_residual_rel_gross": 1.9260437264667181e-16,
+   "water_pass": true,
+   "faux_residual_rel_if_external_used": 0.05087559278747245,
+   "coc_calc_mean": 1.8787164847967193,
+   "coc_engine_mean": 1.8787164847967193,
+   "coc_relative_error": 2.4514190980598087e-16,
+   "coc_pass": true,
+   "overall": "PASS",
+   "n_days": 730
+  },
+  {
+   "domain": "co",
+   "storage_ml": 200.0,
+   "status": "IDENTIFIED",
+   "water_residual_rel_gross": 0.0,
+   "water_pass": true,
+   "faux_residual_rel_if_external_used": 0.05634363636363648,
+   "coc_calc_mean": 1.7741935483870963,
+   "coc_engine_mean": 1.7741935483870963,
+   "coc_relative_error": 2.503048273700353e-16,
+   "coc_pass": true,
+   "overall": "PASS",
+   "n_days": 730
+  }
+ ],
+ "runtime_s": 3.4,
+ "discipline_note": "引擎只读; 缺列标 NOT_IDENTIFIABLE; 相对容差; 口径错误留痕"
+}

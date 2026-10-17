@@ -1,0 +1,52 @@
+====================================================================================
+WP7-3  48 项 UNTRACEABLE 的机器可核验追溯
+====================================================================================
+
+共建立 42 条追溯记录
+  TRACED_OK        = 15   (复算一致/可推导 => 补落盘)
+  TRACED_STALE     = 12   (复算不一致 => 必须改稿)
+  NOT_IDENTIFIABLE = 15   (无产物可复算 => 删除或改述)
+
+明细:
+  [TRACED_OK       ] 恒等式相对残差 2.9e-16                                稿件=2.9e-16          复算=2.9331853550365817
+  [TRACED_OK       ] 分支A退化残差 1.1e-11                                稿件=1.1e-11          复算=1.2732925824820995
+  [TRACED_OK       ] 分支C退化残差 1.5e-11                                稿件=1.5e-11          复算=1.4551915228366852
+  [TRACED_STALE    ] 分支C例外数 17                                      稿件=17               复算=3
+  [TRACED_STALE    ] 分支C 负例 429/446                                 稿件=429              复算=369
+  [TRACED_OK       ] q>0 组中位 dS -14496                              稿件=-14496.0         复算=-14495.88146047389
+  [TRACED_OK       ] q>0 组 290                                      稿件=290              复算=290
+  [TRACED_OK       ] q≈0 组 288                                      稿件=288              复算=288
+  [TRACED_OK       ] q<0 组 235                                      稿件=235              复算=235
+  [TRACED_STALE    ] LADWP AWPF (2012, RO product) 负/正 183/0        稿件=183/0            复算=186/8
+  [TRACED_STALE    ] AI-UWM model assumption 负/正 184/0              稿件=184/0            复算=187/8
+  [TRACED_STALE    ] IEUA RP-1 (2025, tertiary) 负/正 148/48          稿件=148/48           复算=151/56
+  [TRACED_STALE    ] Figshare RW (2025, paired study) 负/正 116/54    稿件=116/54           复算=119/62
+  [NOT_IDENTIFIABLE] 组成均值 19726                                     稿件=19726            复算=None
+  [NOT_IDENTIFIABLE] 组成均值 8510                                      稿件=8510             复算=None
+  [NOT_IDENTIFIABLE] 组成均值 12257                                     稿件=12257            复算=None
+  [NOT_IDENTIFIABLE] 组成均值 4690                                      稿件=4690             复算=None
+  [NOT_IDENTIFIABLE] 组成均值 16359                                     稿件=16359            复算=None
+  [NOT_IDENTIFIABLE] 组成均值 7504                                      稿件=7504             复算=None
+  [NOT_IDENTIFIABLE] 组成均值 8895                                      稿件=8895             复算=None
+  [NOT_IDENTIFIABLE] 组成均值 28437                                     稿件=28437            复算=None
+  [NOT_IDENTIFIABLE] DSD 组成均值 237                                   稿件=237              复算=None
+  [NOT_IDENTIFIABLE] DSD 组成均值 241                                   稿件=241              复算=None
+  [TRACED_STALE    ] 跨域留出 R² 0.557                                  稿件=0.557            复算=0.8055937188186029
+  [TRACED_STALE    ] 基线 -0.050                                      稿件=-0.05            复算=-0.073283878123009
+  [NOT_IDENTIFIABLE] 质量单调性 6478/21674/116581                        稿件=6478/21674/116   复算=None
+  [TRACED_OK       ] 冷却水占比 0.258 (替代 0.184)                         稿件=0.258            复算=0.2579903737845559
+  [NOT_IDENTIFIABLE] 冷却水占比 0.184 (旧值)                               稿件=0.184            复算=None
+  [TRACED_OK       ] P90 处理量 60                                     稿件=60               复算=60.0
+  [NOT_IDENTIFIABLE] 桥接 1.60x 通胀                                    稿件=1.6              复算=None
+  [NOT_IDENTIFIABLE] 桥接 36504                                       稿件=36504            复算=None
+  [TRACED_OK       ] 储冷 +3.45% (ha)                                 稿件=3.45             复算=3.45
+  [TRACED_OK       ] 储冷 +7.02% (co)                                 稿件=7.02             复算=7.02
+  [TRACED_OK       ] R10a 补水 -46%                                   稿件=46               复算=45.94
+  [TRACED_STALE    ] quality_binding 分级表 100/92/58/48/0             稿件=100/92/58/48/0   复算=boolean: {True: np
+  [NOT_IDENTIFIABLE] surplus 1,282 / 11,896                         稿件=2828/11896       复算=None
+  [TRACED_STALE    ] A22 AI-UWM model assumption acc 0.456          稿件=0.456            复算=0.4375
+  [TRACED_STALE    ] A22 LADWP AWPF (2012, RO product) acc 0.72     稿件=0.72             复算=0.6423611111111112
+  [TRACED_OK       ] A22 Figshare RW (2025, paired study) acc 0.9   稿件=0.993            复算=0.9930555555555556
+  [TRACED_OK       ] A22 IEUA RP-1 (2025, tertiary) acc 1.0         稿件=1.0              复算=1.0
+  [TRACED_STALE    ] 主网格 1,152                                      稿件=1152             复算=1052
+  [TRACED_OK       ] 可靠子集 813                                       稿件=813              复算=813

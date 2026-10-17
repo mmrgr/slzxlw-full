@@ -167,22 +167,55 @@ def _reliable_stats(d) -> dict:
         return int(mask.sum()) if len(df) else 0
     q_all = (d["M0_ml"] - d["M1_ml"]) / d["M1_ml"] if "M1_ml" in d.columns else None
     q_ok = (ok["M0_ml"] - ok["M1_ml"]) / ok["M1_ml"] if len(ok) and "M1_ml" in ok.columns else None
+    # ------------------------------------------------------------------
+    # 零值约定显式化 (清理轮 2026-10-16, 门禁第 8 条)
+    #   本文件的历史版本用 |dS| > 1e-6 判定正负, 把 |dS| <= 1e-6 的近零情景
+    #   从正负计数中**静默剔除**, 却仍以 n_reliable 作为分母 ⇒ 外部读者无法复算。
+    #   现同时给出: (i) 严格符号计数(无容差带), (ii) 容差带计数与其有效 n,
+    #   使任何一方都可被独立复现; 主稿采用【严格符号】口径。
+    # ------------------------------------------------------------------
+    TOL = 1e-6
+    _ds_ok = ok["dS_pot_ml"] if len(ok) else _pd.Series(dtype=float)
+    _strict_neg = int((_ds_ok < 0).sum())
+    _strict_pos = int((_ds_ok > 0).sum())
+    _strict_zero = int((_ds_ok == 0).sum())
+    _band = int((_ds_ok.abs() <= TOL).sum())
+    _n_eff = int(len(ok) - _band)
     return {
         "n_all": int(len(d)),
         "n_reliable": int(len(ok)),
         "n_excluded": int(len(d) - len(ok)),
         "excluded_share_pct": round((len(d) - len(ok)) / max(len(d), 1) * 100, 2),
         "status_counts": st.value_counts().to_dict(),
-        "reliable_n_dS_neg": _n(ok, ok["dS_pot_ml"] < -1e-6),
-        "reliable_n_dS_pos": _n(ok, ok["dS_pot_ml"] > 1e-6),
+        # ---- 严格符号口径 (主稿采用; 无容差带) ----
+        "strict_sign_counts": {
+            "neg": _strict_neg, "pos": _strict_pos, "exact_zero": _strict_zero,
+            "n": int(len(ok)),
+            "convention": "strict sign; dS_pot == 0.0 counted separately, no tolerance band",
+        },
+        # ---- 容差带口径 (历史值; 保留以便对照复现) ----
+        "tolerance_band_counts": {
+            "tol_ml": TOL,
+            "neg": _n(ok, ok["dS_pot_ml"] < -TOL),
+            "pos": _n(ok, ok["dS_pot_ml"] > TOL),
+            "in_band_excluded": _band,
+            "n_effective_for_sign_counts": _n_eff,
+            "convention": (f"|dS_pot| <= {TOL} ML excluded from both signs; "
+                           f"effective n = {_n_eff} (NOT {len(ok)})"),
+        },
+        "reliable_n_dS_neg": _n(ok, ok["dS_pot_ml"] < -TOL),
+        "reliable_n_dS_pos": _n(ok, ok["dS_pot_ml"] > TOL),
         "reliable_n_zero_disp": _n(ok, ok["displaced_ml"].abs() < 1e-6),
         "reliable_n_q_pos": int((q_ok > 1e-9).sum()) if q_ok is not None else None,
-        "reliable_n_qpos_but_harmful": int(((q_ok > 1e-9) & (ok["dS_pot_ml"] > 1e-6)).sum())
+        "reliable_n_qpos_but_harmful": int(((q_ok > 1e-9) & (ok["dS_pot_ml"] > TOL)).sum())
         if q_ok is not None else None,
         "n_coc_floor_degenerate": int(d.get("coc_floor_degenerate",
                                              _pd.Series([False] * len(d))).sum()),
         "note": ("头条统计须以 reliable 子集为准; 未收敛情景的分配量为 0, 派生量不可用; "
-                 "CoC 触下限(<=1.000001)的退化情景亦已剔除 (A27)。"),
+                 "CoC 触下限(<=1.000001)的退化情景亦已剔除 (A27)。"
+                 "⚠ 符号计数有两个口径: `strict_sign_counts`(主稿采用) 与 "
+                 "`tolerance_band_counts`(历史值, 其分母为 n_effective_for_sign_counts, "
+                 "**不是** n_reliable)。引用时必须说明用的是哪一个。"),
     }
 
 

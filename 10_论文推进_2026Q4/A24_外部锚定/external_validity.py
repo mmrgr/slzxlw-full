@@ -31,7 +31,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-EXT = Path(r"C:/Users/mmrgr/Desktop/论文/_ext_data/source_data/Source_data.xlsx")
+EXT = Path(__file__).resolve().parents[3] / "_ext_data" / "source_data" / "Source_data.xlsx"
 A13 = ROOT / "A13_可靠性机制"
 
 # surplus 分支阈值: 用【经验测量值】(见 fix_threshold.py / surplus_threshold_check.json)

@@ -1,0 +1,1896 @@
+{
+ "generated_by": "A30_WP0取证/audit_stale_numbers.py",
+ "audited_documents": [
+  "A16_英文稿/manuscript_en_v3.md",
+  "A16_英文稿/supplementary_information.md"
+ ],
+ "document_sha256": {
+  "A16_英文稿/manuscript_en_v3.md": "0c3c31232ecc9e9a5ae204e0058762fa27667ad96dfb6f9e6e39e12087b31efa",
+  "A16_英文稿/supplementary_information.md": "7451e5606f2f88c44ac803695a50ec0f534fa33ce960f62cb5bc962d97de39b3"
+ },
+ "n_values_checked": 193,
+ "verdict_counts": {
+  "VERIFIED": 107,
+  "STALE": 26,
+  "UNTRACEABLE": 48,
+  "FORBIDDEN_CLAIM": 3,
+  "NOT_A_CLAIM": 9
+ },
+ "recomputed_from_artifacts": {
+  "A17_main_grid_gated_subset": {
+   "n_all_rows": 1052,
+   "n_converged_unique": 1001,
+   "n_gated": 813,
+   "n_coc_floor_degenerate": 188,
+   "status_counts": {
+    "converged_unique": 1001,
+    "no_convergence": 18,
+    "non_unique": 33
+   },
+   "n_dS_neg": 643,
+   "n_dS_pos": 134,
+   "n_zero_disp": 372,
+   "n_q_pos": 290,
+   "n_q_pos_but_harmful": 0,
+   "resid_abs_max_dS_pot_vs_dS_ident": 63838.95815696515,
+   "resid_rel_median": 1.0,
+   "resid_rel_max": 77.70483485618841,
+   "n_rel_sample": 733,
+   "by_composition_gated": {
+    "IEUA RP-1 (2025, tertiary)": {
+     "neg": 151,
+     "pos": 56,
+     "zero": 9
+    },
+    "LADWP AWPF (2012, RO product)": {
+     "neg": 186,
+     "pos": 8,
+     "zero": 9
+    },
+    "Figshare RW (2025, paired study)": {
+     "neg": 119,
+     "pos": 62,
+     "zero": 9
+    },
+    "AI-UWM model assumption": {
+     "neg": 187,
+     "pos": 8,
+     "zero": 9
+    }
+   },
+   "unified_err_max_gated_ml": 2.546585164964199e-11,
+   "unified_err_max_all_ml": 2.8045105864293873e-06,
+   "unified_err_rel_median_scale": 2.6221886928026484e-15
+  },
+  "A13c_potable_flows_gate": {
+   "n_all": 408,
+   "n_ok": 372,
+   "n_excluded": 36,
+   "status_counts": {
+    "quality_not_converged": 24,
+    "converged_unique": 372,
+    "no_convergence": 8,
+    "non_unique": 4
+   }
+  },
+  "A15_ablation_gate": {
+   "n_all": 64,
+   "n_ok": 58,
+   "n_excluded": 6,
+   "n_share_only": 30,
+   "resid_max_ml": 15030.055694179082,
+   "resid_max_share_only_ml": 7.275957614183426e-12
+  },
+  "A20_bridging_v2_24pairs": {
+   "n_pairs": 24,
+   "sign_agreement": 23,
+   "share": 0.9583333333333334,
+   "by_composition": {
+    "IEUA RP-1 (2025, tertiary)": "12/12",
+    "LADWP AWPF (2012, RO product)": "11/12"
+   },
+   "max_rel_M0_diff": 8.697629233277459e-16
+  },
+  "A20_bridging_v1_36pairs": {
+   "n_pairs": 36,
+   "sign_agreement": 24,
+   "share": 0.6666666666666666,
+   "by_composition": {
+    "IEUA RP-1 (2025, tertiary)": "12/12",
+    "LADWP AWPF (2012, RO product)": "8/12",
+    "Figshare RW (2025, paired study)": "4/12"
+   },
+   "max_rel_M0_diff": 5.979622362838677e-16
+  },
+  "A24_external_recompute": {
+   "n_treated": 10826,
+   "n_design": 10826,
+   "pct_treated_median_ml_d": 3.0,
+   "pct_design_median_ml_d": 8.0,
+   "pctl_of_ha_supply": 80.88860151487161,
+   "pctl_of_co_supply": 80.76852022907815,
+   "pctl_of_ha_supply_on_treated": 86.10751893589507,
+   "surplus_first_r1_ha": 5.986,
+   "committed_min_all_r": 93.451
+  }
+ },
+ "artifacts_read": [
+  "A13_可靠性机制/potable_flows.csv",
+  "A13_可靠性机制/potable_flows_summary.json",
+  "A13_可靠性机制/supply_state_regimes.csv",
+  "A13_可靠性机制/supply_state_summary.json",
+  "A15_稳健性/ablation_matrix.csv",
+  "A15_稳健性/ablation_summary.json",
+  "A15_稳健性/grid_resolution_summary.json",
+  "A15_稳健性/holdout_summary.json",
+  "A16_英文稿/figures/fig1_source_manifest.json",
+  "A18_有限供水/finite_supply_summary.json",
+  "A20_模型桥接/bridging_comparison.csv",
+  "A20_模型桥接/bridging_comparison_v2.csv",
+  "A20_模型桥接/bridging_summary_v2.json",
+  "A21_动态状态/dynamic_criterion_summary.json",
+  "A21_动态状态/dynamic_state_summary.json",
+  "A21_动态状态/path_divergence_summary.json",
+  "A21_动态状态/reuse_quality_verdict_summary.json",
+  "A22_判据分解/missing_quality_summary.json",
+  "A22_判据分解/q_predictors_summary.json",
+  "A22_判据分解/q_theory_summary.json",
+  "A24_外部锚定/external_anchor_summary.json",
+  "A24_外部锚定/external_treated_volume.csv",
+  "A24_外部锚定/external_validity_summary.json",
+  "A24_外部锚定/external_wwtp_capacity.csv",
+  "A25_终审/a15_gates_reliable.json",
+  "A25_终审/convergence_audit.json",
+  "A25_终审/convergence_impact.json",
+  "A25_终审/threshold_audit.json",
+  "A25_终审/zero_disp_criterion.json",
+  "A4_水化学参数域/T6b_cited_limits_summary.json"
+ ],
+ "items": [
+  {
+   "location": "manuscript:L18",
+   "manuscript_value": 68,
+   "artifact_value": 68,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "n_scenarios=68; three_account_divergence.abstraction_eq_delivered_ever=false",
+   "shown": "68 engine runs (0/68 rows agree)"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": 0.849,
+   "artifact_value": 0.84865761288,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "path_efficiency.ha=0.84865761288 (两位截断 0.849)",
+   "shown": "path efficiency 0.849"
+  },
+  {
+   "location": "manuscript:L20",
+   "manuscript_value": 1.178,
+   "artifact_value": 1.1783315023904697,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "loss_leverage_factor=1.1783315023904697",
+   "shown": "1/eta_path = 1.178"
+  },
+  {
+   "location": "manuscript:L77",
+   "manuscript_value": 6713,
+   "artifact_value": 6712.821105075747,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "max_phantom_ml=6712.82",
+   "shown": "phantom abstraction up to 6,713 ML (D-HA)"
+  },
+  {
+   "location": "manuscript:L77",
+   "manuscript_value": 6121,
+   "artifact_value": 6120.874323392949,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "max_phantom_ml=6120.87",
+   "shown": "6,121 ML (D-CO)"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "2.5e-11",
+   "artifact_value": 2.546585164964199e-11,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv（独立重算）",
+   "note": "⚠ 本项经独立重算**改判为 VERIFIED**。稿件所指的量是【统一通式】残差 pred = displaced - (M0-M1) - x_ai_B1, 在双门禁 813 子集上脚本重算 max = 2.5466e-11 ≈ 稿件 2.5e-11 ✓。注意: (i) 同一量在**未门禁**的 1052 全表上为 2.8045e-06 (= supply_state_summary.unified_identity_max_err_ml, 即稿件 §3b-bis 所称 2.8e-6); (ii) 而 dS_pot 与 dS_ident (=M1-M0) 之差是**另一个**量, 其最大绝对残差达 6.39e4 ML —— 稿件未区分这三个残差, 是主要的方法学含混点。",
+   "shown": "residual 2.5e-11 ML across 813 scenarios"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "2.9e-16",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无任何产物记录 2.9e-16 相对残差。",
+   "shown": "relative 2.9e-16 machine precision"
+  },
+  {
+   "location": "manuscript:L21",
+   "manuscript_value": 813,
+   "artifact_value": 813,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv + A13_可靠性机制/supply_state_summary.json",
+   "note": "独立重算: status==converged_unique 且非 coc_floor_degenerate 且非 extrapolated = 813; summary.reliable_subset.n_reliable=813",
+   "shown": "813 solver-reliable scenarios"
+  },
+  {
+   "location": "manuscript:L108",
+   "manuscript_value": 429,
+   "artifact_value": 749,
+   "verdict": "STALE",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "convergence_impact 给出 all=749 / ok=729 (占位档 1152); 446 是 zero_disp 的 all 值。429/446 既非全表也非可靠子集, 无产物支撑这两个数的配对。",
+   "shown": "negative in 429 of 446 cases"
+  },
+  {
+   "location": "manuscript:L7",
+   "manuscript_value": 17,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 gated 子集: 零挤占(displaced=0) 372 行中 dS_pot>0 仅 3 行, 不是 17。A25_终审/zero_disp_criterion.json 的 n_zero_disp 为 ha=241 / co=205。17 无产物支撑。",
+   "shown": "The 17 exceptions in branch C"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "1.1e-11",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物记录该值。",
+   "shown": "branch-degradation residual 1.1e-11 (A)"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "1.5e-11",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物记录该值。",
+   "shown": "branch-degradation residual 1.5e-11 (C)"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "1.3e-15",
+   "artifact_value": 5.551115123125783e-17,
+   "verdict": "VERIFIED",
+   "artifact_path": "A22_判据分解/q_theory_summary.json",
+   "note": "closed_form_max_diff=5.551115123125783e-17; A22 derived_criterion identity_residual=1.3322676295501878e-15",
+   "shown": "residual 1.3e-15 (dimensionless form)"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "5.6e-17",
+   "artifact_value": 5.551115123125783e-17,
+   "verdict": "VERIFIED",
+   "artifact_path": "A22_判据分解/q_theory_summary.json",
+   "note": "closed_form_max_diff=5.551e-17",
+   "shown": "verified to 5.6e-17"
+  },
+  {
+   "location": "manuscript:L30",
+   "manuscript_value": 290,
+   "artifact_value": 290,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv + supply_state_summary.json",
+   "note": "重算 813 子集 q>0=290; summary.reliable_n_q_pos=290",
+   "shown": "q>0 group n=290"
+  },
+  {
+   "location": "SI:L77",
+   "manuscript_value": "290/290",
+   "artifact_value": 290,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_summary.json",
+   "note": "reliable_n_q_pos=290 且 reliable_n_qpos_but_harmful=0",
+   "shown": "290 of 290 city benefit, no exception"
+  },
+  {
+   "location": "manuscript:L144",
+   "manuscript_value": 288,
+   "artifact_value": null,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 813 子集: q>0=290, q<0=235, 余 288。288 与总量 813 自洽, 但稿件同表未交代 288 的行数来源; 819 检验: 290+288+235=813 ✓ (数值本身可复现, 但该表 median 与 A22 不符, 见下条)",
+   "shown": "q~0 group n=288"
+  },
+  {
+   "location": "manuscript:L143",
+   "manuscript_value": -14496,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A22_判据分解/derived_criterion_summary.json",
+   "note": "A22 记录的 q>0 组 dS_median=-14324.57 (占位档 349 组)。-14,496 在 A27 引用档下无任何产物记录。",
+   "shown": "median dS_pot for q>0 = -14,496"
+  },
+  {
+   "location": "manuscript:L145",
+   "manuscript_value": 235,
+   "artifact_value": null,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 813 子集 q<0=235 ✓ 数值可复现, 但同表 '133 falls / 102 rises' 与重算 133/102 一致; median -4,259 无产物记录",
+   "shown": "q<0 group n=235"
+  },
+  {
+   "location": "manuscript:L145",
+   "manuscript_value": 102,
+   "artifact_value": 102,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_summary.json",
+   "note": "reliable_n_dS_pos=102; 独立重算 gated n_dS_pos=134 (见 STALE 条目)",
+   "shown": "withdrawal rises = 102"
+  },
+  {
+   "location": "manuscript:L224",
+   "manuscript_value": 631,
+   "artifact_value": 631,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_summary.json",
+   "note": "reliable_n_dS_neg=631",
+   "shown": "withdrawal falls = 631"
+  },
+  {
+   "location": "manuscript:L188",
+   "manuscript_value": 0.803,
+   "artifact_value": null,
+   "verdict": "STALE",
+   "artifact_path": "A22_判据分解/q_predictors_summary.json",
+   "note": "A22 产物最大 acc=0.7682291666666666 (P1a-P1d 四项并列); 无 0.803。 SI S3.2 同一数字写作 '七项最佳 0.768', 与主稿 0.803 内部矛盾。",
+   "shown": "best of seven candidates reaches 0.803 accuracy"
+  },
+  {
+   "location": "manuscript:L223",
+   "manuscript_value": 1094,
+   "artifact_value": 1094,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_audit.json",
+   "note": "status_counts.converged_unique=1094 —— 但这是**占位/旧网格 1152 情景**下的可靠数, 现行 A27 引用档主网格已改用 813; 稿件同时使用 1094 与 813 两个口径 §3 vs §3b-bis。",
+   "shown": "solver-reliable sample n=1,094"
+  },
+  {
+   "location": "manuscript:L242",
+   "manuscript_value": 1152,
+   "artifact_value": 58,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_audit.json",
+   "note": "status_counts={converged_unique:1094,no_convergence:38,non_unique:20}; n_unreliable=58",
+   "shown": "58 of 1,152 scenarios (5.0%)"
+  },
+  {
+   "location": "manuscript:L242",
+   "manuscript_value": 58,
+   "artifact_value": 58,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_audit.json",
+   "note": "38+20=58",
+   "shown": "58 solver failures (38 no_conv / 20 non_unique)"
+  },
+  {
+   "location": "manuscript:L251",
+   "manuscript_value": 408,
+   "artifact_value": 408,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "n_all=408, n_ok=373, n_excluded=35",
+   "shown": "A13c: 35/408"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "1.16e-10",
+   "artifact_value": 1.1641532182693481e-10,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "identity_resid_max all=1.1641532182693481e-10 (占位档 1152)",
+   "shown": "identity residual 1.16e-10 ML"
+  },
+  {
+   "location": "manuscript:L20",
+   "manuscript_value": "1.0000",
+   "artifact_value": 1.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_audit.json",
+   "note": "criterion_agreement_all=clean=1.0",
+   "shown": "sign criterion agreement 1.0000"
+  },
+  {
+   "location": "manuscript:L265",
+   "manuscript_value": "11,535",
+   "artifact_value": null,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/OBSOLETE_reliability_grid.csv",
+   "note": "104948.41890780411 只出现在 **OBSOLETE_** 占位档产物 (A13 OBSOLETE_reliability_grid.csv, chi=0.25/phi=0.5, 且该行 status=quality_not_converged); M1=93,414 与 dS=-11,535 在任何产物中都找不到。该段落号称 limit_scale=0.25 且 phi=0.05, 但现行网格 phi 自 0.2 起, 无法复现。",
+   "shown": "dS = M1-M0 = -11,535 ML (M0 104,948 / M1 93,414)"
+  },
+  {
+   "location": "manuscript:L251",
+   "manuscript_value": "14196",
+   "artifact_value": 14196,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "n_all=14196, n_excluded=541",
+   "shown": "grid scan: 541/14,196"
+  },
+  {
+   "location": "manuscript:L211",
+   "manuscript_value": 1200,
+   "artifact_value": 1200.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "placeholder hardness=700 alkalinity=500 => 1200",
+   "shown": "placeholder 700+500 = 1200 vs 1100"
+  },
+  {
+   "location": "manuscript:L216",
+   "manuscript_value": 2200,
+   "artifact_value": 2200.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "baseline.TDS=2200.0",
+   "shown": "baseline 2200"
+  },
+  {
+   "location": "manuscript:L211",
+   "manuscript_value": 700,
+   "artifact_value": 700.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "baseline.chloride=700.0",
+   "shown": "baseline 700"
+  },
+  {
+   "location": "manuscript:L217",
+   "manuscript_value": 750,
+   "artifact_value": 750.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "baseline.hardness=750.0",
+   "shown": "baseline 750"
+  },
+  {
+   "location": "manuscript:L217",
+   "manuscript_value": 350,
+   "artifact_value": 350.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "baseline.alkalinity=350.0",
+   "shown": "baseline 350"
+  },
+  {
+   "location": "manuscript:L217",
+   "manuscript_value": 175,
+   "artifact_value": 175.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "baseline.silica=175.0",
+   "shown": "baseline 175"
+  },
+  {
+   "location": "manuscript:L211",
+   "manuscript_value": 1100,
+   "artifact_value": 1100.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "hardness_plus_alkalinity=1100",
+   "shown": "hardness+alkalinity = 1100 ✓"
+  },
+  {
+   "location": "manuscript:L223",
+   "manuscript_value": 285,
+   "artifact_value": 285,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "n_dS_pos.ok=285 (占位档)",
+   "shown": "placeholder withdrawal-rises = 285"
+  },
+  {
+   "location": "manuscript:L224",
+   "manuscript_value": 729,
+   "artifact_value": 729,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "n_dS_neg.ok=729",
+   "shown": "placeholder withdrawal-falls = 729"
+  },
+  {
+   "location": "SI:L137",
+   "manuscript_value": 372,
+   "artifact_value": 372,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv + supply_state_summary.json",
+   "note": "重算 gated displaced==0 = 372; summary.reliable_n_zero_disp=372",
+   "shown": "zero-displacement = 372"
+  },
+  {
+   "location": "manuscript:L230",
+   "manuscript_value": 188,
+   "artifact_value": 188,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv + supply_state_summary.json",
+   "note": "重算 coc_floor_degenerate==True = 188; summary.reliable_subset.n_coc_floor_degenerate=188",
+   "shown": "188 degenerate scenarios excluded"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "2.8e-6",
+   "artifact_value": 2.8045105864293873e-06,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_summary.json",
+   "note": "unified_identity_max_err_ml=2.8045105864293873e-06",
+   "shown": "residual appeared to degrade to 2.8e-6"
+  },
+  {
+   "location": "manuscript:L230",
+   "manuscript_value": "2e10",
+   "artifact_value": null,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/OBSOLETE_reliability_grid.csv",
+   "note": "OBSOLETE_reliability_grid 中 M_ml=1.209e5, 但 A25 描述量级 2e10 由 CoC floor 触发; 标 VERIFIED 仅因该量级在 A13 OBSOLETE 产物族中有对应 (1.2e5 量级差一档, 见方法学局限)",
+   "shown": "makeup degenerates to ~2e10 ML"
+  },
+  {
+   "location": "manuscript:L269",
+   "manuscript_value": 380,
+   "artifact_value": 380.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "w_nat_ml_day=380.0",
+   "shown": "W_nat = 380 ML/day"
+  },
+  {
+   "location": "manuscript:L275",
+   "manuscript_value": 342,
+   "artifact_value": 342.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "w_engage_ml_day=342.0",
+   "shown": "W_engage = 342"
+  },
+  {
+   "location": "manuscript:L276",
+   "manuscript_value": 323,
+   "artifact_value": 323.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "w_gap_ml_day=323.0",
+   "shown": "W_gap = 323"
+  },
+  {
+   "location": "manuscript:L277",
+   "manuscript_value": 304,
+   "artifact_value": 304.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "w_star_account_break_ml_day=304.0",
+   "shown": "W*_break = 304"
+  },
+  {
+   "location": "manuscript:L35",
+   "manuscript_value": 62080,
+   "artifact_value": 62080.44523857806,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "max_service_gap_essential_ml=62080.45",
+   "shown": "service gap up to 62,080 ML"
+  },
+  {
+   "location": "manuscript:L285",
+   "manuscript_value": 8519,
+   "artifact_value": 8519.020943419806,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "max_dc_curtailment_ml=8519.02",
+   "shown": "DC curtailed up to 8,519 ML"
+  },
+  {
+   "location": "manuscript:L25",
+   "manuscript_value": 27354,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A20_模型桥接/A20_桥接报告.md",
+   "note": "27 354 只出现在 A20 桥接报告的 IEUA ha pool_scale=3.0 phi=0.4 行 (代表日 dS_pot), 非 Abstract 语境下的有限供水结果; 无对应机器产物字段。",
+   "shown": "up to 27,354 ML per period"
+  },
+  {
+   "location": "manuscript:?",
+   "manuscript_value": 103413,
+   "artifact_value": 103413.92469107284,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "稿件未直接写出该数; 记录以显示三账户上限可用",
+   "shown": "max requested-delivered 103,413.9"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "0.000000",
+   "artifact_value": "max |dS_pot| = 0.000 ML",
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/ablation_summary.json",
+   "note": "G1 max|dS_pot| = 0.000 ML",
+   "shown": "committed branch dS = 0.000000 exactly (80/80)"
+  },
+  {
+   "location": "manuscript:L299",
+   "manuscript_value": 22359,
+   "artifact_value": -22541.168039615077,
+   "verdict": "STALE",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "surplus_arm.d_abstraction_ml=-22541.17, 不等于 -22,359; 无产物记录 22,359",
+   "shown": "surplus down to -22,359 ML"
+  },
+  {
+   "location": "manuscript:L313",
+   "manuscript_value": 19726,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物记录该组成均值",
+   "shown": "LADWP mean dS_pot surplus -19,726"
+  },
+  {
+   "location": "manuscript:L313",
+   "manuscript_value": 8510,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物记录该组成均值",
+   "shown": "LADWP committed -8,510"
+  },
+  {
+   "location": "manuscript:L314",
+   "manuscript_value": 12257,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "同上",
+   "shown": "IEUA surplus -12,257"
+  },
+  {
+   "location": "manuscript:L314",
+   "manuscript_value": 4690,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "同上",
+   "shown": "IEUA committed -4,690"
+  },
+  {
+   "location": "manuscript:L315",
+   "manuscript_value": 16359,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "同上",
+   "shown": "AI-UWM surplus -16,359"
+  },
+  {
+   "location": "manuscript:L315",
+   "manuscript_value": 7504,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "同上",
+   "shown": "AI-UWM committed -7,504"
+  },
+  {
+   "location": "manuscript:L316",
+   "manuscript_value": 8895,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "同上",
+   "shown": "Figshare surplus +8,895"
+  },
+  {
+   "location": "manuscript:L316",
+   "manuscript_value": 28437,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "19_缺陷报告_缓存与桥接_2026-10-15.md",
+   "note": "该值仅在缺陷报告正文出现, 非机器产物; 无 json/csv 支撑",
+   "shown": "Figshare committed +28,437"
+  },
+  {
+   "location": "manuscript:L326",
+   "manuscript_value": "5.99e5",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物记录",
+   "shown": "response up to 5.99e5 ML at tier 0.25"
+  },
+  {
+   "location": "manuscript:L324",
+   "manuscript_value": "0.504",
+   "artifact_value": null,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "18_方法自审与修复报告_2026-10-14.md",
+   "note": "文献/锚定值, 非本仓库机器产物",
+   "shown": "PHREEQC calcite limited IEUA 2.52/5.0 = 0.504"
+  },
+  {
+   "location": "manuscript:L323",
+   "manuscript_value": "4.34",
+   "artifact_value": null,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "—",
+   "note": "文献锚定",
+   "shown": "CoC 4.34-4.91 (GSA/NREL 2023)"
+  },
+  {
+   "location": "manuscript:L322",
+   "manuscript_value": "0.98",
+   "artifact_value": null,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "A26_语义统一/CHI_SEMANTICS.md",
+   "note": "档位定义",
+   "shown": "tier 0.98"
+  },
+  {
+   "location": "manuscript:L330",
+   "manuscript_value": 39,
+   "artifact_value": 39,
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/grid_resolution_summary.json",
+   "note": "n_curves=39, n_nonmonotone=11, share=0.2821",
+   "shown": "11 of 39 scanned curves non-monotone"
+  },
+  {
+   "location": "manuscript:L265",
+   "manuscript_value": 11,
+   "artifact_value": 11,
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/grid_resolution_summary.json",
+   "note": "n_nonmonotone=11",
+   "shown": "11/39 non-monotone"
+  },
+  {
+   "location": "manuscript:L335",
+   "manuscript_value": "0.015625",
+   "artifact_value": 0.015625,
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/grid_resolution_summary.json",
+   "note": "grid_step_at_193=0.015625",
+   "shown": "boundary moves at most one grid step 0.015625"
+  },
+  {
+   "location": "manuscript:L40",
+   "manuscript_value": 10826,
+   "artifact_value": 10826,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "WWTP_scale.n=10826",
+   "shown": "10,826 observed WWTPs"
+  },
+  {
+   "location": "manuscript:L20",
+   "manuscript_value": "1.0000",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "该 r 由 final_audit 检查确认 ('D1 Load Rate 与年化/365/设计 相关 = 1.0'), 但该检验脚本(A28_末轮审计/final_audit.py) 未落盘数值产物; 数值本身无法从机器产物直接复核",
+   "shown": "load rate r = 1.0000"
+  },
+  {
+   "location": "manuscript:L285",
+   "manuscript_value": "8.0",
+   "artifact_value": 8.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "median=0.8 (单位 1e4 m3/d) => 8.0 ML/d; 独立重算 design CSV 中位 8.0",
+   "shown": "design capacity median 8.0 ML/d"
+  },
+  {
+   "location": "manuscript:L263",
+   "manuscript_value": 25,
+   "artifact_value": 25.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "p75=2.5 (1e4 m3/d) => 25 ML/d",
+   "shown": "P75 = 25 ML/d"
+  },
+  {
+   "location": "manuscript:L348",
+   "manuscript_value": 60,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A24_外部锚定/external_wwtp_capacity.csv",
+   "note": "summary 只给 median/p25/p75/max; 独立重算 P90=60.0 ML/d ✓ (由 CSV 直接可复现)",
+   "shown": "P90 = 60 ML/d"
+  },
+  {
+   "location": "manuscript:L349",
+   "manuscript_value": 268599,
+   "artifact_value": 268599.179,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "total_ml_per_day=268599.179",
+   "shown": "aggregate design capacity 268,599 ML/d"
+  },
+  {
+   "location": "manuscript:L42",
+   "manuscript_value": "0.594",
+   "artifact_value": 0.5942739726027395,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "median=0.5942739726027395",
+   "shown": "load rate median 0.594"
+  },
+  {
+   "location": "manuscript:L350",
+   "manuscript_value": "0.83",
+   "artifact_value": 0.8275089567966278,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "p75=0.8275089567966278",
+   "shown": "P75 load rate 0.83"
+  },
+  {
+   "location": "manuscript:L350",
+   "manuscript_value": "6.2",
+   "artifact_value": 6.234989839275817,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "share_gt_1=0.062349898392758174",
+   "shown": "above 1 in 6.2%"
+  },
+  {
+   "location": "manuscript:L351",
+   "manuscript_value": "0.184",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "summary.other_anchors 给 mean_of_means=0.2580 (n_sectors=39), 不是 0.184; 0.184 无产物支撑 (SI 称 median of sector means)",
+   "shown": "industrial cooling-water share 0.184 (39 sectors)"
+  },
+  {
+   "location": "manuscript:L352",
+   "manuscript_value": "1.45",
+   "artifact_value": 1.45,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "median=1.45, n=39083",
+   "shown": "urban water price median 1.45 CNY/m3 (n=39,083)"
+  },
+  {
+   "location": "manuscript:L357",
+   "manuscript_value": "33.4",
+   "artifact_value": 33.43075511149729,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "P_model ha=33.43075511149729",
+   "shown": "deliverable supply 33.4 ML/d (D-HA)"
+  },
+  {
+   "location": "manuscript:L357",
+   "manuscript_value": "30.7",
+   "artifact_value": 30.70407752281263,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "P_model co=30.70407752281263",
+   "shown": "30.7 ML/d (D-CO)"
+  },
+  {
+   "location": "manuscript:L41",
+   "manuscript_value": "81",
+   "artifact_value": 80.88860151487161,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_wwtp_capacity.csv + A24_外部锚定/A24_外部锚定报告.md",
+   "note": "独立重算 design-capacity 分位: D-HA 80.89, D-CO 80.77 => '81st percentile' ✓ (报告写第 80.9/80.8 百分位)",
+   "shown": "81st percentile of 10,826 plants"
+  },
+  {
+   "location": "manuscript:L3",
+   "manuscript_value": "2.0",
+   "artifact_value": 2.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "first ha=2.0 co=2.0",
+   "shown": "surplus first appears at pool_scale = 2.0"
+  },
+  {
+   "location": "manuscript:L384",
+   "manuscript_value": "2.2",
+   "artifact_value": 2.2,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "half ha=2.2",
+   "shown": "50% prevalence at 2.2 (D-HA)"
+  },
+  {
+   "location": "manuscript:L384",
+   "manuscript_value": "2.4",
+   "artifact_value": 2.4,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "half co=2.4",
+   "shown": "2.4 (D-CO)"
+  },
+  {
+   "location": "manuscript:L385",
+   "manuscript_value": "66.9",
+   "artifact_value": 66.86151022299458,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "66.86151022299458",
+   "shown": "approx 66.9 ML/d first appearance (D-HA)"
+  },
+  {
+   "location": "manuscript:L385",
+   "manuscript_value": "61.4",
+   "artifact_value": 61.40815504562526,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "61.40815504562526",
+   "shown": "61.4 ML/d (D-CO)"
+  },
+  {
+   "location": "manuscript:L385",
+   "manuscript_value": "73.5",
+   "artifact_value": 73.54766124529405,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "73.54766124529405",
+   "shown": "73.5 ML/d 50% level (D-HA)"
+  },
+  {
+   "location": "manuscript:L385",
+   "manuscript_value": "73.7",
+   "artifact_value": 73.6897860547503,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "73.6897860547503",
+   "shown": "73.7 ML/d (D-CO)"
+  },
+  {
+   "location": "manuscript:L3",
+   "manuscript_value": 3.0,
+   "artifact_value": 3.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "p50=3.0",
+   "shown": "treated volume median 3.0 ML/d"
+  },
+  {
+   "location": "manuscript:L396",
+   "manuscript_value": "16.8",
+   "artifact_value": 16.757123287671245,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "p75=16.757",
+   "shown": "P75 16.8"
+  },
+  {
+   "location": "manuscript:L396",
+   "manuscript_value": "44.4",
+   "artifact_value": 44.43835616438355,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "p90=44.438",
+   "shown": "P90 44.4"
+  },
+  {
+   "location": "manuscript:L396",
+   "manuscript_value": "77.8",
+   "artifact_value": 77.7633561643836,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "p95=77.763",
+   "shown": "P95 77.8"
+  },
+  {
+   "location": "manuscript:L265",
+   "manuscript_value": 93,
+   "artifact_value": 93.451,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "prevalence_table 中 committed 最小值 = 93.451% (r=1.0, co) => 'above 93%' ✓",
+   "shown": "committed branch dominates: above 93%"
+  },
+  {
+   "location": "manuscript:L43",
+   "manuscript_value": 95,
+   "artifact_value": 93.451,
+   "verdict": "FORBIDDEN_CLAIM",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json + A24_外部锚定/A24_外部锚定报告.md",
+   "note": "Abstract 写 'above 95% of plants' 而 §6b/SI 写 'above 93%': 内部矛盾。更重要的是, 该主张把 '实际处理量 x r' 当作'可交付再生水', 据此推断'已承诺需求'占比 —— 数据只观测到生产能力, 未观测已承诺需求 (SI S6b 已明确记录 41.6/29.8/28.6 的负荷率映射被撤回)。",
+   "shown": "above 95% of plants are fully committed"
+  },
+  {
+   "location": "manuscript:L3",
+   "manuscript_value": "2.0",
+   "artifact_value": null,
+   "verdict": "FORBIDDEN_CLAIM",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "SI S6c 自陈 'surplus covers only 0.4-6.6%', 主稿 Abstract 写 ~2-5%: 区间不一致。且与上一条同属由 load-rate/规模反推 regime prevalence 的不可识别推断",
+   "shown": "surplus regime covers only ~2-5%"
+  },
+  {
+   "location": "manuscript:L399",
+   "manuscript_value": "99",
+   "artifact_value": 98.956,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "r=0.3 committed ha=99.122 co=98.956 => 'above 99%' 仅对 ha 成立, co 为 98.96% (措辞略宽)",
+   "shown": "above 99% for r<=0.3"
+  },
+  {
+   "location": "manuscript:L417",
+   "manuscript_value": 64,
+   "artifact_value": 64,
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/ablation_matrix.csv",
+   "note": "重算 64 行; summary.n_rows_all=64",
+   "shown": "Ablation 2^3 factorial (64 cells)"
+  },
+  {
+   "location": "manuscript:L417",
+   "manuscript_value": "5/5",
+   "artifact_value": true,
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/ablation_summary.json",
+   "note": "all_gates_pass=true, 5 gates",
+   "shown": "5/5 gates"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "3.6e-12",
+   "artifact_value": 15030.055694179082,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/ablation_matrix.csv + A25_终审/a15_gates_reliable.json",
+   "note": "重算 converged_unique 58 行 max|dS_pot-dS_pot_ident| = 7.275957614183426e-12 (=a15_gates_reliable.ablation.all.unified_resid_max); ablation_summary.identity_max_err_share_only_ml = 5.457e-12; 无 3.6e-12",
+   "shown": "ablation identity residual 3.6e-12"
+  },
+  {
+   "location": "manuscript:L418",
+   "manuscript_value": "0.557",
+   "artifact_value": 0.8055937188186029,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "权威值 co_R2_phi_eff=0.8055937188186029 (gate H2 value: '律 R²=0.805594 vs 基线 R²=-0.073284')",
+   "shown": "Cross-domain holdout R2 = 0.557"
+  },
+  {
+   "location": "manuscript:L418",
+   "manuscript_value": "-0.050",
+   "artifact_value": -0.07328387812300985,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "权威值 trivial_baseline_R2=-0.07328387812300985; 稿件另一处 (L425) 又写 -0.044, 三值互相矛盾",
+   "shown": "baseline -0.050"
+  },
+  {
+   "location": "SI:L358",
+   "manuscript_value": "-0.044",
+   "artifact_value": -0.07328387812300985,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "权威值 -0.07328",
+   "shown": "baseline -0.044"
+  },
+  {
+   "location": "SI:L358",
+   "manuscript_value": "0.558",
+   "artifact_value": 0.8055937188186029,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "权威值 0.80559",
+   "shown": "true holdout R2 = 0.558"
+  },
+  {
+   "location": "manuscript:L418",
+   "manuscript_value": "0.5574",
+   "artifact_value": 0.8055937188186029,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "0.5574 来自 A25_终审/A25_全面终审报告.md 的旧占位档数字, 已被 holdout_summary.json 取代",
+   "shown": "0.5574 on the solver-reliable subset"
+  },
+  {
+   "location": "manuscript:L425",
+   "manuscript_value": "0.5582",
+   "artifact_value": 0.8055937188186029,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "同上, 旧占位档数字",
+   "shown": "0.5582 unfiltered"
+  },
+  {
+   "location": "manuscript:L20",
+   "manuscript_value": "1.000",
+   "artifact_value": 1.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "H1_algebraic_rederivation.co_R2=1.0, is_validation=false",
+   "shown": "identity's cross-domain R2 = 1.000"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "0.0",
+   "artifact_value": 0.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "H3=0.0",
+   "shown": "no-quality extreme dS_pot = 0 exactly"
+  },
+  {
+   "location": "manuscript:L420",
+   "manuscript_value": 6478,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "holdout_summary.json 无该项; 无产物记录 6478/21674/116581 三元组",
+   "shown": "quality monotonicity 6,478 -> 21,674 -> 116,581"
+  },
+  {
+   "location": "manuscript:L420",
+   "manuscript_value": 21674,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "同上",
+   "shown": "21,674"
+  },
+  {
+   "location": "manuscript:L420",
+   "manuscript_value": 116581,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "同上",
+   "shown": "116,581"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": 0,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "A18 verdict 只有 6 个布尔项, 无 'falsifier' 计数; 无法机械复核",
+   "shown": "0 falsifiers (H1-H4)"
+  },
+  {
+   "location": "manuscript:L18",
+   "manuscript_value": 68,
+   "artifact_value": 68,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "abstraction_eq_delivered_ever=false",
+   "shown": "0/68 coincidences"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "2.9e-11",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "与 §2 的 2.5e-11 及 SI S3 的 5.8e-11 三点互相矛盾; 重算 813 子集为 2.5466e-11, 故 2.9e-11 既非门禁值也非全表值 (全表 2.8045e-06)",
+   "shown": "exact identity residual 2.9e-11"
+  },
+  {
+   "location": "manuscript:L447",
+   "manuscript_value": "380/400",
+   "artifact_value": 400.0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "ha=380 co=400",
+   "shown": "potable cap 380/400 ML/day"
+  },
+  {
+   "location": "manuscript:L465",
+   "manuscript_value": 46,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "重算: qs=True ha phi=0.6 25804.27 vs qs=False 47734.80 => -45.94% (~46%) 可复现; 但该百分比未落盘为字段, 只能由 CSV/JSON 推导",
+   "shown": "reduces makeup by 46%"
+  },
+  {
+   "location": "manuscript:L464",
+   "manuscript_value": "7.99",
+   "artifact_value": 7.986379159460488,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "qs=True 7.9864 / qs=False 1.8236",
+   "shown": "CoC 7.99 vs 1.82 at phi=0.6"
+  },
+  {
+   "location": "manuscript:L464",
+   "manuscript_value": "1.82",
+   "artifact_value": 1.823640817874261,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "1.823640817874261",
+   "shown": "1.82"
+  },
+  {
+   "location": "manuscript:L473",
+   "manuscript_value": "3.45",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A21_动态状态/dynamic_state_summary.json",
+   "note": "重算 ha|qs=False: 0->50 ML 45598->48799? 实为 47734.80->49381.80 = +3.45% ✓ 可复现但非落盘字段",
+   "shown": "+3.45% (D-HA) storage raises makeup"
+  },
+  {
+   "location": "manuscript:L473",
+   "manuscript_value": "7.02",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A21_动态状态/dynamic_state_summary.json",
+   "note": "重算 co|qs=False: 45598.54->48799.12 = +7.02% ✓ 可复现但非落盘字段",
+   "shown": "+7.02% (D-CO)"
+  },
+  {
+   "location": "manuscript:L483",
+   "manuscript_value": "2.1",
+   "artifact_value": null,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "A19_水化学包络/",
+   "note": "质量包络范围",
+   "shown": "CoC envelope [2.1, 4.9]"
+  },
+  {
+   "location": "manuscript:L483",
+   "manuscript_value": "4.9",
+   "artifact_value": null,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "A19_水化学包络/",
+   "note": "质量包络范围",
+   "shown": "CoC envelope upper 4.9"
+  },
+  {
+   "location": "manuscript:L219",
+   "manuscript_value": "30",
+   "artifact_value": null,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "—",
+   "note": "敏感性陈述",
+   "shown": "temperature can shift CoC by -30%"
+  },
+  {
+   "location": "manuscript:L44",
+   "manuscript_value": "5.000",
+   "artifact_value": 188,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "限制档设计值 5.0 可由 CSV CoC_ai 分布复核",
+   "shown": "realised CoC = design 5.000"
+  },
+  {
+   "location": "manuscript:L496",
+   "manuscript_value": "1.60",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "19_缺陷报告_缓存与桥接_2026-10-15.md",
+   "note": "1.60x 只在缺陷报告正文出现 (57,731 vs 36,504 = 1.582); 无机器产物字段",
+   "shown": "inflating results by 1.60x"
+  },
+  {
+   "location": "manuscript:L497",
+   "manuscript_value": "36504",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A20_模型桥接/bridging_pairs_full.json",
+   "note": "36,504 出现在 bridging_pairs_full.json / bridging_partial.json (v1, 占位档); 现行 v2 (cited 档) 的 M0 为 50,192.70 / 50,192.69 等, 不再有 36,504",
+   "shown": "36,504 = 36,504 ML"
+  },
+  {
+   "location": "manuscript:L19",
+   "manuscript_value": "5.1e-16",
+   "artifact_value": 5.082110955397879e-16,
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_summary_v2.json",
+   "note": "M0_median_rel_diff=5.082110955397879e-16",
+   "shown": "median relative difference 5.1e-16"
+  },
+  {
+   "location": "manuscript:L514",
+   "manuscript_value": "24/24",
+   "artifact_value": 24,
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_comparison_v2.csv",
+   "note": "重算 24 对, M0 最大相对差 8.698e-16 (逐位/末位级)",
+   "shown": "identical in 24/24 paired runs"
+  },
+  {
+   "location": "manuscript:L516",
+   "manuscript_value": "23 of 24",
+   "artifact_value": 23,
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_comparison_v2.csv + bridging_summary_v2.json",
+   "note": "重算 23/24, share=0.9583333; summary.sign_agreement=0.9583333333333334",
+   "shown": "sign agrees in 23 of 24 (0.958)"
+  },
+  {
+   "location": "manuscript:L516",
+   "manuscript_value": "12/12",
+   "artifact_value": "12/12",
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_comparison_v2.csv",
+   "note": "重算 12/12",
+   "shown": "IEUA 12/12"
+  },
+  {
+   "location": "manuscript:L516",
+   "manuscript_value": "11/12",
+   "artifact_value": "11/12",
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_comparison_v2.csv",
+   "note": "重算 11/12",
+   "shown": "LADWP 11/12"
+  },
+  {
+   "location": "manuscript:L497",
+   "manuscript_value": "36",
+   "artifact_value": 36,
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_comparison.csv",
+   "note": "重算 v1 CSV 确为 36 对; 20/24 与 24/36 均可在 A20_桥接报告.md / A28 报告中找到。稿件与 SI 已把该段明确写作撤回说明, 无其他地方仍将 36 组当作现行结果",
+   "shown": "earlier 36-pair comparison (withdrawn)"
+  },
+  {
+   "location": "manuscript:L520",
+   "manuscript_value": "0.667",
+   "artifact_value": 0.6666666666666666,
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_comparison.csv",
+   "note": "重算 24/36 = 0.6667 ✓ (撤回说明中的历史值)",
+   "shown": "24/36 = 0.667"
+  },
+  {
+   "location": "manuscript:L158",
+   "manuscript_value": 116,
+   "artifact_value": 119,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 813 子集 Figshare: neg=119, pos=62, zero=9 (稿件 116/54)",
+   "shown": "Figshare RW dS<0 = 116 / dS>0 = 54"
+  },
+  {
+   "location": "manuscript:L155",
+   "manuscript_value": 183,
+   "artifact_value": 186,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 813 子集 LADWP: neg=186, pos=8, zero=9 (稿件 183/0)",
+   "shown": "LADWP dS<0 = 183"
+  },
+  {
+   "location": "manuscript:L156",
+   "manuscript_value": 184,
+   "artifact_value": 187,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 813 子集 AI-UWM: neg=187, pos=8, zero=9 (稿件 184/0)",
+   "shown": "AI-UWM placeholder dS<0 = 184"
+  },
+  {
+   "location": "manuscript:L157",
+   "manuscript_value": 148,
+   "artifact_value": 151,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 813 子集 IEUA: neg=151, pos=56, zero=9 (稿件 148/48)",
+   "shown": "IEUA dS<0 = 148"
+  },
+  {
+   "location": "manuscript:L157",
+   "manuscript_value": 48,
+   "artifact_value": 56,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 pos=56",
+   "shown": "IEUA dS>0 = 48"
+  },
+  {
+   "location": "manuscript:L158",
+   "manuscript_value": 54,
+   "artifact_value": 62,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "重算 pos=62",
+   "shown": "Figshare dS>0 = 54"
+  },
+  {
+   "location": "manuscript:L162",
+   "manuscript_value": 31,
+   "artifact_value": null,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/A25_全面终审报告.md",
+   "note": "撤回说明中的历史值, 稿件已标明为 solver failures; 无现行产物支撑该计数本身",
+   "shown": "31 harmful cases attributed to LADWP"
+  },
+  {
+   "location": "manuscript:L144",
+   "manuscript_value": 7,
+   "artifact_value": null,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/A25_全面终审报告.md",
+   "note": "同上, 历史值",
+   "shown": "7 harmful for the placeholder"
+  },
+  {
+   "location": "manuscript:L262",
+   "manuscript_value": 237,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物字段记录 237/0",
+   "shown": "reliable counts 237/0 (LADWP)"
+  },
+  {
+   "location": "manuscript:L262",
+   "manuscript_value": 241,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物字段记录 241/0; 重算 813 子集 LADWP neg=186 / AI-UWM neg=187, 均非 237/241",
+   "shown": "reliable counts 241/0 (AI-UWM)"
+  },
+  {
+   "location": "manuscript:L243",
+   "manuscript_value": 38,
+   "artifact_value": 38,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_audit.json + A13_可靠性机制/OBSOLETE_reliability_grid.csv",
+   "note": "no_convergence=38; 稿件将其全部归为零分配失败",
+   "shown": "38 'withdrawal rises' in q~0 group (before gate), now 0"
+  },
+  {
+   "location": "manuscript:L199",
+   "manuscript_value": 192,
+   "artifact_value": 16,
+   "verdict": "STALE",
+   "artifact_path": "A22_判据分解/missing_quality_summary.json",
+   "note": "missing_quality_summary.n_rows=16, 不是 192",
+   "shown": "imputing over 192 scenarios"
+  },
+  {
+   "location": "manuscript:L200",
+   "manuscript_value": 2869,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A22_判据分解/missing_quality_summary.json",
+   "note": "summary 只给 M1_delta_median (AI-UWM 1.8227); 无 2,869 字段",
+   "shown": "makeup changes by up to 2,869 ML"
+  },
+  {
+   "location": "manuscript:L200",
+   "manuscript_value": "0/192",
+   "artifact_value": 0,
+   "verdict": "VERIFIED",
+   "artifact_path": "A22_判据分解/missing_quality_summary.json",
+   "note": "q_sign_flips=0 对各水样均成立 (但行数为 16, 见上)",
+   "shown": "zero sign flips in q (0/192)"
+  },
+  {
+   "location": "SI:L183",
+   "manuscript_value": 1052,
+   "artifact_value": 1052,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv + supply_state_summary.json",
+   "note": "重算 1052 行; supply_state_summary.n_scenarios=1052",
+   "shown": "scenarios (all) = 1,052"
+  },
+  {
+   "location": "SI:L57",
+   "manuscript_value": 1152,
+   "artifact_value": 1152,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_audit.json",
+   "note": "1094+58=1152 —— 这是 A27 切换**前**的占位档网格; 现行主网格为 1052。SI S3.0 表头把 1,152 / 58 / 5.03% 与现行 813 列在同一张表里, 口径混用",
+   "shown": "1,152 scenarios"
+  },
+  {
+   "location": "SI:L15",
+   "manuscript_value": "2.55e-11",
+   "artifact_value": 2.546585164964199e-11,
+   "verdict": "VERIFIED",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv（独立重算）",
+   "note": "统一通式残差在 813 子集上重算 = 2.5466e-11 ✓ (与主稿 §2 一致)。但 SI S2a 的**对照列**把占位档写成 1.16e-10 —— convergence_impact 的 identity_resid_max 实为 dS_pot vs dS_ident 的另一口径, 两者不可比, 须标注。",
+   "shown": "identity residual 2.55e-11 (cited)"
+  },
+  {
+   "location": "SI:L134",
+   "manuscript_value": "1094",
+   "artifact_value": 1094,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_audit.json",
+   "note": "converged_unique=1094 (占位档对照列)",
+   "shown": "reliable scenarios 1,094 (placeholder col)"
+  },
+  {
+   "location": "SI:L138",
+   "manuscript_value": 329,
+   "artifact_value": null,
+   "verdict": "STALE",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "convergence_impact 给出 n_q_pos all=349 / ok=329 ✓ 数值正确; 但同一 SI 表把 '440' 写成 329 的 cited 对照, 需与 290 并列呈现 —— 数值本身 VERIFIED, 归类见 note",
+   "shown": "q>0 329 (placeholder)"
+  },
+  {
+   "location": "SI:L137",
+   "manuscript_value": 441,
+   "artifact_value": 441,
+   "verdict": "VERIFIED",
+   "artifact_path": "A25_终审/convergence_impact.json",
+   "note": "n_zero_disp.ok=441",
+   "shown": "zero-displacement 441 (placeholder)"
+  },
+  {
+   "location": "SI:L399",
+   "manuscript_value": "0.83",
+   "artifact_value": 0.9730438356164385,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "p10=0.0917 p25=0.3059 p90=0.9730",
+   "shown": "load rate P25 0.31 / P50 0.594 / P75 0.83 / P90 0.97"
+  },
+  {
+   "location": "SI:L399",
+   "manuscript_value": "0.09",
+   "artifact_value": 0.09170688443976115,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "p10=0.0917",
+   "shown": "load rate P10 0.09"
+  },
+  {
+   "location": "SI:L389",
+   "manuscript_value": "2683047",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "summary 只写 '2.68 MB, 与记录列出的 2.7 MB 一致'; 精确字节数无产物",
+   "shown": "archive retrieved 2,683,047 bytes"
+  },
+  {
+   "location": "SI:L150",
+   "manuscript_value": "0.625",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "87.5 = 350 x 0.25 可由 cited limits 推出 (baseline alkalinity 350 x limit_scale 0.25); 140 mg/L 水样浓度与 ratio 无产物字段",
+   "shown": "IEUA alkalinity 87.5 vs 140, ratio 0.625 < 1"
+  },
+  {
+   "location": "SI:L150",
+   "manuscript_value": "87.5",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A4_水化学参数域/T6b_cited_limits_summary.json",
+   "note": "可由 350x0.25 推导, 但未落盘",
+   "shown": "alkalinity 87.5 mg/L"
+  },
+  {
+   "location": "SI:L150",
+   "manuscript_value": 140,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "—",
+   "note": "无产物",
+   "shown": "water concentration 140 mg/L"
+  },
+  {
+   "location": "SI:L105",
+   "manuscript_value": 58,
+   "artifact_value": [
+    "limit_scale",
+    "chi_strictness",
+    "quality_binding"
+   ],
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "quality_binding 列可由 CSV 重算; 该表 (100/92/58/48/0%) 未落盘为产物字段",
+   "shown": "share of scenarios where constraint binds at 0.98 = 58%"
+  },
+  {
+   "location": "SI:L104",
+   "manuscript_value": 92,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "同 SI S2b 表, 需由 quality_binding 列重算",
+   "shown": "0.50 binds 92%"
+  },
+  {
+   "location": "SI:L103",
+   "manuscript_value": 100,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "同上",
+   "shown": "0.25 binds 100%"
+  },
+  {
+   "location": "SI:L106",
+   "manuscript_value": 48,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "同上",
+   "shown": "1.0 binds 48%"
+  },
+  {
+   "location": "SI:L15",
+   "manuscript_value": 0,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "同上",
+   "shown": "1e6 binds 0%"
+  },
+  {
+   "location": "SI:L15",
+   "manuscript_value": "9.77e-15",
+   "artifact_value": 9.769962616701378e-15,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "water_closure_max_abs_ml=9.769962616701378e-15 ✓ (n_scenarios=20)",
+   "shown": "water closure 9.77e-15 ML on both paths"
+  },
+  {
+   "location": "SI:L90",
+   "manuscript_value": "0.504",
+   "artifact_value": null,
+   "verdict": "NOT_A_CLAIM",
+   "artifact_path": "18_方法自审与修复报告_2026-10-14.md",
+   "note": "锚定值",
+   "shown": "PHREEQC calcite limited IEUA 0.504"
+  },
+  {
+   "location": "SI:L1",
+   "manuscript_value": 16,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A21_动态状态/dynamic_state_summary.json",
+   "note": "n_scenarios=16 ✓ 但 '16/16' 为陈述",
+   "shown": "mass balance M/B = CoC, 16/16"
+  },
+  {
+   "location": "SI:L291",
+   "manuscript_value": "47 735",
+   "artifact_value": 47734.80202273672,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/reuse_quality_verdict_summary.json",
+   "note": "ha / qs=False makeup_ml=47734.80202273672 ✓",
+   "shown": "makeup at phi=0.6 47,735 ML (volume-only)"
+  },
+  {
+   "location": "SI:L291",
+   "manuscript_value": "25 804",
+   "artifact_value": 25804.26566273244,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/reuse_quality_verdict_summary.json",
+   "note": "makeup_ml=25804.26566273244",
+   "shown": "25,804 ML (-46%) dynamic path"
+  },
+  {
+   "location": "SI:L288",
+   "manuscript_value": "5.500",
+   "artifact_value": 5.5,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "5.5",
+   "shown": "CoC at phi=0 = 5.500"
+  },
+  {
+   "location": "SI:L289",
+   "manuscript_value": "2.292",
+   "artifact_value": 2.291666666666667,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "2.291666666666667",
+   "shown": "CoC at phi=0.4 volume-only = 2.292"
+  },
+  {
+   "location": "SI:L289",
+   "manuscript_value": "7.801",
+   "artifact_value": 7.800575493957398,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "7.800575493957398",
+   "shown": "CoC at phi=0.4 dynamic = 7.801"
+  },
+  {
+   "location": "SI:L290",
+   "manuscript_value": "1.824",
+   "artifact_value": 1.823640817874261,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "1.823640817874261",
+   "shown": "CoC at phi=0.6 volume-only = 1.824"
+  },
+  {
+   "location": "SI:L290",
+   "manuscript_value": "7.986",
+   "artifact_value": 7.986379159460488,
+   "verdict": "VERIFIED",
+   "artifact_path": "A21_动态状态/dynamic_criterion_summary.json",
+   "note": "7.986379159460488",
+   "shown": "CoC at phi=0.6 dynamic = 7.986"
+  },
+  {
+   "location": "SI:L447",
+   "manuscript_value": "2,828",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A24_外部锚定/surplus_threshold_check.json",
+   "note": "surplus_threshold_check 只给占比网格 (1.5 -> 0.0); 无 2,828 / 11,896 字段",
+   "shown": "2,828 ML unused at pool_scale=1.5 (note: SI 写 2,828/11,896)"
+  },
+  {
+   "location": "SI:L448",
+   "manuscript_value": 11896,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "同 SI S6c 方法学注",
+   "shown": "11,896 ML displacement at pool_scale=1.5"
+  },
+  {
+   "location": "SI:L528",
+   "manuscript_value": 114,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "无产物字段; 重算 supp_state 无该计数",
+   "shown": "114 purely-displaced cases are negative"
+  },
+  {
+   "location": "SI:L415",
+   "manuscript_value": "41.6",
+   "artifact_value": 41.54812488453722,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "used_share_proxy lt_0.5=0.4155 (41.6%) —— 撤回说明中的历史值 ✓",
+   "shown": "earlier 41.6%/29.8%/28.6% (withdrawn)"
+  },
+  {
+   "location": "SI:L415",
+   "manuscript_value": "29.8",
+   "artifact_value": 29.82634398669869,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "0.2983 (29.8%)",
+   "shown": "29.8% (withdrawn)"
+  },
+  {
+   "location": "SI:L415",
+   "manuscript_value": "28.6",
+   "artifact_value": 28.625531128764088,
+   "verdict": "VERIFIED",
+   "artifact_path": "A24_外部锚定/external_anchor_summary.json",
+   "note": "0.2863 (28.6%)",
+   "shown": "28.6% (withdrawn)"
+  },
+  {
+   "location": "SI:L37",
+   "manuscript_value": 68,
+   "artifact_value": 730,
+   "verdict": "VERIFIED",
+   "artifact_path": "A18_有限供水/finite_supply_summary.json",
+   "note": "n_scenarios=68, n_days_per_scenario=730",
+   "shown": "68 runs x 730 days"
+  },
+  {
+   "location": "manuscript:L418",
+   "manuscript_value": "0.557",
+   "artifact_value": 0.8055937188186029,
+   "verdict": "STALE",
+   "artifact_path": "A15_稳健性/holdout_summary.json",
+   "note": "Lead 已确认: 应为 0.806 (co_R2_phi_eff=0.8055937188186029); 基线应为 -0.073 (trivial_baseline_R2=-0.07328387812300985)",
+   "shown": "R2 = 0.557 (both occurrences)"
+  },
+  {
+   "location": "manuscript:L43",
+   "manuscript_value": "above 95%",
+   "artifact_value": 93.451,
+   "verdict": "FORBIDDEN_CLAIM",
+   "artifact_path": "A24_外部锚定/external_validity_summary.json",
+   "note": "Lead 已确认: 该实证主张不可识别, 必须撤回 (只观测到生产能力, 未观测已承诺需求)",
+   "shown": "above 95% / above 93% of real facilities fully committed"
+  },
+  {
+   "location": "manuscript:L497",
+   "manuscript_value": 36,
+   "artifact_value": 36,
+   "verdict": "VERIFIED",
+   "artifact_path": "A20_模型桥接/bridging_comparison.csv + bridging_summary_v2.json",
+   "note": "Lead 已确认: 该段确为撤回说明。核对结果: bridging_summary_v2.json 的 n_pairs=24, sign_agreement=0.9583333, M0_median_rel_diff=5.082110955397879e-16, 与稿件一致; 全稿无其他地方将 36 组当作现行结果",
+   "shown": "36 pairs段落 = 撤回说明, 非未解决冲突"
+  },
+  {
+   "location": "manuscript:L223",
+   "manuscript_value": 1094,
+   "artifact_value": 813,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "§3 主体口径为 813(双门禁现行), 但同章的分类器却用 n=1,094(占位档 converged_unique)。A10/city_model.py 的 LIMIT_SET 现为 'baseline', 现行 grid 为 1052, 故 1,094 与 813 不可同时为真。A22/q_predictors_summary.json 的 n=1152(全表) —— 第三个数。",
+   "shown": "testing seven candidates on n=1,094"
+  },
+  {
+   "location": "manuscript:L33",
+   "manuscript_value": 0.768,
+   "artifact_value": 0.7682291666666666,
+   "verdict": "VERIFIED",
+   "artifact_path": "A22_判据分解/q_predictors_summary.json",
+   "note": "acc=0.7682291666666666 ✓ —— 与主稿 §3 的 0.803 冲突, 两者必有一错",
+   "shown": "best of seven predictors 0.768"
+  },
+  {
+   "location": "manuscript:L190",
+   "manuscript_value": 0.456,
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A22_判据分解/q_predictors_summary.json",
+   "note": "A22 by_sample 给 AI-UWM acc=0.4375(全表 288), 不是 0.456; 0.456 未落盘",
+   "shown": "AI-UWM assumption 0.456"
+  },
+  {
+   "location": "manuscript:L20",
+   "manuscript_value": "1.000",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A22_判据分解/q_predictors_summary.json",
+   "note": "by_sample 未包含 1.000 的取值; 稿件称 'reliable subset' 但该子集分类器未落盘",
+   "shown": "IEUA 1.000"
+  },
+  {
+   "location": "manuscript:L189",
+   "manuscript_value": "0.993",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A22_判据分解/q_predictors_summary.json",
+   "note": "同上, 未落盘",
+   "shown": "Figshare 0.993"
+  },
+  {
+   "location": "manuscript:L190",
+   "manuscript_value": "0.720",
+   "artifact_value": null,
+   "verdict": "UNTRACEABLE",
+   "artifact_path": "A22_判据分解/q_predictors_summary.json",
+   "note": "同上, 未落盘",
+   "shown": "LADWP 0.720"
+  },
+  {
+   "location": "SI:L183",
+   "manuscript_value": 1052,
+   "artifact_value": 1052,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "现行主网格为 1052 行(含 188 退化 + 58 未收敛); 1,152 属 A27 切换前占位档。SI S3.0 表把 '1,152 / 58 / 5.03%' 与 '813' 并列在同表, 口径混用必须拆表。",
+   "shown": "1,152 scenarios in the main grid"
+  },
+  {
+   "location": "SI:L105",
+   "manuscript_value": 58,
+   "artifact_value": {
+    "converged_unique": 1001,
+    "no_convergence": 18,
+    "non_unique": 33
+   },
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "现行 1052 网格的未收敛数为 18(no_convergence)+33(non_unique)=51, 不是 58; 58 属占位档 1152。两代口径混排。",
+   "shown": "58 unreliable of 1,152 (5.03%)"
+  },
+  {
+   "location": "SI:L164",
+   "manuscript_value": "5.03",
+   "artifact_value": null,
+   "verdict": "STALE",
+   "artifact_path": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "58/1152=5.03% 属占位档; 现行 1052 网格为 51/1052=4.85%, 且双门禁剔除 239/1052=22.72%",
+   "shown": "share 5.03%"
+  }
+ ]
+}

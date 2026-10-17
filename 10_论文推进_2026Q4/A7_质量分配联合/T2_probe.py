@@ -17,7 +17,7 @@ from pathlib import Path
 
 import pandas as pd
 
-REPO = Path(r"C:/Users/mmrgr/Desktop/论文/算力中心/07_代码_AI-UWM引擎/aiuwm_src")
+REPO = Path(__file__).resolve().parents[2] / "07_代码_AI-UWM引擎" / "aiuwm_src"
 sys.path.insert(0, str(REPO / "src"))
 from aiuwm.data_center import calculate_data_center_plan  # noqa: E402
 

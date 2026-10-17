@@ -1,0 +1,391 @@
+{
+ "purpose": "为 48 项 UNTRACEABLE 建立可机核验追溯",
+ "counts": {
+  "TRACED_OK": 15,
+  "TRACED_STALE": 12,
+  "NOT_IDENTIFIABLE": 15
+ },
+ "total": 42,
+ "records": [
+  {
+   "item": "恒等式相对残差 2.9e-16",
+   "claimed_value": 2.9e-16,
+   "recomputed_value": 2.9331853550365817e-16,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "统一通式 |C-F-x_ai-dS| / max(M0,M1,inc) 最大相对值",
+   "status": "TRACED_OK",
+   "note": "实测 2.933e-16 ≈ 2.9e-16 (主稿 v4 已用 2.9e-16)"
+  },
+  {
+   "item": "分支A退化残差 1.1e-11",
+   "claimed_value": 1.1e-11,
+   "recomputed_value": 1.2732925824820995e-11,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "分支A: |dS-(M1-M0)| 最大绝对残差",
+   "status": "TRACED_OK",
+   "note": "实测 1.273e-11; 主稿 v4 已改为 1.27e-11"
+  },
+  {
+   "item": "分支C退化残差 1.5e-11",
+   "claimed_value": 1.5e-11,
+   "recomputed_value": 1.4551915228366852e-11,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "分支C: |dS-(-(M0-M1)-x_ai)| 最大绝对残差",
+   "status": "TRACED_OK",
+   "note": "实测 1.455e-11; 主稿 v4 已改为 1.46e-11"
+  },
+  {
+   "item": "分支C例外数 17",
+   "claimed_value": 17,
+   "recomputed_value": 3,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "零挤占(displaced==0)内 dS>0 的行数",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已改为 3"
+  },
+  {
+   "item": "分支C 负例 429/446",
+   "claimed_value": 429,
+   "recomputed_value": 369,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "零挤占内 dS<0 的行数",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已改为 369/372"
+  },
+  {
+   "item": "q>0 组中位 dS -14496",
+   "claimed_value": -14496.0,
+   "recomputed_value": -14495.881460473893,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "可靠子集内 q>0 组的 dS_pot 中位数",
+   "status": "TRACED_OK",
+   "note": ""
+  },
+  {
+   "item": "q>0 组 290",
+   "claimed_value": 290,
+   "recomputed_value": 290,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "可靠子集内按 q 符号分组计数",
+   "status": "TRACED_OK",
+   "note": ""
+  },
+  {
+   "item": "q≈0 组 288",
+   "claimed_value": 288,
+   "recomputed_value": 288,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "可靠子集内按 q 符号分组计数",
+   "status": "TRACED_OK",
+   "note": ""
+  },
+  {
+   "item": "q<0 组 235",
+   "claimed_value": 235,
+   "recomputed_value": 235,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "可靠子集内按 q 符号分组计数",
+   "status": "TRACED_OK",
+   "note": ""
+  },
+  {
+   "item": "LADWP AWPF (2012, RO product) 负/正 183/0",
+   "claimed_value": "183/0",
+   "recomputed_value": "186/8",
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "按 sample 分组的 dS_pot 符号计数",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已整表更正(含物种数)"
+  },
+  {
+   "item": "AI-UWM model assumption 负/正 184/0",
+   "claimed_value": "184/0",
+   "recomputed_value": "187/8",
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "按 sample 分组的 dS_pot 符号计数",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已整表更正(含物种数)"
+  },
+  {
+   "item": "IEUA RP-1 (2025, tertiary) 负/正 148/48",
+   "claimed_value": "148/48",
+   "recomputed_value": "151/56",
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "按 sample 分组的 dS_pot 符号计数",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已整表更正(含物种数)"
+  },
+  {
+   "item": "Figshare RW (2025, paired study) 负/正 116/54",
+   "claimed_value": "116/54",
+   "recomputed_value": "119/62",
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "按 sample 分组的 dS_pot 符号计数",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已整表更正(含物种数)"
+  },
+  {
+   "item": "组成均值 19726",
+   "claimed_value": 19726,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "组成均值 8510",
+   "claimed_value": 8510,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "组成均值 12257",
+   "claimed_value": 12257,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "组成均值 4690",
+   "claimed_value": 4690,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "组成均值 16359",
+   "claimed_value": 16359,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "组成均值 7504",
+   "claimed_value": 7504,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "组成均值 8895",
+   "claimed_value": 8895,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "组成均值 28437",
+   "claimed_value": 28437,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "在 A13/A33 产物中按 sample×分支 均未能复现该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+  },
+  {
+   "item": "DSD 组成均值 237",
+   "claimed_value": 237,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "A13 子集重算 LADWP neg=186 / AI-UWM neg=187, 均非该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "建议删除"
+  },
+  {
+   "item": "DSD 组成均值 241",
+   "claimed_value": 241,
+   "recomputed_value": null,
+   "source_file": "(无)",
+   "method": "A13 子集重算 LADWP neg=186 / AI-UWM neg=187, 均非该值",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "建议删除"
+  },
+  {
+   "item": "跨域留出 R² 0.557",
+   "claimed_value": 0.557,
+   "recomputed_value": 0.8055937188186029,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A15_稳健性\\holdout_summary.json",
+   "method": "holdout_summary.json::H2_true_holdout.co_R2_phi_eff",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已改为 0.806"
+  },
+  {
+   "item": "基线 -0.050",
+   "claimed_value": -0.05,
+   "recomputed_value": -0.07328387812300985,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A15_稳健性\\holdout_summary.json",
+   "method": "holdout_summary.json::H2_true_holdout.trivial_baseline_R2",
+   "status": "TRACED_STALE",
+   "note": "主稿 v4 已改为 -0.073"
+  },
+  {
+   "item": "质量单调性 6478/21674/116581",
+   "claimed_value": "6478/21674/116581",
+   "recomputed_value": null,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A15_稳健性\\holdout_summary.json",
+   "method": "该三元组在 A15 产物中无对应字段",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "建议改引可复现的质量档位表或删除"
+  },
+  {
+   "item": "冷却水占比 0.258 (替代 0.184)",
+   "claimed_value": 0.258,
+   "recomputed_value": 0.25799037378455597,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A24_外部锚定\\external_anchor_summary.json",
+   "method": "external_anchor_summary.json::other_anchors[0].mean_of_means (n_sectors=39)",
+   "status": "TRACED_OK",
+   "note": "原 0.184 无产物, 已删除; 0.258 可追溯"
+  },
+  {
+   "item": "冷却水占比 0.184 (旧值)",
+   "claimed_value": 0.184,
+   "recomputed_value": null,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A24_外部锚定\\external_anchor_summary.json",
+   "method": "该值在 external_anchor_summary.json 中不存在",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿/SI 已删除"
+  },
+  {
+   "item": "P90 处理量 60",
+   "claimed_value": 60,
+   "recomputed_value": 60.0,
+   "source_file": "(external_validity_summary.json 分布)",
+   "method": "独立重算 P90=60.0 ML/d",
+   "status": "TRACED_OK",
+   "note": "该值可由外部数据直接复现"
+  },
+  {
+   "item": "桥接 1.60x 通胀",
+   "claimed_value": 1.6,
+   "recomputed_value": null,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A20_模型桥接\\bridging_summary_v2.json",
+   "method": "v2 产物无 1.60 字段(v1 占位档遗留)",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "主稿 v4 的桥接段已只引 24 对结果"
+  },
+  {
+   "item": "桥接 36504",
+   "claimed_value": 36504,
+   "recomputed_value": null,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A20_模型桥接\\bridging_comparison.csv",
+   "method": "该值属 v1(占位档) 文件",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "已撤回, 建议删除"
+  },
+  {
+   "item": "储冷 +3.45% (ha)",
+   "claimed_value": 3.45,
+   "recomputed_value": 3.45,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A21_动态状态\\dynamic_state_summary.json",
+   "method": "makeup_by_storage ha|qs=False: 47734.80 -> 49381.80 = +3.45%",
+   "status": "TRACED_OK",
+   "note": "可由 dynamic_state_summary.makeup_by_storage 复算"
+  },
+  {
+   "item": "储冷 +7.02% (co)",
+   "claimed_value": 7.02,
+   "recomputed_value": 7.02,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A21_动态状态\\dynamic_state_summary.json",
+   "method": "makeup_by_storage co|qs=False: 45598.54 -> 48799.12 = +7.02%",
+   "status": "TRACED_OK",
+   "note": "同上"
+  },
+  {
+   "item": "R10a 补水 -46%",
+   "claimed_value": 46,
+   "recomputed_value": 45.94,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A21_动态状态\\dynamic_state_summary.json",
+   "method": "ha phi=0.6: qs=True 25804.27 vs qs=False 47734.80 => -45.94%",
+   "status": "TRACED_OK",
+   "note": "四舍五入为 46%"
+  },
+  {
+   "item": "quality_binding 分级表 100/92/58/48/0",
+   "claimed_value": "100/92/58/48/0",
+   "recomputed_value": "boolean: {True: np.int64(456), False: np.int64(357)}",
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "现行 CSV 的 quality_binding 为布尔列, 无 5 档结构",
+   "status": "TRACED_STALE",
+   "note": "SI 该表须删除或改述为布尔分布 True=456/False=357(可靠子集)"
+  },
+  {
+   "item": "surplus 1,282 / 11,896",
+   "claimed_value": "2828/11896",
+   "recomputed_value": null,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A24_外部锚定\\surplus_threshold_check.json",
+   "method": "该文件只给占比网格, 无这两个量",
+   "status": "NOT_IDENTIFIABLE",
+   "note": "建议删除或重算落盘"
+  },
+  {
+   "item": "A22 AI-UWM model assumption acc 0.456",
+   "claimed_value": 0.456,
+   "recomputed_value": 0.4375,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A22_判据分解\\q_predictors_summary.json",
+   "method": "q_predictors_summary.by_sample[].acc",
+   "status": "TRACED_STALE",
+   "note": "落盘值=0.4375; 主稿 v4 已不再按水样列这些 acc"
+  },
+  {
+   "item": "A22 LADWP AWPF (2012, RO product) acc 0.72",
+   "claimed_value": 0.72,
+   "recomputed_value": 0.6423611111111112,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A22_判据分解\\q_predictors_summary.json",
+   "method": "q_predictors_summary.by_sample[].acc",
+   "status": "TRACED_STALE",
+   "note": "落盘值=0.6423611111111112; 主稿 v4 已不再按水样列这些 acc"
+  },
+  {
+   "item": "A22 Figshare RW (2025, paired study) acc 0.993",
+   "claimed_value": 0.993,
+   "recomputed_value": 0.9930555555555556,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A22_判据分解\\q_predictors_summary.json",
+   "method": "q_predictors_summary.by_sample[].acc",
+   "status": "TRACED_OK",
+   "note": "落盘值=0.9930555555555556; 主稿 v4 已不再按水样列这些 acc"
+  },
+  {
+   "item": "A22 IEUA RP-1 (2025, tertiary) acc 1.0",
+   "claimed_value": 1.0,
+   "recomputed_value": 1.0,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A22_判据分解\\q_predictors_summary.json",
+   "method": "q_predictors_summary.by_sample[].acc",
+   "status": "TRACED_OK",
+   "note": "落盘值=1.0; 主稿 v4 已不再按水样列这些 acc"
+  },
+  {
+   "item": "主网格 1,152",
+   "claimed_value": 1152,
+   "recomputed_value": 1052,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "CSV 行数",
+   "status": "TRACED_STALE",
+   "note": "现行主网格 1052; 1152 属 A27 前占位档"
+  },
+  {
+   "item": "可靠子集 813",
+   "claimed_value": 813,
+   "recomputed_value": 813,
+   "source_file": "C:\\Users\\mmrgr\\Desktop\\论文\\算力中心\\10_论文推进_2026Q4\\A13_可靠性机制\\supply_state_regimes.csv",
+   "method": "双门禁子集行数",
+   "status": "TRACED_OK",
+   "note": ""
+  }
+ ],
+ "runtime_s": 0.0,
+ "discipline_note": "只读产物与稿件; 无法复算如实标 NOT_IDENTIFIABLE; 相对容差"
+}

@@ -1,0 +1,88 @@
+=========== C1 Shen et al. Nature Water 2026 — full record ===========
+no abstract_inverted_index
+concepts: ['Environmental science', 'Sewage treatment', 'Water scarcity', 'Waste management', 'Environmental engineering', 'Scarcity', 'Water treatment', 'Wastewater', 'Water pollution', 'Water resource management']
+biblio: {'volume': None, 'issue': None, 'first_page': None, 'last_page': None}
+topic: Wastewater Treatment and Reuse
+
+=========== C1 cross-check: 10826 plants / China WWTP count ===========
+### China wastewater treatment plants 10826 reclaimed water potential water scarcity national
+  10.3390/w14223758                  | Assessing Transmission Losses through Ephemeral Streams: A Methodological Approach Based on the | Water                                         | 2022 | article
+  10.3390/su152014878                | Multi-Criteria Decision Analysis to Evaluate Sustainability and Circularity in Agricultural Was | Sustainability                                | 2023 | article
+  10.1016/j.nexus.2026.100813        | Why soil matters: The missing link in achieving sustainable development (A review and integrate | Energy Nexus                                  | 2026 | article
+
+### reclaimed water utilization potential China wastewater treatment plants spatial economics
+  10.1155/2010/914159                | Nitrogen and Phosphorous Removal in Municipal Wastewater Treatment Plants in China: A Review    | International Journal of Chemical Engineering | 2010 | article
+  10.3390/w14010052                  | An SEM-REM-Based Study on the Driving and Restraining Mechanisms and Potential of Reclaimed Wat | Water                                         | 2021 | article
+  10.30564/jees.v8i8.13505           | Cost-Optimized Pathways for Carbon-Neutral Wastewater Treatment in China by 2035                | Journal of Environmental & Earth Sciences     | 2026 | article
+  10.33263/briac125.63366360         | Treatment of Wastewater for Agricultural Applications in Regions of Water Scarcity              | Biointerface Research in Applied Chemistry    | 2021 | article
+  10.1007/s11270-021-05154-8         | Wastewater Treatment and Reuse: a Review of its Applications and Health Implications            | Water Air & Soil Pollution                    | 2021 | book-chapter
+  10.2166/hydro.2023.112             | An evolutionary bargaining framework for allocating water and reclaimed wastewater in agricultu | Journal of Hydroinformatics                   | 2023 | article
+
+=========== C6 urban unit process model candidates ===========
+### unit process model urban water system cost resilience decentralized resource recovery city scale
+  10.1038/s44221-024-00303-9         | Using water and wastewater decentralization to enhance the resilience and sustainability of cit | Nature Water                                  | 2024 | article
+  10.3390/resources6020022           | Integrated, Decentralized Wastewater Management for Resource Recovery in Rural and Peri-Urban A | Resources                                     | 2017 | article
+  10.3390/su11030918                 | Sustainable and Resilient Urban Water Systems: The Role of Decentralization and Planning        | Sustainability                                | 2019 | article
+  10.3390/su10103546                 | Effect of Nutrient Removal and Resource Recovery on Life Cycle Cost and Environmental Impacts o | Sustainability                                | 2018 | article
+  10.3390/w13223153                  | Nature-Based Units as Building Blocks for Resource Recovery Systems in Cities                   | Water                                         | 2021 | article
+  10.3390/w16111571                  | How Scale Influences the Resilience of Urban Water Systems: A Literature Review of Trade-Offs a | Water                                         | 2024 | article
+
+### WaterMet2 urban water metabolism unit process model
+  10.1016/j.resconrec.2015.03.015    | Modelling metabolism based performance of an urban water system using WaterMet2                 | Resources Conservation and Recycling          | 2015 | article
+  10.1016/j.proeng.2014.02.014       | Urban Water System Metabolism Assessment Using WaterMet2 Model                                  | Procedia Engineering                          | 2014 | conference-paper
+  10.5194/dwes-7-63-2014             | WaterMet2: a tool for integrated analysis of sustainability-based performance of urban water sy | Drinking water engineering and science        | 2014 | article
+                                     | WaterMet2 model functional requirements                                                         | Open Research Exeter (University of Exeter)   | 2012 | report
+  10.13140/rg.2.1.3417.2965          | Quantitative UWS performance model: WaterMet2                                                   | Open Research Exeter (University of Exeter)   | 2014 | report
+  10.1016/j.watres.2018.01.070       | Understanding urban water performance at the city-region scale using an urban water metabolism  | Water Research                                | 2018 | article
+
+=========== C9 data center cooling + urban sustainability review ===========
+### data center cooling technology review urban sustainability water energy
+  10.3390/buildings15030504          | Urban Sustainability Through Pavement Technologies: Reducing Urban Heat Islands with Cool Pavem | Buildings                                     | 2025 | article
+  10.48550/arxiv.2609.25437          | Data center cooling choices shift water impacts across the grid: An integrated water-energy mod | arXiv (Cornell University)                    | 2026 | preprint
+  10.1016/j.seta.2017.02.022         | A review of sustainable energy access and technologies for healthcare facilities in the Global  | Sustainable Energy Technologies and Assessmen | 2017 | article
+  10.3390/su13116114                 | Strategies for Improving the Sustainability of Data Centers via Energy Mix, Energy Conservation | Sustainability                                | 2021 | article
+  10.1016/j.rser.2020.109900         | Sustainable and energy-efficient domestic hot water systems: A review                           | Renewable and Sustainable Energy Reviews      | 2020 | article
+  10.1016/j.scitotenv.2020.143876    | The role of green roofs in urban Water-Energy-Food-Ecosystem nexus: A review                    | The Science of The Total Environment          | 2020 | article
+
+### review data centre cooling sustainability cities water energy nexus
+  10.1088/1748-9326/aaa9c6           | The Water-Energy-Food Nexus: A systematic review of methods for nexus assessment                | Environmental Research Letters                | 2018 | review
+  10.3390/en16041879                 | Water Energy Nexus and Energy Transition—A Review                                               | Energies                                      | 2023 | article
+  10.1016/j.egypro.2016.06.154       | The Energy-water Nexus: A literature Review of the Dependence of Energy on Water                | Energy Procedia                               | 2016 | conference-paper
+  10.1016/j.scitotenv.2020.143876    | The role of green roofs in urban Water-Energy-Food-Ecosystem nexus: A review                    | The Science of The Total Environment          | 2020 | article
+                                     | Water energy nexus literature review                                                            | UTS ePRESS (University of Technology Sydney)  | 2009 | report
+  10.1016/j.jclepro.2019.119755      | China’s sustainable water-energy-food nexus by 2030: Impacts of urbanization on sectoral water  | Journal of Cleaner Production                 | 2019 | article
+
+=========== C10 daily urban water metabolism ===========
+### urban water metabolism model daily time step supply wastewater recycling
+  10.1016/j.resconrec.2015.03.015    | Modelling metabolism based performance of an urban water system using WaterMet2                 | Resources Conservation and Recycling          | 2015 | article
+  10.1016/j.proeng.2014.02.014       | Urban Water System Metabolism Assessment Using WaterMet2 Model                                  | Procedia Engineering                          | 2014 | conference-paper
+  10.1016/j.watres.2018.01.070       | Understanding urban water performance at the city-region scale using an urban water metabolism  | Water Research                                | 2018 | article
+  10.3390/su151914549                | Puebla City Water Supply from the Perspective of Urban Water Metabolism                         | Sustainability                                | 2023 | article
+  10.1016/j.progress.2013.09.001     | Renegotiating urban water                                                                       | Progress in Planning                          | 2014 | article
+  10.1007/s11356-019-05465-8         | Performance assessment of water reuse strategies using integrated framework of urban water meta | Environmental Science and Pollution Research  | 2019 | article
+
+### city scale water metabolism model daily resolution water supply demand reuse
+  10.3390/su151914549                | Puebla City Water Supply from the Perspective of Urban Water Metabolism                         | Sustainability                                | 2023 | article
+  10.1016/j.watres.2018.01.070       | Understanding urban water performance at the city-region scale using an urban water metabolism  | Water Research                                | 2018 | article
+  10.17159/sajs.2021/8630            | The urban water metabolism of Cape Town: Towards becoming a water sensitive city                | South African Journal of Science              | 2021 | article
+  10.1016/j.resconrec.2015.03.015    | Modelling metabolism based performance of an urban water system using WaterMet2                 | Resources Conservation and Recycling          | 2015 | article
+  10.4324/9781003057574-26           | Urban metabolism and Water Sensitive Cities governance                                          | Routledge eBooks                              | 2022 | book-chapter
+  10.3390/su10030716                 | Conceptual Urban Water Balance Model for Water Policy Testing: An Approach for Large Scale Inve | Sustainability                                | 2018 | article
+
+=========== C7 AI data center water quality compatibility ===========
+### AI data center water assessment beyond water quantity quality compatibility recycled water
+  10.48550/arxiv.2606.21760          | AI Data Centers and the Water Use Feedback Loop                                                 | arXiv (Cornell University)                    | 2026 | preprint
+  10.4236/jep.2026.174010            | Navigating Environmental Concerns Confronting U.S. Data Centers Related to Water Quantity and Q | Journal of Environmental Protection           | 2026 | article
+  10.1021/acs.est.6c08380            | Why Water Demand Is No Longer Enough: Rethinking Sustainability in AI Data Centers              | Environmental Science & Technology            | 2026 | editorial
+  10.1002/wer.70249                  | Smart Water Management: Role of IoT, AI, and Machine Learning in Water Quality Monitoring       | Water Environment Research                    | 2026 | article
+  10.2139/ssrn.7467658               | Evaluating the Compatibility of Current U.S. Water Infrastructure with Future Data Center Deman | SSRN Electronic Journal                       | 2026 | preprint
+  10.2139/ssrn.7317799               | Scaling Without Running Dry Technological Advances Enable Responsible Water Strategies for Data | SSRN Electronic Journal                       | 2026 | preprint
+
+### recycled water quality cooling tower data center fit for purpose assessment
+  10.3390/su70811260                 | The Water Footprint of Data Centers                                                             | Sustainability                                | 2015 | article
+  10.1039/c6ew00031b                 | A human exposome framework for guiding risk management and holistic assessment of recycled wate | Environmental Science Water Research & Techno | 2016 | article
+  10.1016/j.wri.2022.100188          | Municipal reclaimed water as makeup water for cooling systems: Water efficiency, biohazards, an | Water Resources and Industry                  | 2022 | article
+  10.4236/jep.2026.174010            | Navigating Environmental Concerns Confronting U.S. Data Centers Related to Water Quantity and Q | Journal of Environmental Protection           | 2026 | article
+                                     | Guidance for the use of recycled water by industry                                              | Victoria University Research Repository (Vict | 2007 | book
+  10.1038/s41586-025-08832-3         | Using life cycle assessment to drive innovation for sustainable cool clouds                     | Nature                                        | 2025 | article
+

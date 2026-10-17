@@ -36,7 +36,7 @@ for _p in (str(HERE), str(HERE.parent / "A10_敏感性与边界")):
         sys.path.insert(0, _p)
 import daily_model as dm  # noqa: E402
 
-REPO = Path(r"C:/Users/mmrgr/Desktop/论文/算力中心/07_代码_AI-UWM引擎/aiuwm_src")
+REPO = Path(__file__).resolve().parents[2] / "07_代码_AI-UWM引擎" / "aiuwm_src"
 SCRIPTS = REPO / "scripts"
 R2 = REPO / "examples" / "cawcc_r2"
 

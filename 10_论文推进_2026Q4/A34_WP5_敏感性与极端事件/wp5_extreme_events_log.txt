@@ -1,0 +1,129 @@
+============================================================================================
+WP5 任务 B: 极端事件情景 (热浪 / 干旱) —— dS_pot 符号是否翻转
+============================================================================================
+
+[0] 口径: phi=0.6, 面板=B_full (现行 baseline 引用限值 {"TDS": 2200.0, "chloride": 700.0, "hardness": 750.0, "alkalinity": 350.0, "silica": 175.0})
+    主口径水样 (完整物种) = ['IEUA RP-1 (2025, tertiary)', 'LADWP AWPF (2012, RO product)']; 禁用 = ['Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)']
+    热浪窗 = 湿球 p95 (A12 事先固定), 干旱窗 = 水库来水 37 天滚动均值最小窗 (事先固定)
+
+[1] 逐日计划与窗口构造 (引擎 calculate_data_center_plan, 只读)
+  --- ha ---  730 天, T: med=14.02 p95=30.31 max=35.93; E: mean=31.25 max=34.79
+      PUE: min=1.1134 max=1.2478 (热浪窗均值 PUE=1.2347, 非热浪窗=1.1274)
+      水库来水: min=130.72 median=260.17 max=473.87
+      窗 full_year              n= 730  均温= 13.52  ΣE=  22814.4  Σ(reuse 交付)=  24404.5  均来水= 263.68
+      窗 heatwave               n=  37  均温= 31.58  ΣE=   1265.6  Σ(reuse 交付)=   1328.9  均来水= 292.28
+      窗 non_heatwave_matched   n=  37  均温= -4.21  ΣE=   1054.4  Σ(reuse 交付)=   1153.4  均来水= 235.63
+      窗 drought_lowinflow      n=  37  均温=  9.74  ΣE=   1125.9  Σ(reuse 交付)=   1208.1  均来水= 171.20
+  --- co ---  730 天, T: med=8.91 p95=22.15 max=29.05; E: mean=30.89 max=34.34
+      PUE: min=1.1123 max=1.2271 (热浪窗均值 PUE=1.2116, 非热浪窗=1.1246)
+      水库来水: min=166.54 median=293.05 max=466.32
+      窗 full_year              n= 730  均温=  9.04  ΣE=  22550.1  Σ(reuse 交付)=  22414.0  均来水= 292.90
+      窗 heatwave               n=  37  均温= 23.88  ΣE=   1240.5  Σ(reuse 交付)=   1208.2  均来水= 337.71
+      窗 non_heatwave_matched   n=  37  均温= -5.14  ΣE=   1050.6  Σ(reuse 交付)=   1085.6  均来水= 254.63
+      窗 drought_lowinflow      n=  37  均温= -0.08  ΣE=   1087.6  Σ(reuse 交付)=   1082.3  均来水= 206.69
+
+[2] ★ 极端事件情景求解 (窗口化冻结模块; 口径 W = 池按窗口 Σ 交付)
+
+  -- 人为扰动扫描 (FORCED_PERTURBATION): 热浪 e_scale, 干旱 avail_frac --
+  ha 热浪 e_scale 扫描 (IEUA RP-1 (2025, terti): 1->-437.7 1.2->-472 1.5->-505.4 2->-526.2 3->-488.2 5->-264.5
+  ha 干旱 avail 扫描 (IEUA RP-1 (2025, terti): 1->-369.7 0.75->-275.5 0.5->-182.5 0.35->-127.3 0.2->-72.44 0.1->-36.13
+  co 热浪 e_scale 扫描 (IEUA RP-1 (2025, terti): 1->-382.4 1.2->-413.3 1.5->-444 2->-464.2 3->-432.9 5->-234.6
+  co 干旱 avail 扫描 (IEUA RP-1 (2025, terti): 1->-315 0.75->-234.9 0.5->-155.7 0.35->-108.6 0.2->-61.84 0.1->-30.85
+
+[3] ★ 符号裁定 (零值约定: |dS_pot| < 1e-6 ML 记为 0, 不计入正负)
+  n_all = 64; n_eff (双门禁通过) = 64; 剔除 = 0 (0.00%)
+  dS_pot < 0 (城市受益) = 64;  = 0 = 0;  > 0 (城市受损) = 0
+
+  (a) 观测驱动窗口 vs 全年 (同口径 W, 单位 ML/day 可比)
+    --- ha ---
+      IEUA RP-1 (2025, tertiary)           全年=   -10.4 ML/d  heatwave=-11.8(1.139×)  non_heatwave_matched=-9.1(0.878×)  drought_lowinflow=-10.0(0.962×)
+      LADWP AWPF (2012, RO product)        全年=   -15.0 ML/d  heatwave=-17.0(1.136×)  non_heatwave_matched=-13.1(0.878×)  drought_lowinflow=-14.3(0.958×)
+    --- co ---
+      IEUA RP-1 (2025, tertiary)           全年=    -9.2 ML/d  heatwave=-10.3(1.121×)  non_heatwave_matched=-8.3(0.900×)  drought_lowinflow=-8.5(0.924×)
+      LADWP AWPF (2012, RO product)        全年=   -13.4 ML/d  heatwave=-15.0(1.121×)  non_heatwave_matched=-12.1(0.907×)  drought_lowinflow=-12.3(0.920×)
+
+  (b) 极端 vs 非极端: 是否发生符号翻转?
+    domain sample                                 全年     热浪     非热浪     干旱      热/全翻转      旱/全翻转
+        ha IEUA RP-1 (2025, tertiary)             -1     -1      -1     -1          否          否
+        ha LADWP AWPF (2012, RO product)          -1     -1      -1     -1          否          否
+        co IEUA RP-1 (2025, tertiary)             -1     -1      -1     -1          否          否
+        co LADWP AWPF (2012, RO product)          -1     -1      -1     -1          否          否
+    ⇒ 热浪窗相对全年符号翻转: 0/4 个可比情景
+    ⇒ 干旱窗相对全年符号翻转: 0/4 个可比情景
+
+  (c) 量变质变判定: 相对全年, 极端窗的 dS/day 变化倍数
+domain                        sample               window  dS_per_day_ml  ratio_to_full_year  abs_delta_per_day_ml
+    ha    IEUA RP-1 (2025, tertiary)             heatwave       -11.8303              1.1386               -1.4398
+    ha    IEUA RP-1 (2025, tertiary) non_heatwave_matched        -9.1227              0.8780                1.2679
+    ha    IEUA RP-1 (2025, tertiary)    drought_lowinflow        -9.9926              0.9617                0.3979
+    ha LADWP AWPF (2012, RO product)             heatwave       -17.0117              1.1360               -2.0368
+    ha LADWP AWPF (2012, RO product) non_heatwave_matched       -13.1453              0.8778                1.8296
+    ha LADWP AWPF (2012, RO product)    drought_lowinflow       -14.3456              0.9580                0.6294
+    co    IEUA RP-1 (2025, tertiary)             heatwave       -10.3349              1.1214               -1.1191
+    co    IEUA RP-1 (2025, tertiary) non_heatwave_matched        -8.2979              0.9004                0.9180
+    co    IEUA RP-1 (2025, tertiary)    drought_lowinflow        -8.5138              0.9238                0.7020
+    co LADWP AWPF (2012, RO product)             heatwave       -14.9973              1.1209               -1.6176
+    co LADWP AWPF (2012, RO product) non_heatwave_matched       -12.1403              0.9074                1.2394
+    co LADWP AWPF (2012, RO product)    drought_lowinflow       -12.3083              0.9199                1.0714
+    ⇒ 最大倍数偏离 = 1.1386×  => 量变 (量级稳定, 无质变)
+
+[4] ★ 人为扰动下的符号翻转临界点 (二元搜索, 401 点扫描)
+    domain sample                                   热浪翻转 e_scale       干旱翻转 avail_frac
+        ha IEUA RP-1 (2025, tertiary)                       6.75         无 (扫描至 0.001)
+        ha LADWP AWPF (2012, RO product)             无 (扫描至 40×)         无 (扫描至 0.001)
+        co IEUA RP-1 (2025, tertiary)                       6.75         无 (扫描至 0.001)
+        co LADWP AWPF (2012, RO product)             无 (扫描至 40×)         无 (扫描至 0.001)
+    读法: '无' 表示在扫描范围内符号**始终未翻转** —— 如实报告负结果, 不修饰。
+    ⚠ 机制澄清 (实测, 否则会误读为'热浪越大越有害'):
+      dS_pot = C - F, F = (M0-M1) + x_ai = M0 - (1-phi_eff)*M1。
+      极端 e_scale 下 M0 与 M1 同比例放大, 而 phi_eff 被可得再生水量钉住
+      -> F 变为**负**, 即'再生水把比它自身更多的自来水顶掉'(净替代为负)。
+      翻转条件: phi_eff < 1 - M0/M1  (等价于 F = M0 - (1-phi_eff)*M1 < 0)。
+      且 es>10 后 CoC1 钉在水质下限 2.8226 (碱度受限), phi_eff 恒定, M1 随 es 线性增长
+      -> 该区段是**引擎线性外推**, 无观测支撑, 只作临界点定位, 不作结论。
+    闭式核对: F<0 <=> phi_eff < 1-M0/M1 —— 命中 20/20 => ✓ 条件成立
+
+[5] ★ 极端条件下数据中心运行是否受限 (引擎原生计划, 非 dS 口径)
+     dom window                    n     均温    均PUE     ΣE(ML)      E/d      M0/d      均来水
+      ha full_year               730  13.52  1.1805    22814.4    31.25     42.50   263.68
+      ha heatwave                 37  31.58  1.2347     1265.6    34.21     46.52   292.28
+      ha non_heatwave_matched     37  -4.21  1.1274     1054.4    28.50     38.76   235.63
+      ha drought_lowinflow        37   9.74  1.1692     1125.9    30.43     41.39   171.20
+      co full_year               730   9.04  1.1671    22550.1    30.89     42.01   292.90
+      co heatwave                 37  23.88  1.2116     1240.5    33.53     45.60   337.71
+      co non_heatwave_matched     37  -5.14  1.1246     1050.6    28.39     38.62   254.63
+      co drought_lowinflow        37  -0.08  1.1398     1087.6    29.39     39.98   206.69
+    热浪窗相对全年 (观测驱动, 量变):
+      ha: E/day 1.0945×, M0/day 1.0945×, PUE 1.0459×
+      co: E/day 1.0853×, M0/day 1.0853×, PUE 1.0381×
+    ⇒ 蒸发式冷却下 PUE/蒸发的时间结构平坦 (A12 §1.3 已记录峰谷比 1.11), 故**观测热浪本身不构成运行受限**; 受限需水化学恶化或供给缩减触发。
+    供给限流下 AI 的再生水可得比例 (引擎原生 fixed-point 解):
+      ha avail=1.0   解得再生水占比=0.6000 CoC=2.8226 status=converged
+      ha avail=0.75  解得再生水占比=0.5407 CoC=2.8776 status=converged
+      ha avail=0.5   解得再生水占比=0.3705 CoC=3.0483 status=converged
+      ha avail=0.25  解得再生水占比=0.1905 CoC=3.2522 status=converged
+      ha avail=0.1   解得再生水占比=0.0775 CoC=3.3947 status=converged
+      co avail=1.0   解得再生水占比=0.6000 CoC=2.8226 status=converged
+      co avail=0.75  解得再生水占比=0.5049 CoC=2.9119 status=converged
+      co avail=0.5   解得再生水占比=0.3453 CoC=3.0752 status=converged
+      co avail=0.25  解得再生水占比=0.1772 CoC=3.2683 status=converged
+      co avail=0.1   解得再生水占比=0.0720 CoC=3.4020 status=converged
+
+[6] ★ 谁受益 / 谁受损 (观测驱动窗口, 主口径 W)
+     dom window                 sample                       dS(ML) 裁定                           挤占(ML)    AI取水(ML)
+      ha full_year              IEUA RP-1 (2025, ter       -7585.09 城市净取水下降 (城市受益)             -8905.59     8905.59
+      ha heatwave               IEUA RP-1 (2025, ter        -437.72 城市净取水下降 (城市受益)              -513.53      513.53
+      ha non_heatwave_matched   IEUA RP-1 (2025, ter        -337.54 城市净取水下降 (城市受益)              -396.11      396.11
+      ha drought_lowinflow      IEUA RP-1 (2025, ter        -369.73 城市净取水下降 (城市受益)              -433.12      433.12
+      ha full_year              LADWP AWPF (2012, RO      -10931.70 城市净取水下降 (城市受益)             -8154.42     8154.42
+      ha heatwave               LADWP AWPF (2012, RO        -629.43 城市净取水下降 (城市受益)              -470.10      470.10
+      ha non_heatwave_matched   LADWP AWPF (2012, RO        -486.38 城市净取水下降 (城市受益)              -363.03      363.03
+      ha drought_lowinflow      LADWP AWPF (2012, RO        -530.79 城市净取水下降 (城市受益)              -397.21      397.21
+      co full_year              IEUA RP-1 (2025, ter       -6727.54 城市净取水下降 (城市受益)             -7897.08     7897.08
+      co heatwave               IEUA RP-1 (2025, ter        -382.39 城市净取水下降 (城市受益)              -448.87      448.87
+      co non_heatwave_matched   IEUA RP-1 (2025, ter        -307.02 城市净取水下降 (城市受益)              -361.94      361.94
+      co drought_lowinflow      IEUA RP-1 (2025, ter        -315.01 城市净取水下降 (城市受益)              -368.75      368.75
+      co full_year              LADWP AWPF (2012, RO       -9767.20 城市净取水下降 (城市受益)             -7285.90     7285.90
+      co heatwave               LADWP AWPF (2012, RO        -554.90 城市净取水下降 (城市受益)              -413.97      413.97
+      co non_heatwave_matched   LADWP AWPF (2012, RO        -449.19 城市净取水下降 (城市受益)              -333.00      333.00
+      co drought_lowinflow      LADWP AWPF (2012, RO        -455.41 城市净取水下降 (城市受益)              -341.06      341.06

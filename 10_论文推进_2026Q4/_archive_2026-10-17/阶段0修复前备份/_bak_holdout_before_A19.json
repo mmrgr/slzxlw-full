@@ -1,0 +1,63 @@
+{
+ "estimand": "dS_pot = C - F (份额口径 dp=0)",
+ "n_fit_ha": 121,
+ "n_holdout_co": 123,
+ "identity_max_err_ml": 2.838962245732546e-06,
+ "H1_algebraic_rederivation": {
+  "co_R2": 1.0,
+  "co_RMSE_ml": 1.849750556750598e-12,
+  "is_validation": false,
+  "caveat": "使用 co 引擎量 M0/M1, 与生成式同源"
+ },
+ "H2_true_holdout": {
+  "frozen_param_a": 0.4345455794075004,
+  "fitted_on": "ha",
+  "co_R2_phi_eff": 0.8055937188186029,
+  "co_median_abs_err": 0.015346837043263402,
+  "trivial_baseline_R2": -0.07328387812300985
+ },
+ "H3_no_quality_constraint_max_abs_dS": 0.0,
+ "H4_chi_monotone": true,
+ "H5_phi0_boundary": {
+  "phi0_rows_present": false,
+  "note": "A25: 本数据集无 phi=0 行; 原 'phi=0 => dS=0' 断言 VACUOUS 且物理上错误。正确表述: 仅水质不约束(limit_scale=1e6)时 phi->0 才 dS->0;受限档 dS->(M1-M0)!=0。",
+  "bound_max_abs_dS_phi_le_0p10": 3730.3377263052316,
+  "median_abs_dS_all": 2647.7792572041944
+ },
+ "solver_gate": {
+  "n_fit_all": 204,
+  "n_fit_reliable": 121,
+  "n_holdout_all": 204,
+  "n_holdout_reliable": 123
+ },
+ "gates": [
+  {
+   "gate": "H1 恒等式自检 (非留出)",
+   "passed": true,
+   "value": "max err 2.839e-06 ML (相对 1.40e-16); co R²=1.000000 (代数重推导)"
+  },
+  {
+   "gate": "H2 phi_eff 单参数律优于平凡基线",
+   "passed": true,
+   "value": "律 R²=0.805594 vs 基线 R²=-0.073284"
+  },
+  {
+   "gate": "H3 无水质约束 => dS_pot=0 (纯再分配)",
+   "passed": true,
+   "value": "max |dS_pot| = 0.0000 ML"
+  },
+  {
+   "gate": "H4 chi 变小 => 惩罚上升 (单调)",
+   "passed": true,
+   "value": "max dS_pot by chi(升序) = {0.5: 7178.0, 1.0: 2346.0}"
+  },
+  {
+   "gate": "H5 phi->0: 仅不约束档 dS->0; 受限档 dS->(M1-M0)!=0 (A25 修正)",
+   "passed": true,
+   "value": "受限档小 phi max|dS|=3730.3 ML vs 中位 2647.8 ML"
+  }
+ ],
+ "all_gates_pass": true,
+ "runtime_s": 20.6,
+ "discipline_note": "份额口径下 dS_pot = M1 - M0 >= 0 (旧结论)。H1 是代数重推导, 已明确标注为非验证; H2 是唯一的真留出 (单参数)。不使用已撤回的 psi/Delta。"
+}

@@ -28,7 +28,7 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-ENGINE_SRC = str(Path(r"C:/Users/mmrgr/Desktop/论文/算力中心/07_代码_AI-UWM引擎/aiuwm_src/src"))
+ENGINE_SRC = str(Path(__file__).resolve().parents[2] / "07_代码_AI-UWM引擎" / "aiuwm_src" / "src")
 if ENGINE_SRC not in sys.path:
     sys.path.insert(0, ENGINE_SRC)
 for p in (str(HERE), str(HERE.parent / "A10_敏感性与边界")):
@@ -41,8 +41,8 @@ from aiuwm.ai_capacity import find_ai_carrying_capacity, scan_ai_capacity  # noq
 from aiuwm.cawcc import build_intraday_profile, intraday_peak_proxy  # noqa: E402
 from aiuwm.research import hourly_stress_scan  # noqa: E402
 
-SPECS = Path(r"C:/Users/mmrgr/Desktop/论文/算力中心/07_代码_AI-UWM引擎/aiuwm_src/"
-             r"examples/cawcc_r2/specs")
+SPECS = (Path(__file__).resolve().parents[2] / "07_代码_AI-UWM引擎" / "aiuwm_src"
+         / "examples" / "cawcc_r2" / "specs")
 CAPACITIES = [0.0, 250.0, 500.0, 750.0, 1000.0, 1250.0, 1500.0, 1750.0, 2000.0]
 PHI = 0.70
 PANEL = "B_full"

@@ -1,0 +1,87 @@
+{
+ "n_scenarios": 1052,
+ "identity_max_err_ml": 63838.95815805193,
+ "unified_identity_max_err_ml": 2.8045105864293873e-06,
+ "branch_A_deg_residual_ml": 2.6315956347389147e-06,
+ "branch_C_deg_residual_ml": 5.4569682106375694e-12,
+ "n_branch_A": 306,
+ "n_branch_C": 396,
+ "by_state": {
+  "shortage": {
+   "n": 656,
+   "dS_min": -63838.95815805193,
+   "dS_max": 42402.56166409763,
+   "dS_mean": -6730.460920192866,
+   "n_negative": 409,
+   "n_positive": 125,
+   "unused_mean_ml": 10009.80136473191
+  },
+  "surplus": {
+   "n": 396,
+   "dS_min": -44603.05902383531,
+   "dS_max": 3625.5877396253127,
+   "dS_mean": -15771.464547837239,
+   "n_negative": 393,
+   "n_positive": 3,
+   "unused_mean_ml": 32973.96241794218
+  }
+ },
+ "surplus_n_negative": 393,
+ "shortage_n_negative": 409,
+ "surplus_C_mean_ml": 0.0,
+ "surplus_F_mean_ml": 15771.464547837235,
+ "surplus_dS_mean_ml": -15771.464547837235,
+ "critical_pool_scale_OLD_NOT_A_THRESHOLD": {
+  "ha": 2.3841264631738595,
+  "co": 2.566713307866298
+ },
+ "surplus_threshold_true": {
+  "ha": {
+   "old_formula_elig_over_P0": 2.3841264631738595,
+   "old_accuracy": 0.7923809523809524,
+   "true_threshold_min": 1.3841264631738597,
+   "true_threshold_median": 1.947144401264231,
+   "true_threshold_max": 5.384118237856576,
+   "true_criterion_accuracy": 0.9942857142857143,
+   "observed_first_surplus_pool_scale": 2.0
+  },
+  "co": {
+   "old_formula_elig_over_P0": 2.566713307866298,
+   "old_accuracy": 0.7969639468690702,
+   "true_threshold_min": 1.5667133078662978,
+   "true_threshold_median": 2.1460868832936755,
+   "true_threshold_max": 5.566704656671055,
+   "true_criterion_accuracy": 0.9867172675521821,
+   "observed_first_surplus_pool_scale": 2.0
+  }
+ },
+ "reliable_subset": {
+  "n_all": 1052,
+  "n_reliable": 813,
+  "n_excluded": 239,
+  "excluded_share_pct": 22.72,
+  "status_counts": {
+   "converged_unique": 1001,
+   "non_unique": 33,
+   "no_convergence": 18
+  },
+  "reliable_n_dS_neg": 631,
+  "reliable_n_dS_pos": 102,
+  "reliable_n_zero_disp": 372,
+  "reliable_n_q_pos": 290,
+  "reliable_n_qpos_but_harmful": 0,
+  "n_coc_floor_degenerate": 188,
+  "note": "头条统计须以 reliable 子集为准; 未收敛情景的分配量为 0, 派生量不可用; CoC 触下限(<=1.000001)的退化情景亦已剔除 (A27)。"
+ },
+ "semantics": {
+  "chi_meaning": "本产物的 `chi` **就是** limit_scale (限值整体缩放因子), **不是** chi=CoC_lim/CoC_design。权威定义见 A26_语义统一/CHI_SEMANTICS.md。",
+  "authoritative_columns": [
+   "limit_scale",
+   "chi_strictness",
+   "quality_binding"
+  ],
+  "chi_strictness_note": "由引擎实测 CoC 反解, 仅具相对意义(依赖占位限值)。"
+ },
+ "runtime_s": 44.9,
+ "discipline_note": "三态由引擎实际分配判别 (既有用户是否拿满 + B2 是否闲置), 不用 pool 名义比较。口径为 A13c 排放—索取平衡 (dS_pot=C-F), 不使用已撤回的 psi/Delta。模型内结论, 非观测频率。"
+}

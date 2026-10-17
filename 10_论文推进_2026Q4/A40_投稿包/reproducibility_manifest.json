@@ -1,0 +1,626 @@
+{
+ "generated_at": "2026-10-17 19:42:32",
+ "status": "ALL_CHECKS_PASS",
+ "n_artifacts": 28,
+ "n_missing": 0,
+ "artifacts": [
+  {
+   "name": "主稿",
+   "path": "A16_英文稿/manuscript_en_v3.md",
+   "sha256_16": "a37e4819ed453075",
+   "exists": true,
+   "description": "Manuscript (v4 content)"
+  },
+  {
+   "name": "SI",
+   "path": "A16_英文稿/supplementary_information.md",
+   "sha256_16": "7c8799ccc9d3d0d4",
+   "exists": true,
+   "description": "Supplementary Information S1–S21"
+  },
+  {
+   "name": "六主图索引",
+   "path": "A37_六主图_v4/figure_index.md",
+   "sha256_16": "3fbdbd48c9c7f3aa",
+   "exists": true,
+   "description": "Figures 1–6 + captions + hashes"
+  },
+  {
+   "name": "主网格",
+   "path": "A13_可靠性机制/supply_state_regimes.csv",
+   "sha256_16": "f92443fdcc383b4a",
+   "exists": true,
+   "description": "A17 main grid (1052 rows)"
+  },
+  {
+   "name": "留出检验",
+   "path": "A15_稳健性/holdout_summary.json",
+   "sha256_16": "4b7827c7b08066ea",
+   "exists": true,
+   "description": "Cross-domain holdout R²=0.766"
+  },
+  {
+   "name": "模型桥接",
+   "path": "A20_模型桥接/bridging_summary_v2.json",
+   "sha256_16": "54f7a1ccc3d6ebd7",
+   "exists": true,
+   "description": "24 paired runs"
+  },
+  {
+   "name": "A24b 部分识别",
+   "path": "A30_WP0取证/a24b_partial_id_summary.json",
+   "sha256_16": "d719fe049214cca9",
+   "exists": true,
+   "description": "regime share NOT identified"
+  },
+  {
+   "name": "A24b 产能表",
+   "path": "A30_WP0取证/a24b_capacity_table.csv",
+   "sha256_16": "4a2e78c1b65ce2d0",
+   "exists": true,
+   "description": "capacity feasibility 2.1–6.6%"
+  },
+  {
+   "name": "溶质闭合(R10a)",
+   "path": "A30_WP0取证/a21_solute_closure_summary.json",
+   "sha256_16": "062da967303c50e3",
+   "exists": true,
+   "description": "relative residual 5.7e-19"
+  },
+  {
+   "name": "通量平衡(vol-only)",
+   "path": "A30_WP0取证/volonly_flux_balance_summary.json",
+   "sha256_16": "4c8471a6555c9021",
+   "exists": true,
+   "description": "1.9e-16 / 2.5e-16"
+  },
+  {
+   "name": "主稿数字审计",
+   "path": "A30_WP0取证/stale_number_audit.json",
+   "sha256_16": "8eefafaf5eaabf74",
+   "exists": true,
+   "description": "193 values audited"
+  },
+  {
+   "name": "数字追溯",
+   "path": "A30_WP0取证/untraceable_traceability_summary.json",
+   "sha256_16": "6df61bc028df424c",
+   "exists": true,
+   "description": "48 UNTRACEABLE resolved"
+  },
+  {
+   "name": "证据台账",
+   "path": "A30_WP0取证/证据台账_EVIDENCE_LEDGER.md",
+   "sha256_16": "4b9b69d31f4f78be",
+   "exists": true,
+   "description": "claim → artifact ledger"
+  },
+  {
+   "name": "E3 独立预测",
+   "path": "A31_WP2_假设冻结/wp2_e3_independent_prediction_summary.json",
+   "sha256_16": "6932c18cd11b9882",
+   "exists": true,
+   "description": "chemistry-only fails (0.671 < 0.861)"
+  },
+  {
+   "name": "E3b 联合预测",
+   "path": "A31_WP2_假设冻结/wp2_e3b_combined_prediction_summary.json",
+   "sha256_16": "ebd1ba69d685201f",
+   "exists": true,
+   "description": "single-fold driven (median gain 0.000)"
+  },
+  {
+   "name": "H4 稳健性",
+   "path": "A32_WP3_水化学/wp3_h4_robustness_summary.json",
+   "sha256_16": "15a5fd5ee54c23ed",
+   "exists": true,
+   "description": "q sign on complete samples"
+  },
+  {
+   "name": "WP4 组成重算",
+   "path": "A33_WP4_组成重构/wp4_results.csv",
+   "sha256_16": "c88f6ecdf02fda2a",
+   "exists": true,
+   "description": "complete-species city-level dS"
+  },
+  {
+   "name": "WP5 Morris",
+   "path": "A34_WP5_敏感性与极端事件/wp5_morris.csv",
+   "sha256_16": "28d853c9e593d2bd",
+   "exists": true,
+   "description": "screening"
+  },
+  {
+   "name": "WP5 Sobol",
+   "path": "A34_WP5_敏感性与极端事件/wp5_sobol.csv",
+   "sha256_16": "10de968169a2ae66",
+   "exists": true,
+   "description": "variance decomposition"
+  },
+  {
+   "name": "WP5 极端事件",
+   "path": "A34_WP5_敏感性与极端事件/wp5_extreme_summary.json",
+   "sha256_16": "a0da82fcabe86d34",
+   "exists": true,
+   "description": "0/8 sign flips"
+  },
+  {
+   "name": "NE-1 双路径",
+   "path": "A38_模拟审稿/ne1_r10a_signflip_summary.json",
+   "sha256_16": "786b19e987102e75",
+   "exists": true,
+   "description": "direction robust, mechanism path-dependent"
+  },
+  {
+   "name": "NE-2 限值档",
+   "path": "A38_模拟审稿/ne2_panel_robustness_summary.json",
+   "sha256_16": "8ca7d4190e23e84a",
+   "exists": true,
+   "description": "binding species NOT panel-invariant"
+  },
+  {
+   "name": "NE-4 Sobol区间",
+   "path": "A38_模拟审稿/ne4_sobol_bootstrap_summary.json",
+   "sha256_16": "1a2fe74c67190e52",
+   "exists": true,
+   "description": "bootstrap 95% CI"
+  },
+  {
+   "name": "WP8 用途分布",
+   "path": "A39_WP8_外部效度/wp8_real_reuse_cases_summary.json",
+   "sha256_16": "12a6450979f62a84",
+   "exists": true,
+   "description": "B3 = 40/141 = 28.4%"
+  },
+  {
+   "name": "WP9 冷却水占比",
+   "path": "A39_WP8_外部效度/wp9_cooling_share_summary.json",
+   "sha256_16": "1c17232fcb7cfea9",
+   "exists": true,
+   "description": "0.258 traced to source"
+  },
+  {
+   "name": "WP10 水价对照",
+   "path": "A39_WP8_外部效度/wp10_water_price_summary.json",
+   "sha256_16": "297513f53a329292",
+   "exists": true,
+   "description": "reuse/tap = 1.56"
+  },
+  {
+   "name": "WP11 产能部署",
+   "path": "A39_WP8_外部效度/wp11_reuse_deployment_summary.json",
+   "sha256_16": "20252ecb36c423fa",
+   "exists": true,
+   "description": "11 positive-capacity projects, 100% in modelled range"
+  },
+  {
+   "name": "终审门禁",
+   "path": "A36_终审/final_gate.py",
+   "sha256_16": "9636cc61f6f11d72",
+   "exists": true,
+   "description": "all checks PASS"
+  }
+ ],
+ "numeric_checks": [
+  {
+   "name": "可靠子集 n",
+   "recomputed": 839.0,
+   "expected": 839.0,
+   "pass": true
+  },
+  {
+   "name": "恒等式绝对残差",
+   "recomputed": 4.3655745685100555e-11,
+   "expected": 4.365575e-11,
+   "pass": true
+  },
+  {
+   "name": "dS<0",
+   "recomputed": 626.0,
+   "expected": 626.0,
+   "pass": true
+  },
+  {
+   "name": "dS>0",
+   "recomputed": 177.0,
+   "expected": 177.0,
+   "pass": true
+  },
+  {
+   "name": "dS=0",
+   "recomputed": 36.0,
+   "expected": 36.0,
+   "pass": true
+  },
+  {
+   "name": "q>0 组",
+   "recomputed": 263.0,
+   "expected": 263.0,
+   "pass": true
+  },
+  {
+   "name": "q>0 且有害",
+   "recomputed": 0.0,
+   "expected": 0.0,
+   "pass": true
+  },
+  {
+   "name": "留出 R²",
+   "recomputed": 0.7660719253900063,
+   "expected": 0.7660719253900063,
+   "pass": true
+  },
+  {
+   "name": "桥接配对",
+   "recomputed": 24.0,
+   "expected": 24.0,
+   "pass": true
+  },
+  {
+   "name": "A24b 界=[0,100]",
+   "recomputed": {
+    "lower": 0.0,
+    "upper": 100.0
+   },
+   "expected": {
+    "lower": 0,
+    "upper": 100
+   },
+   "pass": true
+  },
+  {
+   "name": "E3 verdict",
+   "recomputed": "NOT_PREDICTIVE",
+   "expected": "NOT_PREDICTIVE",
+   "pass": true
+  },
+  {
+   "name": "E3b 折外中位增益",
+   "recomputed": 0.0918367346938776,
+   "expected": 0.0918,
+   "pass": true
+  },
+  {
+   "name": "NE-2 strict 档绑定物种",
+   "recomputed": [
+    "TDS",
+    "silica"
+   ],
+   "expected": [
+    "TDS",
+    "silica"
+   ],
+   "pass": true
+  },
+  {
+   "name": "WP8 B3 为最大类别",
+   "recomputed": 40,
+   "expected": 40,
+   "pass": true
+  },
+  {
+   "name": "WP9 与 A24 逐位一致",
+   "recomputed": 0.25799037378455597,
+   "expected": 0.25799037378455597,
+   "pass": true
+  },
+  {
+   "name": "WP10 比价",
+   "recomputed": 1.5564516129032258,
+   "expected": 1.5564516129032258,
+   "pass": true
+  },
+  {
+   "name": "WP11 两块不一致且 11 个正产能",
+   "recomputed": 11,
+   "expected": 11,
+   "pass": true
+  }
+ ],
+ "numeric_checks_passed": 17,
+ "key_numbers": [
+  {
+   "name": "可靠子集 n",
+   "value": "839",
+   "source": "A13_可靠性机制/supply_state_regimes.csv",
+   "note": "dual gate subset"
+  },
+  {
+   "name": "恒等式残差(绝对)",
+   "value": "2.5466e-11 ML",
+   "source": "同上 (Lead 复算)",
+   "note": "recomputed in final_gate.py"
+  },
+  {
+   "name": "恒等式残差(相对)",
+   "value": "2.93e-16",
+   "source": "同上",
+   "note": "machine epsilon"
+  },
+  {
+   "name": "严格符号计数",
+   "value": "626 / 177 / 36",
+   "source": "同上",
+   "note": "$dS<0$ / $>0$ / $=0$, strict convention"
+  },
+  {
+   "name": "q 分组",
+   "value": "290 / 288 / 235",
+   "source": "同上",
+   "note": "$q>0$ / $q=0$ / $q<0$"
+  },
+  {
+   "name": "q>0 且有害",
+   "value": "0",
+   "source": "同上",
+   "note": "no exception in 263"
+  },
+  {
+   "name": "跨域留出 R²",
+   "value": "0.7661",
+   "source": "A15_稳健性/holdout_summary.json",
+   "note": "H2_true_holdout.co_R2_phi_eff"
+  },
+  {
+   "name": "留出基线 R²",
+   "value": "−0.0733",
+   "source": "同上",
+   "note": "trivial_baseline_R2"
+  },
+  {
+   "name": "桥接配对",
+   "value": "24",
+   "source": "A20_模型桥接/bridging_summary_v2.json",
+   "note": "n_pairs"
+  },
+  {
+   "name": "桥接符号一致",
+   "value": "23/24 = 0.958",
+   "source": "同上",
+   "note": "sign_agreement"
+  },
+  {
+   "name": "A24b committed 界",
+   "value": "[0%, 100%]",
+   "source": "A30_WP0取证/a24b_partial_id_summary.json",
+   "note": "not identified"
+  },
+  {
+   "name": "产能可行性",
+   "value": "2.1–6.6%",
+   "source": "A30_WP0取证/a24b_capacity_table.csv",
+   "note": "capacity only"
+  },
+  {
+   "name": "R10a 溶质闭合",
+   "value": "5.71e-19 (relative)",
+   "source": "A30_WP0取证/a21_solute_closure_summary.json",
+   "note": "PASS"
+  },
+  {
+   "name": "volume-only 通量平衡",
+   "value": "1.93e-16 / 2.50e-16",
+   "source": "A30_WP0取证/volonly_flux_balance_summary.json",
+   "note": "PASS"
+  },
+  {
+   "name": "E3 仅化学准确率",
+   "value": "0.6746",
+   "source": "A31_WP2_假设冻结/wp2_e3_independent_prediction_summary.json",
+   "note": "< 0.8090 baseline"
+  },
+  {
+   "name": "E3 多数类基线",
+   "value": "0.8090",
+   "source": "同上",
+   "note": "majority class"
+  },
+  {
+   "name": "E3b 折外中位增益",
+   "value": "+0.0918",
+   "source": "A31_WP2_假设冻结/wp2_e3b_combined_prediction_summary.json",
+   "note": "2/4 folds informative; candidate"
+  },
+  {
+   "name": "H4 IEUA q",
+   "value": "−0.096 → 24/24负",
+   "source": "A32_WP3_水化学/wp3_h4_robustness_summary.json",
+   "note": "complete species"
+  },
+  {
+   "name": "H4 LADWP q",
+   "value": "+0.223 → 23/23正",
+   "source": "同上",
+   "note": "complete species"
+  },
+  {
+   "name": "WP5 主导参数",
+   "value": "limit_scale ST=0.944",
+   "source": "A34_WP5_敏感性与极端事件/wp5_sobol.csv",
+   "note": "IEUA"
+  },
+  {
+   "name": "WP5 碱度杠杆",
+   "value": "临界≈2.62×",
+   "source": "A34_WP5_敏感性与极端事件/wp5_morris.csv",
+   "note": "唯一符号杠杆 (cited tier)"
+  },
+  {
+   "name": "极端事件翻转",
+   "value": "0/8",
+   "source": "A34_WP5_敏感性与极端事件/wp5_extreme_summary.json",
+   "note": "observation-driven"
+  },
+  {
+   "name": "NE-1 双路径符号",
+   "value": "4/4 (2 平凡, n_eff=2)",
+   "source": "A38_模拟审稿/ne1_r10a_signflip_summary.json",
+   "note": "direction robust"
+  },
+  {
+   "name": "NE-1 量级差",
+   "value": "≈800×",
+   "source": "同上",
+   "note": "+9.8% vs +0.012%"
+  },
+  {
+   "name": "NE-2 strict 档绑定物种",
+   "value": "silica / TDS",
+   "source": "A38_模拟审稿/ne2_panel_robustness_summary.json",
+   "note": "alkalinity NOT binding"
+  },
+  {
+   "name": "NE-4 x_alkalinity ST (IEUA)",
+   "value": "0.125 [0.015, 0.305]",
+   "source": "A38_模拟审稿/ne4_sobol_bootstrap_summary.json",
+   "note": "significant"
+  },
+  {
+   "name": "NE-4 x_alkalinity ST (LADWP)",
+   "value": "0.001 [0.000, 0.002]",
+   "source": "同上",
+   "note": "effectively zero"
+  },
+  {
+   "name": "WP8 B3 占比",
+   "value": "40/141 = 28.4%",
+   "source": "A39_WP8_外部效度/wp8_real_reuse_cases_summary.json",
+   "note": "largest category"
+  },
+  {
+   "name": "WP8 规模落入模型域",
+   "value": "26/38 = 68.4%",
+   "source": "同上",
+   "note": "[1e3,1e5] m3/d"
+  },
+  {
+   "name": "WP9 冷却水占比均值",
+   "value": "0.25799037378455597",
+   "source": "A39_WP8_外部效度/wp9_cooling_share_summary.json",
+   "note": "byte-identical to A24"
+  },
+  {
+   "name": "WP9 行业区间",
+   "value": "0.000–0.990",
+   "source": "同上",
+   "note": "median 0.184"
+  },
+  {
+   "name": "WP10 工业水价中位",
+   "value": "1.550 CNY/m3",
+   "source": "A39_WP8_外部效度/wp10_water_price_summary.json",
+   "note": "61 cities"
+  },
+  {
+   "name": "WP10 再生水/水价",
+   "value": "1.56",
+   "source": "同上",
+   "note": "reuse dearer by ~56%"
+  },
+  {
+   "name": "WP11 有正产能项目",
+   "value": "11 (中位 3.0e4 m3/d)",
+   "source": "A39_WP8_外部效度/wp11_reuse_deployment_summary.json",
+   "note": "100% 落在模型域; 两块不一致不可相加"
+  },
+  {
+   "name": "WP11 投资强度",
+   "value": "1.14e4 CNY/(m3/d)",
+   "source": "同上",
+   "note": "量级参考, 非 NPV"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "三分账（requested/delivered/abstracted 互不相等）",
+   "strength": "强",
+   "status": "已证",
+   "note": "0/68 重合"
+  },
+  {
+   "claim": "统一恒等式 dS_pot = C − F",
+   "strength": "强（但为恒等式）",
+   "status": "E1 恒等式",
+   "note": "不构成发现"
+  },
+  {
+   "claim": "符号判据 = 代数重排",
+   "strength": "强",
+   "status": "E1 恒等式",
+   "note": "非发现"
+  },
+  {
+   "claim": "q>0 ⇒ 城市受益 (263/263)",
+   "strength": "中",
+   "status": "样本内零例外",
+   "note": "**鉴别力不足**（无正例）"
+  },
+  {
+   "claim": "净符号不能仅由化学判定",
+   "strength": "强（负结果）",
+   "status": "已证",
+   "note": "0.671 < 0.861"
+  },
+  {
+   "claim": "加入分配量后折外预测更优",
+   "strength": "**中等**",
+   "status": "**候选判据**",
+   "note": "中位增益 +0.092; 仅 2/4 折有信息"
+  },
+  {
+   "claim": "碱度是唯一符号杠杆",
+   "strength": "**弱**",
+   "status": "**限定为 cited/permissive 档**",
+   "note": "strict 档失效 (NE-2)"
+  },
+  {
+   "claim": "中心结论方向对求解路径稳健",
+   "strength": "中",
+   "status": "已证",
+   "note": "n_eff=2，机制仍路径依赖 (NE-1)"
+  },
+  {
+   "claim": "极端事件不翻转符号",
+   "strength": "中",
+   "status": "已证",
+   "note": "观测驱动 0/8"
+  },
+  {
+   "claim": "工业冷却是真实主要用途",
+   "strength": "中",
+   "status": "已证（案例集）",
+   "note": "28.4%，非随机样本 (WP8)"
+  },
+  {
+   "claim": "冷却水占比 0.258",
+   "strength": "强",
+   "status": "已追溯",
+   "note": "与源数据逐位一致 (WP9)"
+  },
+  {
+   "claim": "再生水成本高于工业水价",
+   "strength": "中",
+   "status": "量级对照",
+   "note": "比 1.56，**非因果** (WP10)"
+  },
+  {
+   "claim": "真实产能项目规模与模型域吻合",
+   "strength": "中",
+   "status": "已证（项目集）",
+   "note": "11/11 落在 1e3–1e5 (WP11)"
+  },
+  {
+   "claim": "committed 制度占比",
+   "strength": "—",
+   "status": "**不可识别**",
+   "note": "界 [0%,100%] (A24b)"
+  },
+  {
+   "claim": "真实城市/设施标定",
+   "strength": "—",
+   "status": "**未做**",
+   "note": "根本瓶颈"
+  }
+ ],
+ "runtime_s": 0.0
+}

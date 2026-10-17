@@ -1,0 +1,81 @@
+{
+ "purpose": "检验 H4(组成反转 dS_pot 符号) 是否仅在退化/不完整水样上成立",
+ "samples_meta": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "n_species": 5,
+   "missing": [],
+   "status": "COMPLETE"
+  },
+  "LADWP AWPF (2012, RO product)": {
+   "n_species": 5,
+   "missing": [],
+   "status": "COMPLETE"
+  },
+  "Figshare RW (2025, paired study)": {
+   "n_species": 3,
+   "missing": [
+    "alkalinity",
+    "silica"
+   ],
+   "status": "INCOMPLETE"
+  },
+  "AI-UWM model assumption": {
+   "n_species": 2,
+   "missing": [
+    "hardness",
+    "alkalinity",
+    "silica"
+   ],
+   "status": "INCOMPLETE"
+  }
+ },
+ "per_sample": [
+  {
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "CoC0": 3.5,
+   "CoC1": 2.822580645161291,
+   "q": -0.09599999999999989,
+   "M0": 31056.280522804103,
+   "M1": 34111.796717245896,
+   "status": "VALID",
+   "n_species": 5,
+   "missing": [],
+   "degenerate": false
+  },
+  {
+   "sample": "LADWP AWPF (2012, RO product)",
+   "CoC0": 3.5,
+   "CoC1": 7.907817442385904,
+   "q": 0.22296000000000005,
+   "M0": 31056.280522804103,
+   "M1": 25810.664582071524,
+   "status": "VALID",
+   "n_species": 5,
+   "missing": [],
+   "degenerate": false
+  }
+ ],
+ "valid_samples": [
+  "IEUA RP-1 (2025, tertiary)",
+  "LADWP AWPF (2012, RO product)"
+ ],
+ "invalid_samples": [],
+ "verdict": "SUPPORTED_ON_VALID_SAMPLES",
+ "coc_floor": 1.000001,
+ "limits_used": {
+  "TDS": 2200.0,
+  "chloride": 700.0,
+  "hardness": 750.0,
+  "alkalinity": 350.0,
+  "silica": 175.0
+ },
+ "potable_used": {
+  "TDS": 180.0,
+  "chloride": 35.0,
+  "hardness": 120.0,
+  "alkalinity": 100.0,
+  "silica": 10.0
+ },
+ "runtime_s": 2.7,
+ "discipline_note": "引擎只读; 缺失物种显式标记; 退化情景单列; 不用绝对容差"
+}

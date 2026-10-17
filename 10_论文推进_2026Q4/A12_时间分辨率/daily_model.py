@@ -26,7 +26,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-REPO = Path(r"C:/Users/mmrgr/Desktop/论文/算力中心/07_代码_AI-UWM引擎/aiuwm_src")
+REPO = Path(__file__).resolve().parents[2] / "07_代码_AI-UWM引擎" / "aiuwm_src"
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent                                  # 10_论文推进_2026Q4
 SIB = ROOT / "A10_敏感性与边界"                      # 复用 city_model 的面板/基座定义

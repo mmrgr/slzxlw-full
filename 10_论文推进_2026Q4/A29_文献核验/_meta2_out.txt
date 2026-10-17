@@ -1,0 +1,54 @@
+====================================================================================================
+DOI: 10.1021/acs.est.6c08380
+ title : Why Water Demand Is No Longer Enough: Rethinking Sustainability in AI Data Centers
+ year  : 2026 2026-06-25 | type: editorial
+ source: Environmental Science & Technology | ISSN 0013-936X
+ authors: Navid B. Saleh
+ abstract: W ater has shaped the trajectory of human civilization and technological progress for millennia.As Giulio Boccaletti argues, the relationship between societies and water has often determined the course of civilization. 1 The rapid advancement of artificial intelligence (AI), particularly its scalability, follows a similar trajectory.Although AI is portrayed as digital, and often virtual, infrastructure, its operation depends on physical thermodynamic systems that must dissipate heat generated during computation.Consequently, AI is becoming closely coupled to hydrologic systems.The global expansion of AI both depends on and influences water and the environment, but its needs and impacts remain local.As a result, water demand has emerged as an important consideration in AI infrastructure planning and development.2,3 However, water demand alone may no longer be sufficient for evaluating the sustainability of AI infrastructure.As cooling systems increasingly rely on recirculation and reuse, the challenge extends beyond water quantity to water compatibility.The water demand of AI infrastructure originates from one issue: heat.AI data centers operate continuously and at high computational intensity, requiring uninterrupted cooling to Viewpoint pubs.
+ cited_by: 0
+====================================================================================================
+DOI: 10.1016/j.wri.2022.100188
+ title : Municipal reclaimed water as makeup water for cooling systems: Water efficiency, biohazards, and reliability
+ year  : 2022 2022-09-07 | type: article
+ source: Water Resources and Industry | ISSN 2212-3717
+ authors: Mohammad Badruzzaman; Jasem R. Anazi; Fawaz A. Al-Wohaib; Abdulaziz A. Al-Malki; Fadel Jutail
+ abstract: Municipal reclaimed water is increasingly being considered as a sustainable source of makeup water for cooling towers. However, many oil and gas facilities in the water scarce middle eastern regions still depend on non-renewable groundwater for operating cooling towers. Successful application of reclaimed water in a dry desert climate with very high temperature requires a critical understanding of several factors, including water efficiency, biohazards, equipment reliability, and economics. In particular, biohazard assessment, due to bacteria and virus contamination in hot weather, should be assessed to understand the human risks of utilizing reclaimed water. This study investigated the applicability of municipal reclaimed water as an alternative to groundwater for an industrial cooling system at an oil and gas facility in Saudi Arabia. Treated wastewater effluent from an activated sludge biological treatment process was utilized, as make up water for a 4.2 MW cooling tower. The results of this study showed that water efficiency can be increased using municipal reclaimed water instead of groundwater by increasing the cycle of concentration. The bacterial and enteric virus study indicated that the disinfection and biocide treatment was effective in controlling biological growth and minimizing associated risks to human health. The use of reclaimed water was economically viable wi
+ cited_by: 29
+====================================================================================================
+DOI: 10.1016/j.watres.2018.01.070
+ title : Understanding urban water performance at the city-region scale using an urban water metabolism evaluation framework
+ year  : 2018 2018-02-07 | type: article
+ source: Water Research | ISSN 0043-1354
+ authors: Marguerite Anne Renouf; Steven John Kenway; Ka Leung Lam; Tony R. Weber; Estelle Roux; Sílvia Serrao-Neumann; Darryl Low Choy; Edward A. Morgan
+ cited_by: 48
+====================================================================================================
+DOI: 10.1016/j.resconrec.2015.03.015
+ title : Modelling metabolism based performance of an urban water system using WaterMet2
+ year  : 2015 2015-04-28 | type: article
+ source: Resources Conservation and Recycling | ISSN 0921-3449
+ authors: Kourosh Behzadian; Zoran S. Kapelan
+ cited_by: 61
+====================================================================================================
+DOI: 10.3390/w16111571
+ title : How Scale Influences the Resilience of Urban Water Systems: A Literature Review of Trade-Offs and Recommendations
+ year  : 2024 2024-05-30 | type: article
+ source: Water | ISSN 2073-4441
+ authors: Nicole Arnaud; Manel Poch; Lucía Alexandra Popartan; Lluís Corominas; Marta Verdaguer
+ abstract: Climate change severely affects urban water systems (UWSs). Infrastructure historically designed for milder conditions cannot manage growing water demands and extreme events. To obtain a resilient water sector, adaptation and mitigation strategies must address rising water challenges while striving for net-zero emissions. Researchers have noted that extreme decentralization is positively associated with closing cycles while reducing transport costs. However, part of the scientific community defends centralized schemes due to economies of scale. The objective of this systematic review is to understand the trade-offs associated with the adoption of different scales at UWSs design and how this impacts system resilience. This process includes identifying different scale trade-offs and unique environmental aspects that influence the optimal scale suitability. A clear distinction was made in terms of scale concept and classification, considering different design levels. That is, considering the UWS at the city level and water management units (WMUs) at the local level. Similarly, a classification of different scales for each level, covering all water streams—supply, wastewater, and stormwater—was introduced. We defined the key environmental aspects that influence the optimal scale and location suitability: ten at the city-catchment level and eleven at the site-neighbourhood level. Sc
+ cited_by: 14
+====================================================================================================
+DOI: 10.48550/arxiv.2606.21760
+ title : AI Data Centers and the Water Use Feedback Loop
+ year  : 2026 2026-06-19 | type: preprint
+ source: arXiv (Cornell University) | ISSN 2331-8422
+ authors: Basit A. Akinade; Amobichukwu Chukwudi Amanambu; Jonathan Frame; Shaolei Ren
+ abstract: AI data centres consume water for cooling, water scarcity constrains siting, and AI tools can improve water system efficiency. These dynamics are studied separately yet form a feedback loop. This review formalises the Water and AI Feedback Loop, introduces the Water Consumption Impact index to quantify community-scale utility burden, and demonstrates across ten US sites that burden spans three orders of magnitude, from 0.2% to 134% of host capacity.
+ cited_by: 0
+====================================================================================================
+DOI: 10.1016/j.jclepro.2025.146528
+ title : Sustainable AI infrastructure: A scenario-based forecast of water footprint under uncertainty
+ year  : 2025 2025-09-17 | type: article
+ source: Journal of Cleaner Production | ISSN 0959-6526
+ authors: Manuel Herrera; Xiang Xie; Andrea Menapace; Ariele Zanfei; Bruno Brentan
+ abstract: The rapid expansion of artificial intelligence (AI) and cloud computing is creating a significant but often overlooked impact on global water resources. This paper presents a global assessment of water consumption in AI-driven data centres, distinguishing between water consumption for operational use at the facility, off-site water consumption related to electricity generation, and embodied water consumption associated with hardware manufacturing and supply chains. To anticipate future demand, a scenario-based probabilistic forecasting framework inspired by Bayesian methods is developed, combining sparse empirical data with expert-informed assumptions and policy-relevant growth trajectories for the years 2030 and 2050. Results suggest that, without mitigation, global water consumption associated with data centres could increase more than seven times by mid-century, with cooling-related operational consumption accounting for the majority of demand. Several mitigation pathways are identified, including improvements in cooling efficiency, adoption of alternative technologies, and infrastructure planning that takes into account regional water availability. A sensitivity analysis highlights the strong influence of compute growth and efficiency trends on future outcomes. The findings offer a transparent and adaptable basis for aligning AI infrastructure development with long-term wat
+ cited_by: 31

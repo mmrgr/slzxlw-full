@@ -1,0 +1,43 @@
+﻿item,claimed_value,recomputed_value,source_file,method,status,note
+恒等式相对残差 2.9e-16,2.9e-16,2.9331853550365817e-16,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,"统一通式 |C-F-x_ai-dS| / max(M0,M1,inc) 最大相对值",TRACED_OK,实测 2.933e-16 ≈ 2.9e-16 (主稿 v4 已用 2.9e-16)
+分支A退化残差 1.1e-11,1.1e-11,1.2732925824820995e-11,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,分支A: |dS-(M1-M0)| 最大绝对残差,TRACED_OK,实测 1.273e-11; 主稿 v4 已改为 1.27e-11
+分支C退化残差 1.5e-11,1.5e-11,1.4551915228366852e-11,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,分支C: |dS-(-(M0-M1)-x_ai)| 最大绝对残差,TRACED_OK,实测 1.455e-11; 主稿 v4 已改为 1.46e-11
+分支C例外数 17,17,3,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,零挤占(displaced==0)内 dS>0 的行数,TRACED_STALE,主稿 v4 已改为 3
+分支C 负例 429/446,429,369,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,零挤占内 dS<0 的行数,TRACED_STALE,主稿 v4 已改为 369/372
+q>0 组中位 dS -14496,-14496.0,-14495.881460473893,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,可靠子集内 q>0 组的 dS_pot 中位数,TRACED_OK,
+q>0 组 290,290,290,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,可靠子集内按 q 符号分组计数,TRACED_OK,
+q≈0 组 288,288,288,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,可靠子集内按 q 符号分组计数,TRACED_OK,
+q<0 组 235,235,235,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,可靠子集内按 q 符号分组计数,TRACED_OK,
+"LADWP AWPF (2012, RO product) 负/正 183/0",183/0,186/8,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,按 sample 分组的 dS_pot 符号计数,TRACED_STALE,主稿 v4 已整表更正(含物种数)
+AI-UWM model assumption 负/正 184/0,184/0,187/8,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,按 sample 分组的 dS_pot 符号计数,TRACED_STALE,主稿 v4 已整表更正(含物种数)
+"IEUA RP-1 (2025, tertiary) 负/正 148/48",148/48,151/56,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,按 sample 分组的 dS_pot 符号计数,TRACED_STALE,主稿 v4 已整表更正(含物种数)
+"Figshare RW (2025, paired study) 负/正 116/54",116/54,119/62,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,按 sample 分组的 dS_pot 符号计数,TRACED_STALE,主稿 v4 已整表更正(含物种数)
+组成均值 19726,19726,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+组成均值 8510,8510,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+组成均值 12257,12257,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+组成均值 4690,4690,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+组成均值 16359,16359,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+组成均值 7504,7504,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+组成均值 8895,8895,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+组成均值 28437,28437,,(无),在 A13/A33 产物中按 sample×分支 均未能复现该值,NOT_IDENTIFIABLE,"主稿 v4 的组成表已改为符号计数, 无需均值; 建议删除"
+DSD 组成均值 237,237,,(无),"A13 子集重算 LADWP neg=186 / AI-UWM neg=187, 均非该值",NOT_IDENTIFIABLE,建议删除
+DSD 组成均值 241,241,,(无),"A13 子集重算 LADWP neg=186 / AI-UWM neg=187, 均非该值",NOT_IDENTIFIABLE,建议删除
+跨域留出 R² 0.557,0.557,0.8055937188186029,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A15_稳健性\holdout_summary.json,holdout_summary.json::H2_true_holdout.co_R2_phi_eff,TRACED_STALE,主稿 v4 已改为 0.806
+基线 -0.050,-0.05,-0.07328387812300985,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A15_稳健性\holdout_summary.json,holdout_summary.json::H2_true_holdout.trivial_baseline_R2,TRACED_STALE,主稿 v4 已改为 -0.073
+质量单调性 6478/21674/116581,6478/21674/116581,,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A15_稳健性\holdout_summary.json,该三元组在 A15 产物中无对应字段,NOT_IDENTIFIABLE,建议改引可复现的质量档位表或删除
+冷却水占比 0.258 (替代 0.184),0.258,0.25799037378455597,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A24_外部锚定\external_anchor_summary.json,external_anchor_summary.json::other_anchors[0].mean_of_means (n_sectors=39),TRACED_OK,"原 0.184 无产物, 已删除; 0.258 可追溯"
+冷却水占比 0.184 (旧值),0.184,,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A24_外部锚定\external_anchor_summary.json,该值在 external_anchor_summary.json 中不存在,NOT_IDENTIFIABLE,主稿/SI 已删除
+P90 处理量 60,60,60.0,(external_validity_summary.json 分布),独立重算 P90=60.0 ML/d,TRACED_OK,该值可由外部数据直接复现
+桥接 1.60x 通胀,1.6,,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A20_模型桥接\bridging_summary_v2.json,v2 产物无 1.60 字段(v1 占位档遗留),NOT_IDENTIFIABLE,主稿 v4 的桥接段已只引 24 对结果
+桥接 36504,36504,,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A20_模型桥接\bridging_comparison.csv,该值属 v1(占位档) 文件,NOT_IDENTIFIABLE,"已撤回, 建议删除"
+储冷 +3.45% (ha),3.45,3.45,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A21_动态状态\dynamic_state_summary.json,makeup_by_storage ha|qs=False: 47734.80 -> 49381.80 = +3.45%,TRACED_OK,可由 dynamic_state_summary.makeup_by_storage 复算
+储冷 +7.02% (co),7.02,7.02,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A21_动态状态\dynamic_state_summary.json,makeup_by_storage co|qs=False: 45598.54 -> 48799.12 = +7.02%,TRACED_OK,同上
+R10a 补水 -46%,46,45.94,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A21_动态状态\dynamic_state_summary.json,ha phi=0.6: qs=True 25804.27 vs qs=False 47734.80 => -45.94%,TRACED_OK,四舍五入为 46%
+quality_binding 分级表 100/92/58/48/0,100/92/58/48/0,"boolean: {True: np.int64(456), False: np.int64(357)}",C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,"现行 CSV 的 quality_binding 为布尔列, 无 5 档结构",TRACED_STALE,SI 该表须删除或改述为布尔分布 True=456/False=357(可靠子集)
+"surplus 1,282 / 11,896",2828/11896,,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A24_外部锚定\surplus_threshold_check.json,"该文件只给占比网格, 无这两个量",NOT_IDENTIFIABLE,建议删除或重算落盘
+A22 AI-UWM model assumption acc 0.456,0.456,0.4375,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A22_判据分解\q_predictors_summary.json,q_predictors_summary.by_sample[].acc,TRACED_STALE,落盘值=0.4375; 主稿 v4 已不再按水样列这些 acc
+"A22 LADWP AWPF (2012, RO product) acc 0.72",0.72,0.6423611111111112,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A22_判据分解\q_predictors_summary.json,q_predictors_summary.by_sample[].acc,TRACED_STALE,落盘值=0.6423611111111112; 主稿 v4 已不再按水样列这些 acc
+"A22 Figshare RW (2025, paired study) acc 0.993",0.993,0.9930555555555556,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A22_判据分解\q_predictors_summary.json,q_predictors_summary.by_sample[].acc,TRACED_OK,落盘值=0.9930555555555556; 主稿 v4 已不再按水样列这些 acc
+"A22 IEUA RP-1 (2025, tertiary) acc 1.0",1.0,1.0,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A22_判据分解\q_predictors_summary.json,q_predictors_summary.by_sample[].acc,TRACED_OK,落盘值=1.0; 主稿 v4 已不再按水样列这些 acc
+"主网格 1,152",1152,1052,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,CSV 行数,TRACED_STALE,现行主网格 1052; 1152 属 A27 前占位档
+可靠子集 813,813,813,C:\Users\mmrgr\Desktop\论文\算力中心\10_论文推进_2026Q4\A13_可靠性机制\supply_state_regimes.csv,双门禁子集行数,TRACED_OK,

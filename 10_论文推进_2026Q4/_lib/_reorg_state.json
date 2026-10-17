@@ -1,0 +1,1427 @@
+{
+ "moved": [
+  [
+   "01_后续任务详细规划_v2.md",
+   "01_文献与设计/01_后续任务详细规划_v2.md",
+   false
+  ],
+  [
+   "00_深度规划_v1.md",
+   "01_文献与设计/00_深度规划_v1.md",
+   false
+  ],
+  [
+   "A10_敏感性与边界",
+   "02_模型与参数/A10_敏感性与边界",
+   true
+  ],
+  [
+   "A4_水化学参数域",
+   "02_模型与参数/A4_水化学参数域",
+   true
+  ],
+  [
+   "A1_传输账本",
+   "02_模型与参数/A1_传输账本",
+   true
+  ],
+  [
+   "A12_时间分辨率",
+   "02_模型与参数/A12_时间分辨率",
+   true
+  ],
+  [
+   "A2_规则实验",
+   "03_实验/A2_规则实验",
+   true
+  ],
+  [
+   "A3_三规则内生",
+   "03_实验/A3_三规则内生",
+   true
+  ],
+  [
+   "A5_设施锚定",
+   "03_实验/A5_设施锚定",
+   true
+  ],
+  [
+   "A7_质量分配联合",
+   "03_实验/A7_质量分配联合",
+   true
+  ],
+  [
+   "A8_溶质闭合",
+   "03_实验/A8_溶质闭合",
+   true
+  ],
+  [
+   "A9_无量纲折叠",
+   "03_实验/A9_无量纲折叠",
+   true
+  ],
+  [
+   "A11_适应成本",
+   "03_实验/A11_适应成本",
+   true
+  ],
+  [
+   "A13_可靠性机制",
+   "03_实验/A13_可靠性机制",
+   true
+  ],
+  [
+   "A15_稳健性",
+   "03_实验/A15_稳健性",
+   true
+  ],
+  [
+   "A18_有限供水",
+   "03_实验/A18_有限供水",
+   true
+  ],
+  [
+   "A19_水化学包络",
+   "03_实验/A19_水化学包络",
+   true
+  ],
+  [
+   "A20_模型桥接",
+   "03_实验/A20_模型桥接",
+   true
+  ],
+  [
+   "A21_动态状态",
+   "03_实验/A21_动态状态",
+   true
+  ],
+  [
+   "A22_判据分解",
+   "03_实验/A22_判据分解",
+   true
+  ],
+  [
+   "A30_WP0取证",
+   "03_实验/A30_WP0取证",
+   true
+  ],
+  [
+   "A31_WP2_假设冻结",
+   "03_实验/A31_WP2_假设冻结",
+   true
+  ],
+  [
+   "A32_WP3_水化学",
+   "03_实验/A32_WP3_水化学",
+   true
+  ],
+  [
+   "A33_WP4_组成重构",
+   "03_实验/A33_WP4_组成重构",
+   true
+  ],
+  [
+   "A34_WP5_敏感性与极端事件",
+   "03_实验/A34_WP5_敏感性与极端事件",
+   true
+  ],
+  [
+   "A38_模拟审稿",
+   "03_实验/A38_模拟审稿",
+   true
+  ],
+  [
+   "A25_终审",
+   "04_审计/A25_终审",
+   true
+  ],
+  [
+   "A26_语义统一",
+   "04_审计/A26_语义统一",
+   true
+  ],
+  [
+   "A27_引用限值",
+   "04_审计/A27_引用限值",
+   true
+  ],
+  [
+   "A28_末轮审计",
+   "04_审计/A28_末轮审计",
+   true
+  ],
+  [
+   "A36_终审",
+   "04_审计/A36_终审",
+   true
+  ],
+  [
+   "A41_全包审计",
+   "04_审计/A41_全包审计",
+   true
+  ],
+  [
+   "A44_检查清理轮",
+   "04_审计/A44_检查清理轮",
+   true
+  ],
+  [
+   "A16_英文稿",
+   "05_论文/A16_英文稿",
+   true
+  ],
+  [
+   "A35_WP7_主稿修订",
+   "05_论文/A35_WP7_主稿修订",
+   true
+  ],
+  [
+   "A37_六主图_v4",
+   "05_论文/A37_六主图_v4",
+   true
+  ],
+  [
+   "A40_投稿包",
+   "05_论文/A40_投稿包",
+   true
+  ],
+  [
+   "A42_参考文献",
+   "05_论文/A42_参考文献",
+   true
+  ],
+  [
+   "A43_投稿声明",
+   "05_论文/A43_投稿声明",
+   true
+  ],
+  [
+   "09_图定稿",
+   "05_论文/09_图定稿",
+   true
+  ],
+  [
+   "A6_可信度配图",
+   "05_论文/A6_可信度配图",
+   true
+  ],
+  [
+   "10_论文主稿_v1.md",
+   "05_论文/10_论文主稿_v1.md",
+   false
+  ],
+  [
+   "figstyle.py",
+   "05_论文/figstyle.py",
+   false
+  ],
+  [
+   "T15_finalize_figures.py",
+   "05_论文/T15_finalize_figures.py",
+   false
+  ],
+  [
+   "A14_外部锚定",
+   "06_外部数据/A14_外部锚定",
+   true
+  ],
+  [
+   "A24_外部锚定",
+   "06_外部数据/A24_外部锚定",
+   true
+  ],
+  [
+   "A29_文献核验",
+   "06_外部数据/A29_文献核验",
+   true
+  ],
+  [
+   "A39_WP8_外部效度",
+   "06_外部数据/A39_WP8_外部效度",
+   true
+  ],
+  [
+   "02_阶段结果_T0-T7.md",
+   "07_过程记录/02_阶段结果_T0-T7.md",
+   false
+  ],
+  [
+   "03_阶段结果_T2-T8.md",
+   "07_过程记录/03_阶段结果_T2-T8.md",
+   false
+  ],
+  [
+   "04_阶段结果_T9.md",
+   "07_过程记录/04_阶段结果_T9.md",
+   false
+  ],
+  [
+   "05_方法审计_v1.md",
+   "07_过程记录/05_方法审计_v1.md",
+   false
+  ],
+  [
+   "06_审计修复_v1.md",
+   "07_过程记录/06_审计修复_v1.md",
+   false
+  ],
+  [
+   "07_阶段结果_T10-T13.md",
+   "07_过程记录/07_阶段结果_T10-T13.md",
+   false
+  ],
+  [
+   "08_阶段结果_T5-T14.md",
+   "07_过程记录/08_阶段结果_T5-T14.md",
+   false
+  ],
+  [
+   "11_红队自审_T17.md",
+   "07_过程记录/11_红队自审_T17.md",
+   false
+  ],
+  [
+   "12_一致性核验_v1.md",
+   "07_过程记录/12_一致性核验_v1.md",
+   false
+  ],
+  [
+   "13_死代码与重复逻辑清单_v1.md",
+   "07_过程记录/13_死代码与重复逻辑清单_v1.md",
+   false
+  ],
+  [
+   "14_清理执行报告_v1.md",
+   "07_过程记录/14_清理执行报告_v1.md",
+   false
+  ],
+  [
+   "15_图形修复报告_v1.md",
+   "07_过程记录/15_图形修复报告_v1.md",
+   false
+  ],
+  [
+   "16_工作交接.md",
+   "07_过程记录/16_工作交接.md",
+   false
+  ],
+  [
+   "17_本轮研究总结_2026-10-14.md",
+   "07_过程记录/17_本轮研究总结_2026-10-14.md",
+   false
+  ],
+  [
+   "18_方法自审与修复报告_2026-10-14.md",
+   "07_过程记录/18_方法自审与修复报告_2026-10-14.md",
+   false
+  ],
+  [
+   "19_缺陷报告_缓存与桥接_2026-10-15.md",
+   "07_过程记录/19_缺陷报告_缓存与桥接_2026-10-15.md",
+   false
+  ],
+  [
+   "20_科研成熟度深化轮总结_2026-10-15.md",
+   "07_过程记录/20_科研成熟度深化轮总结_2026-10-15.md",
+   false
+  ],
+  [
+   "21_工作交接.md",
+   "07_过程记录/21_工作交接.md",
+   false
+  ],
+  [
+   "A0_预注册",
+   "07_过程记录/A0_预注册",
+   true
+  ]
+ ],
+ "junctions": [
+  "A10_敏感性与边界",
+  "A4_水化学参数域",
+  "A1_传输账本",
+  "A12_时间分辨率",
+  "A2_规则实验",
+  "A3_三规则内生",
+  "A5_设施锚定",
+  "A7_质量分配联合",
+  "A8_溶质闭合",
+  "A9_无量纲折叠",
+  "A11_适应成本",
+  "A13_可靠性机制",
+  "A15_稳健性",
+  "A18_有限供水",
+  "A19_水化学包络",
+  "A20_模型桥接",
+  "A21_动态状态",
+  "A22_判据分解",
+  "A30_WP0取证",
+  "A31_WP2_假设冻结",
+  "A32_WP3_水化学",
+  "A33_WP4_组成重构",
+  "A34_WP5_敏感性与极端事件",
+  "A38_模拟审稿",
+  "A25_终审",
+  "A26_语义统一",
+  "A27_引用限值",
+  "A28_末轮审计",
+  "A36_终审",
+  "A41_全包审计",
+  "A44_检查清理轮",
+  "A16_英文稿",
+  "A35_WP7_主稿修订",
+  "A37_六主图_v4",
+  "A40_投稿包",
+  "A42_参考文献",
+  "A43_投稿声明",
+  "09_图定稿",
+  "A6_可信度配图",
+  "A14_外部锚定",
+  "A24_外部锚定",
+  "A29_文献核验",
+  "A39_WP8_外部效度",
+  "A0_预注册"
+ ],
+ "fingerprints": {
+  "A10_敏感性与边界": {
+   "n_files": 20,
+   "n_bytes": 1085773,
+   "sample": [
+    [
+     "__pycache__\\city_model.cpython-314.pyc",
+     "aa35a65924a6"
+    ],
+    [
+     "city_model.py",
+     "151609aa7d92"
+    ],
+    [
+     "fig5_conditional_boundary.png",
+     "a5e3c9642ed9"
+    ],
+    [
+     "make_fig5_boundary.py",
+     "c5633cc08061"
+    ],
+    [
+     "t10.log.moved.md",
+     "36a9b5c56e7e"
+    ]
+   ]
+  },
+  "A4_水化学参数域": {
+   "n_files": 14,
+   "n_bytes": 507191,
+   "sample": [
+    [
+     "__pycache__\\T6_water_chemistry_v2.cpython-314.pyc",
+     "ac608f1b59cb"
+    ],
+    [
+     "__pycache__\\T6b_limits_cited.cpython-314.pyc",
+     "6797285597b8"
+    ],
+    [
+     "fig3_water_quality.png",
+     "355f2e14dac5"
+    ],
+    [
+     "T6_coc_limits.csv",
+     "dd5473921793"
+    ],
+    [
+     "T6_summary.json",
+     "37775435cd37"
+    ]
+   ]
+  },
+  "A1_传输账本": {
+   "n_files": 4,
+   "n_bytes": 223456,
+   "sample": [
+    [
+     "fig1_transmission_identity.png",
+     "80ec54153226"
+    ],
+    [
+     "transmission_identity.py",
+     "e6f2621174cb"
+    ],
+    [
+     "transmission_identity_summary.json",
+     "26133fee9e82"
+    ],
+    [
+     "transmission_ledger.csv",
+     "0be1ad7ca3b3"
+    ]
+   ]
+  },
+  "A12_时间分辨率": {
+   "n_files": 32,
+   "n_bytes": 1756630,
+   "sample": [
+    [
+     "daily_model.py",
+     "c430c8811691"
+    ],
+    [
+     "fig7_time_resolution.png",
+     "06587fc3b894"
+    ],
+    [
+     "make_fig7_daily.py",
+     "3b9975a2118f"
+    ],
+    [
+     "t14.log.moved.md",
+     "f15426411f01"
+    ],
+    [
+     "T14_dailyScity_co_evaporative.csv",
+     "440d498345dc"
+    ]
+   ]
+  },
+  "A2_规则实验": {
+   "n_files": 10,
+   "n_bytes": 578317,
+   "sample": [
+    [
+     "allocation_rule_experiment.py",
+     "d76e8e946057"
+    ],
+    [
+     "endogenous_gamma.py",
+     "d860fd00127a"
+    ],
+    [
+     "fig2_allocation_regime.png",
+     "492845e2fa77"
+    ],
+    [
+     "fig3_endogenous_gamma.png",
+     "0ab407e8f3a3"
+    ],
+    [
+     "make_fig2.py",
+     "dd19245a68b0"
+    ]
+   ]
+  },
+  "A3_三规则内生": {
+   "n_files": 8,
+   "n_bytes": 560041,
+   "sample": [
+    [
+     "fig4_rule_invariance.png",
+     "e8121d1d568b"
+    ],
+    [
+     "make_fig4.py",
+     "6847aa2cbfcd"
+    ],
+    [
+     "T1_rule_identity.csv",
+     "51093df3cc7c"
+    ],
+    [
+     "T1_rule_identity.py",
+     "0c264ba90d5f"
+    ],
+    [
+     "T1_summary.json",
+     "45c49ba1fcb1"
+    ]
+   ]
+  },
+  "A5_设施锚定": {
+   "n_files": 4,
+   "n_bytes": 18508,
+   "sample": [
+    [
+     "T7_facility_anchor.py",
+     "1ebfa3734173"
+    ],
+    [
+     "T7_gsa_anchoring.csv",
+     "cc1fd4cb63df"
+    ],
+    [
+     "T7_meta_wue.csv",
+     "e0894d18d246"
+    ],
+    [
+     "T7_summary.json",
+     "745cff95b9ce"
+    ]
+   ]
+  },
+  "A7_质量分配联合": {
+   "n_files": 9,
+   "n_bytes": 651630,
+   "sample": [
+    [
+     "fig5_quality_allocation_interaction.png",
+     "c7b3f979abf6"
+    ],
+    [
+     "make_fig5.py",
+     "32bcce0e3637"
+    ],
+    [
+     "t2.log.moved.md",
+     "e6abd48f0325"
+    ],
+    [
+     "T2_cell_results.csv",
+     "aa5ee2024966"
+    ],
+    [
+     "T2_coc_curves.csv",
+     "298ce9e83c87"
+    ]
+   ]
+  },
+  "A8_溶质闭合": {
+   "n_files": 5,
+   "n_bytes": 43875,
+   "sample": [
+    [
+     "T8_min_removal.csv",
+     "3beb76a0fcae"
+    ],
+    [
+     "T8_recirc_accumulation.csv",
+     "741bd913471f"
+    ],
+    [
+     "T8_solute_closure.py",
+     "d6ea1f0c22af"
+    ],
+    [
+     "T8_solute_ledger.csv",
+     "e5546875098c"
+    ],
+    [
+     "T8_summary.json",
+     "579b1f134150"
+    ]
+   ]
+  },
+  "A9_无量纲折叠": {
+   "n_files": 12,
+   "n_bytes": 1035092,
+   "sample": [
+    [
+     "fig6_dimensionless_collapse.png",
+     "65d77586e1a5"
+    ],
+    [
+     "make_fig6.py",
+     "a94478fd9731"
+    ],
+    [
+     "t9.log.moved.md",
+     "7f919412dafc"
+    ],
+    [
+     "T9_capacity_invariance.csv",
+     "42ed95e5ffca"
+    ],
+    [
+     "T9_collapse_points.csv",
+     "f751229c3a08"
+    ]
+   ]
+  },
+  "A11_适应成本": {
+   "n_files": 6,
+   "n_bytes": 416156,
+   "sample": [
+    [
+     "fig6_adaptation_pareto.png",
+     "7f598d745f1a"
+    ],
+    [
+     "make_fig6_adaptation.py",
+     "bed7c10e5df3"
+    ],
+    [
+     "t13.log.moved.md",
+     "afedddecfffc"
+    ],
+    [
+     "T13_adaptation_pareto.py",
+     "0792c86ba330"
+    ],
+    [
+     "T13_pareto.csv",
+     "e80757af88fb"
+    ]
+   ]
+  },
+  "A13_可靠性机制": {
+   "n_files": 35,
+   "n_bytes": 3323959,
+   "sample": [
+    [
+     "a13b_repro_log.txt",
+     "7854a1a8d1a6"
+    ],
+    [
+     "a13c_repro_log.txt",
+     "d2366d723486"
+    ],
+    [
+     "a13d_repro_log.txt",
+     "d44056fc524d"
+    ],
+    [
+     "a17_repro_log.txt",
+     "29bae3422d6a"
+    ],
+    [
+     "A17_统一恒等式推导.md",
+     "ecc0611e49f8"
+    ]
+   ]
+  },
+  "A15_稳健性": {
+   "n_files": 34,
+   "n_bytes": 3582686,
+   "sample": [
+    [
+     "_common.py",
+     "d3dfe1f558f2"
+    ],
+    [
+     "_physics.py",
+     "76ee6edee7ae"
+    ],
+    [
+     "ablation.log.moved.md",
+     "738c577a912f"
+    ],
+    [
+     "ablation_effects.csv",
+     "7f316e741337"
+    ],
+    [
+     "ablation_matrix.csv",
+     "52212a1824a5"
+    ]
+   ]
+  },
+  "A18_有限供水": {
+   "n_files": 5,
+   "n_bytes": 142409,
+   "sample": [
+    [
+     "A18_三分账报告.md",
+     "5de0ae6fa6cf"
+    ],
+    [
+     "finite_supply_grid.csv",
+     "3ca6138ce9d3"
+    ],
+    [
+     "finite_supply_model.py",
+     "969a668e740a"
+    ],
+    [
+     "finite_supply_summary.json",
+     "b529edd9bcdf"
+    ],
+    [
+     "repro_log.txt",
+     "123f7428c178"
+    ]
+   ]
+  },
+  "A19_水化学包络": {
+   "n_files": 22,
+   "n_bytes": 384953,
+   "sample": [
+    [
+     "_extract_gsa.py",
+     "a5c1215cccdb"
+    ],
+    [
+     "_gsa_extract.txt",
+     "80d3d6b23e06"
+    ],
+    [
+     "A19_refs.bib",
+     "25ec65afc3d0"
+    ],
+    [
+     "chemistry_audit.md",
+     "2ff46d08d882"
+    ],
+    [
+     "coc_envelope.csv",
+     "9986f07c3034"
+    ]
+   ]
+  },
+  "A20_模型桥接": {
+   "n_files": 11,
+   "n_bytes": 68744,
+   "sample": [
+    [
+     "a20_repro_log.txt",
+     "d0e406fe77d5"
+    ],
+    [
+     "A20_桥接报告.md",
+     "d29b2db5fe9f"
+    ],
+    [
+     "a20b_repro_log.txt",
+     "f303c2ba9542"
+    ],
+    [
+     "bridging_comparison.csv",
+     "5f752c522944"
+    ],
+    [
+     "bridging_comparison_v2.csv",
+     "c7c965bef034"
+    ]
+   ]
+  },
+  "A21_动态状态": {
+   "n_files": 17,
+   "n_bytes": 67282,
+   "sample": [
+    [
+     "a21_repro_log.txt",
+     "ea473b1a29b7"
+    ],
+    [
+     "A21_动态状态报告.md",
+     "21c1eec67630"
+    ],
+    [
+     "a21b_repro_log.txt",
+     "388bc0a265b4"
+    ],
+    [
+     "a21c_repro_log.txt",
+     "bc2a3950a57a"
+    ],
+    [
+     "a21d_repro_log.txt",
+     "a225a7324aa2"
+    ]
+   ]
+  },
+  "A22_判据分解": {
+   "n_files": 23,
+   "n_bytes": 1457059,
+   "sample": [
+    [
+     "a22_repro_log.txt",
+     "aab54f0cf18a"
+    ],
+    [
+     "A22_判据分解报告.md",
+     "9ed81335b322"
+    ],
+    [
+     "a22b_repro_log.txt",
+     "0c0e7f3fd11d"
+    ],
+    [
+     "a22c_repro_log.txt",
+     "5d501d410d91"
+    ],
+    [
+     "a22d_repro_log.txt",
+     "376e2d1059dd"
+    ]
+   ]
+  },
+  "A30_WP0取证": {
+   "n_files": 26,
+   "n_bytes": 349151,
+   "sample": [
+    [
+     "a21_solute_closure.py",
+     "8025f7bb9ca8"
+    ],
+    [
+     "a21_solute_closure_cases.csv",
+     "d6fbb974193c"
+    ],
+    [
+     "a21_solute_closure_log.txt",
+     "e8e377f77d1d"
+    ],
+    [
+     "a21_solute_closure_summary.json",
+     "e5b6bae314bf"
+    ],
+    [
+     "a24b_capacity_table.csv",
+     "4a2e78c1b65c"
+    ]
+   ]
+  },
+  "A31_WP2_假设冻结": {
+   "n_files": 10,
+   "n_bytes": 184225,
+   "sample": [
+    [
+     "wp2_e3_independent_prediction.py",
+     "7d0cad754e6f"
+    ],
+    [
+     "wp2_e3_independent_prediction_summary.json",
+     "fd6f8e0ab54c"
+    ],
+    [
+     "wp2_e3_log.txt",
+     "5b986b5f056f"
+    ],
+    [
+     "wp2_e3_predictions.csv",
+     "83a174e88aa3"
+    ],
+    [
+     "WP2_E3_独立预测检验报告.md",
+     "77d916aa081a"
+    ]
+   ]
+  },
+  "A32_WP3_水化学": {
+   "n_files": 5,
+   "n_bytes": 26620,
+   "sample": [
+    [
+     "wp3_h4_robustness.py",
+     "2678d4f837e6"
+    ],
+    [
+     "wp3_h4_robustness_cases.csv",
+     "44c78d0a2f72"
+    ],
+    [
+     "wp3_h4_robustness_log.txt",
+     "ee92f9c3c7c1"
+    ],
+    [
+     "wp3_h4_robustness_summary.json",
+     "15a5fd5ee54c"
+    ],
+    [
+     "WP3_水化学机制验证报告.md",
+     "f80b9eaa19fc"
+    ]
+   ]
+  },
+  "A33_WP4_组成重构": {
+   "n_files": 9,
+   "n_bytes": 159216,
+   "sample": [
+    [
+     "wp4_complete_samples.py",
+     "dfc49913593f"
+    ],
+    [
+     "wp4_missing_species_impact.csv",
+     "47e1150a4188"
+    ],
+    [
+     "wp4_missing_species_impact.py",
+     "de07e2650801"
+    ],
+    [
+     "wp4_missing_species_impact_log.txt",
+     "2427aabcbaf5"
+    ],
+    [
+     "wp4_missing_species_impact_summary.json",
+     "213d62ed7dda"
+    ]
+   ]
+  },
+  "A34_WP5_敏感性与极端事件": {
+   "n_files": 16,
+   "n_bytes": 300254,
+   "sample": [
+    [
+     "wp5_common.py",
+     "7af55aadb6c0"
+    ],
+    [
+     "wp5_extreme_cases.csv",
+     "77b557508162"
+    ],
+    [
+     "wp5_extreme_events.py",
+     "d415c456c731"
+    ],
+    [
+     "wp5_extreme_events_log.txt",
+     "07e7292dc959"
+    ],
+    [
+     "wp5_extreme_flip_condition.csv",
+     "2e16038315f5"
+    ]
+   ]
+  },
+  "A38_模拟审稿": {
+   "n_files": 18,
+   "n_bytes": 193293,
+   "sample": [
+    [
+     "ne1_r10a_signflip.py",
+     "e149f259e9f8"
+    ],
+    [
+     "ne1_r10a_signflip_cases.csv",
+     "09934e1f5f59"
+    ],
+    [
+     "ne1_r10a_signflip_log.txt",
+     "d30e664c2933"
+    ],
+    [
+     "ne1_r10a_signflip_summary.json",
+     "786b19e98710"
+    ],
+    [
+     "NE1_判决性实验结果.md",
+     "46d3101c094f"
+    ]
+   ]
+  },
+  "A25_终审": {
+   "n_files": 17,
+   "n_bytes": 61105,
+   "sample": [
+    [
+     "a15_gates_reliable.json",
+     "40f19a609f3a"
+    ],
+    [
+     "a15_gates_reliable.py",
+     "9a67cd20032c"
+    ],
+    [
+     "A25_全面终审报告.md",
+     "7fb5a2882312"
+    ],
+    [
+     "convergence_audit.json",
+     "bfaa094f0b89"
+    ],
+    [
+     "convergence_impact.json",
+     "b7cda318d13c"
+    ]
+   ]
+  },
+  "A26_语义统一": {
+   "n_files": 3,
+   "n_bytes": 17600,
+   "sample": [
+    [
+     "A26_修复计划.md",
+     "27898553f70a"
+    ],
+    [
+     "CHI_SEMANTICS.md",
+     "28f56962f1cc"
+    ],
+    [
+     "export_fig1_sources.py",
+     "4a233f8c3887"
+    ]
+   ]
+  },
+  "A27_引用限值": {
+   "n_files": 5,
+   "n_bytes": 24608,
+   "sample": [
+    [
+     "a27_repro_log.txt",
+     "6fd45fe529b8"
+    ],
+    [
+     "A27_引用限值报告.md",
+     "cd31f8408add"
+    ],
+    [
+     "placeholder_vs_cited.csv",
+     "bbb0a96d6c62"
+    ],
+    [
+     "placeholder_vs_cited.py",
+     "4d2eed9f9357"
+    ],
+    [
+     "placeholder_vs_cited_summary.json",
+     "740106752fed"
+    ]
+   ]
+  },
+  "A28_末轮审计": {
+   "n_files": 4,
+   "n_bytes": 14924,
+   "sample": [
+    [
+     "A28_末轮审计报告.md",
+     "4cdead8b820c"
+    ],
+    [
+     "final_audit.py",
+     "ac5ddaedf0d6"
+    ],
+    [
+     "final_audit_result.json",
+     "8df814e2340f"
+    ],
+    [
+     "scan_corruption.py",
+     "1c678c9b658b"
+    ]
+   ]
+  },
+  "A36_终审": {
+   "n_files": 2,
+   "n_bytes": 30837,
+   "sample": [
+    [
+     "final_gate.py",
+     "f608bbb45047"
+    ],
+    [
+     "终审门禁报告与期刊匹配评估.md",
+     "abb961a97c4d"
+    ]
+   ]
+  },
+  "A41_全包审计": {
+   "n_files": 3,
+   "n_bytes": 17996,
+   "sample": [
+    [
+     "package_consistency_check.py",
+     "bda0426929aa"
+    ],
+    [
+     "package_consistency_report.json",
+     "9d80eaf2bbcb"
+    ],
+    [
+     "package_consistency_report.md",
+     "00d1779b9fe9"
+    ]
+   ]
+  },
+  "A44_检查清理轮": {
+   "n_files": 1,
+   "n_bytes": 14086,
+   "sample": [
+    [
+     "检查与清理报告_2026-10-16.md",
+     "c2aac631dd30"
+    ]
+   ]
+  },
+  "A16_英文稿": {
+   "n_files": 17,
+   "n_bytes": 2254601,
+   "sample": [
+    [
+     "audit_traceability_v2.py",
+     "68027dfc0d6e"
+    ],
+    [
+     "audit_traceability_v3.py",
+     "91b639155748"
+    ],
+    [
+     "Fig1_discharge_claim.png",
+     "153a2162bfa6"
+    ],
+    [
+     "Fig1_two_channels_OBSOLETE.png",
+     "645526c42bd2"
+    ],
+    [
+     "figures\\fig1_source_manifest.json",
+     "7458ee7ec505"
+    ]
+   ]
+  },
+  "A35_WP7_主稿修订": {
+   "n_files": 2,
+   "n_bytes": 15079,
+   "sample": [
+    [
+     "Abstract_扩展版存档_v4.md",
+     "754a89745050"
+    ],
+    [
+     "WP7_主稿修订报告.md",
+     "0726a708201a"
+    ]
+   ]
+  },
+  "A37_六主图_v4": {
+   "n_files": 65,
+   "n_bytes": 6433947,
+   "sample": [
+    [
+     "__pycache__\\figstyle_a37.cpython-314.pyc",
+     "b0b17065d907"
+    ],
+    [
+     "_gate_check.py",
+     "58d22ee09598"
+    ],
+    [
+     "_prev_2026-10-16\\_gate_check.py",
+     "51e1512b91db"
+    ],
+    [
+     "_prev_2026-10-16\\Fig1_boundary_counterfactuals.pdf",
+     "fae95a5eef80"
+    ],
+    [
+     "_prev_2026-10-16\\Fig1_boundary_counterfactuals.png",
+     "8801082eed3c"
+    ]
+   ]
+  },
+  "A40_投稿包": {
+   "n_files": 5,
+   "n_bytes": 63735,
+   "sample": [
+    [
+     "make_reproducibility_manifest.py",
+     "686a714e0ec5"
+    ],
+    [
+     "reproducibility_manifest.json",
+     "947bc07b46df"
+    ],
+    [
+     "reproducibility_manifest.md",
+     "88936365bfbf"
+    ],
+    [
+     "交接文档_2026-10-16.md",
+     "c632d1d0971f"
+    ],
+    [
+     "投稿清单_SUBMISSION_CHECKLIST.md",
+     "90d7dfc493db"
+    ]
+   ]
+  },
+  "A42_参考文献": {
+   "n_files": 3,
+   "n_bytes": 17664,
+   "sample": [
+    [
+     "references_from_bib.py",
+     "7d5734099a42"
+    ],
+    [
+     "references_manifest.json",
+     "f5eb9ed23add"
+    ],
+    [
+     "references_manuscript.md",
+     "5685259746bc"
+    ]
+   ]
+  },
+  "A43_投稿声明": {
+   "n_files": 3,
+   "n_bytes": 13235,
+   "sample": [
+    [
+     "required_statements.json",
+     "f7c1db8092ee"
+    ],
+    [
+     "required_statements.md",
+     "d2ff05e62f9a"
+    ],
+    [
+     "required_statements.py",
+     "8f95a44235ac"
+    ]
+   ]
+  },
+  "09_图定稿": {
+   "n_files": 12,
+   "n_bytes": 4045882,
+   "sample": [
+    [
+     "Fig_1_fig1_transmission_identity.png",
+     "80ec54153226"
+    ],
+    [
+     "Fig_2_fig4_rule_invariance.png",
+     "e8121d1d568b"
+    ],
+    [
+     "Fig_3_fig3_water_quality.png",
+     "355f2e14dac5"
+    ],
+    [
+     "Fig_4_fig5_quality_allocation_interaction.png",
+     "c7b3f979abf6"
+    ],
+    [
+     "Fig_5_fig5_conditional_boundary.png",
+     "a5e3c9642ed9"
+    ]
+   ]
+  },
+  "A6_可信度配图": {
+   "n_files": 2,
+   "n_bytes": 287320,
+   "sample": [
+    [
+     "fig2_credibility.png",
+     "e72b618ae284"
+    ],
+    [
+     "make_fig2.py",
+     "0dda06880e86"
+    ]
+   ]
+  },
+  "A14_外部锚定": {
+   "n_files": 4,
+   "n_bytes": 60805,
+   "sample": [
+    [
+     "A14_increment_table.md",
+     "73ad692b5465"
+    ],
+    [
+     "A14_literature_verification.md",
+     "5c7ceaf538a1"
+    ],
+    [
+     "A14_parameter_anchors.csv",
+     "e1d8f9b57449"
+    ],
+    [
+     "A14_refs.bib",
+     "e9fec8715cd5"
+    ]
+   ]
+  },
+  "A24_外部锚定": {
+   "n_files": 14,
+   "n_bytes": 480983,
+   "sample": [
+    [
+     "a24_repro_log.txt",
+     "afd58c31f907"
+    ],
+    [
+     "A24_外部锚定报告.md",
+     "a2c237a2ba90"
+    ],
+    [
+     "a24b_repro_log.txt",
+     "d717d1a887fd"
+    ],
+    [
+     "DATA_PROVENANCE.md",
+     "9866d9065f17"
+    ],
+    [
+     "explain_transition.py",
+     "330856437144"
+    ]
+   ]
+  },
+  "A29_文献核验": {
+   "n_files": 16,
+   "n_bytes": 163822,
+   "sample": [
+    [
+     "_final.py",
+     "db9f1c8b8c90"
+    ],
+    [
+     "_final_out.txt",
+     "7f1013a7ff2c"
+    ],
+    [
+     "_follow.py",
+     "20b9ef4d5ac1"
+    ],
+    [
+     "_follow_out.txt",
+     "aee23a0e4c87"
+    ],
+    [
+     "_gate.py",
+     "ca3e04e366a2"
+    ]
+   ]
+  },
+  "A39_WP8_外部效度": {
+   "n_files": 20,
+   "n_bytes": 108705,
+   "sample": [
+    [
+     "wp10_industrial_tariff_by_city.csv",
+     "716cfa723fd1"
+    ],
+    [
+     "wp10_log.txt",
+     "4befbdf3f224"
+    ],
+    [
+     "wp10_water_price.py",
+     "5ec66572e7f6"
+    ],
+    [
+     "wp10_water_price_summary.json",
+     "e08230ef6189"
+    ],
+    [
+     "WP10_报告.md",
+     "e9479fbb2a46"
+    ]
+   ]
+  },
+  "A0_预注册": {
+   "n_files": 4,
+   "n_bytes": 23892,
+   "sample": [
+    [
+     "preregistration.md",
+     "bd4eab72b579"
+    ],
+    [
+     "preregistration_amendment_1.md",
+     "e04ef37da22c"
+    ],
+    [
+     "preregistration_amendment_2.md",
+     "0ae68a0c0f0d"
+    ],
+    [
+     "preregistration_amendment_3.md",
+     "07976bde3fd9"
+    ]
+   ]
+  }
+ }
+}

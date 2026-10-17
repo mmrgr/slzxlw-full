@@ -1,0 +1,103 @@
+{
+ "purpose": "检验 化学(q)+分配(pool_scale) 联合判据能否构成干预前独立预测",
+ "n_all": 839,
+ "n_eff": 759,
+ "n_zero_excluded": 80,
+ "majority_baseline": 0.8089591567852438,
+ "candidate_criteria": {
+  "C1  仅化学 q>0": {
+   "acc": 0.6745718050065876,
+   "tp": 367,
+   "fp": 0,
+   "tn": 145,
+   "fn": 247
+  },
+  "C2  仅分配 pool_scale>=2": {
+   "acc": 0.7878787878787878,
+   "tp": 506,
+   "fp": 53,
+   "tn": 92,
+   "fn": 108
+  },
+  "C3  q>0 且 pool_scale>=2": {
+   "acc": 0.5480895915678524,
+   "tp": 271,
+   "fp": 0,
+   "tn": 145,
+   "fn": 343
+  },
+  "C4  q>0 或 pool_scale>=2": {
+   "acc": 0.9143610013175231,
+   "tp": 602,
+   "fp": 53,
+   "tn": 92,
+   "fn": 12
+  },
+  "C5  q + a*(pool_scale-1) > 0": {
+   "acc": 0.8735177865612648,
+   "tp": 578,
+   "fp": 60,
+   "tn": 85,
+   "fn": 36
+  },
+  "C6  phi_x_pool >= 0.8": {
+   "acc": 0.6772068511198946,
+   "tp": 434,
+   "fp": 65,
+   "tn": 80,
+   "fn": 180
+  }
+ },
+ "best_full_sample": {
+  "name": "C4  q>0 或 pool_scale>=2",
+  "acc": 0.9143610013175231
+ },
+ "leave_one_sample_out": [
+  {
+   "held_out": "AI-UWM model assumption",
+   "picked": "C4  q>0 或 pool_scale>=2",
+   "train_acc": 0.8869565217391304,
+   "test_acc": 1.0,
+   "test_baseline": 1.0,
+   "n_test": 184
+  },
+  {
+   "held_out": "Figshare RW (2025, paired study)",
+   "picked": "C4  q>0 或 pool_scale>=2",
+   "train_acc": 0.9786856127886323,
+   "test_acc": 0.7295918367346939,
+   "test_baseline": 0.5051020408163265,
+   "n_test": 196
+  },
+  {
+   "held_out": "IEUA RP-1 (2025, tertiary)",
+   "picked": "C4  q>0 或 pool_scale>=2",
+   "train_acc": 0.9058614564831261,
+   "test_acc": 0.9387755102040817,
+   "test_baseline": 0.7551020408163265,
+   "n_test": 196
+  },
+  {
+   "held_out": "LADWP AWPF (2012, RO product)",
+   "picked": "C4  q>0 或 pool_scale>=2",
+   "train_acc": 0.8871527777777778,
+   "test_acc": 1.0,
+   "test_baseline": 1.0,
+   "n_test": 183
+  }
+ ],
+ "oos_mean_test_acc": 0.9170918367346939,
+ "oos_mean_baseline": 0.8150510204081632,
+ "oos_gain": 0.10204081632653061,
+ "verdict": "PREDICTIVE_OUT_OF_SAMPLE",
+ "forbidden_inputs_confirmed": [
+  "x_ai_B1_ml",
+  "M0_ml",
+  "M1_ml",
+  "C_ml",
+  "F_ml",
+  "dS_pot_ml"
+ ],
+ "runtime_s": 0.0,
+ "discipline_note": "预测仅用干预前特征; leave-one-group-out 防泄漏; 报 n_eff"
+}

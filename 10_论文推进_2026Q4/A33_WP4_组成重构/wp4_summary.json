@@ -1,0 +1,568 @@
+{
+ "task": "WP4-1 完整物种水样上的城市级 dS_pot (主口径 B1 − B2)",
+ "estimator": "dS_pot = C - F = (inc_B2 - inc_B1) - (M0 - M1) - x_ai",
+ "sign_convention": "dS_pot>0 => 城市净取水上升(有害); <0 => 下降(有益)",
+ "panel": "B_full",
+ "panel_limits": {
+  "TDS": 2200.0,
+  "chloride": 700.0,
+  "hardness": 750.0,
+  "alkalinity": 350.0,
+  "silica": 175.0
+ },
+ "core_species_required": [
+  "TDS",
+  "chloride",
+  "hardness",
+  "alkalinity",
+  "silica"
+ ],
+ "phi_grid": [
+  0.0,
+  0.2,
+  0.4,
+  0.6,
+  0.8
+ ],
+ "pool_grid": [
+  1.0,
+  2.0,
+  3.0
+ ],
+ "domains": [
+  "ha",
+  "co"
+ ],
+ "samples_authoritative": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "n_species": 5,
+   "missing": [],
+   "status": "COMPLETE",
+   "is_reclaimed": true,
+   "sclass": "municipal tertiary reclaimed"
+  },
+  "LADWP AWPF (2012, RO product)": {
+   "n_species": 5,
+   "missing": [],
+   "status": "COMPLETE",
+   "is_reclaimed": true,
+   "sclass": "RO product (advanced treated)"
+  },
+  "Figshare RW (2025, paired study)": {
+   "n_species": 4,
+   "missing": [
+    "silica"
+   ],
+   "status": "INCOMPLETE",
+   "is_reclaimed": true,
+   "sclass": "reclaimed (RW, high-salinity)"
+  },
+  "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)": {
+   "n_species": 3,
+   "missing": [
+    "alkalinity",
+    "silica"
+   ],
+   "status": "INCOMPLETE",
+   "is_reclaimed": false,
+   "sclass": "brackish (BW) — NOT reclaimed water"
+  },
+  "AI-UWM model assumption": {
+   "n_species": 2,
+   "missing": [
+    "hardness",
+    "alkalinity",
+    "silica"
+   ],
+   "status": "INCOMPLETE",
+   "is_reclaimed": true,
+   "sclass": "assumed in main model"
+  }
+ },
+ "primary_samples_complete": [
+  "IEUA RP-1 (2025, tertiary)",
+  "LADWP AWPF (2012, RO product)"
+ ],
+ "incomplete_samples_excluded_from_primary": [
+  "Figshare RW (2025, paired study)",
+  "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+  "AI-UWM model assumption"
+ ],
+ "brackish_excluded": [
+  "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)"
+ ],
+ "cache_key_probe_coc": [
+  3.230071,
+  4.371853
+ ],
+ "cache_key_includes_q": true,
+ "gates": {
+  "gate_1_B2_converged_unique": 47,
+  "gate_2_B1_healthy_single_root_closed": 60,
+  "gate_3_coc_not_degenerate": 60,
+  "n_all": 60,
+  "n_eff": 47,
+  "n_excluded": 13,
+  "excluded_share_pct": 21.67,
+  "status_counts_B2": {
+   "converged_unique": 47,
+   "quality_not_converged": 12,
+   "no_convergence": 1
+  },
+  "status_counts_B1": {
+   "quality_not_converged": 60
+  },
+  "b1_quality_status_counts": {
+   "not_applicable": 60
+  },
+  "n_b1_not_applicable": 60,
+  "n_coc_floor_degenerate": 0,
+  "n_excluded_non_converged": 13,
+  "coc_floor_threshold": 1.000001,
+  "zero_value_convention": "|dS_pot| < 1e-06 ML 记为 0",
+  "b1_status_vocabulary_defect": "B1(ai_target=0) 的 quality_solver_status='not_applicable' 未被联合求解器白名单 {'converged','ready'} 接受, 导致 status='quality_not_converged'。B1 实为健康解 (root=1, closure_residual=0)。按 CHI_SEMANTICS §4 属状态词表跨路径不一致。"
+ },
+ "identity": {
+  "definition_dS_eq_C_minus_F_max_rel_residual": 0.0,
+  "conservation_rearrangement_max_rel_residual": 0.0,
+  "conservation_rearrangement_RAW_displacement_max_rel_residual": 1.174214723461068,
+  "relative_tolerance_used": 1e-09,
+  "max_abs_dS_ml_order_of_magnitude": 25438.555878314917,
+  "passes": true,
+  "note": "两式均为代数重排, 不构成科学发现 (WP2 §2.1). 报出仅作记账一致性检验。C 必须含 max(0,.)。"
+ },
+ "displacement_identity": {
+  "regime1_pool_exhausted_n": 15,
+  "regime1_max_abs_diff_from_minus_x_ai": 3.637978807091713e-12,
+  "regime2_incumbent_saturated_n": 0,
+  "regime2_max_abs_displacement": null,
+  "regime3_partial_n": 32,
+  "n_clamped_C_to_zero": 47,
+  "note": "池在 B1 被既有用户用尽时带符号位移恒等于 -x_ai; 此时 C 必须取 max(0,.) 记 0, 否则 dS 会重复扣减 x_ai (双计)。与 A13 已评审口径一致。其余制度位移为 0 或介于 -x_ai 与 0 之间。"
+ },
+ "overall_symbol_distribution": {
+  "n_eff": 47,
+  "n_dS_negative_beneficial": 47,
+  "n_dS_zero": 0,
+  "n_dS_positive_harmful": 0,
+  "n_q_positive": 23,
+  "n_q_negative": 24,
+  "dS_median_ml": -11235.629110639818,
+  "dS_min_ml": -25438.555878314917,
+  "dS_max_ml": -2879.39629484817
+ },
+ "h3_test": {
+  "n_eff": 47,
+  "zero_value_convention": "|dS_pot| < 1e-06 ML 记为 0, 不计入正负计数",
+  "n_q_positive": 23,
+  "n_q_negative": 24,
+  "n_q_zero": 0,
+  "n_qpos_and_beneficial": 23,
+  "n_qpos_and_harmful": 0,
+  "n_qpos_and_zero": 0,
+  "n_qneg": 24,
+  "n_qneg_and_beneficial": 24,
+  "n_qneg_and_harmful": 0,
+  "verdict": "SUPPORTED",
+  "counterexample_examples": []
+ },
+ "h4_sign_reversal": {
+  "ha|ps=1": {
+   "dS_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -7585.088415776312,
+    "LADWP AWPF (2012, RO product)": -10931.701631054693
+   },
+   "q_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -0.04391839946061372,
+    "LADWP AWPF (2012, RO product)": 0.10694408175677057
+   },
+   "sign_reversal": false,
+   "q_sign_reversal": true
+  },
+  "ha|ps=2": {
+   "dS_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -15572.265547173141,
+    "LADWP AWPF (2012, RO product)": -19272.065016353616
+   },
+   "q_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -0.08647064512968063,
+    "LADWP AWPF (2012, RO product)": 0.12
+   },
+   "sign_reversal": false,
+   "q_sign_reversal": true
+  },
+  "ha|ps=3": {
+   "dS_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -17399.78714750015,
+    "LADWP AWPF (2012, RO product)": -19848.91926726156
+   },
+   "q_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -0.09571756808459757,
+    "LADWP AWPF (2012, RO product)": 0.12
+   },
+   "sign_reversal": false,
+   "q_sign_reversal": true
+  },
+  "co|ps=1": {
+   "dS_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -6727.539465343098,
+    "LADWP AWPF (2012, RO product)": -9767.19864029546
+   },
+   "q_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -0.03953392425924542,
+    "LADWP AWPF (2012, RO product)": 0.09568322954032574
+   },
+   "sign_reversal": false,
+   "q_sign_reversal": true
+  },
+  "co|ps=2": {
+   "dS_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -13781.548845715923,
+    "LADWP AWPF (2012, RO product)": -17418.39038153047
+   },
+   "q_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -0.07800241141766313,
+    "LADWP AWPF (2012, RO product)": 0.12
+   },
+   "sign_reversal": false,
+   "q_sign_reversal": true
+  },
+  "co|ps=3": {
+   "dS_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -17199.42697165174,
+    "LADWP AWPF (2012, RO product)": -19619.005685117507
+   },
+   "q_by_sample": {
+    "IEUA RP-1 (2025, tertiary)": -0.09563232524693015,
+    "LADWP AWPF (2012, RO product)": 0.12
+   },
+   "sign_reversal": false,
+   "q_sign_reversal": true
+  }
+ },
+ "by_sample": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "n_eff": 24,
+   "n_species": 5,
+   "missing": [],
+   "CoC0_range": [
+    3.5,
+    3.5
+   ],
+   "CoC1_range": [
+    2.653407593406437,
+    3.355066593535228
+   ],
+   "q_range": [
+    -0.1276234241127968,
+    -0.017279347807168974
+   ],
+   "q_sign_uniform": true,
+   "n_dS_negative": 24,
+   "n_dS_zero": 0,
+   "n_dS_positive": 0
+  },
+  "LADWP AWPF (2012, RO product)": {
+   "n_eff": 23,
+   "n_species": 5,
+   "missing": [],
+   "CoC0_range": [
+    3.5,
+    3.5
+   ],
+   "CoC1_range": [
+    3.893702917771426,
+    5.0
+   ],
+   "q_range": [
+    0.04044509055629373,
+    0.12
+   ],
+   "q_sign_uniform": true,
+   "n_dS_negative": 23,
+   "n_dS_zero": 0,
+   "n_dS_positive": 0
+  }
+ },
+ "by_domain_sample_pool": [
+  {
+   "domain": "co",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "pool_scale": 1.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -8060.418222285585,
+   "dS_max": -2879.39629484817,
+   "q_min": -0.04702744764089587,
+   "q_max": -0.017279347807168974
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "pool_scale": 2.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -16534.367665738377,
+   "dS_max": -5385.291507152512,
+   "q_min": -0.09225105381011967,
+   "q_max": -0.03187744176387786
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "pool_scale": 3.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -23704.52572437573,
+   "dS_max": -5385.291507152512,
+   "q_min": -0.12750976699590685,
+   "q_max": -0.03187744176387786
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "pool_scale": 1.0,
+   "n": 3,
+   "n_neg": 3,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -11625.652003871004,
+   "dS_max": -4334.682411575682,
+   "q_min": 0.04044509055629373,
+   "q_max": 0.11585920058563351
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "pool_scale": 2.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -20359.08747719017,
+   "dS_max": -7700.651207141529,
+   "q_min": 0.07403535849660639,
+   "q_max": 0.12
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "pool_scale": 3.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -25143.896535516255,
+   "dS_max": -7700.651207141529,
+   "q_min": 0.07403535849660639,
+   "q_max": 0.12
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "pool_scale": 1.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -9056.183469397196,
+   "dS_max": -3276.868189470529,
+   "q_min": -0.05202795720100403,
+   "q_max": -0.019418382972478894
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "pool_scale": 2.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -18615.243983644843,
+   "dS_max": -5447.704098548412,
+   "q_min": -0.10177188411355019,
+   "q_max": -0.03190585601329798
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "pool_scale": 3.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -23981.45867310037,
+   "dS_max": -5447.704098548412,
+   "q_min": -0.1276234241127968,
+   "q_max": -0.03190585601329798
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "pool_scale": 1.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -12799.87751265755,
+   "dS_max": -4909.121220747191,
+   "q_min": 0.045512490514963866,
+   "q_max": 0.12
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "pool_scale": 2.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -22519.745591213607,
+   "dS_max": -7792.2100805703,
+   "q_min": 0.0741013505908847,
+   "q_max": 0.12
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "pool_scale": 3.0,
+   "n": 4,
+   "n_neg": 4,
+   "n_zero": 0,
+   "n_pos": 0,
+   "dS_min": -25438.555878314917,
+   "dS_max": -7792.2100805703,
+   "q_min": 0.0741013505908847,
+   "q_max": 0.12
+  }
+ ],
+ "excluded_scenarios": [
+  {
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "phi": 0.0,
+   "pool_scale": 1.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "phi": 0.0,
+   "pool_scale": 2.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "phi": 0.0,
+   "pool_scale": 3.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "phi": 0.0,
+   "pool_scale": 1.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "phi": 0.0,
+   "pool_scale": 2.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "phi": 0.0,
+   "pool_scale": 3.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "phi": 0.0,
+   "pool_scale": 1.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "phi": 0.0,
+   "pool_scale": 2.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "phi": 0.0,
+   "pool_scale": 3.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "phi": 0.0,
+   "pool_scale": 1.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "phi": 0.4,
+   "pool_scale": 1.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:no_convergence",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "phi": 0.0,
+   "pool_scale": 2.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "phi": 0.0,
+   "pool_scale": 3.0,
+   "reason": "B2_NOT_CONVERGED_UNIQUE:quality_not_converged",
+   "CoC0": 3.5,
+   "CoC1": 3.5
+  }
+ ],
+ "n_excluded_total": 13,
+ "runtime_s": 3.0,
+ "discipline_note": "引擎只读; 主口径仅完整物种水样; 求解失败/退化情景显式标记并剔除; 恒等式用相对容差; 符号计数声明零值约定与实际 n_eff; 空集/缺列标 NOT_IDENTIFIABLE。",
+ "regression_note": "每情景使用独立 cache, 以排除 M5(缓存键缺 q) 历史缺陷复发; 并另用共享 cache 探针自检组成维度是否仍生效。"
+}

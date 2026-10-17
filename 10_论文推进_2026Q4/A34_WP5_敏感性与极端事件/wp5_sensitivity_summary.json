@@ -1,0 +1,942 @@
+{
+ "task": "WP5 任务 A: 全局敏感性 (Morris 筛选 + Sobol 方差分解), 现行 baseline 限值重跑",
+ "why_rerun": "旧 A10/T10_morris.csv & T10_sobol.csv 使用旧占位限值 {TDS 2200, Cl 500, hardness 700, alkalinity 500, silica 150} 与旧估计量 y=S_city/M0 (4 控制量, 无化学维度), 已过时, 不可用于新结论。",
+ "estimand": "dS_pot = C - F = max(0, inc_B2 - inc_B1) - [(M0 - M1) + x_ai]",
+ "sign_convention": "dS_pot > 0 => 城市净取水上升 (有害); < 0 => 下降 (有益)",
+ "limit_set": "baseline",
+ "panel": "B_full",
+ "panel_limits": {
+  "TDS": 2200.0,
+  "chloride": 700.0,
+  "hardness": 750.0,
+  "alkalinity": 350.0,
+  "silica": 175.0
+ },
+ "panel_limits_source": "GB/T 50050-2017 循环冷却水 (A27 引用档, source_verified)",
+ "chemistry_panel_A_note": {
+  "A_engine2": {
+   "TDS": 2200.0,
+   "chloride": 500.0
+  },
+  "role": "仅作结构不确定性对照, 不用于主结论"
+ },
+ "samples_authoritative": {
+  "IEUA RP-1 (2025, tertiary)": {
+   "n_species": 5,
+   "missing": [],
+   "status": "COMPLETE",
+   "is_reclaimed": true,
+   "sclass": "municipal tertiary reclaimed"
+  },
+  "LADWP AWPF (2012, RO product)": {
+   "n_species": 5,
+   "missing": [],
+   "status": "COMPLETE",
+   "is_reclaimed": true,
+   "sclass": "RO product (advanced treated)"
+  },
+  "Figshare RW (2025, paired study)": {
+   "n_species": 4,
+   "missing": [
+    "silica"
+   ],
+   "status": "INCOMPLETE",
+   "is_reclaimed": true,
+   "sclass": "reclaimed (RW, high-salinity)"
+  },
+  "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)": {
+   "n_species": 3,
+   "missing": [
+    "alkalinity",
+    "silica"
+   ],
+   "status": "INCOMPLETE",
+   "is_reclaimed": false,
+   "sclass": "brackish (BW) — NOT reclaimed water"
+  },
+  "AI-UWM model assumption": {
+   "n_species": 2,
+   "missing": [
+    "hardness",
+    "alkalinity",
+    "silica"
+   ],
+   "status": "INCOMPLETE",
+   "is_reclaimed": true,
+   "sclass": "assumed in main model"
+  }
+ },
+ "primary_samples_complete": [
+  "IEUA RP-1 (2025, tertiary)",
+  "LADWP AWPF (2012, RO product)"
+ ],
+ "brackish_banned_not_used": [
+  "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)"
+ ],
+ "incomplete_samples_excluded": [
+  "Figshare RW (2025, paired study)",
+  "Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)",
+  "AI-UWM model assumption"
+ ],
+ "param_bounds_stress": {
+  "phi": [
+   0.15,
+   0.95
+  ],
+  "pool_scale": [
+   0.4,
+   3.0
+  ],
+  "gap_scale": [
+   0.4,
+   3.0
+  ],
+  "dp_scale": [
+   0.0,
+   0.6
+  ],
+  "e_scale": [
+   0.8,
+   1.6
+  ],
+  "coc_design": [
+   3.4,
+   6.0
+  ],
+  "limit_scale": [
+   0.4,
+   3.0
+  ],
+  "x_TDS": [
+   0.5,
+   3.5
+  ],
+  "x_chloride": [
+   0.5,
+   3.5
+  ],
+  "x_hardness": [
+   0.5,
+   3.5
+  ],
+  "x_alkalinity": [
+   0.5,
+   3.5
+  ],
+  "x_silica": [
+   0.5,
+   3.5
+  ]
+ },
+ "param_bounds_conservative": {
+  "phi": [
+   0.3,
+   0.8
+  ],
+  "pool_scale": [
+   0.8,
+   1.6
+  ],
+  "gap_scale": [
+   0.8,
+   1.6
+  ],
+  "dp_scale": [
+   0.0,
+   0.3
+  ],
+  "e_scale": [
+   0.9,
+   1.25
+  ],
+  "coc_design": [
+   4.0,
+   5.5
+  ],
+  "limit_scale": [
+   0.5,
+   2.0
+  ],
+  "x_TDS": [
+   0.75,
+   1.75
+  ],
+  "x_chloride": [
+   0.75,
+   1.75
+  ],
+  "x_hardness": [
+   0.75,
+   1.75
+  ],
+  "x_alkalinity": [
+   0.75,
+   1.75
+  ],
+  "x_silica": [
+   0.75,
+   1.75
+  ]
+ },
+ "estimand_anchor_check": {
+  "config": "ha|IEUA RP-1|phi=0.6|pool=P0|gap=gap_0|dp=0|e_scale=1|ls=1|coc=5",
+  "wp5_dS_pot_ml": -7585.088415776312,
+  "wp4_reference_dS_pot_ml": -7585.088415776312,
+  "relative_difference": 0.0,
+  "tolerance": 1e-06,
+  "passes": true,
+  "gate": {
+   "status_B2": "converged_unique",
+   "b1_healthy": true,
+   "CoC0": 3.5,
+   "CoC1": 3.153732761924444
+  },
+  "identity_rel_residual_C_minus_F": 0.0
+ },
+ "cache_key_probe_CoC1_by_sample": {
+  "IEUA RP-1 (2025, tertiary)": 3.153733,
+  "LADWP AWPF (2012, RO product)": 4.777245
+ },
+ "cache_key_includes_q": true,
+ "morris": {
+  "implementation": "wp5_morris_sobol.morris_trajectory_sensitivity (教科书轨迹, p 级网格, 固定网格步长 Δ); 引擎 aiuwm.sensitivity.morris_sensitivity 未使用 —— 理由见 summary['morris']['engine_impl_replaced_because']",
+  "engine_impl_replaced_because": "引擎实现按 min(high, base+Δ) 或 max(low, base-Δ) 取点, 当 base+Δ 恰落在 high 边界时实际步长可能远小于 Δ, 但效应仍除以 Δ/(high-low), 会把效应系统性放大; 且它不检测 actual_delta==0。本脚本改用固定网格步长并显式统计 n_zero_delta, 以消除该边界退化。",
+  "trajectories": 32,
+  "levels": 8,
+  "normalized_delta": 0.5714285714285714,
+  "by_config": {
+   "ha|IEUA": {
+    "levels": 8,
+    "normalized_delta": 0.5714285714285714,
+    "trajectories": 32,
+    "n_zero_delta": 0,
+    "n_nan_effects": 4,
+    "n_base_evaluations": 32,
+    "n_eval": 416,
+    "n_not_identifiable": 2,
+    "n_gate_failures": 2,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 0.48,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:non_unique": 1,
+     "B2_NOT_CONVERGED_UNIQUE:no_convergence": 1
+    },
+    "engine_raise_examples": []
+   },
+   "ha|LADWP": {
+    "levels": 8,
+    "normalized_delta": 0.5714285714285714,
+    "trajectories": 32,
+    "n_zero_delta": 0,
+    "n_nan_effects": 2,
+    "n_base_evaluations": 32,
+    "n_eval": 416,
+    "n_not_identifiable": 1,
+    "n_gate_failures": 1,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 0.24,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:no_convergence": 1
+    },
+    "engine_raise_examples": []
+   },
+   "co|IEUA": {
+    "levels": 8,
+    "normalized_delta": 0.5714285714285714,
+    "trajectories": 32,
+    "n_zero_delta": 0,
+    "n_nan_effects": 2,
+    "n_base_evaluations": 32,
+    "n_eval": 416,
+    "n_not_identifiable": 1,
+    "n_gate_failures": 1,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 0.24,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:non_unique": 1
+    },
+    "engine_raise_examples": []
+   },
+   "co|LADWP": {
+    "levels": 8,
+    "normalized_delta": 0.5714285714285714,
+    "trajectories": 32,
+    "n_zero_delta": 0,
+    "n_nan_effects": 1,
+    "n_base_evaluations": 32,
+    "n_eval": 416,
+    "n_not_identifiable": 1,
+    "n_gate_failures": 1,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 0.24,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:no_convergence": 1
+    },
+    "engine_raise_examples": []
+   }
+  },
+  "main_config": "ha|IEUA",
+  "ranking_main": [
+   {
+    "parameter": "limit_scale",
+    "mu": -40944.497272,
+    "mu_star": 45061.527045,
+    "sigma": 92110.16133,
+    "mu_abs_ratio": 0.908635
+   },
+   {
+    "parameter": "x_alkalinity",
+    "mu": 24840.709656,
+    "mu_star": 24840.709656,
+    "sigma": 55236.166304,
+    "mu_abs_ratio": 1.0
+   },
+   {
+    "parameter": "phi",
+    "mu": -12693.9881,
+    "mu_star": 14489.114366,
+    "sigma": 11476.137984,
+    "mu_abs_ratio": 0.876105
+   },
+   {
+    "parameter": "gap_scale",
+    "mu": 4871.000723,
+    "mu_star": 11591.976816,
+    "sigma": 16277.530516,
+    "mu_abs_ratio": 0.420204
+   },
+   {
+    "parameter": "pool_scale",
+    "mu": -1540.834513,
+    "mu_star": 10634.358348,
+    "sigma": 26981.692276,
+    "mu_abs_ratio": 0.144892
+   },
+   {
+    "parameter": "e_scale",
+    "mu": 1052.120342,
+    "mu_star": 8710.14493,
+    "sigma": 19505.78801,
+    "mu_abs_ratio": 0.120793
+   },
+   {
+    "parameter": "dp_scale",
+    "mu": 1635.429716,
+    "mu_star": 5266.28605,
+    "sigma": 16855.740742,
+    "mu_abs_ratio": 0.310547
+   },
+   {
+    "parameter": "coc_design",
+    "mu": 2033.588583,
+    "mu_star": 2033.588583,
+    "sigma": 2368.358757,
+    "mu_abs_ratio": 1.0
+   },
+   {
+    "parameter": "x_TDS",
+    "mu": 202.018317,
+    "mu_star": 202.018317,
+    "sigma": 1026.27138,
+    "mu_abs_ratio": 1.0
+   },
+   {
+    "parameter": "x_silica",
+    "mu": 92.424657,
+    "mu_star": 92.424657,
+    "sigma": 522.832811,
+    "mu_abs_ratio": 1.0
+   },
+   {
+    "parameter": "x_hardness",
+    "mu": 14.846963,
+    "mu_star": 14.846963,
+    "sigma": 82.664391,
+    "mu_abs_ratio": 1.0
+   },
+   {
+    "parameter": "x_chloride",
+    "mu": 0.0,
+    "mu_star": 0.0,
+    "sigma": 0.0,
+    "mu_abs_ratio": NaN
+   }
+  ],
+  "top3_main": [
+   {
+    "parameter": "limit_scale",
+    "mu_star": 45061.527045
+   },
+   {
+    "parameter": "x_alkalinity",
+    "mu_star": 24840.709656
+   },
+   {
+    "parameter": "phi",
+    "mu_star": 14489.114366
+   }
+  ]
+ },
+ "sobol": {
+  "implementation": "aiuwm.sensitivity.sobol_sensitivity (Saltelli), 未改动",
+  "samples": 256,
+  "params_used": [
+   "limit_scale",
+   "x_alkalinity",
+   "phi",
+   "gap_scale",
+   "pool_scale",
+   "e_scale",
+   "dp_scale"
+  ],
+  "defect_found_and_fixed": {
+   "symptom": "首轮运行 4/4 配置的 Sobol 指数全部为 NaN",
+   "root_cause": "本脚本 Evaluator._collect / chem_map 对参数点**硬下标取键**, 而 Sobol 降维后参数点只含被抽样的子集 -> 每次都 KeyError; 旧 raw() 用裸 `except Exception` 把它吞成 NaN。",
+   "why_dangerous": "这正是任务书警告的'不得用替代品蒙混'的反面: 代码缺陷被伪装成'情景不可辨识', 若不复核就会输出'4/4 配置 NOT_IDENTIFIABLE'这一**假结论**。",
+   "fix": "(i) chem_map/_collect 对未抽样维回落到冻结取值 (化学 1.0, 其余为冻结默认); (ii) Evaluator.raw 只吞 ValueError/ZeroDivisionError/OverflowError 这类**引擎在不可行情景上抛错**的信号, KeyError 等代码缺陷直接向上抛; (iii) sobol_guarded 独立普查 NaN 并把 '门禁失败' 与 '引擎抛错' 分别计数。",
+   "verification": "新增 _probe9 断言: BrokenEvaluator 抛 KeyError 时必须向上传播 (已 PASS)。",
+   "status": "RESOLVED"
+  },
+  "dimension_reduction": {
+   "n_full": 12,
+   "n_used": 7,
+   "cost_full_evals": 3584,
+   "cost_used_evals": 2304,
+   "note": "显式取舍: 计算量控制。Sobol 指数只对这 7 维的条件方差有效; 未纳入维度的方差并入 ST(总阶)。"
+  },
+  "by_config": {
+   "ha|IEUA": {
+    "samples": 256,
+    "n_design_rows": 512,
+    "n_nan": 0,
+    "nan_share_pct": 0.0,
+    "n_gate_failures_during_design": 0,
+    "n_engine_raises_during_design": 0,
+    "gate_failure_reasons": {},
+    "verdict": "OK (设计内无门禁失败点; 指数直接复用引擎 aiuwm.sobol_sensitivity)",
+    "engine_path_all_finite": true,
+    "n_eval": 2816,
+    "n_not_identifiable": 0,
+    "n_gate_failures": 0,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 0.0,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {},
+    "engine_raise_examples": []
+   },
+   "ha|LADWP": {
+    "samples": 256,
+    "n_design_rows": 512,
+    "n_nan": 7,
+    "nan_share_pct": 1.37,
+    "n_gate_failures_during_design": 7,
+    "n_engine_raises_during_design": 0,
+    "gate_failure_reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:no_convergence": 7
+    },
+    "verdict": "NOT_IDENTIFIABLE: Saltelli 设计含门禁失败点, NaN 会污染方差, Sobol 指数不可解释 —— 如实报出, 不插补、不蒙混",
+    "n_eval": 512,
+    "n_not_identifiable": 7,
+    "n_gate_failures": 7,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 1.37,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:no_convergence": 7
+    },
+    "engine_raise_examples": []
+   },
+   "co|IEUA": {
+    "samples": 256,
+    "n_design_rows": 512,
+    "n_nan": 0,
+    "nan_share_pct": 0.0,
+    "n_gate_failures_during_design": 0,
+    "n_engine_raises_during_design": 0,
+    "gate_failure_reasons": {},
+    "verdict": "OK (设计内无门禁失败点; 指数直接复用引擎 aiuwm.sobol_sensitivity)",
+    "engine_path_all_finite": true,
+    "n_eval": 2816,
+    "n_not_identifiable": 0,
+    "n_gate_failures": 0,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 0.0,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {},
+    "engine_raise_examples": []
+   },
+   "co|LADWP": {
+    "samples": 256,
+    "n_design_rows": 512,
+    "n_nan": 6,
+    "nan_share_pct": 1.17,
+    "n_gate_failures_during_design": 6,
+    "n_engine_raises_during_design": 0,
+    "gate_failure_reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:no_convergence": 6
+    },
+    "verdict": "NOT_IDENTIFIABLE: Saltelli 设计含门禁失败点, NaN 会污染方差, Sobol 指数不可解释 —— 如实报出, 不插补、不蒙混",
+    "n_eval": 512,
+    "n_not_identifiable": 6,
+    "n_gate_failures": 6,
+    "n_engine_raises": 0,
+    "not_identifiable_share_pct": 1.17,
+    "engine_raise_share_pct": 0.0,
+    "reasons": {
+     "B2_NOT_CONVERGED_UNIQUE:no_convergence": 6
+    },
+    "engine_raise_examples": []
+   }
+  },
+  "main_config": "ha|IEUA",
+  "main": [
+   {
+    "parameter": "limit_scale",
+    "S1": 0.172006,
+    "ST": 0.944406
+   },
+   {
+    "parameter": "x_alkalinity",
+    "S1": 0.036676,
+    "ST": 0.681624
+   },
+   {
+    "parameter": "pool_scale",
+    "S1": 0.013372,
+    "ST": 0.251017
+   },
+   {
+    "parameter": "phi",
+    "S1": -0.002261,
+    "ST": 0.151494
+   },
+   {
+    "parameter": "e_scale",
+    "S1": 0.002554,
+    "ST": 0.067413
+   },
+   {
+    "parameter": "gap_scale",
+    "S1": 0.000401,
+    "ST": 0.02895
+   },
+   {
+    "parameter": "dp_scale",
+    "S1": 0.000255,
+    "ST": 0.012149
+   }
+  ]
+ },
+ "sign_flip_diagnosis": {
+  "method": "固定其余参数于冻结取值 (phi=0.6, ps=gs=1, dp=0, e=1, coc_design=5, ls=1, 化学 x=1), 沿每个参数的边界取 41 点, 对 2 域 × 2 水样求 dS_pot, 统计符号取值与沿曲线变号次数; 另以 401 点精细定位 ha|IEUA 上的首个翻转点。",
+  "zero_value_convention": "|dS_pot| < 1e-06 ML 记为 0",
+  "table": [
+   {
+    "parameter": "x_alkalinity",
+    "low": 0.5,
+    "high": 3.5,
+    "baseline_value": 1.0,
+    "n_reliable_points": 162,
+    "n_sign_negative": 138,
+    "n_sign_positive": 24,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 44,
+    "sign_varying": true,
+    "first_flip_value_ha_IEUA": 2.615,
+    "min_dS_ml": -11011.279997,
+    "max_dS_ml": 5374.887949
+   },
+   {
+    "parameter": "phi",
+    "low": 0.15,
+    "high": 0.95,
+    "baseline_value": 0.6,
+    "n_reliable_points": 163,
+    "n_sign_negative": 163,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -13820.290239,
+    "max_dS_ml": -2237.141884
+   },
+   {
+    "parameter": "pool_scale",
+    "low": 0.4,
+    "high": 3.0,
+    "baseline_value": 1.0,
+    "n_reliable_points": 163,
+    "n_sign_negative": 163,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -19848.919267,
+    "max_dS_ml": -2652.679106
+   },
+   {
+    "parameter": "gap_scale",
+    "low": 0.4,
+    "high": 3.0,
+    "baseline_value": 1.0,
+    "n_reliable_points": 163,
+    "n_sign_negative": 163,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -16594.870077,
+    "max_dS_ml": -2879.396295
+   },
+   {
+    "parameter": "dp_scale",
+    "low": 0.0,
+    "high": 0.6,
+    "baseline_value": 0.0,
+    "n_reliable_points": 163,
+    "n_sign_negative": 163,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -16033.6539,
+    "max_dS_ml": -6727.539465
+   },
+   {
+    "parameter": "e_scale",
+    "low": 0.8,
+    "high": 1.6,
+    "baseline_value": 1.0,
+    "n_reliable_points": 162,
+    "n_sign_negative": 162,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -15731.304378,
+    "max_dS_ml": -5969.724744
+   },
+   {
+    "parameter": "coc_design",
+    "low": 3.4,
+    "high": 6.0,
+    "baseline_value": 5.0,
+    "n_reliable_points": 164,
+    "n_sign_negative": 164,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -10931.701631,
+    "max_dS_ml": -6727.539465
+   },
+   {
+    "parameter": "limit_scale",
+    "low": 0.4,
+    "high": 3.0,
+    "baseline_value": 1.0,
+    "n_reliable_points": 163,
+    "n_sign_negative": 163,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -36454.309343,
+    "max_dS_ml": -398.933455
+   },
+   {
+    "parameter": "x_TDS",
+    "low": 0.5,
+    "high": 3.5,
+    "baseline_value": 1.0,
+    "n_reliable_points": 164,
+    "n_sign_negative": 164,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -10931.701631,
+    "max_dS_ml": -6727.539465
+   },
+   {
+    "parameter": "x_chloride",
+    "low": 0.5,
+    "high": 3.5,
+    "baseline_value": 1.0,
+    "n_reliable_points": 164,
+    "n_sign_negative": 164,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -10931.701631,
+    "max_dS_ml": -6727.539465
+   },
+   {
+    "parameter": "x_hardness",
+    "low": 0.5,
+    "high": 3.5,
+    "baseline_value": 1.0,
+    "n_reliable_points": 164,
+    "n_sign_negative": 164,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -10931.701631,
+    "max_dS_ml": -6727.539465
+   },
+   {
+    "parameter": "x_silica",
+    "low": 0.5,
+    "high": 3.5,
+    "baseline_value": 1.0,
+    "n_reliable_points": 164,
+    "n_sign_negative": 164,
+    "n_sign_positive": 0,
+    "n_sign_zero": 0,
+    "n_sign_changes_along_curve": 0,
+    "sign_varying": false,
+    "first_flip_value_ha_IEUA": NaN,
+    "min_dS_ml": -10931.701631,
+    "max_dS_ml": -6727.539465
+   }
+  ],
+  "parameters_that_change_sign": [
+   "x_alkalinity"
+  ],
+  "parameters_that_do_not_change_sign": [
+   "phi",
+   "pool_scale",
+   "gap_scale",
+   "dp_scale",
+   "e_scale",
+   "coc_design",
+   "limit_scale",
+   "x_TDS",
+   "x_chloride",
+   "x_hardness",
+   "x_silica"
+  ]
+ },
+ "uncertainty_decomposition": {
+  "discipline": "参数 / 结构 / 情景 三类**分开报告**, 不合并为单一误差条。",
+  "parameter": {
+   "definition": "连续参数在边界内的变动 (条件于给定 域×水样×结构)",
+   "morris_by_config": {
+    "ha|IEUA": {
+     "n_eval": 416,
+     "n_not_identifiable": 2,
+     "not_identifiable_share_pct": 0.48
+    },
+    "ha|LADWP": {
+     "n_eval": 416,
+     "n_not_identifiable": 1,
+     "not_identifiable_share_pct": 0.24
+    },
+    "co|IEUA": {
+     "n_eval": 416,
+     "n_not_identifiable": 1,
+     "not_identifiable_share_pct": 0.24
+    },
+    "co|LADWP": {
+     "n_eval": 416,
+     "n_not_identifiable": 1,
+     "not_identifiable_share_pct": 0.24
+    }
+   },
+   "main_top3": [
+    {
+     "parameter": "limit_scale",
+     "mu_star": 45061.527045,
+     "sigma": 92110.16133
+    },
+    {
+     "parameter": "x_alkalinity",
+     "mu_star": 24840.709656,
+     "sigma": 55236.166304
+    },
+    {
+     "parameter": "phi",
+     "mu_star": 14489.114366,
+     "sigma": 11476.137984
+    }
+   ]
+  },
+  "structural": {
+   "definition": "估计口径/面板/F 式的**离散选择**, 不是连续参数",
+   "panel_B_full_vs_A_engine2": [
+    {
+     "domain": "ha",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "panel": "B_full vs A_engine2",
+     "status": "OK",
+     "dS_B_full_ml": -7585.088415776312,
+     "dS_A_engine2_ml": -8096.027791126062,
+     "abs_diff_ml": 510.93937534974975,
+     "rel_diff": 0.06736103092576233,
+     "sign_B_full": -1,
+     "sign_A_engine2": -1,
+     "CoC1_B_full": 3.153732761924444,
+     "CoC1_A_engine2": 5.0
+    },
+    {
+     "domain": "ha",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "panel": "B_full vs A_engine2",
+     "status": "OK",
+     "dS_B_full_ml": -10931.701631054693,
+     "dS_A_engine2_ml": -8096.027791126062,
+     "abs_diff_ml": -2835.6738399286314,
+     "rel_diff": 0.25939912518953784,
+     "sign_B_full": -1,
+     "sign_A_engine2": -1,
+     "CoC1_B_full": 4.777245272480842,
+     "CoC1_A_engine2": 5.0
+    },
+    {
+     "domain": "co",
+     "sample": "IEUA RP-1 (2025, tertiary)",
+     "panel": "B_full vs A_engine2",
+     "status": "OK",
+     "dS_B_full_ml": -6727.539465343098,
+     "dS_A_engine2_ml": -7187.028623804597,
+     "abs_diff_ml": 459.48915846149976,
+     "rel_diff": 0.06829973437221097,
+     "sign_B_full": -1,
+     "sign_A_engine2": -1,
+     "CoC1_B_full": 3.185192138148257,
+     "CoC1_A_engine2": 5.0
+    },
+    {
+     "domain": "co",
+     "sample": "LADWP AWPF (2012, RO product)",
+     "panel": "B_full vs A_engine2",
+     "status": "OK",
+     "dS_B_full_ml": -9767.19864029546,
+     "dS_A_engine2_ml": -7187.028623804597,
+     "abs_diff_ml": -2580.1700164908634,
+     "rel_diff": 0.2641668416413831,
+     "sign_B_full": -1,
+     "sign_A_engine2": -1,
+     "CoC1_B_full": 4.600469431524535,
+     "CoC1_A_engine2": 5.0
+    }
+   ],
+   "pool_convention": {
+    "volumetric_pool_accounting": {
+     "definition": "S_city = (M0-M) + x_ai + inc_recl - pool; dS_pot = S_city(B2) - S_city(B1)",
+     "anchor_ha_IEUA_phi0.6_ml": -7585.088415776312
+    },
+    "fixed_pool_C_minus_F": {
+     "definition": "dS_pot = C - F = (inc_B2-inc_B1) - [(M0-M1) + x_ai]  (WP2/WP4/A13)",
+     "anchor_ha_IEUA_phi0.6_ml": -7585.088415776312
+    },
+    "relative_difference_at_frozen_basis": 0.0,
+    "verdict": "在冻结基座 (pool=P0, gap=gap_0, dp=0, e_scale=1) 处两口径**恒等**; 差异只在 pool/gap 被外生改变时出现 —— 此时 dS_pot 才成为 pool 的函数。"
+   },
+   "F_formula": {
+    "variants": [
+     "F=(M0-M1)+x_ai (WP2/WP4)",
+     "F=M0-(1-phi_eff)*M1 (A13)"
+    ],
+    "n_compared": 15,
+    "max_relative_difference": 4.737944738972891e-16,
+    "verdict": "恒等 (x_ai ≡ phi_eff*M1 在 B2 支路按构造成立)"
+   }
+  },
+  "scenario": {
+   "definition": "水样 (权威化学) × 域 (气候/城市) 的离散情景",
+   "n_parameter_points": 40,
+   "seed": 20261016,
+   "n_all": 160,
+   "n_eff": 160,
+   "n_groups": 4,
+   "not_identifiable": 0,
+   "df_between": 3,
+   "df_within": 156,
+   "ss_total": 152362981065.63904,
+   "ss_between": 5864883402.033514,
+   "ss_within": 146498097663.60553,
+   "var_share_between_pct": 3.849,
+   "var_share_within_pct": 96.151,
+   "ms_between": 1954961134.0111713,
+   "ms_within": 939090369.638497,
+   "grand_mean_ml": -8358.74106041993,
+   "sign_counts_reliable": {
+    "n_neg_beneficial": 152,
+    "n_zero": 0,
+    "n_pos_harmful": 8,
+    "zero_value_convention": "|dS_pot| < 1e-06 ML 记为 0"
+   },
+   "verdict": "参数方差主导 (情景间不主导)",
+   "by_group": {
+    "co|IEUA RP-1 (2025, tertiary)": {
+     "n": 40,
+     "mean_ml": -2237.2220356926273,
+     "sd_ml": 39845.78055114512,
+     "min_ml": -24923.864250552087,
+     "max_ml": 239686.03214736332,
+     "n_neg": 36,
+     "n_pos": 4,
+     "n_zero": 0
+    },
+    "co|LADWP AWPF (2012, RO product)": {
+     "n": 40,
+     "mean_ml": -13786.569456869469,
+     "sd_ml": 10337.216919694176,
+     "min_ml": -54599.319109085634,
+     "max_ml": -1821.690215727914,
+     "n_neg": 40,
+     "n_pos": 0,
+     "n_zero": 0
+    },
+    "ha|IEUA RP-1 (2025, tertiary)": {
+     "n": 40,
+     "mean_ml": -2402.9216430521724,
+     "sd_ml": 44064.28404915609,
+     "min_ml": -25215.94505233622,
+     "max_ml": 265401.21277965955,
+     "n_neg": 36,
+     "n_pos": 4,
+     "n_zero": 0
+    },
+    "ha|LADWP AWPF (2012, RO product)": {
+     "n": 40,
+     "mean_ml": -15008.25110606546,
+     "sd_ml": 10961.572351375973,
+     "min_ml": -58340.052555278206,
+     "max_ml": -2078.008662015295,
+     "n_neg": 40,
+     "n_pos": 0,
+     "n_zero": 0
+    }
+   }
+  }
+ },
+ "discipline_note": "引擎只读; 权威水样只来自 load_samples(); 主口径仅完整物种水样; Figshare BW 不纳入; 双门禁 (B2 converged_unique + B1 健康单根闭合 + CoC 不触下限) 并报 n_eff; 门禁失败点在该参数点记 NOT_IDENTIFIABLE 并从有效样本剔除, 不插补、不计 PASS; 大数量级用相对容差; 符号计数声明零值约定与实际 n_eff; 不编造数字。",
+ "cache_discipline": "每次 solve_dS 使用独立 cache (M5 复发防护), 另用共享 cache 探针自检组成维度。",
+ "runtime_s": 889.9,
+ "outputs": [
+  "wp5_morris.csv",
+  "wp5_sobol.csv",
+  "wp5_scenario_points.csv",
+  "wp5_struct_panel.csv",
+  "wp5_sensitivity_summary.json",
+  "wp5_morris_sobol_log.txt"
+ ]
+}

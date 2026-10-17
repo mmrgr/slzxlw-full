@@ -79,7 +79,7 @@ print()
 print("=" * 78)
 print("对 A24b 的影响: 三种阈值下的 surplus 现实占比 (r=0.5)")
 print("=" * 78)
-EXT = Path(r"C:/Users/mmrgr/Desktop/论文/_ext_data/source_data/Source_data.xlsx")
+EXT = Path(__file__).resolve().parents[3] / "_ext_data" / "source_data" / "Source_data.xlsx"
 if EXT.exists():
     x = pd.ExcelFile(EXT)
     d = x.parse("WWTP_data_2020", header=0)

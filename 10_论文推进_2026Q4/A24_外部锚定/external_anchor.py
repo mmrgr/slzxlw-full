@@ -30,7 +30,7 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-EXT = Path(r"C:/Users/mmrgr/Desktop/论文/_ext_data/source_data/Source_data.xlsx")
+EXT = Path(__file__).resolve().parents[3] / "_ext_data" / "source_data" / "Source_data.xlsx"
 OUT = HERE
 
 WWTP_SHEET = "WWTP_data_2020"
@@ -109,12 +109,28 @@ def main() -> None:
         anchors.append({
             "name": "industrial cooling water share",
             "n_sectors": int(len(body)),
+            # ⚠ 口径标注 (清理轮 2026-10-16)。该表每个行业有 Mean/Std/Min/Max 四列,
+            #   下列字段口径【互不相同】。旧版字段名 min/max 未说明口径, 曾使 A24 的
+            #   max=1.0 与 WP9 独立重算的 0.9896 看似冲突 —— 实际两者测的不是同一个量:
+            #     mean_of_means  : 39 个行业【Mean 列】的均值 (WP9 复算逐位一致)
+            #     mean_min/max   : 行业【Mean 列】的最小/最大值 ("行业均值"的范围)
+            #     spread_min/max : 行业【Min/Max 列】的最小/最大值 ("行业内波动"的范围)
             "mean_of_means": float(body["mean"].mean()),
-            "min": float(body["min"].min()) if "min" in body else None,
-            "max": float(body["max"].max()) if "max" in body else None,
+            "mean_min": float(body["mean"].min()),
+            "mean_max": float(body["mean"].max()),
+            "spread_min_min": float(body["min"].min()) if "min" in body else None,
+            "spread_max_max": float(body["max"].max()) if "max" in body else None,
+            "caliber_note": ("min/max 旧字段实为行业内波动的极值(spread_*); "
+                             "引用'行业均值范围'请用 mean_min/mean_max"),
+            # 修正语义: 这两个旧字段现指"行业均值"的范围, 与 mean_min/mean_max 同义
+            "min": float(body["mean"].min()),
+            "max": float(body["mean"].max()),
         })
-        rec(f"  工业取水中冷却水占比: {len(body)} 部门, 部门均值的中位="
-            f"{body['mean'].median():.4f}, 范围 [{body['min'].min():.4f}, {body['max'].max():.4f}]")
+        rec(f"  工业取水中冷却水占比: {len(body)} 部门")
+        rec(f"    行业均值: 均值={body['mean'].mean():.6f} "
+            f"范围 [{body['mean'].min():.6f}, {body['mean'].max():.6f}]")
+        rec(f"    行业内波动(Min/Max 列): [{body['min'].min():.4f}, {body['max'].max():.4f}]"
+            f"  <- 与上一行不是同一个量, 勿混用")
     except Exception as e:  # noqa: BLE001
         rec(f"  [冷却水占比] 解析失败: {e}")
 

@@ -1,0 +1,39 @@
+{
+ "task": "WP10 城市水价 vs 再生水成本量级对照",
+ "source": "C:\\Users\\mmrgr\\Desktop\\论文\\_ext_data\\source_data\\Source_data.xlsx",
+ "sheet": "water price(CNY_m-3)",
+ "n_industrial_cols": 62,
+ "n_obs_industrial": 7730,
+ "industrial_tariff": {
+  "min": 0.18,
+  "p25": 1.0,
+  "median": 1.41,
+  "p75": 2.5,
+  "max": 8.15
+ },
+ "per_city_median_stats": {
+  "n_city_source_series": 61,
+  "n_distinct_cities": 31,
+  "n_city": 61,
+  "median": 1.55,
+  "min": 0.59,
+  "max": 6.65
+ },
+ "reuse_total_unit_cost_median": 2.4125,
+ "reuse_cost_over_tap_ratio": 1.5564516129032258,
+ "verdict": "REUSE_MORE_EXPENSIVE_AT_TYPICAL_CITY",
+ "supported_claims": [
+  "城市间与城市内的工业自来水价存在**可观差异**（列上 min 0.18 – max 8.15 CNY/m3）",
+  "由 WP8 与本地数据可给出再生水成本相对自来水价的**量级比**（见 [4]）",
+  "该对照为本文的'经济合理性'提供**数量级层面**的外部依据"
+ ],
+ "unsupported_claims": [
+  "**不可**做投资回报/净现值结论（无设施寿命、折现率、规模经济数据）",
+  "**不可**把该价格等同于本文模型域的城市水价（模型域为合成域）",
+  "**不可**用于需求侧推断（价格不是需求量/合同）",
+  "价格表含多城市多年月, 但**无供水结构/用途占比**字段",
+  "**不可**据此声称'池被占用是因为再生水贵'——本数据无合同/分配字段, 价格与占用之间**不存在可建立的因果链**（价格 ≠ 需求 ≠ 合同）"
+ ],
+ "runtime_s": 1.4,
+ "discipline_note": "外部数据只读; 两层表头显式处理; 缺失显式统计; 只做量级对照"
+}

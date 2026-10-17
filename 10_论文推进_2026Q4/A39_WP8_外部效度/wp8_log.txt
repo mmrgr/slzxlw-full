@@ -1,0 +1,44 @@
+====================================================================================
+WP8  真实再生水项目的用途分布与成本锚定
+====================================================================================
+
+[0] 数据来源: Source_data.xlsx :: Reclaimed water case
+    形状 = (141, 12)
+    列 = ['No.', 'Source group', 'Province / country or region', 'Implementing entity (company, government, etc.)', 'Actual technology train used in the case', 'Classification under user-defined technology categories', 'Capacity (m³ d⁻¹)', 'Depreciation (CNY/m³)', 'Operating cost(CNY/m³)', 'Total unit cost(CNY/m³)', 'Data source', 'Source URL']
+
+[1] 用途类别分布 (从原始文本前缀机械提取; 未贴手工标签)
+    可分类 = 141/141
+    code      n   share%  含义
+    B3       40    28.37  INDUSTRIAL COOLING / general industrial reuse
+    A3       26    18.44  agricultural / ecological reuse
+    B1       14     9.93  urban non-potable reuse
+    B4       14     9.93  low-cost landscaping / park irrigation
+    C1       11     7.80  enhanced agricultural / rural-town reuse
+    A2       11     7.80  agricultural reuse
+    B2        9     6.38  landscape-water replenishment
+    C2        6     4.26  other rural reuse
+    B5        5     3.55  other urban reuse
+    A1        5     3.55  agricultural reuse (primary)
+
+[2] ★ B3 (工业冷却/一般工业回用) — 本文关注的用途
+    案例数 = 40  占比 = 28.4% (在可分类案例中)
+
+[3] B3 子集: 规模与成本分布
+    全部案例 容量                            n= 139  min=11  p25=2000  median=6000  p75=2.7e+04  max=4.5e+05 m3/d
+    B3 容量                              n=  38  min=120  p25=1050  median=4000  p75=1.75e+04  max=1.514e+05 m3/d
+    B3 Operating cost(CNY/m³)          n=  40  min=0.047  p25=0.6  median=1.95  p75=3.655  max=16.15 CNY/m3
+    B3 Total unit cost(CNY/m³)         n=  40  min=0.052  p25=0.8562  median=2.413  p75=4.5  max=19.33 CNY/m3
+
+[4] 与本文模型域的对照 (只报可比性, 不改模型参数)
+    本文模型域的单设施规模量级 ~1e3–1e5 m3/d (IT 负荷 1000 MW 级)
+    B3 案例中落在 [1e3, 1e5] m3/d 的 = 26/38 (68.4%)
+    ⇒ 本文模型域的规模在真实 B3 项目中有实际对应
+
+[5] ★ 本数据可支持与不可支持的结论
+    ✅ 真实再生水项目中, 工业冷却/工业回用(B3)是可识别的**主要用途之一**(40/141 = 28.4%)
+    ✅ B3 项目的容量与成本区间可锚定本文情景的**现实性**(见 [3])
+    ✅ 本文关注的冷却回用并非设想的边缘用途, 而是有真实工程实践支撑
+    ❌ **不可**推断既有用户的已承诺需求量(该表无需求字段)
+    ❌ **不可**推断设施级→城市级的转化比例
+    ❌ **不可**作为本文模型的标定数据(无水文/供需时序)
+    ❌ 该表是**案例集**而非随机样本, 占比不代表全国统计分布

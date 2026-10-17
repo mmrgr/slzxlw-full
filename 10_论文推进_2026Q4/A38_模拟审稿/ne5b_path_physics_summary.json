@@ -1,0 +1,167 @@
+{
+ "rows": [
+  {
+   "domain": "ha",
+   "sample": "IEUA",
+   "phi": 0.4,
+   "path": "volume-only",
+   "CoC_mean": 3.0172413793103448,
+   "CoC_min": 3.0172413793103448,
+   "CoC_max": 3.0172413793103448,
+   "C_in_TDS": 285.20000000000005
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA",
+   "phi": 0.4,
+   "path": "R10a-dynamic",
+   "CoC_mean": 4.960158269743752,
+   "CoC_min": 3.0172413793103448,
+   "CoC_max": 5.0,
+   "C_in_TDS": 285.20000000000005
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA",
+   "phi": 0.6,
+   "path": "volume-only",
+   "CoC_mean": 2.822580645161291,
+   "CoC_min": 2.8225806451612905,
+   "CoC_max": 2.8225806451612905,
+   "C_in_TDS": 337.8
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA",
+   "phi": 0.6,
+   "path": "R10a-dynamic",
+   "CoC_mean": 4.997017233760494,
+   "CoC_min": 2.8225806451612905,
+   "CoC_max": 5.0,
+   "C_in_TDS": 337.8
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP",
+   "phi": 0.4,
+   "path": "volume-only",
+   "CoC_mean": 5.0,
+   "CoC_min": 5.0,
+   "CoC_max": 5.0,
+   "C_in_TDS": 116.8
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP",
+   "phi": 0.4,
+   "path": "R10a-dynamic",
+   "CoC_mean": 4.9638968181712615,
+   "CoC_min": 4.9046025750349935,
+   "CoC_max": 5.0,
+   "C_in_TDS": 116.8
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP",
+   "phi": 0.6,
+   "path": "volume-only",
+   "CoC_mean": 5.0,
+   "CoC_min": 5.0,
+   "CoC_max": 5.0,
+   "C_in_TDS": 85.2
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP",
+   "phi": 0.6,
+   "path": "R10a-dynamic",
+   "CoC_mean": 5.0,
+   "CoC_min": 5.0,
+   "CoC_max": 5.0,
+   "C_in_TDS": 85.2
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA",
+   "phi": 0.4,
+   "path": "volume-only",
+   "CoC_mean": 3.0172413793103448,
+   "CoC_min": 3.0172413793103448,
+   "CoC_max": 3.0172413793103448,
+   "C_in_TDS": 285.20000000000005
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA",
+   "phi": 0.4,
+   "path": "R10a-dynamic",
+   "CoC_mean": 4.956720190945633,
+   "CoC_min": 3.0172413793103448,
+   "CoC_max": 5.0,
+   "C_in_TDS": 285.20000000000005
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA",
+   "phi": 0.6,
+   "path": "volume-only",
+   "CoC_mean": 2.822580645161291,
+   "CoC_min": 2.8225806451612905,
+   "CoC_max": 2.8225806451612905,
+   "C_in_TDS": 337.8
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA",
+   "phi": 0.6,
+   "path": "R10a-dynamic",
+   "CoC_mean": 4.997017233760494,
+   "CoC_min": 2.8225806451612905,
+   "CoC_max": 5.0,
+   "C_in_TDS": 337.8
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP",
+   "phi": 0.4,
+   "path": "volume-only",
+   "CoC_mean": 5.0,
+   "CoC_min": 5.0,
+   "CoC_max": 5.0,
+   "C_in_TDS": 116.8
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP",
+   "phi": 0.4,
+   "path": "R10a-dynamic",
+   "CoC_mean": 4.960410726816082,
+   "CoC_min": 4.894451254534129,
+   "CoC_max": 5.0,
+   "C_in_TDS": 116.8
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP",
+   "phi": 0.6,
+   "path": "volume-only",
+   "CoC_mean": 5.0,
+   "CoC_min": 5.0,
+   "CoC_max": 5.0,
+   "C_in_TDS": 85.2
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP",
+   "phi": 0.6,
+   "path": "R10a-dynamic",
+   "CoC_mean": 5.0,
+   "CoC_min": 5.0,
+   "CoC_max": 5.0,
+   "C_in_TDS": 85.2
+  }
+ ],
+ "volume_only_matches_closed_form": 8,
+ "volume_only_total": 8,
+ "conclusion": "volume-only 的 CoC 恒等于 min(limit_i/C_in_i), 即它把**补水浓度**当作**循环水浓度**去比限值; 这在物理上等价于假设回路无储液(V=0), 但 V=0 时 CoC 应恒为 1 而非 1.8-5.0"
+}

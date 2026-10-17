@@ -1,0 +1,663 @@
+{
+ "task": "NE-2 (红队 F-5)",
+ "question": "'碱度是唯一符号杠杆'是否只是 baseline 限值面板的产物?",
+ "panels": {
+  "baseline": {
+   "TDS": 2200.0,
+   "chloride": 700.0,
+   "hardness": 750.0,
+   "alkalinity": 350.0,
+   "silica": 175.0
+  },
+  "permissive": {
+   "TDS": 2600.0,
+   "chloride": 1000.0,
+   "hardness": 750.0,
+   "alkalinity": 350.0,
+   "silica": 175.0
+  },
+  "strict": {
+   "TDS": 1000.0,
+   "chloride": 250.0,
+   "hardness": 450.0,
+   "alkalinity": 350.0,
+   "silica": 30.0
+  }
+ },
+ "samples": [
+  "IEUA RP-1 (2025, tertiary)",
+  "LADWP AWPF (2012, RO product)"
+ ],
+ "phi": 0.6,
+ "binding_species_by_panel": {
+  "baseline": {
+   "IEUA RP-1 (2025, tertiary)": "alkalinity",
+   "LADWP AWPF (2012, RO product)": "alkalinity"
+  },
+  "permissive": {
+   "IEUA RP-1 (2025, tertiary)": "alkalinity",
+   "LADWP AWPF (2012, RO product)": "alkalinity"
+  },
+  "strict": {
+   "IEUA RP-1 (2025, tertiary)": "silica",
+   "LADWP AWPF (2012, RO product)": "TDS"
+  }
+ },
+ "binding_sets_by_panel": {
+  "baseline": [
+   "alkalinity"
+  ],
+  "permissive": [
+   "alkalinity"
+  ],
+  "strict": [
+   "TDS",
+   "silica"
+  ]
+ },
+ "verdict": "BINDING_SPECIES_PANEL_DEPENDENT",
+ "cases": [
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "TDS",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "TDS",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "chloride",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "chloride",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "hardness",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "hardness",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "alkalinity",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "alkalinity",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -30.038687410149997,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "silica",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "silica",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "TDS",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "TDS",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "chloride",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "chloride",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "hardness",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "hardness",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "alkalinity",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "alkalinity",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "silica",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "baseline",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "silica",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "TDS",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "TDS",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "chloride",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "chloride",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "hardness",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "hardness",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "alkalinity",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "alkalinity",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -30.038687410149997,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "silica",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "silica",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -4.194192342420159,
+   "dS_base": -4.194192342420159
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "TDS",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "TDS",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "chloride",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "chloride",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "hardness",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "hardness",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "alkalinity",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "alkalinity",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "silica",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "permissive",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "silica",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 0.0,
+   "dS_base": 0.0
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "TDS",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "TDS",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "chloride",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "chloride",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "hardness",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "hardness",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "alkalinity",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "alkalinity",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -30.642913881043803,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "silica",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": -2.7010471202135804,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "IEUA RP-1 (2025, tertiary)",
+   "species": "silica",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": -28210922.485750016,
+   "dS_base": -30.642913881043803
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "TDS",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "TDS",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "chloride",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "chloride",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "hardness",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "hardness",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "alkalinity",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "alkalinity",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "silica",
+   "mult": 0.5,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  },
+  {
+   "panel": "strict",
+   "domain": "ha",
+   "sample": "LADWP AWPF (2012, RO product)",
+   "species": "silica",
+   "mult": 2.0,
+   "status": "OK",
+   "dS": 2.821093658889751,
+   "dS_base": 2.821093658889751
+  }
+ ],
+ "runtime_s": 0.0,
+ "discipline_note": "city_model 只读; 完整物种水样; 失败标 NOT_IDENTIFIABLE; 相对容差"
+}

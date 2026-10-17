@@ -1,0 +1,503 @@
+% ============================================================================
+% A29 文献核验 — references.bib
+% 编制日期: 2026-10-16
+% 来源: 全部条目经 CrossRef REST API + OpenAlex API 权威核验 (DOI 直查)
+%
+% ⚠️ 收录规则 (严格遵守):
+%   - 仅收录核验等级为 VERIFIED 或 PARTIAL 的条目
+%   - UNVERIFIED 的条目 (即 GPT 候选 C9 "DC冷却×城市可持续性综述"、
+%     C10 "逐日城市水代谢模型") **绝不写入本文件** —— 二者无法定位真实出处
+%
+% ⚠️ 已知需修正的历史错误 (见 07_代码_AI-UWM引擎/aiuwm_src/research_2026/
+%    literature/verified_references.bib):
+%     1. Alissa2025 第三作者应为 Raniwala, A (非 Sinistore, J.)
+%     2. Behzadian2014 的 DOI 应为 10.5194/dwes-7-63-2014 (正式版),
+%        而非 10.5194/dwesd-7-63-2014 (讨论稿版本)
+%
+% ⚠️ 更正版提示:
+%     - Mytton2021      存在更正 10.1038/s41545-021-00140-3
+%     - LandaCansigno2020 存在更正 10.1007/s11356-020-10583-9
+% ============================================================================
+
+
+% ---------------------------------------------------------------------------
+% C1 ★ 本项目直接依赖的数据源 (VERIFIED — 10,826 厂已由官方源数据实测证实)
+% ---------------------------------------------------------------------------
+@article{Shen2026CWTS,
+  author  = {Shen, Jijie and Shen, Lei and Zhong, Shuai and Li, Delong and
+             Li, Ding and Fang, Jinzhu and Bai, Haonan},
+  title   = {China's centralized wastewater treatment system reaches efficiency
+             limits in tackling water scarcity},
+  journal = {Nature Water},
+  year    = {2026},
+  month   = {oct},
+  doi     = {10.1038/s44221-026-00727-5},
+  note    = {Online first, 2026-10-12; volume/pages not yet assigned.
+             Verified via CrossRef + OpenAlex. The 10,826-plant figure cited by
+             the project was independently confirmed against the authors'
+             public source data (Zenodo 10.5281/zenodo.22138940):
+             sheet WWTP_data_2020 contains exactly 10,826 data rows across
+             31 provincial-level units. NOTE: the paper's principal conclusion
+             is that the CENTRALIZED pathway has reached efficiency limits --
+             it should NOT be cited as endorsing reclaimed-water expansion.}
+}
+
+@misc{Shen2026CWTSData,
+  author       = {Shen, Jijie},
+  title        = {Reproducible code for ``China's Centralized Wastewater
+                  Treatment System Reaches Efficiency Limits in Tackling
+                  Water Scarcity''},
+  year         = {2026},
+  month        = {aug},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22138940},
+  howpublished = {Software, Zenodo},
+  note         = {Concept DOI 10.5281/zenodo.22138939; released 2026-08-28;
+                  file CWTS\_code\_JJS.zip (2,683,047 bytes). Contains
+                  source\_data/Source\_data.xlsx with WWTP inventory sheets,
+                  sectoral cooling-water shares, and a reclaimed-water
+                  cost case library. Independently downloaded and parsed
+                  during A29 verification.}
+}
+
+
+% ---------------------------------------------------------------------------
+% C2 ★★ 头号竞争文献 (VERIFIED — 已逐页核验原文 PDF)
+%    重要: 该文系统边界明确排除循环冷却水复用, 全文 CoC/salinity/TDS/
+%    conductivity/quality-constraint 出现次数均为 0.
+%    ==> 这是本项目创新点 (b)(c) 增量最有力的可引用立论依据
+% ---------------------------------------------------------------------------
+@article{Wang2026DataWaterSymbiosis,
+  author  = {Wang, Aijie and Zhang, Congchao and Xu, Tiefu and Savic, Dragan
+             and Jiang, Jingjing and Xiao, Peng and He, Chuan and Tao, Yu
+             and Daigger, Glen and Ren, Nanqi},
+  title   = {Global data--water symbiosis reduces {AI} infrastructure's carbon
+             and water footprint},
+  journal = {Environmental Science and Ecotechnology},
+  year    = {2026},
+  volume  = {31},
+  pages   = {100702},
+  doi     = {10.1016/j.ese.2026.100702},
+  note    = {Received 2026-03-13; accepted 2026-04-22. Geodatabase of
+             $>$4,775 data centres and 57,547 municipal WWTPs across 98
+             countries; spatial analysis + engineering systems modelling +
+             optimisation + LCA. Reports 84.3 Mt CO2-eq/yr GHG reduction,
+             ~1,300 Mm3/yr freshwater conservation, ~US\$95.4 billion/yr net
+             savings. Code: https://github.com/UrbanWaterHIT/Data\_Water\_Symbiosis
+             CRITICAL for our framing: the paper defines freshwater
+             consumption as net loss of withdrawn freshwater and states that
+             ``water reused within recirculating cooling systems is not
+             included'' -- it therefore contains NO cycles-of-concentration
+             mechanism and NO water-quality constraint.}
+}
+
+
+% ---------------------------------------------------------------------------
+% C7 ★★ 议程重叠: 明确主张 AI 数据中心水评价需超越用水量、关注水质兼容性
+%    类型 = Viewpoint / editorial (非 research article)
+%    ===> 本项目不可声称首创该议程
+% ---------------------------------------------------------------------------
+@article{Saleh2026WaterCompatibility,
+  author  = {Saleh, Navid B.},
+  title   = {Why Water Demand Is No Longer Enough: Rethinking Sustainability
+             in {AI} Data Centers},
+  journal = {Environmental Science \& Technology},
+  year    = {2026},
+  volume  = {60},
+  number  = {26},
+  pages   = {18383--18386},
+  doi     = {10.1021/acs.est.6c08380},
+  note    = {TYPE: Viewpoint / editorial (OpenAlex type = editorial), NOT a
+             research article. Published 2026-06-25. Contains the statement
+             that ``water demand alone may no longer be sufficient ... the
+             challenge extends beyond water quantity to water compatibility.''
+             Sets the agenda but provides NO model, NO cycles-of-concentration
+             variable and NO closed-form relation. Our novelty must therefore
+             be framed as FORMALISATION of this agenda, not as the agenda
+             itself.}
+}
+
+@article{Ajaz2026WaterGovernance,
+  author  = {Ajaz, S. and Kunz, N.},
+  title   = {Beyond Efficiency: Rethinking Water Governance for {AI} Data
+             Centers},
+  journal = {ACS ES\&T Water},
+  year    = {2026},
+  volume  = {6},
+  pages   = {5472--5474},
+  doi     = {10.1021/acsestwater.6c01041},
+  note    = {Viewpoint. Verified in A14; re-checked in A29. Companion
+             governance perspective to Saleh (2026); useful as a concrete
+             policy citation for the ``win-win narrative'' critique.}
+}
+
+
+% ---------------------------------------------------------------------------
+% C5 VERIFIED — 300 城 水压力缓解 vs 污水 GHG 解耦
+% ---------------------------------------------------------------------------
+@article{Chen2023Decoupling300Cities,
+  author  = {Chen, Shaoqing and Zhang, Linmei and Liu, Beibei and Yi, Hang
+             and Su, Hanshi and Kharrazi, Ali and Jiang, Feng and Lu, Zhongming
+             and Crittenden, John C. and Chen, Bin},
+  title   = {Decoupling wastewater-related greenhouse gas emissions and water
+             stress alleviation across 300 cities in China is challenging yet
+             plausible by 2030},
+  journal = {Nature Water},
+  year    = {2023},
+  volume  = {1},
+  number  = {6},
+  pages   = {534--546},
+  doi     = {10.1038/s44221-023-00087-4},
+  note    = {Published 2023-06-01. OpenAlex cited-by 86. Establishes the
+             water-stress-alleviation vs wastewater-GHG trade-off across
+             300 Chinese cities.}
+}
+
+
+% ---------------------------------------------------------------------------
+% C8 VERIFIED — 数据中心工作负载用水决定因素 (review, LBNL)
+% ---------------------------------------------------------------------------
+@article{Lei2025WorkloadWaterUse,
+  author  = {Lei, Nuoa and Lu, Jun and Shehabi, Arman and Masanet, Eric R.},
+  title   = {The water use of data center workloads: A review and assessment
+             of key determinants},
+  journal = {Resources, Conservation and Recycling},
+  year    = {2025},
+  volume  = {219},
+  pages   = {108310},
+  doi     = {10.1016/j.resconrec.2025.108310},
+  note    = {TYPE: review. Published online 2025-04-14. Affiliations include
+             Lawrence Berkeley National Laboratory. Authoritative source for
+             WUE/PUE parameter anchoring. OpenAlex cited-by 65.}
+}
+
+
+% ---------------------------------------------------------------------------
+% C4 VERIFIED — 数据中心冷却装置 LCA
+% ---------------------------------------------------------------------------
+@article{IslerKaya2023CoolingLCA,
+  author  = {Isler-Kaya, Asli and Karaosmanoglu, Filiz},
+  title   = {Life cycle assessment of a climate-friendly data center cooling
+             device},
+  journal = {Energy and Buildings},
+  year    = {2023},
+  volume  = {288},
+  pages   = {113006},
+  doi     = {10.1016/j.enbuild.2023.113006},
+  note    = {Published online 2023-03-22. Istanbul Technical University.
+             OpenAlex cited-by 17.}
+}
+
+
+% ---------------------------------------------------------------------------
+% 补充 VERIFIED — 冷却 LCA 的最高规格先例 (Nature 正刊)
+% ---------------------------------------------------------------------------
+@article{Alissa2025CoolCloudsLCA,
+  author  = {Alissa, Husam and Nick, Teresa and Raniwala, Ashish and
+             Arribas Herranz, Alberto and Frost, Kali and Manousakis, Ioannis
+             and Lio, Kari and Warrier, Brijesh and Oruganti, Vaidehi and
+             DiCaprio, T. J. and Oseen-Senda, Kathryn and Ramakrishnan, Bharath
+             and Gupta, Naval and Bianchini, Ricardo and Kleewein, Jim and
+             Belady, Christian and Fontoura, Marcus and Sinistore, Julie and
+             Natarajan, Mukunth and Johnson, Lauren and Mealing, VeeAnder
+             and Arshi, Praneet and Frieze, Madeline},
+  title   = {Using life cycle assessment to drive innovation for sustainable
+             cool clouds},
+  journal = {Nature},
+  year    = {2025},
+  volume  = {641},
+  number  = {8062},
+  pages   = {331--338},
+  doi     = {10.1038/s41586-025-08832-3},
+  note    = {Published 2025-04-30. Affiliation: Microsoft. OpenAlex
+             cited-by 78. CORRECTION NOTE: the project's existing
+             verified\_references.bib lists the third author as
+             ``Sinistore, J.'' -- CrossRef gives the third author as
+             Raniwala, A. (full order reproduced above).}
+}
+
+
+% ---------------------------------------------------------------------------
+% C6 PARTIAL — 城市水系统分散化的韧性与可持续性
+% ---------------------------------------------------------------------------
+@article{GarridoBaserba2024Decentralization,
+  author  = {Garrido-Baserba, Manel and Sedlak, David L. and
+             Molinos-Senante, Maria and Barnosell, Irene and Schraa, Oliver
+             and Rosso, Diego and Verdaguer, Marta and Poch, Manel},
+  title   = {Using water and wastewater decentralization to enhance the
+             resilience and sustainability of cities},
+  journal = {Nature Water},
+  year    = {2024},
+  volume  = {2},
+  number  = {10},
+  pages   = {953--974},
+  doi     = {10.1038/s44221-024-00303-9},
+  note    = {VERIFICATION LEVEL: PARTIAL. Bibliographic record verified;
+             however the descriptor ``unit process model'' and the
+             resource-recovery/cost framing could NOT be confirmed from title
+             and metadata. Published 2024-09-10. OpenAlex cited-by 146.}
+}
+
+% --- 更贴合 "城市尺度单元过程模型" 的真实文献 (建议并列引用) ---
+@article{Behzadian2015WaterMet2,
+  author  = {Behzadian, Kourosh and Kapelan, Zoran S.},
+  title   = {Modelling metabolism based performance of an urban water system
+             using {WaterMet}$^2$},
+  journal = {Resources, Conservation and Recycling},
+  year    = {2015},
+  volume  = {99},
+  pages   = {84--99},
+  doi     = {10.1016/j.resconrec.2015.03.015},
+  note    = {OpenAlex cited-by 61. Verified in A14 and re-checked in A29.}
+}
+
+@article{Behzadian2014WaterMet2Tool,
+  author  = {Behzadian, Kourosh and Kapelan, Zoran and Venkatesh, Govindarajan
+             and Bratteb{\o}, Helge and S{\ae}grov, Sveinung and
+             Morley, Matthew S.},
+  title   = {{WaterMet}$^2$: a tool for integrated analysis of
+             sustainability-based performance of urban water systems},
+  journal = {Drinking Water Engineering and Science},
+  year    = {2014},
+  volume  = {7},
+  number  = {1},
+  pages   = {63--72},
+  doi     = {10.5194/dwes-7-63-2014},
+  note    = {CORRECTION NOTE: the project's existing bib records this as
+             ``10.5194/dwesd-7-63-2014'', which is the DISCUSSION-PAPER
+             version, not the final journal article. Corrected above.}
+}
+
+@article{Renouf2018CityRegionUWM,
+  author  = {Renouf, Marguerite Anne and Kenway, Steven John and Lam, Ka Leung
+             and Weber, Tony R. and Roux, Estelle and Serrao-Neumann, Silvia
+             and Low Choy, Darryl and Morgan, Edward A.},
+  title   = {Understanding urban water performance at the city-region scale
+             using an urban water metabolism evaluation framework},
+  journal = {Water Research},
+  year    = {2018},
+  volume  = {137},
+  pages   = {395--406},
+  doi     = {10.1016/j.watres.2018.01.070},
+  note    = {Published online 2018-02-07. OpenAlex cited-by 48.}
+}
+
+@article{Arnaud2024ScaleResilience,
+  author  = {Arnaud, Nicole and Poch, Manel and Popartan, Luc{\'i}a Alexandra
+             and Corominas, Llu{\'i}s and Verdaguer, Marta},
+  title   = {How Scale Influences the Resilience of Urban Water Systems:
+             A Literature Review of Trade-Offs and Recommendations},
+  journal = {Water},
+  year    = {2024},
+  volume  = {16},
+  number  = {11},
+  pages   = {1571},
+  doi     = {10.3390/w16111571},
+  note    = {Published 2024-05-30. Systematic review of centralised vs
+             decentralised scale trade-offs. OpenAlex cited-by 14.}
+}
+
+
+% ---------------------------------------------------------------------------
+% C3 PARTIAL — AI 基础设施水足迹情景预测 (非空间化; 仅水足迹)
+% ---------------------------------------------------------------------------
+@article{Herrera2025SustainableAIWater,
+  author  = {Herrera, Manuel and Xie, Xiang and Menapace, Andrea and
+             Zanfei, Ariele and Brentan, Bruno M.},
+  title   = {Sustainable {AI} infrastructure: A scenario-based forecast of
+             water footprint under uncertainty},
+  journal = {Journal of Cleaner Production},
+  year    = {2025},
+  volume  = {526},
+  pages   = {146528},
+  doi     = {10.1016/j.jclepro.2025.146528},
+  note    = {VERIFICATION LEVEL: PARTIAL. Bibliographic record verified, but
+             GPT's descriptors are NOT supported: the study assesses WATER
+             FOOTPRINT ONLY (facility operational / off-site electricity /
+             embodied hardware) and is NOT an energy-water-carbon coupled
+             scenario study; its uncertainty treatment is Bayesian
+             probabilistic scenario-based and NOT spatially explicit.
+             Published online 2025-09-17. OpenAlex cited-by 31.}
+}
+
+
+% ===========================================================================
+% 补充: GPT 未提但直接决定本项目创新性判定的文献
+% ===========================================================================
+
+% --- AI 服务器能-水-碳 国家尺度 (不可再称首次) ---
+@article{Xiao2025AIServersUSA,
+  author  = {Xiao, Tianqi and Fuso Nerini, Francesco and Matthews, H. Damon
+             and Tavoni, Massimo and You, Fengqi},
+  title   = {Environmental impact and net-zero pathways for sustainable
+             artificial intelligence servers in the {USA}},
+  journal = {Nature Sustainability},
+  year    = {2025},
+  volume  = {8},
+  number  = {12},
+  pages   = {1541--1553},
+  doi     = {10.1038/s41893-025-01681-y},
+  note    = {Published 2025-11-10. OpenAlex cited-by 108. Reports 2024-2030
+             US AI-server annual water footprint of 731-1,125 Mm3 and
+             24-44 MtCO2e/yr additional emissions; best practice could cut
+             water by 86\% and carbon by 73\%.}
+}
+
+% --- 数据中心对公共供水系统的峰值冲击 (preprint) ---
+@misc{Han2026SmallBottleBigPipe,
+  author       = {Han, Yuelin and Li, Pengfei and Wierman, Adam and Ren, Shaolei},
+  title        = {Small Bottle, Big Pipe: Quantifying and Addressing the Impact
+                  of Data Centers on Public Water Systems},
+  year         = {2026},
+  eprint       = {2603.02705},
+  archivePrefix= {arXiv},
+  doi          = {10.48550/arxiv.2603.02705},
+  howpublished = {arXiv preprint},
+  note         = {TYPE: preprint (not peer-reviewed). Full author list resolved
+                  via DataCite in A29 (A14 could not resolve given names).
+                  Directly addresses peak water withdrawals exceeding
+                  community supply capacity.}
+}
+
+% --- 冷却选择改变电网水影响 (preprint) ---
+@misc{Alston2026CoolingGridWater,
+  author       = {Alston, Garrett and Love, Nancy and Haider, Rabab},
+  title        = {Data center cooling choices shift water impacts across the
+                  grid: An integrated water-energy model for sustainable data
+                  centers},
+  year         = {2026},
+  eprint       = {2609.25437},
+  archivePrefix= {arXiv},
+  doi          = {10.48550/arxiv.2609.25437},
+  howpublished = {arXiv preprint},
+  note         = {TYPE: preprint. Posted 2026-09-21. Hourly economic dispatch
+                  with generator-level water consumption and monthly
+                  sub-basin depletion; shows facility-level reporting
+                  misattributes spatial impacts. Verified in A14.}
+}
+
+% --- AI 数据中心水反馈环 (preprint review) ---
+@misc{Akinade2026WaterFeedbackLoop,
+  author       = {Akinade, Basit A. and Amanambu, Amobichukwu Chukwudi and
+                  Frame, Jonathan and Ren, Shaolei},
+  title        = {{AI} Data Centers and the Water Use Feedback Loop},
+  year         = {2026},
+  eprint       = {2606.21760},
+  archivePrefix= {arXiv},
+  doi          = {10.48550/arxiv.2606.21760},
+  howpublished = {arXiv preprint},
+  note         = {TYPE: preprint (review). Posted 2026-06-19. Formalises the
+                  Water and AI Feedback Loop; introduces the Water Consumption
+                  Impact index; across ten US sites burden spans three orders
+                  of magnitude (0.2\%-134\% of host capacity).}
+}
+
+% --- 再生水作冷却补水的工程实证 (创新点 b 的实证近邻) ---
+@article{Badruzzaman2022ReclaimedCooling,
+  author  = {Badruzzaman, Mohammad and Anazi, Jasem R. and Al-Wohaib, Fawaz A.
+             and Al-Malki, Abdulaziz A. and Jutail, Fadel},
+  title   = {Municipal reclaimed water as makeup water for cooling systems:
+             Water efficiency, biohazards, and reliability},
+  journal = {Water Resources and Industry},
+  year    = {2022},
+  volume  = {28},
+  pages   = {100188},
+  doi     = {10.1016/j.wri.2022.100188},
+  note    = {Published 2022-09-07. OpenAlex cited-by 29. FIELD EVIDENCE that
+             reclaimed water can raise the achievable cycle of concentration
+             relative to groundwater for a 4.2 MW cooling tower in Saudi
+             Arabia. This is the closest engineering precedent to our
+             closed-form relation (b): the DIRECTION is established, but no
+             general closed-form condition is derived.}
+}
+
+% --- 数据中心直接/间接水足迹与缺水区空间关联 ---
+@article{Siddik2021USDataCenters,
+  author  = {Siddik, Md Abu Bakar and Shehabi, Arman and Marston, Landon T.},
+  title   = {The environmental footprint of data centers in the
+             {United States}},
+  journal = {Environmental Research Letters},
+  year    = {2021},
+  volume  = {16},
+  number  = {6},
+  pages   = {064017},
+  doi     = {10.1088/1748-9326/abfba1},
+  note    = {Published 2021-05-21. Verified in A14 (cross-confirmed as
+             reference bib36 of Wang et al. 2026).}
+}
+
+% --- 数据中心水耗 Perspective (注意更正版) ---
+@article{Mytton2021DataCentreWater,
+  author  = {Mytton, David},
+  title   = {Data centre water consumption},
+  journal = {npj Clean Water},
+  year    = {2021},
+  volume  = {4},
+  pages   = {11},
+  doi     = {10.1038/s41545-021-00101-w},
+  note    = {TYPE: Perspective (CrossRef records journal-article, which is
+             consistent). ⚠️ A CORRECTION exists: 10.1038/s41545-021-00140-3
+             (2021-11-02). Confirm the corrected version is cited.}
+}
+
+% --- 集中 vs 分散再生水策略 (注意更正版 + 年份口径) ---
+@article{LandaCansigno2020ReuseStrategies,
+  author  = {Landa-Cansigno, Oriana and Behzadian, Kourosh and
+             Davila-Cano, D. and Campos, L. C.},
+  title   = {Performance assessment of water reuse strategies using integrated
+             framework of urban water metabolism and water-energy-pollution
+             nexus},
+  journal = {Environmental Science and Pollution Research},
+  year    = {2020},
+  volume  = {27},
+  pages   = {4582--4597},
+  doi     = {10.1007/s11356-019-05465-8},
+  note    = {Online first 2019-05-26; assigned to a 2020 volume. ⚠️ A
+             CORRECTION exists: 10.1007/s11356-020-10583-9 (2020-08-26).
+             Suggested bib entry: note={online first 2019}.}
+}
+
+% --- 美国数据中心能源报告 (政策锚点, 非期刊论文) ---
+@techreport{Smith2026LBNL,
+  author      = {Smith, S. J. and Hubbard, A. and Newkirk, A. and
+                 Ganeshalingam, M. and Holecek, B. and Sartor, D. and
+                 Mills, M. and Shehabi, A.},
+  title       = {United States Data Center Energy Usage Report: 2025 Update},
+  institution = {Lawrence Berkeley National Laboratory},
+  year        = {2026},
+  number      = {LBNL-2001758},
+  doi         = {10.71468/P1RP4F},
+  note         = {TYPE: technical report, NOT a journal article. Published
+                 2026-06-18. OSTI ID 3374245; DataCite type = Report.
+                 Key anchor: data centres may
+                 consume 11.8\% of total US electricity by 2030 (range
+                 9.5\%-15.3\%). Verified in A14 via OSTI.GOV API and
+                 re-resolved via DataCite in A29.}
+}
+
+
+% ===========================================================================
+% ===== 以下条目因 "无法定位真实出处" 而被排除 (UNVERIFIED) =====
+%
+% 依任务纪律, 以下两条 GPT 候选 **不写入本 bib**:
+%
+% C9  "数据中心冷却技术与城市可持续性综述"
+%     -> 未检索到任何同时覆盖两要素的综述. 已检索 CrossRef
+%        query.bibliographic 与 OpenAlex search 共 3 组检索式.
+%        命中者均只覆盖其一:
+%          Kong2024  (Energy)         仅 DC 液冷技术综述
+%          Chang2024 (Sustainability) 仅 DC 冷却系统
+%          Budzik2024(Sustainability) 仅城市蓝绿基础设施降温 (与 DC 无关)
+%        GPT 疑似混淆了 "data centre cooling" 与 "urban cooling".
+%
+% C10 "逐日城市水代谢模型 (供水/用水/污水/水循环回收)"
+%     -> 城市水代谢模型 (WaterMet2, Renouf 2018, Puebla 2023 等) 真实存在,
+%        但元数据均未标明时间分辨率为 "逐日". 未能证实, 亦未证伪
+%        (未读各文方法节, 未做 Scopus/WoS 全文与引文追溯).
+%        ==> 本项目在补做检索前, 不得主张 "首次以逐日分辨率建模".
+%
+% 参考候选 (如需冷却技术综述, 请改用以下已核验的真实文献):
+%   Kong, Zhang, Tang (2024). Energy, 10.1016/j.energy.2024.132846
+%   Chang, Huang, Liu (2024). Sustainability 16(16), 7222,
+%                             10.3390/su16167222
+% ===========================================================================

@@ -41,8 +41,13 @@
    "name": "industrial cooling water share",
    "n_sectors": 39,
    "mean_of_means": 0.25799037378455597,
+   "mean_min": 0.0,
+   "mean_max": 0.989572998088803,
+   "spread_min_min": 0.0,
+   "spread_max_max": 1.0,
+   "caliber_note": "min/max 旧字段实为行业内波动的极值(spread_*); 引用'行业均值范围'请用 mean_min/mean_max",
    "min": 0.0,
-   "max": 1.0
+   "max": 0.989572998088803
   },
   {
    "name": "urban water price (CNY/m3)",

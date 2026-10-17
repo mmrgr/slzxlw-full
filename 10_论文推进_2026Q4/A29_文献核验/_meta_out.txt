@@ -1,0 +1,135 @@
+====================================================================================================
+DOI: 10.1038/s44221-026-00727-5
+  [CR] title : China’s centralized wastewater treatment system reaches efficiency limits in tackling water scarcity
+  [CR] journal: Nature Water
+  [CR] year  : [2026, 10, 12]
+  [CR] volume/issue/page: None / None / None | article: None
+  [CR] type  : journal-article
+  [CR] authors: Jijie Shen; Lei Shen; Shuai Zhong; Delong Li; Ding Li; Jinzhu Fang; Haonan Bai
+  [CR] publisher: Springer Science and Business Media LLC
+  [OA] title  : China’s centralized wastewater treatment system reaches efficiency limits in tackling water scarcity
+  [OA] year   : 2026 | date: 2026-10-12 | type: article
+  [OA] source : Nature Water | ISSN-L 2731-6084 | host Springer Science+Business Media
+  [OA] authors: Jijie Shen; Lei Shen; Shuai Zhong; Delong Li; Ding Li; Ding Li; Ding Li; 方锦珠; Haonan Bai
+  [OA] cited_by: 0 | is_oa: False
+  [OA] institutions: Chinese Academy of Sciences; Higher Education Commission; Institute of Geographic Sciences and Natural Resources Research; University of Chinese Academy of Sciences; Hohai University; Changjiang Water Resources Commission
+====================================================================================================
+DOI: 10.1016/j.ese.2026.100702
+  [CR] title : Global data–water symbiosis reduces AI infrastructure's carbon and water footprint
+  [CR] journal: Environmental Science and Ecotechnology
+  [CR] year  : [2026, 5]
+  [CR] volume/issue/page: 31 / None / 100702 | article: 100702
+  [CR] type  : journal-article
+  [CR] authors: Aijie Wang; Congchao Zhang; Tiefu Xu; Dragan Savic; Jingjing Jiang; Peng Xiao; Chuan He; Yu Tao; Glen Daigger; Nanqi Ren
+  [CR] publisher: Elsevier BV
+  [OA] title  : Global data–water symbiosis reduces AI infrastructure's carbon and water footprint
+  [OA] year   : 2026 | date: 2026-04-26 | type: article
+  [OA] source : Environmental Science and Ecotechnology | ISSN-L 2096-9643 | host Elsevier BV
+  [OA] authors: Aijie Wang; Congchao Zhang; Tiefu Xu; Dragan A. Savic; Jingjing Jiang; Peng Xiao; Chuan He; Yu Tao; Glen T. Daigger; Nanqi Ren
+  [OA] cited_by: 2 | is_oa: True
+  [OA] institutions: Harbin Institute of Technology; Heilongjiang University; University of Exeter; KWR Water Research Institute; University of Michigan
+====================================================================================================
+DOI: 10.1038/s44221-023-00087-4
+  [CR] title : Decoupling wastewater-related greenhouse gas emissions and water stress alleviation across 300 cities in China is challenging yet plausible by 2030
+  [CR] journal: Nature Water
+  [CR] year  : [2023, 6, 1]
+  [CR] volume/issue/page: 1 / 6 / 534-546 | article: None
+  [CR] type  : journal-article
+  [CR] authors: Shaoqing Chen; Linmei Zhang; Beibei Liu; Hang Yi; Hanshi Su; Ali Kharrazi; Feng Jiang; Zhongming Lu; John C. Crittenden; Bin Chen
+  [CR] publisher: Springer Science and Business Media LLC
+  [OA] title  : Decoupling wastewater-related greenhouse gas emissions and water stress alleviation across 300 cities in China is challenging yet plausible by 2030
+  [OA] year   : 2023 | date: 2023-06-01 | type: article
+  [OA] source : Nature Water | ISSN-L 2731-6084 | host Springer Science+Business Media
+  [OA] authors: Shaoqing Chen; Linmei Zhang; Beibei Liu; Hang Yi; Hanshi Su; Ali Kharrazi; Feng Jiang; Zhongming Lu; John C. Crittenden; Bin Chen
+  [OA] cited_by: 86 | is_oa: True
+  [OA] institutions: Sun Yat-sen University; Guangdong Provincial Key Laboratory of Environmental Pollution Control and Remediation Technology; State Key Laboratory of Pollution Control and Resource Reuse; Johns Hopkins University – Nanjing University Center for Chinese and American Studies; Nanjing University; Hiroshima University; International Institute for Applied Systems Analysis; Akita International University; Hong Kong University of Science and Technology; Georgia Institute of Technology
+====================================================================================================
+DOI: 10.1016/j.resconrec.2025.108310
+  [CR] title : The water use of data center workloads: A review and assessment of key determinants
+  [CR] journal: Resources, Conservation and Recycling
+  [CR] year  : [2025, 6]
+  [CR] volume/issue/page: 219 / None / 108310 | article: 108310
+  [CR] type  : journal-article
+  [CR] authors: Nuoa Lei; Jun Lu; Arman Shehabi; Eric Masanet
+  [CR] publisher: Elsevier BV
+  [OA] title  : The water use of data center workloads: A review and assessment of key determinants
+  [OA] year   : 2025 | date: 2025-04-14 | type: article
+  [OA] source : Resources Conservation and Recycling | ISSN-L 0921-3449 | host Elsevier BV
+  [OA] authors: Nuoa Lei; Jun Lu; Arman Shehabi; Eric R. Masanet
+  [OA] cited_by: 65 | is_oa: True
+  [OA] institutions: Lawrence Berkeley National Laboratory; University of Illinois Chicago; University of California, Santa Barbara
+====================================================================================================
+DOI: 10.1038/s41893-025-01681-y
+  [CR] title : Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA
+  [CR] journal: Nature Sustainability
+  [CR] year  : [2025, 11, 10]
+  [CR] volume/issue/page: 8 / 12 / 1541-1553 | article: None
+  [CR] type  : journal-article
+  [CR] authors: Tianqi Xiao; Francesco Fuso Nerini; H. Damon Matthews; Massimo Tavoni; Fengqi You
+  [CR] publisher: Springer Science and Business Media LLC
+  [OA] title  : Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA
+  [OA] year   : 2025 | date: 2025-11-10 | type: article
+  [OA] source : Nature Sustainability | ISSN-L 2398-9629 | host Nature Portfolio
+  [OA] authors: Tianqi Xiao; Francesco Fuso Nerini; H. Damon Matthews; Massimo Tavoni; Fengqi You
+  [OA] cited_by: 108 | is_oa: True
+  [OA] institutions: Cornell University; University of Oxford; RFF-CMCC European Institute on Economics and the Environment; CMCC Foundation - Euro-Mediterranean Center on Climate Change; KTH Royal Institute of Technology; Politecnico di Milano; Concordia University; Cornell Atkinson Center for Sustainability
+====================================================================================================
+DOI: 10.1038/s44221-024-00303-9
+  [CR] title : Using water and wastewater decentralization to enhance the resilience and sustainability of cities
+  [CR] journal: Nature Water
+  [CR] year  : [2024, 9, 10]
+  [CR] volume/issue/page: 2 / 10 / 953-974 | article: None
+  [CR] type  : journal-article
+  [CR] authors: Manel Garrido-Baserba; David L. Sedlak; Maria Molinos-Senante; Irene Barnosell; Oliver Schraa; Diego Rosso; Marta Verdaguer; Manel Poch
+  [CR] publisher: Springer Science and Business Media LLC
+  [OA] title  : Using water and wastewater decentralization to enhance the resilience and sustainability of cities
+  [OA] year   : 2024 | date: 2024-09-10 | type: article
+  [OA] source : Nature Water | ISSN-L 2731-6084 | host Springer Science+Business Media
+  [OA] authors: Manel Garrido‐Baserba; David L. Sedlak; María Molinos‐Senante; Irene Barnosell; Oliver J. Schraa; Diego Rosso; Marta Verdaguer; Manel Poch
+  [OA] cited_by: 146 | is_oa: True
+  [OA] institutions: Brown and Caldwell (United States); University of California, Berkeley; Universidad de Valladolid; Universitat de Girona; University of California, Irvine
+====================================================================================================
+DOI: 10.1016/j.enbuild.2023.113006
+  [CR] title : Life cycle assessment of a climate-friendly data center cooling device
+  [CR] journal: Energy and Buildings
+  [CR] year  : [2023, 6]
+  [CR] volume/issue/page: 288 / None / 113006 | article: 113006
+  [CR] type  : journal-article
+  [CR] authors: Asli Isler-Kaya; Filiz Karaosmanoglu
+  [CR] publisher: Elsevier BV
+  [OA] title  : Life cycle assessment of a climate-friendly data center cooling device
+  [OA] year   : 2023 | date: 2023-03-22 | type: article
+  [OA] source : Energy and Buildings | ISSN-L 0378-7788 | host Elsevier BV
+  [OA] authors: Asli Isler-Kaya; Fìlìz Karaosmanoğlu
+  [OA] cited_by: 17 | is_oa: False
+  [OA] institutions: Istanbul Technical University
+====================================================================================================
+DOI: 10.1038/s41586-025-08832-3
+  [CR] title : Using life cycle assessment to drive innovation for sustainable cool clouds
+  [CR] journal: Nature
+  [CR] year  : [2025, 4, 30]
+  [CR] volume/issue/page: 641 / 8062 / 331-338 | article: None
+  [CR] type  : journal-article
+  [CR] authors: Husam Alissa; Teresa Nick; Ashish Raniwala; Alberto Arribas Herranz; Kali Frost; Ioannis Manousakis; Kari Lio; Brijesh Warrier; Vaidehi Oruganti; T. J. DiCaprio; Kathryn Oseen-Senda; Bharath Ramakrishnan; Naval Gupta; Ricardo Bianchini; Jim Kleewein; Christian Belady; Marcus Fontoura; Julie Sinistore; Mukunth Natarajan; Lauren Johnson; VeeAnder Mealing; Praneet Arshi; Madeline Frieze
+  [CR] publisher: Springer Science and Business Media LLC
+  [OA] title  : Using life cycle assessment to drive innovation for sustainable cool clouds
+  [OA] year   : 2025 | date: 2025-04-30 | type: article
+  [OA] source : Nature | ISSN-L 0028-0836 | host Nature Portfolio
+  [OA] authors: Husam A. Alissa; Teresa A. Nick; Ashish Raniwala; Alberto Arribas Herranz; Kali Frost; Ioannis Manousakis; Kari Lio; Brijesh Warrier; Vaidehi Oruganti; T.J. diCaprio; Kathryn Oseen-Senda; Bharath Ramakrishnan
+  [OA] cited_by: 78 | is_oa: True
+  [OA] institutions: Microsoft (United States)
+====================================================================================================
+DOI: 10.1016/j.jclepro.2025.146528
+  [CR] title : Sustainable AI infrastructure: A scenario-based forecast of water footprint under uncertainty
+  [CR] journal: Journal of Cleaner Production
+  [CR] year  : [2025, 10]
+  [CR] volume/issue/page: 526 / None / 146528 | article: 146528
+  [CR] type  : journal-article
+  [CR] authors: Manuel Herrera; Xiang Xie; Andrea Menapace; Ariele Zanfei; Bruno M. Brentan
+  [CR] publisher: Elsevier BV
+  [OA] title  : Sustainable AI infrastructure: A scenario-based forecast of water footprint under uncertainty
+  [OA] year   : 2025 | date: 2025-09-17 | type: article
+  [OA] source : Journal of Cleaner Production | ISSN-L 0959-6526 | host Elsevier BV
+  [OA] authors: Manuel Herrera; Xiang Xie; Andrea Menapace; Ariele Zanfei; Bruno Brentan
+  [OA] cited_by: 31 | is_oa: True
+  [OA] institutions: Newcastle University; Eurac Research; Universidade Federal de Minas Gerais

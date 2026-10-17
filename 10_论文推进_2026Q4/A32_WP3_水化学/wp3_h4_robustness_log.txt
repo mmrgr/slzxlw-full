@@ -1,0 +1,50 @@
+====================================================================================
+WP3-2  H4(组成反转符号) 在完整物种水样上的稳健性检验
+====================================================================================
+
+[0] 权威水样化学 (来源: city_model.load_samples())
+  IEUA RP-1 (2025, tertiary)                       本脚本用物种=['TDS', 'alkalinity', 'chloride', 'hardness', 'silica']
+  LADWP AWPF (2012, RO product)                    本脚本用物种=['TDS', 'alkalinity', 'chloride', 'hardness', 'silica']
+  Figshare RW (2025, paired study)                 本脚本用物种=['TDS', 'chloride', 'hardness']
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study) 本脚本用物种=['TDS', 'chloride', 'hardness']
+  AI-UWM model assumption                          本脚本用物种=['TDS', 'chloride']
+  ℹ 权威表共 5 条, 其中 Figshare BW 为 brackish(非再生水), 不纳入本检验
+
+[1] 水样组成完整性登记 (缺失物种不写入引擎 => 按 0)
+  sample                                物种数 缺失                           状态
+  IEUA RP-1 (2025, tertiary)              5 -                            COMPLETE
+  LADWP AWPF (2012, RO product)           5 -                            COMPLETE
+  Figshare RW (2025, paired study)        3 alkalinity,silica            INCOMPLETE
+  AI-UWM model assumption                 2 hardness,alkalinity,silica   INCOMPLETE
+
+[2] 逐水样 phi 扫描 (phi=0 无回用 / phi=0.6 回用), CoC 与补水
+  domain sample                           phi       M1(ML)  CoC_mean    CoC_min 判定
+      ha IEUA RP-1 (2025, tertiary)       0.0    3.106e+04   3.50000    3.50000 ok
+      ha IEUA RP-1 (2025, tertiary)       0.6    3.411e+04   2.82258    2.82258 ok
+      ha LADWP AWPF (2012, RO product)    0.0    3.106e+04   3.50000    3.50000 ok
+      ha LADWP AWPF (2012, RO product)    0.6    2.581e+04   7.90782    7.90782 ok
+      ha Figshare RW (2025, paired study)   0.0 RUN_FAILED ProjectValidationError: 项目配置无效：
+- 数据中心 AI_DC1.water_sources.reclaimed.quality_mg_l 缺少质量指标: ['alkalinity', 'silica']
+      ha Figshare RW (2025, paired study)   0.6 RUN_FAILED ProjectValidationError: 项目配置无效：
+- 数据中心 AI_DC1.water_sources.reclaimed.quality_mg_l 缺少质量指标: ['alkalinity', 'silica']
+      ha AI-UWM model assumption          0.0 RUN_FAILED ProjectValidationError: 项目配置无效：
+- 数据中心 AI_DC1.water_sources.reclaimed.quality_mg_l 缺少质量指标: ['alkalinity', 'hardness', 'silica']
+      ha AI-UWM model assumption          0.6 RUN_FAILED ProjectValidationError: 项目配置无效：
+- 数据中心 AI_DC1.water_sources.reclaimed.quality_mg_l 缺少质量指标: ['alkalinity', 'hardness', 'silica']
+
+[3] ★ 逐水样 q 与 dS_pot 符号 (q>0 <=> CoC1>CoC0)
+  sample                                 CoC0      CoC1          q 状态           说明
+  IEUA RP-1 (2025, tertiary)           3.5000    2.8226   -0.09600 VALID        可用
+  LADWP AWPF (2012, RO product)        3.5000    7.9078    0.22296 VALID        可用
+
+[4] ★ 裁定: H4 在【完整物种】水样上是否成立
+  完整且非退化的水样 = 2: ['IEUA RP-1 (2025, tertiary)', 'LADWP AWPF (2012, RO product)']
+  退化或组成不完整   = 0: []
+  ✓ 在两个【完整物种、非退化】水样间观察到 q 的符号分化
+    => H4(组成反转符号) 在有效样本上仍然成立 ⇒ 可作为核心机制
+
+[5] 附: 弱化后的可主张范围
+  若 H4 仅在有效样本上部分成立, 可主张的是:
+    '在完整物种组成下, 再生水是否比自来水更清洁决定了 q 的符号,
+     进而决定回用是降低还是升高补水' (闭式, 可检验)
+  不可主张: '水质普遍能反转结论' (需跨更多真实水样验证)

@@ -1,0 +1,39 @@
+==============================================================================
+WP0-A21 溶质闭合门禁: 从逐日输出自行重建质量平衡
+==============================================================================
+
+[0] 探针: 引擎 daily 输出实际列名 (用于判断哪些残差列存在)
+  n_cols = 100
+  含 'solute' 的列: ['quality_solute_closure_residual_kg', 'quality_process_solute_closure_residual_kg', 'quality_solute_closure_TDS_kg', 'quality_solute_closure_TSS_kg', 'quality_solute_closure_BOD_kg']
+  含 'water_balance/residual' 的列: ['quality_solver_residual', 'water_balance_residual_ml', 'quality_storage_water_balance_residual_ml', 'quality_solute_closure_residual_kg', 'quality_process_solute_closure_residual_kg', 'quality_recovered_return_volume_residual_ml', 'quality_recovered_return_mass_residual_kg']
+  ★ 引擎【确实提供】溶质闭合残差列, 但名称是: ['quality_solute_closure_residual_kg', 'quality_process_solute_closure_residual_kg', 'quality_solute_closure_TDS_kg', 'quality_solute_closure_TSS_kg', 'quality_solute_closure_BOD_kg']
+  ⇒ A21/dynamic_state.py 找的是 'solute_balance_residual_kg' (不存在), 于是静默 fallback 到 NaN。
+    真相: 不是引擎缺少闭合检查, 而是 **A21 取错了列名**——闭合量一直被引擎算出来, 却从未被读取。
+  核心水量列缺失: （无）
+  可用浓度列: （无）
+
+[1] ★ 逐情景溶质质量平衡重建
+    单位: 质量[kg] = 浓度[mg/L] × 体积[ML]  (1 ML = 1e6 L, 系数恰为 1)
+    I = 补水带入;  O = 排污带出;  dS = 回路存量变化;  残差 = dS − (I−O)
+
+   domain   stor  qstate |        I(kg)        O(kg)       dS(kg)       resid       rel | verdict
+       ha      0   False | makeup=  4.774e+04 waterResid=  7.11e-15 soluteResid=       nan rel=      nan | NOT_IDENTIFIABLE_NO_RESIDUAL_COL
+       ha      0    True | makeup=   2.58e+04 waterResid=  3.55e-15 soluteResid=  6.82e-13 rel= 2.64e-20 | IDENTIFIED_ENGINE_RESIDUAL
+           └ 各残差列: residual_kg=0, residual_kg=6.82e-13, TDS_kg=0, TSS_kg=0, BOD_kg=0
+       ha    200    True | makeup=   2.58e+04 waterResid=   2.4e-14 soluteResid=  1.46e-11 rel= 5.64e-19 | IDENTIFIED_ENGINE_RESIDUAL
+           └ 各残差列: residual_kg=1.46e-11, residual_kg=9.66e-13, TDS_kg=1.46e-11, TSS_kg=0, BOD_kg=0
+       co      0   False | makeup=  4.564e+04 waterResid=  7.11e-15 soluteResid=       nan rel=      nan | NOT_IDENTIFIABLE_NO_RESIDUAL_COL
+       co      0    True | makeup=   2.55e+04 waterResid=  3.55e-15 soluteResid=  9.09e-13 rel= 3.57e-20 | IDENTIFIED_ENGINE_RESIDUAL
+           └ 各残差列: residual_kg=0, residual_kg=9.09e-13, TDS_kg=0, TSS_kg=0, BOD_kg=0
+       co    200    True | makeup=   2.55e+04 waterResid=  2.53e-14 soluteResid=  1.46e-11 rel= 5.71e-19 | IDENTIFIED_ENGINE_RESIDUAL
+           └ 各残差列: residual_kg=1.46e-11, residual_kg=9.66e-13, TDS_kg=1.46e-11, TSS_kg=0, BOD_kg=0
+
+[2] 判据 (用相对容差, 因量级可达 1e5 kg)
+  可检验情景 (R10a 逐日水质路径) = 4/6
+  不可检验情景 (volume-only 路径, 引擎未输出该残差) = 2
+  最大相对残差 = 5.707e-19  (门禁阈值 1e-9)
+  裁定: PASS
+
+  ★ 关键区分(必须写进论文):
+    · R10a 逐日溶质路径: 溶质闭合到机器精度 ⇒ 其 CoC≈8 的结果**有守恒支撑**, 不是数值假象。
+    · volume-only 路径: 引擎**根本不输出**该残差 ⇒ 其闭合**未被检验过**(而不是已通过)。 既有全部主结论建立在 volume-only 上, 因此'溶质闭合'对主结论而言**是待验证项, 不是已验证项**。

@@ -1,0 +1,24 @@
+{
+ "n_placeholders": 10,
+ "placeholders": [
+  "...",
+  "REPOSITORY_URL",
+  "COMMIT_OR_VERSION",
+  "Author 1",
+  "conception / model design / analysis / writing",
+  "Author 2",
+  "…",
+  "FUNDING: grant number(s) and funder name(s), or \"This research received no specific grant from any funding agency.\"",
+  "names",
+  "contribution"
+ ],
+ "sections": [
+  "Data availability",
+  "Code availability",
+  "Author contributions",
+  "Competing interests",
+  "Acknowledgements",
+  "Reporting summary"
+ ],
+ "runtime_s": 0.0
+}

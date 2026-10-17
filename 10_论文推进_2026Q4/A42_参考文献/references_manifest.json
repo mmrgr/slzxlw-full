@@ -1,0 +1,53 @@
+{
+ "n_bib": 24,
+ "n_with_doi": 24,
+ "inline_cites": {
+  "Han (2026)": 2,
+  "Alston (2026)": 2,
+  "Shen (2026)": 4,
+  "Wang (2026)": 3,
+  "Chen (2023)": 1,
+  "Badruzzaman (2022)": 2,
+  "Saleh (2026)": 1,
+  "Mytton (2021)": 2,
+  "Siddik (2021)": 2,
+  "Lei (2025)": 2,
+  "Xiao (2025)": 2,
+  "Behzadian (2015)": 1,
+  "Renouf (2018)": 1,
+  "Garrido-Baserba (2024)": 1,
+  "Alissa (2025)": 1
+ },
+ "cited_keys": [
+  "Alissa2025CoolCloudsLCA",
+  "Alston2026CoolingGridWater",
+  "Badruzzaman2022ReclaimedCooling",
+  "Behzadian2015WaterMet2",
+  "Chen2023Decoupling300Cities",
+  "GarridoBaserba2024Decentralization",
+  "Han2026SmallBottleBigPipe",
+  "Lei2025WorkloadWaterUse",
+  "Mytton2021DataCentreWater",
+  "Renouf2018CityRegionUWM",
+  "Saleh2026WaterCompatibility",
+  "Shen2026CWTS",
+  "Siddik2021USDataCenters",
+  "Wang2026DataWaterSymbiosis",
+  "Xiao2025AIServersUSA"
+ ],
+ "uncited_keys": [
+  "Ajaz2026WaterGovernance",
+  "Akinade2026WaterFeedbackLoop",
+  "Arnaud2024ScaleResilience",
+  "Behzadian2014WaterMet2Tool",
+  "Herrera2025SustainableAIWater",
+  "IslerKaya2023CoolingLCA",
+  "LandaCansigno2020ReuseStrategies",
+  "Shen2026CWTSData",
+  "Smith2026LBNL"
+ ],
+ "missing": [],
+ "n_cited": 15,
+ "n_uncited": 9,
+ "runtime_s": 0.0
+}

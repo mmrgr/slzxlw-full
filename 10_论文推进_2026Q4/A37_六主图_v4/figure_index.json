@@ -1,0 +1,220 @@
+{
+ "generated": "2026-10-17T19:27:08",
+ "figures": {
+  "Fig. 1": {
+   "question": "研究边界如何划定? 三种反事实 (B0/B1/B2) 与三分账是什么?",
+   "sources": [
+    "A13_可靠性机制/supply_state_regimes.csv",
+    "A26_语义统一/CHI_SEMANTICS.md"
+   ],
+   "script": "make_fig1.py",
+   "hashes": {
+    "Fig1_boundary_counterfactuals.pdf": "9cb30218a66a8cc7",
+    "Fig1_boundary_counterfactuals.png": "8801082eed3c98c0"
+   }
+  },
+  "Fig. 2": {
+   "question": "掺混如何改变 CoC? 哪个物种绑定 CoC? 该结论跨限值档稳健吗?",
+   "sources": [
+    "A33_WP4_组成重构/wp4_results.csv",
+    "A4_水化学参数域/T6_coc_limits.csv",
+    "A4_水化学参数域/T6_water_chemistry_samples.csv",
+    "A27_引用限值/A27_引用限值报告.md",
+    "A38_模拟审稿/ne2_panel_robustness_summary.json"
+   ],
+   "script": "make_fig2.py",
+   "hashes": {
+    "Fig2_water_quality_coc.pdf": "ca33d8b17ebabb5b",
+    "Fig2_water_quality_coc.png": "d0eaf02c063b689c"
+   }
+  },
+  "Fig. 3": {
+   "question": "dS_pot 的符号结构是什么? q>0 组是否有害?",
+   "sources": [
+    "A13_可靠性机制/supply_state_regimes.csv",
+    "A33_WP4_组成重构/wp4_results.csv",
+    "A13_可靠性机制/COLUMN_NAMES_CORRECTED.md"
+   ],
+   "script": "make_fig3.py",
+   "hashes": {
+    "Fig3_city_results_signs.pdf": "af4d1c2df0565cad",
+    "Fig3_city_results_signs.png": "48aa17a6efd907d1"
+   }
+  },
+  "Fig. 4": {
+   "question": "仅用干预前可观测量能否预测 dS_pot 符号? 折外增益是否成立?",
+   "sources": [
+    "A31_WP2_假设冻结/wp2_e3_independent_prediction_summary.json",
+    "A31_WP2_假设冻结/wp2_e3b_combined_prediction_summary.json",
+    "A31_WP2_假设冻结/wp2_e3_predictions.csv",
+    "A31_WP2_假设冻结/wp2_e3b_features.csv",
+    "A38_模拟审稿/red_team_findings.md"
+   ],
+   "script": "make_fig4.py",
+   "hashes": {
+    "Fig4_independent_prediction.pdf": "ce6ece350c81cbeb",
+    "Fig4_independent_prediction.png": "c91d18ff2449ef77"
+   }
+  },
+  "Fig. 5": {
+   "question": "哪个参数主导 dS_pot? 主效应解释多少? 结论跨限值档稳健吗? 极端事件会翻转吗?",
+   "sources": [
+    "A34_WP5_敏感性与极端事件/wp5_morris.csv",
+    "A34_WP5_敏感性与极端事件/wp5_sobol.csv",
+    "A34_WP5_敏感性与极端事件/wp5_extreme_cases.csv",
+    "A34_WP5_敏感性与极端事件/wp5_extreme_summary.json",
+    "A38_模拟审稿/ne4_sobol_bootstrap_summary.json",
+    "A38_模拟审稿/ne2_panel_robustness_summary.json"
+   ],
+   "script": "make_fig5.py",
+   "hashes": {
+    "Fig5_sensitivity_extremes.pdf": "863ab313b1940a1e",
+    "Fig5_sensitivity_extremes.png": "31aaa983c525ff46"
+   }
+  },
+  "Fig. 6": {
+   "question": "真实设施中 committed 分支占比是多少? 该用途/规模/成本有真实外部锚点吗?",
+   "sources": [
+    "A30_WP0取证/a24b_partial_id_summary.json",
+    "A30_WP0取证/a24b_capacity_table.csv",
+    "A39_WP8_外部效度/wp8_real_reuse_cases_summary.json",
+    "A39_WP8_外部效度/wp9_cooling_share_summary.json",
+    "A39_WP8_外部效度/wp10_water_price_summary.json",
+    "A39_WP8_外部效度/wp11_reuse_deployment_summary.json"
+   ],
+   "script": "make_fig6.py",
+   "hashes": {
+    "Fig6_external_anchor_partial_id.pdf": "b2bdb25241a59115",
+    "Fig6_external_anchor_partial_id.png": "f3e64f8fffb1bcb6"
+   }
+  }
+ },
+ "verified_numbers": [
+  {
+   "quantity": "严格符号 dS_pot 计数",
+   "value": "626 负 / 177 正 / 36 零",
+   "scope": "n_eff=839",
+   "note": "复现; 必须用 dS==0.0 精确判零。容差 1e-9 得 614/145 (旧口径, n=759)"
+  },
+  {
+   "quantity": "q 分组",
+   "value": "263 / 288 / 288",
+   "scope": "n_eff=839",
+   "note": "复现; q=(M0-M1)/M1, 该列需自行计算, 源文件无 q 列"
+  },
+  {
+   "quantity": "q>0 组有害计数",
+   "value": "0 / 263",
+   "scope": "n_eff=839",
+   "note": "复现; 无正例 ⇒ 不具鉴别力"
+  },
+  {
+   "quantity": "恒等式残差",
+   "value": "4.365575e-11",
+   "scope": "n_eff=839",
+   "note": "复现 (相对 3.55e-16); 须用 max(0,inc_B2-inc_B1)-(M0-M1)-x_ai_B1 重建"
+  },
+  {
+   "quantity": "WP4 城市级",
+   "value": "47/47 全部有益; q 分组 23/24",
+   "scope": "n_eff=47",
+   "note": "复现; 双门禁后 60 → 47, 剔除 13"
+  },
+  {
+   "quantity": "E3 仅化学",
+   "value": "0.6746 vs 基线 0.8090",
+   "scope": "n_eff=733",
+   "note": "来自 summary.json"
+  },
+  {
+   "quantity": "E3b 联合 C4",
+   "value": "0.9144 全样本; 折外 0.9171 vs 0.8151",
+   "scope": "n_eff=733",
+   "note": "复现 tp/fp/tn/fn = 602/40/62/29 (须在剔除 80 近零行的子集上)"
+  },
+  {
+   "quantity": "E3b 折外增益已撤回",
+   "value": "+0.184 (IEUA) / +0.000 ×2 / −0.018 (Figshare); median 0.000",
+   "scope": "4 折 (n=184/170/196/183)",
+   "note": "来自 e3b_summary.leave_one_sample_out 逐折复算; 仅 1/4 折为正 ⇒ 撤回折外预测主张"
+  },
+  {
+   "quantity": "Sobol ΣS1 (旧点估计)",
+   "value": "0.223 (ha) / 0.218 (co)",
+   "scope": "Saltelli ha|IEUA",
+   "note": "复现 ≈0.22; Fig5 面板 b 仍绘制该点估计"
+  },
+  {
+   "quantity": "NE-4 ΣS1 (含区间)",
+   "value": "0.1877 (IEUA, n_eff=117) / 0.5809 (LADWP, n_eff=128)",
+   "scope": "bootstrap 400, N_base=128",
+   "note": "来自 ne4_sobol_bootstrap_summary.json; 均 ≪ 1 ⇒ 主效应只解释部分方差"
+  },
+  {
+   "quantity": "NE-4 ST 95% 区间",
+   "value": "0.330 [0.075, 0.792] / 0.926 [0.051, 2.568] / 0.125 [0.015, 0.305]",
+   "scope": "IEUA, 7 参数",
+   "note": "limit_scale / phi / alkalinity; phi 区间极宽 ⇒ 只引方向不引单点值"
+  },
+  {
+   "quantity": "NE-2 绑定物种不跨档",
+   "value": "cited/permissive: alkalinity; strict: silica (IEUA) / TDS (LADWP)",
+   "scope": "3 档 × 2 水样 × 2 域",
+   "note": "来自 ne2_panel_robustness_summary.json; strict 档无任何单物种符号杠杆"
+  },
+  {
+   "quantity": "极端事件翻转",
+   "value": "0 / 8",
+   "scope": "n_eff=64",
+   "note": "复现 (4 热浪 + 4 干旱, 0 翻转)"
+  },
+  {
+   "quantity": "碱度保守界比",
+   "value": "2.500 (IEUA); 49.3 (LADWP)",
+   "scope": "cited 限值档",
+   "note": "复现; 静态余量比, 非动态临界值; 仅 cited/permissive 档成立"
+  },
+  {
+   "quantity": "碱度动态翻转临界",
+   "value": "≈ 2.615×",
+   "scope": "41 点 × 2 域 × 2 水样",
+   "note": "来自 WP5 报告表; 无观测支撑"
+  },
+  {
+   "quantity": "committed 占比界",
+   "value": "[0%, 100%] 不可识别",
+   "scope": "n=10826 (仅产能)",
+   "note": "来自 a24b_partial_id_summary.json (WITHDRAWN_AS_UNIDENTIFIED); WP8-10 无需求字段 ⇒ 界不变"
+  },
+  {
+   "quantity": "WP8 B3 用途占比",
+   "value": "40/141 = 28.4% (最大类别)",
+   "scope": "n=141 案例集",
+   "note": "来自 wp8 summary; 非随机样本 ⇒ 不代表全国占比"
+  },
+  {
+   "quantity": "WP8 B3 容量落域",
+   "value": "26/38 = 68.4% 落在 [1e3, 1e5] m3/d; 中位 4000",
+   "scope": "n=38 (报容量者)",
+   "note": "来自 wp8 summary.b3_industrial_cooling.capacity"
+  },
+  {
+   "quantity": "WP9 冷却水占比",
+   "value": "min 0.000 / median 0.184 / max 0.990; 7 行业 >0.5",
+   "scope": "n=39/41 行业",
+   "note": "来自 wp9 summary; 缺失 2 行业显式统计, 未按 0 填充"
+  },
+  {
+   "quantity": "WP9 0.258 追溯",
+   "value": "0.25799037378455597 = 39 行业均值, ≈62 分位",
+   "scope": "n=39",
+   "note": "与 A24 mean_of_means 逐位一致 (相对差 0.0)"
+  },
+  {
+   "quantity": "WP10 水价 vs 再生水成本",
+   "value": "1.550 vs 2.413 ⇒ 比 1.556; 17/61 (27.9%) 城市高于成本",
+   "scope": "61 城市 / 7730 月观测",
+   "note": "来自 wp10 summary; 仅量级对照, 非因果, 不可做 NPV"
+  }
+ ]
+}

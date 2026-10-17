@@ -1,0 +1,175 @@
+{
+ "purpose": "检验两条水质求解路径的溶质质量守恒, 取代 A21 中因取错列名而静默返回 NaN 的 solute_closure 字段",
+ "silent_nan_root_cause": "dynamic_state.py 取 'solute_balance_residual_kg_max_abs' 列, 但引擎 daily 输出的真实列名是 'quality_solute_closure_residual_kg' 等 ⇒ key 不存在, pd.Series([nan]).max() 静默给出 NaN。属门禁空洞通过(第 4 条禁令)。",
+ "engine_actual_residual_columns": [
+  "quality_solute_closure_residual_kg",
+  "quality_process_solute_closure_residual_kg",
+  "quality_solute_closure_TDS_kg",
+  "quality_solute_closure_TSS_kg",
+  "quality_solute_closure_BOD_kg"
+ ],
+ "engine_has_solute_residual_column": true,
+ "unit_convention": "mass_kg = conc_mg_per_L * volume_ML (系数恰为 1)",
+ "verdict": "PASS",
+ "key_distinction": "R10a 逐日路径: 溶质闭合到机器精度, 其 CoC≈8 有守恒支撑。volume-only 路径: 引擎不输出该残差 ⇒ 闭合'未被检验', 而非'已通过'; 既有主结论建立于 volume-only ⇒ 溶质守恒对主结论仍属待验证项。",
+ "cases": [
+  {
+   "domain": "ha",
+   "storage_ml": 0.0,
+   "quality_state": false,
+   "makeup_ml": 47741.4806365556,
+   "water_residual_ml_max_abs": 7.105427357601002e-15,
+   "solute_residual_kg_max_abs": NaN,
+   "relative_residual": NaN,
+   "residual_columns": {},
+   "status": "NOT_IDENTIFIABLE_NO_RESIDUAL_COL",
+   "n_days": 730
+  },
+  {
+   "domain": "ha",
+   "storage_ml": 0.0,
+   "quality_state": true,
+   "makeup_ml": 25802.60289679085,
+   "water_residual_ml_max_abs": 3.552713678800501e-15,
+   "solute_residual_kg_max_abs": 6.821210263296962e-13,
+   "relative_residual": 2.643613239556284e-20,
+   "residual_columns": {
+    "quality_solute_closure_residual_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 730
+    },
+    "quality_process_solute_closure_residual_kg": {
+     "max_abs_kg": 6.821210263296962e-13,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TDS_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TSS_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    },
+    "quality_solute_closure_BOD_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    }
+   },
+   "status": "IDENTIFIED_ENGINE_RESIDUAL",
+   "n_days": 730
+  },
+  {
+   "domain": "ha",
+   "storage_ml": 200.0,
+   "quality_state": true,
+   "makeup_ml": 25803.281868122627,
+   "water_residual_ml_max_abs": 2.398081733190338e-14,
+   "solute_residual_kg_max_abs": 1.4551915228366852e-11,
+   "relative_residual": 5.639559844650725e-19,
+   "residual_columns": {
+    "quality_solute_closure_residual_kg": {
+     "max_abs_kg": 1.4551915228366852e-11,
+     "n_nonnull": 730
+    },
+    "quality_process_solute_closure_residual_kg": {
+     "max_abs_kg": 9.663381206337363e-13,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TDS_kg": {
+     "max_abs_kg": 1.4551915228366852e-11,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TSS_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    },
+    "quality_solute_closure_BOD_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    }
+   },
+   "status": "IDENTIFIED_ENGINE_RESIDUAL",
+   "n_days": 730
+  },
+  {
+   "domain": "co",
+   "storage_ml": 0.0,
+   "quality_state": false,
+   "makeup_ml": 45636.23021156824,
+   "water_residual_ml_max_abs": 7.105427357601002e-15,
+   "solute_residual_kg_max_abs": NaN,
+   "relative_residual": NaN,
+   "residual_columns": {},
+   "status": "NOT_IDENTIFIABLE_NO_RESIDUAL_COL",
+   "n_days": 730
+  },
+  {
+   "domain": "co",
+   "storage_ml": 0.0,
+   "quality_state": true,
+   "makeup_ml": 25498.40084969976,
+   "water_residual_ml_max_abs": 3.552713678800501e-15,
+   "solute_residual_kg_max_abs": 9.094947017729282e-13,
+   "relative_residual": 3.566869574033061e-20,
+   "residual_columns": {
+    "quality_solute_closure_residual_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 730
+    },
+    "quality_process_solute_closure_residual_kg": {
+     "max_abs_kg": 9.094947017729282e-13,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TDS_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TSS_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    },
+    "quality_solute_closure_BOD_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    }
+   },
+   "status": "IDENTIFIED_ENGINE_RESIDUAL",
+   "n_days": 730
+  },
+  {
+   "domain": "co",
+   "storage_ml": 200.0,
+   "quality_state": true,
+   "makeup_ml": 25498.737135831583,
+   "water_residual_ml_max_abs": 2.531308496145357e-14,
+   "solute_residual_kg_max_abs": 1.4551915228366852e-11,
+   "relative_residual": 5.706916052684848e-19,
+   "residual_columns": {
+    "quality_solute_closure_residual_kg": {
+     "max_abs_kg": 1.4551915228366852e-11,
+     "n_nonnull": 730
+    },
+    "quality_process_solute_closure_residual_kg": {
+     "max_abs_kg": 9.663381206337363e-13,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TDS_kg": {
+     "max_abs_kg": 1.4551915228366852e-11,
+     "n_nonnull": 730
+    },
+    "quality_solute_closure_TSS_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    },
+    "quality_solute_closure_BOD_kg": {
+     "max_abs_kg": 0.0,
+     "n_nonnull": 729
+    }
+   },
+   "status": "IDENTIFIED_ENGINE_RESIDUAL",
+   "n_days": 730
+  }
+ ],
+ "runtime_s": 25.4,
+ "discipline_note": "引擎只读; 缺失列标 NOT_IDENTIFIABLE 不静默跳过; 量级大 ⇒ 用相对容差"
+}

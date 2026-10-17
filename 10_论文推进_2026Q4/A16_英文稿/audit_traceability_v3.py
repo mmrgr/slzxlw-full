@@ -14,7 +14,25 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
+def _research_root() -> Path:
+    """标记式定位研究目录根 (不依赖脚本所在层数)。
+
+    2026-10-16 整理轮加入: 原写法 `Path(__file__).resolve().parent.parent`
+    在脚本被移入子目录后会算错根, 导致所有相对路径断链。
+    """
+    import os
+    _h = Path(__file__).resolve()
+    for _b in (_h.parent, *_h.parent.parents):
+        if (_b / "_lib").is_dir() or (_b / "_PROJECT_ROOT").exists():
+            return _b
+    _env = os.environ.get("AIUWM_RESEARCH_DIR")
+    if _env and Path(_env).is_dir():
+        return Path(_env)
+    raise RuntimeError(
+        "找不到研究目录根 (10_论文推进_2026Q4)。"
+        "请确认该目录下存在 _lib/ 或 _PROJECT_ROOT 标记文件。")
+
+ROOT = _research_root()
 A13 = ROOT / "A13_可靠性机制"
 A15 = ROOT / "A15_稳健性"
 A18 = ROOT / "A18_有限供水"
@@ -84,7 +102,11 @@ def main() -> None:
         ("消融格点 (可靠子集)", ab["n_rows"], 58, 0),
         ("消融剔除未收敛数", ab.get("n_excluded_unreliable", -1), 6, 0),
         ("留出真留出 R2 = 0.806", round(ho["H2_true_holdout"]["co_R2_phi_eff"], 3), 0.806, 0.002),
-        ("A27 限值档 = GB/T 引用 baseline", 1 if "cited" in str(ss.attrs) or True else 0, 1, 0),
+        # 2026-10-17 修正: 原为 `1 if "cited" in str(ss.attrs) or True else 0` ——
+        # `ss` 是 DataFrame, `.attrs` 恒为空 dict, `or True` 使该断言永真(无效断言)。
+        # 现改为真正可失败的检查: 引用限值档下 CoC 上限应恰等于设计值 5.0,
+        # 若限值被意外收紧, CoC_ai.max() 会低于 5.0 从而报错。
+        ("A27 引用限值档 CoC 上限 = 设计值 5.0", round(float(ss.CoC_ai.max()), 6), 5.0, 1e-6),
         ("留出真 R2 0.806", ho["H2_true_holdout"]["co_R2_phi_eff"], 0.8056, 0.01),
         ("留出基线 -0.073", ho["H2_true_holdout"]["trivial_baseline_R2"], -0.0733, 0.01),
         ("网格 1 步内收敛份额", min(v["share_within_1_step"]

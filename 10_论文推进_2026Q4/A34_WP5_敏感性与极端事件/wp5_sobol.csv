@@ -1,0 +1,29 @@
+﻿config,domain,sample,estimand,parameter,S1,ST
+ha|IEUA,ha,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,limit_scale,0.1720058915229247,0.9444062340317563
+ha|IEUA,ha,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,x_alkalinity,0.036675817535037805,0.6816235618352315
+ha|IEUA,ha,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,pool_scale,0.013371676253895,0.25101692085572336
+ha|IEUA,ha,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,phi,-0.002260968749454117,0.15149411239903038
+ha|IEUA,ha,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,e_scale,0.002553541128370279,0.06741315317027133
+ha|IEUA,ha,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,gap_scale,0.0004010544608943106,0.028949680607423568
+ha|IEUA,ha,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,dp_scale,0.00025548186594198365,0.012148897644277993
+ha|LADWP,ha,"LADWP AWPF (2012, RO product)",dS_pot_ml,limit_scale,,
+ha|LADWP,ha,"LADWP AWPF (2012, RO product)",dS_pot_ml,x_alkalinity,,
+ha|LADWP,ha,"LADWP AWPF (2012, RO product)",dS_pot_ml,phi,,
+ha|LADWP,ha,"LADWP AWPF (2012, RO product)",dS_pot_ml,gap_scale,,
+ha|LADWP,ha,"LADWP AWPF (2012, RO product)",dS_pot_ml,pool_scale,,
+ha|LADWP,ha,"LADWP AWPF (2012, RO product)",dS_pot_ml,e_scale,,
+ha|LADWP,ha,"LADWP AWPF (2012, RO product)",dS_pot_ml,dp_scale,,
+co|IEUA,co,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,limit_scale,0.16760260190103637,0.9430874328481184
+co|IEUA,co,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,x_alkalinity,0.03745734660828783,0.6894254150245734
+co|IEUA,co,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,pool_scale,0.01221012344343723,0.2504912033998395
+co|IEUA,co,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,phi,-0.0025094849265640054,0.16607075462299142
+co|IEUA,co,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,e_scale,0.0020117896981381765,0.06881724622704843
+co|IEUA,co,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,gap_scale,0.0006993308663963655,0.0328809708837508
+co|IEUA,co,"IEUA RP-1 (2025, tertiary)",dS_pot_ml,dp_scale,0.0002532034558793743,0.012588292586569787
+co|LADWP,co,"LADWP AWPF (2012, RO product)",dS_pot_ml,limit_scale,,
+co|LADWP,co,"LADWP AWPF (2012, RO product)",dS_pot_ml,x_alkalinity,,
+co|LADWP,co,"LADWP AWPF (2012, RO product)",dS_pot_ml,phi,,
+co|LADWP,co,"LADWP AWPF (2012, RO product)",dS_pot_ml,gap_scale,,
+co|LADWP,co,"LADWP AWPF (2012, RO product)",dS_pot_ml,pool_scale,,
+co|LADWP,co,"LADWP AWPF (2012, RO product)",dS_pot_ml,e_scale,,
+co|LADWP,co,"LADWP AWPF (2012, RO product)",dS_pot_ml,dp_scale,,

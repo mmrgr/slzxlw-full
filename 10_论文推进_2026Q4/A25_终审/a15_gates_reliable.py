@@ -27,13 +27,26 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 A15 = ROOT / "A15_稳健性"
 OK = "converged_unique"
+# 2026-10-17: 补第二门禁(退化情景), 与全项目双门禁口径统一。
+# 核验显示 holdout 文件单/双门禁差值为 0, 故本修正不改变现有产物。
+DEGEN_COL = "coc_floor_degenerate"
+
+def _rel(d):
+    """双门禁: status==OK 且未触 CoC 下限 (2026-10-17 补齐)。"""
+    m = d["status"] == OK
+    if "coc_floor_degenerate" in d.columns:
+        m = m & (~d["coc_floor_degenerate"].astype(bool))
+    return d[m]
+
 
 out = {}
 
 
 def summarise(name: str, d: pd.DataFrame, fn) -> None:
     a = d
-    b = d[d.status == OK]
+    b = d[(d.status == OK)]
+    if DEGEN_COL in d.columns:
+        b = b[~b[DEGEN_COL].astype(bool)]
     ra, rb = fn(a), fn(b)
     same = str(ra) == str(rb)
     out[name] = {"n_all": len(a), "n_ok": len(b),
@@ -86,7 +99,7 @@ def _r2(fitd, hod):
 
 out["holdout_R2"] = {
     "all": round(_r2(fit, ho), 6),
-    "ok": round(_r2(fit[fit.status == OK], ho[ho.status == OK]), 6),
+    "ok": round(_r2(_rel(fit), _rel(ho)), 6),
 }
 print(f"  {'holdout R2 (真留出)':38} 全={out['holdout_R2']['all']}  "
       f"可靠={out['holdout_R2']['ok']}")

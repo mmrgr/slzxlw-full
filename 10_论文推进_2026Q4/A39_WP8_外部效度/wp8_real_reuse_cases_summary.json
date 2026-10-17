@@ -1,0 +1,125 @@
+{
+ "task": "WP8 外部效度补强: 真实再生水项目用途分布与成本锚定",
+ "source": "C:\\Users\\mmrgr\\Desktop\\论文\\_ext_data\\source_data\\Source_data.xlsx",
+ "sheet": "Reclaimed water case",
+ "n_cases": 141,
+ "n_classified": 141,
+ "n_unclassified": 0,
+ "category_distribution": [
+  {
+   "code": "B3",
+   "n": 40,
+   "share_pct": 28.369,
+   "meaning": "INDUSTRIAL COOLING / general industrial reuse"
+  },
+  {
+   "code": "A3",
+   "n": 26,
+   "share_pct": 18.44,
+   "meaning": "agricultural / ecological reuse"
+  },
+  {
+   "code": "B1",
+   "n": 14,
+   "share_pct": 9.929,
+   "meaning": "urban non-potable reuse"
+  },
+  {
+   "code": "B4",
+   "n": 14,
+   "share_pct": 9.929,
+   "meaning": "low-cost landscaping / park irrigation"
+  },
+  {
+   "code": "C1",
+   "n": 11,
+   "share_pct": 7.801,
+   "meaning": "enhanced agricultural / rural-town reuse"
+  },
+  {
+   "code": "A2",
+   "n": 11,
+   "share_pct": 7.801,
+   "meaning": "agricultural reuse"
+  },
+  {
+   "code": "B2",
+   "n": 9,
+   "share_pct": 6.383,
+   "meaning": "landscape-water replenishment"
+  },
+  {
+   "code": "C2",
+   "n": 6,
+   "share_pct": 4.255,
+   "meaning": "other rural reuse"
+  },
+  {
+   "code": "B5",
+   "n": 5,
+   "share_pct": 3.546,
+   "meaning": "other urban reuse"
+  },
+  {
+   "code": "A1",
+   "n": 5,
+   "share_pct": 3.546,
+   "meaning": "agricultural reuse (primary)"
+  }
+ ],
+ "b3_industrial_cooling": {
+  "n": 40,
+  "share_pct_of_classified": 28.369,
+  "capacity": {
+   "n": 38,
+   "min": 120.0,
+   "p25": 1050.0,
+   "median": 4000.0,
+   "p75": 17500.0,
+   "max": 151416.0,
+   "unit": "m3/d"
+  },
+  "costs": {
+   "Operating cost(CNY/m³)": {
+    "n": 40,
+    "min": 0.047,
+    "p25": 0.6,
+    "median": 1.95,
+    "p75": 3.6550000000000002,
+    "max": 16.15,
+    "unit": "CNY/m3"
+   },
+   "Total unit cost(CNY/m³)": {
+    "n": 40,
+    "min": 0.052,
+    "p25": 0.85625,
+    "median": 2.4125,
+    "p75": 4.4995,
+    "max": 19.328,
+    "unit": "CNY/m3"
+   }
+  }
+ },
+ "all_cases_capacity": {
+  "n": 139,
+  "min": 11.0,
+  "p25": 2000.0,
+  "median": 6000.0,
+  "p75": 27000.0,
+  "max": 450000.0,
+  "unit": "m3/d"
+ },
+ "supported_claims": [
+  "真实再生水项目中, 工业冷却/工业回用(B3)是可识别的**主要用途之一**(40/141 = 28.4%)",
+  "B3 项目的容量与成本区间可锚定本文情景的**现实性**(见 [3])",
+  "本文关注的冷却回用并非设想的边缘用途, 而是有真实工程实践支撑"
+ ],
+ "unsupported_claims": [
+  "**不可**推断既有用户的已承诺需求量(该表无需求字段)",
+  "**不可**推断设施级→城市级的转化比例",
+  "**不可**作为本文模型的标定数据(无水文/供需时序)",
+  "该表是**案例集**而非随机样本, 占比不代表全国统计分布"
+ ],
+ "runtime_s": 1.6,
+ "discipline_note": "外部数据只读; 类别由原始文本机械提取; 缺失显式统计; 只做用途分布与成本陈述, 不做需求侧推断"
+}

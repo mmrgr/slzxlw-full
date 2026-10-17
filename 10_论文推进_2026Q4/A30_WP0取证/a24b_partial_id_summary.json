@@ -1,0 +1,97 @@
+{
+ "supersedes": "external_validity_summary.json (A24b 原版, 解释错误)",
+ "status_of_original_claim": "WITHDRAWN_AS_UNIDENTIFIED",
+ "why_unidentified": "判据 处理量×r < 阈值 只观测生产能力(供方 D_i), 未观测已承诺需求(需方 E_i); 物理约束仅给出 0<=E_i<=D_i, 对任意厂两种分支状态都可能出现 ⇒ 不可识别",
+ "provable_bounds_committed_pct": {
+  "lower": 0.0,
+  "upper": 100.0
+ },
+ "identifiable_quantity": {
+  "name": "capacity_sufficient_for_surplus_pct",
+  "meaning": "该厂产水能力(处理量×r) >= 模型反解阈值的比例。只陈述【产能可行性】, 与既有用户实际需求无关。",
+  "table": [
+   {
+    "r": 1.0,
+    "capable_first_ha_pct": 5.986,
+    "capable_first_co_pct": 6.549,
+    "capable_half_ha_pct": 5.367,
+    "capable_half_co_pct": 5.339
+   },
+   {
+    "r": 0.8,
+    "capable_first_ha_pct": 4.498,
+    "capable_first_co_pct": 5.071,
+    "capable_half_ha_pct": 4.055,
+    "capable_half_co_pct": 4.009
+   },
+   {
+    "r": 0.5,
+    "capable_first_ha_pct": 2.143,
+    "capable_first_co_pct": 2.476,
+    "capable_half_ha_pct": 1.884,
+    "capable_half_co_pct": 1.875
+   },
+   {
+    "r": 0.3,
+    "capable_first_ha_pct": 0.878,
+    "capable_first_co_pct": 1.044,
+    "capable_half_ha_pct": 0.794,
+    "capable_half_co_pct": 0.794
+   },
+   {
+    "r": 0.2,
+    "capable_first_ha_pct": 0.471,
+    "capable_first_co_pct": 0.536,
+    "capable_half_ha_pct": 0.388,
+    "capable_half_co_pct": 0.388
+   }
+  ]
+ },
+ "real_treated_volume": {
+  "n": 10826,
+  "p50": 3.0,
+  "p75": 16.757123287671245,
+  "p90": 44.43835616438355,
+  "p95": 77.7633561643836,
+  "p99": 210.3869863013698
+ },
+ "real_treated_volume_by_r": {
+  "1.0": {
+   "capable_first_ha_pct": 5.986,
+   "capable_first_co_pct": 6.549
+  },
+  "0.8": {
+   "capable_first_ha_pct": 4.498,
+   "capable_first_co_pct": 5.071
+  },
+  "0.5": {
+   "capable_first_ha_pct": 2.143,
+   "capable_first_co_pct": 2.476
+  },
+  "0.3": {
+   "capable_first_ha_pct": 0.878,
+   "capable_first_co_pct": 1.044
+  },
+  "0.2": {
+   "capable_first_ha_pct": 0.471,
+   "capable_first_co_pct": 0.536
+  }
+ },
+ "thresholds_ml_per_day": {
+  "first": {
+   "ha": 66.86151022299458,
+   "co": 61.40815504562526
+  },
+  "half": {
+   "ha": 73.54766124529405,
+   "co": 73.6897860547503
+  }
+ },
+ "permitted_claim": "只可声称: (a) 真实污水厂处理量分布高度右偏, 大型厂为少数; (b) 在这些厂中仅少数(约 2–6%, 随 r)的产水能力足以支撑一个达到模型阈值的 surplus 型方案。【不可】声称现实中多少比例设施处于 committed 分支。",
+ "forbidden_claims": [
+  "above 95% of real facilities are fully committed",
+  "committed branch is the empirically dominant one",
+  "empirical prevalence of the fully-committed regime"
+ ],
+ "discipline_note": "外部数据仅作产能分布对照; 需求侧无观测 ⇒ 分支占比不可识别, 以可证明界报告。"
+}

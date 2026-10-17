@@ -1,0 +1,157 @@
+========================================================================================
+WP4-1  完整物种水样上的城市级 dS_pot (主口径 B1 − B2)
+========================================================================================
+
+[0] 权威水样化学 (唯一来源: city_model.load_samples(), 不自造数值)
+  权威表共 5 条; 面板 B_full 要求 5 个约束物种: ['TDS', 'chloride', 'hardness', 'alkalinity', 'silica']
+  sample                                                       n 缺失                         状态
+  IEUA RP-1 (2025, tertiary)                                   5 -                          COMPLETE
+  LADWP AWPF (2012, RO product)                                5 -                          COMPLETE
+  Figshare RW (2025, paired study)                             4 silica                     INCOMPLETE
+  Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)        3 alkalinity,silica          INCOMPLETE
+  AI-UWM model assumption                                      2 hardness,alkalinity,silica INCOMPLETE
+
+  ⇒ 完整物种水样 (主口径) = 2 个: ['IEUA RP-1 (2025, tertiary)', 'LADWP AWPF (2012, RO product)']
+  ⇒ 不完整水样 (次口径, 本次不用于主结论) = ['Figshare RW (2025, paired study)', 'Figshare BW (5 g·L<sup>-1</sup>) (2025, paired study)', 'AI-UWM model assumption']
+  ⚠ Figshare BW 为 brackish(苦咸水), 非再生水 —— 本脚本根本不纳入。
+
+[0b] make_evaluators 缓存键自检 (M5 历史缺陷: 键缺 q 会导致跨水样复用)
+  共享 cache 下各水样 CoC@(ha,ps=1,phi=0.4) = [3.230071, 4.371853]
+  不同取值个数 = 2/2 => ✓ 缓存键含 q, 组成维度有效
+
+[1] 主扫描: 2 完整水样 × 2 域 × phi∈(0.0, 0.2, 0.4, 0.6, 0.8) × pool_scale∈(1.0, 2.0, 3.0)
+
+  求得 60 情景, 剔除 13 情景 (n_eff = 47)
+  剔除原因分布: {'B2_NOT_CONVERGED_UNIQUE:quality_not_converged': 12, 'B2_NOT_CONVERGED_UNIQUE:no_convergence': 1}
+
+[2] 双层门禁报告
+  门禁① B2 支路 status == 'converged_unique'
+  门禁② B1 支路 单根且闭合 (root=1, |closure_residual|<=1e-9)
+  门禁③ 两支路 CoC 均不触引擎下限 (CoC > 1.000001)
+
+  ⚠ B1 支路 quality_solver_status='not_applicable' 的情景数 = 60/60
+     原因: ai_target=0 -> 无再生水 -> 水质求解器不被调用 -> 引擎返回 not_applicable,
+     但联合求解器白名单仅含 {'converged','ready'} (reclaimed_allocation.py:477),
+     故 status 被判 'quality_not_converged'。**这是词表不一致, 不是数值失败**
+     (见 A26_语义统一/CHI_SEMANTICS.md §4)。B1 经核验为健康解: root=1, 闭合残差=0。
+  n_all_total         = 60
+  门禁①通过 (B2 cu)    = 47
+  门禁②通过 (B1 健康)  = 60
+  CoC 触下限 (门禁③失败) = 0
+  ★ n_eff             = 47
+
+[3] 恒等式检验 (相对容差; 量级可达 1e10, 绝对容差无意义)
+  (a) dS = C - F          最大相对残差 = 0.000e+00  ✓ PASS
+  (b) dS = max(0,Δinc) - ΔM - x_ai 最大相对残差 = 0.000e+00  ✓ PASS
+  (b') 对照: 若【不截断】Δinc 则残差 = 1.174e+00  => max(0,.) 是必要的 (否则 x_ai 双计)
+  参考: 可靠子集 max|dS_pot| = 2.544e+04 ML (绝对容差在此量级下不适用)
+  (c1) 制度① 池在 B1 被用尽 n=15: |位移 + x_ai| 最大 = 3.638e-12 ML => ✓ 位移恒等于 -x_ai (故 C 取 max(0,.) 必要)
+  (c3) 制度③ 部分情形 n=32: 位移 ∈ [-9710, 0] ML (介于 -x_ai 与 0 之间, 如实报出不假定)
+
+[4] ★ 逐情景结果 (主口径, 完整物种水样, 仅可靠子集)
+
+  --- HA / IEUA RP-1 (2025, tertiary) ---
+domain                     sample  pool_scale  phi     M0_ml     M1_ml  CoC0     CoC1 C_ml      F_ml   x_ai_ml         q  dS_pot_ml
+    ha IEUA RP-1 (2025, tertiary)         1.0  0.2 3.103e+04  3.16e+04   3.5 3.337956    0      3277      3846 -0.019418      -3277
+    ha IEUA RP-1 (2025, tertiary)         1.0  0.4 3.103e+04 3.202e+04   3.5 3.230071    0      5716      6710 -0.033427      -5716
+    ha IEUA RP-1 (2025, tertiary)         1.0  0.6 3.103e+04 3.235e+04   3.5 3.153733    0      7585      8906 -0.043918      -7585
+    ha IEUA RP-1 (2025, tertiary)         1.0  0.8 3.103e+04 3.261e+04   3.5 3.097154    0      9056 1.063e+04 -0.052028      -9056
+    ha IEUA RP-1 (2025, tertiary)         2.0  0.2 3.103e+04 3.198e+04   3.5 3.241447    0      5448      6395 -0.031906      -5448
+    ha IEUA RP-1 (2025, tertiary)         2.0  0.4 3.103e+04 3.299e+04   3.5 3.018466    0 1.124e+04  1.32e+04 -0.063812 -1.124e+04
+    ha IEUA RP-1 (2025, tertiary)         2.0  0.6 3.103e+04 3.375e+04   3.5 2.877871    0 1.557e+04 1.829e+04 -0.086471 -1.557e+04
+    ha IEUA RP-1 (2025, tertiary)         2.0  0.8 3.103e+04 3.429e+04   3.5 2.790112    0 1.862e+04 2.187e+04 -0.101772 -1.862e+04
+    ha IEUA RP-1 (2025, tertiary)         3.0  0.2 3.103e+04 3.198e+04   3.5 3.241447    0      5448      6395 -0.031906      -5448
+    ha IEUA RP-1 (2025, tertiary)         3.0  0.4 3.103e+04 3.299e+04   3.5 3.018466    0 1.124e+04  1.32e+04 -0.063812 -1.124e+04
+    ha IEUA RP-1 (2025, tertiary)         3.0  0.6 3.103e+04 3.407e+04   3.5 2.824189    0  1.74e+04 2.044e+04 -0.095718  -1.74e+04
+    ha IEUA RP-1 (2025, tertiary)         3.0  0.8 3.103e+04 3.523e+04   3.5 2.653408    0 2.398e+04 2.819e+04 -0.127623 -2.398e+04
+
+  --- HA / LADWP AWPF (2012, RO product) ---
+domain                        sample  pool_scale  phi     M0_ml     M1_ml  CoC0     CoC1 C_ml      F_ml   x_ai_ml        q  dS_pot_ml
+    ha LADWP AWPF (2012, RO product)         1.0  0.2 3.103e+04 2.978e+04   3.5 3.949363    0      4909      3658 0.045512      -4909
+    ha LADWP AWPF (2012, RO product)         1.0  0.4 3.103e+04  2.89e+04   3.5 4.371853    0      8347      6223 0.079770      -8347
+    ha LADWP AWPF (2012, RO product)         1.0  0.6 3.103e+04 2.825e+04   3.5 4.777245    0 1.093e+04      8154 0.106944 -1.093e+04
+    ha LADWP AWPF (2012, RO product)         1.0  0.8 3.103e+04 2.795e+04   3.5 5.000000    0  1.28e+04      9720 0.120000  -1.28e+04
+    ha LADWP AWPF (2012, RO product)         2.0  0.2 3.103e+04 2.904e+04   3.5 4.295814    0      7792      5809 0.074101      -7792
+    ha LADWP AWPF (2012, RO product)         2.0  0.4 3.103e+04 2.795e+04   3.5 5.000000    0 1.426e+04 1.118e+04 0.120000 -1.426e+04
+    ha LADWP AWPF (2012, RO product)         2.0  0.6 3.103e+04 2.795e+04   3.5 5.000000    0 1.927e+04 1.619e+04 0.120000 -1.927e+04
+    ha LADWP AWPF (2012, RO product)         2.0  0.8 3.103e+04 2.795e+04   3.5 5.000000    0 2.252e+04 1.944e+04 0.120000 -2.252e+04
+    ha LADWP AWPF (2012, RO product)         3.0  0.2 3.103e+04 2.904e+04   3.5 4.295814    0      7792      5809 0.074101      -7792
+    ha LADWP AWPF (2012, RO product)         3.0  0.4 3.103e+04 2.795e+04   3.5 5.000000    0 1.426e+04 1.118e+04 0.120000 -1.426e+04
+    ha LADWP AWPF (2012, RO product)         3.0  0.6 3.103e+04 2.795e+04   3.5 5.000000    0 1.985e+04 1.677e+04 0.120000 -1.985e+04
+    ha LADWP AWPF (2012, RO product)         3.0  0.8 3.103e+04 2.795e+04   3.5 5.000000    0 2.544e+04 2.236e+04 0.120000 -2.544e+04
+
+  --- CO / IEUA RP-1 (2025, tertiary) ---
+domain                     sample  pool_scale  phi     M0_ml     M1_ml  CoC0     CoC1 C_ml      F_ml   x_ai_ml         q  dS_pot_ml
+    co IEUA RP-1 (2025, tertiary)         1.0  0.2 3.067e+04 3.117e+04   3.5 3.355067    0      2879      3379 -0.017279      -2879
+    co IEUA RP-1 (2025, tertiary)         1.0  0.4 3.067e+04 3.155e+04   3.5 3.256296    0      5048      5925 -0.029936      -5048
+    co IEUA RP-1 (2025, tertiary)         1.0  0.6 3.067e+04 3.184e+04   3.5 3.185192    0      6728      7897 -0.039534      -6728
+    co IEUA RP-1 (2025, tertiary)         1.0  0.8 3.067e+04 3.207e+04   3.5 3.131799    0      8060      9463 -0.047027      -8060
+    co IEUA RP-1 (2025, tertiary)         2.0  0.2 3.067e+04  3.16e+04   3.5 3.241660    0      5385      6321 -0.031877      -5385
+    co IEUA RP-1 (2025, tertiary)         2.0  0.4 3.067e+04 3.246e+04   3.5 3.047349    0 1.031e+04  1.21e+04 -0.059416 -1.031e+04
+    co IEUA RP-1 (2025, tertiary)         2.0  0.6 3.067e+04 3.307e+04   3.5 2.928856    0 1.378e+04 1.619e+04 -0.078002 -1.378e+04
+    co IEUA RP-1 (2025, tertiary)         2.0  0.8 3.067e+04 3.356e+04   3.5 2.844077    0 1.653e+04 1.942e+04 -0.092251 -1.653e+04
+    co IEUA RP-1 (2025, tertiary)         3.0  0.2 3.067e+04  3.16e+04   3.5 3.241660    0      5385      6321 -0.031877      -5385
+    co IEUA RP-1 (2025, tertiary)         3.0  0.4 3.067e+04  3.26e+04   3.5 3.018836    0 1.111e+04 1.304e+04 -0.063755 -1.111e+04
+    co IEUA RP-1 (2025, tertiary)         3.0  0.6 3.067e+04 3.367e+04   3.5 2.824675    0  1.72e+04  2.02e+04 -0.095632  -1.72e+04
+    co IEUA RP-1 (2025, tertiary)         3.0  0.8 3.067e+04 3.482e+04   3.5 2.653979    0  2.37e+04 2.786e+04 -0.127510  -2.37e+04
+
+  --- CO / LADWP AWPF (2012, RO product) ---
+domain                        sample  pool_scale  phi     M0_ml     M1_ml  CoC0     CoC1 C_ml      F_ml   x_ai_ml        q  dS_pot_ml
+    co LADWP AWPF (2012, RO product)         1.0  0.2 3.067e+04 2.956e+04   3.5 3.893703    0      4335      3230 0.040445      -4335
+    co LADWP AWPF (2012, RO product)         1.0  0.6 3.067e+04 2.819e+04   3.5 4.600469    0      9767      7286 0.095683      -9767
+    co LADWP AWPF (2012, RO product)         1.0  0.8 3.067e+04 2.772e+04   3.5 4.927135    0 1.163e+04      8675 0.115859 -1.163e+04
+    co LADWP AWPF (2012, RO product)         2.0  0.2 3.067e+04 2.871e+04   3.5 4.294944    0      7701      5742 0.074035      -7701
+    co LADWP AWPF (2012, RO product)         2.0  0.4 3.067e+04 2.762e+04   3.5 5.000000    0 1.377e+04 1.073e+04 0.120000 -1.377e+04
+    co LADWP AWPF (2012, RO product)         2.0  0.6 3.067e+04 2.762e+04   3.5 5.000000    0 1.742e+04 1.437e+04 0.120000 -1.742e+04
+    co LADWP AWPF (2012, RO product)         2.0  0.8 3.067e+04 2.762e+04   3.5 5.000000    0 2.036e+04 1.731e+04 0.120000 -2.036e+04
+    co LADWP AWPF (2012, RO product)         3.0  0.2 3.067e+04 2.871e+04   3.5 4.294944    0      7701      5742 0.074035      -7701
+    co LADWP AWPF (2012, RO product)         3.0  0.4 3.067e+04 2.762e+04   3.5 5.000000    0 1.409e+04 1.105e+04 0.120000 -1.409e+04
+    co LADWP AWPF (2012, RO product)         3.0  0.6 3.067e+04 2.762e+04   3.5 5.000000    0 1.962e+04 1.657e+04 0.120000 -1.962e+04
+    co LADWP AWPF (2012, RO product)         3.0  0.8 3.067e+04 2.762e+04   3.5 5.000000    0 2.514e+04  2.21e+04 0.120000 -2.514e+04
+
+[4b] ★ dS_pot 符号分布 (按域 × 水样 × pool_scale)
+domain                        sample  pool_scale  n  n_neg  n_zero  n_pos      dS_min     dS_max   q_min   q_max
+    co    IEUA RP-1 (2025, tertiary)         1.0  4      4       0      0  -8060.4182 -2879.3963 -0.0470 -0.0173
+    co    IEUA RP-1 (2025, tertiary)         2.0  4      4       0      0 -16534.3677 -5385.2915 -0.0923 -0.0319
+    co    IEUA RP-1 (2025, tertiary)         3.0  4      4       0      0 -23704.5257 -5385.2915 -0.1275 -0.0319
+    co LADWP AWPF (2012, RO product)         1.0  3      3       0      0 -11625.6520 -4334.6824  0.0404  0.1159
+    co LADWP AWPF (2012, RO product)         2.0  4      4       0      0 -20359.0875 -7700.6512  0.0740  0.1200
+    co LADWP AWPF (2012, RO product)         3.0  4      4       0      0 -25143.8965 -7700.6512  0.0740  0.1200
+    ha    IEUA RP-1 (2025, tertiary)         1.0  4      4       0      0  -9056.1835 -3276.8682 -0.0520 -0.0194
+    ha    IEUA RP-1 (2025, tertiary)         2.0  4      4       0      0 -18615.2440 -5447.7041 -0.1018 -0.0319
+    ha    IEUA RP-1 (2025, tertiary)         3.0  4      4       0      0 -23981.4587 -5447.7041 -0.1276 -0.0319
+    ha LADWP AWPF (2012, RO product)         1.0  4      4       0      0 -12799.8775 -4909.1212  0.0455  0.1200
+    ha LADWP AWPF (2012, RO product)         2.0  4      4       0      0 -22519.7456 -7792.2101  0.0741  0.1200
+    ha LADWP AWPF (2012, RO product)         3.0  4      4       0      0 -25438.5559 -7792.2101  0.0741  0.1200
+
+  合计 n_eff=47: dS<0 (受益) = 47, dS=0 = 0, dS>0 (有害) = 0
+  q>0 = 23, q<0 = 24
+
+[4c] ★ 逐水样方向 (CoC0=无回用基线 vs CoC1@phi=0.6, 与 WP3 口径可比)
+  domain sample                                     ps     CoC0      CoC1          q    dS_pot(ML) 方向
+      ha IEUA RP-1 (2025, tertiary)                  1   3.5000    3.1537   -0.04392         -7585 回用有益 (dS<0)
+      ha IEUA RP-1 (2025, tertiary)                  2   3.5000    2.8779   -0.08647    -1.557e+04 回用有益 (dS<0)
+      ha IEUA RP-1 (2025, tertiary)                  3   3.5000    2.8242   -0.09572     -1.74e+04 回用有益 (dS<0)
+      ha LADWP AWPF (2012, RO product)               1   3.5000    4.7772    0.10694    -1.093e+04 回用有益 (dS<0)
+      ha LADWP AWPF (2012, RO product)               2   3.5000    5.0000    0.12000    -1.927e+04 回用有益 (dS<0)
+      ha LADWP AWPF (2012, RO product)               3   3.5000    5.0000    0.12000    -1.985e+04 回用有益 (dS<0)
+      co IEUA RP-1 (2025, tertiary)                  1   3.5000    3.1852   -0.03953         -6728 回用有益 (dS<0)
+      co IEUA RP-1 (2025, tertiary)                  2   3.5000    2.9289   -0.07800    -1.378e+04 回用有益 (dS<0)
+      co IEUA RP-1 (2025, tertiary)                  3   3.5000    2.8247   -0.09563     -1.72e+04 回用有益 (dS<0)
+      co LADWP AWPF (2012, RO product)               1   3.5000    4.6005    0.09568         -9767 回用有益 (dS<0)
+      co LADWP AWPF (2012, RO product)               2   3.5000    5.0000    0.12000    -1.742e+04 回用有益 (dS<0)
+      co LADWP AWPF (2012, RO product)               3   3.5000    5.0000    0.12000    -1.962e+04 回用有益 (dS<0)
+
+[5] ★ H3 检验: q>0 是城市受益 (dS_pot<0) 的【充分条件】?
+  n_eff = 47  (零值约定: |dS_pot| < 1e-06 ML 记为 0, 不计入正负计数)
+  q>0 情景 = 23  |  其中 dS<0 (受益) = 23, dS>0 (有害, 反例) = 0, dS=0 = 0
+  q<0 情景 = 24  |  其中 dS<0 = 24, dS>0 = 0
+  ✓ H3 成立: 可靠子集内 q>0 的每一例 dS_pot 均为负 => 无充分性反例
+
+[6] ★ H4 跨组成符号反转 (两个完整水样, phi=0.6)
+  ha|ps=1: dS={'IEUA RP-1 (2025, tertiary)': '-7585', 'LADWP AWPF (2012, RO product)': '-1.093e+04'} q={'IEUA RP-1 (2025, tertiary)': '-0.04392', 'LADWP AWPF (2012, RO product)': '0.10694'} 符号反转=否
+  ha|ps=2: dS={'IEUA RP-1 (2025, tertiary)': '-1.557e+04', 'LADWP AWPF (2012, RO product)': '-1.927e+04'} q={'IEUA RP-1 (2025, tertiary)': '-0.08647', 'LADWP AWPF (2012, RO product)': '0.12000'} 符号反转=否
+  ha|ps=3: dS={'IEUA RP-1 (2025, tertiary)': '-1.74e+04', 'LADWP AWPF (2012, RO product)': '-1.985e+04'} q={'IEUA RP-1 (2025, tertiary)': '-0.09572', 'LADWP AWPF (2012, RO product)': '0.12000'} 符号反转=否
+  co|ps=1: dS={'IEUA RP-1 (2025, tertiary)': '-6728', 'LADWP AWPF (2012, RO product)': '-9767'} q={'IEUA RP-1 (2025, tertiary)': '-0.03953', 'LADWP AWPF (2012, RO product)': '0.09568'} 符号反转=否
+  co|ps=2: dS={'IEUA RP-1 (2025, tertiary)': '-1.378e+04', 'LADWP AWPF (2012, RO product)': '-1.742e+04'} q={'IEUA RP-1 (2025, tertiary)': '-0.07800', 'LADWP AWPF (2012, RO product)': '0.12000'} 符号反转=否
+  co|ps=3: dS={'IEUA RP-1 (2025, tertiary)': '-1.72e+04', 'LADWP AWPF (2012, RO product)': '-1.962e+04'} q={'IEUA RP-1 (2025, tertiary)': '-0.09563', 'LADWP AWPF (2012, RO product)': '0.12000'} 符号反转=否

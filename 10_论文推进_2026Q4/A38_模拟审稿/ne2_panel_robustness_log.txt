@@ -1,0 +1,52 @@
+====================================================================================
+NE-2  “碱度是唯一符号杠杆”是否只是 baseline 面板的产物?
+====================================================================================
+
+[0] city_model.PANELS 实际档位: ['A_engine2', 'B_full']
+
+[0] 完整物种水样 (5/5): ['IEUA RP-1 (2025, tertiary)', 'LADWP AWPF (2012, RO product)']
+
+[1] 各档位下的【限值/浓度】比 (最小者 = 绑定物种)
+
+  档位 = baseline
+    sample                              TDS  chloride  hardness  alkalinity   silica | 绑定
+    IEUA RP-1 (2025, tertiary)        4.966    7.000    5.019    2.500    7.292 | alkalinity
+    LADWP AWPF (2012, RO product    100.000  194.444  732.586   49.296  336.538 | alkalinity
+
+  档位 = permissive
+    sample                              TDS  chloride  hardness  alkalinity   silica | 绑定
+    IEUA RP-1 (2025, tertiary)        5.869   10.000    5.019    2.500    7.292 | alkalinity
+    LADWP AWPF (2012, RO product    118.182  277.778  732.586   49.296  336.538 | alkalinity
+
+  档位 = strict
+    sample                              TDS  chloride  hardness  alkalinity   silica | 绑定
+    IEUA RP-1 (2025, tertiary)        2.257    2.500    3.012    2.500    1.250 | silica
+    LADWP AWPF (2012, RO product     45.455   69.444  439.552   49.296   57.692 | TDS
+
+[2] ★ 逐物种单点扰动: 哪个物种能翻转 dS_pot 符号?
+    (扰动 = 把该物种浓度 ×0.5 与 ×2.0; 其余不变; phi=0.6)
+
+  档位 = baseline
+    sample                            dS(base) |       TDS    chlori    hardne    alkali    silica | 杠杆
+    IEUA RP-1 (2025, tertiary)          -4.194 |         -         -         -      FLIP         - | alkalinity
+    LADWP AWPF (2012, RO product             0 |         -         -         -         -         - | NONE
+
+  档位 = permissive
+    sample                            dS(base) |       TDS    chlori    hardne    alkali    silica | 杠杆
+    IEUA RP-1 (2025, tertiary)          -4.194 |         -         -         -      FLIP         - | alkalinity
+    LADWP AWPF (2012, RO product             0 |         -         -         -         -         - | NONE
+
+  档位 = strict
+    sample                            dS(base) |       TDS    chlori    hardne    alkali    silica | 杠杆
+    IEUA RP-1 (2025, tertiary)          -30.64 |         -         -         -         -         - | NONE
+    LADWP AWPF (2012, RO product         2.821 |         -         -         -         -         - | NONE
+
+[3] ★ 裁定
+  绑定物种(由 限值/浓度 比决定):
+    baseline    : IEUA=alkalinity, LADWP=alkalinity
+    permissive  : IEUA=alkalinity, LADWP=alkalinity
+    strict      : IEUA=silica, LADWP=TDS
+
+  各档位的绑定物种集合: {'baseline': ['alkalinity'], 'permissive': ['alkalinity'], 'strict': ['TDS', 'silica']}
+  ✗ 绑定物种随档位【改变】⇒ 结论必须限定为'在 baseline 档下'
+     不得写成普适机制

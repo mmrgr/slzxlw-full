@@ -1,0 +1,31 @@
+================================================================================
+WP3-1  volume-only 路径: 通量平衡与 CoC 自洽检验
+================================================================================
+
+  volume-only 无溶质存量状态(浓度=补水浓度xCoC 的瞬时定义)
+  => 不做存量闭合; 改检验两条稳态恒等式:
+     (A) 水量闭合   M = E + D + B
+     (B) CoC 自洽   CoC_engine == M / (B + D)
+     由 (B) 即蕴含盐分通量平衡 => 这是该路径唯一有内容的守恒类检验。
+
+          case |  (A) waterResid_rel    (A) |  CoC_calc   CoC_eng    (B) rel    (B) | overall
+          ha/0 |           1.829e-16   PASS |   1.82341   1.82341  2.503e-16   PASS | PASS
+       └ 口径对照: 误用 external_makeup 会得到假性相对残差 5.274e-02 (实为内部回收量占毛补水的比例), 故 volume-only 必须用 gross_makeup
+        ha/200 |           0.000e+00   PASS |   1.77419   1.77419  2.503e-16   PASS | PASS
+       └ 口径对照: 误用 external_makeup 会得到假性相对残差 5.634e-02 (实为内部回收量占毛补水的比例), 故 volume-only 必须用 gross_makeup
+          co/0 |           1.926e-16   PASS |   1.87872   1.87872  2.451e-16   PASS | PASS
+       └ 口径对照: 误用 external_makeup 会得到假性相对残差 5.088e-02 (实为内部回收量占毛补水的比例), 故 volume-only 必须用 gross_makeup
+        co/200 |           0.000e+00   PASS |   1.77419   1.77419  2.503e-16   PASS | PASS
+       └ 口径对照: 误用 external_makeup 会得到假性相对残差 5.634e-02 (实为内部回收量占毛补水的比例), 故 volume-only 必须用 gross_makeup
+
+[判据汇总]
+  可检验情景 = 4/4
+  (A) 水量闭合(G口径) 最大相对残差 = 1.926e-16
+  (B) CoC 自洽       最大相对误差 = 2.503e-16
+  裁定: PASS —— volume-only 的稳态通量平衡与 CoC 自洽成立
+
+★ 对主结论的表述纪律:
+  volume-only 的守恒支撑应表述为: '稳态通量平衡与 CoC 自洽已证(PASS)',
+  而**不是**'溶质存量守恒已验证'——后者在该路径上无对象(不适用)。
+  口径纪律: volume-only 的水量闭合必须用 gross_makeup_ml;
+  external_makeup_ml 已扣除内部回收, 用它检验会产生约 5.6% 的假性不闭合。
