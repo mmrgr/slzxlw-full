@@ -1,0 +1,45 @@
+{
+  "fixed_capacity_mw": 1200.0,
+  "tiers": {
+    "evaporative": {
+      "wue_l_per_kwh_at_r0": 2.125,
+      "withdrawal_r05_ml": 33580.18,
+      "withdrawal_r08_ml": 35755.39,
+      "increase_pct": 6.4777,
+      "physical_cawcc_r0": 1200.0,
+      "physical_cawcc_r05": 1200.0,
+      "physical_cawcc_r08": 1100.0,
+      "cawcc_drop_mw": 100.0
+    },
+    "hybrid": {
+      "wue_l_per_kwh_at_r0": 0.558,
+      "withdrawal_r05_ml": 9539.67,
+      "withdrawal_r08_ml": 10157.06,
+      "increase_pct": 6.4718,
+      "physical_cawcc_r0": 1150.0,
+      "physical_cawcc_r05": 1150.0,
+      "physical_cawcc_r08": 1100.0,
+      "cawcc_drop_mw": 50.0
+    },
+    "dry_first": {
+      "wue_l_per_kwh_at_r0": 0.327,
+      "withdrawal_r05_ml": 5767.61,
+      "withdrawal_r08_ml": 6220.43,
+      "increase_pct": 7.851,
+      "physical_cawcc_r0": 1100.0,
+      "physical_cawcc_r05": 1100.0,
+      "physical_cawcc_r08": 1050.0,
+      "cawcc_drop_mw": 50.0
+    },
+    "dry": {
+      "wue_l_per_kwh_at_r0": 0.0,
+      "withdrawal_r05_ml": 0.0,
+      "withdrawal_r08_ml": 0.0,
+      "increase_pct": null,
+      "physical_cawcc_r0": 1300.0,
+      "physical_cawcc_r05": 1300.0,
+      "physical_cawcc_r08": 1300.0,
+      "cawcc_drop_mw": 0.0
+    }
+  }
+}

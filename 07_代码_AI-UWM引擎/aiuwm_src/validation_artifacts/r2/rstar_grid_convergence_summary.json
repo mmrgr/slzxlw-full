@@ -1,0 +1,249 @@
+{
+  "r_grid": [
+    0.0,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "grids": {
+    "50mw": {
+      "ha": {
+        "0.0": {
+          "cawcc_mw": 1200.0,
+          "first_failed_mw": 1250.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.5": {
+          "cawcc_mw": 1200.0,
+          "first_failed_mw": 1250.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.6": {
+          "cawcc_mw": 1150.0,
+          "first_failed_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.7": {
+          "cawcc_mw": 1150.0,
+          "first_failed_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.8": {
+          "cawcc_mw": 1100.0,
+          "first_failed_mw": 1150.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.9": {
+          "cawcc_mw": 1100.0,
+          "first_failed_mw": 1150.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        }
+      },
+      "co": {
+        "0.0": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.5": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.6": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.7": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.8": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.9": {
+          "cawcc_mw": 1400.0,
+          "first_failed_mw": 1450.0,
+          "limiting_constraint": "max_local_connection_ratio"
+        }
+      }
+    },
+    "25mw": {
+      "ha": {
+        "0.0": {
+          "cawcc_mw": 1200.0,
+          "first_failed_mw": 1225.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.5": {
+          "cawcc_mw": 1200.0,
+          "first_failed_mw": 1225.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.6": {
+          "cawcc_mw": 1175.0,
+          "first_failed_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.7": {
+          "cawcc_mw": 1150.0,
+          "first_failed_mw": 1175.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.8": {
+          "cawcc_mw": 1125.0,
+          "first_failed_mw": 1150.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.9": {
+          "cawcc_mw": 1100.0,
+          "first_failed_mw": 1125.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        }
+      },
+      "co": {
+        "0.0": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1475.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.5": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1475.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.6": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1475.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.7": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1475.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.8": {
+          "cawcc_mw": 1450.0,
+          "first_failed_mw": 1475.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.9": {
+          "cawcc_mw": 1425.0,
+          "first_failed_mw": 1450.0,
+          "limiting_constraint": "max_local_connection_ratio"
+        }
+      }
+    },
+    "10mw": {
+      "ha": {
+        "0.0": {
+          "cawcc_mw": 1200.0,
+          "first_failed_mw": 1210.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.5": {
+          "cawcc_mw": 1200.0,
+          "first_failed_mw": 1210.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.6": {
+          "cawcc_mw": 1190.0,
+          "first_failed_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.7": {
+          "cawcc_mw": 1160.0,
+          "first_failed_mw": 1170.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.8": {
+          "cawcc_mw": 1130.0,
+          "first_failed_mw": 1140.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        },
+        "0.9": {
+          "cawcc_mw": 1110.0,
+          "first_failed_mw": 1120.0,
+          "limiting_constraint": "max_source_abstraction_ratio"
+        }
+      },
+      "co": {
+        "0.0": {
+          "cawcc_mw": 1460.0,
+          "first_failed_mw": 1470.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.5": {
+          "cawcc_mw": 1460.0,
+          "first_failed_mw": 1470.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.6": {
+          "cawcc_mw": 1460.0,
+          "first_failed_mw": 1470.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.7": {
+          "cawcc_mw": 1460.0,
+          "first_failed_mw": 1470.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.8": {
+          "cawcc_mw": 1460.0,
+          "first_failed_mw": 1470.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio"
+        },
+        "0.9": {
+          "cawcc_mw": 1440.0,
+          "first_failed_mw": 1450.0,
+          "limiting_constraint": "max_local_connection_ratio"
+        }
+      }
+    }
+  },
+  "verdict": {
+    "ha": {
+      "baseline_50": 1200.0,
+      "baseline_25": 1200.0,
+      "drops": {
+        "50mw": {
+          "0.6": -50.0,
+          "0.7": -50.0,
+          "0.8": -100.0,
+          "0.9": -100.0
+        },
+        "25mw": {
+          "0.6": -25.0,
+          "0.7": -50.0,
+          "0.8": -75.0,
+          "0.9": -100.0
+        }
+      }
+    },
+    "co": {
+      "baseline_50": 1450.0,
+      "baseline_25": 1450.0,
+      "drops": {
+        "50mw": {
+          "0.6": 0.0,
+          "0.7": 0.0,
+          "0.8": 0.0,
+          "0.9": -50.0
+        },
+        "25mw": {
+          "0.6": 0.0,
+          "0.7": 0.0,
+          "0.8": 0.0,
+          "0.9": -25.0
+        }
+      }
+    }
+  },
+  "grid_robust": true
+}

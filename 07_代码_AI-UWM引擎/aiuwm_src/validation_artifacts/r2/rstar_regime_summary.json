@@ -1,0 +1,31 @@
+{
+  "n_total": 320,
+  "counts": {
+    "I": 81,
+    "II": 156,
+    "III": 63,
+    "IV": 20
+  },
+  "regime_II_stats": {
+    "n": 156,
+    "min": 0.0196078431372549,
+    "p25": 0.15024509803921568,
+    "median": 0.32978723404255306,
+    "p75": 0.5776515151515151,
+    "max": 0.9166666666666666
+  },
+  "boundaries": {
+    "I": "L/CoC_design <= C_potable",
+    "II": "C_potable < L/CoC_design < C_reclaimed",
+    "III": "L/CoC_design >= C_reclaimed",
+    "IV": "C_reclaimed <= C_potable"
+  },
+  "nominal_city": {
+    "L": 2200.0,
+    "coc_design": 5.0,
+    "c_potable": 180.0,
+    "c_reclaimed": 650.0,
+    "regime": "II",
+    "r_star": 0.5531914893617021
+  }
+}

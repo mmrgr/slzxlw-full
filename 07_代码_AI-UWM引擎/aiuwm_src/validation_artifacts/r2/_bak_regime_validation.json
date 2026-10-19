@@ -1,0 +1,34 @@
+{
+  "capacity_mw": 800.0,
+  "r_grid": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "params": {
+    "L": 2200.0,
+    "c_potable": 180.0,
+    "c_reclaimed": 650.0
+  },
+  "verdicts": {
+    "I": {
+      "prediction": "任何替代都有代价（r>0 立即推高取水）",
+      "first_increase_pct": 4.426076260798473,
+      "confirmed": true
+    },
+    "II": {
+      "prediction": "阈值型（r≤r* 平坦，r>r* 上升）",
+      "n_flat_points": 3,
+      "max_increase_pct": 6.4765031590909405,
+      "confirmed": true
+    },
+    "III": {
+      "prediction": "替代永远无代价（取水与 r 无关）",
+      "max_abs_increase_pct": 0.0,
+      "confirmed": true
+    }
+  },
+  "all_confirmed": true
+}

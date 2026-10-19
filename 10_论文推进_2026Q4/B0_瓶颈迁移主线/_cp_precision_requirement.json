@@ -1,0 +1,45 @@
+{
+  "L_over_coc_d": 440.0,
+  "calibers": [
+    {
+      "caliber": "A 供给能力口径",
+      "r_sc": 0.444,
+      "c_p_critical": 272.3,
+      "note": "C_p 低于此值 → 未越过；高于 → 越过"
+    },
+    {
+      "caliber": "B 2025 实际用量口径",
+      "r_sc": 0.499,
+      "c_p_critical": 230.84,
+      "note": "C_p 低于此值 → 未越过；高于 → 越过"
+    }
+  ],
+  "c_r_sensitivity_at_r0499": [
+    {
+      "c_r": 400,
+      "c_p_critical_at_r0499": 479.84
+    },
+    {
+      "c_r": 500,
+      "c_p_critical_at_r0499": 380.24
+    },
+    {
+      "c_r": 650,
+      "c_p_critical_at_r0499": 230.84
+    },
+    {
+      "c_r": 800,
+      "c_p_critical_at_r0499": 81.44
+    },
+    {
+      "c_r": 1000,
+      "c_p_critical_at_r0499": -117.76
+    },
+    {
+      "c_r": 1200,
+      "c_p_critical_at_r0499": -316.97
+    }
+  ],
+  "assumed_c_p": 180.0,
+  "required_precision_mg_l": 25.4
+}

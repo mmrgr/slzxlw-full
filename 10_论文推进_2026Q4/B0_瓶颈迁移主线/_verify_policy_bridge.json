@@ -1,0 +1,156 @@
+{
+  "passed": 25,
+  "total": 25,
+  "rows": [
+    {
+      "claim": "W/D HA 500MW ≈ 10.34",
+      "value": "10.34",
+      "source": "r2/rstar_policy_bridge.csv",
+      "ok": true
+    },
+    {
+      "claim": "W/D HA 1000MW ≈ 5.28",
+      "value": "5.28",
+      "source": "r2/rstar_policy_bridge.csv",
+      "ok": true
+    },
+    {
+      "claim": "W/D HA 1500MW ≈ 3.59",
+      "value": "3.59",
+      "source": "r2/rstar_policy_bridge.csv",
+      "ok": true
+    },
+    {
+      "claim": "W/D CO 1000MW ≈ 5.39",
+      "value": "5.39",
+      "source": "r2/rstar_policy_bridge.csv",
+      "ok": true
+    },
+    {
+      "claim": "W/D 中位 ≈ 5.33",
+      "value": "5.33",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "u=20% 需 W/D > 2.77 才能使 r_max>r*",
+      "value": "2.77",
+      "source": "解析换算",
+      "ok": true
+    },
+    {
+      "claim": "u=25% 需 W/D > 2.21 才能使 r_max>r*",
+      "value": "2.21",
+      "source": "解析换算",
+      "ok": true
+    },
+    {
+      "claim": "u=35% 需 W/D > 1.58 才能使 r_max>r*",
+      "value": "1.58",
+      "source": "解析换算",
+      "ok": true
+    },
+    {
+      "claim": "1000MW @u=20% → r_max > 1（园区非约束方）",
+      "value": "1.06",
+      "source": "rstar_policy_bridge.csv",
+      "ok": true
+    },
+    {
+      "claim": "1500MW @u=20% → r_max < 1（园区是约束方）",
+      "value": "0.72",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "零效应区 HA：r≤0.35 时 CAWCC 唯一值",
+      "value": "[1200.0]",
+      "source": "r2/rstar_physical_cawcc_by_r.csv",
+      "ok": true
+    },
+    {
+      "claim": "零效应区 CO：r≤0.35 时 CAWCC 唯一值",
+      "value": "[1450.0]",
+      "source": "r2/rstar_physical_cawcc_by_r.csv",
+      "ok": true
+    },
+    {
+      "claim": "零效应区 D-HA CAWCC 恒 1200",
+      "value": "1200",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "零效应区 D-CO CAWCC 恒 1450",
+      "value": "1450",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「### 1.6 一个必须区分的口径」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「r_max = u · (W / D)」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「本文不主张」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「本文的贡献**不是预测**」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「#### 5.8.2b 一个必须显式声明的\"零效应区\"」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「在现行政策目标区间（r ≤ 0.35）内，本文的机制不产生任何承载容量后」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「### 8.6 政策意义：判据的价值在于界定安全区间」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「35. **本文的 `r` 是园区级替代率」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「36. **`W/D` 本身是模型产物」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「rstar_policy_bridge.csv」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "无「已触发反噬」的肯定表述",
+      "value": "0 处",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    }
+  ]
+}

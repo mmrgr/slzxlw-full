@@ -1,0 +1,72 @@
+=== scan 可用列 ===
+  ai_capacity_mw
+  total_withdrawal_ml
+  freshwater_withdrawal_ml
+  reclaimed_water_use_ml
+  consumption_ml
+  return_flow_ml
+  maximum_daily_withdrawal_ml
+  p95_daily_withdrawal_ml
+  maximum_7day_average_ml
+  summer_peak_withdrawal_ml
+  unmet_cooling_water_ml
+  freshwater_dependency_ratio
+  reclaimed_water_substitution_ratio
+  urban_water_circularity_ratio
+  consumption_fraction
+  return_ratio
+  system_reliability_fraction
+  domestic_unmet_ml
+  peak_total_demand_to_wtw_capacity
+  peak_capacity_ratio
+  mean_total_demand_to_wtw_capacity
+  coincident_city_ai_peak
+  max_wtw_utilization
+  max_wwtw_utilization
+  max_reuse_utilization
+  max_source_abstraction_ratio
+  mean_source_abstraction_ratio
+  min_source_storage_ml
+  wastewater_ml
+  system_energy_kwh
+  system_carbon_kg_co2e
+  it_energy_mwh
+  facility_energy_mwh
+  site_wue_l_kwh_it
+  process_wue_l_kwh_it
+  wue_l_kwh_it
+  offsite_electricity_water_ml
+  max_local_connection_ratio
+  mean_local_connection_ratio
+  max_daily_average_grid_connection_ratio
+  mean_daily_average_grid_connection_ratio
+  internal_cooling_recovery_ratio
+  mean_wtw_utilization
+  mean_wwtw_utilization
+  mean_reuse_utilization
+  daily_peak_factor
+  balance_residual_max_ml
+
+
+=== 三个容量点 × 五个 r ===
+
+--- 1100 MW ---
+    r       取水比        总取水       自来水       再生水      AI补水    (1-r)M       非AI
+  0.5  0.936303      42.17     21.08     21.08       nan       nan       nan
+  0.7  0.941097      43.75     13.12     30.62       nan       nan       nan
+  0.8  0.944592      44.90     11.11     33.78       nan       nan       nan
+  0.9  0.948293      46.12     11.98     34.14       nan       nan       nan
+
+--- 1111 MW ---
+    r       取水比        总取水       自来水       再生水      AI补水    (1-r)M       非AI
+  0.5  0.937780      42.59     21.29     21.29       nan       nan       nan
+  0.7  0.942621      44.19     13.26     30.93       nan       nan       nan
+  0.8  0.946151      45.35     11.51     33.84       nan       nan       nan
+  0.9  0.949889      46.58     12.42     34.16       nan       nan       nan
+
+--- 1120 MW ---
+    r       取水比        总取水       自来水       再生水      AI补水    (1-r)M       非AI
+  0.5  0.938988      42.93     21.47     21.47       nan       nan       nan
+  0.7  0.943868      44.54     13.37     31.17       nan       nan       nan
+  0.8  0.947427      45.72     11.83     33.88       nan       nan       nan
+  0.9  0.951195      46.96     12.78     34.18       nan       nan       nan

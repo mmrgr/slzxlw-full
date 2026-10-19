@@ -1,0 +1,101 @@
+﻿域,扰动系数,约束,约束类别,原阈值,施加阈值,是否跳过扰动,跳过原因,基准首失效_MW,扰动后首失效_MW,位移_MW,是否改变,域基准CAWCC_MW,扰动后CAWCC_MW,CAWCC位移_MW,主导约束是否翻转,主导约束_基准,主导约束_扰动后
+ha,0.98,max_source_abstraction_ratio,C_regular,0.95,0.9309999999999999,False,,1200.0,1050.0,-150.0,True,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,max_wtw_utilization,C_regular,0.95,0.9309999999999999,False,,1200.0,1100.0,-100.0,True,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,reclaimed_water_substitution_ratio,C_regular,0.65,0.637,False,,1350.0,1350.0,0.0,False,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,max_daily_average_grid_connection_ratio,C_regular,1.0,0.98,False,,1450.0,1450.0,0.0,False,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,max_local_connection_ratio,C_regular,1.0,0.98,False,,1550.0,1500.0,-50.0,True,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,peak_capacity_ratio,C_regular,1.0,0.98,False,,1750.0,1600.0,-150.0,True,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,1850.0,1850.0,0.0,False,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,max_wwtw_utilization,C_regular,0.95,0.9309999999999999,False,,,,,False,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,system_reliability_fraction,B_upper_bounded,0.99,0.9702,False,,,,,False,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.98,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1150.0,1000.0,-150.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,max_source_abstraction_ratio,C_regular,0.95,0.9405,False,,1200.0,1100.0,-100.0,True,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,max_wtw_utilization,C_regular,0.95,0.9405,False,,1200.0,1150.0,-50.0,True,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,reclaimed_water_substitution_ratio,C_regular,0.65,0.6435,False,,1350.0,1350.0,0.0,False,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,max_daily_average_grid_connection_ratio,C_regular,1.0,0.99,False,,1450.0,1450.0,0.0,False,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,max_local_connection_ratio,C_regular,1.0,0.99,False,,1550.0,1500.0,-50.0,True,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,peak_capacity_ratio,C_regular,1.0,0.99,False,,1750.0,1700.0,-50.0,True,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,1850.0,1850.0,0.0,False,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,max_wwtw_utilization,C_regular,0.95,0.9405,False,,,,,False,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,system_reliability_fraction,B_upper_bounded,0.99,0.9801,False,,,,,False,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,0.99,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1150.0,1050.0,-100.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,max_source_abstraction_ratio,C_regular,0.95,0.95,False,,1200.0,1200.0,0.0,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,max_wtw_utilization,C_regular,0.95,0.95,False,,1200.0,1200.0,0.0,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,reclaimed_water_substitution_ratio,C_regular,0.65,0.65,False,,1350.0,1350.0,0.0,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,max_daily_average_grid_connection_ratio,C_regular,1.0,1.0,False,,1450.0,1450.0,0.0,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,max_local_connection_ratio,C_regular,1.0,1.0,False,,1550.0,1550.0,0.0,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,peak_capacity_ratio,C_regular,1.0,1.0,False,,1750.0,1750.0,0.0,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,1850.0,1850.0,0.0,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,max_wwtw_utilization,C_regular,0.95,0.95,False,,,,,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,system_reliability_fraction,B_upper_bounded,0.99,0.99,False,,,,,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.0,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1150.0,1150.0,0.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,max_source_abstraction_ratio,C_regular,0.95,0.9594999999999999,False,,1200.0,1250.0,50.0,True,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,max_wtw_utilization,C_regular,0.95,0.9594999999999999,False,,1200.0,1300.0,100.0,True,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,reclaimed_water_substitution_ratio,C_regular,0.65,0.6565000000000001,False,,1350.0,1300.0,-50.0,True,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,max_daily_average_grid_connection_ratio,C_regular,1.0,1.01,False,,1450.0,1500.0,50.0,True,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,max_local_connection_ratio,C_regular,1.0,1.01,False,,1550.0,1550.0,0.0,False,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,peak_capacity_ratio,C_regular,1.0,1.01,False,,1750.0,1850.0,100.0,True,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,1850.0,1850.0,0.0,False,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,max_wwtw_utilization,C_regular,0.95,0.9594999999999999,False,,,,,False,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,system_reliability_fraction,B_upper_bounded,0.99,0.99,True,阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）,,,,False,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.01,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1150.0,1200.0,50.0,False,max_source_abstraction_ratio,max_source_abstraction_ratio
+ha,1.02,max_source_abstraction_ratio,C_regular,0.95,0.969,False,,1200.0,1350.0,150.0,True,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,max_wtw_utilization,C_regular,0.95,0.969,False,,1200.0,1350.0,150.0,True,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,reclaimed_water_substitution_ratio,C_regular,0.65,0.663,False,,1350.0,1300.0,-50.0,True,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,max_daily_average_grid_connection_ratio,C_regular,1.0,1.02,False,,1450.0,1500.0,50.0,True,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,max_local_connection_ratio,C_regular,1.0,1.02,False,,1550.0,1550.0,0.0,False,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,peak_capacity_ratio,C_regular,1.0,1.02,False,,1750.0,1850.0,100.0,True,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,1850.0,1850.0,0.0,False,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,max_wwtw_utilization,C_regular,0.95,0.969,False,,,,,False,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,system_reliability_fraction,B_upper_bounded,0.99,0.99,True,阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）,,,,False,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+ha,1.02,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1150.0,1250.0,100.0,True,max_source_abstraction_ratio,reclaimed_water_substitution_ratio
+co,0.98,max_daily_average_grid_connection_ratio,C_regular,1.0,0.98,False,,1500.0,1450.0,-50.0,True,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,max_local_connection_ratio,C_regular,1.0,0.98,False,,1600.0,1550.0,-50.0,True,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,max_wtw_utilization,C_regular,0.95,0.9309999999999999,False,,1600.0,1500.0,-100.0,True,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,max_source_abstraction_ratio,C_regular,0.95,0.9309999999999999,False,,1800.0,1650.0,-150.0,True,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,max_wwtw_utilization,C_regular,0.95,0.9309999999999999,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,peak_capacity_ratio,C_regular,1.0,0.98,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,reclaimed_water_substitution_ratio,C_regular,0.4,0.392,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,system_reliability_fraction,B_upper_bounded,0.99,0.9702,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.98,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,max_daily_average_grid_connection_ratio,C_regular,1.0,0.99,False,,1500.0,1450.0,-50.0,True,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,max_local_connection_ratio,C_regular,1.0,0.99,False,,1600.0,1600.0,0.0,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,max_wtw_utilization,C_regular,0.95,0.9405,False,,1600.0,1550.0,-50.0,True,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,max_source_abstraction_ratio,C_regular,0.95,0.9405,False,,1800.0,1700.0,-100.0,True,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,max_wwtw_utilization,C_regular,0.95,0.9405,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,peak_capacity_ratio,C_regular,1.0,0.99,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,reclaimed_water_substitution_ratio,C_regular,0.4,0.396,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,system_reliability_fraction,B_upper_bounded,0.99,0.9801,False,,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,0.99,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1400.0,-50.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,max_daily_average_grid_connection_ratio,C_regular,1.0,1.0,False,,1500.0,1500.0,0.0,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,max_local_connection_ratio,C_regular,1.0,1.0,False,,1600.0,1600.0,0.0,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,max_wtw_utilization,C_regular,0.95,0.95,False,,1600.0,1600.0,0.0,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,max_source_abstraction_ratio,C_regular,0.95,0.95,False,,1800.0,1800.0,0.0,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,max_wwtw_utilization,C_regular,0.95,0.95,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,peak_capacity_ratio,C_regular,1.0,1.0,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,reclaimed_water_substitution_ratio,C_regular,0.4,0.4,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,system_reliability_fraction,B_upper_bounded,0.99,0.99,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.0,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,max_daily_average_grid_connection_ratio,C_regular,1.0,1.01,False,,1500.0,1500.0,0.0,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,max_local_connection_ratio,C_regular,1.0,1.01,False,,1600.0,1600.0,0.0,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,max_wtw_utilization,C_regular,0.95,0.9594999999999999,False,,1600.0,1700.0,100.0,True,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,max_source_abstraction_ratio,C_regular,0.95,0.9594999999999999,False,,1800.0,1850.0,50.0,True,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,max_wwtw_utilization,C_regular,0.95,0.9594999999999999,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,peak_capacity_ratio,C_regular,1.0,1.01,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,reclaimed_water_substitution_ratio,C_regular,0.4,0.404,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,system_reliability_fraction,B_upper_bounded,0.99,0.99,True,阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.01,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,max_daily_average_grid_connection_ratio,C_regular,1.0,1.02,False,,1500.0,1500.0,0.0,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,max_local_connection_ratio,C_regular,1.0,1.02,False,,1600.0,1650.0,50.0,True,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,max_wtw_utilization,C_regular,0.95,0.969,False,,1600.0,1750.0,150.0,True,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,max_source_abstraction_ratio,C_regular,0.95,0.969,False,,1800.0,1950.0,150.0,True,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,domestic_unmet_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,max_wwtw_utilization,C_regular,0.95,0.969,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,peak_capacity_ratio,C_regular,1.0,1.02,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,reclaimed_water_substitution_ratio,C_regular,0.4,0.40800000000000003,False,,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,system_reliability_fraction,B_upper_bounded,0.99,0.99,True,阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio
+co,1.02,unmet_cooling_water_ml,A_zero_tolerance,0.0,0.0,True,阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动,,,,False,1450.0,1450.0,0.0,False,max_daily_average_grid_connection_ratio,max_daily_average_grid_connection_ratio

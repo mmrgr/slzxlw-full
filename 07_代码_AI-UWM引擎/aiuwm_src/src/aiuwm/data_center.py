@@ -240,12 +240,22 @@ def _cycles_of_concentration(
         # ``quality`` is the legacy project-file key.  ``quality_mg_l`` is
         # the explicit R10 schema; accept both while the registry migration
         # is completed so a Q1 fixture cannot silently fall back to design CoC.
-        quality = (
-            source_quality_overrides.get(source_name, {})
-            if source_quality_overrides is not None
-            and source_name in source_quality_overrides
-            else source.get("quality_mg_l", source.get("quality", {}))
-        )
+        #
+        # 2026-10-19 审计修复（H1b）：此前 override 是**整体替换**——
+        # 一旦传了 source_quality_overrides[source_name]，该水源声明的 quality
+        # 就被完全丢弃，override 里没有的物种退化为"无贡献"(0)。
+        # 后果：`_reuse_output_quality` 返回的 dict 只含台账里确实非零的物种
+        # （端点项目只有 BOD/TSS 的真实负荷，没有 TDS），于是 TDS 的 override 缺失，
+        # 混合浓度里 TDS 只剩自来水的 0.3×180=54 → L/C_mix=2200/54=40.7 > CoC_d，
+        # CoC 被 min() 取到设计值 5.0，而正确值应为 4.3222（按声明 C_r=650 混合得 509）。
+        # 这正是第 26 轮"CoC 跳到 5.0 / 反噬消失"的**真正代码原因**——不是储池缓冲。
+        # 现改为**合并**语义：override 只覆盖它明确给出的物种，其余保留声明值。
+        declared_quality = source.get("quality_mg_l", source.get("quality", {}))
+        if source_quality_overrides is not None and source_name in source_quality_overrides:
+            quality = dict(declared_quality or {})
+            quality.update(source_quality_overrides[source_name] or {})
+        else:
+            quality = declared_quality
         for indicator, value in quality.items():
             concentrations[indicator] = concentrations.get(indicator, 0.0) + fraction * float(value)
     ratios = [
@@ -386,14 +396,21 @@ def calculate_data_center_plan(
                     fractions[name] = float(source.get("target_fraction", 0.0))
             external_mass: dict[str, float] = {}
             for source_name, source_fraction in fractions.items():
+                source = sources.get(source_name, {})
+                declared_quality = source.get("quality_mg_l", source.get("quality", {}))
+                # 2026-10-19 审计修复（H1b）：与 _cycles_of_concentration 同一问题——
+                # override 曾是**整体替换**，导致 override 里没有的物种（如 TDS）
+                # 在此求和 mass 时**完全缺席**，混合浓度只剩自来水贡献，
+                # CoC 被 min() 顶到设计值 5.0（正确应为 4.3222）。
+                # 现改为合并：仅覆盖 override 明确给出的物种。
                 if (
                     source_quality_overrides is not None
                     and source_name in source_quality_overrides
                 ):
-                    quality = source_quality_overrides[source_name]
+                    quality = dict(declared_quality or {})
+                    quality.update(source_quality_overrides[source_name] or {})
                 else:
-                    source = sources.get(source_name, {})
-                    quality = source.get("quality_mg_l", source.get("quality", {}))
+                    quality = declared_quality
                 if not isinstance(quality, Mapping):
                     continue
                 for name, value in quality.items():

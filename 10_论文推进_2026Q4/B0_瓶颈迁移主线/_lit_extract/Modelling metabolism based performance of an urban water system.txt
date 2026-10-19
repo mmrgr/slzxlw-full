@@ -1,0 +1,785 @@
+=== Modelling metabolism based performance of an urban water system.pdf ===
+PAGES: 16
+
+--- HEAD ---
+Resources,
+ Conservation
+ and
+ Recycling
+ 99
+ (2015)
+ 84–99
+Contents
+ lists
+ available
+ at
+ ScienceDirect
+Resources,
+ Conservation
+ and
+ Recycling
+jo
+ u
+ r
+ n
+ al
+ homep
+ age:
+ www.elsevier.com/locate/resconrec
+Modelling
+ metabolism
+ based
+ performance
+ of
+ an
+ urban
+ water
+ system
+using
+ WaterMet2
+Kourosh
+ Behzadian ∗, Zoran
+ Kapelan
+Centre
+ for
+ Water
+ Systems,
+ College
+ of
+ Engineering,
+ Mathematics
+ and
+ Physical
+ Sciences,
+ University
+ of
+ Exeter,
+ Exeter
+ EX4
+ 4QF,
+ UK
+a
+ r t
+ i c l e 
+i n f o
+Article
+ history:
+Received
+ 20
+ August
+ 2014
+Received
+ in
+ revised
+ form
+ 14
+ January
+ 2015
+Accepted
+ 23
+ March
+ 2015
+Available
+ online
+ 28
+ April
+ 2015
+Keywords:
+Urban
+ water
+ system
+WaterMet2
+Metabolism
+Performance
+Environmental
+ impact
+ categories
+a
+ b
+ s
+ t r a
+ c t
+This paper presents
+ a new quantitative
+ model called
+ ‘WaterMet2’ for the metabolism
+ based
+ assess-
+ment
+ of the integrated
+ urban water
+ system
+ (UWS) performance.
+ WaterMet2 quantiﬁes
+ a number
+ of
+UWS
+ ﬂows/ﬂuxes
+ (e.g. water and energy)
+ which can be used to derive
+ sustainability-based
+ performance
+metrics.
+ The generic
+ WaterMet2 model
+ overcomes
+ the
+ drawbacks
+ of the existing UWS models
+ and strives
+to
+ bridge
+ the gaps
+ related to the nexus
+ of water, energy
+ and other
+ environmental
+ impacts
+ in an integrated
+UWS.
+ The main
+ features of WaterMet2 are: (1) conceptual
+ simulation
+ model
+ of UWS comprised
+ of water
+supply,
+ stormwater
+ and wastewater
+ subsystems
+ with possible
+ centralised
+ and decentralised
+ water
+ reuse;
+(2)
+ UWS
+ represented
+ by an arbitrary number
+ of key
+ UWS components
+ for each type in four spatial
+ scales
+(System,
+ Subcatchment,
+ Local and Indoor areas)
+ in a distributed
+ modelling
+ type approach;
+ (3) quantify-
+ing
+ the metabolism-based
+ performance
+ of UWS including
+ the caused and avoided
+ environmental
+ impact
+categories
+ (GHG emissions,
+ acidiﬁcation
+ and eutrophication
+ potentials)
+ and resource
+ recovery in UWS.
+WaterMet2 is tested,
+ validated
+ and demonstrated
+ by evaluating
+ the long-term
+ performance
+ of the UWS
+of
+ a northern
+ European
+ city for three states including
+ business
+ as usual
+ and two
+ intervention
+ strate-
+gies:
+ addition
+ of new water resources
+ and large scale
+ localised
+ water recycling.
+ The
+ results
+ obtained
+demonstrate
+ the
+ effectiveness
+ of WaterMet2 in evaluating
+ the sustainability
+ related
+ UWS performance,
+the
+ suitability
+ of using WaterMet2 at the strategic
+ level UWS planning
+ and the
+ importance
+ of using an
+integrated
+ assessment
+ approach
+ covering
+ the full urban water
+ cycle.
+© 2015 Elsevier
+ B.V. All rights
+ reserved.
+1.
+ Introduction
+Increasing
+ urban
+ water
+ demands
+ due
+ to
+ population
+ growth
+ is
+becoming
+ a
+ concern
+ for
+ many
+ water
+ companies
+ (Nair
+ et
+ al.,
+ 2014).
+This
+ is
+ already
+ a
+ major
+ challenge
+ in
+ arid
+ and
+ semi-arid
+ regions
+where
+ climate
+ change
+ intensiﬁes
+ water
+ scarcity
+ through
+ severe
+droughts
+ given
+ limited
+ water
+ resources
+ available
+ (Field
+ et
+ al.,
+ 2014).
+On
+ the
+ other
+ hand,
+ climate
+ change
+ and
+ urbanisation
+ are
+ the
+ pri-
+mary
+ causes
+ of
+ increased
+ urban
+ ﬂood
+ in
+ many
+ humid
+ regions
+ (Savic
+et
+ al.,
+ 2013).
+ All
+ this
+ in
+ addition
+ to
+ the
+ overall
+ demand
+ for
+ good
+water
+ quality
+ in
+ urban
+ areas
+ in
+ the
+ future
+ (UNESCO,
+ 2012)
+ imposes
+considerable
+ stress
+ on
+ water
+ companies
+ to
+ achieve
+ technically
+ and
+economically
+ acceptable
+ levels
+ of
+ service
+ in
+ the
+ urban
+ water
+ sys-
+tem
+ (UWS).
+ Given
+ ageing
+ infrastructure,
+ retroﬁtting
+ of
+ UWS
+ is
+ high
+on
+ the
+ agenda
+ which
+ needs
+ intensive
+ energy
+ demands
+ and
+ sub-
+sequently
+ causes
+ a
+ lot
+ of
+ environmental
+ impacts.
+ While
+ achieving
+∗Corresponding
+ author.
+ Tel.:
+ +44
+ 1392
+ 724075;
+ fax:
+ +44
+ 1392
+ 217965.
+E-mail
+ addresses:
+ k.behzadian-moghadam@exeter.ac.uk
+ (K.
+ Behzadian),
+z.kapelan@exeter.ac.uk
+ (Z.
+ Kapelan).
+the
+ satisfactory
+ levels
+ of
+ services
+ for
+ UWS
+ may
+ be
+ possible
+ through
+enormous
+ capital
+ investment,
+ meeting
+ certain
+ levels
+ of
+ sustaina-
+bility
+ criteria
+ must
+ be
+ ensured
+ (Behzadian
+ et
+ al.,
+ 2014a).
+ Such
+ a
+strategy
+ for
+ new
+ interventions
+ in
+ the
+ UWS
+ should
+ consider
+ not
+ only
+the
+ environmental
+ impacts
+ of
+ the
+ existing
+ UWS
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+conclusions
+ are
+ drawn
+ and
+ some
+ future
+ work
+recommendations
+ are
+ made.
+2.
+ Methodology
+2.1.
+ General
+ WaterMet2 modelling
+ concept
+WaterMet2 is
+ a
+ conceptual,
+ simulation-type,
+ mass-balance-
+based
+ model
+ which
+ quantiﬁes
+ metabolism
+ related
+ performance
+ of
+the
+ integrated
+ UWS
+ with
+ focus
+ on
+ sustainability-related
+ issues.
+Metabolism
+ in
+ the
+ UWS
+ refers
+ to
+ all
+ kinds
+ of
+ ﬂows
+ and
+ ﬂuxes
+(e.g.
+ water,
+ energy,
+ materials
+ and
+ so
+ on)
+ required
+ to
+ fulﬁl
+ the
+business-as-usual
+ UWS
+ functions
+ (Behzadian
+ et
+ al.,
+ 2014b).
+ The
+integrated
+ modelling
+ implies
+ the
+ simulation
+ of
+ the
+ key
+ processes
+and
+ components
+ in
+ urban
+ water
+ services
+ as
+ a
+ complex
+ and
+ interre-
+lated
+ system.
+ The
+ main
+ functionality
+ and
+ complexity
+ of
+ WaterMet2
+for
+ calculating
+ water-related
+ ﬂows
+ is
+ similar
+ to
+ the
+ previously
+developed
+ tools
+ such
+ as
+ UVQ
+ (Mitchell
+ and
+ Diaper,
+ 2010),
+ UOWT
+(Makropoulos
+ et
+ al.,
+ 2008) and
+ CWB
+ (Mackay
+ and
+ Last,
+ 2010).
+However,
+ once
+ the
+ water-related
+ ﬂows
+ are
+ quantiﬁed
+ for
+ each
+ com-
+ponent
+ by
+ simulating
+ the
+ integrated
+ UWS
+ for
+ each
+ time
+ step
+ in
+WaterMet2, other
+ ﬂuxes
+ (Fig.
+ 1) are
+ quantiﬁed
+ based
+ on
+ impact
+coefﬁcients
+ presented
+ by
+ Venkatesh
+ et
+ al.
+ (2014). This
+ capability
+ of
+WaterMet2 (i.e.
+ quantifying
+ other
+ metabolism
+ based
+ ﬂuxes,
+ espe-
+cially
+ the
+ environmental
+ impact
+ categories
+ within
+ the
+ simulation
+of
+ the
+ integrated
+ UWS)
+ makes
+ it
+ distinct
+ from
+ other
+ counterpart
+models.
+ The
+ principal
+ water
+ ﬂow
+ routes,
+ storages,
+ sources
+ and
+ sinks
+modelled
+ in
+ WaterMet2 are
+ also
+ illustrated
+ in
+ Fig.
+ 2.
+ A
+ daily
+ mass
+balance
+ based
+ approach
+ is
+ used
+ for
+ modelling
+ water
+ ﬂows
+ and
+other
+ ﬂuxes
+ outlined
+ below.
+ The
+ water
+ sources
+ and
+ sinks
+ are
+ the
+water
+ boundaries.
+ The
+ water
+ storages
+ (e.g.
+ service
+ reservoirs)
+ and
+ﬂow
+ routes
+ (e.g.
+ trunk
+ mains)
+ stand
+ for
+ any
+ physical
+ assets
+ with
+the
+ capability
+ of
+ storing
+ and
+ conveying
+ water
+ within
+ the
+ urban
+area,
+ respectively
+ (see
+ Table
+ 1
+ for
+ description
+ of
+ their
+ function-
+ality).
+ Also
+ note
+ that
+ despite
+ the
+ fact
+ that
+ life
+ cycle
+ assessment
+comprises
+ two
+ phases
+ of
+ infrastructure
+ and
+ operation
+ (Fagan
+ et
+ al.,
+2010),
+ WaterMet2 only
+ deals
+ with
+ the
+ functions
+ in
+ the
+ operation
+(i.e.
+ use)
+ phase
+ of
+ the
+ UWS
+ due
+ to
+ insigniﬁcant
+ environmental
+impacts
+ of
+ infrastructure
+ activities
+ such
+ as
+ construction,
+ installa-
+tion
+ and
+ demolition
+ (Lundin
+ and
+ Morrison,
+ 2002;
+ Lundie
+ et
+ al.,
+2004).
+
+86
+ 
+K.
+ Behzadian,
+ Z.
+ Kapelan
+ / Resources,
+ Conservatio

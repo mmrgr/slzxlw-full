@@ -1,0 +1,461 @@
+{
+  "passed": 91,
+  "total": 91,
+  "checks": [
+    {
+      "name": "文件存在 Fig1_framework.pdf",
+      "ok": true,
+      "detail": "186639 bytes"
+    },
+    {
+      "name": "文件存在 Fig1_framework.png",
+      "ok": true,
+      "detail": "456848 bytes"
+    },
+    {
+      "name": "文件存在 Fig2_bottleneck_migration.pdf",
+      "ok": true,
+      "detail": "80136 bytes"
+    },
+    {
+      "name": "文件存在 Fig2_bottleneck_migration.png",
+      "ok": true,
+      "detail": "240385 bytes"
+    },
+    {
+      "name": "文件存在 Fig3_constraint_trajectories.pdf",
+      "ok": true,
+      "detail": "94484 bytes"
+    },
+    {
+      "name": "文件存在 Fig3_constraint_trajectories.png",
+      "ok": true,
+      "detail": "240683 bytes"
+    },
+    {
+      "name": "文件存在 Fig4_interventions.pdf",
+      "ok": true,
+      "detail": "77649 bytes"
+    },
+    {
+      "name": "文件存在 Fig4_interventions.png",
+      "ok": true,
+      "detail": "200569 bytes"
+    },
+    {
+      "name": "文件存在 Fig5_city_gradient_policy.pdf",
+      "ok": true,
+      "detail": "95391 bytes"
+    },
+    {
+      "name": "文件存在 Fig5_city_gradient_policy.png",
+      "ok": true,
+      "detail": "151617 bytes"
+    },
+    {
+      "name": "文件存在 Fig6_timescale_reservoir.pdf",
+      "ok": true,
+      "detail": "95790 bytes"
+    },
+    {
+      "name": "文件存在 Fig6_timescale_reservoir.png",
+      "ok": true,
+      "detail": "142422 bytes"
+    },
+    {
+      "name": "Fig2 数值溯源 HA 水源取水首失效 = 1200",
+      "ok": true,
+      "detail": "1200.0"
+    },
+    {
+      "name": "Fig2 数值溯源 CO 电网首失效 = 1500",
+      "ok": true,
+      "detail": "1500.0"
+    },
+    {
+      "name": "Fig4 数值溯源 HA 降漏损 = +150",
+      "ok": true,
+      "detail": "150.0"
+    },
+    {
+      "name": "Fig4 数值溯源 CO 扩电网 = +100",
+      "ok": true,
+      "detail": "100.0"
+    },
+    {
+      "name": "Fig6 数值溯源 HA 库容中位 = 200",
+      "ok": true,
+      "detail": "200.0"
+    },
+    {
+      "name": "Fig6 数值溯源 CO 库容中位 = 900",
+      "ok": true,
+      "detail": "900.0"
+    },
+    {
+      "name": "Fig6 序列数 = 20",
+      "ok": true,
+      "detail": "20/20"
+    },
+    {
+      "name": "Fig5 端点 theta(0,0) 日尺度 = 1150",
+      "ok": true,
+      "detail": "1150.0"
+    },
+    {
+      "name": "Fig5 端点 theta(1,1) 日尺度 = 1450",
+      "ok": true,
+      "detail": "1450.0"
+    },
+    {
+      "name": "Fig1_framework 禁令：无「承载力/能承载」承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig2_bottleneck_migration 禁令：无「承载力/能承载」承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig3_constraint_trajectories 禁令：无「承载力/能承载」承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig4_interventions 禁令：无「承载力/能承载」承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig5_city_gradient_policy 禁令：无「承载力/能承载」承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig6_timescale_reservoir 禁令：无「承载力/能承载」承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig6 携带 hydrology_validation = NONE",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig6 说明合成日内曲线不可外推",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig2 显式标注未失效约束",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig2 携带未经实测率定",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig2 标注 estimand（日尺度）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig3 标注 estimand",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig3 说明 0 MW 基线已排除",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig4 注明基线口径",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig4 注明投资 MISSING 项不参与排序",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig4 注明未检验交互",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig5 注明合成谱非真实城市",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig5 注明 2000 MW 右删失",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Fig5 注明只有 CO 域",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "文件存在 FigR1_rstar_threshold_response.pdf",
+      "ok": true,
+      "detail": "83686 bytes"
+    },
+    {
+      "name": "文件存在 FigR1_rstar_threshold_response.png",
+      "ok": true,
+      "detail": "127690 bytes"
+    },
+    {
+      "name": "文件存在 FigR2_backlash_decomposition.pdf",
+      "ok": true,
+      "detail": "53757 bytes"
+    },
+    {
+      "name": "文件存在 FigR2_backlash_decomposition.png",
+      "ok": true,
+      "detail": "81306 bytes"
+    },
+    {
+      "name": "文件存在 FigR3_rstar_regime_and_sensitivity.pdf",
+      "ok": true,
+      "detail": "72575 bytes"
+    },
+    {
+      "name": "文件存在 FigR3_rstar_regime_and_sensitivity.png",
+      "ok": true,
+      "detail": "142696 bytes"
+    },
+    {
+      "name": "文件存在 FigR4_zero_effect_and_policy_bridge.pdf",
+      "ok": true,
+      "detail": "67060 bytes"
+    },
+    {
+      "name": "文件存在 FigR4_zero_effect_and_policy_bridge.png",
+      "ok": true,
+      "detail": "127700 bytes"
+    },
+    {
+      "name": "文件存在 FigR5_grid_convergence.pdf",
+      "ok": true,
+      "detail": "67766 bytes"
+    },
+    {
+      "name": "文件存在 FigR5_grid_convergence.png",
+      "ok": true,
+      "detail": "143338 bytes"
+    },
+    {
+      "name": "FigR 源码存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR 禁令：无「承载力/能承载」承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR 携带「未经实测率定」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR 携带「合成端点」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR 声明 r* 由四参数决定（不可移植）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR 不硬编码 CAWCC 数值",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR 数值溯源 r* = 0.5532",
+      "ok": true,
+      "detail": "0.5532"
+    },
+    {
+      "name": "FigR 数值溯源 HA 物理 CAWCC r=0 为 1200",
+      "ok": true,
+      "detail": "1200.0"
+    },
+    {
+      "name": "FigR 数值溯源 HA 物理 CAWCC r=0.9 为 1100",
+      "ok": true,
+      "detail": "1100.0"
+    },
+    {
+      "name": "FigR 数值溯源 CO 物理 CAWCC r=0 为 1450",
+      "ok": true,
+      "detail": "1450.0"
+    },
+    {
+      "name": "FigR 数值溯源 CO 物理 CAWCC r=0.8 仍为 1450（负结果）",
+      "ok": true,
+      "detail": "1450.0"
+    },
+    {
+      "name": "FigR 反噬在 r<=0.5 精确为零",
+      "ok": true,
+      "detail": "max|backlash|=7.28e-12"
+    },
+    {
+      "name": "FigR 反噬在 r>=0.7 显著为正",
+      "ok": true,
+      "detail": "min=1243.1 ML"
+    },
+    {
+      "name": "FigR3 源码存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR3 携带「未经实测率定」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR3 携带「合成端点」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR3 禁令：无承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR3 分类图含四情形",
+      "ok": true,
+      "detail": "['I', 'II', 'III', 'IV']"
+    },
+    {
+      "name": "FigR3 分类网格规模 = 320",
+      "ok": true,
+      "detail": "320"
+    },
+    {
+      "name": "FigR3 情形 II 存在平坦区（≥2 点 CoC==设计值）",
+      "ok": true,
+      "detail": "3"
+    },
+    {
+      "name": "FigR3 情形 III 全平坦（5/5）",
+      "ok": true,
+      "detail": "5/5"
+    },
+    {
+      "name": "FigR3 情形 I 无平坦点（0/5）",
+      "ok": true,
+      "detail": "0/5"
+    },
+    {
+      "name": "FigR3 情形 I 与 II 在 r=0.8 重合（都受水质支配）",
+      "ok": true,
+      "detail": "I=23840.93 II=23840.93"
+    },
+    {
+      "name": "FigR3 情形 III 在 r=0.8 不重合（设计值仍起约束）",
+      "ok": true,
+      "detail": "III=29241.45 vs II=23840.93"
+    },
+    {
+      "name": "FigR4 源码存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR4 携带「未经实测率定」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR4 携带「合成端点」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR4 禁令：无承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR4 零效应区 HA r≤0.35 CAWCC 唯一",
+      "ok": true,
+      "detail": "[1200.0]"
+    },
+    {
+      "name": "FigR4 零效应区 CO r≤0.35 CAWCC 唯一",
+      "ok": true,
+      "detail": "[1450.0]"
+    },
+    {
+      "name": "FigR4 policy_bridge 产物存在且 6 行",
+      "ok": true,
+      "detail": "6"
+    },
+    {
+      "name": "FigR4 W/D 中位 ≈ 5.33",
+      "ok": true,
+      "detail": "5.33"
+    },
+    {
+      "name": "FigR4 1000MW@u=20% 的 r_max > 1",
+      "ok": true,
+      "detail": "1.06"
+    },
+    {
+      "name": "FigR5 源码存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR5 携带「未经实测率定」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR5 携带「合成端点」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR5 禁令：无承诺性表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR5 收敛表 12 行",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "name": "FigR5 零效应区三网格降幅均为 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "FigR5 HA r=0.9 降幅 -100/-100/-90",
+      "ok": true,
+      "detail": "[np.float64(-100.0), np.float64(-100.0), np.float64(-90.0)]"
+    },
+    {
+      "name": "FigR5 绝对值随网格细化单调上升",
+      "ok": true,
+      "detail": "[np.float64(1150.0), np.float64(1175.0), np.float64(1190.0)]"
+    }
+  ]
+}

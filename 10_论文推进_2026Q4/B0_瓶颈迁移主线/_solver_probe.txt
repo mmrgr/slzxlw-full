@@ -1,0 +1,60 @@
+
+======================================================================================
+ r = 0.8   MW = 1100
+======================================================================================
+相关列: ['cycles_of_concentration', 'quality_coc_fallback', 'target_reclaimed_fraction', 'quality_solver_reclaimed_fraction', 'quality_solver_status', 'quality_solver_residual', 'quality_solver_root_count', 'actual_reclaimed_fraction', 'quality_state_enabled', 'quality_integration_status', 'quality_state_status']
+  cycles_of_concentration                  mean=      3.956835 min=    3.956835 max=    3.956835
+  quality_coc_fallback                     mean=      0.000000 min=    0.000000 max=    0.000000
+  target_reclaimed_fraction                mean=      0.800000 min=    0.800000 max=    0.800000
+  quality_solver_reclaimed_fraction        mean=      0.800000 min=    0.800000 max=    0.800000
+
+  quality_solver_status 取值分布: {'not_applicable': 730}
+  quality_solver_residual                  mean=           nan min=         nan max=         nan
+  quality_solver_root_count                mean=      0.000000 min=    0.000000 max=    0.000000
+  actual_reclaimed_fraction                mean=      0.755645 min=    0.686918 max=    0.800000
+
+  quality_state_enabled 取值分布: {'False': 730}
+
+  quality_integration_status 取值分布: {'READY_SINGLE_DC': 730}
+
+  quality_state_status 取值分布: {'DISABLED_LEGACY_VOLUME_ONLY': 730}
+
+  交付不足天数: 620 / 730
+
+  样本（前 5 天交付不足）：
+    target_reclaimed_fraction  actual_reclaimed_fraction  cycles_of_concentration
+0                         0.8                   0.771515                 3.956835
+7                         0.8                   0.790181                 3.956835
+8                         0.8                   0.791270                 3.956835
+9                         0.8                   0.788690                 3.956835
+10                        0.8                   0.790976                 3.956835
+
+======================================================================================
+ r = 0.9   MW = 1100
+======================================================================================
+相关列: ['cycles_of_concentration', 'quality_coc_fallback', 'target_reclaimed_fraction', 'quality_solver_reclaimed_fraction', 'quality_solver_status', 'quality_solver_residual', 'quality_solver_root_count', 'actual_reclaimed_fraction', 'quality_state_enabled', 'quality_integration_status', 'quality_state_status']
+  cycles_of_concentration                  mean=      3.648425 min=    3.648425 max=    3.648425
+  quality_coc_fallback                     mean=      0.000000 min=    0.000000 max=    0.000000
+  target_reclaimed_fraction                mean=      0.900000 min=    0.900000 max=    0.900000
+  quality_solver_reclaimed_fraction        mean=      0.900000 min=    0.900000 max=    0.900000
+
+  quality_solver_status 取值分布: {'not_applicable': 730}
+  quality_solver_residual                  mean=           nan min=         nan max=         nan
+  quality_solver_root_count                mean=      0.000000 min=    0.000000 max=    0.000000
+  actual_reclaimed_fraction                mean=      0.743997 min=    0.672912 max=    0.900000
+
+  quality_state_enabled 取值分布: {'False': 730}
+
+  quality_integration_status 取值分布: {'READY_SINGLE_DC': 730}
+
+  quality_state_status 取值分布: {'DISABLED_LEGACY_VOLUME_ONLY': 730}
+
+  交付不足天数: 724 / 730
+
+  样本（前 5 天交付不足）：
+    target_reclaimed_fraction  actual_reclaimed_fraction  cycles_of_concentration
+0                         0.9                   0.755732                 3.648425
+7                         0.9                   0.798668                 3.648425
+8                         0.9                   0.774573                 3.648425
+9                         0.9                   0.772049                 3.648425
+10                        0.9                   0.774277                 3.648425

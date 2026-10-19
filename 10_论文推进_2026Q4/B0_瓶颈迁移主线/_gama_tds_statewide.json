@@ -1,0 +1,33 @@
+{
+  "source": "GAMA DDW 2020-present",
+  "note": "仅 19 个县，不含 Santa Clara",
+  "tds": {
+    "n": 10090,
+    "p5": 120.0,
+    "p25": 239.0,
+    "p50": 420.0,
+    "p75": 650.0,
+    "p95": 2100.0,
+    "mean": 576.8
+  },
+  "c_p_assumed_mg_l": 180.0,
+  "assumed_percentile": 14.1,
+  "county_median": {
+    "IMPERIAL": 1200.0,
+    "CONTRA COSTA": 870.0,
+    "LOS ANGELES": 550.0,
+    "ALAMEDA": 545.5,
+    "COLUSA": 405.0,
+    "KINGS": 365.0,
+    "KERN": 320.0,
+    "GLENN": 271.0,
+    "AMADOR": 225.0,
+    "FRESNO": 210.0,
+    "BUTTE": 200.0,
+    "LAKE": 190.0,
+    "HUMBOLDT": 180.0,
+    "LASSEN": 160.0,
+    "INYO": 140.0,
+    "EL DORADO": 120.0
+  }
+}

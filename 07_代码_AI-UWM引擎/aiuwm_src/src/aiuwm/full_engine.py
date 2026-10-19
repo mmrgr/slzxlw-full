@@ -221,11 +221,38 @@ def _reuse_output_quality(
         return quality
     removal = reuse_component.get("pollutant_removal_fraction", {})
     masses = model.pollutant_storage.get(reuse_id, {})
+    # 2026-10-19 审计修复（H1）：
+    #   此前只要 `pollutant_storage` 里**存在该物种的键**，就用 mass/volume 覆盖声明值。
+    #   端点项目只给市政污水声明了 BOD/TSS、**没有 TDS/chloride 入流负荷**，所以台账里的
+    #   TDS 质量只来自数据中心 blowdown 回流（`blowdown_return_fraction=1.0`），
+    #   再除以 90–300 ML 的大池体积，得到 11–40 mg/L —— 比自来水(180)还淡 5–15 倍。
+    #   用它覆盖声明值 C_r=650，就把 CoC 顶到设计上限 5.0，反噬消失。
+    #   这是第 26 轮论文归因为"补水无盐"的机制；当时只改了文稿、未改引擎。
+    #
+    #   修复不是"零质量才跳过"（质量确实非零），而是加**物理完整性判据**：
+    #   再生水（污水厂出水）的含盐量不可能低于自来水，若台账反算浓度低于自来水
+    #   声明浓度，则说明台账缺少主要质量来源，此时保留声明值。
+    potable_declared: dict[str, float] = {}
+    for src_name, src in (model.project.get("components", {})
+                          .get("AI_DC1", {}).get("water_sources", {}) or {}).items():
+        if src_name == "potable":
+            q = src.get("quality_mg_l", src.get("quality", {})) or {}
+            potable_declared = {str(k): float(v) for k, v in q.items()}
+    ledger_incomplete = False
     for name, mass in masses.items():
-        quality[str(name)] = max(
-            0.0,
-            float(mass) / volume * (1.0 - float(removal.get(name, 0.0))),
-        )
+        m = max(0.0, float(mass))
+        if m <= 1e-12:
+            continue  # 台账无该物种质量 → 保留声明值，不静默归零
+        conc = m / volume * (1.0 - float(removal.get(name, 0.0)))
+        floor = potable_declared.get(name, 0.0)
+        if floor > 0.0 and conc < floor:
+            # 台账浓度低于自来水 → 质量来源不完整，不采信
+            ledger_incomplete = True
+            continue
+        quality[str(name)] = max(0.0, conc)
+    if ledger_incomplete:
+        # 标注该次解析未采信台账，供 provenance 与审计使用
+        model._reuse_quality_ledger_incomplete = True
     return quality
 
 

@@ -1,0 +1,116 @@
+=== Understanding urban water performance at the city-region.pdf ===
+PAGES: 12
+
+--- HEAD ---
+Understanding urban water performance at the city-region scale using
+an urban water metabolism evaluation framework
+Marguerite A. Renouf a, d, *, Steven J. Kenway a, d, Ka Leung Lam a, d, Tony Weber c,
+Estelle Roux a, d, Silvia Serrao-Neumann b, d, 1, Darryl Low Choy b, d, Edward A. Morgan b, d
+a School of Chemical Engineering, University of Queensland, St Lucia, Brisbane, Queensland, 4072, Australia
+b Cities Research Institute, Grifﬁth University, Nathan, Brisbane, Queensland, 4111, Australia
+c Alluvium, Fortitude Valley, Brisbane, Queensland, 4006, Australia
+d Cooperative Research Centre for Water Sensitive Cities, Monash University, Victoria, 3800, Australia
+a r t i c l e i n f o
+Article history:
+Received 6 July 2017
+Received in revised form
+4 December 2017
+Accepted 28 January 2018
+Available online 8 February 2018
+Keywords:
+Urban metabolism
+Water mass balance
+Water efﬁciency
+Wastewater recycling
+Stormwater
+Water sensitive cities
+System boundary
+a b s t r a c t
+Water sensitive interventions are being promoted to reduce the adverse impacts of urban development
+on natural water cycles. However it is currently difﬁcult to know the best strategy for their imple-
+mentation because current and desired urban water performance is not well quantiﬁed. This is partic-
+ularly at the city-region scale, which is important for strategic urban planning. This work aimed to ﬁll this
+gap by quantifying the water performance of urban systems within city-regions using ‘urban water
+metabolism’ evaluation, to inform decisions about water sensitive interventions. To do this we adapted
+an existing evaluation framework with new methods. In particular, we used land use data for deﬁning
+system boundaries, and for estimating natural hydrological ﬂows. The criteria for gauging the water
+performance were water efﬁciency (in terms of water extracted externally) and hydrological perfor-
+mance (how much natural hydrological ﬂows have changed relative to a nominated pre-urbanised state).
+We compared these performance criteria for urban systems within three Australian city-regions (South
+East Queensland, Melbourne and Perth metropolitan areas), under current conditions, and after imple-
+mentation of example water sensitive interventions (demand management, rainwater/stormwater har-
+vesting, wastewater recycling and increasing perviousness). The respective water efﬁciencies were found
+to be 79, 90 and 133 kL/capita/yr. In relation to hydrological performance, stormwater runoff relative to
+pre-urbanised ﬂows was of most note, estimated to be 2-, 6- and 3- fold, respectively. The estimated
+performance beneﬁts from water sensitive interventions suggested different priorities for each region,
+and that combined implementation of a range of interventions may be necessary to make substantive
+gains in performance. We concluded that the framework is suited to initial screening of the type and
+scale of water sensitive interventions needed to achieve desired water performance objectives.
+© 2018 Elsevier Ltd. All rights reserved.
+1. Introduction
+Innovations in total water cycle management are being pro-
+moted to secure water supplies and reduce the impacts of urban
+development on natural water cycles (ADB, 2016, OECD, 2015, UK
+Water Partnership, 2015), and articulated in concepts such as
+‘water-sensitive cities’ (Wong and Brown, 2009) and ‘water wise
+cities’ (IWA, 2016). These include water resource management in-
+terventions such as improved water use efﬁciency and diversiﬁca-
+tion of supplies (harvesting of rainwater and stormwater runoff,
+wastewater recycling) (Campisano et al., 2017; Khastagir and
+Jayasuriya, 2010; Sharma et al., 2013), and planning interventions
+such as water sensitive urban design (WSUD) and greater green
+space (Coutts et al., 2013; Feng et al., 2016; Sharma et al., 2016). We
+collectively refer to these as water-sensitive interventions.
+To understand how best to employ these interventions, water
+managers and urban planners need quantiﬁcation of urban water
+performance (i.e., how efﬁciency water is being utilised, how the
+natural water cycle is altered) (Chesterﬁeld et al., 2016). They need
+* Corresponding author. School of Chemical Engineering, U
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+Conclusions
+We took a big-picture perspective to the evaluation of the urban
+water performance, by extending an urban water metabolism
+evaluation framework to assess urban systems within three
+Australia city-regions. To test how it can inform water management
+decisions, we evaluated these regions under current conditions and
+after the implementation of example water sensitive interventions.
+Water performance was evaluated in terms of the external water
+efﬁciency and the hydrological performance of the urban system.
+Adapting the evaluation framework to a large urban scale
+required the development of new methods for i) deﬁning the sys-
+tem boundaries using land use data; and ii) for estimating natural
+hydrological ﬂows by combining the land use data with hydrolog-
+ical ﬂow partitioning (HFP) factors. The method can be conducted
+relatively rapidly, and could be used by water managers and urban
+planners for strategic evaluation. It is transferrable to other city-
+regions if spatial land use data are available, along with data for
+water supply and wastewater generation that can be aligned to the
+deﬁned urban system boundaries.
+We found that application of the evaluation framework to urban
+systems at the larger urban scale is suited to initial screening of the
+type and scale of water sensitive interventions needed to achieve
+desired water performance objectives, and to guide the establish-
+ment of performance objectives and targets. The values of the
+improved framework have been the broader urban perspective (to
+align with and inform strategic urban and water planning pro-
+cesses), and the systematic deﬁnition of the urban system bound-
+ary (to enable consistent comparisons between urban systems and
+over time). The framework can enable a better understanding of the
+role and impact of water sensitive interventions in achieving water
+performance objectives for urban systems within city-regions.
+Acknowledgement
+This work was supported by the Cooperative Research Centre for
+Water Sensitive Cities (CRCWSC Project B1.2 e “Catchment-scale
+landscape planning for water sensitive cities in an age of climate
+change”), which is funded by the Australian Government and in-
+dustry partners. Marguerite Renouf, Silvia Serrao-Neumann and
+Edward Morgan were funded by the CRCWSC. Steven Kenway was
+funded by the Australian Research Council through a Discovery
+Early Career Researcher Award (DECRA DE100101322). The authors
+acknowledge the input from Jessica Yeung and Mekdes Yimam
+from the Australian Bureau of Meteorology (BOM) who assisted
+with the interrogation of the BOM's urban w

@@ -1,0 +1,110 @@
+=== Municipal reclaimed water as makeup water for cooling.pdf ===
+PAGES: 13
+
+--- HEAD ---
+Water Resources and Industry 28 (2022) 100188
+Available online 8 September 2022
+2212-3717/©
+2022
+The
+Authors.
+Published
+by
+Elsevier
+B.V.
+This
+is
+an
+open
+access
+article
+under
+the
+CC
+BY-NC-ND
+license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Municipal reclaimed water as makeup water for cooling systems: 
+Water efficiency, biohazards, and reliability 
+Mohammad Badruzzaman a,*, Jasem R. Anazi a, Fawaz A. Al-Wohaib a, 
+Abdulaziz A. Al-Malki b, Fadel Jutail c 
+a Environmental Protection, Saudi Aramco, Dhahran, Saudi Arabia 
+b Process & Control Systems Department, Saudi Aramco, Dhahran, Saudi Arabia 
+c Community Services Department, Saudi Aramco, Dhahran, Saudi Arabia 
+A R T I C L E I N F O 
+Keywords: 
+Cooling tower 
+Reclaimed water 
+Cycle of concentration 
+Make-up water 
+Water efficiency 
+Biohazards 
+A B S T R A C T 
+Municipal reclaimed water is increasingly being considered as a sustainable source of makeup 
+water for cooling towers. However, many oil and gas facilities in the water scarce middle eastern 
+regions still depend on non-renewable groundwater for operating cooling towers. Successful 
+application of reclaimed water in a dry desert climate with very high temperature requires a 
+critical understanding of several factors, including water efficiency, biohazards, equipment reli­
+ability, and economics. In particular, biohazard assessment, due to bacteria and virus contami­
+nation in hot weather, should be assessed to understand the human risks of utilizing reclaimed 
+water. This study investigated the applicability of municipal reclaimed water as an alternative to 
+groundwater for an industrial cooling system at an oil and gas facility in Saudi Arabia. Treated 
+wastewater effluent from an activated sludge biological treatment process was utilized, as make 
+up water for a 4.2 MW cooling tower. The results of this study showed that water efficiency can be 
+increased using municipal reclaimed water instead of groundwater by increasing the cycle of 
+concentration. The bacterial and enteric virus study indicated that the disinfection and biocide 
+treatment was effective in controlling biological growth and minimizing associated risks to 
+human health. The use of reclaimed water was economically viable with 27% reduction in water 
+consumption. 
+1. Introduction 
+Oil and gas companies operating in severely water scarce middle east region is constantly looking for alternatives for groundwater. 
+Water related risk for an industry can be physical, regulatory, or reputational [1]. Physical risk occurs when regional water supplies are 
+not always available at the quantities or qualities needed to adequately support the myriad of community water dependent needs. 
+Water availability for industrial use is impacted by many factors, including location of existing freshwater resources, water man­
+agement practices, competing interests for water supplies, development related pollution, and climate change. Water reuse and 
+recycling investments is a sustainable solution for regional water scarcity concerns and/or wastewater discharge limitations [2]. 
+Effective water reuse applications can deliver environmental, economic and social benefits to the area it operates [3]. In addition, 
+water reuse plays an important role in shifting from linear to circular business models and to make water-smart circular economy. The 
+* Corresponding author. 
+E-mail address: mohammad.badruzzaman@aramco.com (M. Badruzzaman). 
+Contents lists available at ScienceDirect 
+Water Resources and Industry 
+journal homepage: www.elsevier.com/locate/wri 
+https://doi.org/10.1016/j.wri.2022.100188 
+Received 20 December 2021; Received in revised form 28 July 2022; Accepted 13 August 2022 
+
+Water Resources and Industry 28 (2022) 100188
+2
+use of alternative water supplies and water reuse initiatives are increasingly being considered [4–6]. Treated municipal effluent has 
+already been considered by the power sector to potentially offset water withdrawal and consumption for beneficial uses in many parts 
+of the world [4,7–10]. A wide-scale application of municipal reclaimed water for industrial application could assist in offsetting 
+groundwater withdrawal in the middle
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+Conclusions 
+The outcome of this pilot study indicated that municipal reclaimed water is a viable water source as cooling tower makeup water in 
+the dry hot climate. The inorganic scale forming tendency of municipal reclaimed water was lower at optimized cycle of concentration 
+with no significant scale deposition on cooling system surfaces. The bio-hazard assessment for typical microbiological parameters 
+associated with cooling tower operations showed that the application of a comprehensive water treatment system (disinfection), and 
+associated robust operating procedures were effective in controlling risks to human health. In addition, the enteric virus study results 
+demonstrated that the sodium hypochlorite treatment for inactivation of enteric viruses was effective and produced acceptable results. 
+In order to develop a successful reclaimed water application program for cooling systems, a number of factors need to be evaluated. 
+The factors are: regulatory responsibilities, water quality of the reclaimed water, design and operation of the wastewater facilities 
+generating the reclaimed water, diurnal and seasonal fluctuation in water quality, biological growth control treatment, process control 
+and monitoring of chemical feed system, economics of using reclaimed water, and integrated planning between wastewater treatment 
+plant and cooling tower operations. The water treatment program, including disinfection, should be designed by a qualified specialist 
+who understands the relationship between water chemistry, microbiology, equipment material, and cooling system operations. A 
+conceptual decision matrix on the water treatment optimization for the application of reclaimed water in cooling systems is presented 
+in Fig. 8. 
+Declaration of competing interest 
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper. 
+Acknowledgement 
+The authors would like to thank Saudi Aramco EP management, especially Mohammed Al Sahli, Saleh Y Qahtani, for their guidance 
+and technical input throughout this study. Appreciation is extended to Saudi Aramco Abqaiq Community Services Department 
+management for their efforts to expedite the completion of this pilot project. In addition, the authors would like to extend gratitude to 
+Javeed Mohammed Abdul, Gareth W Watts, Ayman Youssef, and Hamza H Khateeb of Saudi Aramco for technical input. The authors 
+would like to acknowledge the support of Dr. Maha Al-Mozaini and Mrs. Ibtihaj Alsharif of King Faisal Sp

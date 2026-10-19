@@ -1,0 +1,64 @@
+{
+  "note": "2026-10-19 引擎修复（H1/H1b）后的重算结果，供 §5.7.9/§5.7.10 改写使用",
+  "grid_mw": 50.0,
+  "capacity_mw": 1100.0,
+  "makeup_by_r": {
+    "0.0": {
+      "legacy": 30770.8,
+      "dynamic": 30770.8,
+      "legacy_coc": 5.0,
+      "dynamic_coc": 5.0
+    },
+    "0.5": {
+      "legacy": 30770.8,
+      "dynamic": 30771.0,
+      "legacy_coc": 5.0,
+      "dynamic_coc": 4.9999
+    },
+    "0.7": {
+      "legacy": 31923.9,
+      "dynamic": 31825.6,
+      "legacy_coc": 4.3222,
+      "dynamic_coc": 4.3709
+    },
+    "0.8": {
+      "legacy": 32764.8,
+      "dynamic": 32284.5,
+      "legacy_coc": 3.9568,
+      "dynamic_coc": 4.149
+    },
+    "0.9": {
+      "legacy": 33655.1,
+      "dynamic": 32312.9,
+      "legacy_coc": 3.6484,
+      "dynamic_coc": 4.1364
+    }
+  },
+  "two_by_two": {
+    "legacy|缺": {
+      "r05": 30770.8,
+      "r09": 33655.1,
+      "change_pct": 9.373
+    },
+    "legacy|补齐": {
+      "r05": 30770.8,
+      "r09": 33655.1,
+      "change_pct": 9.373
+    },
+    "dynamic|缺": {
+      "r05": 30771.0,
+      "r09": 32312.9,
+      "change_pct": 5.011
+    },
+    "dynamic|补齐": {
+      "r05": 30876.4,
+      "r09": 33149.8,
+      "change_pct": 7.363
+    }
+  },
+  "end_state_r09_dynamic_missing_tds": {
+    "process_tds_mg_l": 38.6806,
+    "blowdown_tds_mg_l": 156.8257,
+    "ratio": 4.054378
+  }
+}

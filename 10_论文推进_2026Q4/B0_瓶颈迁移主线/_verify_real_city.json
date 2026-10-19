@@ -1,0 +1,156 @@
+{
+  "passed": 30,
+  "total": 30,
+  "rows": [
+    {
+      "name": "k* = 3.50",
+      "ok": true,
+      "detail": "3.4999"
+    },
+    {
+      "name": "供给能力口径 k=5.43",
+      "ok": true,
+      "detail": "5.426"
+    },
+    {
+      "name": "供给能力口径 r=0.444",
+      "ok": true,
+      "detail": "0.4440"
+    },
+    {
+      "name": "实际用量口径 k=4.35",
+      "ok": true,
+      "detail": "4.355"
+    },
+    {
+      "name": "实际用量口径 r=0.499",
+      "ok": true,
+      "detail": "0.4988"
+    },
+    {
+      "name": "eAR k=4.90",
+      "ok": true,
+      "detail": "4.902"
+    },
+    {
+      "name": "余量 5.4 个百分点",
+      "ok": true,
+      "detail": "5.44 pp"
+    },
+    {
+      "name": "相对余量 9.8%",
+      "ok": true,
+      "detail": "9.8%"
+    },
+    {
+      "name": "再生水需增 24% 才越界",
+      "ok": true,
+      "detail": "24.4%"
+    },
+    {
+      "name": "自来水需减 20% 才越界",
+      "ok": true,
+      "detail": "19.6%"
+    },
+    {
+      "name": "再生水利用率 64.3%",
+      "ok": true,
+      "detail": "64.3%"
+    },
+    {
+      "name": "城市总利用率 53.6%",
+      "ok": true,
+      "detail": "53.6%"
+    },
+    {
+      "name": "清洗后 n=169",
+      "ok": true,
+      "detail": "169"
+    },
+    {
+      "name": "k 中位 13.54",
+      "ok": true,
+      "detail": "13.54"
+    },
+    {
+      "name": "k<k* 占 13.6%",
+      "ok": true,
+      "detail": "13.6% (23/169)"
+    },
+    {
+      "name": "大型系统 n=93 且 k<k* 占 8.6%",
+      "ok": true,
+      "detail": "n=93, 8.6%"
+    },
+    {
+      "name": "主稿含「§5.9」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "主稿含「k* 判据」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "主稿含「6% 份额」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "主稿含「26% 份额」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "主稿含「§9.7 限制」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "主稿含「eAR 交叉验证」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "主稿含「169 个系统」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "主稿含「产物引用」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "声明白「应用非验证」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "声明 6%/26% 分母不可加总",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "声明样本选择偏差",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "物种数已改为 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "参数锚定已改为 20",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "原「50 个落在包络内」已移除",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "note": "r_max>1 表示园区即使100%用再生水也用不完城市再生水总量，园区不是约束方",
+  "r_star": 0.5532,
+  "table": [
+    {
+      "domain": "ha",
+      "capacity_mw": 500.0,
+      "city_wastewater_ml": 150115.01956556732,
+      "ai_makeup_ml": 14522.871748876008,
+      "W_over_D": 10.33645563778978
+    },
+    {
+      "domain": "ha",
+      "capacity_mw": 1000.0,
+      "city_wastewater_ml": 153205.40533913462,
+      "ai_makeup_ml": 29033.743497752017,
+      "W_over_D": 5.276805085468802
+    },
+    {
+      "domain": "ha",
+      "capacity_mw": 1500.0,
+      "city_wastewater_ml": 156295.79111270193,
+      "ai_makeup_ml": 43544.61524662802,
+      "W_over_D": 3.5893253443043127
+    },
+    {
+      "domain": "co",
+      "capacity_mw": 500.0,
+      "city_wastewater_ml": 146488.7957772129,
+      "ai_makeup_ml": 13833.706615704692,
+      "W_over_D": 10.589265758384071
+    },
+    {
+      "domain": "co",
+      "capacity_mw": 1000.0,
+      "city_wastewater_ml": 149024.8861464258,
+      "ai_makeup_ml": 27655.41323140938,
+      "W_over_D": 5.388633498239403
+    },
+    {
+      "domain": "co",
+      "capacity_mw": 1500.0,
+      "city_wastewater_ml": 151560.97651563867,
+      "ai_makeup_ml": 41477.11984711407,
+      "W_over_D": 3.6540863269748978
+    }
+  ]
+}

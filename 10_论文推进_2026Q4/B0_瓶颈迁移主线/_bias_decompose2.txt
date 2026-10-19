@@ -1,0 +1,57 @@
+
+================================================================================
+ r = 0.7   MW = 1100
+================================================================================
+列: ['target_reclaimed_fraction', 'actual_reclaimed_fraction', 'gross_makeup_ml', 'external_makeup_ml', 'potable_water_ml', 'reclaimed_water_ml', 'cycles_of_concentration', 'quality_coc_fallback']
+
+=== 全程统计 ===
+  target_reclaimed_fraction          mean=    0.700000  sum=      511.0000  min=    0.7000  max=    0.7000
+  actual_reclaimed_fraction          mean=    0.700000  sum=      511.0000  min=    0.7000  max=    0.7000
+  gross_makeup_ml                    mean=   44.766227  sum=    32679.3455  min=   36.8630  max=   52.5265
+  external_makeup_ml                 mean=   43.731394  sum=    31923.9178  min=   36.0108  max=   51.3123
+  potable_water_ml                   mean=   13.124350  sum=     9580.7754  min=   10.8032  max=   15.3937
+  reclaimed_water_ml                 mean=   30.623483  sum=    22355.1425  min=   25.2076  max=   35.9186
+  cycles_of_concentration            mean=    4.322200  sum=     3155.2063  min=    4.3222  max=    4.3222
+  quality_coc_fallback               mean=    0.000000  sum=        0.0000  min=    0.0000  max=    0.0000
+
+  实际交付 r_eff: mean=0.700000 (< 目标 0.7 的天数: 0 / 730)
+  quality_coc_fallback 触发天数: 0
+  自来水占比 = 0.300000
+
+================================================================================
+ r = 0.8   MW = 1100
+================================================================================
+列: ['target_reclaimed_fraction', 'actual_reclaimed_fraction', 'gross_makeup_ml', 'external_makeup_ml', 'potable_water_ml', 'reclaimed_water_ml', 'cycles_of_concentration', 'quality_coc_fallback']
+
+=== 全程统计 ===
+  target_reclaimed_fraction          mean=    0.800000  sum=      584.0000  min=    0.8000  max=    0.8000
+  actual_reclaimed_fraction          mean=    0.755645  sum=      551.6207  min=    0.6869  max=    0.8000
+  gross_makeup_ml                    mean=   46.046040  sum=    33613.6090  min=   37.9168  max=   54.0282
+  external_makeup_ml                 mean=   44.883252  sum=    32764.7737  min=   36.9593  max=   52.6638
+  potable_water_ml                   mean=   11.114903  sum=     8113.8792  min=    7.3919  max=   16.2726
+  reclaimed_water_ml                 mean=   33.784787  sum=    24662.8945  min=   29.5675  max=   40.0000
+  cycles_of_concentration            mean=    3.956835  sum=     2888.4892  min=    3.9568  max=    3.9568
+  quality_coc_fallback               mean=    0.000000  sum=        0.0000  min=    0.0000  max=    0.0000
+
+  实际交付 r_eff: mean=0.755645 (< 目标 0.8 的天数: 620 / 730)
+  quality_coc_fallback 触发天数: 0
+  自来水占比 = 0.247550
+
+================================================================================
+ r = 0.9   MW = 1100
+================================================================================
+列: ['target_reclaimed_fraction', 'actual_reclaimed_fraction', 'gross_makeup_ml', 'external_makeup_ml', 'potable_water_ml', 'reclaimed_water_ml', 'cycles_of_concentration', 'quality_coc_fallback']
+
+=== 全程统计 ===
+  target_reclaimed_fraction          mean=    0.900000  sum=      657.0000  min=    0.9000  max=    0.9000
+  actual_reclaimed_fraction          mean=    0.743997  sum=      543.1175  min=    0.6729  max=    0.9000
+  gross_makeup_ml                    mean=   47.401183  sum=    34602.8636  min=   39.0327  max=   55.6182
+  external_makeup_ml                 mean=   46.102908  sum=    33655.1226  min=   37.9637  max=   54.0949
+  potable_water_ml                   mean=   11.976609  sum=     8742.9248  min=    3.8128  max=   17.4625
+  reclaimed_water_ml                 mean=   34.142737  sum=    24924.1978  min=   30.4745  max=   40.0000
+  cycles_of_concentration            mean=    3.648425  sum=     2663.3499  min=    3.6484  max=    3.6484
+  quality_coc_fallback               mean=    0.000000  sum=        0.0000  min=    0.0000  max=    0.0000
+
+  实际交付 r_eff: mean=0.743997 (< 目标 0.9 的天数: 724 / 730)
+  quality_coc_fallback 触发天数: 0
+  自来水占比 = 0.259687

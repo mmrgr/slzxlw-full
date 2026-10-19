@@ -1,0 +1,67 @@
+==============================================================================
+A. CENTRAL_REUSE 组件定义（全部键）
+==============================================================================
+  id = CENTRAL_REUSE
+  {
+  "kind": "reuse",
+  "reuse_type": "central",
+  "capacity_ml": 300,
+  "initial_ml": 90,
+  "treatment_capacity_ml_day": 40.0,
+  "target_areas": [
+    "LA1"
+  ],
+  "eligible_demands": [
+    "industrial",
+    "municipal_misc",
+    "irrigation"
+  ],
+  "priority": 5,
+  "electricity_kwh_m3": 0.25
+}
+
+==============================================================================
+B. _reuse_output_quality 逐次返回值（前 15 次）
+==============================================================================
+  #         reuse_id  volume_ML  TDS_mass_kg C_from_ledger   ret_TDS   ret_Cl
+  0    CENTRAL_REUSE     90.000       0.0000         0.000     0.000    0.000
+  1    CENTRAL_REUSE     81.714    3150.8114        38.559    38.559    8.102
+  2    CENTRAL_REUSE     73.252    3170.2571        43.279    43.279    9.105
+  3    CENTRAL_REUSE     64.550    2263.5828        35.067    35.067    7.398
+  4    CENTRAL_REUSE     55.993    1359.6143        24.282    24.282    5.143
+  5    CENTRAL_REUSE     47.719     726.3430        15.221    15.221    3.239
+  6    CENTRAL_REUSE     38.596     350.0930         9.071     9.071    1.935
+  7    CENTRAL_REUSE     30.520     177.7124         5.823     5.823    1.237
+  8    CENTRAL_REUSE     30.855     195.8380         6.347     6.347    1.329
+  9    CENTRAL_REUSE     30.816     198.5520         6.443     6.443    1.340
+ 10    CENTRAL_REUSE     30.950     201.4147         6.508     6.508    1.349
+ 11    CENTRAL_REUSE     31.038     201.6873         6.498     6.498    1.345
+ 12    CENTRAL_REUSE     31.201     201.8854         6.471     6.471    1.338
+ 13    CENTRAL_REUSE     31.139     164.1204         5.271     5.271    1.092
+ 14    CENTRAL_REUSE     31.047     146.3360         4.713     4.713    0.976
+
+  返回 TDS 分布: 首次=0.00  中位=8.27  末次=5.68  min=0.00  max=43.28 mg/L
+  调用次数 = 730
+
+==============================================================================
+C. 再生水组件逐日状态（来自 component_daily）
+==============================================================================
+  列: ['date', 'component_id', 'kind', 'inflow_ml', 'outflow_ml', 'delivered_ml', 'undelivered_ml', 'loss_ml', 'leakage_ml', 'overflow_ml', 'storage_ml', 'treated_ml', 'untreated_ml', 'infiltration_ml', 'exfiltration_ml', 'cso_ml', 'sto_ml', 'excess_wastewater_ml', 'excess_flow_ml', 'imported_water_ml', 'exported_water_ml', 'aquifer_recharge_ml', 'water_quality_weighted_ml', 'electricity_kwh', 'fossil_energy_kwh', 'embodied_energy_kwh', 'energy_generated_kwh', 'ghg_caused_kg_co2e', 'ghg_avoided_kg_co2e', 'electricity_ghg_kg_co2e', 'fossil_ghg_kg_co2e', 'embodied_ghg_kg_co2e', 'direct_ghg_kg_co2e', 'acidification_caused_kg_so2e', 'acidification_avoided_kg_so2e', 'electricity_acidification_kg_so2e', 'fossil_acidification_kg_so2e', 'embodied_acidification_kg_so2e', 'eutrophication_caused_kg_po4e', 'eutrophication_avoided_kg_po4e']
+         date  storage_ml
+6  2029-01-01   81.714308
+18 2029-01-02   73.251975
+30 2029-01-03   64.549823
+42 2029-01-04   55.992785
+54 2029-01-05   47.719096
+66 2029-01-06   38.596233
+78 2029-01-07   30.519580
+90 2029-01-08   30.855156
+
+==============================================================================
+D. 判定
+==============================================================================
+  项目声明的 C_r = 650.0 mg/L
+  动态路径实际使用的再生水 TDS 中位数 = 8.27 mg/L
+  比值 = 0.0127
+  ❌ 动态路径的再生水 TDS 与主分析 C_r 不在同一量级。
+     => §5.7.10 的『储池缓冲』解释不成立；两路径差异主要来自水质输入不一致。

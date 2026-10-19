@@ -1,0 +1,162 @@
+{
+  "passed": 26,
+  "total": 26,
+  "rows": [
+    {
+      "claim": "摘要含 r*=0.5532",
+      "value": "0.5532",
+      "source": "解析",
+      "ok": true
+    },
+    {
+      "claim": "CoC 残差 8.9e-16",
+      "value": "8.882e-16",
+      "source": "probe_rstar_mechanism.csv",
+      "ok": true
+    },
+    {
+      "claim": "氯化物 r* = 0.6842",
+      "value": "0.6842",
+      "source": "解析（L=500,Cp=35,Cr=130）",
+      "ok": true
+    },
+    {
+      "claim": "CoC r=0.9 = 3.648",
+      "value": "3.648",
+      "source": "rstar_scan_ha.csv",
+      "ok": true
+    },
+    {
+      "claim": "CoC 降幅 -27%",
+      "value": "-27.03%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "四容量点增幅 +6.47~6.48%",
+      "value": "6.47~6.48%",
+      "source": "rstar_scan_ha.csv",
+      "ok": true
+    },
+    {
+      "claim": "极差 0.012 个百分点",
+      "value": "0.0121pp",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "反推 E 变化 -0.76%",
+      "value": "-0.76%",
+      "source": "rstar_backlash_decomposition.csv",
+      "ok": true
+    },
+    {
+      "claim": "反噬 r<=0.5 精确为零",
+      "value": "7.28e-12",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "再生水用量 0→16790 ML",
+      "value": "16790.1",
+      "source": "rstar_scan_ha.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 I 增幅 +20.74%",
+      "value": "+20.74%",
+      "source": "rstar_regime_validation.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 II 增幅 +6.48%",
+      "value": "+6.48%",
+      "source": "rstar_regime_validation.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 III 增幅 +0.00%",
+      "value": "+0.00%",
+      "source": "rstar_regime_validation.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 I 在 r=0 时 CoC=12.22（非设计值 15）",
+      "value": "12.22",
+      "source": "rstar_regime_validation.csv",
+      "ok": true
+    },
+    {
+      "claim": "弹性 L ≈ +1.69",
+      "value": "+1.6923",
+      "source": "rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "弹性 coc_design ≈ -1.69",
+      "value": "-1.6921",
+      "source": "rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "弹性 c_reclaimed ≈ -1.38",
+      "value": "-1.3828",
+      "source": "rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "弹性 c_potable ≈ -0.31",
+      "value": "-0.3093",
+      "source": "rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "HA 物理 CAWCC 1200→1100（−100MW）",
+      "value": "1200→1100",
+      "source": "rstar_physical_cawcc_by_r.csv",
+      "ok": true
+    },
+    {
+      "claim": "CO 物理 CAWCC 基本不动（1450/1400）",
+      "value": "1400",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "水源比 0.9497→0.9513",
+      "value": "0.9497→0.9513",
+      "source": "rstar_confound_control.csv",
+      "ok": true
+    },
+    {
+      "claim": "电网约束 Δ=0.0000",
+      "value": "0.8326→0.8326",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "零效应区 HA 恒 1200",
+      "value": "[1200.0]",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "零效应区 CO 恒 1450",
+      "value": "[1450.0]",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "W/D 中位 5.33",
+      "value": "5.33",
+      "source": "rstar_policy_bridge.csv",
+      "ok": true
+    },
+    {
+      "claim": "摘要全部小数均出现在正文",
+      "value": "缺失 0",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    }
+  ]
+}

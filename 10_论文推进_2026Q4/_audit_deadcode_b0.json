@@ -1,0 +1,3102 @@
+{
+  "summary": {
+    "n_py": 275,
+    "n_md": 71,
+    "n_products": 109,
+    "n_在用": 64,
+    "n_图件": 10,
+    "n_自检型": 30,
+    "n_交付物": 5,
+    "n_patch_scripts": 115,
+    "n_probe_scripts": 28
+  },
+  "dead": [],
+  "by_class": {
+    "在用": [
+      "04_wr_manuscript_en.md",
+      "05_wr_supplementary_en.md",
+      "_analytic_cawcc_multigrid.json",
+      "_analytic_cawcc_test.json",
+      "_c_p_anchor_impact.json",
+      "_ca_k_clean.json",
+      "_ca_kstar_sensitivity.json",
+      "_coc_reff_tension.json",
+      "_cp_precision_requirement.json",
+      "_dynamic_aligned_cawcc.json",
+      "_dynamic_aligned_cawcc.txt",
+      "_dynamic_inflow_diag.txt",
+      "_dynamic_path_cawcc.json",
+      "_dynamic_path_verify.txt",
+      "_fine_r09.json",
+      "_gama_tds_statewide.json",
+      "_noninformative_extended.json",
+      "_noninformative_recheck.json",
+      "_num_lexicon.json",
+      "_quality_state_sensitivity.json",
+      "_quality_state_sensitivity.txt",
+      "_quality_storage_diag.txt",
+      "_reff_shortfall.json",
+      "_reff_shortfall.txt",
+      "_reuse_tds_aligned.txt",
+      "_reuse_tds_repair.txt",
+      "_reuse_tds_rootcause.txt",
+      "_rstar_param_anchoring.json",
+      "_tech_grid_convergence.json",
+      "_tech_sensitivity.json",
+      "_tech_wue_benchmark.json",
+      "_twobytwo_attribution.txt",
+      "capacity_scan_4000mw.csv",
+      "capacity_threshold_corrected.json",
+      "city_gradient_cawcc.csv",
+      "constraint_boundaries_corrected.csv",
+      "intervention_cost_benefit.csv",
+      "parameter_envelope_R7.csv",
+      "probe_rstar_mechanism.csv",
+      "probe_rstar_mechanism_meta.json",
+      "project.json",
+      "reservoir_multiyear_ensemble.json",
+      "reuse_marginal_curve.csv",
+      "reuse_marginal_curve_50mw.csv",
+      "reuse_production_marginal_curve.csv",
+      "rstar_backlash_decomposition.csv",
+      "rstar_boundaries_by_r.csv",
+      "rstar_cawcc_by_r.csv",
+      "rstar_confound_control.csv",
+      "rstar_grid_convergence_summary.json",
+      "rstar_grid_convergence_table.csv",
+      "rstar_physical_boundaries_by_r.csv",
+      "rstar_physical_cawcc_by_r.csv",
+      "rstar_policy_bridge.csv",
+      "rstar_policy_bridge.json",
+      "rstar_regime_map.csv",
+      "rstar_regime_summary.json",
+      "rstar_regime_validation.csv",
+      "rstar_regime_validation.json",
+      "rstar_scan_co.csv",
+      "rstar_scan_ha.csv",
+      "rstar_sensitivity.csv",
+      "rstar_sensitivity_grid.csv",
+      "rstar_sensitivity_summary.json"
+    ],
+    "图件": [
+      "FigR1_rstar_threshold_response.pdf",
+      "FigR1_rstar_threshold_response.png",
+      "FigR2_backlash_decomposition.pdf",
+      "FigR2_backlash_decomposition.png",
+      "FigR3_rstar_regime_and_sensitivity.pdf",
+      "FigR3_rstar_regime_and_sensitivity.png",
+      "FigR4_zero_effect_and_policy_bridge.pdf",
+      "FigR4_zero_effect_and_policy_bridge.png",
+      "FigR5_grid_convergence.pdf",
+      "FigR5_grid_convergence.png"
+    ],
+    "自检型": [
+      "_audit_v2.json",
+      "_bias_decompose.txt",
+      "_bias_decompose2.txt",
+      "_bowers_benchmark.json",
+      "_check_sync.json",
+      "_diag_wue.txt",
+      "_final_check.json",
+      "_gama_tds_santaclara.json",
+      "_index.json",
+      "_key_products_audit.txt",
+      "_num_lexicon.md",
+      "_quality_state_config.txt",
+      "_quality_state_verify.txt",
+      "_reuse_tds_aligned.json",
+      "_solver_probe.txt",
+      "_unused_columns_report.txt",
+      "_v2_patch_report.json",
+      "_verify_abstract.json",
+      "_verify_policy_bridge.json",
+      "_verify_real_city.json",
+      "_verify_regime_numbers.json",
+      "_verify_v2_numbers.json",
+      "_wr_part2_intro_methods.md",
+      "ne1_r10a_signflip_cases.csv",
+      "ne1_r10a_signflip_log.txt",
+      "ne1_r10a_signflip_summary.json",
+      "rstar_grid_convergence_10mw.csv",
+      "rstar_grid_convergence_25mw.csv",
+      "rstar_grid_convergence_50mw.csv",
+      "timeseries.csv"
+    ],
+    "交付物": [
+      "_ca_k_distribution.json",
+      "_reuse_quality_ledger.txt",
+      "constraints_ha.json",
+      "gate_check_result.json",
+      "ne5d_direction_summary.json"
+    ]
+  },
+  "rows": [
+    {
+      "product": "04_wr_manuscript_en.md",
+      "class": "在用",
+      "why": "被 16 个脚本读取",
+      "producers": [
+        "_add_analytic_boundary.py",
+        "_add_bowers_evidence.py",
+        "_add_co_gap.py",
+        "_add_co_grid_check.py",
+        "_add_coc_reff_disclosure.py",
+        "_add_interactions_en.py",
+        "_add_kstar_sensitivity.py",
+        "_add_legacy_path_disclosure.py",
+        "_add_noninformative_range.py",
+        "_add_tech_sensitivity.py",
+        "_add_two_path_bracket.py",
+        "_add_uwmp_quality_en.py",
+        "_add_uwmp_quality_evidence.py",
+        "_audit_key_products.py",
+        "_audit_unused_columns.py",
+        "_en_add_cp_anchor.py",
+        "_en_add_precision.py",
+        "_fix_345.py",
+        "_fix_abstract_kstar.py",
+        "_fix_abstract_share.py",
+        "_fix_alameda2.py",
+        "_fix_caliber_labels.py",
+        "_fix_co_bottleneck.py",
+        "_fix_en_two_path.py",
+        "_fix_prov_en.py",
+        "_fix_prov_en2.py",
+        "_fix_share_prov2.py",
+        "_fix_share_prov3.py",
+        "_fix_share_provenance.py",
+        "_fix_tech_grid_claims.py",
+        "_fix_tech_ordering.py",
+        "_fix_two_path_correction.py",
+        "_sync_anchoring_en.py",
+        "_trim_abstract10.py",
+        "_trim_abstract2.py",
+        "_trim_abstract3.py",
+        "_trim_abstract4.py",
+        "_trim_abstract5.py",
+        "_trim_abstract6.py",
+        "_trim_abstract7.py",
+        "_trim_abstract8.py",
+        "_trim_abstract9.py",
+        "_trim_abstract_final.py",
+        "_trim_after_kstar.py",
+        "_trim_anchoring.py",
+        "_trim_anchoring2.py",
+        "_trim_anchoring3.py",
+        "_trim_anchoring4.py",
+        "_trim_buffer.py",
+        "_trim_cp.py",
+        "_trim_cp2.py",
+        "_trim_cp3.py",
+        "_trim_cp4.py",
+        "_trim_cp5.py",
+        "_trim_cp6.py",
+        "_trim_cp7.py",
+        "_trim_cp8.py",
+        "_trim_final2.py",
+        "_trim_final3.py",
+        "_trim_final4.py",
+        "_trim_final5.py",
+        "_trim_final6.py",
+        "_trim_final7.py",
+        "_trim_final_kstar.py",
+        "_trim_prec.py",
+        "_trim_prec2.py",
+        "_trim_prec3.py",
+        "_trim_prov.py",
+        "_trim_prov2.py",
+        "_trim_share.py",
+        "_trim_share2.py",
+        "_trim_uwmp.py",
+        "_trim_uwmp2.py",
+        "_trim_uwmp3.py",
+        "_trim_uwmp4.py",
+        "_update_tech_grid_gate.py",
+        "_wr_add_citations.py",
+        "_wr_append.py",
+        "_wr_splice.py",
+        "_wr_trim1.py",
+        "_wr_trim10.py",
+        "_wr_trim2.py",
+        "_wr_trim3.py",
+        "_wr_trim4.py",
+        "_wr_trim5.py",
+        "_wr_trim6.py",
+        "_wr_trim7.py",
+        "_wr_trim8.py",
+        "_wr_trim9.py"
+      ],
+      "py_consumers": [
+        "_diag_prov_fail.py",
+        "_verify_analytic_boundary.py",
+        "_verify_co_gap.py",
+        "_verify_co_grid.py",
+        "_verify_coc_reff_disclosure.py",
+        "_verify_legacy_path.py",
+        "_verify_noninformative_range.py",
+        "_verify_share_provenance.py",
+        "_verify_tech_grid.py",
+        "_wr_gate.py",
+        "_wr_num_gate.py",
+        "_wr_num_reverse.py",
+        "_wr_package_check.py",
+        "_wr_ref_gate.py",
+        "_wr_secwc.py",
+        "_wr_wc.py"
+      ],
+      "md_consumers": [
+        "35_WR改编规划.md",
+        "36_第八轮工作总结.md",
+        "37_第九轮工作总结.md"
+      ]
+    },
+    {
+      "product": "05_wr_supplementary_en.md",
+      "class": "在用",
+      "why": "被 13 个脚本读取",
+      "producers": [
+        "_add_analytic_boundary.py",
+        "_add_bowers_evidence.py",
+        "_add_co_gap.py",
+        "_add_co_grid_check.py",
+        "_add_coc_reff_disclosure.py",
+        "_add_cp_precision.py",
+        "_add_interactions_en.py",
+        "_add_kstar_sensitivity.py",
+        "_add_legacy_path_disclosure.py",
+        "_add_noninformative_range.py",
+        "_add_tech_sensitivity.py",
+        "_add_two_path_bracket.py",
+        "_add_uwmp_quality_evidence.py",
+        "_audit_key_products.py",
+        "_audit_unused_columns.py",
+        "_fix_345.py",
+        "_fix_alameda.py",
+        "_fix_alameda2.py",
+        "_fix_caliber_labels.py",
+        "_fix_en_two_path.py",
+        "_fix_s7_numbering.py",
+        "_fix_share_prov2.py",
+        "_fix_share_prov3.py",
+        "_fix_share_provenance.py",
+        "_fix_si38.py",
+        "_fix_si_s2.py",
+        "_fix_si_two_path.py",
+        "_fix_tech_grid_claims.py",
+        "_fix_tech_ordering.py",
+        "_fix_two_path_correction.py",
+        "_si_add_cp_anchor.py",
+        "_si_add_dualbase.py",
+        "_si_fix_dualbase_wording.py",
+        "_si_fix_s46.py",
+        "_si_update_levers50.py",
+        "_sync_anchoring_en.py",
+        "_update_tech_grid_gate.py"
+      ],
+      "py_consumers": [
+        "_si_num_gate.py",
+        "_verify_analytic_boundary.py",
+        "_verify_co_gap.py",
+        "_verify_co_grid.py",
+        "_verify_coc_reff_disclosure.py",
+        "_verify_cp_precision.py",
+        "_verify_gama_anchor.py",
+        "_verify_kstar_table.py",
+        "_verify_legacy_path.py",
+        "_verify_noninformative_range.py",
+        "_verify_share_provenance.py",
+        "_verify_tech_grid.py",
+        "_wr_package_check.py"
+      ],
+      "md_consumers": [
+        "35_WR改编规划.md",
+        "36_第八轮工作总结.md",
+        "37_第九轮工作总结.md"
+      ]
+    },
+    {
+      "product": "FigR1_rstar_threshold_response.pdf",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_insert_v2_sections.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "_bak_03_主稿_v2.md",
+        "figs\\图件索引.md"
+      ]
+    },
+    {
+      "product": "FigR1_rstar_threshold_response.png",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "FigR2_backlash_decomposition.pdf",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_insert_v2_sections.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "_bak_03_主稿_v2.md",
+        "figs\\图件索引.md"
+      ]
+    },
+    {
+      "product": "FigR2_backlash_decomposition.png",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "FigR3_rstar_regime_and_sensitivity.pdf",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check.py"
+      ],
+      "py_consumers": [
+        "_cite_figr3.py",
+        "figs\\_append_index_r3.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "_bak_03_主稿_v2.md",
+        "figs\\图件索引.md"
+      ]
+    },
+    {
+      "product": "FigR3_rstar_regime_and_sensitivity.png",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "FigR4_zero_effect_and_policy_bridge.pdf",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check.py"
+      ],
+      "py_consumers": [
+        "_cite_figr4.py",
+        "figs\\_append_index_r4.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "_bak_03_主稿_v2.md",
+        "figs\\图件索引.md"
+      ]
+    },
+    {
+      "product": "FigR4_zero_effect_and_policy_bridge.png",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "FigR5_grid_convergence.pdf",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check3.py"
+      ],
+      "py_consumers": [
+        "_append_index_r5.py",
+        "_fix_figrefs.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "27_待决策清单_整理版.md",
+        "_bak_03_主稿_v2.md",
+        "figs\\图件索引.md"
+      ]
+    },
+    {
+      "product": "FigR5_grid_convergence.png",
+      "class": "图件",
+      "why": "图件，被图件索引/正文引述，非文本引用",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check3.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_analytic_cawcc_multigrid.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_test_analytic_multigrid.py"
+      ],
+      "py_consumers": [
+        "_add_analytic_boundary.py",
+        "_verify_analytic_boundary.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_analytic_cawcc_test.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_test_analytic_cawcc.py"
+      ],
+      "py_consumers": [
+        "_add_analytic_boundary.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_audit_v2.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_audit_v2.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_bias_decompose.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_decompose_bias.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_bias_decompose2.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_decompose_bias2.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_bowers_benchmark.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_bowers_benchmark.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_c_p_anchor_impact.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_cp_anchor_impact.py",
+        "_fix_alameda.py"
+      ],
+      "py_consumers": [
+        "_si_add_cp_anchor.py",
+        "_verify_gama_anchor.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "40_第十二轮工作总结.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_ca_k_clean.json",
+      "class": "在用",
+      "why": "被 7 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_kstar_sensitivity.py",
+        "_update_final_check3.py",
+        "_verify_real_city.py"
+      ],
+      "py_consumers": [
+        "_add_kstar_cn.py",
+        "_add_kstar_sensitivity.py",
+        "_diag_kstar_boundary.py",
+        "_insert_real_city.py",
+        "_reg_kstar_nums.py",
+        "_si_num_gate.py",
+        "_verify_kstar_table.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "34_第七轮工作总结.md",
+        "38_第十轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_ca_k_distribution.json",
+      "class": "交付物",
+      "why": "被 3 个文档引用",
+      "producers": [
+        "_final_check.py",
+        "_insert_real_city.py",
+        "_update_final_check3.py",
+        "_verify_real_city.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "34_第七轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "_ca_kstar_sensitivity.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_kstar_sensitivity.py"
+      ],
+      "py_consumers": [
+        "_add_kstar_cn.py",
+        "_add_kstar_sensitivity.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_check_sync.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_check_sync.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_coc_reff_tension.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_verify_coc_reff.py"
+      ],
+      "py_consumers": [
+        "_add_coc_reff_disclosure.py",
+        "_verify_coc_reff_disclosure.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_cp_precision_requirement.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_cp_precision.py"
+      ],
+      "py_consumers": [
+        "_verify_cp_precision.py"
+      ],
+      "md_consumers": [
+        "41_第十三轮工作总结.md"
+      ]
+    },
+    {
+      "product": "_diag_wue.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_diag_wue2.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_dynamic_aligned_cawcc.json",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "_retest_dynamic_aligned.py",
+        "_retest_dynamic_aligned_min.py"
+      ],
+      "py_consumers": [
+        "_fix_si_two_path.py",
+        "_verify_legacy_path.py",
+        "_verify_two_path_attribution.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "product": "_dynamic_aligned_cawcc.txt",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_retest_dynamic_aligned.py",
+        "_retest_dynamic_aligned_min.py"
+      ],
+      "py_consumers": [
+        "_fix_si_two_path.py",
+        "_fix_two_path_correction.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md"
+      ]
+    },
+    {
+      "product": "_dynamic_inflow_diag.txt",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_diag_dynamic_inflow.py"
+      ],
+      "py_consumers": [
+        "_diag_reuse_quality.py"
+      ],
+      "md_consumers": [
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "product": "_dynamic_path_cawcc.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_test_dynamic_path_main.py"
+      ],
+      "py_consumers": [
+        "_add_two_path_bracket.py",
+        "_fix_si_two_path.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_dynamic_path_verify.txt",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_verify_dynamic_result.py"
+      ],
+      "py_consumers": [
+        "_add_two_path_bracket.py",
+        "_fix_si_two_path.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_final_check.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_fine_r09.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_fine_r09.py"
+      ],
+      "py_consumers": [
+        "_add_analytic_boundary.py",
+        "_verify_analytic_boundary.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_gama_tds_santaclara.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_gama_tds.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_gama_tds_statewide.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_cp_anchor_impact.py",
+        "_gama_statewide.py"
+      ],
+      "py_consumers": [
+        "_si_add_cp_anchor.py",
+        "_verify_gama_anchor.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "40_第十二轮工作总结.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_index.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_lit_extract_papers.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_key_products_audit.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_audit_key_products.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_noninformative_extended.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_recheck_noninformative.py",
+        "_test_noninformative_extended.py"
+      ],
+      "py_consumers": [
+        "_add_noninformative_range.py",
+        "_verify_noninformative_range.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md",
+        "_num_lexicon.md"
+      ]
+    },
+    {
+      "product": "_noninformative_recheck.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_recheck_noninformative.py"
+      ],
+      "py_consumers": [
+        "_add_noninformative_range.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_num_lexicon.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_build_num_lexicon.py"
+      ],
+      "py_consumers": [
+        "_si_num_gate.py",
+        "_wr_num_gate.py"
+      ],
+      "md_consumers": []
+    },
+    {
+      "product": "_num_lexicon.md",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_build_num_lexicon.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_quality_state_config.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_find_quality_state_switch.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_quality_state_sensitivity.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_test_quality_state.py"
+      ],
+      "py_consumers": [
+        "_add_legacy_path_disclosure.py",
+        "_verify_legacy_path.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_quality_state_sensitivity.txt",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_test_quality_state.py"
+      ],
+      "py_consumers": [
+        "_add_legacy_path_disclosure.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_quality_state_verify.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_verify_quality_state_result.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_quality_storage_diag.txt",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_diag_quality_storage.py"
+      ],
+      "py_consumers": [
+        "_add_legacy_path_disclosure.py",
+        "_diag_dynamic_inflow.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_reff_shortfall.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_quantify_reff_shortfall.py"
+      ],
+      "py_consumers": [
+        "_add_coc_reff_disclosure.py",
+        "_verify_coc_reff_disclosure.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_reff_shortfall.txt",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_quantify_reff_shortfall.py"
+      ],
+      "py_consumers": [
+        "_add_coc_reff_disclosure.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_reuse_quality_ledger.txt",
+      "class": "交付物",
+      "why": "被 1 个文档引用",
+      "producers": [
+        "_diag_reuse_quality.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": [
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "product": "_reuse_tds_aligned.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_diag_reuse_tds_aligned.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_reuse_tds_aligned.txt",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "_diag_reuse_tds_aligned.py"
+      ],
+      "py_consumers": [
+        "_fix_si_two_path.py",
+        "_retest_dynamic_aligned.py",
+        "_retest_dynamic_aligned_min.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "product": "_reuse_tds_repair.txt",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_diag_reuse_tds_repair.py"
+      ],
+      "py_consumers": [
+        "_retest_dynamic_aligned.py"
+      ],
+      "md_consumers": [
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "product": "_reuse_tds_rootcause.txt",
+      "class": "在用",
+      "why": "被 4 个脚本读取",
+      "producers": [
+        "_diag_reuse_tds_rootcause.py"
+      ],
+      "py_consumers": [
+        "_fix_si_two_path.py",
+        "_fix_two_path_correction.py",
+        "_retest_dynamic_aligned.py",
+        "_verify_legacy_path.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "product": "_rstar_param_anchoring.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_rstar_param_anchoring.py"
+      ],
+      "py_consumers": [
+        "_sync_anchoring_en.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_solver_probe.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_probe_quality_solver.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_tech_grid_convergence.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_tech_grid_convergence.py"
+      ],
+      "py_consumers": [
+        "_analyze_tech_grid.py",
+        "_verify_tech_grid.py"
+      ],
+      "md_consumers": []
+    },
+    {
+      "product": "_tech_sensitivity.json",
+      "class": "在用",
+      "why": "被 4 个脚本读取",
+      "producers": [
+        "_tech_sensitivity.py",
+        "_tech_sensitivity2.py"
+      ],
+      "py_consumers": [
+        "_add_tech_sensitivity.py",
+        "_reg_tech_nums.py",
+        "_verify_tech_sensitivity.py",
+        "_wr_num_gate.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_tech_wue_benchmark.json",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "_tech_wue_benchmark.py",
+        "_tech_wue_benchmark2.py"
+      ],
+      "py_consumers": [
+        "_add_bowers_evidence.py",
+        "_reg_bowers_nums.py",
+        "_verify_bowers_benchmark.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "45_第十七轮工作总结.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "_twobytwo_attribution.txt",
+      "class": "在用",
+      "why": "被 4 个脚本读取",
+      "producers": [
+        "_diag_2x2_attribution.py"
+      ],
+      "py_consumers": [
+        "_fix_si_two_path.py",
+        "_fix_two_path_correction.py",
+        "_verify_legacy_path.py",
+        "_verify_two_path_attribution.py"
+      ],
+      "md_consumers": [
+        "05_wr_supplementary_en.md",
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "product": "_unused_columns_report.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_audit_unused_columns.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_v2_patch_report.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_apply_v2_patches.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_verify_abstract.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_verify_abstract_numbers.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_verify_policy_bridge.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_verify_policy_bridge.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_verify_real_city.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_verify_real_city.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_verify_regime_numbers.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_verify_regime_numbers.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_verify_v2_numbers.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_verify_v2_numbers.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "_wr_part2_intro_methods.md",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_wr_splice.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "capacity_scan_4000mw.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_recheck_noninformative.py",
+        "_test_noninformative_extended.py"
+      ],
+      "py_consumers": [
+        "_add_noninformative_range.py",
+        "_verify_noninformative_range.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "50_第二十二轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md",
+        "_num_lexicon.md"
+      ]
+    },
+    {
+      "product": "capacity_threshold_corrected.json",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "_verify_v2_numbers.py"
+      ],
+      "py_consumers": [
+        "_audit_key_products.py",
+        "figs\\figstyle_b0.py",
+        "figs\\make_fig5.py"
+      ],
+      "md_consumers": [
+        "00_数字核对表_阶段1.md",
+        "00_重构说明_主线切换与资产映射.md",
+        "01_论证结构与主张登记表.md",
+        "02_口径问题核查报告.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "05_图表规划与数据源映射.md",
+        "17_v1到v2修正清单.md",
+        "_backup_before_repair_20261018\\Nature级研究规划_R5.md",
+        "_backup_before_repair_20261018\\主论点与论证地图_R5.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "city_gradient_cawcc.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "figs\\figstyle_b0.py",
+        "figs\\make_fig6.py"
+      ],
+      "md_consumers": [
+        "00_重构说明_主线切换与资产映射.md",
+        "01_论证结构与主张登记表.md",
+        "02_口径问题核查报告.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "05_图表规划与数据源映射.md",
+        "06_待用户决策清单.md",
+        "07_自审清单.md",
+        "08_修复执行记录.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "constraint_boundaries_corrected.csv",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "_fix_figrefs.py",
+        "figs\\figstyle_b0.py",
+        "figs\\make_fig2.py"
+      ],
+      "md_consumers": [
+        "00_数字核对表_阶段1.md",
+        "00_重构说明_主线切换与资产映射.md",
+        "01_论证结构与主张登记表.md",
+        "02_口径问题核查报告.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "04_再生水专章_v1.md",
+        "05_图表规划与数据源映射.md",
+        "07_自审清单.md",
+        "08_修复执行记录.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "constraints_ha.json",
+      "class": "交付物",
+      "why": "被 2 个文档引用",
+      "producers": [
+        "_retest_dynamic_aligned.py",
+        "_retest_dynamic_aligned_min.py",
+        "_tech_grid_convergence.py",
+        "_tech_sensitivity.py",
+        "_tech_sensitivity2.py",
+        "_test_dynamic_path_main.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": [
+        "02_口径问题核查报告.md",
+        "10_文献对标与定位诊断.md"
+      ]
+    },
+    {
+      "product": "gate_check_result.json",
+      "class": "交付物",
+      "why": "被 2 个文档引用",
+      "producers": [
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": [
+        "08_修复执行记录.md",
+        "figs\\图件索引.md"
+      ]
+    },
+    {
+      "product": "intervention_cost_benefit.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "figs\\figstyle_b0.py",
+        "figs\\make_fig4.py"
+      ],
+      "md_consumers": [
+        "00_数字核对表_阶段1.md",
+        "00_重构说明_主线切换与资产映射.md",
+        "01_论证结构与主张登记表.md",
+        "02_口径问题核查报告.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "05_图表规划与数据源映射.md",
+        "06_待用户决策清单.md",
+        "07_自审清单.md",
+        "08_修复执行记录.md",
+        "_backup_before_repair_20261018\\主论点与论证地图_R5.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "ne1_r10a_signflip_cases.csv",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_backup_before_repair_20261018\\ne1_r10a_signflip.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "ne1_r10a_signflip_log.txt",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_backup_before_repair_20261018\\ne1_r10a_signflip.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "ne1_r10a_signflip_summary.json",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_backup_before_repair_20261018\\ne1_r10a_signflip.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "ne5d_direction_summary.json",
+      "class": "交付物",
+      "why": "被 5 个文档引用",
+      "producers": [
+        "_backup_before_repair_20261018\\ne5d_direction.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": [
+        "02_口径问题核查报告.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "04_再生水专章_v1.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "parameter_envelope_R7.csv",
+      "class": "在用",
+      "why": "被 5 个脚本读取",
+      "producers": [
+        "_rstar_param_anchoring.py"
+      ],
+      "py_consumers": [
+        "_fix_facts.py",
+        "_fix_rstar_anchoring.py",
+        "_insert_regime.py",
+        "_sync_anchoring_en.py",
+        "_verify_rstar_anchoring.py"
+      ],
+      "md_consumers": [
+        "01_论证结构与主张登记表.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "28_期刊可行性评估.md",
+        "34_第七轮工作总结.md",
+        "39_第十一轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "probe_rstar_mechanism.csv",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_verify_abstract_numbers.py",
+        "_verify_v2_numbers.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py",
+        "_insert_v2_sections.py",
+        "figs\\make_fig_r.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "12_rstar实验_结果与判读.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "probe_rstar_mechanism_meta.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_insert_v2_sections.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "project.json",
+      "class": "在用",
+      "why": "被 7 个脚本读取",
+      "producers": [
+        "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+        "_backup_before_repair_20261018\\ne5d_direction.py",
+        "_decompose_bias.py",
+        "_decompose_bias2.py",
+        "_diag_2x2_attribution.py",
+        "_diag_analytic_r09.py",
+        "_diag_bias_source.py",
+        "_diag_dynamic_inflow.py",
+        "_diag_quality_storage.py",
+        "_diag_reuse_quality.py",
+        "_diag_reuse_tds_aligned.py",
+        "_diag_reuse_tds_repair.py",
+        "_diag_reuse_tds_rootcause.py",
+        "_diag_wue.py",
+        "_diag_wue2.py",
+        "_find_quality_state_switch.py",
+        "_fine_r09.py",
+        "_probe_quality_solver.py",
+        "_quantify_reff_shortfall.py",
+        "_retest_dynamic_aligned.py",
+        "_retest_dynamic_aligned_min.py",
+        "_rstar_param_anchoring.py",
+        "_tech_grid_convergence.py",
+        "_tech_sensitivity.py",
+        "_tech_sensitivity2.py",
+        "_tech_wue_benchmark.py",
+        "_tech_wue_benchmark2.py",
+        "_test_dynamic_path_main.py",
+        "_test_noninformative_extended.py",
+        "_test_quality_state.py",
+        "_verify_coc_reff.py",
+        "_verify_dynamic_result.py",
+        "_verify_quality_state_result.py",
+        "_verify_v2_numbers.py",
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "_add_legacy_path_disclosure.py",
+        "_append_decisions.py",
+        "_fix_facts.py",
+        "_fix_species_again.py",
+        "_sync_anchoring_en.py",
+        "_verify_rstar_anchoring.py",
+        "figs\\make_fig_r.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "04_再生水专章_v1.md",
+        "05_wr_supplementary_en.md",
+        "06_待用户决策清单.md",
+        "08_修复执行记录.md",
+        "10_文献对标与定位诊断.md",
+        "27_待决策清单_整理版.md",
+        "34_第七轮工作总结.md",
+        "39_第十一轮工作总结.md",
+        "53_第二十五轮工作总结.md",
+        "54_第二十六轮工作总结_撤回上下界结论.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "reservoir_multiyear_ensemble.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "figs\\figstyle_b0.py",
+        "figs\\make_fig5.py"
+      ],
+      "md_consumers": [
+        "00_数字核对表_阶段1.md",
+        "00_重构说明_主线切换与资产映射.md",
+        "01_论证结构与主张登记表.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "05_图表规划与数据源映射.md",
+        "06_待用户决策清单.md",
+        "_backup_before_repair_20261018\\Nature级研究规划_R5.md",
+        "_backup_before_repair_20261018\\主论点与论证地图_R5.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "reuse_marginal_curve.csv",
+      "class": "在用",
+      "why": "被 4 个脚本读取",
+      "producers": [
+        "_audit_v2.py",
+        "_verify_v2_numbers.py"
+      ],
+      "py_consumers": [
+        "_append_decisions.py",
+        "_apply_v2_patches.py",
+        "_sync_levers50.py",
+        "figs\\figstyle_b0.py"
+      ],
+      "md_consumers": [
+        "00_数字核对表_阶段1.md",
+        "00_重构说明_主线切换与资产映射.md",
+        "01_论证结构与主张登记表.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "04_再生水专章_v1.md",
+        "06_待用户决策清单.md",
+        "17_v1到v2修正清单.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "reuse_marginal_curve_50mw.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_audit_v2.py"
+      ],
+      "py_consumers": [
+        "_fix_stale_gaps.py",
+        "_sync_levers50.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "37_第九轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "reuse_production_marginal_curve.csv",
+      "class": "在用",
+      "why": "被 5 个脚本读取",
+      "producers": [
+        "_verify_v2_numbers.py"
+      ],
+      "py_consumers": [
+        "_append_decisions.py",
+        "_apply_v2_patches.py",
+        "_sync_levers50.py",
+        "_verify_reuse_levers_50mw.py",
+        "figs\\figstyle_b0.py"
+      ],
+      "md_consumers": [
+        "00_数字核对表_阶段1.md",
+        "00_重构说明_主线切换与资产映射.md",
+        "01_论证结构与主张登记表.md",
+        "03_主稿_v1.md",
+        "03_主稿_v2.md",
+        "04_再生水专章_v1.md",
+        "06_待用户决策清单.md",
+        "07_自审清单.md",
+        "08_修复执行记录.md",
+        "17_v1到v2修正清单.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_backlash_decomposition.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_audit_v2.py",
+        "_final_check.py",
+        "_verify_abstract_numbers.py",
+        "_verify_v2_numbers.py",
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py",
+        "figs\\make_fig_r.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "13_rstar纯物理口径与双因素框架.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_boundaries_by_r.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py",
+        "_explain_co_gap.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "12_rstar实验_结果与判读.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_cawcc_by_r.csv",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "12_rstar实验_结果与判读.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_confound_control.csv",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "_audit_key_products.py",
+        "_audit_v2.py",
+        "_final_check.py",
+        "_verify_abstract_numbers.py",
+        "_verify_v2_numbers.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py",
+        "_insert_v2_sections.py",
+        "figs\\make_fig_r.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "13_rstar纯物理口径与双因素框架.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_grid_convergence_10mw.csv",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "rstar_grid_convergence_25mw.csv",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "rstar_grid_convergence_50mw.csv",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    },
+    {
+      "product": "rstar_grid_convergence_summary.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_add_grid_limit.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "25_网格收敛性检验.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_grid_convergence_table.csv",
+      "class": "在用",
+      "why": "被 7 个脚本读取",
+      "producers": [
+        "_audit_key_products.py",
+        "_final_check.py",
+        "_test_analytic_multigrid.py",
+        "_update_final_check3.py",
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "_add_co_grid_check.py",
+        "_add_grid_limit.py",
+        "_check_co_grid.py",
+        "_check_two_gaps.py",
+        "_test_analytic_forms.py",
+        "_verify_co_grid.py",
+        "figs\\make_fig_r5.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "25_网格收敛性检验.md",
+        "49_第二十一轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "rstar_physical_boundaries_by_r.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py",
+        "_explain_co_gap.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "13_rstar纯物理口径与双因素框架.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_physical_cawcc_by_r.csv",
+      "class": "在用",
+      "why": "被 12 个脚本读取",
+      "producers": [
+        "_audit_key_products.py",
+        "_audit_v2.py",
+        "_final_check.py",
+        "_quantify_reff_shortfall.py",
+        "_test_analytic_cawcc.py",
+        "_verify_abstract_numbers.py",
+        "_verify_policy_bridge.py",
+        "_verify_v2_numbers.py",
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "_add_co_gap.py",
+        "_add_grid_limit.py",
+        "_apply_v2_patches.py",
+        "_audit_582_table.py",
+        "_audit_co_joint.py",
+        "_audit_unused_columns.py",
+        "_check_two_gaps.py",
+        "_insert_v2_sections.py",
+        "_probe_analytic_cawcc.py",
+        "_verify_co_gap.py",
+        "figs\\make_fig_r.py",
+        "figs\\make_fig_r4.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "13_rstar纯物理口径与双因素框架.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "22_贡献定位_判据而非预测.md",
+        "23_第四轮工作总结.md",
+        "48_第二十轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "rstar_policy_bridge.csv",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_insert_policy_bridge.py",
+        "_update_final_check.py",
+        "_verify_abstract_numbers.py",
+        "_verify_policy_bridge.py",
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "figs\\make_fig_r4.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "23_第四轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_policy_bridge.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check.py"
+      ],
+      "py_consumers": [
+        "_insert_policy_bridge.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_regime_map.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_verify_regime_numbers.py",
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "_insert_regime.py",
+        "figs\\make_fig_r3.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_num_lexicon.md"
+      ]
+    },
+    {
+      "product": "rstar_regime_summary.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_verify_regime_numbers.py"
+      ],
+      "py_consumers": [
+        "_insert_regime.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_regime_validation.csv",
+      "class": "在用",
+      "why": "被 3 个脚本读取",
+      "producers": [
+        "_audit_key_products.py",
+        "_final_check.py",
+        "_verify_abstract_numbers.py",
+        "_verify_regime_numbers.py",
+        "figs\\_gate_check_b0.py"
+      ],
+      "py_consumers": [
+        "_insert_regime.py",
+        "_si_add_dualbase.py",
+        "figs\\make_fig_r3.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "05_wr_supplementary_en.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "37_第九轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_bak_05_si.md"
+      ]
+    },
+    {
+      "product": "rstar_regime_validation.json",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_insert_regime.py",
+        "_si_add_dualbase.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_scan_co.csv",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_scan_ha.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_verify_abstract_numbers.py",
+        "_verify_v2_numbers.py"
+      ],
+      "py_consumers": [
+        "_apply_v2_patches.py",
+        "_probe_analytic_cawcc.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "14_主稿v2增量章节_rstar机制.md",
+        "18_第二轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_sensitivity.csv",
+      "class": "在用",
+      "why": "被 2 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_verify_regime_numbers.py"
+      ],
+      "py_consumers": [
+        "_insert_regime.py",
+        "figs\\make_fig_r3.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "_bak_03_主稿_v2.md",
+        "_num_lexicon.md"
+      ]
+    },
+    {
+      "product": "rstar_sensitivity_grid.csv",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py"
+      ],
+      "py_consumers": [
+        "_insert_regime.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "rstar_sensitivity_summary.json",
+      "class": "在用",
+      "why": "被 1 个脚本读取",
+      "producers": [
+        "_final_check.py",
+        "_update_final_check.py",
+        "_verify_abstract_numbers.py",
+        "_verify_regime_numbers.py"
+      ],
+      "py_consumers": [
+        "_insert_regime.py"
+      ],
+      "md_consumers": [
+        "03_主稿_v2.md",
+        "19_r星分类学与敏感性.md",
+        "20_第三轮工作总结.md",
+        "_bak_03_主稿_v2.md"
+      ]
+    },
+    {
+      "product": "timeseries.csv",
+      "class": "自检型",
+      "why": "仅被其生产者自身读取（写→读→断言）",
+      "producers": [
+        "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+        "_backup_before_repair_20261018\\ne5d_direction.py",
+        "_decompose_bias.py",
+        "_decompose_bias2.py",
+        "_diag_2x2_attribution.py",
+        "_diag_analytic_r09.py",
+        "_diag_bias_source.py",
+        "_diag_dynamic_inflow.py",
+        "_diag_quality_storage.py",
+        "_diag_reuse_quality.py",
+        "_diag_reuse_tds_aligned.py",
+        "_diag_reuse_tds_repair.py",
+        "_diag_reuse_tds_rootcause.py",
+        "_diag_wue.py",
+        "_diag_wue2.py",
+        "_fine_r09.py",
+        "_probe_quality_solver.py",
+        "_quantify_reff_shortfall.py",
+        "_retest_dynamic_aligned.py",
+        "_retest_dynamic_aligned_min.py",
+        "_tech_grid_convergence.py",
+        "_tech_sensitivity.py",
+        "_tech_sensitivity2.py",
+        "_tech_wue_benchmark.py",
+        "_tech_wue_benchmark2.py",
+        "_test_dynamic_path_main.py",
+        "_test_noninformative_extended.py",
+        "_test_quality_state.py",
+        "_verify_coc_reff.py",
+        "_verify_dynamic_result.py",
+        "_verify_quality_state_result.py"
+      ],
+      "py_consumers": [],
+      "md_consumers": []
+    }
+  ],
+  "patchers": [
+    {
+      "script": "_add_analytic_boundary.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_bowers_evidence.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_co_gap.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_co_grid_check.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_coc_reff_disclosure.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_cp_precision.py",
+      "targets": [
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_grid_limit.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_add_grid_limits2.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_add_interactions_cn.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_add_interactions_en.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_kstar_cn.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_add_kstar_sensitivity.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_legacy_path_disclosure.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_limits_45_46.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_add_multispecies_limit.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_add_noninformative_range.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_tech_sensitivity.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_two_path_bracket.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_uwmp_quality_en.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_add_uwmp_quality_evidence.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_append_decisions.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_append_index_r5.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_apply_v2_patches.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_cite_figr3.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_cite_figr4.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_345.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_36_4.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_592b.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_abstract_kstar.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_abstract_share.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_alameda.py",
+      "targets": [
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_alameda2.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_caliber_labels.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_co_bottleneck.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_en_two_path.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": [
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "script": "_fix_facts.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_figrefs.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_num8.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_prov_en.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_prov_en2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_regime_claim.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_rstar_anchoring.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_s7_numbering.py",
+      "targets": [
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_sec76.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_share_prov2.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_share_prov3.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_share_provenance.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_si38.py",
+      "targets": [
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_si_s2.py",
+      "targets": [
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_si_two_path.py",
+      "targets": [
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": [
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "script": "_fix_species_again.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_stale_gaps.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_fix_tech_grid_claims.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_tech_ordering.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_fix_two_path_correction.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": [
+        "54_第二十六轮工作总结_撤回上下界结论.md"
+      ]
+    },
+    {
+      "script": "_insert_contribution_framing.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_insert_discussion.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_insert_framing_fix.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_insert_policy_bridge.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_insert_real_city.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_insert_regime.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_insert_v2_sections.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_patch_35_budget.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_patch_35_spec.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_patch_interaction_dual.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract10.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract3.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract4.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract5.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract6.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract7.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract8.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract9.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_abstract_final.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_after_kstar.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_anchoring.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_anchoring2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_anchoring3.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_anchoring4.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_buffer.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp3.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp4.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp5.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp6.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp7.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_cp8.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_final2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_final3.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_final4.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_final5.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_final6.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_final7.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_final_kstar.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_prec.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_prec2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_prec3.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_prov.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_prov2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_share.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_share2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_uwmp.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_uwmp2.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_uwmp3.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_trim_uwmp4.py",
+      "targets": [
+        "04_wr_manuscript_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_update_abstract_real.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_update_abstract_real2.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_update_final_check.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_update_final_check2.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_update_final_check3.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_update_tech_grid_gate.py",
+      "targets": [
+        "04_wr_manuscript_en.md",
+        "05_wr_supplementary_en.md"
+      ],
+      "referenced": []
+    },
+    {
+      "script": "_append_index_r3.py",
+      "targets": [],
+      "referenced": []
+    },
+    {
+      "script": "_append_index_r4.py",
+      "targets": [],
+      "referenced": []
+    }
+  ],
+  "probes": [
+    "_diag_2x2_attribution.py",
+    "_diag_32649.py",
+    "_diag_analytic_r09.py",
+    "_diag_bayq.py",
+    "_diag_bias_source.py",
+    "_diag_calwater.py",
+    "_diag_dynamic_inflow.py",
+    "_diag_gama.py",
+    "_diag_kstar_boundary.py",
+    "_diag_prov_fail.py",
+    "_diag_quality_storage.py",
+    "_diag_reuse_quality.py",
+    "_diag_reuse_tds_aligned.py",
+    "_diag_reuse_tds_repair.py",
+    "_diag_reuse_tds_rootcause.py",
+    "_diag_share_provenance.py",
+    "_diag_uwmp_numbers.py",
+    "_diag_wqcity.py",
+    "_diag_wue.py",
+    "_diag_wue2.py",
+    "_probe_analytic_cawcc.py",
+    "_probe_quality_solver.py",
+    "_test_analytic_cawcc.py",
+    "_test_analytic_forms.py",
+    "_test_analytic_multigrid.py",
+    "_test_dynamic_path_main.py",
+    "_test_noninformative_extended.py",
+    "_test_quality_state.py"
+  ],
+  "duplication": {
+    "可靠子集 converged_unique": {
+      "n_files": 0,
+      "n_hits": 0,
+      "top": []
+    },
+    "可靠子集 coc_floor_degenerate": {
+      "n_files": 0,
+      "n_hits": 0,
+      "top": []
+    },
+    "恒等式 dS_pot": {
+      "n_files": 2,
+      "n_hits": 19,
+      "top": [
+        [
+          "_backup_before_repair_20261018\\ne5d_direction.py",
+          11
+        ],
+        [
+          "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+          8
+        ]
+      ]
+    },
+    "CoC 计算 cycles_of_concentration": {
+      "n_files": 10,
+      "n_hits": 19,
+      "top": [
+        [
+          "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+          3
+        ],
+        [
+          "_probe_quality_solver.py",
+          3
+        ],
+        [
+          "_verify_v2_numbers.py",
+          3
+        ],
+        [
+          "_rstar_param_anchoring.py",
+          2
+        ],
+        [
+          "_test_quality_state.py",
+          2
+        ],
+        [
+          "_verify_rstar_anchoring.py",
+          2
+        ]
+      ]
+    },
+    "load_samples": {
+      "n_files": 1,
+      "n_hits": 1,
+      "top": [
+        [
+          "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+          1
+        ]
+      ]
+    },
+    "run_case/solve_dS/solve_city": {
+      "n_files": 1,
+      "n_hits": 1,
+      "top": [
+        [
+          "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+          1
+        ]
+      ]
+    },
+    "sha256": {
+      "n_files": 1,
+      "n_hits": 1,
+      "top": [
+        [
+          "_final_check.py",
+          1
+        ]
+      ]
+    },
+    "def load/load_json": {
+      "n_files": 1,
+      "n_hits": 1,
+      "top": [
+        [
+          "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+          1
+        ]
+      ]
+    },
+    "ROOT 路径常量": {
+      "n_files": 33,
+      "n_hits": 33,
+      "top": [
+        [
+          "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+          1
+        ],
+        [
+          "_decompose_bias.py",
+          1
+        ],
+        [
+          "_decompose_bias2.py",
+          1
+        ],
+        [
+          "_diag_2x2_attribution.py",
+          1
+        ],
+        [
+          "_diag_analytic_r09.py",
+          1
+        ],
+        [
+          "_diag_bias_source.py",
+          1
+        ]
+      ]
+    },
+    "R2 路径常量": {
+      "n_files": 59,
+      "n_hits": 59,
+      "top": [
+        [
+          "_audit_582_table.py",
+          1
+        ],
+        [
+          "_audit_co_joint.py",
+          1
+        ],
+        [
+          "_audit_key_products.py",
+          1
+        ],
+        [
+          "_audit_unused_columns.py",
+          1
+        ],
+        [
+          "_audit_v2.py",
+          1
+        ],
+        [
+          "_backup_before_repair_20261018\\ne1_r10a_signflip.py",
+          1
+        ]
+      ]
+    },
+    "reconfigure(encoding)": {
+      "n_files": 261,
+      "n_hits": 261,
+      "top": [
+        [
+          "_add_analytic_boundary.py",
+          1
+        ],
+        [
+          "_add_bowers_evidence.py",
+          1
+        ],
+        [
+          "_add_co_gap.py",
+          1
+        ],
+        [
+          "_add_co_grid_check.py",
+          1
+        ],
+        [
+          "_add_coc_reff_disclosure.py",
+          1
+        ],
+        [
+          "_add_cp_precision.py",
+          1
+        ]
+      ]
+    }
+  }
+}

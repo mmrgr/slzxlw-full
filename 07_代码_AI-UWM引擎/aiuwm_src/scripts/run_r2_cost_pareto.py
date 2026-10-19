@@ -274,11 +274,21 @@ def main() -> None:
         specs = json.loads(
             (R2 / "specs" / f"interventions_{domain}.json").read_text(encoding="utf-8")
         )
-        marginal = pd.read_csv(OUT / domain / "intervention_marginal.csv")
+        # 优先用 50 MW 网格的干预结果（与主结果同网格，消除跨网格口径分歧）。
+        # 旧的 100 MW 版本 (intervention_marginal.csv) 仅作回退，其基线为
+        # 1100/1400，与主结果的 1150/1450 不同网格，不能相减。
+        marginal_50 = OUT / domain / "intervention_marginal_50mw.csv"
+        if marginal_50.exists():
+            marginal = pd.read_csv(marginal_50)
+            grid_note = "50 MW grid (same as main result)"
+        else:
+            marginal = pd.read_csv(OUT / domain / "intervention_marginal.csv")
+            grid_note = "100 MW grid (legacy fallback)"
+        print(f"  [{domain}] intervention source: {marginal_50.name if marginal_50.exists() else 'intervention_marginal.csv'} — {grid_note}", flush=True)
         base_flows = run_baseline_flows(project, timeseries)
 
         # 居民未满足量：intervention_marginal.csv 里没有该列，必须在同一容量点实测。
-        # 口径统一取 baseline 的 CAWCC（HA=1100 / CO=1400 MW），否则不同容量下不可比。
+        # 口径统一取该 marginal 表的 baseline CAWCC，否则不同容量下不可比。
         from aiuwm.full_engine import FullAIUWMModel
 
         baseline_cawcc = float(

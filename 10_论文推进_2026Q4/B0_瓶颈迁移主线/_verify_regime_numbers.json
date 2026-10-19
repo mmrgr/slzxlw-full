@@ -1,0 +1,252 @@
+{
+  "passed": 41,
+  "total": 41,
+  "rows": [
+    {
+      "claim": "分类计数 情形I = 81",
+      "value": "81",
+      "source": "r2/rstar_regime_map.csv",
+      "ok": true
+    },
+    {
+      "claim": "分类计数 情形II = 156",
+      "value": "156",
+      "source": "r2/rstar_regime_map.csv",
+      "ok": true
+    },
+    {
+      "claim": "分类计数 情形III = 63",
+      "value": "63",
+      "source": "r2/rstar_regime_map.csv",
+      "ok": true
+    },
+    {
+      "claim": "分类计数 情形IV = 20",
+      "value": "20",
+      "source": "r2/rstar_regime_map.csv",
+      "ok": true
+    },
+    {
+      "claim": "分类网格总数 = 320",
+      "value": "320",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "分类占比 情形I ≈ 25.3%",
+      "value": "25.3%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "分类占比 情形II ≈ 48.8%",
+      "value": "48.8%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "分类占比 情形III ≈ 19.7%",
+      "value": "19.7%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "分类占比 情形IV ≈ 6.2%",
+      "value": "6.2%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 II r* min = 0.0196",
+      "value": "0.0196",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 II r* median = 0.3298",
+      "value": "0.3298",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 II r* max = 0.9167",
+      "value": "0.9167",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "弹性 L = +1.6923",
+      "value": "+1.6923",
+      "source": "r2/rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "弹性 coc_design = -1.6921",
+      "value": "-1.6921",
+      "source": "r2/rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "弹性 c_reclaimed = -1.3828",
+      "value": "-1.3828",
+      "source": "r2/rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "弹性 c_potable = -0.3093",
+      "value": "-0.3093",
+      "source": "r2/rstar_sensitivity_summary.json",
+      "ok": true
+    },
+    {
+      "claim": "单参数扫描 L r* 范围",
+      "value": "[0.0426, 0.8936]",
+      "source": "r2/rstar_sensitivity.csv",
+      "ok": true
+    },
+    {
+      "claim": "单参数扫描 coc_design r* 范围",
+      "value": "[0.0851, 1.9574]",
+      "source": "r2/rstar_sensitivity.csv",
+      "ok": true
+    },
+    {
+      "claim": "单参数扫描 c_potable r* 范围",
+      "value": "[-10.2000, 0.6500]",
+      "source": "r2/rstar_sensitivity.csv",
+      "ok": true
+    },
+    {
+      "claim": "单参数扫描 c_reclaimed r* 范围",
+      "value": "[0.1970, 2.1667]",
+      "source": "r2/rstar_sensitivity.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 II 在 r=0 的 CoC = 5.0",
+      "value": "5.0000",
+      "source": "r2/rstar_regime_validation.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 I 在 r=0 的 CoC = 12.2222",
+      "value": "12.2222",
+      "source": "r2/rstar_regime_validation.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 III 在 r=0 的 CoC = 2.5",
+      "value": "2.5000",
+      "source": "r2/rstar_regime_validation.csv",
+      "ok": true
+    },
+    {
+      "claim": "情形 I r=0→0.8 取水增幅 = +20.74%",
+      "value": "+20.74%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 II r=0→0.8 取水增幅 = +6.48%",
+      "value": "+6.48%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 III r=0→0.8 取水增幅 = +0.00%",
+      "value": "+0.00%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 I 在 r=0.2 即 +4.43%（任何替代都有代价）",
+      "value": "+4.43%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 II 的平坦点数（CoC==设计值）= 3/5",
+      "value": "3/5",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 III 的平坦点数（CoC==设计值）= 5/5",
+      "value": "5/5",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 I 的平坦点数（CoC==设计值）= 0/5",
+      "value": "0/5",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 I 与 II 在 r=0.8 逐位重合",
+      "value": "23840.93 / 23840.93",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "情形 III 在 r=0.8 不重合（29,241.45 ML）",
+      "value": "29241.45",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "主稿已修正「三者一致」的错误表述",
+      "value": "I≡II 且 III 不同",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「四情形分类学」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「5.7.3c」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「情形 IV」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「C* ≡ L/CoC_design」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「弹性」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「阈值型响应是否存在」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「32. 」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    },
+    {
+      "claim": "主稿含「34. **分类边界」",
+      "value": "OK",
+      "source": "03_主稿_v2.md",
+      "ok": true
+    }
+  ]
+}

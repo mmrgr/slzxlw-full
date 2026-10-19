@@ -1,0 +1,93 @@
+=== Why Water Demand Is No Longer Enough.pdf ===
+PAGES: 4
+
+--- HEAD ---
+Why Water Demand Is No Longer Enough: Rethinking Sustainability
+in AI Data Centers
+Navid B. Saleh*
+Cite This: Environ. Sci. Technol. 2026, 60, 18383−18386
+Read Online
+ACCESS
+Metrics & More
+Article Recommendations
+*
+sı
+Supporting Information
+KEYWORDS: artificial intelligence, hydrologic systems, water demand, heat
+W
+ater has shaped the trajectory of human civilization and
+technological progress for millennia. As Giulio Boccaletti
+argues, the relationship between societies and water has often
+determined the course of civilization.1 The rapid advancement
+of artificial intelligence (AI), particularly its scalability, follows a
+similar trajectory. Although AI is portrayed as digital, and often
+virtual, infrastructure, its operation depends on physical
+thermodynamic systems that must dissipate heat generated
+during computation. Consequently, AI is becoming closely
+coupled to hydrologic systems. The global expansion of AI both
+depends on and influences water and the environment, but its
+needs and impacts remain local. As a result, water demand has
+emerged as an important consideration in AI infrastructure
+planning and development.2,3 However, water demand alone
+may no longer be sufficient for evaluating the sustainability of AI
+infrastructure. As cooling systems increasingly rely on
+recirculation and reuse, the challenge extends beyond water
+quantity to water compatibility.
+The water demand of AI infrastructure originates from one
+issue: heat. AI data centers operate continuously and at high
+computational intensity, requiring uninterrupted cooling to
+maintain stable operation. Recent estimates suggest that U.S.
+data centers collectively consume approximately 449 million
+gallons of water per day,2,3 while future AI expansion may
+require an additional 697−1451 million gallons per day by
+2030.3 Such demand approaches the average daily municipal
+water supply of New York City. The underlying challenge,
+however, is energy rather than water. Water enters the discussion
+because heat generated during computation must ultimately be
+dissipated. Consequently, data center operators are pursuing
+direct-to-chip cooling, immersion cooling, closed-loop systems,
+and dry-cooling technologies to reduce water consumption. For
+example, Microsoft has announced next-generation designs that
+operate without evaporative water loss, while operators such as
+Published: June 25, 2026
+Viewpoint
+pubs.acs.org/est
+© 2026 American Chemical Society
+18383
+https://doi.org/10.1021/acs.est.6c08380
+Environ. Sci. Technol. 2026, 60, 18383−18386
+Downloaded from pubs.​acs.​org/​esthag/​article-pdf/​60/​26/​18383/​65244479/​acs.​est.​6c08380.​pdf by guest on 18 October 2026
+
+Novva Data Centers have adopted water-free cooling
+approaches. These developments may substantially reduce
+future water demand. However, reducing water demand does
+not eliminate challenges associated with reuse water, treatment
+needs, cooling fluids, and long-term system operation. Water
+demand remains an important metric. It does not, however,
+capture all sustainability challenges associated with AI cooling
+systems.
+Individual facilities can already consume several million
+gallons of water per day, with Google reporting annual
+withdrawals approaching 1.4 billion gallons at a single data
+center campus in Council Bluffs, Iowa.4 Although access to these
+services is global, the infrastructure supporting them is highly
+localized, requiring in-house cooling and water-management
+systems (Figure 1). As a result, data center operators are
+increasingly supplementing freshwater demand with reclaimed
+wastewater to reduce withdrawals. Circular water systems, either
+developed from scratch or retrofitted to facilitate water reuse, are
+emerging as one of the key innovations in AI data center
+operation and maintenance.2,4,5 The continuous operation of AI
+infrastructure is unlikely to change. Thus, cooling water
+management broadly has two pathways. First, computational
+density may be reduced or better managed to lower cooling
+demand; such efforts are already evident through the Advanced
+Research Projects Agency-Energy (ARPA-E) funded COOL-
+ERCHIPS program and related efforts focused on thermal
+management of high-density c
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+

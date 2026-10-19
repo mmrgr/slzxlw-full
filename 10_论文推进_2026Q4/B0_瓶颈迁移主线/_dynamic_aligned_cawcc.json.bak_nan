@@ -1,0 +1,48 @@
+{
+  "legacy_aligned": [
+    {
+      "r": 0.0,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "coc": NaN,
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.7,
+      "cawcc": 1150.0,
+      "limiting": "max_source_abstraction_ratio",
+      "coc": NaN,
+      "total_withdrawal_ml": 33387.0
+    },
+    {
+      "r": 0.9,
+      "cawcc": 1100.0,
+      "limiting": "max_source_abstraction_ratio",
+      "coc": NaN,
+      "total_withdrawal_ml": 33667.1
+    }
+  ],
+  "dynamic_aligned": [
+    {
+      "r": 0.0,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "coc": NaN,
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.7,
+      "cawcc": 1150.0,
+      "limiting": "max_source_abstraction_ratio",
+      "coc": NaN,
+      "total_withdrawal_ml": 34133.2
+    },
+    {
+      "r": 0.9,
+      "cawcc": 1150.0,
+      "limiting": "max_source_abstraction_ratio",
+      "coc": NaN,
+      "total_withdrawal_ml": 34425.9
+    }
+  ]
+}

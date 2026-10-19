@@ -1,0 +1,321 @@
+﻿L,coc_design,c_potable,c_reclaimed,regime,r_star,note,L_over_coc,cond_I,cond_III,cond_IV,condx_I,condx_III,condx_IV,condx_II
+1000.0,2.0,100.0,400.0,III,1.3333333333333333,水质永不紧：100% 再生水仍不超限,500.0,False,True,False,False,True,False,False
+1000.0,2.0,100.0,650.0,II,0.7272727272727273,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,100.0,900.0,II,0.5,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,100.0,1200.0,II,0.36363636363636365,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,180.0,400.0,III,1.4545454545454546,水质永不紧：100% 再生水仍不超限,500.0,False,True,False,False,True,False,False
+1000.0,2.0,180.0,650.0,II,0.6808510638297872,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,180.0,900.0,II,0.4444444444444444,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,180.0,1200.0,II,0.3137254901960784,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,300.0,400.0,III,2.0,水质永不紧：100% 再生水仍不超限,500.0,False,True,False,False,True,False,False
+1000.0,2.0,300.0,650.0,II,0.5714285714285714,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,300.0,900.0,II,0.3333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,300.0,1200.0,II,0.2222222222222222,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,500.0,False,True,True,False,False,True,False
+1000.0,2.0,400.0,650.0,II,0.4,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,400.0,900.0,II,0.2,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,2.0,400.0,1200.0,II,0.125,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,500.0,False,False,False,False,False,False,True
+1000.0,3.0,100.0,400.0,II,0.7777777777777777,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,100.0,650.0,II,0.4242424242424242,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,100.0,900.0,II,0.29166666666666663,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,100.0,1200.0,II,0.2121212121212121,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,180.0,400.0,II,0.6969696969696969,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,180.0,650.0,II,0.326241134751773,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,180.0,900.0,II,0.21296296296296294,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,180.0,1200.0,II,0.1503267973856209,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,300.0,400.0,II,0.33333333333333315,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,300.0,650.0,II,0.09523809523809518,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,300.0,900.0,II,0.055555555555555525,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,300.0,1200.0,II,0.037037037037037014,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,333.3333333333333,False,False,False,False,False,False,True
+1000.0,3.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,333.3333333333333,True,False,True,False,False,True,False
+1000.0,3.0,400.0,650.0,I,-0.2666666666666667,水质恒紧：r=0 时已触及浓缩倍数上限,333.3333333333333,True,False,False,True,False,False,False
+1000.0,3.0,400.0,900.0,I,-0.13333333333333336,水质恒紧：r=0 时已触及浓缩倍数上限,333.3333333333333,True,False,False,True,False,False,False
+1000.0,3.0,400.0,1200.0,I,-0.08333333333333336,水质恒紧：r=0 时已触及浓缩倍数上限,333.3333333333333,True,False,False,True,False,False,False
+1000.0,5.0,100.0,400.0,II,0.3333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,100.0,650.0,II,0.18181818181818182,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,100.0,900.0,II,0.125,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,100.0,1200.0,II,0.09090909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,180.0,400.0,II,0.09090909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,180.0,650.0,II,0.0425531914893617,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,180.0,900.0,II,0.027777777777777776,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,180.0,1200.0,II,0.0196078431372549,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1000.0,5.0,300.0,400.0,I,-1.0,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1000.0,5.0,300.0,650.0,I,-0.2857142857142857,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1000.0,5.0,300.0,900.0,I,-0.16666666666666666,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1000.0,5.0,300.0,1200.0,I,-0.1111111111111111,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1000.0,5.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,200.0,True,False,True,False,False,True,False
+1000.0,5.0,400.0,650.0,I,-0.8,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1000.0,5.0,400.0,900.0,I,-0.4,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1000.0,5.0,400.0,1200.0,I,-0.25,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1000.0,8.0,100.0,400.0,II,0.08333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,125.0,False,False,False,False,False,False,True
+1000.0,8.0,100.0,650.0,II,0.045454545454545456,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,125.0,False,False,False,False,False,False,True
+1000.0,8.0,100.0,900.0,II,0.03125,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,125.0,False,False,False,False,False,False,True
+1000.0,8.0,100.0,1200.0,II,0.022727272727272728,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,125.0,False,False,False,False,False,False,True
+1000.0,8.0,180.0,400.0,I,-0.25,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,180.0,650.0,I,-0.11702127659574468,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,180.0,900.0,I,-0.0763888888888889,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,180.0,1200.0,I,-0.05392156862745098,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,300.0,400.0,I,-1.75,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,300.0,650.0,I,-0.5,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,300.0,900.0,I,-0.2916666666666667,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,300.0,1200.0,I,-0.19444444444444445,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,125.0,True,False,True,False,False,True,False
+1000.0,8.0,400.0,650.0,I,-1.1,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,400.0,900.0,I,-0.55,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,8.0,400.0,1200.0,I,-0.34375,水质恒紧：r=0 时已触及浓缩倍数上限,125.0,True,False,False,True,False,False,False
+1000.0,10.0,100.0,400.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,100.0,650.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,100.0,900.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,100.0,1200.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,180.0,400.0,I,-0.36363636363636365,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,180.0,650.0,I,-0.1702127659574468,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,180.0,900.0,I,-0.1111111111111111,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,180.0,1200.0,I,-0.0784313725490196,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,300.0,400.0,I,-2.0,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,300.0,650.0,I,-0.5714285714285714,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,300.0,900.0,I,-0.3333333333333333,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,300.0,1200.0,I,-0.2222222222222222,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,100.0,True,False,True,False,False,True,False
+1000.0,10.0,400.0,650.0,I,-1.2,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,400.0,900.0,I,-0.6,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1000.0,10.0,400.0,1200.0,I,-0.375,水质恒紧：r=0 时已触及浓缩倍数上限,100.0,True,False,False,True,False,False,False
+1600.0,2.0,100.0,400.0,III,2.3333333333333335,水质永不紧：100% 再生水仍不超限,800.0,False,True,False,False,True,False,False
+1600.0,2.0,100.0,650.0,III,1.2727272727272727,水质永不紧：100% 再生水仍不超限,800.0,False,True,False,False,True,False,False
+1600.0,2.0,100.0,900.0,II,0.875,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,2.0,100.0,1200.0,II,0.6363636363636364,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,2.0,180.0,400.0,III,2.8181818181818183,水质永不紧：100% 再生水仍不超限,800.0,False,True,False,False,True,False,False
+1600.0,2.0,180.0,650.0,III,1.3191489361702127,水质永不紧：100% 再生水仍不超限,800.0,False,True,False,False,True,False,False
+1600.0,2.0,180.0,900.0,II,0.8611111111111112,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,2.0,180.0,1200.0,II,0.6078431372549019,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,2.0,300.0,400.0,III,5.0,水质永不紧：100% 再生水仍不超限,800.0,False,True,False,False,True,False,False
+1600.0,2.0,300.0,650.0,III,1.4285714285714286,水质永不紧：100% 再生水仍不超限,800.0,False,True,False,False,True,False,False
+1600.0,2.0,300.0,900.0,II,0.8333333333333334,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,2.0,300.0,1200.0,II,0.5555555555555556,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,2.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,800.0,False,True,True,False,False,True,False
+1600.0,2.0,400.0,650.0,III,1.6,水质永不紧：100% 再生水仍不超限,800.0,False,True,False,False,True,False,False
+1600.0,2.0,400.0,900.0,II,0.8,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,2.0,400.0,1200.0,II,0.5,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,800.0,False,False,False,False,False,False,True
+1600.0,3.0,100.0,400.0,III,1.4444444444444446,水质永不紧：100% 再生水仍不超限,533.3333333333334,False,True,False,False,True,False,False
+1600.0,3.0,100.0,650.0,II,0.787878787878788,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,100.0,900.0,II,0.5416666666666667,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,100.0,1200.0,II,0.393939393939394,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,180.0,400.0,III,1.6060606060606062,水质永不紧：100% 再生水仍不超限,533.3333333333334,False,True,False,False,True,False,False
+1600.0,3.0,180.0,650.0,II,0.7517730496453902,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,180.0,900.0,II,0.4907407407407408,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,180.0,1200.0,II,0.34640522875817,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,300.0,400.0,III,2.333333333333334,水质永不紧：100% 再生水仍不超限,533.3333333333334,False,True,False,False,True,False,False
+1600.0,3.0,300.0,650.0,II,0.6666666666666667,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,300.0,900.0,II,0.38888888888888895,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,300.0,1200.0,II,0.2592592592592593,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,533.3333333333334,False,True,True,False,False,True,False
+1600.0,3.0,400.0,650.0,II,0.5333333333333334,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,400.0,900.0,II,0.2666666666666667,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,3.0,400.0,1200.0,II,0.1666666666666667,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,533.3333333333334,False,False,False,False,False,False,True
+1600.0,5.0,100.0,400.0,II,0.7333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,100.0,650.0,II,0.4,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,100.0,900.0,II,0.275,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,100.0,1200.0,II,0.2,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,180.0,400.0,II,0.6363636363636364,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,180.0,650.0,II,0.2978723404255319,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,180.0,900.0,II,0.19444444444444445,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,180.0,1200.0,II,0.13725490196078433,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,300.0,400.0,II,0.2,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,300.0,650.0,II,0.05714285714285714,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,300.0,900.0,II,0.03333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,300.0,1200.0,II,0.022222222222222223,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,320.0,False,False,False,False,False,False,True
+1600.0,5.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,320.0,True,False,True,False,False,True,False
+1600.0,5.0,400.0,650.0,I,-0.32,水质恒紧：r=0 时已触及浓缩倍数上限,320.0,True,False,False,True,False,False,False
+1600.0,5.0,400.0,900.0,I,-0.16,水质恒紧：r=0 时已触及浓缩倍数上限,320.0,True,False,False,True,False,False,False
+1600.0,5.0,400.0,1200.0,I,-0.1,水质恒紧：r=0 时已触及浓缩倍数上限,320.0,True,False,False,True,False,False,False
+1600.0,8.0,100.0,400.0,II,0.3333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,100.0,650.0,II,0.18181818181818182,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,100.0,900.0,II,0.125,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,100.0,1200.0,II,0.09090909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,180.0,400.0,II,0.09090909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,180.0,650.0,II,0.0425531914893617,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,180.0,900.0,II,0.027777777777777776,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,180.0,1200.0,II,0.0196078431372549,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,200.0,False,False,False,False,False,False,True
+1600.0,8.0,300.0,400.0,I,-1.0,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1600.0,8.0,300.0,650.0,I,-0.2857142857142857,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1600.0,8.0,300.0,900.0,I,-0.16666666666666666,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1600.0,8.0,300.0,1200.0,I,-0.1111111111111111,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1600.0,8.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,200.0,True,False,True,False,False,True,False
+1600.0,8.0,400.0,650.0,I,-0.8,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1600.0,8.0,400.0,900.0,I,-0.4,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1600.0,8.0,400.0,1200.0,I,-0.25,水质恒紧：r=0 时已触及浓缩倍数上限,200.0,True,False,False,True,False,False,False
+1600.0,10.0,100.0,400.0,II,0.2,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,160.0,False,False,False,False,False,False,True
+1600.0,10.0,100.0,650.0,II,0.10909090909090909,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,160.0,False,False,False,False,False,False,True
+1600.0,10.0,100.0,900.0,II,0.075,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,160.0,False,False,False,False,False,False,True
+1600.0,10.0,100.0,1200.0,II,0.05454545454545454,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,160.0,False,False,False,False,False,False,True
+1600.0,10.0,180.0,400.0,I,-0.09090909090909091,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,180.0,650.0,I,-0.0425531914893617,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,180.0,900.0,I,-0.027777777777777776,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,180.0,1200.0,I,-0.0196078431372549,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,300.0,400.0,I,-1.4,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,300.0,650.0,I,-0.4,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,300.0,900.0,I,-0.23333333333333334,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,300.0,1200.0,I,-0.15555555555555556,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,160.0,True,False,True,False,False,True,False
+1600.0,10.0,400.0,650.0,I,-0.96,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,400.0,900.0,I,-0.48,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+1600.0,10.0,400.0,1200.0,I,-0.3,水质恒紧：r=0 时已触及浓缩倍数上限,160.0,True,False,False,True,False,False,False
+2200.0,2.0,100.0,400.0,III,3.3333333333333335,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,100.0,650.0,III,1.8181818181818181,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,100.0,900.0,III,1.25,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,100.0,1200.0,II,0.9090909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1100.0,False,False,False,False,False,False,True
+2200.0,2.0,180.0,400.0,III,4.181818181818182,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,180.0,650.0,III,1.9574468085106382,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,180.0,900.0,III,1.2777777777777777,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,180.0,1200.0,II,0.9019607843137255,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1100.0,False,False,False,False,False,False,True
+2200.0,2.0,300.0,400.0,III,8.0,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,300.0,650.0,III,2.2857142857142856,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,300.0,900.0,III,1.3333333333333333,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,300.0,1200.0,II,0.8888888888888888,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1100.0,False,False,False,False,False,False,True
+2200.0,2.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,1100.0,False,True,True,False,False,True,False
+2200.0,2.0,400.0,650.0,III,2.8,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,400.0,900.0,III,1.4,水质永不紧：100% 再生水仍不超限,1100.0,False,True,False,False,True,False,False
+2200.0,2.0,400.0,1200.0,II,0.875,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1100.0,False,False,False,False,False,False,True
+2200.0,3.0,100.0,400.0,III,2.111111111111111,水质永不紧：100% 再生水仍不超限,733.3333333333334,False,True,False,False,True,False,False
+2200.0,3.0,100.0,650.0,III,1.1515151515151516,水质永不紧：100% 再生水仍不超限,733.3333333333334,False,True,False,False,True,False,False
+2200.0,3.0,100.0,900.0,II,0.7916666666666667,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,3.0,100.0,1200.0,II,0.5757575757575758,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,3.0,180.0,400.0,III,2.515151515151515,水质永不紧：100% 再生水仍不超限,733.3333333333334,False,True,False,False,True,False,False
+2200.0,3.0,180.0,650.0,III,1.1773049645390072,水质永不紧：100% 再生水仍不超限,733.3333333333334,False,True,False,False,True,False,False
+2200.0,3.0,180.0,900.0,II,0.7685185185185186,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,3.0,180.0,1200.0,II,0.542483660130719,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,3.0,300.0,400.0,III,4.333333333333334,水质永不紧：100% 再生水仍不超限,733.3333333333334,False,True,False,False,True,False,False
+2200.0,3.0,300.0,650.0,III,1.2380952380952381,水质永不紧：100% 再生水仍不超限,733.3333333333334,False,True,False,False,True,False,False
+2200.0,3.0,300.0,900.0,II,0.7222222222222223,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,3.0,300.0,1200.0,II,0.4814814814814815,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,3.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,733.3333333333334,False,True,True,False,False,True,False
+2200.0,3.0,400.0,650.0,III,1.3333333333333335,水质永不紧：100% 再生水仍不超限,733.3333333333334,False,True,False,False,True,False,False
+2200.0,3.0,400.0,900.0,II,0.6666666666666667,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,3.0,400.0,1200.0,II,0.41666666666666674,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,733.3333333333334,False,False,False,False,False,False,True
+2200.0,5.0,100.0,400.0,III,1.1333333333333333,水质永不紧：100% 再生水仍不超限,440.0,False,True,False,False,True,False,False
+2200.0,5.0,100.0,650.0,II,0.6181818181818182,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,100.0,900.0,II,0.425,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,100.0,1200.0,II,0.3090909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,180.0,400.0,III,1.1818181818181819,水质永不紧：100% 再生水仍不超限,440.0,False,True,False,False,True,False,False
+2200.0,5.0,180.0,650.0,II,0.5531914893617021,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,180.0,900.0,II,0.3611111111111111,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,180.0,1200.0,II,0.2549019607843137,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,300.0,400.0,III,1.4,水质永不紧：100% 再生水仍不超限,440.0,False,True,False,False,True,False,False
+2200.0,5.0,300.0,650.0,II,0.4,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,300.0,900.0,II,0.23333333333333334,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,300.0,1200.0,II,0.15555555555555556,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,440.0,False,True,True,False,False,True,False
+2200.0,5.0,400.0,650.0,II,0.16,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,400.0,900.0,II,0.08,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,5.0,400.0,1200.0,II,0.05,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,440.0,False,False,False,False,False,False,True
+2200.0,8.0,100.0,400.0,II,0.5833333333333334,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,100.0,650.0,II,0.3181818181818182,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,100.0,900.0,II,0.21875,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,100.0,1200.0,II,0.1590909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,180.0,400.0,II,0.4318181818181818,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,180.0,650.0,II,0.20212765957446807,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,180.0,900.0,II,0.13194444444444445,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,180.0,1200.0,II,0.09313725490196079,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,275.0,False,False,False,False,False,False,True
+2200.0,8.0,300.0,400.0,I,-0.25,水质恒紧：r=0 时已触及浓缩倍数上限,275.0,True,False,False,True,False,False,False
+2200.0,8.0,300.0,650.0,I,-0.07142857142857142,水质恒紧：r=0 时已触及浓缩倍数上限,275.0,True,False,False,True,False,False,False
+2200.0,8.0,300.0,900.0,I,-0.041666666666666664,水质恒紧：r=0 时已触及浓缩倍数上限,275.0,True,False,False,True,False,False,False
+2200.0,8.0,300.0,1200.0,I,-0.027777777777777776,水质恒紧：r=0 时已触及浓缩倍数上限,275.0,True,False,False,True,False,False,False
+2200.0,8.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,275.0,True,False,True,False,False,True,False
+2200.0,8.0,400.0,650.0,I,-0.5,水质恒紧：r=0 时已触及浓缩倍数上限,275.0,True,False,False,True,False,False,False
+2200.0,8.0,400.0,900.0,I,-0.25,水质恒紧：r=0 时已触及浓缩倍数上限,275.0,True,False,False,True,False,False,False
+2200.0,8.0,400.0,1200.0,I,-0.15625,水质恒紧：r=0 时已触及浓缩倍数上限,275.0,True,False,False,True,False,False,False
+2200.0,10.0,100.0,400.0,II,0.4,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,100.0,650.0,II,0.21818181818181817,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,100.0,900.0,II,0.15,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,100.0,1200.0,II,0.10909090909090909,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,180.0,400.0,II,0.18181818181818182,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,180.0,650.0,II,0.0851063829787234,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,180.0,900.0,II,0.05555555555555555,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,180.0,1200.0,II,0.0392156862745098,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,220.0,False,False,False,False,False,False,True
+2200.0,10.0,300.0,400.0,I,-0.8,水质恒紧：r=0 时已触及浓缩倍数上限,220.0,True,False,False,True,False,False,False
+2200.0,10.0,300.0,650.0,I,-0.22857142857142856,水质恒紧：r=0 时已触及浓缩倍数上限,220.0,True,False,False,True,False,False,False
+2200.0,10.0,300.0,900.0,I,-0.13333333333333333,水质恒紧：r=0 时已触及浓缩倍数上限,220.0,True,False,False,True,False,False,False
+2200.0,10.0,300.0,1200.0,I,-0.08888888888888889,水质恒紧：r=0 时已触及浓缩倍数上限,220.0,True,False,False,True,False,False,False
+2200.0,10.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,220.0,True,False,True,False,False,True,False
+2200.0,10.0,400.0,650.0,I,-0.72,水质恒紧：r=0 时已触及浓缩倍数上限,220.0,True,False,False,True,False,False,False
+2200.0,10.0,400.0,900.0,I,-0.36,水质恒紧：r=0 时已触及浓缩倍数上限,220.0,True,False,False,True,False,False,False
+2200.0,10.0,400.0,1200.0,I,-0.225,水质恒紧：r=0 时已触及浓缩倍数上限,220.0,True,False,False,True,False,False,False
+3000.0,2.0,100.0,400.0,III,4.666666666666667,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,100.0,650.0,III,2.5454545454545454,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,100.0,900.0,III,1.75,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,100.0,1200.0,III,1.2727272727272727,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,180.0,400.0,III,6.0,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,180.0,650.0,III,2.8085106382978724,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,180.0,900.0,III,1.8333333333333333,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,180.0,1200.0,III,1.2941176470588236,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,300.0,400.0,III,12.0,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,300.0,650.0,III,3.4285714285714284,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,300.0,900.0,III,2.0,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,300.0,1200.0,III,1.3333333333333333,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,1500.0,False,True,True,False,False,True,False
+3000.0,2.0,400.0,650.0,III,4.4,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,400.0,900.0,III,2.2,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,2.0,400.0,1200.0,III,1.375,水质永不紧：100% 再生水仍不超限,1500.0,False,True,False,False,True,False,False
+3000.0,3.0,100.0,400.0,III,3.0,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,100.0,650.0,III,1.6363636363636365,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,100.0,900.0,III,1.125,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,100.0,1200.0,II,0.8181818181818182,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1000.0,False,False,False,False,False,False,True
+3000.0,3.0,180.0,400.0,III,3.727272727272727,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,180.0,650.0,III,1.7446808510638299,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,180.0,900.0,III,1.1388888888888888,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,180.0,1200.0,II,0.803921568627451,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1000.0,False,False,False,False,False,False,True
+3000.0,3.0,300.0,400.0,III,7.0,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,300.0,650.0,III,2.0,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,300.0,900.0,III,1.1666666666666667,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,300.0,1200.0,II,0.7777777777777778,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1000.0,False,False,False,False,False,False,True
+3000.0,3.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,1000.0,False,True,True,False,False,True,False
+3000.0,3.0,400.0,650.0,III,2.4,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,400.0,900.0,III,1.2,水质永不紧：100% 再生水仍不超限,1000.0,False,True,False,False,True,False,False
+3000.0,3.0,400.0,1200.0,II,0.75,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,1000.0,False,False,False,False,False,False,True
+3000.0,5.0,100.0,400.0,III,1.6666666666666667,水质永不紧：100% 再生水仍不超限,600.0,False,True,False,False,True,False,False
+3000.0,5.0,100.0,650.0,II,0.9090909090909091,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,100.0,900.0,II,0.625,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,100.0,1200.0,II,0.45454545454545453,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,180.0,400.0,III,1.9090909090909092,水质永不紧：100% 再生水仍不超限,600.0,False,True,False,False,True,False,False
+3000.0,5.0,180.0,650.0,II,0.8936170212765957,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,180.0,900.0,II,0.5833333333333334,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,180.0,1200.0,II,0.4117647058823529,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,300.0,400.0,III,3.0,水质永不紧：100% 再生水仍不超限,600.0,False,True,False,False,True,False,False
+3000.0,5.0,300.0,650.0,II,0.8571428571428571,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,300.0,900.0,II,0.5,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,300.0,1200.0,II,0.3333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,600.0,False,True,True,False,False,True,False
+3000.0,5.0,400.0,650.0,II,0.8,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,400.0,900.0,II,0.4,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,5.0,400.0,1200.0,II,0.25,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,600.0,False,False,False,False,False,False,True
+3000.0,8.0,100.0,400.0,II,0.9166666666666666,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,100.0,650.0,II,0.5,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,100.0,900.0,II,0.34375,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,100.0,1200.0,II,0.25,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,180.0,400.0,II,0.8863636363636364,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,180.0,650.0,II,0.4148936170212766,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,180.0,900.0,II,0.2708333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,180.0,1200.0,II,0.19117647058823528,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,300.0,400.0,II,0.75,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,300.0,650.0,II,0.21428571428571427,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,300.0,900.0,II,0.125,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,300.0,1200.0,II,0.08333333333333333,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,375.0,False,False,False,False,False,False,True
+3000.0,8.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,375.0,True,False,True,False,False,True,False
+3000.0,8.0,400.0,650.0,I,-0.1,水质恒紧：r=0 时已触及浓缩倍数上限,375.0,True,False,False,True,False,False,False
+3000.0,8.0,400.0,900.0,I,-0.05,水质恒紧：r=0 时已触及浓缩倍数上限,375.0,True,False,False,True,False,False,False
+3000.0,8.0,400.0,1200.0,I,-0.03125,水质恒紧：r=0 时已触及浓缩倍数上限,375.0,True,False,False,True,False,False,False
+3000.0,10.0,100.0,400.0,II,0.6666666666666666,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,100.0,650.0,II,0.36363636363636365,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,100.0,900.0,II,0.25,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,100.0,1200.0,II,0.18181818181818182,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,180.0,400.0,II,0.5454545454545454,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,180.0,650.0,II,0.2553191489361702,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,180.0,900.0,II,0.16666666666666666,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,180.0,1200.0,II,0.11764705882352941,存在政策相关阈值：r≤r* 纯收益，r>r* 部分侵蚀,300.0,False,False,False,False,False,False,True
+3000.0,10.0,300.0,400.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,300.0,True,False,False,True,False,False,False
+3000.0,10.0,300.0,650.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,300.0,True,False,False,True,False,False,False
+3000.0,10.0,300.0,900.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,300.0,True,False,False,True,False,False,False
+3000.0,10.0,300.0,1200.0,I,0.0,水质恒紧：r=0 时已触及浓缩倍数上限,300.0,True,False,False,True,False,False,False
+3000.0,10.0,400.0,400.0,IV,,再生水不比自来水脏（C_r ≤ C_p），无反噬,300.0,True,False,True,False,False,True,False
+3000.0,10.0,400.0,650.0,I,-0.4,水质恒紧：r=0 时已触及浓缩倍数上限,300.0,True,False,False,True,False,False,False
+3000.0,10.0,400.0,900.0,I,-0.2,水质恒紧：r=0 时已触及浓缩倍数上限,300.0,True,False,False,True,False,False,False
+3000.0,10.0,400.0,1200.0,I,-0.125,水质恒紧：r=0 时已触及浓缩倍数上限,300.0,True,False,False,True,False,False,False

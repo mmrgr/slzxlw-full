@@ -1,0 +1,19 @@
+﻿域,域标签,干预,CAWCC增益_MW,干预后CAWCC_MW,限制约束,投资下限_万元,投资上限_万元,投资中值_万元,单位成本_万元每MW,居民未满足量增量_ML,工程量说明,Pareto有效
+co,D-CO 气候凉爽端,baseline,0.0,1400.0,max_daily_average_grid_connection_ratio,0.0,0.0,0.0,,0.0,,True
+co,D-CO 气候凉爽端,wtw_plus_10pct,0.0,1400.0,max_daily_average_grid_connection_ratio,8246.0,10317.0,9281.5,,0.0,给水能力 +38 ML/d,False
+co,D-CO 气候凉爽端,wtw_plus_20pct,0.0,1400.0,max_daily_average_grid_connection_ratio,16492.0,20634.0,18563.0,,0.0,给水能力 +76 ML/d,False
+co,D-CO 气候凉爽端,reuse_plus_50pct,0.0,1400.0,max_daily_average_grid_connection_ratio,9000.0,12600.0,10800.0,,0.0,再生水处理能力 +18 ML/d,False
+co,D-CO 气候凉爽端,reuse_plus_100pct,0.0,1400.0,max_daily_average_grid_connection_ratio,18000.0,25200.0,21600.0,,0.0,再生水处理能力 +36 ML/d,False
+co,D-CO 气候凉爽端,wwtw_plus_20pct,0.0,1400.0,max_daily_average_grid_connection_ratio,8802.0,11718.0,10260.0,,0.0,污水处理 +54 ML/d,False
+co,D-CO 气候凉爽端,grid_plus_50pct,100.0,1500.0,max_wtw_utilization,29131.6,60710.5,44921.1,449.21,0.0,接网容量 +750 MW,True
+co,D-CO 气候凉爽端,leakage_minus_30pct,0.0,1400.0,max_daily_average_grid_connection_ratio,1902.1,3535.5,2718.8,,-0.0,年节水 3535 ML/a,False
+co,D-CO 气候凉爽端,combined_upgrade,0.0,1400.0,max_daily_average_grid_connection_ratio,19148.1,26452.5,22800.3,,-0.0,给水能力 +38 ML/d; 再生水处理能力 +18 ML/d; 年节水 3535 ML/a,False
+ha,D-HA 缺水—高冷负荷端,baseline,0.0,1100.0,max_wtw_utilization,0.0,0.0,0.0,,0.0,,True
+ha,D-HA 缺水—高冷负荷端,wtw_plus_10pct,0.0,1100.0,max_source_abstraction_ratio,8029.0,10045.5,9037.2,,0.0,给水能力 +37 ML/d,False
+ha,D-HA 缺水—高冷负荷端,wtw_plus_20pct,0.0,1100.0,max_source_abstraction_ratio,16058.0,20091.0,18074.5,,0.0,给水能力 +74 ML/d,False
+ha,D-HA 缺水—高冷负荷端,reuse_plus_50pct,0.0,1100.0,max_wtw_utilization,10000.0,14000.0,12000.0,,0.0,再生水处理能力 +20 ML/d,False
+ha,D-HA 缺水—高冷负荷端,reuse_plus_100pct,0.0,1100.0,max_wtw_utilization,20000.0,28000.0,24000.0,,0.0,再生水处理能力 +40 ML/d,False
+ha,D-HA 缺水—高冷负荷端,wwtw_plus_20pct,0.0,1100.0,max_wtw_utilization,8802.0,11718.0,10260.0,,0.0,污水处理 +54 ML/d,False
+ha,D-HA 缺水—高冷负荷端,grid_plus_50pct,0.0,1100.0,max_wtw_utilization,29131.6,60710.5,44921.1,,0.0,接网容量 +750 MW,False
+ha,D-HA 缺水—高冷负荷端,leakage_minus_30pct,200.0,1300.0,reclaimed_water_substitution_ratio,1935.6,3597.7,2766.6,13.83,-0.0,年节水 3598 ML/a,True
+ha,D-HA 缺水—高冷负荷端,combined_upgrade,200.0,1300.0,reclaimed_water_substitution_ratio,19964.6,27643.2,23803.9,119.02,-0.0,给水能力 +37 ML/d; 再生水处理能力 +20 ML/d; 年节水 3598 ML/a,False

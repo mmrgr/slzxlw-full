@@ -1,0 +1,75 @@
+{
+  "purpose": "X4 修复：统一 ne1 / ne5d 口径。旧对照把「设计 CoC 不同」误当作「求解路径不同」。",
+  "main_grid_coc_design": 5.0,
+  "main_grid_source": "examples/cawcc_r2/{ha,co}/project.json 的 components.AI_DC1.cooling.cycles_of_concentration",
+  "complete_species_samples": [
+    "IEUA",
+    "LADWP"
+  ],
+  "excluded_samples": [
+    "AI-UWM assumption (2/5 物种，物种不完整偏置)",
+    "Figshare RW (原缺 2 物种)"
+  ],
+  "test1_true_path_difference": {
+    "description": "同一 coc_design=5.0、同一 CENTRAL_REUSE 设定下，volume-only vs R10a 的差异——这是真正的路径差异",
+    "n_scenarios": 8,
+    "n_sign_flips": 4,
+    "sign_flip_fraction": 0.5,
+    "dS_volume_only_range": [
+      -3082.797589035017,
+      3055.5161944417923
+    ],
+    "dS_r10a_range": [
+      -3082.797589035017,
+      -2986.3388520093868
+    ],
+    "verdict": "PATH_CHANGES_SIGN_IN_4_OF_8"
+  },
+  "test2_coc_sensitivity_r10a": {
+    "description": "R10a 路径下扫设计 CoC，说明 ne1(3.5) 与 ne5d(5.0) 差异来源",
+    "by_coc": [
+      {
+        "coc_design": 3.5,
+        "min": 0.0,
+        "median": 1.1951474039415189,
+        "max": 3.7158891936705913,
+        "count": 8
+      },
+      {
+        "coc_design": 4.0,
+        "min": -1370.1322617933401,
+        "median": -1359.3578369333572,
+        "max": -1348.5885230488311,
+        "count": 8
+      },
+      {
+        "coc_design": 5.0,
+        "min": -3082.797589035017,
+        "median": -3036.5232209418773,
+        "max": -2986.3388520093868,
+        "count": 8
+      }
+    ]
+  },
+  "test3_ne1_style_with_central_reuse_quality": {
+    "description": "复现 ne1 的额外设定（CENTRAL_REUSE 质量 + provenance）",
+    "by_coc": [
+      {
+        "coc_design": 3.5,
+        "min": 0.0,
+        "median": 1.1951474039415189,
+        "max": 3.7158891936705913,
+        "count": 8
+      },
+      {
+        "coc_design": 5.0,
+        "min": -3082.797589035017,
+        "median": -3036.5232209418773,
+        "max": -2986.3388520093868,
+        "count": 8
+      }
+    ]
+  },
+  "conclusion": "1) 真路径差异（同 coc=5.0）见 test1；2) ne1 与 ne5d 的差异主要来自 coc_design 与 CENTRAL_REUSE 质量设定，不是求解路径；3) 旧稿的「800×」不得作为路径差异引用。",
+  "runtime_s": 414.0
+}

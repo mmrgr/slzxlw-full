@@ -76,7 +76,10 @@ def main() -> None:
             print(f"{'阈值':>6} | " + " | ".join(
                 f"{defs[k].get('operator')}{defs[k].get('value')}"[-26:] for k in defs
             ))
-            for cap in np.arange(900, 1501, 50, dtype=float):
+            # 从 50 MW 起：0 MW 是「无 AI」基线，此时 reclaimed_water_substitution_ratio = 0，
+            # 政策约束（>=0.65/>=0.40）天然不适用。权威结果
+            # (capacity_threshold_corrected.json) 同样用 >=50 过滤，此处保持一致。
+            for cap in np.arange(50, 2001, 50, dtype=float):
                 rec = evaluate(project, timeseries, raw, cap)
                 cells = []
                 for k in defs:

@@ -1,0 +1,10 @@
+    r    启用       CoC     r_eff        补水ML       取水比  状态
+----------------------------------------------------------------------------------
+  0.5 False    5.0000  0.500000     30770.8None  DISABLED_LEGACY_VOLUME_ONLY
+  0.5  True    5.0000  0.500000     30770.8None  ENABLED_DYNAMIC_STORAGE
+  0.7 False    4.3222  0.700000     31923.9None  DISABLED_LEGACY_VOLUME_ONLY
+  0.7  True    4.9991  0.700000     30772.2None  ENABLED_DYNAMIC_STORAGE
+  0.8 False    3.9568  0.755645     32764.8None  DISABLED_LEGACY_VOLUME_ONLY
+  0.8  True    4.9986  0.781105     30773.3None  ENABLED_DYNAMIC_STORAGE
+  0.9 False    3.6484  0.743997     33655.1None  DISABLED_LEGACY_VOLUME_ONLY
+  0.9  True    4.9981  0.798036     30774.3None  ENABLED_DYNAMIC_STORAGE

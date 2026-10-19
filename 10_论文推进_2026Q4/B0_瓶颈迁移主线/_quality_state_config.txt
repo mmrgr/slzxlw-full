@@ -1,0 +1,31 @@
+=== 源码中 quality_state 相关行 ===
+  src\aiuwm\full_engine.py:151: def _quality_state_enabled(component: dict[str, Any]) -> bool:
+  src\aiuwm\full_engine.py:160: return bool(component.get("quality_state_enabled", cooling.get("quality_state_enabled", False)))
+  src\aiuwm\full_engine.py:487: if component.get("kind") != "data_center" or not _quality_state_enabled(component):
+  src\aiuwm\full_engine.py:1323: _quality_state_enabled(component)
+  src\aiuwm\full_engine.py:1350: if len(active_data_centres) == 1 and (_quality_state_enabled(component) or (
+  src\aiuwm\full_engine.py:1414: "quality_state_enabled": _quality_state_enabled(component),
+  src\aiuwm\full_engine.py:1470: quality_enabled = bool(context.get("quality_state_enabled"))
+  src\aiuwm\full_engine.py:1472: "quality_state_enabled": quality_enabled,
+  src\aiuwm\full_engine.py:1482: quality_diag["quality_state_status"] = "ENABLED_DYNAMIC_STORAGE"
+  src\aiuwm\full_engine.py:1510: mixed_state = mix_quality_states(incoming_states)
+  src\aiuwm\full_engine.py:1514: withdrawn_state, end_state = withdraw_quality_state(
+  src\aiuwm\full_engine.py:1521: loop_state = mix_quality_states([withdrawn_state, prior_return_state])
+  src\aiuwm\full_engine.py:1641: quality_diag["quality_state_status"] = "DISABLED_LEGACY_VOLUME_ONLY"
+  src\aiuwm\full_engine.py:2165: and context.get("quality_state_enabled")
+
+
+=== ha/project.json 中 quality 相关键 ===
+  "coc_mode": "quality_limited",
+  "water_quality_limits": {
+  "blowdown_quality_mg_l": {
+  "quality": {
+  "quality": {
+
+
+=== co/project.json 中 quality 相关键 ===
+  "coc_mode": "quality_limited",
+  "water_quality_limits": {
+  "blowdown_quality_mg_l": {
+  "quality": {
+  "quality": {

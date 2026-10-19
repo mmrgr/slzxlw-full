@@ -1,0 +1,52 @@
+{
+  "gama_percentile_of_180": 14.1,
+  "cases": [
+    {
+      "case": "项目假设（未锚定）",
+      "c_p": 180.0,
+      "r_star": 0.5532,
+      "margin_A": -0.1092,
+      "margin_B": -0.0542,
+      "crossed_A": false,
+      "crossed_B": false
+    },
+    {
+      "case": "GAMA 全州中位",
+      "c_p": 420.0,
+      "r_star": 0.087,
+      "margin_A": 0.357,
+      "margin_B": 0.412,
+      "crossed_A": true,
+      "crossed_B": true
+    },
+    {
+      "case": "Alameda 县中位（邻近县）",
+      "c_p": 545.5,
+      "r_star": -1.0096,
+      "margin_A": 1.4536,
+      "margin_B": 1.5086,
+      "crossed_A": true,
+      "crossed_B": true
+    },
+    {
+      "case": "Los Angeles 县中位",
+      "c_p": 550.0,
+      "r_star": -1.1,
+      "margin_A": 1.544,
+      "margin_B": 1.599,
+      "crossed_A": true,
+      "crossed_B": true
+    },
+    {
+      "case": "Fresno 县中位（较淡）",
+      "c_p": 210.0,
+      "r_star": 0.5227,
+      "margin_A": -0.0787,
+      "margin_B": -0.0237,
+      "crossed_A": false,
+      "crossed_B": false
+    }
+  ],
+  "verdict_flips": true,
+  "note": "GAMA 为地下水监测数据，不等于供水系统出厂水；结论仅用于说明 C_p 未锚定对判定的影响的量级，不用于替换项目参数。"
+}

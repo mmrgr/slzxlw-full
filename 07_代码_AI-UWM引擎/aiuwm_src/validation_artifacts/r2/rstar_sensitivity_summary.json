@@ -1,0 +1,62 @@
+{
+  "nominal": {
+    "L": 2200.0,
+    "coc_design": 5.0,
+    "c_potable": 180.0,
+    "c_reclaimed": 650.0
+  },
+  "r_star_nominal": 0.5531914893617021,
+  "elasticity": {
+    "L": 1.6923076923064384,
+    "coc_design": -1.69213847845859,
+    "c_potable": -0.30934081599863167,
+    "c_reclaimed": -1.3827874868364523
+  },
+  "single_ranges": {
+    "L": {
+      "scan": [
+        1000.0,
+        3000.0
+      ],
+      "r_star_min": 0.0425531914893617,
+      "r_star_max": 0.8936170212765957
+    },
+    "coc_design": {
+      "scan": [
+        2.0,
+        10.0
+      ],
+      "r_star_min": 0.0851063829787234,
+      "r_star_max": 1.9574468085106382
+    },
+    "c_potable": {
+      "scan": [
+        50.0,
+        800.0
+      ],
+      "r_star_min": -10.2,
+      "r_star_max": 0.65
+    },
+    "c_reclaimed": {
+      "scan": [
+        300.0,
+        1500.0
+      ],
+      "r_star_min": 0.19696969696969696,
+      "r_star_max": 2.1666666666666665
+    }
+  },
+  "grid": {
+    "n_total": 81,
+    "n_valid": 72,
+    "n_in_policy_range": 45,
+    "r_star_median_in_range": 0.3333333333333333,
+    "r_star_p25": 0.16,
+    "r_star_p75": 0.5833333333333334
+  },
+  "verdicts": {
+    "r_star_is_parameter_dependent": true,
+    "threshold_response_is_structural": true,
+    "note": "r* 数值随四参数变化，但阈值型响应由 min 结构决定，不依赖具体数值"
+  }
+}

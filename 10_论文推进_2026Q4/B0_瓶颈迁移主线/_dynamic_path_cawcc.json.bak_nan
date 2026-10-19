@@ -1,0 +1,90 @@
+{
+  "legacy": [
+    {
+      "r": 0.0,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.5,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.6,
+      "coc": NaN,
+      "cawcc": 1150.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 32555.5
+    },
+    {
+      "r": 0.7,
+      "coc": NaN,
+      "cawcc": 1150.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33387.0
+    },
+    {
+      "r": 0.8,
+      "coc": NaN,
+      "cawcc": 1100.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 32776.8
+    },
+    {
+      "r": 0.9,
+      "coc": NaN,
+      "cawcc": 1100.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33667.1
+    }
+  ],
+  "dynamic": [
+    {
+      "r": 0.0,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.5,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.6,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.7
+    },
+    {
+      "r": 0.7,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33581.7
+    },
+    {
+      "r": 0.8,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33582.8
+    },
+    {
+      "r": 0.9,
+      "coc": NaN,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33584.0
+    }
+  ]
+}

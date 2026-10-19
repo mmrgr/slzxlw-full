@@ -1,0 +1,174 @@
+{
+  "passed": 28,
+  "total": 28,
+  "rows": [
+    {
+      "claim": "r* 闭式解",
+      "value": "0.5532",
+      "source": "四参数手算（11_理论推导 §2.4）",
+      "ok": true
+    },
+    {
+      "claim": "L（TDS 限值）来自 project.json",
+      "value": "2200",
+      "source": "examples/cawcc_r2/ha/project.json cooling.water_quality_limits.TDS",
+      "ok": true
+    },
+    {
+      "claim": "CoC_design 来自 project.json",
+      "value": "5.0",
+      "source": "同项目文件 cooling.cycles_of_concentration",
+      "ok": true
+    },
+    {
+      "claim": "C_reclaimed 来自 project.json",
+      "value": "650",
+      "source": "同项目文件 AI_DC1.water_sources.reclaimed.quality.TDS",
+      "ok": true
+    },
+    {
+      "claim": "C_potable 来自 project.json",
+      "value": "180",
+      "source": "同项目文件 AI_DC1.water_sources.potable.quality.TDS",
+      "ok": true
+    },
+    {
+      "claim": "CoC 模型 vs 解析式最大偏差 = 8.9e-16",
+      "value": "8.882e-16",
+      "source": "r2/probe_rstar_mechanism.csv",
+      "ok": true
+    },
+    {
+      "claim": "CoC r=0.9 = 3.648（模型与解析一致）",
+      "value": "模型3.648 / 解析3.648",
+      "source": "r2/rstar_scan_ha.csv",
+      "ok": true
+    },
+    {
+      "claim": "CoC 由 5.0 降至 r=0.9 的降幅约 -27%",
+      "value": "-27.03%",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "r 0.5→0.8 总取水增幅与容量无关（极差<0.02pp）",
+      "value": "200MW:+6.47%, 800MW:+6.48%, 1200MW:+6.48%, 1600MW:+6.48% 极差=0.0121pp",
+      "source": "r2/rstar_scan_ha.csv",
+      "ok": true
+    },
+    {
+      "claim": "反噬在 r<=0.5 精确为零",
+      "value": "7.276e-12 ML",
+      "source": "r2/rstar_backlash_decomposition.csv",
+      "ok": true
+    },
+    {
+      "claim": "反噬在 r>=0.7 显著为正（最小 1243 ML）",
+      "value": "1243.1 ML",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "纯物理 CAWCC HA r=0.0 = 1200",
+      "value": "1200",
+      "source": "r2/rstar_physical_cawcc_by_r.csv",
+      "ok": true
+    },
+    {
+      "claim": "纯物理 CAWCC HA r=0.9 = 1100",
+      "value": "1100",
+      "source": "r2/rstar_physical_cawcc_by_r.csv",
+      "ok": true
+    },
+    {
+      "claim": "纯物理 CAWCC CO r=0.0 = 1450",
+      "value": "1450",
+      "source": "r2/rstar_physical_cawcc_by_r.csv",
+      "ok": true
+    },
+    {
+      "claim": "纯物理 CAWCC CO r=0.8 = 1450",
+      "value": "1450",
+      "source": "r2/rstar_physical_cawcc_by_r.csv",
+      "ok": true
+    },
+    {
+      "claim": "HA r=0.9 纯物理首失效仍为 max_source_abstraction_ratio",
+      "value": "max_source_abstraction_ratio",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "HA@1200MW 水源比 r=0.5 为 0.9497（合规）",
+      "value": "0.9497",
+      "source": "r2/rstar_confound_control.csv",
+      "ok": true
+    },
+    {
+      "claim": "HA@1200MW 水源比 r=0.6 为 0.9513（超限）",
+      "value": "0.9513",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "HA@1200MW 电网约束全程不变（Δ=0.0000）",
+      "value": "0.8326→0.8326",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "HA@1200MW 电网约束值 = 0.8326",
+      "value": "0.8326",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "CO@1600MW 水源比 r=0→0.9 增量 +0.0167",
+      "value": "0.9306→0.9472（Δ+0.0167）",
+      "source": "同上",
+      "ok": true
+    },
+    {
+      "claim": "仅扩处理能力：HA CAWCC 恒 1100（100MW 网格口径）",
+      "value": "[1100.0]",
+      "source": "r2/ha/reuse_marginal_curve.csv",
+      "ok": true
+    },
+    {
+      "claim": "仅扩处理能力：HA 边际增益恒 0",
+      "value": "[0.0]",
+      "source": "同上 marginal_gain_mw_per_ml_day",
+      "ok": true
+    },
+    {
+      "claim": "仅扩处理能力：CO CAWCC 恒 1400（100MW 网格口径）",
+      "value": "[1400.0]",
+      "source": "r2/co/reuse_marginal_curve.csv",
+      "ok": true
+    },
+    {
+      "claim": "提高产水量：HA CAWCC 由 1100 升至 1400",
+      "value": "1100→1400",
+      "source": "r2/ha/reuse_production_marginal_curve.csv",
+      "ok": true
+    },
+    {
+      "claim": "提高产水量：瓶颈由水源迁移到电网",
+      "value": "max_source_abstraction_ratio → max_daily_average_grid_connection_ratio",
+      "source": "同上 limiting_constraint",
+      "ok": true
+    },
+    {
+      "claim": "HA 既有 physical_daily CAWCC 未变 = 1150",
+      "value": "1150.0",
+      "source": "r2/{domain}/capacity_threshold_corrected.json",
+      "ok": true
+    },
+    {
+      "claim": "CO 既有 physical_daily CAWCC 未变 = 1450",
+      "value": "1450.0",
+      "source": "r2/{domain}/capacity_threshold_corrected.json",
+      "ok": true
+    }
+  ]
+}

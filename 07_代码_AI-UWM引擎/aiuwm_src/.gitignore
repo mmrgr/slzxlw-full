@@ -8,6 +8,7 @@ artifacts/
 output/
 references/*.pdf
 validation_artifacts/*
+!validation_artifacts/r2/
 !validation_artifacts/VALIDATION_REPORT_CN.md
 !validation_artifacts/validation_report.json
 !validation_artifacts/ai_validation_report.json
@@ -28,3 +29,8 @@ frontend/vite.config.d.ts
 frontend/vite.config.js
 !validation_artifacts/r2/reclaimed_compatibility_R9.csv
 !validation_artifacts/r2/reclaimed_compatibility_verdict_R9.csv
+
+# 工作日志与临时诊断（2026-10-19）
+_logs/
+*.log
+_diagnose_out/

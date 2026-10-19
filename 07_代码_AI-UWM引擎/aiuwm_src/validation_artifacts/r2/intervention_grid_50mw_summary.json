@@ -1,0 +1,160 @@
+{
+  "grid": {
+    "step_mw": 50,
+    "min_mw": 0,
+    "max_mw": 2000,
+    "n_points": 41
+  },
+  "domains": {
+    "ha": {
+      "same_grid_baseline_mw": 1150.0,
+      "interventions": [
+        {
+          "intervention": "baseline",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "wtw_plus_10pct",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "wtw_plus_20pct",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "reuse_plus_50pct",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "reuse_plus_100pct",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "wwtw_plus_20pct",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "local_connection_plus_50pct",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "grid_plus_50pct",
+          "maximum_safe_ai_capacity_mw": 1150.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "leakage_minus_30pct",
+          "maximum_safe_ai_capacity_mw": 1300.0,
+          "first_failed_capacity_mw": 1350.0,
+          "limiting_constraint": "reclaimed_water_substitution_ratio",
+          "capacity_gain_mw": 150.0
+        },
+        {
+          "intervention": "combined_upgrade",
+          "maximum_safe_ai_capacity_mw": 1300.0,
+          "first_failed_capacity_mw": 1350.0,
+          "limiting_constraint": "reclaimed_water_substitution_ratio",
+          "capacity_gain_mw": 150.0
+        }
+      ]
+    },
+    "co": {
+      "same_grid_baseline_mw": 1450.0,
+      "interventions": [
+        {
+          "intervention": "baseline",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "wtw_plus_10pct",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "wtw_plus_20pct",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "reuse_plus_50pct",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "reuse_plus_100pct",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "wwtw_plus_20pct",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "local_connection_plus_50pct",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "grid_plus_50pct",
+          "maximum_safe_ai_capacity_mw": 1550.0,
+          "first_failed_capacity_mw": 1600.0,
+          "limiting_constraint": "max_local_connection_ratio",
+          "capacity_gain_mw": 100.0
+        },
+        {
+          "intervention": "leakage_minus_30pct",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        },
+        {
+          "intervention": "combined_upgrade",
+          "maximum_safe_ai_capacity_mw": 1450.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "capacity_gain_mw": 0.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,124 @@
+=== Decoupling wastewater-related greenhouse.pdf ===
+PAGES: 13
+
+--- HEAD ---
+Nature Water | Volume 1 | June 2023 | 534–546
+534
+nature water
+Article
+https://doi.org/10.1038/s44221-023-00087-4
+Decoupling wastewater-related greenhouse 
+gas emissions and water stress alleviation 
+across 300 cities in China is challenging yet 
+plausible by 2030
+Shaoqing Chen1,2 
+, Linmei Zhang1,2, Beibei Liu 
+  3,4 
+, Hang Yi3, Hanshi Su3, 
+Ali Kharrazi 
+  5,6,7, Feng Jiang 
+  1,2, Zhongming Lu 
+  8, John C. Crittenden9 & 
+Bin Chen 
+  10 
+Urban wastewater treatment and reuse infrastructure play a vital role in 
+achieving water sustainability; however, the pathways to realize water–climate 
+synergies in planning such infrastructure are not clear. Here we examine the 
+nexus of urban water stress and greenhouse gas (GHG) emissions resulting from 
+expanding wastewater infrastructures across over 300 cities in China. We find 
+that, despite a total increase of 176% in life-cycle GHG emissions, larger-scale 
+wastewater treatment and reclaimed water reuse have nearly tripled the average 
+amount of urban water stress alleviated between 2006 and 2015. However, with 
+an extensive and integrated application of existing low-carbon technologies 
+for wastewater treatment, sludge disposal and water reuse, it is possible to 
+substantially further decouple water stress mitigation from GHG emissions 
+by 2030. Under the optimized scenario, China can reduce wastewater-related 
+emissions by 27% at the national level, while its eastern and northern cities could 
+reduce emissions by over 40% for every unit of alleviated water stress. This study 
+provides insights into the water–climate nexus and outlines feasible pathways 
+to reduce water stress while mitigating wastewater-related GHG emissions.
+Well-functioning wastewater treatment systems are crucial infrastruc-
+ture for improving water sustainability and accessibility by replenish-
+ing water supplies and reusing reclaimed water1–4. However, given the 
+increasingly higher standards for water quality and stringent envi-
+ronmental regulations, wastewater treatment and reuse have led to a 
+notable growth in energy use and greenhouse gas (GHG) emissions. In 
+China, rapid urbanization and the increasing demand for freshwater 
+lead to the expansion of urban wastewater infrastructure, which in turn 
+exacerbates climate impacts5–7. CH4 and N2O emissions from wastewa-
+ter treatment and sludge disposal accounted for approximately 5% of 
+Received: 7 August 2022
+Accepted: 2 May 2023
+Published online: 1 June 2023
+ Check for updates
+1School of Environmental Science and Engineering, Sun Yat-sen University, Guangzhou, China. 2Guangdong Provincial Key Laboratory of Environmental 
+Pollution Control and Remediation Technology, Sun Yat-sen University, Guangzhou, China. 3State Key Laboratory of Pollution Control & Resource Reuse, 
+School of Environment, Nanjing University, Nanjing, China. 4The Johns Hopkins University–Nanjing University Center for Chinese and American Studies, 
+Nanjing, China. 5Advanced Systems Analysis Group, International Institute for Applied Systems Analysis, Laxenburg, Austria. 6Global Studies Program, 
+Faculty of International Liberal Arts, Akita International University, Yuwa City, Japan. 7Network for Education and Research on Peace and Sustainability 
+(NERPS), Hiroshima University, Hiroshima, Japan. 8Division of Environment and Sustainability, Hong Kong University of Science and Technology, Clear 
+Water Bay, Kowloon, Hong Kong, China. 9School of Civil and Environmental Engineering and the Brook Byers Institute for Sustainable Systems, Georgia 
+Institute of Technology, Atlanta, GA, USA. 10State Key Joint Laboratory of Environment Simulation and Pollution Control, School of Environment, Beijing 
+Normal University, Beijing, China. 
+ e-mail: chenshaoqing@mail.sysu.edu.cn; lbeibei@nju.edu.cn; chenb@bnu.edu.cn
+
+Nature Water | Volume 1 | June 2023 | 534–546
+535
+Article
+https://doi.org/10.1038/s44221-023-00087-4
+and comparative way. To identify pathways of water–climate syner-
+gies by 2030, we examined the potential of enhancing water stress 
+alleviation while mitigating life-cycle GHG emissions under various 
+scenarios considering the diffusion and integration of low-carbon 
+technologies at dif
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+conclusions and strategies from the 
+Intergovernmental Panel on Climate Change (IPCC) Fourth 
+Assessment Report. Working Group III (Mitigation). Waste Manag. 
+Res. 26, 11–32 (2008).
+61. Meglin, R., Kytzia, S. & Habert, G. Regional circular economy of 
+building materials: environmental and economic assessment 
+combining material flow analysis, input–output analyses, and life 
+cycle assessment. J. Ind. Ecol. 26, 562–576 (2022).
+62. Zheng, B., Huang, G., Liu, L., Guan, Y. & Zhai, M. Dynamic 
+wastewater-induced research based on input-output analysis for 
+Guangdong Province, China. Environ. Pollut. 256, 113502 (2020).
+63. Stokes, J. R. & Horvath, A. Supply-chain environmental effects of 
+wastewater utilities. Environ. Res. Lett. 5, 014015 (2010).
+64. Chen, W., Oldfield, T. L., Patsios, S. I. & Holden, N. M. Hybrid life 
+cycle assessment of agro-industrial wastewater valorisation. 
+Water Res. 170, 115275 (2020).
+65. Vorosmarty, C. J., Green, P., Salisbury, J. & Lammers, R. B. 
+Global water resources: vulnerability from climate change and 
+population growth. Science 289, 284–288 (2000).
+66. Oki, T. & Kanae, S. Global hydrological cycles and world water 
+resources. Science 313, 1068–1072 (2006).
+67. Wang, J., Zhong, L. & Long, Y. Baseline Water Stress: China (World 
+Resources Institute, Beijing, 2016).
+68. Zhang, C., Zhong, L. & Wang, J. Decoupling between water use 
+and thermoelectric power generation growth in China. 
+Nat. Energy 3, 792–799 (2018).
+69. Zhao, X. et al. Physical and virtual water transfers for regional 
+water stress alleviation in China. Proc. Natl Acad. Sci. USA 112, 
+1031–1035 (2015).
+70. IPCC. Climate Change 2014: Synthesis Report (Contribution of 
+Working Groups I, II and III to the Fifth Assessment Report of the 
+Intergovernmental Panel on Climate Change, 2014).
+Acknowledgements
+This study was supported by the National Natural Science 
+Foundation of China (72074232, 72091511, 71725005 and 
+71921003), Natural Science Fund for Distinguished Young Scholars 
+of Guangdong Province, China (2018B030306032), Beijing 
+Outstanding Scientist Program (BJJWZYJH01201910027031), 
+the National Key Research and Development Program of China 
+(2022YFF1301200), Major Project of National Social Science Fund 
+of China (22&ZD108) and Jiangsu Provincial Department of Science 
+and Technology (BK20220012). J.C.C. would like to acknowledge 
+the support of the Brook Byers Institute for Sustainable Systems, 
+Hightower Chair and the Georgia Research Alliance at the Georgia 
+Institute of Technology. Z.L. would like to acknowledge the support 
+of Hong Kong Research Grant

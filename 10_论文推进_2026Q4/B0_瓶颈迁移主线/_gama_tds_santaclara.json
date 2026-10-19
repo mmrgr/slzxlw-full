@@ -1,0 +1,7 @@
+{
+  "source": "GAMA / DDW 2020-present (data.ca.gov)",
+  "county": "SANTA CLARA",
+  "c_p_assumed_mg_l": 180.0,
+  "summary": {},
+  "note": "GAMA 为地下水井监测数据，不等同于供水系统出厂水；用于判断 C_p 假设值的量级是否偏离，不作直接替换。"
+}

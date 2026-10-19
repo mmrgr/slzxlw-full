@@ -1,0 +1,44 @@
+{
+  "r_star": 0.5532,
+  "parameters": [
+    {
+      "symbol": "L",
+      "name": "循环水 TDS 限值",
+      "value": 2200.0,
+      "path": "components.AI_DC1.cooling.water_quality_limits.TDS",
+      "in_envelope_table": false,
+      "anchor_status": "未列入包络表",
+      "anchor_id": "—"
+    },
+    {
+      "symbol": "CoC_d",
+      "name": "设计浓缩倍数",
+      "value": 5.0,
+      "path": "components.AI_DC1.cooling.cycles_of_concentration",
+      "in_envelope_table": true,
+      "anchor_status": "无锚点",
+      "anchor_id": "—"
+    },
+    {
+      "symbol": "C_p",
+      "name": "自来水 TDS",
+      "value": 180.0,
+      "path": "components.AI_DC1.water_sources.potable.quality.TDS",
+      "in_envelope_table": false,
+      "anchor_status": "未列入包络表",
+      "anchor_id": "—"
+    },
+    {
+      "symbol": "C_r",
+      "name": "再生水 TDS",
+      "value": 650.0,
+      "path": "components.AI_DC1.water_sources.reclaimed.quality.TDS",
+      "in_envelope_table": false,
+      "anchor_status": "未列入包络表",
+      "anchor_id": "—"
+    }
+  ],
+  "n_in_envelope_table": 1,
+  "n_actually_anchored": 0,
+  "note": "r* 的四个参数中只有 CoC_d 被列入 parameter_envelope_R7.csv 且标记为无锚点；L、C_p、C_r 三个水质参数根本不在该表 54 行之内，从未经过锚定核查。"
+}

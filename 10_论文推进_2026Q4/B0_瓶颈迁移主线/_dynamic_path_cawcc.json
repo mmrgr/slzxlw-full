@@ -1,0 +1,91 @@
+{
+  "legacy": [
+    {
+      "r": 0.0,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.5,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.6,
+      "coc": null,
+      "cawcc": 1150.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 32555.5
+    },
+    {
+      "r": 0.7,
+      "coc": null,
+      "cawcc": 1150.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33387.0
+    },
+    {
+      "r": 0.8,
+      "coc": null,
+      "cawcc": 1100.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 32776.8
+    },
+    {
+      "r": 0.9,
+      "coc": null,
+      "cawcc": 1100.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33667.1
+    }
+  ],
+  "dynamic": [
+    {
+      "r": 0.0,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.5,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.2
+    },
+    {
+      "r": 0.6,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33580.7
+    },
+    {
+      "r": 0.7,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33581.7
+    },
+    {
+      "r": 0.8,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33582.8
+    },
+    {
+      "r": 0.9,
+      "coc": null,
+      "cawcc": 1200.0,
+      "limiting": "max_source_abstraction_ratio",
+      "total_withdrawal_ml": 33584.0
+    }
+  ],
+  "_coc_note": "该字段不可用：生成脚本取 scan 的 'coc_mean' 列，但该列不存在，故恒为 NaN。2026-10-19 审计已改为 JSON 合法的 null 并在此说明。CoC 的真实值请见 _quality_state_sensitivity.txt（legacy 4.3222/3.9568/3.6484；dynamic 4.9991/4.9986/4.9981）。本字段无下游消费者，不影响任何结论。"
+}

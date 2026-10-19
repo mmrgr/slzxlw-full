@@ -1,0 +1,78 @@
+
+====================================================================================================
+### rstar_physical_cawcc_by_r.csv   20 行 × 8 列
+====================================================================================================
+  ✅          domain                                         ['ha', 'co']
+  ✅          target_r                                       [0, 0.9]
+  ❌ 未引用      joint_cawcc_mw                                 [700, 1450]
+  ❌ 未引用      joint_first_failed_mw                          [750, 1500]
+  ❌ 未引用      joint_limiting_constraint                      ['max_source_abstraction_ratio', 'reclaimed_water_substitution_ratio', 'max_daily_average_grid_connection_ratio']
+  ✅          physical_cawcc_mw                              [1100, 1450]
+  ❌ 未引用      physical_first_failed_mw                       [1150, 1500]
+  ❌ 未引用      physical_limiting_constraint                   ['max_source_abstraction_ratio', 'max_daily_average_grid_connection_ratio', 'max_local_connection_ratio']
+
+====================================================================================================
+### rstar_confound_control.csv   40 行 × 13 列
+====================================================================================================
+  ✅          domain                                         ['ha', 'co']
+  ✅          capacity_mw                                    [1200, 1600]
+  ✅          target_r                                       [0, 0.9]
+  ❌ 未引用      mean_coc                                       [3.648, 5]
+  ✅          max_source_abstraction_ratio                   [0.8797, 1]
+  ✅          max_wtw_utilization                            [0.8984, 0.98]
+  ✅          peak_capacity_ratio                            [0.8738, 0.9931]
+  ✅          max_local_connection_ratio                     [0.7609, 1.124]
+  ✅          max_daily_average_grid_connection_ratio        [0.8219, 1.11]
+  ❌ 未引用      total_withdrawal_ml                            [3.318e+04, 4.896e+04]
+  ❌ 未引用      freshwater_withdrawal_ml                       [1.084e+04, 4.477e+04]
+  ❌ 未引用      reclaimed_water_use_ml                         [0, 2.557e+04]
+  ❌ 未引用      actual_reclaimed_fraction                      [0, 0.6959]
+
+====================================================================================================
+### rstar_regime_validation.csv   15 行 × 11 列
+====================================================================================================
+  ✅          regime                                         ['II', 'I', 'III']
+  ✅          coc_design                                     [2.5, 15]
+  ❌ 未引用      r_star_analytic                                [-0.07092, 1.489]
+  ✅          target_r                                       [0, 0.8]
+  ❌ 未引用      coc_model                                      [2.5, 12.22]
+  ❌ 未引用      coc_analytic                                   [2.5, 12.22]
+  ❌ 未引用      coc_equal_design                               [0, 1]
+  ❌ 未引用      total_withdrawal_ml                            [1.975e+04, 2.924e+04]
+  ❌ 未引用      freshwater_withdrawal_ml                       [4768, 2.924e+04]
+  ❌ 未引用      reclaimed_use_ml                               [0, 2.339e+04]
+  ❌ 未引用      coc_fallback_days                              [0, 0]
+
+====================================================================================================
+### rstar_grid_convergence_table.csv   12 行 × 8 列
+====================================================================================================
+  ✅          domain                                         ['ha', 'co']
+  ✅          target_r                                       [0, 0.9]
+  ❌ 未引用      cawcc_50mw                                     [1100, 1450]
+  ❌ 未引用      drop_50mw                                      [-100, 0]
+  ❌ 未引用      cawcc_25mw                                     [1100, 1450]
+  ❌ 未引用      drop_25mw                                      [-100, 0]
+  ❌ 未引用      cawcc_10mw                                     [1110, 1460]
+  ❌ 未引用      drop_10mw                                      [-90, 0]
+
+====================================================================================================
+### ha/constraint_informativeness.csv   10 行 × 6 列
+====================================================================================================
+  ✅          constraint                                     ['system_reliability_fraction', 'domestic_unmet_ml', 'unmet_cooling_water_ml', 'max_wtw_utilization']
+  ✅          informative                                    [0, 1]
+  ❌ 未引用      first_violated_capacity_mw                     [1200, 1850]
+  ❌ 未引用      min_value                                      [0, 0.9923]
+  ❌ 未引用      max_value                                      [0, 992.2]
+  ✅          target                                         [0, 1]
+
+====================================================================================================
+### co/constraint_informativeness.csv   10 行 × 6 列
+====================================================================================================
+  ✅          constraint                                     ['system_reliability_fraction', 'domestic_unmet_ml', 'unmet_cooling_water_ml', 'max_wtw_utilization']
+  ✅          informative                                    [0, 1]
+  ❌ 未引用      first_violated_capacity_mw                     [1500, 1800]
+  ❌ 未引用      min_value                                      [0, 1]
+  ❌ 未引用      max_value                                      [0, 1.37]
+  ✅          target                                         [0, 1]
+
+### ha/capacity_threshold_corrected.csv  —— 缺失

@@ -1,0 +1,5 @@
+- Closed-form threshold r* governs when reclaimed-water cooling backfires
+- Make-up penalty is exactly zero below r* and independent of AI capacity
+- Freshwater-scarce endpoint loses ~100 MW; cool endpoint loses none
+- Bottleneck must lie on the water side for the penalty to bind capacity
+- Two-number city screen: potable-to-reclaimed ratio below 3.50 crosses r*

@@ -1,0 +1,61 @@
+{
+  "it_mw": 10.0,
+  "unit_note": "external_makeup_ml 单位为 ML（1000 m³），WUE 取模型 wue_l_kwh 列",
+  "rows": [
+    {
+      "tech": "dry",
+      "wue_l_per_kwh": 0.0,
+      "makeup_ml_2yr": 0.0,
+      "makeup_m3_per_day": 0.0,
+      "evap_share": null
+    },
+    {
+      "tech": "dry_first",
+      "wue_l_per_kwh": 0.398,
+      "makeup_ml_2yr": 56.87,
+      "makeup_m3_per_day": 77.9,
+      "evap_share": 0.769
+    },
+    {
+      "tech": "efficient_evaporative",
+      "wue_l_per_kwh": 2.117,
+      "makeup_ml_2yr": 278.66,
+      "makeup_m3_per_day": 381.7,
+      "evap_share": 0.769
+    },
+    {
+      "tech": "evaporative",
+      "wue_l_per_kwh": 2.205,
+      "makeup_ml_2yr": 290.22,
+      "makeup_m3_per_day": 397.6,
+      "evap_share": 0.769
+    },
+    {
+      "tech": "hybrid",
+      "wue_l_per_kwh": 0.606,
+      "makeup_ml_2yr": 86.14,
+      "makeup_m3_per_day": 118.0,
+      "evap_share": 0.769
+    },
+    {
+      "tech": "liquid_to_air",
+      "wue_l_per_kwh": 0.0,
+      "makeup_ml_2yr": 0.0,
+      "makeup_m3_per_day": 0.0,
+      "evap_share": null
+    },
+    {
+      "tech": "liquid_to_water",
+      "wue_l_per_kwh": 1.912,
+      "makeup_ml_2yr": 251.72,
+      "makeup_m3_per_day": 344.8,
+      "evap_share": 0.769
+    }
+  ],
+  "bowers": {
+    "af_per_year": 0.5,
+    "m3_per_year": 616.7,
+    "wue_at_10mw": 0.007
+  },
+  "source": "Item 7 Post Meeting Material.pdf pp.60-61 (转引 Bowers Final EIR 2023-10)"
+}

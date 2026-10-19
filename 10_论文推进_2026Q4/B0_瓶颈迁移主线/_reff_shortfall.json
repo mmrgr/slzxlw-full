@@ -1,0 +1,74 @@
+[
+  {
+    "r_target": 0.5,
+    "r_eff_mean": 0.5,
+    "n_short_days": 0,
+    "coc_target": 5.0,
+    "coc_eff": 5.0,
+    "f_target": 1.25,
+    "f_eff": 1.25
+  },
+  {
+    "r_target": 0.6,
+    "r_eff_mean": 0.6,
+    "n_short_days": 0,
+    "coc_target": 4.7619,
+    "coc_eff": 4.7619,
+    "f_target": 1.2658,
+    "f_eff": 1.2658
+  },
+  {
+    "r_target": 0.65,
+    "r_eff_mean": 0.65,
+    "n_short_days": 0,
+    "coc_target": 4.5314,
+    "coc_eff": 4.5314,
+    "f_target": 1.2832,
+    "f_eff": 1.2832
+  },
+  {
+    "r_target": 0.7,
+    "r_eff_mean": 0.7,
+    "n_short_days": 0,
+    "coc_target": 4.3222,
+    "coc_eff": 4.3222,
+    "f_target": 1.301,
+    "f_eff": 1.301
+  },
+  {
+    "r_target": 0.75,
+    "r_eff_mean": 0.740217,
+    "n_short_days": 262,
+    "coc_target": 4.1315,
+    "coc_eff": 4.1674,
+    "f_target": 1.3193,
+    "f_eff": 1.3157
+  },
+  {
+    "r_target": 0.8,
+    "r_eff_mean": 0.755645,
+    "n_short_days": 620,
+    "coc_target": 3.9568,
+    "coc_eff": 4.111,
+    "f_target": 1.3382,
+    "f_eff": 1.3214
+  },
+  {
+    "r_target": 0.85,
+    "r_eff_mean": 0.751428,
+    "n_short_days": 724,
+    "coc_target": 3.7964,
+    "coc_eff": 4.1263,
+    "f_target": 1.3576,
+    "f_eff": 1.3199
+  },
+  {
+    "r_target": 0.9,
+    "r_eff_mean": 0.743997,
+    "n_short_days": 724,
+    "coc_target": 3.6484,
+    "coc_eff": 4.1535,
+    "f_target": 1.3776,
+    "f_eff": 1.3171
+  }
+]

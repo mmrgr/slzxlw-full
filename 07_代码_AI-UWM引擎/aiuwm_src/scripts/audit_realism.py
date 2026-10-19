@@ -266,7 +266,11 @@ def main() -> None:
     if len(warns):
         print(warns.to_string(index=False))
     print(f"\nwritten -> {OUT / 'realism_audit.csv'}")
+    # 2026-10-19 审计修复：此前 main() 无返回值、脚本无 sys.exit，
+    # 故即使有 FAIL 也返回退出码 0（"退出码说谎"）。现按 FAIL 数返回。
+    return 1 if len(fails) else 0
 
 
 if __name__ == "__main__":
-    main()
+    import sys as _sys
+    _sys.exit(main())

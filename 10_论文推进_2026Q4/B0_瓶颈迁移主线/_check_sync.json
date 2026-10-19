@@ -1,0 +1,51 @@
+{
+  "passed": 9,
+  "total": 9,
+  "rows": [
+    {
+      "name": "R1 首行标明 v2",
+      "ok": true,
+      "detail": "# 主稿 v2（中文，定稿候选）"
+    },
+    {
+      "name": "R1 状态行为定稿候选",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R1 无 v1 草稿残留",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 摘要覆盖全部核心贡献",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "§7 结论需提及配比与三杠杆",
+      "ok": true,
+      "detail": "缺 []"
+    },
+    {
+      "name": "R4 贡献数一致",
+      "ok": true,
+      "detail": "声称 五，实际 5"
+    },
+    {
+      "name": "R5 限制编号连续",
+      "ok": true,
+      "detail": "51 条，末号 51"
+    },
+    {
+      "name": "R6 交叉引用全部有效",
+      "ok": true,
+      "detail": "43 个引用"
+    },
+    {
+      "name": "R7 无「本轮新增」类过程性标记（建议清理）",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

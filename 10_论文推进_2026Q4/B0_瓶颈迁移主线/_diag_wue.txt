@@ -1,0 +1,137 @@
+=== AI_DC1 关键配置 ===
+  installed_it_capacity_mw: 0.0
+  heat_basis: None
+  heat_to_cooling_fraction: None
+  heat_rejection_temperature_coefficient: None
+  technology: None
+  cooling: {"technology": "evaporative", "model": "tower_balance", "heat_basis": "facility", "heat_rejection_temperature_coefficient": 0.0, "heat_to_cooling_fraction": 1.0, "cycles_of_concentration": 5.0, "coc_mode": "quality_limited", "water_quality_limits": {"TDS": 2200, "chloride": 500}, "drift_fraction": 0.0002, "blowdown_return_fraction": 1.0, "internal_recovery_fraction": 0.1, "blowdown_quality_mg_l": {"TDS": 1800}}
+
+=== data_center_daily 列（48）===
+  date
+  data_center_id
+  area_id
+  installed_it_capacity_mw
+  it_load_mw
+  load_factor
+  it_energy_mwh
+  facility_energy_mwh
+  pue
+  cooling_heat_mwh_th
+  cooling_technology
+  wet_cooling_fraction
+  dry_cooling_fraction
+  wet_bulb_temperature_c
+  weather_fallback
+  cycles_of_concentration
+  quality_coc_fallback
+  evaporation_ml
+  drift_ml
+  blowdown_ml
+  internal_recovery_ml
+  gross_makeup_ml
+  external_makeup_ml
+  consumption_ml
+  return_flow_ml
+  wue_l_kwh
+  target_reclaimed_fraction
+  offsite_electricity_water_ml
+  quality_solver_reclaimed_fraction
+  quality_solver_status
+  quality_solver_residual
+  quality_solver_root_count
+  external_withdrawal_ml
+  potable_water_ml
+  reclaimed_water_ml
+  other_water_ml
+  storage_start_ml
+  storage_end_ml
+  storage_change_ml
+  unmet_cooling_water_ml
+  actual_reclaimed_fraction
+  direct_urban_withdrawal_ml
+  direct_urban_consumption_ml
+  total_water_footprint_ml
+  water_balance_residual_ml
+  quality_state_enabled
+  quality_integration_status
+  quality_state_status
+
+=== 各数值列前 5 行均值 ===
+installed_it_capacity_mw             1.000000e+01
+it_load_mw                           6.916800e+00
+load_factor                          6.916800e-01
+it_energy_mwh                        1.660032e+02
+facility_energy_mwh                  1.897025e+02
+pue                                  1.142766e+00
+cooling_heat_mwh_th                  1.897025e+02
+wet_cooling_fraction                 1.000000e+00
+dry_cooling_fraction                 0.000000e+00
+wet_bulb_temperature_c              -3.213532e+00
+cycles_of_concentration              4.322200e+00
+evaporation_ml                       2.787465e-01
+drift_ml                             7.253013e-05
+blowdown_ml                          8.383164e-02
+internal_recovery_ml                 8.383164e-03
+gross_makeup_ml                      3.626506e-01
+external_makeup_ml                   3.542675e-01
+consumption_ml                       2.788190e-01
+return_flow_ml                       7.544848e-02
+wue_l_kwh                            2.134104e+00
+target_reclaimed_fraction            7.000000e-01
+offsite_electricity_water_ml         3.414644e-01
+quality_solver_reclaimed_fraction    7.000000e-01
+quality_solver_residual                       NaN
+quality_solver_root_count            0.000000e+00
+external_withdrawal_ml               2.754267e+00
+potable_water_ml                     8.262802e-01
+reclaimed_water_ml                   1.927987e+00
+other_water_ml                       0.000000e+00
+storage_start_ml                     2.160000e+01
+storage_end_ml                       2.400000e+01
+storage_change_ml                    2.400000e+00
+unmet_cooling_water_ml               0.000000e+00
+actual_reclaimed_fraction            7.000000e-01
+direct_urban_withdrawal_ml           2.754267e+00
+direct_urban_consumption_ml          2.788190e-01
+total_water_footprint_ml             6.202834e-01
+water_balance_residual_ml            7.133183e-16
+
+=== 各数值列全程合计 ===
+installed_it_capacity_mw             7.300000e+03
+it_load_mw                           5.474991e+03
+load_factor                          5.474991e+02
+it_energy_mwh                        1.313998e+05
+facility_energy_mwh                  1.554051e+05
+pue                                  8.617995e+02
+cooling_heat_mwh_th                  1.554051e+05
+wet_cooling_fraction                 7.300000e+02
+dry_cooling_fraction                 0.000000e+00
+wet_bulb_temperature_c               6.787701e+03
+cycles_of_concentration              3.155206e+03
+evaporation_ml                       2.283503e+02
+drift_ml                             5.941699e-02
+blowdown_ml                          6.867524e+01
+internal_recovery_ml                 6.867524e+00
+gross_makeup_ml                      2.970850e+02
+external_makeup_ml                   2.902174e+02
+consumption_ml                       2.284097e+02
+return_flow_ml                       6.180772e+01
+wue_l_kwh                            1.609402e+03
+target_reclaimed_fraction            5.110000e+02
+offsite_electricity_water_ml         2.797291e+02
+quality_solver_reclaimed_fraction    5.110000e+02
+quality_solver_residual              0.000000e+00
+quality_solver_root_count            0.000000e+00
+external_withdrawal_ml               3.022174e+02
+potable_water_ml                     9.066523e+01
+reclaimed_water_ml                   2.115522e+02
+other_water_ml                       0.000000e+00
+storage_start_ml                     1.750800e+04
+storage_end_ml                       1.752000e+04
+storage_change_ml                    1.200000e+01
+unmet_cooling_water_ml               0.000000e+00
+actual_reclaimed_fraction            5.110000e+02
+direct_urban_withdrawal_ml           3.022174e+02
+direct_urban_consumption_ml          2.284097e+02
+total_water_footprint_ml             5.081388e+02
+water_balance_residual_ml            2.262079e-15

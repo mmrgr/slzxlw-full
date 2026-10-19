@@ -1,0 +1,116 @@
+=== The water use of data center workloads A review and assessment of .pdf ===
+PAGES: 12
+
+--- HEAD ---
+Full length article
+The water use of data center workloads: A review and assessment of 
+key determinants
+Nuoa Lei a,*, Jun Lu b
+, Arman Shehabi a, Eric Masanet c,d
+a Energy Technologies Area, Lawrence Berkeley National Laboratory, Berkeley, CA, USA
+b Division of Epidemiology and Biostatistics, University of Illinois, Chicago, IL, USA
+c Bren School of Environmental Science and Management, University of California, Santa Barbara, CA, USA
+d Department of Mechanical Engineering, University of California, Santa Barbara, USA
+A R T I C L E I N F O
+Keywords:
+Data centers
+Water
+Water efficiency
+Water-energy nexus
+Water usage effectiveness
+A B S T R A C T
+The global importance of data center water use is increasing with the rapid growth of digitalization and artificial 
+intelligence. This study analyzes the factors influencing workload-level water use, measured in liters consumed 
+per workload, to guide water-saving strategies in data centers. Our findings reveal workload-level water use 
+variations exceeding 10,000-fold, driven by over 1000-fold differences in water consumption per kilowatt hour 
+of server electricity consumed and approximately 10-fold differences in server workload efficiency. Key de­
+terminants are ranked as server efficiency, electrical grid water consumption factors, server utilization, cooling 
+system type, infrastructure efficiency, climate zone, inactive server percentage, and server refresh cycle. Notably, 
+there is no single recipe for minimizing water use; instead, optimal outcomes depend on tailored combinations of 
+these factors. This analysis addresses critical knowledge gaps by identifying the determinants of data center 
+water use and exploring their achievable minima under diverse site-specific constraints.
+1. Introduction
+Increasing demand for digital services has led to an increased reli­
+ance on data centers—the backbone of the internet which provides the 
+necessary functions of data processing, communication, and storage 
+(Shehabi et al., 2024, 2016). However, the operation of data centers 
+requires significant amounts of electricity and water (Masanet et al., 
+2020; Mytton, 2021). While data center electricity use has been the 
+subject of much investigation (Andrae and Edler, 2015; Belkhir and 
+Elmeligi, 2018; Jones, 2018; N. Lei and Masanet, 2021; Masanet et el., 
+2020), data center water consumption is a less studied topic that is 
+becoming increasingly important in the context of water scarcity and 
+freshwater conservation, especially at local levels (Lei and Masanet, 
+2022; Mytton, 2021; M.A.B. Siddik et al., 2021). Many data centers can 
+consume a significant amount of water directly for cooling and space 
+conditioning (Lei and Masanet, 2022). For example, Google’s data 
+centers in The Dalles consumed 355 million gallons of water in 2021, 
+representing 29 % of the city’s total water consumption, which has 
+raised concerns about local water stress, particularly in light of the 
+recent drought conditions in this region (Oregon Tech, 2022). Addi­
+tionally, data centers consume water indirectly through the water used 
+for electricity generation (Mytton 2021; Shehabi et al., 2016; Siddik 
+et al., 2024, M.A.B. 2021). This type of water use can be significant at 
+the local or national level depending on the power generation technol­
+ogies, power mixes, and electricity usage of the data centers. For 
+example, some very large data centers have power capacities of hun­
+dreds of megawatts and the generation of 1 kW-hour of thermoelec­
+tricity or hydropower could consume 0.18–2.0 liters or 0.67–1194 liters 
+of water (Lee et al., 2018), respectively. This demonstrates a significant 
+amount of data center indirect water use and further emphasizes the 
+importance of considering data center water use going forward.
+To align with the growing importance of water conservation and 
+sustainability in data centers, operators are beginning to track, manage, 
+and report their water usage effectiveness (WUE) at the site level (WUE- 
+site) and at the source level (WUE-source) (Facebook, 2014; Scaleway, 
+2021). WUE-site measures the efficiency of onsite water consumption at 
+a data center facility, expressed as the 
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+Conclusion
+Increasing digitalization and freshwater restrictions have brought 
+data center water conservation into the spotlight. While more data 
+center operators are beginning to track and report WUE-site and WUE- 
+source, these metrics fall short in measuring water use at the work­
+load level, which is the ideal basis for understanding and comparing 
+water use in data centers.
+This study focuses on analyzing the determinants of overall 
+workload-level water use, enabling more direct comparisons across data 
+centers with diverse site-specific characteristics. Using statistical anal­
+ysis of recent server performance data, we first highlighted the rela­
+tionship between server electricity efficiency, utilization levels, refresh 
+rates, and inactive server management as determinants of direct server 
+electricity use per workload. Next, we examined the relationship be­
+tween PUE and WUE-site through climate- and technology-specific 
+simulations of major data center cooling archetypes, analyzing their 
+influence on facility-level electricity and water use per workload. 
+Finally, we assessed the relationship between electrical WCFs, WUE- 
+source, and overall water use per workload. In general, this paper ad­
+dresses critical gaps in existing research and contributes in the following 
+key ways: 
+Fig. 8. Importance ranking (based on Sobol’s total-effect index) for all of the 
+determinants of the overall water use per workload (Error bar ~ 95 % confi­
+dence interval of sensitivity indices). 
+Note: Server efficiency quantile ~ measures the server power efficiency for a 
+given year (SI S2); infrastructure efficiency quantile ~ measures the operating 
+efficiency of the data center infrastructure (i.e., PUE and WUE-site) for a given 
+cooling technology under a given climate zone.
+N. Lei et al. 
+Resources, Conservation & Recycling 219 (2025) 108310 
+10 
+
+• Our study provides a comprehensive workload-level water use 
+metric, integrating traditional efficiency measures such as PUE, 
+WUE-site, WCF, and server workload efficiency. This metric enables 
+consistent and comparable evaluations of data centers with varying 
+site-specific characteristics, offering a path toward standardizing 
+industry reporting, which is currently inconsistent in scope, quality, 
+and granularity.
+• Unlike prior studies that focus primarily on either direct or indirect 
+water use, this paper provides a holistic analysis, covering direct 
+water use such as space humidification, adiabatic cooling, and 
+cooling tower operations, as well as indirect water use, including 
+upstream water required fo

@@ -331,7 +331,13 @@ def main() -> None:
     print(f"\n总计 {len(frame)} 项：", flush=True)
     print(frame.groupby(["检查类别", "判定"]).size().to_string())
     print(f"\n-> {OUT / 'experiment_design_audit.csv'}")
+    # 2026-10-19 审计修复：此前 main() 无返回值、脚本无 sys.exit，
+    # 故凡有 FAIL 项也返回退出码 0（实测：C 现实性 8 项 FAIL 时 exit=0）。
+    # 这让该审计在 CI / 门禁里永远"通过"。现按 FAIL 数返回。
+    n_fail = int((frame["判定"] == "FAIL").sum())
+    return 1 if n_fail else 0
 
 
 if __name__ == "__main__":
-    main()
+    import sys as _sys
+    _sys.exit(main())

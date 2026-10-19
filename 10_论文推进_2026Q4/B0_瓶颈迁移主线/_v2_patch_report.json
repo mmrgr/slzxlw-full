@@ -1,0 +1,53 @@
+{
+  "hits": 9,
+  "total": 9,
+  "len_before": 33417,
+  "len_after": 36354,
+  "patches": [
+    {
+      "label": "修正1a §7.5 处理能力行口径（1150→1100，1450→1400）",
+      "hit": true,
+      "old_len": 147
+    },
+    {
+      "label": "修正1b §7.5 表下追加口径声明",
+      "hit": true,
+      "old_len": 115
+    },
+    {
+      "label": "修正1c §7.5 CO 产水量行口径加注",
+      "hit": true,
+      "old_len": 145
+    },
+    {
+      "label": "修正2 §5.6 删除\"未做阈值扰动\"（与 §9.2 第5条矛盾）",
+      "hit": true,
+      "old_len": 44
+    },
+    {
+      "label": "修正3 §7.2 追加指向 §5.7 的解析解释",
+      "hit": true,
+      "old_len": 84
+    },
+    {
+      "label": "修正4 §3.3 十条约束表后补纯物理口径定义",
+      "hit": true,
+      "old_len": 36
+    },
+    {
+      "label": "修正5 §9.5 后追加 23–28 条限制",
+      "hit": true,
+      "old_len": 73
+    },
+    {
+      "label": "修正6 §10 数据可用性追加 r* 产物与脚本",
+      "hit": true,
+      "old_len": 37
+    },
+    {
+      "label": "修正7 标题替换为 v2 版本",
+      "hit": true,
+      "old_len": 196
+    }
+  ]
+}

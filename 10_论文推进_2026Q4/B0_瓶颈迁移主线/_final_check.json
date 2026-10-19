@@ -1,0 +1,516 @@
+{
+  "passed": 102,
+  "total": 102,
+  "rows": [
+    {
+      "name": "图件门禁 = 91/91",
+      "ok": true,
+      "detail": "实际 91/91, rc=0"
+    },
+    {
+      "name": "数值核对 = 28/28",
+      "ok": true,
+      "detail": "实际 28/28, rc=0"
+    },
+    {
+      "name": "交付自审 = 46/46",
+      "ok": true,
+      "detail": "实际 46/46, rc=0"
+    },
+    {
+      "name": "分类学核对 = 41/41",
+      "ok": true,
+      "detail": "实际 41/41, rc=0"
+    },
+    {
+      "name": "政策区隔核对 = 25/25",
+      "ok": true,
+      "detail": "实际 25/25, rc=0"
+    },
+    {
+      "name": "摘要溯源核对 = 26/26",
+      "ok": true,
+      "detail": "实际 26/26, rc=0"
+    },
+    {
+      "name": "同步性检查 = 9/9",
+      "ok": true,
+      "detail": "实际 9/9, rc=0"
+    },
+    {
+      "name": "真实城市核对 = 30/30",
+      "ok": true,
+      "detail": "实际 30/30, rc=0"
+    },
+    {
+      "name": "文件存在：主稿 v1（原稿，应未改）",
+      "ok": true,
+      "detail": "60610 bytes"
+    },
+    {
+      "name": "文件存在：主稿 v2",
+      "ok": true,
+      "detail": "178323 bytes"
+    },
+    {
+      "name": "文件存在：理论推导",
+      "ok": true,
+      "detail": "10779 bytes"
+    },
+    {
+      "name": "文件存在：实验结果",
+      "ok": true,
+      "detail": "13182 bytes"
+    },
+    {
+      "name": "文件存在：纯物理口径",
+      "ok": true,
+      "detail": "9576 bytes"
+    },
+    {
+      "name": "文件存在：增量章节",
+      "ok": true,
+      "detail": "17217 bytes"
+    },
+    {
+      "name": "文件存在：文献坐标",
+      "ok": true,
+      "detail": "11770 bytes"
+    },
+    {
+      "name": "文件存在：标题摘要引言",
+      "ok": true,
+      "detail": "11168 bytes"
+    },
+    {
+      "name": "文件存在：修正清单",
+      "ok": true,
+      "detail": "7096 bytes"
+    },
+    {
+      "name": "文件存在：工作总结",
+      "ok": true,
+      "detail": "10960 bytes"
+    },
+    {
+      "name": "文件存在：分类学文档",
+      "ok": true,
+      "detail": "11697 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR1.pdf",
+      "ok": true,
+      "detail": "83686 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR1.png",
+      "ok": true,
+      "detail": "127690 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR2.pdf",
+      "ok": true,
+      "detail": "53757 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR2.png",
+      "ok": true,
+      "detail": "81306 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR3.pdf",
+      "ok": true,
+      "detail": "72575 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR3.png",
+      "ok": true,
+      "detail": "142696 bytes"
+    },
+    {
+      "name": "文件存在：现实性检验",
+      "ok": true,
+      "detail": "9059 bytes"
+    },
+    {
+      "name": "文件存在：贡献定位",
+      "ok": true,
+      "detail": "6580 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR4.pdf",
+      "ok": true,
+      "detail": "67060 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR4.png",
+      "ok": true,
+      "detail": "127700 bytes"
+    },
+    {
+      "name": "文件存在：网格收敛性",
+      "ok": true,
+      "detail": "6783 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR5.pdf",
+      "ok": true,
+      "detail": "67766 bytes"
+    },
+    {
+      "name": "文件存在：图 FigR5.png",
+      "ok": true,
+      "detail": "143338 bytes"
+    },
+    {
+      "name": "文件存在：SC一手证据",
+      "ok": true,
+      "detail": "8502 bytes"
+    },
+    {
+      "name": "文件存在：SC判据应用",
+      "ok": true,
+      "detail": "7721 bytes"
+    },
+    {
+      "name": "产物存在：rstar_scan_ha.csv",
+      "ok": true,
+      "detail": "125002 bytes"
+    },
+    {
+      "name": "产物存在：rstar_scan_co.csv",
+      "ok": true,
+      "detail": "125615 bytes"
+    },
+    {
+      "name": "产物存在：rstar_cawcc_by_r.csv",
+      "ok": true,
+      "detail": "1789 bytes"
+    },
+    {
+      "name": "产物存在：rstar_physical_cawcc_by_r.csv",
+      "ok": true,
+      "detail": "2232 bytes"
+    },
+    {
+      "name": "产物存在：rstar_boundaries_by_r.csv",
+      "ok": true,
+      "detail": "14379 bytes"
+    },
+    {
+      "name": "产物存在：rstar_physical_boundaries_by_r.csv",
+      "ok": true,
+      "detail": "14419 bytes"
+    },
+    {
+      "name": "产物存在：rstar_confound_control.csv",
+      "ok": true,
+      "detail": "7111 bytes"
+    },
+    {
+      "name": "产物存在：rstar_backlash_decomposition.csv",
+      "ok": true,
+      "detail": "4652 bytes"
+    },
+    {
+      "name": "产物存在：probe_rstar_mechanism.csv",
+      "ok": true,
+      "detail": "6010 bytes"
+    },
+    {
+      "name": "产物存在：probe_rstar_mechanism_meta.json",
+      "ok": true,
+      "detail": "325 bytes"
+    },
+    {
+      "name": "产物存在：rstar_regime_map.csv",
+      "ok": true,
+      "detail": "46710 bytes"
+    },
+    {
+      "name": "产物存在：rstar_regime_summary.json",
+      "ok": true,
+      "detail": "686 bytes"
+    },
+    {
+      "name": "产物存在：rstar_regime_validation.csv",
+      "ok": true,
+      "detail": "1869 bytes"
+    },
+    {
+      "name": "产物存在：rstar_regime_validation.json",
+      "ok": true,
+      "detail": "1452 bytes"
+    },
+    {
+      "name": "产物存在：rstar_sensitivity.csv",
+      "ok": true,
+      "detail": "6414 bytes"
+    },
+    {
+      "name": "产物存在：rstar_sensitivity_grid.csv",
+      "ok": true,
+      "detail": "4107 bytes"
+    },
+    {
+      "name": "产物存在：rstar_sensitivity_summary.json",
+      "ok": true,
+      "detail": "1420 bytes"
+    },
+    {
+      "name": "产物存在：rstar_policy_bridge.csv",
+      "ok": true,
+      "detail": "462 bytes"
+    },
+    {
+      "name": "产物存在：rstar_policy_bridge.json",
+      "ok": true,
+      "detail": "897 bytes"
+    },
+    {
+      "name": "产物存在：rstar_grid_convergence_50mw.csv",
+      "ok": true,
+      "detail": "104242 bytes"
+    },
+    {
+      "name": "产物存在：rstar_grid_convergence_25mw.csv",
+      "ok": true,
+      "detail": "205852 bytes"
+    },
+    {
+      "name": "产物存在：rstar_grid_convergence_10mw.csv",
+      "ok": true,
+      "detail": "161296 bytes"
+    },
+    {
+      "name": "产物存在：rstar_grid_convergence_summary.json",
+      "ok": true,
+      "detail": "7145 bytes"
+    },
+    {
+      "name": "产物存在：rstar_grid_convergence_table.csv",
+      "ok": true,
+      "detail": "608 bytes"
+    },
+    {
+      "name": "v1 仍为原稿（标题未变）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v1 未被注入 v2 章节",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §5.7",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §5.8",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §7.0 三杠杆",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §8.5 文献对接",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §9.6 且到第 29 条",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含四情形分类学",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含参数敏感性节",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §9.6 第 30–34 条",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 已修正「三情形一致」错误",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 引用 FigR3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 引用 FigR4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 引用 FigR5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含网格限定段",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含第 37-38 条",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §5.9 真实城市应用",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §9.7 限制",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 k*=3.50 判据",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含第 39-44 条",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含第 45-46 条（k* 的 ρ 依赖与单城份额）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 物种数已更正为 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 参数锚定已更正为 20",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "加州 k 分布产物存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "加州 k 清洗产物存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §1.6 口径区隔",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §5.8.2b 零效应区",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含 §8.6 政策意义",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含判据而非预测的定位",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含第 35–36 条",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 首行已改为 v2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 状态行已改为定稿候选",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 §7 标题已改为三杠杆",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要覆盖：四情形分类",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要覆盖：情形命名",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要覆盖：口径区隔",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要覆盖：判据定位",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要覆盖：多物种取紧",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要覆盖：零效应",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要覆盖：可证伪性",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含多物种核验（TDS 0.5532 / Cl 0.6842）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 含双因素框架",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 保留作者占位符",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v2 红线：承诺性表述仅在否定/禁令语境",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

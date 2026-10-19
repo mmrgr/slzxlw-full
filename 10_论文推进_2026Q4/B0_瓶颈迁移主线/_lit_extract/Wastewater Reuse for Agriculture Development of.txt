@@ -1,0 +1,112 @@
+=== Wastewater Reuse for Agriculture Development of.pdf ===
+PAGES: 10
+
+--- HEAD ---
+Wastewater Reuse for Agriculture: Development of a Regional Water
+Reuse Decision-Support Model (RWRM) for Cost-Eﬀective Irrigation
+Sources
+Quynh K. Tran,† Kurt A. Schwabe,‡ and David Jassby*,†
+†Chemical and Environmental Engineering and ‡School of Public Policy, University of California, Riverside, California 92521, United
+States
+*
+S Supporting Information
+ABSTRACT: Water scarcity has become a critical problem in
+many semiarid and arid regions. The single largest water use in
+such regions is for crop irrigation, which typically relies on
+groundwater and surface water sources. With increasing stress
+on these traditional water sources, it is important to consider
+alternative irrigation sources for areas with limited freshwater
+resources. One potential irrigation water resource is treated
+wastewater for agricultural ﬁelds located near urban centers. In
+addition, treated wastewater can contribute an appreciable
+amount of necessary nutrients for plants. The suitability of
+reclaimed water for speciﬁc applications depends on water
+quality and usage requirements. The main factors that
+determine the suitability of recycled water for agricultural
+irrigation are salinity, heavy metals, and pathogens, which cause adverse eﬀects on human, plants, and soils. In this paper, we
+develop a regional water reuse decision-support model (RWRM) using the general algebraic modeling system to analyze the
+cost-eﬀectiveness of alternative treatment trains to generate irrigation water from reclaimed wastewater, with the irrigation water
+designed to meet crop requirements as well as California’s wastewater reuse regulations (Title 22). Using a cost-minimization
+framework, least-cost solutions consisting of treatment processes and their intensities (blending ratios) are identiﬁed to produce
+alternative irrigation sources for citrus and turfgrass. Our analysis illustrates the beneﬁts of employing an optimization framework
+and ﬂexible treatment design to identify cost-eﬀective blending opportunities that may produce high-quality irrigation water for a
+wide range of end uses.
+■INTRODUCTION
+With concerns over water availability and reliability, municipal-
+ities and state governments are focusing more attention and
+resources on the reuse of municipal wastewater. California’s
+Orange County Water District (OCWD), which operates the
+largest groundwater replenishment system in the world, has
+invested $142 million to increase its current wastewater
+recycling plant capacity from 70 to 100 million gallons per
+day (MGD).1 Meanwhile, the neighboring Metropolitan Water
+District of Southern California (MWD), the country’s largest
+water district, is considering investing $15 million in a
+demonstration project that is intended to pave the way for
+the development of a 150 MGD wastewater recycling plant.2
+Such investments are consistent with national trends, as
+revealed in a recent National Academy of Sciences report,
+which notes that the volume of wastewater reused in the United
+States is increasing at an annual rate of 15%.3 California, Texas,
+and Arizona, three of the top four states in terms of total
+volume reused, are located in the arid southwest and are
+expected to experience more frequent and intense droughts
+under climate change.4
+Although the reuse of treated wastewater is not a new
+concept, concerns over the rising demand for water from
+population growth, coupled with both economic and environ-
+mental challenges, have made this option more attractive.3,5,6
+For instance, the estimated costs for MWD to recycle
+wastewater is approximately $0.72/m3 ($900 per acre-ft),
+signiﬁcantly less than the current cost of $1.13/m3 ($1400 per
+acre-ft) for imported water from northern California via the
+State Water Project (SWP), which supplies approximately 30%
+of water used in Southern California.2 In addition to oﬀering a
+less-costly alternative to imported water, reuse of wastewater is
+also seen as a more environmentally friendly and locally
+dependable option, particularly during drought when the
+reliability of imported supplies decreases substantially. Indeed,
+during the drought confronting California in 2014, one of the
+driest periods in California history, only 5% of the 
+
+--- ABSTRACT ---
+ABSTRACT: Water scarcity has become a critical problem in
+many semiarid and arid regions. The single largest water use in
+such regions is for crop irrigation, which typically relies on
+groundwater and surface water sources. With increasing stress
+on these traditional water sources, it is important to consider
+alternative irrigation sources for areas with limited freshwater
+resources. One potential irrigation water resource is treated
+wastewater for agricultural ﬁelds located near urban centers. In
+addition, treated wastewater can contribute an appreciable
+amount of necessary nutrients for plants. The suitability of
+reclaimed water for speciﬁc applications depends on water
+quality and usage requirements. The main factors that
+determine the suitability of recycled water for agricultural
+irrigation are salinity, heavy metals, and pathogens, which cause adverse eﬀects on human, plants, and soils. In this paper, we
+develop a regional water reuse decision-support model (RWRM) using the general algebraic modeling system to analyze the
+cost-eﬀectiveness of alternative treatment trains to generate irrigation water from reclaimed wastewater, with the irrigation water
+designed to meet crop requirements as well as California’s wastewater reuse regulations (Title 22). Using a cost-minimization
+framework, least-cost solutions consisting of treatment processes and their intensities (blending ratios) are identiﬁed to produce
+alternative irrigation sources for citrus and turfgrass. Our analysis illustrates the beneﬁts of employing an optimization framework
+and ﬂexible treatment design to identify cost-eﬀective blending opportunities that may produce high-quality irrigation water for a
+wide range of end uses.
+■INTRODUCTION
+With concerns over water availability and reliability, municipal-
+ities and state governments are focusing more attention and
+resources on the reuse of municipal wastewater. California’s
+Orange County Water District (OCWD), which operates the
+largest groundwater replenishment system in the world, has
+invested $142 million to increase its current wastewater
+recycling plant capacity from 70 to 100 million gallons per
+day (MGD).1 Meanwhile, the neighboring Metropolitan Water
+District of Southern California (MWD), the country’s largest
+water district, is considering investing $15 million in a
+demonstration project that is intended to pave the way for
+the development of a 150 MGD wastewater recycling plant.2
+Such investments are consistent with national trends, as
+revealed in a recent National Academy of Sciences report,
+which notes that the volume of wastew
+
+--- CONCLUSIONS ---
+

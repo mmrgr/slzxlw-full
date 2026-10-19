@@ -1,0 +1,40 @@
+{
+  "source": "Item 7 Post Meeting Material.pdf pp.60-61，转引 Bowers Final EIR (2023-10) pp.3-14, 4.18-2",
+  "cooling_recycled_af_per_year": 0.5,
+  "potable_af_per_year": 2.0,
+  "cooling_m3_per_year": 616.7,
+  "daily_cooling_m3": 1.69,
+  "wue_by_capacity": [
+    {
+      "it_mw": 1.0,
+      "wue_l_per_kwh": 0.0704,
+      "makeup_m3_per_day_per_mw": 1.6897
+    },
+    {
+      "it_mw": 5.0,
+      "wue_l_per_kwh": 0.0141,
+      "makeup_m3_per_day_per_mw": 0.3379
+    },
+    {
+      "it_mw": 10.0,
+      "wue_l_per_kwh": 0.007,
+      "makeup_m3_per_day_per_mw": 0.169
+    },
+    {
+      "it_mw": 20.0,
+      "wue_l_per_kwh": 0.0035,
+      "makeup_m3_per_day_per_mw": 0.0845
+    },
+    {
+      "it_mw": 50.0,
+      "wue_l_per_kwh": 0.0014,
+      "makeup_m3_per_day_per_mw": 0.0338
+    },
+    {
+      "it_mw": 72.0,
+      "wue_l_per_kwh": 0.001,
+      "makeup_m3_per_day_per_mw": 0.0235
+    }
+  ],
+  "note": "IT 容量未公开，故 WUE 无法唯一定值；72 MW 为 CEC 备用发电 designation，报告明确不得读作年电网需求。仅用于定性校验而非数值锚定。"
+}

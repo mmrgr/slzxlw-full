@@ -1,0 +1,119 @@
+=== Globaldata–watersymbiosisreducesAI infrastructure'scarbonand.pdf ===
+PAGES: 11
+
+--- HEAD ---
+Original Research
+Global data–water symbiosis reduces AI infrastructure's carbon and
+water footprint
+Aijie Wang a,b,1, Congchao Zhang b,1, Tiefu Xu c,*, Dragan Savic d,e, Jingjing Jiang f,
+Peng Xiao b, Chuan He a, Yu Tao a,**, Glen Daigger g, Nanqi Ren a,b
+a School of Eco-Environment, Harbin Institute of Technology, Shenzhen, 518055, China
+b State Key Laboratory of Urban-rural Water Resource & Environment, School of Environment, Harbin Institute of Technology, Harbin, 150090, China
+c School of Civil Engineering, Heilongjiang University, Harbin, 150080, China
+d KWR Water Research Institute, Nieuwegein, 3430, BB, Netherlands
+e Centre for Water Systems, University of Exeter, Exeter, EX4 4QF, UK
+f School of Economics and Management, Harbin Institute of Technology, Shenzhen, 518055, China
+g Department of Civil and Environmental Engineering, University of Michigan, Ann Arbor, MI, 48109, USA
+a r t i c l e
+i n f o
+Article history:
+Received 13 March 2026
+Received in revised form
+22 April 2026
+Accepted 22 April 2026
+Keywords:
+Data centre
+WWTP
+Infrastructure symbiosis
+Carbon mitigation
+Water saving
+a b s t r a c t
+Data centres support artiﬁci cial intelligence (AI) development but place rapidly increasing demands on
+electricity and freshwater resources, with cooling representing a signiﬁca cant portion of their total energy
+consumption. Wastewater treatment plants (WWTPs) discharge large volumes of treated efﬂue uent with
+substantial cooling potential; however, their integration with data centre infrastructure has not been
+evaluated. Here we construct a global geodatabase of over 4775 data centres and 57,547 municipal
+WWTPs across 98 countries, integrating spatial analysis, engineering systems modelling, optimisation,
+and life-cycle assessment to quantify the beneﬁts ts of combining treated water reuse with bidirectional
+thermal recovery. The analysis reveals a strong global spatial co-occurrence between data centres and
+WWTPs, enabling optimized national-scale pairings in which treated efﬂue uent is used for data centre
+cooling and the return heat is recovered to support sludge drying and anaerobic digestion. This sym-
+biotic approach reduces greenhouse gas emissions by approximately 84 million tonnes of CO2 equiva-
+lent annually, conserves approximately 1300 million m3 of freshwater, and provides net annual cost
+savings of approximately US$95.4 billion. The greatest mitigation and water-saving potential lies in the
+United States, Japan, China, the Netherlands, and the United Kingdom. These ﬁndings establish
+data–water symbiosis as a readily scalable infrastructure solution that decouples AI from its carbon and
+water footprints. WWTPs are poised to evolve from disposal facilities into critical energy-coupling hubs,
+enabling efﬁci cient thermal and water exchange across urban systems and accelerating progress towards
+multiple Sustainable Development Goals.
+© 2026 The Authors. Published by Elsevier B.V. on behalf of Chinese Society for Environmental Sciences,
+Harbin Institute of Technology, Chinese Research Academy of Environmental Sciences. This is an open
+access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+1. Introduction
+Data centres provide the foundational infrastructure for the
+development of artiﬁci cial intelligence (AI) [1], emerging as gluttons
+of electricity and water for the coming decades [2–4]. The
+advancement of green data centres, which deploy advanced
+technologies to maximise energy efﬁci ciency while minimising their
+environmental externalities [5,6], is critical for triple-bottom-line
+sustainability in AI development [7]. Notably, the average modern
+data centre uses around 30% of its power for cooling [8]. Current
+data centre cooling technologies mainly include air cooling and
+liquid cooling. Air cooling is simple to operate and remains widely
+used, but its heat transfer efﬁci ciency can be constrained under
+high-density computing loads. By contrast, liquid cooling dissi-
+pates heat more effectively and is becoming increasingly relevant
+This article is part of a special issue entitled: Green AI and Sustainable Computing
+published in Environmental Science and Ecotechnolog
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+Conclusions
+Coupling data centres with WWTPs through treated water
+reuse and bidirectional thermal recovery offers a practical, globally
+scalable pathway to substantially reduce the carbon and water
+footprints of AI infrastructure. The optimized symbiosis delivers
+meaningful GHG mitigation, freshwater conservation and net
+economic beneﬁts ts while concentrating advantages in regions
+where the two infrastructures already exhibit strong spatial co-
+location, notably the United States, Japan, China, the Netherlands
+and the United Kingdom. Beyond enhancing the operational efﬁ- -
+ciency of individual facilities, this framework repositions WWTPs
+as active urban resource hubs for water and heat exchange. As AI-
+driven computing demand continues to expand, data–water
+symbiosis provides a readily implementable infrastructure solu-
+tion that supports more coordinated urban planning and con-
+tributes to the decoupling of digital growth from escalating
+environmental pressures.
+CRediT authorship contribution statement
+Aijie Wang: Writing - Review & Editing, Writing - Original
+Draft, Funding Acquisition, Conceptualization. Congchao Zhang:
+Writing - Original Draft, Methodology, Formal Analysis, Concep-
+tualization. Tiefu Xu: Writing - Review & Editing, Conceptualiza-
+tion. Dragan Savic: Writing - Review & Editing. Jingjing Jiang:
+Writing - Review & Editing, Investigation. Peng Xiao: Methodol-
+ogy. Chuan He: Visualization. Yu Tao: Writing - Review & Editing,
+Resources, Investigation, Funding Acquisition, Conceptualization.
+Glen Daigger: Writing - Review & Editing. Nanqi Ren: Writing -
+Review & Editing, Supervision.
+Code availability
+The codes that support the ﬁndings of this study are available
+at: https://github.com/UrbanWaterHIT/Data_Water_Symbiosis.
+Declaration of competing interest
+The authors declare that they have no known competing
+ﬁnancial interests or personal relationships that could have
+appeared to inﬂue uence the work reported in this paper.
+Dr. Aijie Wang, the Executive Editor of Environmental Science
+and Ecotechnology; Dr. Dragan Savic and Dr. Glen Daigger, the
+Advisory Board Members of Environmental Science and Eco-
+technology; Miss Chuan He, the Editor of Environmental Science
+and Ecotechnology; Dr. Yu Tao, the Managing Editor of Environ-
+mental Science and Ecotechnology; and Dr. Nanqi Ren, the Editor-in-
+Chief of Environmental Science and Ecotechnology, were not
+involved in in the editorial review or the decision to publish this
+article.
+Acknowledgements
+This work was supported by the National Natural Science
+Foundation of China (No. 52321005, No. 5229

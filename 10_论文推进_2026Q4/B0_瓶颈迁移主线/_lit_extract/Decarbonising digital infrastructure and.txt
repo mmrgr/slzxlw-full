@@ -1,0 +1,71 @@
+=== Decarbonising digital infrastructure and.pdf ===
+PAGES: 11
+
+--- HEAD ---
+npj | urban sustainability
+Article
+Published in partnership with RMIT University
+https://doi.org/10.1038/s42949-025-00203-1
+Decarbonising digital infrastructure and
+urban sustainability in the case of data
+centres
+Check for updates
+Felicia H. M. Liu1
+, Karen P. Y. Lai2, Bertrand Seah3,4 & Winston T. L. Chow5,6
+This paper critically assesses the complex interplay between urban transitions of digitisation and
+sustainability. Building on a mixed-method research design, we unpack the challenges of
+decarbonising digital infrastructure while attending to urban sustainability goals in a land- and water-
+scarce country facing signiﬁcant physical climate risks. We identify transferrable lessons on the
+economic, technological, and environmental synergies and trade-offs behind data centre
+development and argue that stewarding the global data centre sector towards sustainability requires
+an ecosystem-wide approach. We identify implementation gaps across ﬁve key dimensions:
+technological innovation, policy and regulation, ﬁnance, infrastructure, and people. We ﬁnd that the
+progress and uptake of sustainability initiatives are often impeded by risk-averse DC operators, who
+are most concerned with real and perceived risks of downtime. We conclude with recommendations
+for data centre stakeholders to align the low-carbon transition of the data centre sector with broader
+objectives of climate resilience, smart city development, and sustainable ﬁnance.
+“Going digital” is often associated with “going green”1–4. Digitisation offers
+the potential of using big data and Internet of Things (IoT) technologies to
+monitor and improve operational efﬁciencies5. Cloud computing provides
+centralised platforms for data sharing and collaboration and promotes
+standardised procedures and sustainability across an organisation’s opera-
+tions and value chain6. The recent dramatic rise of artiﬁcial intelligence (AI)
+could offer precise predictive analytics to enhance resource use efﬁciency,
+including energy consumption and carbon emissions assessments, enabling
+faster and more accurate decision-making (Feroz et al.)5. Smart cities rely
+heavilyonIoTtogenerateandanalyseimmensevolumesof datatooptimise
+resourcemanagement,deliverefﬁcientinfrastructuralservices,andimprove
+the overall urban living environments7. However, the material environ-
+mental impact of digitisation is often overlooked. Underpinning this digital
+transition is the physical infrastructure of data centres (DCs). The global
+demand for DCs has skyrocketed in the last decade due to the increasing
+demand for Internet services, cloud storage, virtual workplaces, IoT, AI, and
+ﬁnancial technology (FinTech).
+To the casual observer, DCs are unassuming warehouse-like buildings
+(or dedicated spaces within a building) that house specialist computer
+equipment and associated components that support a broad range of
+activities—from social media to the storage of government documents to
+blockchain trading. DCs have historically operated behind the scenes and
+their environmental impacts largely unscrutinised. However, their rapid
+growth in recent years has caught the attention of investors, governments,
+and regulators, albeit for conﬂicting reasons.
+Forinvestors,DCsconstituteahighlydesirableassetclass.Accelerating
+demand for DC services offers favourable returns that hedge against eco-
+nomic volatility. While estimates vary amongst industrial analyses, the DC
+sector is projected to grow exponentially with a compound annual growth
+rate of between 5–11% by 20268,9. For governments, DCs are considered
+critical infrastructure for advancing technological innovation and the
+growth of digital economies10. Moreover, digitisation is now considered
+integral to facilitating a low-carbon economic transition11 and in building
+smart, climate-resilient cities12,13. However, such DC infrastructures are
+highly energy- and carbon-intensive, which could undermine the sustain-
+ability transition efforts of various ‘green’ digital innovations. The Inter-
+national Energy Agency14 estimates that global DCs and data transmission
+services currently account for 1% of energy-related greenhouse gas emis-
+sions, and DCs contribute to around 0.3
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+

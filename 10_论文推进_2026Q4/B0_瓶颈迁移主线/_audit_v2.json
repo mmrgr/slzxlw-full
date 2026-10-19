@@ -1,0 +1,236 @@
+{
+  "passed": 46,
+  "total": 46,
+  "rows": [
+    {
+      "name": "章节存在：## 摘要",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 1 引言",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：### 1.2 缺口",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：### 1.3 本文的定位与贡献",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：### 1.5 一个必须提前说明的方法立场",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 2 研究框架",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 3 方法",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：### 3.3 十条约束",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 4 结果 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 5 结果 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 5.7 结果 4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 5.8 结果 5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 6 结果 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 7 专题章",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：### 7.0 本章的结构",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 8 讨论",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 9 局限",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：### 9.6 水质兼容阈值章",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 10 数据与代码可用性",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 11 作者贡献",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 附录 A",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "章节存在：## 附录 B",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "红线：「承载力」无承诺性用法",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "红线：「能承载」无承诺性用法",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "携带限定/术语：未经实测率定",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "携带限定/术语：合成端点",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "携带限定/术语：不声称",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "携带限定/术语：estimand",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "携带限定/术语：hydrology_validation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "携带限定/术语：纯物理口径",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "携带限定/术语：联合口径",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "摘要含 r* = 0.5532",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "含机器精度残差 8.9×10⁻¹⁶",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "正文的 HA r=0.9 纯物理 1100 与产物一致",
+      "ok": true,
+      "detail": "产物=1100.0"
+    },
+    {
+      "name": "正文的 CO 负结果（1450 不变）与产物一致",
+      "ok": true,
+      "detail": "产物=1450.0"
+    },
+    {
+      "name": "正文 0.9497 / 0.9513 与产物一致",
+      "ok": true,
+      "detail": "0.9497/0.9513"
+    },
+    {
+      "name": "正文「反噬在 r<=r* 精确为零」有产物支撑",
+      "ok": true,
+      "detail": "max=7.28e-12"
+    },
+    {
+      "name": "旧 100 MW 处理能力曲线仍为 1100（历史对照保留）",
+      "ok": true,
+      "detail": "产物=[1100.0]"
+    },
+    {
+      "name": "§7.5 处理能力值已统一为 50 MW 网格的 1150（与主结果同网格）",
+      "ok": true,
+      "detail": "产物=[1150.0]"
+    },
+    {
+      "name": "§7.5 携带口径声明（同网格已统一，并说明旧 +300 为伪影）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "§5.6 已删「迁移点未做阈值扰动」",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "§5.6 已写入「已检验」表述",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "作者占位符保留（不代拟）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "引用 FigR1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "引用 FigR2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "限制条目编号连续（至少到 28）",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

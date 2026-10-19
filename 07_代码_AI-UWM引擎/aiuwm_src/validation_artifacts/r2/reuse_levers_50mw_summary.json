@@ -1,0 +1,420 @@
+{
+  "grid_mw": 50.0,
+  "capacities_mw": [
+    0.0,
+    50.0,
+    100.0,
+    150.0,
+    200.0,
+    250.0,
+    300.0,
+    350.0,
+    400.0,
+    450.0,
+    500.0,
+    550.0,
+    600.0,
+    650.0,
+    700.0,
+    750.0,
+    800.0,
+    850.0,
+    900.0,
+    950.0,
+    1000.0,
+    1050.0,
+    1100.0,
+    1150.0,
+    1200.0,
+    1250.0,
+    1300.0,
+    1350.0,
+    1400.0,
+    1450.0,
+    1500.0,
+    1550.0,
+    1600.0,
+    1650.0,
+    1700.0,
+    1750.0,
+    1800.0,
+    1850.0,
+    1900.0,
+    1950.0,
+    2000.0
+  ],
+  "bases": {
+    "ha": {
+      "baseline_joint_mw": 1150.0,
+      "baseline_joint_limiting": "max_source_abstraction_ratio",
+      "baseline_physical_mw": 1150.0,
+      "baseline_physical_limiting": "max_source_abstraction_ratio",
+      "treatment_capacity_lever": {
+        "joint": [
+          {
+            "reuse_treatment_capacity_ml_day": 40.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 45.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 60.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 75.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 90.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 120.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 160.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "physical": [
+          {
+            "reuse_treatment_capacity_ml_day": 40.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 45.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 60.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 75.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 90.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 120.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 160.0,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "joint_gain_mw": 0.0,
+        "physical_gain_mw": 0.0
+      },
+      "production_lever": {
+        "joint": [
+          {
+            "central_reuse_fraction": 0.16,
+            "estimated_production_ml_day": 32.224577269479454,
+            "reuse_treatment_capacity_ml_day": 40.3,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "central_reuse_fraction": 0.25,
+            "estimated_production_ml_day": 50.35090198356165,
+            "reuse_treatment_capacity_ml_day": 62.9,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 13.792095416109204
+          },
+          {
+            "central_reuse_fraction": 0.35,
+            "estimated_production_ml_day": 70.4912627769863,
+            "reuse_treatment_capacity_ml_day": 88.1,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.45,
+            "estimated_production_ml_day": 90.63162357041097,
+            "reuse_treatment_capacity_ml_day": 113.3,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.6,
+            "estimated_production_ml_day": 120.84216476054794,
+            "reuse_treatment_capacity_ml_day": 151.1,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "physical": [
+          {
+            "central_reuse_fraction": 0.16,
+            "estimated_production_ml_day": 32.224577269479454,
+            "reuse_treatment_capacity_ml_day": 40.3,
+            "cawcc_mw": 1150.0,
+            "limiting_constraint": "max_source_abstraction_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "central_reuse_fraction": 0.25,
+            "estimated_production_ml_day": 50.35090198356165,
+            "reuse_treatment_capacity_ml_day": 62.9,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 13.792095416109204
+          },
+          {
+            "central_reuse_fraction": 0.35,
+            "estimated_production_ml_day": 70.4912627769863,
+            "reuse_treatment_capacity_ml_day": 88.1,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.45,
+            "estimated_production_ml_day": 90.63162357041097,
+            "reuse_treatment_capacity_ml_day": 113.3,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.6,
+            "estimated_production_ml_day": 120.84216476054794,
+            "reuse_treatment_capacity_ml_day": 151.1,
+            "cawcc_mw": 1400.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "joint_gain_mw": 250.0,
+        "physical_gain_mw": 250.0
+      }
+    },
+    "co": {
+      "baseline_joint_mw": 1450.0,
+      "baseline_joint_limiting": "max_daily_average_grid_connection_ratio",
+      "baseline_physical_mw": 1450.0,
+      "baseline_physical_limiting": "max_daily_average_grid_connection_ratio",
+      "treatment_capacity_lever": {
+        "joint": [
+          {
+            "reuse_treatment_capacity_ml_day": 36.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 45.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 60.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 75.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 90.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 120.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 160.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "physical": [
+          {
+            "reuse_treatment_capacity_ml_day": 36.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 45.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 60.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 75.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 90.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 120.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "reuse_treatment_capacity_ml_day": 160.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "joint_gain_mw": 0.0,
+        "physical_gain_mw": 0.0
+      },
+      "production_lever": {
+        "joint": [
+          {
+            "central_reuse_fraction": 0.15,
+            "estimated_production_ml_day": 29.579323029041095,
+            "reuse_treatment_capacity_ml_day": 37.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "central_reuse_fraction": 0.25,
+            "estimated_production_ml_day": 49.29887171506849,
+            "reuse_treatment_capacity_ml_day": 61.6,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.35,
+            "estimated_production_ml_day": 69.01842040109588,
+            "reuse_treatment_capacity_ml_day": 86.3,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.45,
+            "estimated_production_ml_day": 88.73796908712329,
+            "reuse_treatment_capacity_ml_day": 110.9,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.6,
+            "estimated_production_ml_day": 118.31729211616438,
+            "reuse_treatment_capacity_ml_day": 147.9,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "physical": [
+          {
+            "central_reuse_fraction": 0.15,
+            "estimated_production_ml_day": 29.579323029041095,
+            "reuse_treatment_capacity_ml_day": 37.0,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": NaN
+          },
+          {
+            "central_reuse_fraction": 0.25,
+            "estimated_production_ml_day": 49.29887171506849,
+            "reuse_treatment_capacity_ml_day": 61.6,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.35,
+            "estimated_production_ml_day": 69.01842040109588,
+            "reuse_treatment_capacity_ml_day": 86.3,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.45,
+            "estimated_production_ml_day": 88.73796908712329,
+            "reuse_treatment_capacity_ml_day": 110.9,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          },
+          {
+            "central_reuse_fraction": 0.6,
+            "estimated_production_ml_day": 118.31729211616438,
+            "reuse_treatment_capacity_ml_day": 147.9,
+            "cawcc_mw": 1450.0,
+            "limiting_constraint": "max_daily_average_grid_connection_ratio",
+            "marginal_gain_mw_per_ml_day": 0.0
+          }
+        ],
+        "joint_gain_mw": 0.0,
+        "physical_gain_mw": 0.0
+      }
+    }
+  }
+}

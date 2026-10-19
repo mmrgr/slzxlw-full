@@ -1,0 +1,102 @@
+{
+ "n_scenarios": 1052,
+ "identity_max_err_ml": 63838.95815805193,
+ "unified_identity_max_err_ml": 2.8045105864293873e-06,
+ "branch_A_deg_residual_ml": 2.6315956347389147e-06,
+ "branch_C_deg_residual_ml": 7.275957614183426e-12,
+ "n_branch_A": 308,
+ "n_branch_C": 391,
+ "by_state": {
+  "shortage": {
+   "n": 661,
+   "dS_min": -63838.95815805193,
+   "dS_max": 69748.77421712712,
+   "dS_mean": -4467.6038182132825,
+   "n_negative": 381,
+   "n_positive": 158,
+   "unused_mean_ml": 10135.158910303177
+  },
+  "surplus": {
+   "n": 391,
+   "dS_min": -44603.05902383531,
+   "dS_max": 41465.5783253402,
+   "dS_mean": -15096.765486435472,
+   "n_negative": 380,
+   "n_positive": 11,
+   "unused_mean_ml": 33055.70018685124
+  }
+ },
+ "surplus_n_negative": 380,
+ "shortage_n_negative": 381,
+ "surplus_C_mean_ml": 0.0,
+ "surplus_F_mean_ml": 15096.765486435474,
+ "surplus_dS_mean_ml": -15096.765486435474,
+ "critical_pool_scale_OLD_NOT_A_THRESHOLD": {
+  "ha": 2.3841264631738595,
+  "co": 2.566713307866298
+ },
+ "surplus_threshold_true": {
+  "ha": {
+   "old_formula_elig_over_P0": 2.3841264631738595,
+   "old_accuracy": 0.7923809523809524,
+   "true_threshold_min": 1.3841264631738597,
+   "true_threshold_median": 1.960171993933455,
+   "true_threshold_max": 5.384118237856576,
+   "true_criterion_accuracy": 0.9942857142857143,
+   "observed_first_surplus_pool_scale": 2.0
+  },
+  "co": {
+   "old_formula_elig_over_P0": 2.566713307866298,
+   "old_accuracy": 0.7988614800759013,
+   "true_threshold_min": 1.5667133078662978,
+   "true_threshold_median": 2.1588572006816755,
+   "true_threshold_max": 5.566704656671055,
+   "true_criterion_accuracy": 0.9867172675521821,
+   "observed_first_surplus_pool_scale": 2.0
+  }
+ },
+ "reliable_subset": {
+  "n_all": 1052,
+  "n_reliable": 839,
+  "n_excluded": 213,
+  "excluded_share_pct": 20.25,
+  "status_counts": {
+   "converged_unique": 1027,
+   "no_convergence": 16,
+   "non_unique": 9
+  },
+  "strict_sign_counts": {
+   "neg": 626,
+   "pos": 177,
+   "exact_zero": 36,
+   "n": 839,
+   "convention": "strict sign; dS_pot == 0.0 counted separately, no tolerance band"
+  },
+  "tolerance_band_counts": {
+   "tol_ml": 1e-06,
+   "neg": 614,
+   "pos": 145,
+   "in_band_excluded": 80,
+   "n_effective_for_sign_counts": 759,
+   "convention": "|dS_pot| <= 1e-06 ML excluded from both signs; effective n = 759 (NOT 839)"
+  },
+  "reliable_n_dS_neg": 614,
+  "reliable_n_dS_pos": 145,
+  "reliable_n_zero_disp": 391,
+  "reliable_n_q_pos": 263,
+  "reliable_n_qpos_but_harmful": 0,
+  "n_coc_floor_degenerate": 188,
+  "note": "头条统计须以 reliable 子集为准; 未收敛情景的分配量为 0, 派生量不可用; CoC 触下限(<=1.000001)的退化情景亦已剔除 (A27)。⚠ 符号计数有两个口径: `strict_sign_counts`(主稿采用) 与 `tolerance_band_counts`(历史值, 其分母为 n_effective_for_sign_counts, **不是** n_reliable)。引用时必须说明用的是哪一个。"
+ },
+ "semantics": {
+  "chi_meaning": "本产物的 `chi` **就是** limit_scale (限值整体缩放因子), **不是** chi=CoC_lim/CoC_design。权威定义见 A26_语义统一/CHI_SEMANTICS.md。",
+  "authoritative_columns": [
+   "limit_scale",
+   "chi_strictness",
+   "quality_binding"
+  ],
+  "chi_strictness_note": "由引擎实测 CoC 反解, 仅具相对意义(依赖占位限值)。"
+ },
+ "runtime_s": 45.0,
+ "discipline_note": "三态由引擎实际分配判别 (既有用户是否拿满 + B2 是否闲置), 不用 pool 名义比较。口径为 A13c 排放—索取平衡 (dS_pot=C-F), 不使用已撤回的 psi/Delta。模型内结论, 非观测频率。"
+}

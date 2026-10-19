@@ -1,0 +1,119 @@
+=== The implications of drought and water conservation.pdf ===
+PAGES: 12
+
+--- HEAD ---
+The implications of drought and water conservation on the reuse of
+municipal wastewater: Recognizing impacts and identifying
+mitigation possibilities
+Quynh K. Tran a, David Jassby a, Kurt A. Schwabe b, c, *
+a Chemical and Environmental Engineering, University of California, Riverside, CA, USA
+b School of Public Policy, University of California, Riverside, CA, USA
+c Center for Global Food and Resources, University of Adelaide, Adelaide, Australia
+a r t i c l e
+i n f o
+Article history:
+Received 13 May 2017
+Received in revised form
+3 July 2017
+Accepted 26 July 2017
+Available online 27 July 2017
+Keywords:
+Drought
+Water conservation
+Reuse
+Treated municipal wastewater
+Mitigation
+Water quality
+a b s t r a c t
+As water agencies continue to investigate opportunities to increase resilience and local water supply
+reliability in the face of drought and rising water scarcity, water conservation strategies and the reuse of
+treated municipal wastewater are garnering signiﬁcant attention and adoption. Yet a simple water
+balance thought experiment illustrates that drought, and the conservation strategies that are often
+enacted in response to it, both likely limit the role reuse may play in improving local water supply
+reliability. For instance, as a particular drought progresses and agencies enact water conservation
+measures to cope with drought, inﬂuent ﬂows likely decrease while inﬂuent pollution concentrations
+increase, particularly salinity, which adversely affects wastewater treatment plant (WWTP) costs and
+efﬂuent quality and ﬂow. Consequently, downstream uses of this efﬂuent, whether to maintain
+streamﬂow and quality, groundwater recharge, or irrigation may be impacted. This is unfortunate since
+reuse is often heralded as a drought-proof mechanism to increase resilience. The objectives of this paper
+are two-fold. First, we illustratedusing a case study from Southern California during its most recent
+droughtd how drought and water conservation strategies combine to reduce inﬂuent ﬂow and quality
+and, subsequently, efﬂuent ﬂow and quality. Second, we use a recently developed regional water reuse
+decision support model (RWRM) to highlight cost-effective strategies that can be implemented to
+mitigate the impacts of drought on efﬂuent water quality. While the solutions we identify cannot in-
+crease the ﬂow of inﬂuent or efﬂuent coming into or out of a treatment plant, they can improve the value
+of the remaining efﬂuent in a cost-effective manner that takes into account the characteristics of its
+demand, whether it be for landscaping, golf courses, agricultural irrigation, or surface water
+augmentation.
+© 2017 Elsevier Ltd. All rights reserved.
+1. Introduction
+In response to water shortages and drought, municipalities are
+exploring a broad array of options to improve local water supply
+reliability and resilience. Demand management strategies that
+include both price (e.g., increasing block rate pricing) and nonprice
+approaches (e.g., low ﬂush toilets, low ﬂow showerheads) to reduce
+water consumption are one option (Baerenklau et al., 2014; Dupont,
+2015). As Fig. 1 illustrates, demand management is likely a
+signiﬁcant contributor to the noticeable reductions in per capita
+water use throughout the U.S. (MacKichan, 1957; MacKichan and
+Kammerer, 1961; Murray, 1968; Murray and Reeves, 1972, 1977;
+Solley et al., 1983, 1988, 1993, 1998; Hutson et al., 2004; Kenny
+et al., 2009; Maupin et al., 2014). Concurrently, and on the
+supply-side of the water scarcity ledger, agencies increasingly are
+augmenting local supplies through the use of treated municipal
+wastewater (Fig. 1) (MacKichan, 1957; MacKichan and Kammerer,
+1961; Maupin et al., 2014; Murray, 1968; Murray and Reeves,
+1972, 1977; Solley et al., 1983, 1988, 1993, 1998; Hutson et al.,
+2004; Groundwater Replenishment System (GWRS), 2008, 2009,
+2010, 2011, 2012, 2013, 2014, 2015; IEUA, 2009, 2010, 2011, 2012,
+2013a, 2013b, 2014, 2015a, 2015b, 2015c, 2016; Kenny et al.,
+* Corresponding author. Present address: School of Public Policy, UC Riverside,
+Interdisciplinary South Building 4147, 3401 Watkins Dr., Riverside, CA, 92521, USA.
+E-mail address: kurt.schwabe@ucr.edu (K.A. Schwabe).
+Contents lists 
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+Conclusions
+In times of drought, which are expected to increase in both
+frequency and severity, the availability of freshwater resources
+decrease and its quality, particularly with respect to salinity, often
+declines. In response, water agencies are increasingly implement-
+ing conservation measures to reduce demand while investing in the
+reuse of treated municipal wastewater to augment supply, both
+with the intention to increase resilience. Our results show that both
+the water supply effects of drought and the conservation measures
+enacted in response to it combine to reduce the quantity and
+quality of inﬂuent available for treatment which, in turn, reduces
+the quantity and quality of treated municipal wastewater for reuse
+under conventional treatment processes. Our modeling results also
+illustrate that cost-effective blending strategies can be imple-
+mented to mitigate the water quality effects, increasing the value of
+the remaining efﬂuent for reuse, whether it be for surface water
+augmentation, groundwater replenishment, or irrigation of crops,
+golf courses, or landscapes. We also highlight the beneﬁts of
+treating the wastewater based on the characteristics of demand. In
+our case study, relaxing the constraints on both HCO3 and PO4-P
+concentrations relative to the pre-drought levels lead to reduced
+treatment costs while still achieving an efﬂuent quality superior to
+pre-drought levels for all the other water quality parameters.
+From a management and policy perspective, three signiﬁcant
+conclusions can be drawn from our analysis. First, municipalities,
+cities, and regions that rely on both conservation and reuse as a
+means to address drought and water scarcity need to recognize the
+potential dependence of the latter on the former in terms of its
+effect on the potential supply of treated municipal wastewater. To
+the extent possible, efforts to promote and advocate for outdoor
+water conservation rather than indoor conservation break this
+dependence. Second, drought and the conservation measures
+enacted in response can result in poorer quality water, particularly
+with respect to salinity. Given that conventional treatment pro-
+cesses are not designed to address these higher constituent loads,
+the value of the remaining efﬂuent likely decreases relative to the
+downstream demands it serves. Consequently, recognizing this
+relationship should help the recipients of the treated municipal
+wastewater better plan for such outcomes and thus engage in cost-
+effective adaptation. Finally, while wastewater treatment plants
+themselves cannot mitigate the reduced ﬂows

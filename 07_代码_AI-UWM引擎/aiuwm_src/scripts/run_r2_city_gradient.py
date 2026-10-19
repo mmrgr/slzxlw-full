@@ -149,10 +149,17 @@ def _run_city(job: tuple[float, float]) -> dict:
         rows.append(record)
     scan = pd.DataFrame(rows)
 
+    # 与主流程 (run_r2.py / recalculate_r2_constraint_reports.py) 保持一致：
+    # 0 MW 是「无 AI」基线，此时 reclaimed_water_substitution_ratio = 0，
+    # 政策约束（>=0.65 / >=0.40）天然不适用，会让它抢占「首失效约束」的位置，
+    # 把限制约束系统性错标成 reclaimed_water_substitution_ratio。
+    # 主流程用 >=50 过滤，此处必须同样处理。
+    positive = scan[scan["ai_capacity_mw"] >= 50].reset_index(drop=True)
+
     year_kwargs = annual_constraints(raw_constraints)
     day_kwargs = daily_constraints(raw_constraints)
-    annual = find_ai_carrying_capacity(scan, year_kwargs)
-    daily = find_ai_carrying_capacity(scan, day_kwargs)
+    annual = find_ai_carrying_capacity(positive, year_kwargs)
+    daily = find_ai_carrying_capacity(positive, day_kwargs)
 
     return {
         "theta_climate": theta_climate,

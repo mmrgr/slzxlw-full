@@ -1,0 +1,122 @@
+=== Unintended consequences of water conservation.pdf ===
+PAGES: 8
+
+--- HEAD ---
+Articles
+https://doi.org/10.1038/s41893-020-0529-2
+1School of Public Policy, University of California, Riverside, Riverside, CA, USA. 2Water Policy Center, Public Policy Institute of California, San Francisco, CA, 
+USA. 3California Public Utilities Commission, San Francisco, CA, USA. 4Los Angeles County Water Sanitation Districts, Whittier, CA, USA. 5Department of 
+Civil and Environmental Engineering, University of California Los Angeles, Los Angeles, CA, USA. ✉e-mail: kurt.schwabe@ucr.edu
+A
+s cities in arid and semi-arid regions worldwide confront 
+a future consisting of growing populations, less reliable 
+water supplies and more intense and frequent droughts, 
+municipal water managers are expanding their portfolio of water 
+management strategies to both reduce demand and augment 
+supplies1–3. Efforts to reduce demand, which addresses one-half of 
+the water scarcity puzzle, have given rise to an explosion of price and 
+non-price approaches that are intended to increase water-use effi-
+ciency and water conservation, including requiring lower-water-use 
+technologies (for example, low-flow toilets and showerheads) in 
+new constructions, encouraging and incentivizing the adoption of 
+such technologies in older buildings and homes, using non-price 
+approaches such as social comparisons, and developing programs 
+and pricing structures to encourage reductions in outdoor water 
+use4–12. Similar to what has been observed in irrigated agriculture, 
+these efforts have led to increases in water-use efficiency and a level-
+ling off of water use in many municipalities worldwide. For exam-
+ple, between 1995 and 2010, daily average water use per capita in 
+California’s urban sector decreased by nearly 30%, which was largely 
+due to programs that have encouraged, required or incentivized the 
+adoption of lower-water-use technologies13.
+On the supply side of the ledger, municipalities are increasingly 
+augmenting their water-supply portfolios with treated municipal 
+wastewater (TMW). In the United States, municipal wastewater 
+reuse—which supplies agricultural and urban irrigation, industrial 
+processes and potable water use—increased from 4 million m3 d−1 in 
+1995 to nearly 8.5 million m3 d−1 in 2015 (ref. 14). In California, reuse 
+of TMW for urban uses increased from 34 million m3 to more than 
+313 million m3 annually from 1970 to 2015, even outpacing agricul-
+tural reuse15. Owing to the cost and reliability advantages that are 
+associated with TMW, such trends will probably continue16,17. The 
+National Research Council estimates that TMW has the potential to 
+provide up to 27% of the overall water supplies of US municipalities, 
+up from its current 5% (ref. 18). California alone plans to increase 
+recycled water use by nearly 500%—from 521 million m3 to more 
+than 3,083 million m3 per year —by 2029 (ref. 15).
+However, a more careful examination of the potential synergis-
+tic effects among some types of conservation and reuse exposes a 
+conflict. By invoking basic water-balance accounting19,20, it is clear 
+that indoor water conservation may reduce the quantity and qual-
+ity of wastewater that is available for reuse (Fig. 1). The extent to 
+which reductions in water use impact the generation and quality of 
+wastewater has yet to be explored systematically, except for one-off 
+analyses of single plants14. The potential impacts of declining flows 
+within an interconnected water system can be broad, including 
+reducing the availability of treated wastewater for irrigated agricul-
+ture, golf courses, groundwater recharge or critical flows to local 
+effluent-dominated streams and rivers that provide habitat and rec-
+reational services. Owing to the coevolution and interdependencies 
+of factors that comprise our complex human water systems21–25, such 
+impacts can even result in increased water scarcity and necessitate 
+additional water reduction requests and measures.
+To demonstrate the potential impacts of water conservation on 
+the availability and quality of wastewater, we developed a monthly 
+dataset from January 2013 to December 2017, tracking effluent flow 
+and salinity levels in 33 wastewater treatment plants (WWTPs) 
+throughout Southe
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+conclusions
+We found that the recent conservation policies imposed on water 
+agencies by the state reduced both the availability and quality of 
+effluent flows—flows that are increasingly targeted to argument 
+local water supplies, especially during drought. The results, which 
+are consistent with basic water balance, suggest that policies that 
+0
+10
+5
+15
+Change in effluent TDS (%)
+Voluntary
+Mandate
+Self-certification
+Without controlling for source water salinity
+Controlling for source water salinity
+Fig. 5 | Analysis of the relationship between conservation policies and 
+changes in effluent TDS with and without controlling for the salinity 
+levels for the source water. Regression results using WWTP and month 
+fixed effects. The full estimation results are reported in columns 3 and 4 of 
+Supplementary Table 5. The subsample includes 11 WWTPs, in which we 
+observed the salinity level of the source water. The whiskers show the 95% 
+confidence intervals.
+Nature Sustainability | www.nature.com/natsustain
+
+Articles
+NAture SustAInAbIlIty
+lead to reductions in indoor water use will necessarily decrease the 
+supply of water that is available for recycling, reuse or discharge to 
+local streams/riverine systems and increase the constituent con-
+centrations of the influent, notably salinity. The magnitude of such 
+impacts to society will depend on many factors, including the extent 
+to which water-reduction policies target outdoor versus indoor 
+water efficiency and conservation, the ability by which WWTPs can 
+respond to lower and more concentrated influent flows34, the degree 
+to which source-water salinity changes and the sensitivity of the ser-
+vices that receive TMW to changes in effluent flow and quality.
+Our results contribute to a broader body of literature showing 
+that the failure of policy to consider the interdependencies and 
+coevolution of factors that comprise a human-water system will lead 
+to unanticipated water scarcity and unintended consequences19–25, 
+consequences that will be borne by the environment, the users of 
+recycled water, water managers and, therefore, society as a whole. 
+Diligence in incorporating water balance is one ingredient to help to 
+avoid such unanticipated and unintended outcomes, as is an under-
+standing that lowering the costs of water use (for example, through 
+improvements in technical efficiency) will often lead to produc-
+tion or behavioural changes that result in increased water use and 
+greater levels of scarcity absent some sort of rationing. Recognition 
+that the water system is not static but, rather, is comprise

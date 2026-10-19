@@ -1,0 +1,199 @@
+=== The environmental footprint of data centers in the United States.pdf ===
+PAGES: 12
+
+--- HEAD ---
+LETTER • OPEN ACCESS
+The environmental footprint of data centers in the
+United States
+To cite this article: Md Abu Bakar Siddik et al 2021 Environ. Res. Lett. 16 064017
+ 
+View the article online for updates and enhancements.
+You may also like
+Geospatial assessment of water footprints
+for hyperscale data centers in the United
+States
+Nuoa Lei, Jun Lu, Zhu Cheng et al.
+-
+The relationship between data centers and
+the climate is a systems challenge: a
+spatial analysis of United States data
+centers
+Abbey Kollar and Caitlin Grady
+-
+Quantum Enhanced Josephson Junction
+Field-Effect Transistors for Low-Energy
+Power-Efficient Microelectronics
+Applications
+Wei Pan
+-
+This content was downloaded from IP address 222.120.184.100 on 18/10/2026 at 11:28
+
+Environ. Res. Lett. 16 (2021) 064017
+https://doi.org/10.1088/1748-9326/abfba1
+OPEN ACCESS
+RECEIVED
+21 January 2021
+REVISED
+20 April 2021
+ACCEPTED FOR PUBLICATION
+26 April 2021
+PUBLISHED
+21 May 2021
+Original Content from
+this work may be used
+under the terms of the
+Creative Commons
+Attribution 4.0 licence.
+Any further distribution
+of this work must
+maintain attribution to
+the author(s) and the title
+of the work, journal
+citation and DOI.
+LETTER
+The environmental footprint of data centers in the United States
+Md Abu Bakar Siddik1, Arman Shehabi2and Landon Marston1,∗
+1 Department of Civil & Environmental Engineering, Virginia Tech, Blacksburg, VA, United States of America
+2 Energy Technologies Area, Lawrence Berkeley National Laboratory, Berkeley, CA, United States of America
+∗Author to whom any correspondence should be addressed.
+E-mail: lmarston@vt.edu
+Keywords: water scarcity, data center, water footprint, carbon footprint, water-energy nexus
+Supplementary material for this article is available online
+Abstract
+Much of the world’s data are stored, managed, and distributed by data centers. Data centers require
+a tremendous amount of energy to operate, accounting for around 1.8% of electricity use in the
+United States. Large amounts of water are also required to operate data centers, both directly for
+liquid cooling and indirectly to produce electricity. For the first time, we calculate spatially-detailed
+carbon and water footprints of data centers operating within the United States, which is home to
+around one-quarter of all data center servers globally. Our bottom-up approach reveals one-fifth of
+data center servers direct water footprint comes from moderately to highly water stressed
+watersheds, while nearly half of servers are fully or partially powered by power plants located
+within water stressed regions. Approximately 0.5% of total US greenhouse gas emissions are
+attributed to data centers. We investigate tradeoffs and synergies between data center’s water and
+energy utilization by strategically locating data centers in areas of the country that will minimize
+one or more environmental footprints. Our study quantifies the environmental implications
+behind our data creation and storage and shows a path to decrease the environmental footprint of
+our increasing digital footprint.
+1. Introduction
+Data centers underpin our digital lives. Though
+relatively obscure just a couple of decades prior,
+data centers are now critical to nearly every busi-
+ness, university, and government, as well as those
+that rely on these organizations. Data centers sup-
+port servers, digital storage equipment, and net-
+work infrastructure for the purpose of large-scale
+data processing and data storage [1]. Increasing
+demand for data creation, processing, and stor-
+age from existing and emerging technologies, such
+as online platforms/social media, video streaming,
+smart and connected infrastructure, autonomous
+vehicles, and artificial intelligence, has led to expo-
+nential growth in data center workloads and compute
+instances [2].
+The global electricity demand of data centers
+was 205 TWh in 2018, which represents about 1%
+of total global electricity demand [3]. The United
+States houses nearly 30% of data center servers,
+more than any other country [3–5]. In 2014, 1.8%
+of US electricity consumption was attributable to
+data centers, roughly equivalent to the electricity
+consumption of New Jersey [1]. Previous studies
+
+--- ABSTRACT ---
+Abstract
+Much of the world’s data are stored, managed, and distributed by data centers. Data centers require
+a tremendous amount of energy to operate, accounting for around 1.8% of electricity use in the
+United States. Large amounts of water are also required to operate data centers, both directly for
+liquid cooling and indirectly to produce electricity. For the first time, we calculate spatially-detailed
+carbon and water footprints of data centers operating within the United States, which is home to
+around one-quarter of all data center servers globally. Our bottom-up approach reveals one-fifth of
+data center servers direct water footprint comes from moderately to highly water stressed
+watersheds, while nearly half of servers are fully or partially powered by power plants located
+within water stressed regions. Approximately 0.5% of total US greenhouse gas emissions are
+attributed to data centers. We investigate tradeoffs and synergies between data center’s water and
+energy utilization by strategically locating data centers in areas of the country that will minimize
+one or more environmental footprints. Our study quantifies the environmental implications
+behind our data creation and storage and shows a path to decrease the environmental footprint of
+our increasing digital footprint.
+1. Introduction
+Data centers underpin our digital lives. Though
+relatively obscure just a couple of decades prior,
+data centers are now critical to nearly every busi-
+ness, university, and government, as well as those
+that rely on these organizations. Data centers sup-
+port servers, digital storage equipment, and net-
+work infrastructure for the purpose of large-scale
+data processing and data storage [1]. Increasing
+demand for data creation, processing, and stor-
+age from existing and emerging technologies, such
+as online platforms/social media, video streaming,
+smart and connected infrastructure, autonomous
+vehicles, and artificial intelligence, has led to expo-
+nential growth in data center workloads and compute
+instances [2].
+The global electricity demand of data centers
+was 205 TWh in 2018, which represents about 1%
+of total global electricity demand [3]. The United
+States houses nearly 30% of data center servers,
+more than any other country [3–5]. In 2014, 1.8%
+of US electricity consumption was attributable to
+data centers, roughly equivalent to the electricity
+consumption of New Jersey [1]. Previous studies
+found power densities per floor area of traditional
+data centers almost 15–100 times as large as those
+of typical commercial buildings [6], and data cen-
+ter power d
+
+--- CONCLUSIONS ---
+conclusion
+The amount of data created and stored glob-
+ally is expected to reach 175 Zettabytes by 2025,
+representing nearly a six-fold increase from 2018
+[51]. The role of data centers in storing, managing,
+and distributing data has remained largely out of
+view of those dependent on their services. Similarly,
+the environmental implications of data centers have
+been obscured from public view. Here, for the first
+time, we estimate the water and carbon footprints
+of the US data center industry using infrastructure
+and facility-level data. Data centers heavy reliance on
+water scarce basins to supply their direct and indirect
+water requirements not only highlight the industry’s
+role in local water scarcity, but also exposes poten-
+tial risk since water stress is expected to increase in
+many watersheds due to increases in water demands
+and more intense, prolonged droughts due to climate
+change [52–54]. For these reasons, environmental
+considerations may warrant attention alongside typ-
+ical infrastructure, regulatory, workforce, customer-
+/client proximity, economic, and tax considerations
+when locating new data centers.
+The data center industry can take several meas-
+ures to reduce its environmental footprint, as well as
+minimize its water scarcity risks. First, the industry
+can continue its energy efficiency improvements. The
+ongoing shift to more efficient hyperscale and co-
+location data centers will lower the energy require-
+ments per compute instance. Software and hardware
+advances, as well as further PUE improvements, can
+continue to reduce energy requirements, and thus
+environmental externalities. For instance, quarterly
+PUE of as low as 1.07 has been reported by Google
+for some of their data centers [55]. Liquid immersion
+cooling technologies show promise of further reduc-
+tions in PUE, with one study reporting a PUE below
+1.04 [56]. The prospect of recovering low-grade heat
+(i.e. low temperature or unstable source of heat) from
+data centers for space or water heating is limited;
+however, approaches such as absorption cooling and
+organic Rankine cycle are promising technologies for
+generating electricity from waste heat [57].
+Second, the data center industry can make invest-
+ments in solar and wind energy. Directly connecting
+data center facilities to wind and solar energy sources
+ensures that water and carbon footprints are minim-
+ized. Purchasing renewable energy certificates from
+electricity providers does not necessarily reduce the
+water or carbon footprints of a data center. However,
+these investments gradually shift the electrical grid
+toward r

@@ -1,0 +1,82 @@
+[
+  {
+    "r": 0.5,
+    "enabled": false,
+    "coc_mean": 5.0,
+    "r_eff_mean": 0.5,
+    "makeup_sum_ml": 30770.831227145994,
+    "ratio_mean": null,
+    "state_status": "DISABLED_LEGACY_VOLUME_ONLY",
+    "solver_status": "not_applicable"
+  },
+  {
+    "r": 0.5,
+    "enabled": true,
+    "coc_mean": 5.0,
+    "r_eff_mean": 0.5,
+    "makeup_sum_ml": 30770.831227145994,
+    "ratio_mean": null,
+    "state_status": "ENABLED_DYNAMIC_STORAGE",
+    "solver_status": "converged"
+  },
+  {
+    "r": 0.7,
+    "enabled": false,
+    "coc_mean": 4.322200392927308,
+    "r_eff_mean": 0.7,
+    "makeup_sum_ml": 31923.917847527213,
+    "ratio_mean": null,
+    "state_status": "DISABLED_LEGACY_VOLUME_ONLY",
+    "solver_status": "not_applicable"
+  },
+  {
+    "r": 0.7,
+    "enabled": true,
+    "coc_mean": 4.999071507387572,
+    "r_eff_mean": 0.7,
+    "makeup_sum_ml": 30772.2335244468,
+    "ratio_mean": null,
+    "state_status": "ENABLED_DYNAMIC_STORAGE",
+    "solver_status": "converged"
+  },
+  {
+    "r": 0.8,
+    "enabled": false,
+    "coc_mean": 3.956834532374101,
+    "r_eff_mean": 0.7556447429315744,
+    "makeup_sum_ml": 32764.773706671887,
+    "ratio_mean": null,
+    "state_status": "DISABLED_LEGACY_VOLUME_ONLY",
+    "solver_status": "not_applicable"
+  },
+  {
+    "r": 0.8,
+    "enabled": true,
+    "coc_mean": 4.998571006208731,
+    "r_eff_mean": 0.7811050726875217,
+    "makeup_sum_ml": 30773.25611015789,
+    "ratio_mean": null,
+    "state_status": "ENABLED_DYNAMIC_STORAGE",
+    "solver_status": "converged"
+  },
+  {
+    "r": 0.9,
+    "enabled": false,
+    "coc_mean": 3.648424543946931,
+    "r_eff_mean": 0.7439966393894384,
+    "makeup_sum_ml": 33655.12264706866,
+    "ratio_mean": null,
+    "state_status": "DISABLED_LEGACY_VOLUME_ONLY",
+    "solver_status": "not_applicable"
+  },
+  {
+    "r": 0.9,
+    "enabled": true,
+    "coc_mean": 4.99814852677253,
+    "r_eff_mean": 0.7980360089940642,
+    "makeup_sum_ml": 30774.338885635312,
+    "ratio_mean": null,
+    "state_status": "ENABLED_DYNAMIC_STORAGE",
+    "solver_status": "converged"
+  }
+]

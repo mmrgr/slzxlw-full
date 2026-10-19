@@ -1,0 +1,90 @@
+{
+  "ha": {
+    "system_reliability_fraction": {
+      "threshold": 0.99,
+      "operator": ">=",
+      "max_value": 1.0,
+      "first_fail_mw": 2050.0,
+      "informative_at_4000": true
+    },
+    "unmet_cooling_water_ml": {
+      "threshold": 0.0,
+      "operator": "<=",
+      "max_value": 14583.746209,
+      "first_fail_mw": 2300.0,
+      "informative_at_4000": true
+    },
+    "max_wwtw_utilization": {
+      "threshold": 0.95,
+      "operator": "<=",
+      "max_value": 0.899192,
+      "first_fail_mw": null,
+      "informative_at_4000": false
+    },
+    "domestic_unmet_ml": {
+      "threshold": 0.0,
+      "operator": "<=",
+      "max_value": 29937.808198,
+      "first_fail_mw": 1850.0,
+      "informative_at_4000": true
+    },
+    "peak_capacity_ratio": {
+      "threshold": 1.0,
+      "operator": "<=",
+      "max_value": 1.347145,
+      "first_fail_mw": 1750.0,
+      "informative_at_4000": true
+    },
+    "reclaimed_water_substitution_ratio": {
+      "threshold": 0.65,
+      "operator": ">=",
+      "max_value": 0.7,
+      "first_fail_mw": 1350.0,
+      "informative_at_4000": true
+    }
+  },
+  "co": {
+    "system_reliability_fraction": {
+      "threshold": 0.99,
+      "operator": ">=",
+      "max_value": 1.0,
+      "first_fail_mw": 2550.0,
+      "informative_at_4000": true
+    },
+    "unmet_cooling_water_ml": {
+      "threshold": 0.0,
+      "operator": "<=",
+      "max_value": 6494.040943,
+      "first_fail_mw": 3000.0,
+      "informative_at_4000": true
+    },
+    "max_wwtw_utilization": {
+      "threshold": 0.95,
+      "operator": "<=",
+      "max_value": 0.875472,
+      "first_fail_mw": null,
+      "informative_at_4000": false
+    },
+    "domestic_unmet_ml": {
+      "threshold": 0.0,
+      "operator": "<=",
+      "max_value": 19302.158763,
+      "first_fail_mw": 2350.0,
+      "informative_at_4000": true
+    },
+    "peak_capacity_ratio": {
+      "threshold": 1.0,
+      "operator": "<=",
+      "max_value": 1.263975,
+      "first_fail_mw": 2300.0,
+      "informative_at_4000": true
+    },
+    "reclaimed_water_substitution_ratio": {
+      "threshold": 0.4,
+      "operator": ">=",
+      "max_value": 0.45,
+      "first_fail_mw": 2100.0,
+      "informative_at_4000": true
+    }
+  }
+}

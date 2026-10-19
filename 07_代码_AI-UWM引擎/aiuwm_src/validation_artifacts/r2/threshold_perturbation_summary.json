@@ -1,0 +1,1350 @@
+{
+  "purpose": "迁移点 ±2% 阈值扰动敏感性（假设预注册_R5.md:76 登记的方法缺口）",
+  "method": "纯后处理：对 capacity_scan.csv 的 KPI 矩阵重施加扰动后的约束阈值，不重跑引擎。扰动按阈值量纲分类（见 perturbation_design）。",
+  "grid_step_mw": 50.0,
+  "domains": {
+    "ha": {
+      "baseline_cawcc_mw": 1150.0,
+      "baseline_limiting_constraint": "max_source_abstraction_ratio",
+      "baseline_first_failed_capacity_mw": 1200.0,
+      "grid_step_mw": 50.0,
+      "perturbation_design": {
+        "factors": [
+          0.98,
+          0.99,
+          1.0,
+          1.01,
+          1.02
+        ],
+        "A_zero_tolerance_not_perturbed": [
+          "domestic_unmet_ml",
+          "unmet_cooling_water_ml"
+        ],
+        "B_upper_bounded_only_downward": [
+          "system_reliability_fraction"
+        ],
+        "C_regular_bidirectional": [
+          "max_daily_average_grid_connection_ratio",
+          "max_local_connection_ratio",
+          "max_source_abstraction_ratio",
+          "max_wtw_utilization",
+          "max_wwtw_utilization",
+          "peak_capacity_ratio",
+          "reclaimed_water_substitution_ratio"
+        ],
+        "rationale": "首轮盲目对全部阈值做相对扰动时，system_reliability_fraction 的 ×1.02 越过物理上界 1.0，导致该约束恒失败、CAWCC 变为 None——这是伪影。本设计按阈值量纲分类扰动。"
+      },
+      "perturbations": {
+        "0.98": {
+          "factor": 0.98,
+          "cawcc_mw": 1000.0,
+          "cawcc_shift_mw": -150.0,
+          "first_failed_capacity_mw": 1050.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [
+            "max_source_abstraction_ratio",
+            "max_wtw_utilization",
+            "max_local_connection_ratio",
+            "peak_capacity_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_source_abstraction_ratio": {
+              "before": 1200.0,
+              "after": 1050.0,
+              "shift_mw": -150.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9309999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1200.0,
+              "after": 1100.0,
+              "shift_mw": -100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9309999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": 1350.0,
+              "after": 1350.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.65,
+                "applied": 0.637,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1450.0,
+              "after": 1450.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.98,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1550.0,
+              "after": 1500.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.98,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": 1750.0,
+              "after": 1600.0,
+              "shift_mw": -150.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.98,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": 1850.0,
+              "after": 1850.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9309999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.9702,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          }
+        },
+        "0.99": {
+          "factor": 0.99,
+          "cawcc_mw": 1050.0,
+          "cawcc_shift_mw": -100.0,
+          "first_failed_capacity_mw": 1100.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [
+            "max_source_abstraction_ratio",
+            "max_wtw_utilization",
+            "max_local_connection_ratio",
+            "peak_capacity_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_source_abstraction_ratio": {
+              "before": 1200.0,
+              "after": 1100.0,
+              "shift_mw": -100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9405,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1200.0,
+              "after": 1150.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9405,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": 1350.0,
+              "after": 1350.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.65,
+                "applied": 0.6435,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1450.0,
+              "after": 1450.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1550.0,
+              "after": 1500.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": 1750.0,
+              "after": 1700.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": 1850.0,
+              "after": 1850.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9405,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.9801,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          }
+        },
+        "1.00": {
+          "factor": 1.0,
+          "cawcc_mw": 1150.0,
+          "cawcc_shift_mw": 0.0,
+          "first_failed_capacity_mw": 1200.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [],
+          "constraint_first_failure": {
+            "max_source_abstraction_ratio": {
+              "before": 1200.0,
+              "after": 1200.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.95,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1200.0,
+              "after": 1200.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.95,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": 1350.0,
+              "after": 1350.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.65,
+                "applied": 0.65,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1450.0,
+              "after": 1450.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.0,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1550.0,
+              "after": 1550.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.0,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": 1750.0,
+              "after": 1750.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.0,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": 1850.0,
+              "after": 1850.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.95,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          }
+        },
+        "1.01": {
+          "factor": 1.01,
+          "cawcc_mw": 1200.0,
+          "cawcc_shift_mw": 50.0,
+          "first_failed_capacity_mw": 1250.0,
+          "limiting_constraint": "max_source_abstraction_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [
+            "max_source_abstraction_ratio",
+            "max_wtw_utilization",
+            "reclaimed_water_substitution_ratio",
+            "max_daily_average_grid_connection_ratio",
+            "peak_capacity_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_source_abstraction_ratio": {
+              "before": 1200.0,
+              "after": 1250.0,
+              "shift_mw": 50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9594999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1200.0,
+              "after": 1300.0,
+              "shift_mw": 100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9594999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": 1350.0,
+              "after": 1300.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.65,
+                "applied": 0.6565000000000001,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1450.0,
+              "after": 1500.0,
+              "shift_mw": 50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.01,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1550.0,
+              "after": 1550.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.01,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": 1750.0,
+              "after": 1850.0,
+              "shift_mw": 100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.01,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": 1850.0,
+              "after": 1850.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9594999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.99,
+                "perturbation_skipped_reason": "阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）"
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          }
+        },
+        "1.02": {
+          "factor": 1.02,
+          "cawcc_mw": 1250.0,
+          "cawcc_shift_mw": 100.0,
+          "first_failed_capacity_mw": 1300.0,
+          "limiting_constraint": "reclaimed_water_substitution_ratio",
+          "limiting_flipped": true,
+          "constraints_with_shifted_first_failure": [
+            "max_source_abstraction_ratio",
+            "max_wtw_utilization",
+            "reclaimed_water_substitution_ratio",
+            "max_daily_average_grid_connection_ratio",
+            "peak_capacity_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_source_abstraction_ratio": {
+              "before": 1200.0,
+              "after": 1350.0,
+              "shift_mw": 150.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.969,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1200.0,
+              "after": 1350.0,
+              "shift_mw": 150.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.969,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": 1350.0,
+              "after": 1300.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.65,
+                "applied": 0.663,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1450.0,
+              "after": 1500.0,
+              "shift_mw": 50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.02,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1550.0,
+              "after": 1550.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.02,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": 1750.0,
+              "after": 1850.0,
+              "shift_mw": 100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.02,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": 1850.0,
+              "after": 1850.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.969,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.99,
+                "perturbation_skipped_reason": "阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）"
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          },
+          "order_changed": true
+        }
+      },
+      "verdict": "CAWCC_SENSITIVE_TO_THRESHOLD",
+      "max_cawcc_span_mw": 250.0,
+      "perturbations_with_limiting_flip": [
+        "1.02"
+      ],
+      "constraints_with_any_shift_under_real_perturbation": [
+        "max_daily_average_grid_connection_ratio",
+        "max_local_connection_ratio",
+        "max_source_abstraction_ratio",
+        "max_wtw_utilization",
+        "peak_capacity_ratio",
+        "reclaimed_water_substitution_ratio"
+      ],
+      "migration_order_stable": false
+    },
+    "co": {
+      "baseline_cawcc_mw": 1450.0,
+      "baseline_limiting_constraint": "max_daily_average_grid_connection_ratio",
+      "baseline_first_failed_capacity_mw": 1500.0,
+      "grid_step_mw": 50.0,
+      "perturbation_design": {
+        "factors": [
+          0.98,
+          0.99,
+          1.0,
+          1.01,
+          1.02
+        ],
+        "A_zero_tolerance_not_perturbed": [
+          "domestic_unmet_ml",
+          "unmet_cooling_water_ml"
+        ],
+        "B_upper_bounded_only_downward": [
+          "system_reliability_fraction"
+        ],
+        "C_regular_bidirectional": [
+          "max_daily_average_grid_connection_ratio",
+          "max_local_connection_ratio",
+          "max_source_abstraction_ratio",
+          "max_wtw_utilization",
+          "max_wwtw_utilization",
+          "peak_capacity_ratio",
+          "reclaimed_water_substitution_ratio"
+        ],
+        "rationale": "首轮盲目对全部阈值做相对扰动时，system_reliability_fraction 的 ×1.02 越过物理上界 1.0，导致该约束恒失败、CAWCC 变为 None——这是伪影。本设计按阈值量纲分类扰动。"
+      },
+      "perturbations": {
+        "0.98": {
+          "factor": 0.98,
+          "cawcc_mw": 1400.0,
+          "cawcc_shift_mw": -50.0,
+          "first_failed_capacity_mw": 1450.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [
+            "max_daily_average_grid_connection_ratio",
+            "max_local_connection_ratio",
+            "max_wtw_utilization",
+            "max_source_abstraction_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1500.0,
+              "after": 1450.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.98,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1600.0,
+              "after": 1550.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.98,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1600.0,
+              "after": 1500.0,
+              "shift_mw": -100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9309999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_source_abstraction_ratio": {
+              "before": 1800.0,
+              "after": 1650.0,
+              "shift_mw": -150.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9309999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9309999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.98,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.4,
+                "applied": 0.392,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.9702,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          },
+          "order_changed": true
+        },
+        "0.99": {
+          "factor": 0.99,
+          "cawcc_mw": 1400.0,
+          "cawcc_shift_mw": -50.0,
+          "first_failed_capacity_mw": 1450.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [
+            "max_daily_average_grid_connection_ratio",
+            "max_wtw_utilization",
+            "max_source_abstraction_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1500.0,
+              "after": 1450.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1600.0,
+              "after": 1600.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1600.0,
+              "after": 1550.0,
+              "shift_mw": -50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9405,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_source_abstraction_ratio": {
+              "before": 1800.0,
+              "after": 1700.0,
+              "shift_mw": -100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9405,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9405,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.4,
+                "applied": 0.396,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.9801,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          },
+          "order_changed": true
+        },
+        "1.00": {
+          "factor": 1.0,
+          "cawcc_mw": 1450.0,
+          "cawcc_shift_mw": 0.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [],
+          "constraint_first_failure": {
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1500.0,
+              "after": 1500.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.0,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1600.0,
+              "after": 1600.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.0,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1600.0,
+              "after": 1600.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.95,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_source_abstraction_ratio": {
+              "before": 1800.0,
+              "after": 1800.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.95,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.95,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.0,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.4,
+                "applied": 0.4,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.99,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          }
+        },
+        "1.01": {
+          "factor": 1.01,
+          "cawcc_mw": 1450.0,
+          "cawcc_shift_mw": 0.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [
+            "max_wtw_utilization",
+            "max_source_abstraction_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1500.0,
+              "after": 1500.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.01,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1600.0,
+              "after": 1600.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.01,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1600.0,
+              "after": 1700.0,
+              "shift_mw": 100.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9594999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_source_abstraction_ratio": {
+              "before": 1800.0,
+              "after": 1850.0,
+              "shift_mw": 50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9594999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.9594999999999999,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.01,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.4,
+                "applied": 0.404,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.99,
+                "perturbation_skipped_reason": "阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）"
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          }
+        },
+        "1.02": {
+          "factor": 1.02,
+          "cawcc_mw": 1450.0,
+          "cawcc_shift_mw": 0.0,
+          "first_failed_capacity_mw": 1500.0,
+          "limiting_constraint": "max_daily_average_grid_connection_ratio",
+          "limiting_flipped": false,
+          "constraints_with_shifted_first_failure": [
+            "max_local_connection_ratio",
+            "max_wtw_utilization",
+            "max_source_abstraction_ratio"
+          ],
+          "constraint_first_failure": {
+            "max_daily_average_grid_connection_ratio": {
+              "before": 1500.0,
+              "after": 1500.0,
+              "shift_mw": 0.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.02,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_local_connection_ratio": {
+              "before": 1600.0,
+              "after": 1650.0,
+              "shift_mw": 50.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.02,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_wtw_utilization": {
+              "before": 1600.0,
+              "after": 1750.0,
+              "shift_mw": 150.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.969,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "max_source_abstraction_ratio": {
+              "before": 1800.0,
+              "after": 1950.0,
+              "shift_mw": 150.0,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.969,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "domestic_unmet_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            },
+            "max_wwtw_utilization": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.95,
+                "applied": 0.969,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "peak_capacity_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 1.0,
+                "applied": 1.02,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "reclaimed_water_substitution_ratio": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "C_regular",
+                "original": 0.4,
+                "applied": 0.40800000000000003,
+                "perturbation_skipped_reason": null
+              }
+            },
+            "system_reliability_fraction": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "B_upper_bounded",
+                "original": 0.99,
+                "applied": 0.99,
+                "perturbation_skipped_reason": "阈值 0.99 接近物理上界 1.0；向上扰动会越过 1.0 使约束恒失败（伪影），故只做向下（收紧）扰动（本扰动水平为向上，已跳过）"
+              }
+            },
+            "unmet_cooling_water_ml": {
+              "before": NaN,
+              "after": NaN,
+              "shift_mw": NaN,
+              "perturbation": {
+                "kind": "A_zero_tolerance",
+                "original": 0.0,
+                "applied": 0.0,
+                "perturbation_skipped_reason": "阈值=0 的零容忍物理约束，无 ±2% 裕度语义，不扰动"
+              }
+            }
+          }
+        }
+      },
+      "verdict": "CAWCC_AND_LIMITING_STABLE_BUT_ORDER_SHIFTS",
+      "max_cawcc_span_mw": 50.0,
+      "perturbations_with_limiting_flip": [],
+      "constraints_with_any_shift_under_real_perturbation": [
+        "max_daily_average_grid_connection_ratio",
+        "max_local_connection_ratio",
+        "max_source_abstraction_ratio",
+        "max_wtw_utilization"
+      ],
+      "migration_order_stable": false
+    }
+  }
+}

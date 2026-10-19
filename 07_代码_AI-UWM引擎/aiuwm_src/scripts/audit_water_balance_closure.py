@@ -106,8 +106,14 @@ def main() -> int:
                         "域": domain,
                         "容量点": cap_dir.name,
                         "恒等式": name,
+                        # 2026-10-19 审计修复：原仅写 round(..., 9)，会把 2.1e-13 这类
+                        # 机器精度残差舍入成 0.0，导致论文引用的"最大相对误差 2.5e-13%"
+                        # 无法从本 CSV 复核（该列 90 行全为 0）。
+                        # 现增补科学计数法字符串列，保留有效数字，数值列保持不变以兼容下游。
                         "相对闭合误差_pct": round(value["rel_error_pct"], 9),
+                        "相对闭合误差_科学计数": f"{value['rel_error_pct']:.3e}",
                         "最大绝对残差_ML": round(value["max_abs_ml"], 9),
+                        "最大绝对残差_科学计数": f"{value['max_abs_ml']:.3e}",
                         "是否满足<=5%": "PASS" if value["rel_error_pct"] <= TOLERANCE_PCT else "FAIL",
                     }
                 )

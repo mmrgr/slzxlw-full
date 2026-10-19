@@ -1,0 +1,298 @@
+=== 全部列 ===
+  date
+  data_center_id
+  area_id
+  installed_it_capacity_mw
+  it_load_mw
+  load_factor
+  it_energy_mwh
+  facility_energy_mwh
+  pue
+  cooling_heat_mwh_th
+  cooling_technology
+  wet_cooling_fraction
+  dry_cooling_fraction
+  wet_bulb_temperature_c
+  weather_fallback
+  cycles_of_concentration
+  quality_coc_fallback
+  evaporation_ml
+  drift_ml
+  blowdown_ml
+  internal_recovery_ml
+  gross_makeup_ml
+  external_makeup_ml
+  consumption_ml
+  return_flow_ml
+  wue_l_kwh
+  target_reclaimed_fraction
+  offsite_electricity_water_ml
+  quality_solver_reclaimed_fraction
+  quality_solver_status
+  quality_solver_residual
+  quality_solver_root_count
+  external_withdrawal_ml
+  potable_water_ml
+  reclaimed_water_ml
+  other_water_ml
+  storage_start_ml
+  storage_end_ml
+  storage_change_ml
+  unmet_cooling_water_ml
+  actual_reclaimed_fraction
+  direct_urban_withdrawal_ml
+  direct_urban_consumption_ml
+  total_water_footprint_ml
+  water_balance_residual_ml
+  quality_state_enabled
+  quality_integration_status
+  quality_state_status
+  quality_storage_volume_start_ml
+  quality_storage_volume_end_ml
+  quality_storage_water_balance_residual_ml
+  quality_solute_closure_residual_kg
+  quality_process_solute_closure_residual_kg
+  quality_recovered_return_volume_start_ml
+  quality_recovered_return_volume_end_ml
+  quality_recovered_return_volume_residual_ml
+  quality_recovered_return_mass_residual_kg
+  quality_loop_quality_volume_ml
+  quality_recovered_return_partition_closure_kg
+  quality_reclaimed_quality_provenance
+  quality_storage_start_chloride_kg
+  quality_storage_end_chloride_kg
+  quality_recovered_return_start_chloride_kg
+  quality_recovered_return_end_chloride_kg
+  quality_process_chloride_mg_l
+  quality_blowdown_chloride_mg_l
+  quality_blowdown_mass_chloride_kg
+  quality_recovered_return_chloride_kg
+  quality_removed_chloride_kg
+  quality_sewer_return_chloride_kg
+  quality_unreturned_chloride_kg
+  quality_partition_closure_chloride_kg
+  quality_solute_closure_chloride_kg
+  quality_storage_start_TDS_kg
+  quality_storage_end_TDS_kg
+  quality_recovered_return_start_TDS_kg
+  quality_recovered_return_end_TDS_kg
+  quality_process_TDS_mg_l
+  quality_blowdown_TDS_mg_l
+  quality_blowdown_mass_TDS_kg
+  quality_recovered_return_TDS_kg
+  quality_removed_TDS_kg
+  quality_sewer_return_TDS_kg
+  quality_unreturned_TDS_kg
+  quality_partition_closure_TDS_kg
+  quality_solute_closure_TDS_kg
+  quality_reclaimed_source_mg_l
+  quality_storage_start_BOD_kg
+  quality_storage_end_BOD_kg
+  quality_recovered_return_start_BOD_kg
+  quality_recovered_return_end_BOD_kg
+  quality_process_BOD_mg_l
+  quality_blowdown_BOD_mg_l
+  quality_blowdown_mass_BOD_kg
+  quality_recovered_return_BOD_kg
+  quality_removed_BOD_kg
+  quality_sewer_return_BOD_kg
+  quality_unreturned_BOD_kg
+  quality_partition_closure_BOD_kg
+  quality_solute_closure_BOD_kg
+  quality_storage_start_TSS_kg
+  quality_storage_end_TSS_kg
+  quality_recovered_return_start_TSS_kg
+  quality_recovered_return_end_TSS_kg
+  quality_process_TSS_mg_l
+  quality_blowdown_TSS_mg_l
+  quality_blowdown_mass_TSS_kg
+  quality_recovered_return_TSS_kg
+  quality_removed_TSS_kg
+  quality_sewer_return_TSS_kg
+  quality_unreturned_TSS_kg
+  quality_partition_closure_TSS_kg
+  quality_solute_closure_TSS_kg
+
+=== 数值列统计 ===
+列                                                 mean         min         max
+installed_it_capacity_mw                   1100.000000 1100.000000 1100.000000
+it_load_mw                                  824.998644  715.220000  921.140000
+load_factor                                   0.749999    0.650200    0.837400
+it_energy_mwh                             19799.96745217165.28000022107.360000
+facility_energy_mwh                       23417.20187519283.00885327476.609054
+pue                                           1.180547    1.113420    1.247790
+cooling_heat_mwh_th                       23417.20187519283.00885327476.609054
+wet_cooling_fraction                          1.000000    1.000000    1.000000
+dry_cooling_fraction                          0.000000    0.000000    0.000000
+wet_bulb_temperature_c                        9.298221  -10.996000   28.224706
+cycles_of_concentration                       4.998149    3.648425    5.000000
+evaporation_ml                               34.408950   28.334217   40.373793
+drift_ml                                      0.008603    0.007084    0.010093
+blowdown_ml                                   8.598973    7.076471   11.525714
+internal_recovery_ml                          0.859897    0.707647    1.152571
+gross_makeup_ml                              43.016526   35.417771   50.467241
+external_makeup_ml                           42.156629   34.710124   49.458906
+consumption_ml                               34.417553   28.341301   40.383886
+return_flow_ml                                7.739076    6.368824   10.373142
+wue_l_kwh                                     2.125291    2.004197    2.246068
+target_reclaimed_fraction                     0.900000    0.900000    0.900000
+offsite_electricity_water_ml                 42.150963   34.709416   49.457896
+quality_solver_reclaimed_fraction             0.798234    0.721224    0.900000
+quality_solver_residual                      -0.000000   -0.000000    0.000000
+quality_solver_root_count                     1.000000    1.000000    1.000000
+external_withdrawal_ml                       42.173067   34.710124   52.928831
+potable_water_ml                              8.684370    3.486077   13.607756
+reclaimed_water_ml                           33.488697   29.927432   40.000000
+other_water_ml                                0.000000    0.000000    0.000000
+storage_start_ml                             23.983562   12.000000   24.000000
+storage_end_ml                               24.000000   24.000000   24.000000
+storage_change_ml                             0.016438   -0.000000   12.000000
+unmet_cooling_water_ml                        0.000000    0.000000    0.000000
+actual_reclaimed_fraction                     0.798036    0.721224    0.900000
+direct_urban_withdrawal_ml                   42.173067   34.710124   52.928831
+direct_urban_consumption_ml                  34.417553   28.341301   40.383886
+total_water_footprint_ml                     76.568516   63.050717   89.841783
+water_balance_residual_ml                     0.000000   -0.000000    0.000000
+quality_storage_volume_start_ml              23.983562   12.000000   24.000000
+quality_storage_volume_end_ml                24.000000   24.000000   24.000000
+quality_storage_water_balance_residual_ml      0.000000    0.000000    0.000000
+quality_solute_closure_residual_kg            0.000000    0.000000    0.000000
+quality_process_solute_closure_residual_kg      0.000000    0.000000    0.000000
+quality_recovered_return_volume_start_ml      0.858857    0.000000    1.152571
+quality_recovered_return_volume_end_ml        0.859897    0.707647    1.152571
+quality_recovered_return_volume_residual_ml      0.000000    0.000000    0.000000
+quality_recovered_return_mass_residual_kg      0.000000    0.000000    0.000000
+quality_loop_quality_volume_ml               43.015486   35.427675   50.463347
+quality_recovered_return_partition_closure_kg      0.000000    0.000000    0.000000
+quality_storage_start_chloride_kg           210.310883  121.360819 2623.860850
+quality_storage_end_chloride_kg             208.548322  121.360819 2623.860850
+quality_recovered_return_start_chloride_kg     41.255101    0.000000  459.729900
+quality_recovered_return_end_chloride_kg     41.292367   20.487478  459.729900
+quality_process_chloride_mg_l                 9.466083    5.591888  109.327535
+quality_blowdown_chloride_mg_l               47.127996   27.959442  398.873264
+quality_blowdown_mass_chloride_kg           412.923668  204.874785 4597.298999
+quality_recovered_return_chloride_kg         41.292367   20.487478  459.729900
+quality_removed_chloride_kg                   0.000000    0.000000    0.000000
+quality_sewer_return_chloride_kg            371.631301  184.387306 4137.569099
+quality_unreturned_chloride_kg                0.000000    0.000000    0.000000
+quality_partition_closure_chloride_kg         0.000000   -0.000000    0.000000
+quality_solute_closure_chloride_kg            0.000000   -0.000000    0.000000
+quality_storage_start_TDS_kg               1070.361447  616.61989013145.416836
+quality_storage_end_TDS_kg                 1061.561855  616.61989013145.416836
+quality_recovered_return_start_TDS_kg       210.018515    0.000000 2303.224718
+quality_recovered_return_end_TDS_kg         210.208485  104.101251 2303.224718
+quality_process_TDS_mg_l                     48.184432   28.413578  547.725701
+quality_blowdown_TDS_mg_l                   239.908061  142.067892 1998.335893
+quality_blowdown_mass_TDS_kg               2102.084855 1041.01251023032.247182
+quality_recovered_return_TDS_kg             210.208485  104.101251 2303.224718
+quality_removed_TDS_kg                        0.000000    0.000000    0.000000
+quality_sewer_return_TDS_kg                1891.876369  936.91125920729.022464
+quality_unreturned_TDS_kg                     0.000000    0.000000    0.000000
+quality_partition_closure_TDS_kg              0.000000   -0.000000    0.000000
+quality_solute_closure_TDS_kg                 0.000000   -0.000000    0.000000
+quality_storage_start_BOD_kg                558.359603    0.000000  665.927322
+quality_storage_end_BOD_kg                  559.227374  154.969450  665.927322
+quality_recovered_return_start_BOD_kg       107.856048    0.000000  110.671771
+quality_recovered_return_end_BOD_kg         108.005588   24.043700  110.671771
+quality_process_BOD_mg_l                     25.365403    6.265249   30.191245
+quality_blowdown_BOD_mg_l                   126.827016   31.326246  150.956223
+quality_blowdown_mass_BOD_kg               1080.055880  240.436998 1106.717707
+quality_recovered_return_BOD_kg             108.005588   24.043700  110.671771
+quality_removed_BOD_kg                        0.000000    0.000000    0.000000
+quality_sewer_return_BOD_kg                 972.050292  216.393298  996.045936
+quality_unreturned_BOD_kg                     0.000000    0.000000    0.000000
+quality_partition_closure_BOD_kg              0.000000    0.000000    0.000000
+quality_solute_closure_BOD_kg                 0.000000    0.000000    0.000000
+quality_storage_start_TSS_kg                519.454732    0.000000  619.538477
+quality_storage_end_TSS_kg                  520.262017  144.638153  619.538477
+quality_recovered_return_start_TSS_kg       100.340776    0.000000  102.963595
+quality_recovered_return_end_TSS_kg         100.479893   22.440786  102.963595
+quality_process_TSS_mg_l                     23.598014    5.847566   28.088016
+quality_blowdown_TSS_mg_l                   117.990070   29.237830  140.440078
+quality_blowdown_mass_TSS_kg               1004.798934  224.407865 1029.635948
+quality_recovered_return_TSS_kg             100.479893   22.440786  102.963595
+quality_removed_TSS_kg                        0.000000    0.000000    0.000000
+quality_sewer_return_TSS_kg                 904.319040  201.967078  926.672353
+quality_unreturned_TSS_kg                     0.000000    0.000000    0.000000
+quality_partition_closure_TSS_kg              0.000000   -0.000000    0.000000
+quality_solute_closure_TSS_kg                 0.000000    0.000000    0.000000
+
+=== 与盐分/CoC 相关的列 ===
+  cycles_of_concentration: [3.648424543946932, 5.0, 5.0]
+  quality_coc_fallback: [False, False, False]
+  evaporation_ml: [30.547272677877555, 30.731760446693876, 30.592862202122447]
+  blowdown_ml: [11.525713603495243, 7.675257171561795, 7.640567334980081]
+  gross_makeup_ml: [42.08140256188518, 38.41470055836734, 38.24107775265306]
+  external_makeup_ml: [40.92883120153565, 37.64717484121117, 37.47702101915505]
+  quality_solver_reclaimed_fraction: [0.9, 0.9, 0.9]
+  quality_solver_status: ['converged', 'converged', 'converged']
+  quality_solver_residual: [0.0, 0.0, -1.1102230246251565e-16]
+  quality_solver_root_count: [1, 1, 1]
+  quality_state_enabled: [True, True, True]
+  quality_integration_status: ['READY_SINGLE_DC', 'READY_SINGLE_DC', 'READY_SINGLE_DC']
+  quality_state_status: ['ENABLED_DYNAMIC_STORAGE', 'ENABLED_DYNAMIC_STORAGE', 'ENABLED_DYNAMIC_STORAGE']
+  quality_storage_volume_start_ml: [12.0, 23.999999999999993, 24.0]
+  quality_storage_volume_end_ml: [23.999999999999993, 24.0, 24.0]
+  quality_storage_water_balance_residual_ml: [0.0, 0.0, 0.0]
+  quality_solute_closure_residual_kg: [0.0, 0.0, 9.094947017729282e-13]
+  quality_process_solute_closure_residual_kg: [3.637978807091713e-12, 1.8189894035458565e-12, 0.0]
+  quality_recovered_return_volume_start_ml: [0.0, 1.1525713603495242, 0.7675257171561796]
+  quality_recovered_return_volume_end_ml: [1.1525713603495242, 0.7675257171561796, 0.7640567334980082]
+  quality_recovered_return_volume_residual_ml: [0.0, 0.0, 0.0]
+  quality_recovered_return_mass_residual_kg: [0.0, 0.0, 0.0]
+  quality_loop_quality_volume_ml: [40.92883120153565, 38.799746201560694, 38.244546736311236]
+  quality_recovered_return_partition_closure_kg: [3.637978807091713e-12, 1.8189894035458565e-12, 0.0]
+  quality_reclaimed_quality_provenance: ['scenario_prior', 'treated_output', 'treated_output']
+  quality_storage_start_chloride_kg: [1446.0, 2623.860849743135, 1179.6650625551279]
+  quality_storage_end_chloride_kg: [2623.860849743135, 1179.6650625551279, 631.6321574399493]
+  quality_recovered_return_start_chloride_kg: [0.0, 459.7298999242587, 228.49771874955468]
+  quality_recovered_return_end_chloride_kg: [459.7298999242587, 228.49771874955468, 121.34933052997195]
+  quality_process_chloride_mg_l: [109.327535405964, 59.54138438414278, 31.764481669943507]
+  quality_blowdown_chloride_mg_l: [398.87326350434626, 297.7069219207139, 158.82240834971753]
+  quality_blowdown_mass_chloride_kg: [4597.298999242586, 2284.977187495547, 1213.4933052997194]
+  quality_recovered_return_chloride_kg: [459.7298999242587, 228.49771874955468, 121.34933052997195]
+  quality_removed_chloride_kg: [0.0, 0.0, 0.0]
+  quality_sewer_return_chloride_kg: [4137.569099318328, 2056.479468745992, 1092.1439747697475]
+  quality_unreturned_chloride_kg: [0.0, 0.0, 0.0]
+  quality_partition_closure_chloride_kg: [0.0, 0.0, 0.0]
+  quality_solute_closure_chloride_kg: [0.0, 0.0, 0.0]
+  quality_storage_start_TDS_kg: [7236.0, 13145.416835571297, 5890.113334216601]
+  quality_storage_end_TDS_kg: [13145.416835571297, 5890.113334216601, 3132.668618305447]
+  quality_recovered_return_start_TDS_kg: [0.0, 2303.2247182130395, 1141.667023692963]
+  quality_recovered_return_end_TDS_kg: [2303.2247182130395, 1141.667023692963, 602.6882160443566]
+  quality_process_TDS_mg_l: [547.7257014821378, 297.4928391775703, 157.76006927787327]
+  quality_blowdown_TDS_mg_l: [1998.3358926379817, 1487.4641958878515, 788.8003463893664]
+  quality_blowdown_mass_TDS_kg: [23032.247182130395, 11416.67023692963, 6026.882160443566]
+  quality_recovered_return_TDS_kg: [2303.2247182130395, 1141.667023692963, 602.6882160443566]
+  quality_removed_TDS_kg: [0.0, 0.0, 0.0]
+  quality_sewer_return_TDS_kg: [20729.022463917354, 10275.003213236669, 5424.19394439921]
+  quality_unreturned_TDS_kg: [0.0, 0.0, 0.0]
+  quality_partition_closure_TDS_kg: [3.637978807091713e-12, -1.8189894035458565e-12, 0.0]
+  quality_solute_closure_TDS_kg: [0.0, 0.0, 9.094947017729282e-13]
+  quality_reclaimed_source_mg_l: [{'TDS': 650.0, 'chloride': 130.0}, {'BOD': 11.74824860760142, 'TSS': 10.965032033761325, 'TDS': 38.5588706389538, 'chloride': 8.10153173498687}, {'BOD': 19.84291010558008, 'TSS': 18.511226534565655, 'TDS': 43.2787933920097, 'chloride': 9.10537230540127}]
+  quality_storage_start_BOD_kg: [nan, 0.0, 154.96945000040253]
+  quality_storage_end_BOD_kg: [nan, 154.96945000040253, 321.78161382574706]
+  quality_recovered_return_start_BOD_kg: [nan, 0.0, 24.043699784774045]
+  quality_recovered_return_end_BOD_kg: [nan, 24.043699784774045, 52.594514942947285]
+  quality_process_BOD_mg_l: [nan, 6.265249293238086, 13.767175299184613]
+  quality_blowdown_BOD_mg_l: [nan, 31.32624646619043, 68.83587649592306]
+  quality_blowdown_mass_BOD_kg: [nan, 240.43699784774043, 525.9451494294728]
+  quality_recovered_return_BOD_kg: [nan, 24.043699784774045, 52.594514942947285]
+  quality_removed_BOD_kg: [nan, 0.0, 0.0]
+  quality_sewer_return_BOD_kg: [nan, 216.39329806296638, 473.35063448652556]
+  quality_unreturned_BOD_kg: [nan, 0.0, 0.0]
+  quality_partition_closure_BOD_kg: [nan, 0.0, 0.0]
+  quality_solute_closure_BOD_kg: [nan, 0.0, 0.0]
+  quality_storage_start_TSS_kg: [nan, 0.0, 144.63815333370903]
+  quality_storage_end_TSS_kg: [nan, 144.63815333370903, 300.2133300223767]
+  quality_recovered_return_start_TSS_kg: [nan, 0.0, 22.44078646578911]
+  quality_recovered_return_end_TSS_kg: [nan, 22.44078646578911, 49.070092321825314]
+  quality_process_TSS_mg_l: [nan, 5.8475660070222135, 12.844620083949103]
+  quality_blowdown_TSS_mg_l: [nan, 29.237830035111067, 64.22310041974552]
+  quality_blowdown_mass_TSS_kg: [nan, 224.40786465789108, 490.70092321825314]
+  quality_recovered_return_TSS_kg: [nan, 22.44078646578911, 49.070092321825314]
+  quality_removed_TSS_kg: [nan, 0.0, 0.0]
+  quality_sewer_return_TSS_kg: [nan, 201.96707819210198, 441.6308308964278]
+  quality_unreturned_TSS_kg: [nan, 0.0, 0.0]
+  quality_partition_closure_TSS_kg: [nan, 0.0, 0.0]
+  quality_solute_closure_TSS_kg: [nan, 0.0, 0.0]

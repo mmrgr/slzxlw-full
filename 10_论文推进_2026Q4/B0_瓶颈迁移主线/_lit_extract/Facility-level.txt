@@ -1,0 +1,128 @@
+=== Facility-level.pdf ===
+PAGES: 15
+
+--- HEAD ---
+Facility-level energy-driven water footprint and scarcity implications of 
+Chinese data centers: a bottom-up analysis and scenario-based projection
+Feng Jiang a, Cuncun Duan b, Bin Chen a,*
+a State Key Joint Laboratory of Environmental Simulation and Pollution Control, School of Environment, Beijing Normal University, Beijing 100875, PR China
+b College of Water Sciences, Beijing Normal University, Beijing 100875, PR China
+H I G H L I G H T S
+G R A P H I C A L A B S T R A C T
+• A 
+bottom-up 
+framework 
+estimates 
+facility-level water footprints of Chinese 
+data centers.
+• 21 scenarios project future water foot­
+prints and regional water scarcity 
+implications.
+• 72 % of China’s computing capacity is 
+located in severe water-scarce regions 
+by 2022.
+• Simultaneous improvements in PUE, 
+WUE, and grid decarbonization cut WFs 
+by 51.5–58.3 %.
+A R T I C L E I N F O
+Keywords:
+Data center
+Water footprints
+Scenario analysis
+Eastern data and Western computing
+A B S T R A C T
+Data centers have rapidly expanded to meet increasing computing demands. As energy-intensive infrastructures, 
+data centers consume significant amounts of water to meet cooling requirements and support operations. Here, 
+we present a bottom-up framework to estimate the facility-level water footprints (WFs) of data centers in China 
+and project future pathways. First, we compile an inventory of Chinese data center operations and calculate both 
+direct and indirect water consumption. Then, by mapping water scarcity levels, we assess the dependence of the 
+data centers on limited water supplies. Finally, 21 scenarios are developed to model WFs trends and water 
+scarcity implications from 2025 to 2050. The results show that in 2022, China’s data centers consumed 15.7 
+billion m3 of water, accounting for 2.7 % of the nation’s total. Notably, 72 % of the computing capacity is located 
+in severe water-scarce regions. By 2050, simultaneous improvements in power usage efficiency, water usage 
+efficiency, and grid decarbonization could reduce national WFs by 51.5–58.3 % compared with the baseness as 
+usual scenario, alleviating the increased water consumption driven by the Eastern Data and Western Computing 
+Project in water-scarce regions such as Gansu and Ningxia Provinces. This study fills a gap in understanding the 
+water consumption of Chinese data centers, highlighting the urgent need to incorporate water resource limita­
+tions into planning for sustainable digital infrastructure.
+* Corresponding author at: No. 19, Xinjiekouwai St., Beijing 100875, PR China.
+E-mail address: chenb@bnu.edu.cn (B. Chen). 
+Contents lists available at ScienceDirect
+Applied Energy
+journal homepage: www.elsevier.com/locate/apenergy
+https://doi.org/10.1016/j.apenergy.2025.126522
+Received 28 April 2025; Received in revised form 18 June 2025; Accepted 22 July 2025 
+Applied Energy 399 (2025) 126522 
+Available online 25 July 2025 
+0306-2619/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies. 
+
+1. Introduction
+The rapid expansion of the information technology (IT) industry has 
+driven explosive growth in the demand for supporting infrastructure. By 
+2024, the global IT market is projected to reach a global value of 344 
+billion USD [1]. Data centers serve as the information backbone of the 
+increasingly digitalized world, housing IT equipment, such as servers, 
+storage devices, and network hardware, alongside systems to meet their 
+power and cooling demands [2]. With over 11,000 data centers oper­
+ating worldwide [3], their expansion is increasingly linked to the 
+widespread adoption of artificial intelligence, machine learning, and 
+other data-intensive technologies [4] [5].
+As essential infrastructure in the digital era, data centers are also 
+significant consumers of electricity and water [6]. The continuous 
+operation of servers and cooling systems contributes to approximately 
+1–2 % of global electricity use [7,8]. Their operations also lead to both 
+direct and indirect water consumption. Data centers consume water 
+directly for cooling purposes, which helps dissipate the immense heat 
+produced during operation. Addi
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+Conclusion
+This study presents the first bottom-up assessment of water foot­
+prints for Chinese data centers, capturing both direct onsite water use 
+and indirect water use linked to electricity consumption. We map the 
+geographic dependence of data centers on water-stressed basins, project 
+water-footprint trajectories from 2025 to 2050, and evaluate how shifts 
+in data center deployment may exacerbate regional water scarcity under 
+future climate scenarios.
+We found that China’s data centers consumed 15.7 billion m3 of 
+water in 2022, with 72 % of computing capacity located in regions 
+suffering from severe water scarcity. Under a business-as-usual trajec­
+tory, the Eastern Data and Western Computing Project would further 
+increase water demand in arid provinces such as Gansu and Ningxia. 
+However, by 2050, simultaneous improvements in power usage effi­
+ciency, water usage efficiency, and grid decarbonization could cut na­
+tional water footprints by 51.5–58.3 %, offsetting the additional 
+pressure from large-scale computing migration.
+Although this study focuses on China, the bottom-up framework and 
+scenario-based evaluation approach developed here can be applied to 
+other regions. Future studies can adopt our modelling structure in 
+different geopolitical contexts, such as Western Europe or North Amer­
+ica. Such cross-regional applications would allow the identification of 
+globally transferable best practices and help inform international data 
+center siting and water resource management strategies.
+CRediT authorship contribution statement
+Feng Jiang: Writing – original draft, Visualization, Methodology, 
+Data curation, Conceptualization. Cuncun Duan: Conceptualization. 
+Bin Chen: Writing – review & editing, Validation, Supervision, Meth­
+odology, Funding acquisition.
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Acknowledgments
+This work was supported by the National Key Research and Devel­
+opment Program of China (2024YFF1307000), National Natural Science 
+Foundation of China (72091511), and the Science and Technology 
+Innovation Program of Hunan Province (2023RC4008).
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi. 
+org/10.1016/j.apenergy.2025.126522.
+Data availability
+Data will be made available on request.
+References
+[1] Statista. Data centers - statistics & facts. https://www.statista. 
+com/topics/6165/data-centers/.
+[2] Jin C, Bai 

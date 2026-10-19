@@ -1,0 +1,108 @@
+=== Using life cycle assessment to drive .pdf ===
+PAGES: 13
+
+--- HEAD ---
+Nature  |  Vol 641  |  8 May 2025  |  331
+Analysis
+Using life cycle assessment to drive 
+innovation for sustainable cool clouds
+Husam Alissa1 ✉, Teresa Nick1, Ashish Raniwala1, Alberto Arribas Herranz1, Kali Frost1, 
+Ioannis Manousakis1, Kari Lio1, Brijesh Warrier1, Vaidehi Oruganti1, T. J. DiCaprio1, 
+Kathryn Oseen-Senda1, Bharath Ramakrishnan1, Naval Gupta1, Ricardo Bianchini1, 
+Jim Kleewein1, Christian Belady1, Marcus Fontoura1, Julie Sinistore2 ✉, Mukunth Natarajan2 ✉, 
+Lauren Johnson2 ✉, VeeAnder Mealing2 ✉, Praneet Arshi2 ✉ & Madeline Frieze2 ✉
+Addressing climate change requires accelerating the development of sustainable 
+alternatives to energy- and water-intensive technologies, particularly for rapidly 
+growing infrastructure such as data centres and cloud1. Here we present a life cycle 
+assessment study examining the impacts of advanced cooling technologies on 
+cloud infrastructure, from virtual machines to server architecture, data centre 
+buildings and the grid. Life cycle assessment is important for early-stage design 
+decisions, enhancing sustainability outcomes alongside feasibility and cost analysis2. 
+We discuss constructing a life cycle assessment for a complex cloud ecosystem 
+(including software, chips, servers and data centre buildings), analysing how different 
+advanced cooling technologies interact with this ecosystem and evaluating each 
+technology from a sustainability perspective to provide adoption guidelines. 
+Life cycle assessment quantifies the benefits of advanced cooling methods, such as 
+cold plates and immersion cooling, in reducing greenhouse gas emissions (15–21%), 
+energy demand (15–20%) and blue water consumption (31–52%) in data centres. This 
+comprehensive approach demonstrates the transformative potential of life cycle 
+assessment in driving sustainable innovation across resource-intensive technologies.
+Since 2010, global internet traffic has increased more than 15-fold, 
+with the sharpest jump occurring in the past few years. The increasing 
+demand for cloud apps, machine learning, augmented reality, autono-
+mous vehicles, artificial intelligence (AI) and other applications3–5 is 
+driving the rapid acceleration and transfer of computing tasks to data 
+centres, to the point that this phenomenon has been called the fourth 
+industrial revolution. And this revolution has just begun6.
+As exciting and useful as it is, the data-centre-centric revolution also 
+poses sustainability challenges. Generally, data centres consume 10–50 
+times more energy per square foot than typical commercial office build-
+ings1. Across providers, data centres accounted for approximately 1.5% 
+(about 300 TWh) of global electricity demand in 2020, a figure that is 
+expected to increase in the future7. It should be noted that, owing to 
+energy efficiency improvements, the increase in data centre energy 
+use has grown more slowly than the number of data centres and the 
+equipment they house. Expressed as energy per compute instance, the 
+energy intensity of global data centres has decreased by 20% annually 
+since 2010 (ref. 7).
+The information, communication and technology (ICT) sector needs 
+to do more. The Science Based Target Initiative (SBTi) indicates that 
+a 42% reduction by 2030 (compared with a 2015 baseline) in green-
+house gas (GHG) emissions across the entire ICT sector must occur to 
+achieve net-zero and limit global warming to 1.5 °C as recommended 
+by the Intergovernmental Panel on Climate Change (IPCC)8. To meet 
+this challenge, the ICT sector should prioritize data centre designs that 
+reduce consumption of water, energy and GHG emissions.
+Strong action is necessary. However, without understanding the 
+overall environmental implications of new technologies, organiza-
+tions find it difficult to chart a path to their reduction goals. Microsoft 
+has committed to being carbon-negative and water-positive by 2030 
+(ref. 9). As part of achieving this commitment, Microsoft has used life 
+cycle assessment (LCA) to systematically analyse the potential envi-
+ronmental impacts of data centres (GHG emissions, energy and water 
+consumption) and enable sustainability by design. When applied to 
+the wider data cent
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+Conclusions
+This study describes the use of LCA as a tool to compare ACDs to cold- 
+plate data centres and ICDs. Our results demonstrate the importance of 
+using LCA in early-stage design decisions to improve sustainability out-
+comes44 and show how cold-plate and immersion cooling have excellent 
+potential for reducing environmental impacts such as GHG emissions 
+(at least 15% reduction), energy consumption (at least 15% reduction) 
+and water consumption (at least 31% reduction) per Vcore per year.
+Our analysis has provided quantitative evidence of the sustainability 
+aspects of relevant cooling technologies so they can be properly evalu-
+ated in decision-making: highly optimized cold-plate or one-phase 
+immersion cooling technologies can perform on par with two-phase 
+immersion (which has challenges because of emerging regulatory 
+constraints on PFAS), making all three liquid-cooling technologies 
+desirable options. Additional considerations for decision-making on 
+cooling technologies are time-to-market, regulatory and supply chain 
+landscapes, technology complexities and implementation costs.
+A key result from our study was the effectiveness of the virtual core 
+concept—a new approach towards a functional unit that can simplify 
+and improve LCA analysis and comparison for complex cloud ecosys-
+tems. This can be illustrated as follows. Typically, a data centre is capa-
+ble of handling millions of Vcores. If, for example, a 10 GW of IT capacity 
+data centre can handle 1 thousand million Vcores and each Vcore in the ACD 
+has an impact of 1 kgCO2e, 1 MJ and 1 l, the total impact of the data centre 
+is 1 thousand million kgCO2e, 1 thousand million MJ and 1 thousand mil-
+lion l of water. If the same capacity centre were operated using any of 
+the liquid-cooling technologies presented here, then the impacts of the 
+data centre would reduce to 0.85 thousand million kgCO2e, 0.85 thou-
+sand million MJ and 0.69 thousand million l of water at the very least.
+Perspective on future work
+Microsoft is using these results to drive cooling and cloud infrastruc-
+ture innovation. As shown here, the early use of LCA identified the 
+embodied impacts of electronic equipment and how addressing use 
+phase energy and shifting to renewables can reduce them. This enables 
+Microsoft and others to effectively engage with suppliers to reduce the 
+environmental footprint of their equipment.
+Limited data availability, particularly for cooling fluids production, 
+data-centre-specific equipment and electronics life cycles, is a con-
+straint in the effectiveness of any LCA. Therefore, 

@@ -1,0 +1,123 @@
+=== Environmental impact and net-zero .pdf ===
+PAGES: 16
+
+--- HEAD ---
+Nature Sustainability | Volume 8 | December 2025 | 1541–1553
+1541
+nature sustainability
+https://doi.org/10.1038/s41893-025-01681-y
+Analysis
+Environmental impact and net-zero 
+pathways for sustainable artificial 
+intelligence servers in the USA
+ 
+Tianqi Xiao 
+  1, Francesco Fuso Nerini 
+  2,3,4,5, H. Damon Matthews 
+  6, 
+Massimo Tavoni 
+  4,5 & Fengqi You 
+  1,7,8,9 
+The rapidly increasing demand for generative artificial intelligence 
+(AI) models requires extensive server installation with sustainability 
+implications in terms of the compound energy–water–climate impacts. 
+Here we show that the deployment of AI servers across the United States 
+could generate an annual water footprint ranging from 731 to 1,125 million m3 
+and additional annual carbon emissions from 24 to 44 Mt CO2-equivalent 
+between 2024 and 2030, depending on the scale of expansion. Other factors, 
+such as industry efficiency initiatives, grid decarbonization rates and 
+the spatial distribution of server locations within the United States, 
+drive deep uncertainties in the estimated water and carbon footprints. 
+We show that the AI server industry is unlikely to meet its net-zero 
+aspirations by 2030 without substantial reliance on highly uncertain carbon 
+offset and water restoration mechanisms. Although best practices may 
+reduce emissions and water footprints by up to 73% and 86%, respectively, 
+their effectiveness is constrained by current energy infrastructure 
+limitations. These findings underscore the urgency of accelerating the 
+energy transition and point to the need for AI companies to harness the 
+clean energy potential of Midwestern states. Coordinating efforts of private 
+actors and regulatory interventions would ensure the competitive and 
+sustainable development of the AI sector.
+The accelerating deployment of artificial intelligence (AI) servers is 
+being fuelled by the growing demand for generative AI applications, 
+ignited by milestones such as the release of ChatGPT in 20221. Projec-
+tions signal even greater impact, exemplified by the recent Blackwell 
+platform, which analysts herald as a new Moore’s Law era2. Pronounce-
+ments from influential AI industry figures3 on both demand and sup-
+ply sides are seen as transformative shifts for the entire data-centre 
+industry. Whereas AI has been employed in various fields to advance 
+sustainability4,5, the remarkable energy requirements of AI itself raise 
+concerns regarding not only energy provisioning challenges6 but also 
+water scarcity and climate change issues stemming from the energy–
+water–climate nexus of AI data centres1,7,8. However, the holistic energy–
+water–climate implications of AI computing are largely unknown, 
+constrained by untransparent industry reports and limited data.
+The climate impact of AI servers will stem primarily from their 
+operations (Scopes 1 and 2)9 and supply-chain activities (Scope 3), 
+Received: 3 January 2025
+Accepted: 7 October 2025
+Published online: 10 November 2025
+ Check for updates
+1College of Engineering, Cornell University, Ithaca, NY, USA. 2Unit of Energy Systems Analysis (dESA), KTH Royal Institute of Technology, Stockholm, 
+Sweden. 3Environmental Change Institute, Oxford University, Oxford, UK. 4RFF-CMCC European Institute on Economics and the Environment, Fondazione 
+Centro Euro-Mediterraneo sui Cambiamenti Climatici, Milan, Italy. 5Politecnico di Milano, Milan, Italy. 6Concordia University, Montreal, Quebec, Canada. 
+7Cornell AI for Sustainability Initiative, Cornell University, Ithaca, NY, USA. 8Cornell Atkinson Center for Sustainability, Cornell University, Ithaca, NY, USA. 
+9Cornell University AI for Science Institute, Ithaca, NY, USA. 
+ e-mail: fengqi.you@cornell.edu
+
+Nature Sustainability | Volume 8 | December 2025 | 1541–1553
+1542
+Analysis
+https://doi.org/10.1038/s41893-025-01681-y
+usage effectiveness (WUE) and projected grid water intensity (water 
+footprint per unit of electricity) for each state. Southern states such 
+as Florida exhibit higher PUE and WUE than northern states such as 
+Washington, reflecting climate impacts. Moreover, the grid factors 
+demonstrate notable sensitivity to location, implying the importance 
+of the local g
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+conclusions could remain robust unless future 
+uncertainties greatly exceed modelled ranges. The modelling approach 
+used in this study enables future revisions with more available data. 
+The sensitivity analysis aims to capture the potential uncertainties 
+inherent to this problem, offering insights into the magnitude of their 
+influence on projection.
+Discussion
+Investment in AI servers is accelerating, as seen in projects such as 
+the $500 billion Stargate3. While AI advancement is a key priority, our 
+study highlights its environmental impact. To mitigate these risks, 
+we identify that concentrating AI server deployment in Midwestern 
+states—Texas, Montana, Nebraska and South Dakota—is optimal, given 
+their abundant renewables, low water scarcity and favourable pro-
+jected unit water and carbon intensities. These states possess sub-
+stantial untapped wind and solar resources, enabling robust green 
+power portfolios and reducing competition with other sectors. Their 
+lower water stress also helps ease public concerns and reduces the 
+need for costly water-saving measures. However, several implementa-
+tion challenges must be acknowledged. Texas, crucial to the optimal 
+strategy, may need to support an additional 74–178 TWh of AI server 
+demand, possibly exceeding its current total renewable generation of 
+139 TWh (ref. 38). This scale-up would require substantial investment 
+in new renewable capacity and transmission infrastructure, which is 
+already constrained by existing congestion39. Meanwhile, Montana, 
+Nebraska and South Dakota currently host minimal data-centre capac-
+ity, indicating that most of their existing internet infrastructure may 
+support only residential or standard industrial applications. This raises 
+potential connectivity and security concerns for high-performance AI 
+services. Enabling AI-grade infrastructure in these regions will require 
+broadband and security upgrades, with associated emissions and 
+capital costs increasing the expense of the optimal strategy. These 
+challenges underscore the complexity of sustainable siting decisions 
+and highlight the need for strategic coordination to ensure that AI 
+investments support both technological leadership and long-term 
+sustainability goals.
+Expanding AI servers in the suggested regions may be further 
+obstructed by public health concerns and other impacts on local sus-
+tainable development. Operational demands and construction of sup-
+porting facilities could generate air and water pollution through fossil 
+fuel use, substantial water consumption and large-scale construction 
+and

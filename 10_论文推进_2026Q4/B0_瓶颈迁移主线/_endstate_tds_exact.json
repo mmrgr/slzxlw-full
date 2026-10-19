@@ -1,0 +1,204 @@
+{
+  "note": "主稿 §5.7.9 末态三数的精确原值。r=0.9 动态路径，1100 MW，730 日。用于复核「环内 36.54 / 排污 182.69 / 比值 5.000」这一判定。",
+  "config": {
+    "endpoint": "D-HA",
+    "capacity_mw": 1100.0,
+    "r": 0.9,
+    "quality_state_enabled": true,
+    "days": 730
+  },
+  "end_state": {
+    "day_index": 729,
+    "loop_process_TDS_mg_l": 36.53808,
+    "blowdown_TDS_mg_l": 182.690401,
+    "ratio_blowdown_over_process": 5.0
+  },
+  "checks": {
+    "loop_is_36p54": true,
+    "blowdown_is_182p69": true,
+    "ratio_is_5": true
+  },
+  "last_30_days": [
+    {
+      "day": 700,
+      "process_TDS_mg_l": 38.5802,
+      "blowdown_TDS_mg_l": 192.9009,
+      "ratio": 5.0
+    },
+    {
+      "day": 701,
+      "process_TDS_mg_l": 41.2378,
+      "blowdown_TDS_mg_l": 206.1888,
+      "ratio": 5.0
+    },
+    {
+      "day": 702,
+      "process_TDS_mg_l": 42.2188,
+      "blowdown_TDS_mg_l": 211.0938,
+      "ratio": 5.0
+    },
+    {
+      "day": 703,
+      "process_TDS_mg_l": 42.668,
+      "blowdown_TDS_mg_l": 213.3402,
+      "ratio": 5.0
+    },
+    {
+      "day": 704,
+      "process_TDS_mg_l": 40.6883,
+      "blowdown_TDS_mg_l": 203.4415,
+      "ratio": 5.0
+    },
+    {
+      "day": 705,
+      "process_TDS_mg_l": 36.748,
+      "blowdown_TDS_mg_l": 183.7399,
+      "ratio": 5.0
+    },
+    {
+      "day": 706,
+      "process_TDS_mg_l": 34.4653,
+      "blowdown_TDS_mg_l": 172.3263,
+      "ratio": 5.0
+    },
+    {
+      "day": 707,
+      "process_TDS_mg_l": 38.968,
+      "blowdown_TDS_mg_l": 194.8399,
+      "ratio": 5.0
+    },
+    {
+      "day": 708,
+      "process_TDS_mg_l": 40.8803,
+      "blowdown_TDS_mg_l": 204.4016,
+      "ratio": 5.0
+    },
+    {
+      "day": 709,
+      "process_TDS_mg_l": 40.4673,
+      "blowdown_TDS_mg_l": 202.3364,
+      "ratio": 5.0
+    },
+    {
+      "day": 710,
+      "process_TDS_mg_l": 41.0882,
+      "blowdown_TDS_mg_l": 205.4411,
+      "ratio": 5.0
+    },
+    {
+      "day": 711,
+      "process_TDS_mg_l": 41.4391,
+      "blowdown_TDS_mg_l": 207.1954,
+      "ratio": 5.0
+    },
+    {
+      "day": 712,
+      "process_TDS_mg_l": 35.6505,
+      "blowdown_TDS_mg_l": 178.2523,
+      "ratio": 5.0
+    },
+    {
+      "day": 713,
+      "process_TDS_mg_l": 33.1552,
+      "blowdown_TDS_mg_l": 165.7762,
+      "ratio": 5.0
+    },
+    {
+      "day": 714,
+      "process_TDS_mg_l": 35.5474,
+      "blowdown_TDS_mg_l": 177.7372,
+      "ratio": 5.0
+    },
+    {
+      "day": 715,
+      "process_TDS_mg_l": 39.6229,
+      "blowdown_TDS_mg_l": 198.1147,
+      "ratio": 5.0
+    },
+    {
+      "day": 716,
+      "process_TDS_mg_l": 40.5891,
+      "blowdown_TDS_mg_l": 202.9455,
+      "ratio": 5.0
+    },
+    {
+      "day": 717,
+      "process_TDS_mg_l": 41.0037,
+      "blowdown_TDS_mg_l": 205.0186,
+      "ratio": 5.0
+    },
+    {
+      "day": 718,
+      "process_TDS_mg_l": 40.519,
+      "blowdown_TDS_mg_l": 202.595,
+      "ratio": 5.0
+    },
+    {
+      "day": 719,
+      "process_TDS_mg_l": 36.0843,
+      "blowdown_TDS_mg_l": 180.4217,
+      "ratio": 5.0
+    },
+    {
+      "day": 720,
+      "process_TDS_mg_l": 32.6094,
+      "blowdown_TDS_mg_l": 163.0469,
+      "ratio": 5.0
+    },
+    {
+      "day": 721,
+      "process_TDS_mg_l": 36.004,
+      "blowdown_TDS_mg_l": 180.0202,
+      "ratio": 5.0
+    },
+    {
+      "day": 722,
+      "process_TDS_mg_l": 37.7395,
+      "blowdown_TDS_mg_l": 188.6977,
+      "ratio": 5.0
+    },
+    {
+      "day": 723,
+      "process_TDS_mg_l": 39.2002,
+      "blowdown_TDS_mg_l": 196.0008,
+      "ratio": 5.0
+    },
+    {
+      "day": 724,
+      "process_TDS_mg_l": 38.5172,
+      "blowdown_TDS_mg_l": 192.5859,
+      "ratio": 5.0
+    },
+    {
+      "day": 725,
+      "process_TDS_mg_l": 39.9786,
+      "blowdown_TDS_mg_l": 199.8929,
+      "ratio": 5.0
+    },
+    {
+      "day": 726,
+      "process_TDS_mg_l": 35.4706,
+      "blowdown_TDS_mg_l": 177.3532,
+      "ratio": 5.0
+    },
+    {
+      "day": 727,
+      "process_TDS_mg_l": 32.26,
+      "blowdown_TDS_mg_l": 161.3001,
+      "ratio": 5.0
+    },
+    {
+      "day": 728,
+      "process_TDS_mg_l": 33.6929,
+      "blowdown_TDS_mg_l": 168.4645,
+      "ratio": 5.0
+    },
+    {
+      "day": 729,
+      "process_TDS_mg_l": 36.5381,
+      "blowdown_TDS_mg_l": 182.6904,
+      "ratio": 5.0
+    }
+  ],
+  "coverage_note": "全时段 blowdown/process 比值中位 5.0。首日因初始储池含盐（scenario_prior）比值为 3.6484，之后稳定到设计 CoC 5.0。"
+}

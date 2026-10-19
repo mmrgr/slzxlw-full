@@ -1,0 +1,169 @@
+{
+ "rows": [
+  {
+   "domain": "ha",
+   "sample": "IEUA",
+   "phi": 0.4,
+   "F_volume_only": -1967.3694015494184,
+   "F_r10a": 3026.7174109770276,
+   "dS_volume_only": 1967.3694015494184,
+   "dS_r10a": -3026.7174109770276,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "ha",
+   "sample": "IEUA",
+   "phi": 0.6,
+   "F_volume_only": -3055.5161944417923,
+   "F_r10a": 3075.332633065591,
+   "dS_volume_only": 3055.5161944417923,
+   "dS_r10a": -3075.332633065591,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP",
+   "phi": 0.4,
+   "F_volume_only": 3082.797589035017,
+   "F_r10a": 3034.0818143736324,
+   "dS_volume_only": -3082.797589035017,
+   "dS_r10a": -3034.0818143736324,
+   "R10a_more_negative": false
+  },
+  {
+   "domain": "ha",
+   "sample": "LADWP",
+   "phi": 0.6,
+   "F_volume_only": 3082.797589035017,
+   "F_r10a": 3082.797589035017,
+   "dS_volume_only": -3082.797589035017,
+   "dS_r10a": -3082.797589035017,
+   "R10a_more_negative": false
+  },
+  {
+   "domain": "ha",
+   "sample": "FigshareRW",
+   "phi": 0.4,
+   "F_volume_only": -7423.402076506754,
+   "F_r10a": 3018.437987702753,
+   "dS_volume_only": 7423.402076506754,
+   "dS_r10a": -3018.437987702753,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "ha",
+   "sample": "FigshareRW",
+   "phi": 0.6,
+   "F_volume_only": -12784.281028528472,
+   "F_r10a": 3063.1674743592594,
+   "dS_volume_only": 12784.281028528472,
+   "dS_r10a": -3063.1674743592594,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "ha",
+   "sample": "Assumed",
+   "phi": 0.4,
+   "F_volume_only": -5480.529047173382,
+   "F_r10a": 3021.3665870977347,
+   "dS_volume_only": 5480.529047173382,
+   "dS_r10a": -3021.3665870977347,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "ha",
+   "sample": "Assumed",
+   "phi": 0.6,
+   "F_volume_only": -9086.140262419016,
+   "F_r10a": 3067.9986412359794,
+   "dS_volume_only": 9086.140262419016,
+   "dS_r10a": -3067.9986412359794,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA",
+   "phi": 0.4,
+   "F_volume_only": -1944.1556660864953,
+   "F_r10a": 2986.3388520093868,
+   "dS_volume_only": 1944.1556660864953,
+   "dS_r10a": -2986.3388520093868,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "co",
+   "sample": "IEUA",
+   "phi": 0.6,
+   "F_volume_only": -3019.463003523717,
+   "F_r10a": 3038.964627510122,
+   "dS_volume_only": 3019.463003523717,
+   "dS_r10a": -3038.964627510122,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP",
+   "phi": 0.4,
+   "F_volume_only": 3046.4224946266077,
+   "F_r10a": 2993.623475255172,
+   "dS_volume_only": -3046.4224946266077,
+   "dS_r10a": -2993.623475255172,
+   "R10a_more_negative": false
+  },
+  {
+   "domain": "co",
+   "sample": "LADWP",
+   "phi": 0.6,
+   "F_volume_only": 3046.4224946266077,
+   "F_r10a": 3046.4224946266077,
+   "dS_volume_only": -3046.4224946266077,
+   "dS_r10a": -3046.4224946266077,
+   "R10a_more_negative": false
+  },
+  {
+   "domain": "co",
+   "sample": "FigshareRW",
+   "phi": 0.4,
+   "F_volume_only": -7335.810548498226,
+   "F_r10a": 2978.0583321874474,
+   "dS_volume_only": 7335.810548498226,
+   "dS_r10a": -2978.0583321874474,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "co",
+   "sample": "FigshareRW",
+   "phi": 0.6,
+   "F_volume_only": -12633.434462730427,
+   "F_r10a": 3026.9782848734176,
+   "dS_volume_only": 12633.434462730427,
+   "dS_r10a": -3026.9782848734176,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "co",
+   "sample": "Assumed",
+   "phi": 0.4,
+   "F_volume_only": -5415.86221266953,
+   "F_r10a": 2980.9871764686177,
+   "dS_volume_only": 5415.86221266953,
+   "dS_r10a": -2980.9871764686177,
+   "R10a_more_negative": true
+  },
+  {
+   "domain": "co",
+   "sample": "Assumed",
+   "phi": 0.6,
+   "F_volume_only": -8978.929457846843,
+   "F_r10a": 3031.637600167607,
+   "dS_volume_only": 8978.929457846843,
+   "dS_r10a": -3031.637600167607,
+   "R10a_more_negative": true
+  }
+ ],
+ "n_more_negative": 12,
+ "n_total": 16,
+ "sign_flips": 12,
+ "n_volume_only_zero": 0,
+ "verdict": "MIXED"
+}

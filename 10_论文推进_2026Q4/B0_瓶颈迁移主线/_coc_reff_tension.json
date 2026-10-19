@@ -1,0 +1,47 @@
+[
+  {
+    "r_target": 0.7,
+    "r_eff_mean": 0.7,
+    "coc_model": 4.3222,
+    "coc_at_target": 4.3222,
+    "coc_at_eff": 4.3222,
+    "diff_model_vs_target": -0.0,
+    "diff_model_vs_eff": -0.0
+  },
+  {
+    "r_target": 0.75,
+    "r_eff_mean": 0.740217,
+    "coc_model": 4.131455,
+    "coc_at_target": 4.131455,
+    "coc_at_eff": 4.167439,
+    "diff_model_vs_target": 0.0,
+    "diff_model_vs_eff": -0.035984
+  },
+  {
+    "r_target": 0.8,
+    "r_eff_mean": 0.755645,
+    "coc_model": 3.956835,
+    "coc_at_target": 3.956835,
+    "coc_at_eff": 4.110974,
+    "diff_model_vs_target": 0.0,
+    "diff_model_vs_eff": -0.154139
+  },
+  {
+    "r_target": 0.85,
+    "r_eff_mean": 0.751428,
+    "coc_model": 3.796376,
+    "coc_at_target": 3.796376,
+    "coc_at_eff": 4.126256,
+    "diff_model_vs_target": 0.0,
+    "diff_model_vs_eff": -0.32988
+  },
+  {
+    "r_target": 0.9,
+    "r_eff_mean": 0.743997,
+    "coc_model": 3.648425,
+    "coc_at_target": 3.648425,
+    "coc_at_eff": 4.153464,
+    "diff_model_vs_target": -0.0,
+    "diff_model_vs_eff": -0.505039
+  }
+]

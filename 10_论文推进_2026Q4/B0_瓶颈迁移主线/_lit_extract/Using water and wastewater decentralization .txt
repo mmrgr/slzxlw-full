@@ -1,0 +1,131 @@
+=== Using water and wastewater decentralization .pdf ===
+PAGES: 22
+
+--- HEAD ---
+Nature Water | Volume 2 | October 2024 | 953–974
+953
+nature water
+https://doi.org/10.1038/s44221-024-00303-9
+Article
+Using water and wastewater decentralization 
+to enhance the resilience and sustainability 
+of cities
+ 
+Manel Garrido-Baserba 
+  1 
+, David L. Sedlak2, Maria Molinos-Senante 
+  3, 
+Irene Barnosell 
+  4, Oliver Schraa5, Diego Rosso 
+  6,7, Marta Verdaguer4 & 
+Manel Poch4
+The imperative to make energy and resource consumption more sustainable 
+is prompting a critical reconsideration of all human endeavours. Within 
+urban water management, the drive to enhance sustainability is grounded 
+in the recognition that water services consume a substantial amount of 
+energy and that wastewater contains valuable resources, including water, 
+heat, organic matter and essential plant nutrients. To make urban water 
+systems more sustainable, a paradigm shift is needed. Among the proposed 
+strategies, source separation coupled with anaerobic co-digestion 
+appears to be an effective means of recovering energy, water and nutrients. 
+Here, as existing centralized infrastructure that serves tens to hundreds 
+of thousands of people is difficult to alter and the technologies needed 
+to realize this strategy are difficult to implement in single-family homes, 
+we consider the scale of a city block. Using a quantitative model of unit 
+processes that simulate energy, water and nutrient flows, we consider 
+the technical and economic feasibility of a representative decentralized 
+system, as well as its environmental impacts. To realize potential synergies 
+associated with on-site use of the recovered resources, we complement 
+the decentralized water system with vertical farming, photovoltaic 
+energy generation and rainwater harvesting. Our analysis suggests that 
+decentralized water systems can serve as a cornerstone of efforts to enhance 
+resource efficiency and improve the resilience of cities.
+A recognition that humanity’s energy and resource consumption 
+is unsustainable is prompting a critical re-evaluation of all human 
+endeavours. In urban water management, the desire to enhance sus-
+tainability is driven by the recognition that the provision of water con-
+sumes large quantities of energy and that the wastewater produced by 
+households, commercial activities and industries contains valuable 
+resources. Wastewater represents an underutilized source of water, 
+energy and plant-essential nutrients. However, most urban water sys-
+tems were designed to treat and dispose of wastewater in a manner 
+that minimizes surface water pollution and risks to public health. 
+To achieve these goals, energy-intensive treatment processes that 
+often dissipate energy and nutrients contained in wastewater are 
+used1–4. Recognizing the limitations of traditional wastewater manage-
+ment approaches in achieving environmental and economic sustain-
+ability goals1,5–7, the urban water cycle must change.
+Most prior efforts to recover resources from wastewater have 
+focussed on resource recovery at large, namely centralized treatment 
+plants. This approach benefitted from economies of scale and was 
+Received: 2 November 2023
+Accepted: 6 August 2024
+Published online: 10 September 2024
+ Check for updates
+A full list of affiliations appears at the end of the paper. 
+ e-mail: mgarrido@brwncald.com 
+
+Nature Water | Volume 2 | October 2024 | 953–974
+954
+Article
+https://doi.org/10.1038/s44221-024-00303-9
+services have been increasing at rates that are faster than those of other 
+essential services. These costs are projected to grow as infrastructure 
+deterioration continues52–57. Therefore, decentralized systems could 
+alleviate some of the burden of increasing flows on these systems.
+Research needs
+Hybrid centralized–decentralized systems—the practice of integrating 
+building or city block-scale water and wastewater management within 
+existing centralized water systems—is attractive because it has the 
+potential to reduce the costs of resource recovery while simultaneously 
+providing a means of exploiting fit-for-purpose water that supports 
+broadly shared societal goals related to resilience and can enhance 
+water security, food supply chains and water self-sufficie
+
+--- ABSTRACT ---
+
+
+--- CONCLUSIONS ---
+conclusions
+This study presents a techno-economic and environmental assess-
+ment of a decentralized water and wastewater management system 
+that employs source separation and the recovery of energy, water and 
+nutrients in wastewater. It encompasses vertical farming and solar 
+photovoltaics—two synergistic approaches that enhance sustainabil-
+ity, reduce costs and promote circular economies. The paper delves 
+into the strategic interplay within the water–energy–food nexus to 
+fortify resilience, diminish reliance on centralized systems and foster 
+sustainability.
+Key observations from this study are as follows:
+• The decentralized source separation-based paradigm maximizes 
+resource recovery and enhances resilience and sustainability while 
+reducing costs. When the same functionality is considered (that is, 
+providing drinking-quality water without developing new forms 
+of traditional supplies), the overall treatment cost could be about 
+half that of conventional treatment.
+• Higher resource recovery efficiencies and the ability to easily 
+process food waste in the decentralized approach can lead to the 
+recovery of 40–50% more energy compared with existing central-
+ized energy recovery approaches. The decentralized system also 
+uses 85% less water from the utility. It exhibits an approximately 
+50% increase in nitrogen recovery and a 90% increase in phospho-
+rus recovery, with less than one-third of the environmental impacts 
+(for example, global warming and eutrophication).
+• The implementation of the decentralized approach would neces-
+sitate an approximate additional investment of 4 ± 0.5% relative 
+to the construction of new residential blocks to incorporate the 
+required pipes, treatment devices and monitoring equipment. 
+Nevertheless, the decentralized source separation system can 
+benefit from synergistic strategies (that is, vertical farming, pho-
+tovoltaics and potable reuse capabilities) that can lead to pay-
+back mechanisms to offset investment costs in periods as short 
+as 10–15 years.
+• The synergy with a vertical farm could provide residents with the 
+equivalent of daily, nutrient-rich salad that, if valued at market 
+prices, would offset the vertical farm investment costs within 
+10–12 years. Selling the surplus crops could offset the system’s 
+operating costs. While the initial investment in vertical farming 
+increases slightly (3.2%), it supports the financial sustainability 
+of the entire system over the long term.
+• Adding a photovoltaic system requires a slight increase in initial 
+investment (%). However, after a payback period of 5

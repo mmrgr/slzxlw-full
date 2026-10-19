@@ -1,0 +1,16 @@
+{
+  "ha": {
+    "coc_design": 5.0,
+    "limit_tds": 2200.0,
+    "c_potable_tds": 180.0,
+    "c_reclaimed_tds": 650.0,
+    "r_star": 0.5531914893617021
+  },
+  "co": {
+    "coc_design": 5.0,
+    "limit_tds": 2200.0,
+    "c_potable_tds": 180.0,
+    "c_reclaimed_tds": 650.0,
+    "r_star": 0.5531914893617021
+  }
+}
