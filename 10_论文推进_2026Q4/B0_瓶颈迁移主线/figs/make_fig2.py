@@ -27,6 +27,9 @@ boundaries = load_constraint_boundaries()
 thresholds = load_capacity_thresholds()
 
 fig, axes = plt.subplots(1, 2, figsize=(7.6, 3.9), sharey=False)
+# 2026-10-20 审稿修复：此前未设子图间距，右面板的 y 轴中文标签被左面板条带遮挡，
+# 两个面板的标签在视觉上糊成一组。加大 wspace 并预留左侧标签空间。
+fig.subplots_adjust(wspace=0.52, left=0.13, right=0.985, top=0.86, bottom=0.22)
 
 for ax, domain, color in zip(axes, ("ha", "co"), (C_HA, C_CO)):
     sub = boundaries[boundaries["domain"] == domain].copy()
@@ -89,7 +92,7 @@ fig.legend(handles=handles, loc="lower center", ncol=4, fontsize=6.8,
            bbox_to_anchor=(0.5, -0.10))
 
 fig.suptitle(
-    "图 2 | 约束首次失效容量（日尺度，50–2000 MW 扫描）：D-HA 水先卡、D-CO 电先卡",
+    "图 2　约束首次失效容量（日尺度，50–2000 MW 扫描）：D-HA 水先卡、D-CO 电先卡",
     x=0.01, ha="left", fontsize=9.5,
 )
 fig.text(

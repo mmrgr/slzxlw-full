@@ -1,0 +1,24 @@
+﻿=== HA ��ֵ: {"system_reliability_fraction": 0.99, "domestic_unmet_ml": 0.0, "unmet_cooling_water_ml": 0.0, "max_wtw_utilization": 0.95, "max_wwtw_utilization": 0.95, "max_reuse_utilization": 0.95, "max_source_abstraction_ratio": 0.95, "reclaimed_water_substitution_ratio": 0.65, "peak_capacity_ratio": 1.0, "max_local_connection_ratio": 1.0, "max_daily_average_grid_connection_ratio": 1.0}
+  [ha] �˿� 50 �� ��ɣ�25 �������㣩
+  [ha] �˿� 100 �� ��ɣ�25 �������㣩
+=== CO ��ֵ: {"system_reliability_fraction": 0.99, "domestic_unmet_ml": 0.0, "unmet_cooling_water_ml": 0.0, "max_wtw_utilization": 0.95, "max_wwtw_utilization": 0.95, "max_reuse_utilization": 0.95, "max_source_abstraction_ratio": 0.95, "reclaimed_water_substitution_ratio": 0.4, "peak_capacity_ratio": 1.0, "max_local_connection_ratio": 1.0, "max_daily_average_grid_connection_ratio": 1.0}
+  [co] �˿� 50 �� ��ɣ�25 �������㣩
+  [co] �˿� 100 �� ��ɣ�25 �������㣩
+
+=== ��ʵ�߶��¸�Լ�������ȡֵ����ȫ�����������˿ڣ�===
+          system_reliability_fraction  max_wtw_utilization  max_wwtw_utilization  max_source_abstraction_ratio  reclaimed_water_substitution_ratio  peak_capacity_ratio  max_local_connection_ratio  max_daily_average_grid_connection_ratio
+��  �˿�_����                                                                                                                                                                                                                                    
+co 50.0                           1.0                0.898                 0.836                         0.880                                0.45                0.874                       0.463                                    0.411
+   100.0                          1.0                0.820                 0.818                         0.803                                0.45                0.804                       0.463                                    0.411
+ha 50.0                           1.0                0.952                 0.868                         0.955                                0.70                0.932                       0.474                                    0.416
+   100.0                          1.0                0.869                 0.846                         0.872                                0.70                0.857                       0.474                                    0.416
+
+=== �׸�������ֵ 0.95 �� AI װ����None = 600 MW �ڶ���������===
+ �� �˿�_����_��ʾ  �׸�max_wtw_utilization_��0.95_MW �׸�max_wwtw_utilization_��0.95_MW  �׸�max_source_abstraction_ratio_��0.95_MW �׸�peak_capacity_ratio_��0.95_MW �׸�max_local_connection_ratio_��0.95_MW �׸�max_daily_average_grid_connection_ratio_��0.95_MW �׸�system_reliability_fraction_<0.99_MW  �׸�reclaimed_water_substitution_ratio_<0.4_MW
+co       50                             NaN                            None                                      NaN                           None                                  None                                               None                                   None                                           0.0
+co      100                             NaN                            None                                      NaN                           None                                  None                                               None                                   None                                           0.0
+ha       50                           600.0                            None                                    600.0                           None                                  None                                               None                                   None                                           0.0
+ha      100                             NaN                            None                                      NaN                           None                                  None                                               None                                   None                                           0.0
+
+-> C:\Users\mmrgr\Desktop\����\��������\07_����_AI-UWM����\aiuwm_src\validation_artifacts\r2\realistic_scale_scan.csv
+-> C:\Users\mmrgr\Desktop\����\��������\07_����_AI-UWM����\aiuwm_src\validation_artifacts\r2\realistic_scale_first_binding.csv

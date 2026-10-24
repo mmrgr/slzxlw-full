@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
-"""从中文母稿抽取全部数值 token，作为英文稿数字合法性的唯一白名单。
+"""从中文母稿与中文投稿版抽取全部数值 token，作为英文稿数字合法性的白名单。
+
+【为什么现在有两个来源】
+历史设计只有 03_主稿_v2.md 一个来源，因为投稿版基于它派生。第 55-56 轮新增的
+实验结果（约束身份相图、压力情景、多物种、杠杆解耦、水代谢流、分布图）直接写进了
+03_主稿_中文投稿版.md，未回写母稿，因此单一来源会漏掉这些新数字。
+现在两个文件都读，每条上下文会标明来自哪个文件。
 
 用途：
     python _build_num_lexicon.py
 产出：
-    _num_lexicon.json  —— { 规范化数字 -> [中文母稿中的出现上下文...] }
+    _num_lexicon.json  —— { 规范化数字 -> [出现上下文...] }
     _num_lexicon.md    —— 人工可读清单
 
 判定规则（用于 _wr_gate.py）：
@@ -26,6 +32,7 @@ except Exception:
 
 HERE = Path(__file__).resolve().parent
 SRC = HERE / "03_主稿_v2.md"
+SRC_EXTRA = HERE / "03_主稿_中文投稿版.md"   # 第 55–56 轮新增数字的来源
 
 # 数字 token：整数、小数、科学计数、带千分位、带负号/正负号
 NUM_RE = re.compile(
@@ -52,24 +59,24 @@ def norm(tok: str) -> str:
 
 
 def main() -> None:
-    text = SRC.read_text(encoding="utf-8")
-    lines = text.split("\n")
-
     lex: dict[str, list[str]] = defaultdict(list)
     total = 0
-    for ln, line in enumerate(lines, 1):
-        # 跳过代码块与表格分隔线不影响：全部保留，宁可多留
-        for m in NUM_RE.finditer(line):
-            tok = m.group(1)
-            key = norm(tok)
-            total += 1
-            if len(lex[key]) < 6:
-                ctx = line[max(0, m.start() - 45): m.end() + 45].strip()
-                ctx = ctx.replace("|", "/")
-                lex[key].append(f"L{ln}: …{ctx}…")
+    sources: list[str] = []
+    for src, tag in ((SRC, "v2"), (SRC_EXTRA, "投稿版")):
+        if not src.exists():
+            continue
+        sources.append(str(src.relative_to(HERE)))
+        for ln, line in enumerate(src.read_text(encoding="utf-8").split("\n"), 1):
+            for m in NUM_RE.finditer(line):
+                key = norm(m.group(1))
+                total += 1
+                if len(lex[key]) < 6:
+                    ctx = line[max(0, m.start() - 45): m.end() + 45].strip()
+                    ctx = ctx.replace("|", "/")
+                    lex[key].append(f"[{tag}] L{ln}: …{ctx}…")
 
     out = {
-        "source": str(SRC.relative_to(HERE)),
+        "source": sources,
         "n_tokens": total,
         "n_unique": len(lex),
         "lexicon": dict(sorted(lex.items(), key=lambda kv: kv[0])),
@@ -79,10 +86,12 @@ def main() -> None:
     )
 
     # 人工可读
+    src_lines = [f"- 来源：`{x}`" for x in out["source"]]
     md = [
-        "# 数字白名单（源自中文母稿）",
+        "# 数字白名单（源自中文母稿 + 中文投稿版）",
         "",
-        f"- 来源：`{out['source']}`",
+        *src_lines,
+        "",
         f"- token 总数：{total}；唯一数值：{len(lex)}",
         "- **英文稿中出现的每个数值都必须命中本清单**（或登记在 `_num_allowlist_extra.json`）。",
         "",

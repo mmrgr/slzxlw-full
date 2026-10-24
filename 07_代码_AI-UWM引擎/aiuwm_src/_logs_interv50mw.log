@@ -1,0 +1,36 @@
+
+==============================================================================
+HA  interventions on 50 MW grid
+==============================================================================
+  same-grid baseline (50 MW) = 1150.0 MW
+               intervention  maximum_safe_ai_capacity_mw  first_failed_capacity_mw                limiting_constraint  capacity_gain_mw
+                   baseline                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+             wtw_plus_10pct                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+             wtw_plus_20pct                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+           reuse_plus_50pct                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+          reuse_plus_100pct                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+            wwtw_plus_20pct                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+local_connection_plus_50pct                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+            grid_plus_50pct                       1150.0                    1200.0       max_source_abstraction_ratio               0.0
+        leakage_minus_30pct                       1300.0                    1350.0 reclaimed_water_substitution_ratio             150.0
+           combined_upgrade                       1300.0                    1350.0 reclaimed_water_substitution_ratio             150.0
+  elapsed 160s
+
+==============================================================================
+CO  interventions on 50 MW grid
+==============================================================================
+  same-grid baseline (50 MW) = 1450.0 MW
+               intervention  maximum_safe_ai_capacity_mw  first_failed_capacity_mw                     limiting_constraint  capacity_gain_mw
+                   baseline                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+             wtw_plus_10pct                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+             wtw_plus_20pct                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+           reuse_plus_50pct                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+          reuse_plus_100pct                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+            wwtw_plus_20pct                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+local_connection_plus_50pct                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+            grid_plus_50pct                       1550.0                    1600.0              max_local_connection_ratio             100.0
+        leakage_minus_30pct                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+           combined_upgrade                       1450.0                    1500.0 max_daily_average_grid_connection_ratio               0.0
+  elapsed 134s
+
+-> C:\Users\mmrgr\Desktop\论文\算力中心\07_代码_AI-UWM引擎\aiuwm_src\validation_artifacts\r2\intervention_grid_50mw_summary.json

@@ -134,7 +134,7 @@ for i, t in enumerate([
     ax.text(0.50, 1.18 - i * 0.26, "· " + t, fontsize=6.2,
             color="#742a2a", va="top")
 
-fig.suptitle("图 1 | 研究边界与三级论证结构（概念图，不承载新数值）",
+fig.suptitle("图 1　研究边界与三级论证结构（概念图，不承载新数值）",
              x=0.012, y=0.995, ha="left", fontsize=9.5)
 fig.text(0.012, 0.012,
          "元素取自 01_论证结构与主张登记表.md；本图不含任何容量数值；"

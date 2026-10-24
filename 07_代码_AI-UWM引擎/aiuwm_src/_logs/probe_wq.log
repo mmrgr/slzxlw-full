@@ -1,0 +1,44 @@
+﻿
+=== HA ===
+      50 MW  recl=0.7000  CoC_mean=4.322  CoC_min=4.322
+     500 MW  recl=0.7000  CoC_mean=4.322  CoC_min=4.322
+    1100 MW  recl=0.7000  CoC_mean=4.322  CoC_min=4.322
+    1150 MW  recl=0.6976  CoC_mean=4.322  CoC_min=4.322
+    1200 MW  recl=0.6887  CoC_mean=4.322  CoC_min=4.322
+    1300 MW  recl=0.6556  CoC_mean=4.322  CoC_min=4.322
+    1500 MW  recl=0.5751  CoC_mean=4.322  CoC_min=4.322
+    2000 MW  recl=0.4370  CoC_mean=4.322  CoC_min=4.322
+
+=== CO ===
+      50 MW  recl=0.4500  CoC_mean=5.000  CoC_min=5.000
+     500 MW  recl=0.4500  CoC_mean=5.000  CoC_min=5.000
+    1100 MW  recl=0.4500  CoC_mean=5.000  CoC_min=5.000
+    1150 MW  recl=0.4500  CoC_mean=5.000  CoC_min=5.000
+    1200 MW  recl=0.4500  CoC_mean=5.000  CoC_min=5.000
+    1300 MW  recl=0.4500  CoC_mean=5.000  CoC_min=5.000
+    1500 MW  recl=0.4500  CoC_mean=5.000  CoC_min=5.000
+    2000 MW  recl=0.4171  CoC_mean=5.000  CoC_min=5.000
+
+==========================================================================
+�ж���ˮ��Լ���Ƿ���ܳ�Ϊ��ʧЧԼ����
+==========================================================================
+��ֵ: TDS <= 2200.0, chloride <= 500.0
+
+����ˮ����: cycles_of_concentration|quality_coc_fallback|quality_solver_reclaimed_fraction|quality_solver_status|quality_solver_residual|quality_solver_root_count|quality_state_enabled|quality_integration_status|quality_state_status
+
+HA:
+  CoC �� 4.322��50MW�� �� 4.322��2000MW���� ����
+python : Traceback (most recent call last):
+所在位置 行:1 字符: 222
++ ... c;scripts'; python scripts/probe_water_quality_constraint.py 2>&1 | O ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\mmrgr\Desktop\����\��������\07_����_AI-UWM����\aiuwm_src\scripts\probe_water_quality_constraint.py", l
+ine 136, in <module>
+    main()
+  File "C:\Users\mmrgr\Desktop\����\��������\07_����_AI-UWM����\aiuwm_src\scripts\probe_water_quality_constraint.py", l
+ine 126, in main
+    print(f"  \u26a0 CoC �������ֵ {design} ��������: "
+UnicodeEncodeError: 'gbk' codec can't encode character '\u26a0' in position 2: illegal multibyte sequence

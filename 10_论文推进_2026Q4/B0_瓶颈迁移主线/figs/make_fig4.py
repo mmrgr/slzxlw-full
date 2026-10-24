@@ -64,8 +64,19 @@ ax.set_title("(a) 对症 vs 非对症干预", loc="left")
 ax.legend(loc="center right", fontsize=6.8)
 ax.grid(axis="x", color="0.92", lw=0.5)
 ax.set_axisbelow(True)
-ax.text(0.98, 0.30, "零增益项显式画为 0（不省略）", transform=ax.transAxes,
+ax.text(0.98, 0.30, "零增益项画为 0 并加圆点标记（不省略）", transform=ax.transAxes,
         ha="right", va="bottom", fontsize=6.0, color="0.4")
+
+# 2026-10-20 审稿修复：零增益干预的 barh 高度为 0，完全不可见，
+# 与图注"画为零高度柱而非省略"承诺不符。为零增益项在 x=0 处加可见圆点。
+for offset, domain, color in ((-width / 2, "ha", C_HA), (width / 2, "co", C_CO)):
+    sub = inter[inter["域"] == domain].set_index("干预")
+    for i, n in enumerate(names):
+        v = float(sub.loc[n, "CAWCC增益_MW"]) if n in sub.index else np.nan
+        if v == v and abs(v) < 1e-9:
+            ax.plot(0, ypos[i] + offset, marker="o", ms=3.4,
+                    color=color, zorder=5, markeredgecolor="white",
+                    markeredgewidth=0.4)
 
 # ---------------- (b) 投资 × 增益散点 ----------------
 ax = axes[1]
@@ -101,7 +112,7 @@ ax.grid(color="0.93", lw=0.5)
 ax.set_axisbelow(True)
 
 fig.suptitle(
-    "图 4 | 干预反事实：对症干预有效、非对症零增益，且两端互斥",
+    "图 4　干预反事实：对症干预有效、非对症零增益，且两端互斥",
     x=0.01, ha="left", fontsize=9.5,
 )
 fig.text(

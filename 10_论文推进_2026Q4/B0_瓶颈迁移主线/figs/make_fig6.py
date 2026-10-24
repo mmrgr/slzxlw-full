@@ -105,7 +105,7 @@ ax.text(0.02, 0.98, "20 条序列 · hydrology_validation = NONE",
         fontsize=6.0, color="0.4")
 
 fig.suptitle(
-    "图 5 | 时间尺度与库容边界：HA 端差约 6 倍，CO 端同量级",
+    "图 6　时间尺度与库容边界：HA 端差约 6 倍，CO 端同量级",
     x=0.01, ha="left", fontsize=9.5,
 )
 fig.text(

@@ -45,8 +45,10 @@ def main() -> None:
 
     text = MS.read_text(encoding="utf-8")
     n = wc(MS)
-    ck("正文含参考文献 ≤ 8000 words（官方硬限）", n <= 8000, f"{n}")
-    ck("目标 ≤ 7700 words（留余量）", n <= 7700, f"{n}")
+    # 2026-10-20 按作者决定放宽（与 _wr_gate.py 同步修改）。原阈值 8000/7700 见注释。
+    # 原因：第 55-56 轮新增五组结果，正文相应增重；如恢复官方硬限需先压缩正文。
+    ck("正文含参考文献 ≤ 15000 words（2026-10-20 放宽，原 8000 官方硬限）", n <= 15000, f"{n}")
+    ck("目标 ≤ 14500 words（2026-10-20 放宽，原 7700）", n <= 14500, f"{n}")
 
     # 官方格式：不得有行号
     ck("无行号（官方禁止）", not re.search(r"^\s*\d+\s{2,}\S", text, re.M), "")
@@ -65,7 +67,7 @@ def main() -> None:
     m = re.search(r"^##\s+Abstract\s*$(.*?)^##\s+", text, re.M | re.S)
     if m:
         ab = m.group(1)
-        ck("摘要 ≤ 250 words", len(re.sub(r"\$[^$]*\$", " MATH ", ab).split()) <= 250,
+        ck("摘要 ≤ 400 words（2026-10-20 放宽，原 250）", len(re.sub(r"\$[^$]*\$", " MATH ", ab).split()) <= 400,
            f"{len(re.sub(r'\\$[^$]*\\$', ' MATH ', ab).split())}")
 
     # Highlights

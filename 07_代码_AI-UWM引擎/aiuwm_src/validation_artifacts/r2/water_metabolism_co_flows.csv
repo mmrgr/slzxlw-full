@@ -1,0 +1,87 @@
+﻿容量_MW,源,目标,年流量_ML,依据
+0.0,RES1,SC1,91865.25474581918,SC1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+0.0,SC1,WTW1,90946.602198361,WTW1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+0.0,SC1,管网漏损,918.6525474581927,SC1.leakage_ml（与 loss_ml 同值，同一量）
+0.0,WTW1,TM1,89127.67015439377,TM1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+0.0,WTW1,工艺自用与损失,1818.9320439672215,WTW1.loss_ml
+0.0,TM1,SR1,88682.03180362181,SR1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+0.0,TM1,管网漏损,445.6383507719693,TM1.leakage_ml（与 loss_ml 同值，同一量）
+0.0,SR1,DM1,88593.34977181818,DM1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+0.0,SR1,工艺自用与损失,88.68203180362188,SR1.loss_ml
+0.0,DM1,管网漏损,10631.20197261818,DM1.leakage_ml（与 loss_ml 同值，同一量）
+0.0,外部来水（降水与河流入流）,RES1,106909.115,RES1.inflow_ml（上游未建模部分，外部来水）
+0.0,DM1,本地用水（domestic）,50053.51901505058,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 60225 ML 加权
+0.0,DM1,本地用水（industrial）,18201.279641836576,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 21900 ML 加权
+0.0,DM1,本地用水（irrigation）,3640.255928367315,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 4380 ML 加权
+0.0,DM1,本地用水（municipal_misc）,6067.093213945525,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 7300 ML 加权
+0.0,本地用水（domestic）,SEWER1,53875.79063346746,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+0.0,本地用水（industrial）,SEWER1,17035.823125207102,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+0.0,本地用水（municipal_misc）,SEWER1,1064.7389453254439,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+0.0,SEWER1,WWTW1,71976.352704,WWTW1.inflow_ml × wastewater_connections.fraction=1.0
+0.0,WWTW1,RIVER1,61179.8997984,WWTW1.outflow_ml 扣 CENTRAL_REUSE.inflow_ml
+0.0,WWTW1,CENTRAL_REUSE,10796.4529056,CENTRAL_REUSE.inflow_ml（直接读取）
+0.0,CENTRAL_REUSE,RIVER1,10827.0487008,CENTRAL_REUSE.outflow_ml 扣对数据中心交付量
+0.0,本地表面径流,SEWER_S,24119.234568,SEWER_S.inflow_ml（雨水管汇入）
+0.0,SEWER_S,RIVER1,24119.234568,SEWER_S.outflow_ml（溢流排放）
+0.0,RES1,调蓄增减（年内蓄水）,15043.860254180821,RES1.inflow_ml − 已登记出流 − 损失（年内净蓄水）
+0.0,调蓄增减（存量释放）,CENTRAL_REUSE,30.595795200000794,已登记出流与损失超过 CENTRAL_REUSE.inflow_ml（动用存量）
+1450.0,RES1,SC1,114838.66815080802,SC1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1450.0,SC1,WTW1,113690.28146929994,WTW1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1450.0,SC1,管网漏损,1148.3866815080812,SC1.leakage_ml（与 loss_ml 同值，同一量）
+1450.0,WTW1,TM1,111416.47583991394,TM1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1450.0,WTW1,工艺自用与损失,2273.805629386001,WTW1.loss_ml
+1450.0,TM1,SR1,110859.39346071437,SR1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1450.0,TM1,管网漏损,557.0823791995701,TM1.leakage_ml（与 loss_ml 同值，同一量）
+1450.0,SR1,DM1,110748.53406725365,DM1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1450.0,SR1,工艺自用与损失,110.85939346071446,SR1.loss_ml
+1450.0,DM1,管网漏损,13289.824088070438,DM1.leakage_ml（与 loss_ml 同值，同一量）
+1450.0,外部来水（降水与河流入流）,RES1,106909.115,RES1.inflow_ml（上游未建模部分，外部来水）
+1450.0,DM1,本地用水（domestic）,49699.82038427192,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 60225 ML 加权
+1450.0,DM1,本地用水（industrial）,18072.661957917062,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 21900 ML 加权
+1450.0,DM1,本地用水（irrigation）,3614.5323915834124,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 4380 ML 加权
+1450.0,DM1,本地用水（municipal_misc）,6024.22065263902,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 7300 ML 加权
+1450.0,CENTRAL_REUSE,AI_DC1,11377.961113588586,CENTRAL_REUSE.outflow_ml（受 AI_DC1.inflow_ml 上限约束）
+1450.0,DM1,AI_DC1,8669.513479183213,AI_DC1.inflow_ml 扣再生水交付量（自来水路径）
+1450.0,AI_DC1,大气（蒸发消耗）,16364.143557413108,AI_DC1.loss_ml（冷却蒸发与飘散）
+1450.0,本地用水（domestic）,SEWER1,53875.79063346746,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+1450.0,本地用水（industrial）,SEWER1,17035.823125207102,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+1450.0,本地用水（municipal_misc）,SEWER1,1064.7389453254439,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+1450.0,AI_DC1,SEWER1,3677.3310353586917,AI_DC1.outflow_ml（排污回流）
+1450.0,SEWER1,WWTW1,75653.68373935869,WWTW1.inflow_ml × wastewater_connections.fraction=1.0
+1450.0,WWTW1,RIVER1,64305.63117845489,WWTW1.outflow_ml 扣 CENTRAL_REUSE.inflow_ml
+1450.0,WWTW1,CENTRAL_REUSE,11348.052560903803,CENTRAL_REUSE.inflow_ml（直接读取）
+1450.0,本地表面径流,SEWER_S,24119.234568,SEWER_S.inflow_ml（雨水管汇入）
+1450.0,SEWER_S,RIVER1,24119.234568,SEWER_S.outflow_ml（溢流排放）
+1450.0,调蓄增减（存量释放）,RES1,7929.553150808017,已登记出流与损失超过 RES1.inflow_ml（动用存量）
+1450.0,调蓄增减（存量释放）,CENTRAL_REUSE,29.90855268478299,已登记出流与损失超过 CENTRAL_REUSE.inflow_ml（动用存量）
+1450.0,DM1,调蓄增减（年内蓄水）,11377.96111358858,DM1.inflow_ml − 已登记出流 − 损失（年内净蓄水）
+1750.0,RES1,SC1,119590.3254092855,SC1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1750.0,SC1,WTW1,118394.42215519265,WTW1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1750.0,SC1,管网漏损,1195.903254092856,SC1.leakage_ml（与 loss_ml 同值，同一量）
+1750.0,WTW1,TM1,116026.53371208879,TM1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1750.0,WTW1,工艺自用与损失,2367.888443103855,WTW1.loss_ml
+1750.0,TM1,SR1,115446.40104352834,SR1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1750.0,TM1,管网漏损,580.1326685604445,TM1.leakage_ml（与 loss_ml 同值，同一量）
+1750.0,SR1,DM1,115330.95464248481,DM1.inflow_ml（按 supply_paths[PATH1].chain 传递）
+1750.0,SR1,工艺自用与损失,115.44640104352844,SR1.loss_ml
+1750.0,DM1,管网漏损,13839.714557098177,DM1.leakage_ml（与 loss_ml 同值，同一量）
+1750.0,外部来水（降水与河流入流）,RES1,106909.115,RES1.inflow_ml（上游未建模部分，外部来水）
+1750.0,DM1,本地用水（domestic）,49626.64135721426,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 60225 ML 加权
+1750.0,DM1,本地用水（industrial）,18046.05140262337,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 21900 ML 加权
+1750.0,DM1,本地用水（irrigation）,3609.2102805246736,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 4380 ML 加权
+1750.0,DM1,本地用水（municipal_misc）,6015.350467541122,DM1.outflow_ml 扣数据中心后，按 demand_profiles 名义年水量 7300 ML 加权
+1750.0,CENTRAL_REUSE,AI_DC1,11491.942992096569,CENTRAL_REUSE.outflow_ml（受 AI_DC1.inflow_ml 上限约束）
+1750.0,DM1,AI_DC1,12702.043585386638,AI_DC1.inflow_ml 扣再生水交付量（自来水路径）
+1750.0,AI_DC1,大气（蒸发消耗）,19749.82843136065,AI_DC1.loss_ml（冷却蒸发与飘散）
+1750.0,本地用水（domestic）,SEWER1,53875.79063346746,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+1750.0,本地用水（industrial）,SEWER1,17035.823125207102,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+1750.0,本地用水（municipal_misc）,SEWER1,1064.7389453254439,SEWER1.inflow_ml 扣数据中心回流后，按 demand_profiles 的名义水量×return_fraction 加权
+1750.0,AI_DC1,SEWER1,4438.158146122559,AI_DC1.outflow_ml（排污回流）
+1750.0,SEWER1,WWTW1,76414.51085012256,WWTW1.inflow_ml × wastewater_connections.fraction=1.0
+1750.0,WWTW1,RIVER1,64952.33422260418,WWTW1.outflow_ml 扣 CENTRAL_REUSE.inflow_ml
+1750.0,WWTW1,CENTRAL_REUSE,11462.176627518384,CENTRAL_REUSE.inflow_ml（直接读取）
+1750.0,本地表面径流,SEWER_S,24119.234568,SEWER_S.inflow_ml（雨水管汇入）
+1750.0,SEWER_S,RIVER1,24119.234568,SEWER_S.outflow_ml（溢流排放）
+1750.0,调蓄增减（存量释放）,RES1,12681.2104092855,已登记出流与损失超过 RES1.inflow_ml（动用存量）
+1750.0,调蓄增减（存量释放）,CENTRAL_REUSE,29.766364578184948,已登记出流与损失超过 CENTRAL_REUSE.inflow_ml（动用存量）
+1750.0,DM1,调蓄增减（年内蓄水）,11491.942992096567,DM1.inflow_ml − 已登记出流 − 损失（年内净蓄水）

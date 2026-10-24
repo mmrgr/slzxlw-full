@@ -1,0 +1,212 @@
+{
+  "分流比网格": [
+    0.16,
+    0.25,
+    0.35,
+    0.45,
+    0.6
+  ],
+  "替代率网格": [
+    0.0,
+    0.4,
+    0.6,
+    0.8,
+    0.9
+  ],
+  "处理能力配套系数": 1.25,
+  "容量网格_MW": [
+    0.0,
+    2000.0,
+    50.0
+  ],
+  "域": {
+    "ha": {
+      "CAWCC矩阵_r乘f": {
+        "0.0": {
+          "0.16": 500.0,
+          "0.25": 600.0,
+          "0.35": 650.0,
+          "0.45": 750.0,
+          "0.6": 900.0
+        },
+        "0.4": {
+          "0.16": 500.0,
+          "0.25": 600.0,
+          "0.35": 650.0,
+          "0.45": 750.0,
+          "0.6": 900.0
+        },
+        "0.6": {
+          "0.16": 500.0,
+          "0.25": 550.0,
+          "0.35": 650.0,
+          "0.45": 750.0,
+          "0.6": 900.0
+        },
+        "0.8": {
+          "0.16": 450.0,
+          "0.25": 550.0,
+          "0.35": 650.0,
+          "0.45": 700.0,
+          "0.6": 850.0
+        },
+        "0.9": {
+          "0.16": 450.0,
+          "0.25": 550.0,
+          "0.35": 600.0,
+          "0.45": 700.0,
+          "0.6": 800.0
+        }
+      },
+      "首失效矩阵_r乘f": {
+        "0.0": {
+          "0.16": "max_source_abstraction_ratio",
+          "0.25": "max_source_abstraction_ratio",
+          "0.35": "max_source_abstraction_ratio",
+          "0.45": "max_source_abstraction_ratio",
+          "0.6": "max_source_abstraction_ratio"
+        },
+        "0.4": {
+          "0.16": "max_source_abstraction_ratio",
+          "0.25": "max_source_abstraction_ratio",
+          "0.35": "max_source_abstraction_ratio",
+          "0.45": "max_source_abstraction_ratio",
+          "0.6": "max_source_abstraction_ratio"
+        },
+        "0.6": {
+          "0.16": "max_source_abstraction_ratio",
+          "0.25": "max_source_abstraction_ratio",
+          "0.35": "max_source_abstraction_ratio",
+          "0.45": "max_source_abstraction_ratio",
+          "0.6": "max_source_abstraction_ratio"
+        },
+        "0.8": {
+          "0.16": "max_source_abstraction_ratio",
+          "0.25": "max_source_abstraction_ratio",
+          "0.35": "max_source_abstraction_ratio",
+          "0.45": "max_source_abstraction_ratio",
+          "0.6": "max_source_abstraction_ratio"
+        },
+        "0.9": {
+          "0.16": "max_source_abstraction_ratio",
+          "0.25": "max_source_abstraction_ratio",
+          "0.35": "max_source_abstraction_ratio",
+          "0.45": "max_source_abstraction_ratio",
+          "0.6": "max_source_abstraction_ratio"
+        }
+      },
+      "产量效应_按r_MW": {
+        "r=0.0": 400.0,
+        "r=0.4": 400.0,
+        "r=0.6": 400.0,
+        "r=0.8": 400.0,
+        "r=0.9": 350.0
+      },
+      "替代率效应_按f_MW": {
+        "f=0.16": -50.0,
+        "f=0.25": -50.0,
+        "f=0.35": -50.0,
+        "f=0.45": -50.0,
+        "f=0.60": -100.0
+      },
+      "CAWCC范围_MW": [
+        450.0,
+        900.0
+      ]
+    },
+    "co": {
+      "CAWCC矩阵_r乘f": {
+        "0.0": {
+          "0.16": 950.0,
+          "0.25": 1000.0,
+          "0.35": 1100.0,
+          "0.45": 1150.0,
+          "0.6": 1300.0
+        },
+        "0.4": {
+          "0.16": 950.0,
+          "0.25": 1000.0,
+          "0.35": 1100.0,
+          "0.45": 1150.0,
+          "0.6": 1300.0
+        },
+        "0.6": {
+          "0.16": 950.0,
+          "0.25": 1000.0,
+          "0.35": 1100.0,
+          "0.45": 1150.0,
+          "0.6": 1300.0
+        },
+        "0.8": {
+          "0.16": 900.0,
+          "0.25": 950.0,
+          "0.35": 1000.0,
+          "0.45": 1100.0,
+          "0.6": 1200.0
+        },
+        "0.9": {
+          "0.16": 850.0,
+          "0.25": 900.0,
+          "0.35": 1000.0,
+          "0.45": 1050.0,
+          "0.6": 1200.0
+        }
+      },
+      "首失效矩阵_r乘f": {
+        "0.0": {
+          "0.16": "max_wtw_utilization",
+          "0.25": "max_wtw_utilization",
+          "0.35": "max_wtw_utilization",
+          "0.45": "max_wtw_utilization",
+          "0.6": "max_wtw_utilization"
+        },
+        "0.4": {
+          "0.16": "max_wtw_utilization",
+          "0.25": "max_wtw_utilization",
+          "0.35": "max_wtw_utilization",
+          "0.45": "max_wtw_utilization",
+          "0.6": "max_wtw_utilization"
+        },
+        "0.6": {
+          "0.16": "max_wtw_utilization",
+          "0.25": "max_wtw_utilization",
+          "0.35": "max_wtw_utilization",
+          "0.45": "max_wtw_utilization",
+          "0.6": "max_wtw_utilization"
+        },
+        "0.8": {
+          "0.16": "max_wtw_utilization",
+          "0.25": "max_wtw_utilization",
+          "0.35": "max_wtw_utilization",
+          "0.45": "max_wtw_utilization",
+          "0.6": "max_wtw_utilization"
+        },
+        "0.9": {
+          "0.16": "max_wtw_utilization",
+          "0.25": "max_wtw_utilization",
+          "0.35": "max_wtw_utilization",
+          "0.45": "max_wtw_utilization",
+          "0.6": "max_wtw_utilization"
+        }
+      },
+      "产量效应_按r_MW": {
+        "r=0.0": 350.0,
+        "r=0.4": 350.0,
+        "r=0.6": 350.0,
+        "r=0.8": 300.0,
+        "r=0.9": 350.0
+      },
+      "替代率效应_按f_MW": {
+        "f=0.16": -100.0,
+        "f=0.25": -100.0,
+        "f=0.35": -100.0,
+        "f=0.45": -100.0,
+        "f=0.60": -100.0
+      },
+      "CAWCC范围_MW": [
+        850.0,
+        1300.0
+      ]
+    }
+  }
+}

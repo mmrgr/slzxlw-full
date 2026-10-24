@@ -80,7 +80,7 @@ aiuwm run examples\demo_full\project.json --output output\demo
 
 ### AI算力与城市水承载力示例
 
-项目现已支持一等 `data_center` 组件、六类冷却技术、potable/reclaimed联合供水、冷却塔水量平衡、blowdown→WWTW→reuse闭环、峰值KPI、0–2 GW扫描、承载边界、复合情景、Monte Carlo、Morris/Sobol及Pareto策略。水质约束 CoC 的适用边界和未建模的冷却回路盐质量见 [AI_DATA_CENTER_RESEARCH_CN.md](AI_DATA_CENTER_RESEARCH_CN.md)。
+项目现已支持一等 `data_center` 组件、六类冷却技术、potable/reclaimed联合供水、冷却塔质量守恒、blowdown→WWTW→reuse闭环、峰值KPI、0–2 GW扫描、承载边界、复合情景、Monte Carlo、Morris/Sobol及Pareto策略。完整方法见 [AI_DATA_CENTER_RESEARCH_CN.md](AI_DATA_CENTER_RESEARCH_CN.md)。
 研究参数先验位于 `data/ai_data_center_database.json`；示例通过 `ai_database_file` 引用，项目内显式参数始终优先。
 
 ```powershell

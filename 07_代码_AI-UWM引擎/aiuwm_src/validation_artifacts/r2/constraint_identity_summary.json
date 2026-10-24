@@ -1,0 +1,189 @@
+{
+  "网格": {
+    "取水倍数a": [
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0,
+      1.05,
+      1.1,
+      1.15,
+      1.2
+    ],
+    "电网容量G_MW": [
+      900.0,
+      1050.0,
+      1200.0,
+      1350.0,
+      1500.0,
+      1650.0,
+      1800.0,
+      1950.0,
+      2100.0
+    ],
+    "容量扫描_MW": [
+      0.0,
+      2000.0,
+      50.0
+    ]
+  },
+  "基准": {
+    "ha": {
+      "A_ML_day": 380.0,
+      "G_MW": 1500.0
+    },
+    "co": {
+      "A_ML_day": 400.0,
+      "G_MW": 1500.0
+    }
+  },
+  "域": {
+    "ha": {
+      "基准端点": {
+        "CAWCC_物理_MW": 1150.0,
+        "首失效约束_物理": "max_source_abstraction_ratio",
+        "身份_物理": "水侧",
+        "CAWCC_联合_MW": 1150.0,
+        "身份_联合": "政策"
+      },
+      "身份计数_物理": {
+        "水侧": 57,
+        "电网侧": 15,
+        "基线不可行": 9
+      },
+      "基线不可行格数": 9,
+      "有效格数": 72,
+      "分界线拟合": {
+        "斜率_MW_per_unit_a": 1.7621112752805277e-12,
+        "截距_MW": 1499.9999999999982,
+        "n_points": 5,
+        "G星范围_MW": [
+          1500.0,
+          1500.0
+        ]
+      },
+      "CAWCC_物理_范围_MW": [
+        100.0,
+        1150.0
+      ],
+      "水侧容量随a变化": [
+        {
+          "a": 0.85,
+          "CAWCC_MW": 100.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 0.9,
+          "CAWCC_MW": 450.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 0.95,
+          "CAWCC_MW": 800.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 1.0,
+          "CAWCC_MW": 1150.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 1.05,
+          "CAWCC_MW": 1150.0,
+          "首失效": "max_wtw_utilization"
+        },
+        {
+          "a": 1.1,
+          "CAWCC_MW": 1150.0,
+          "首失效": "max_wtw_utilization"
+        },
+        {
+          "a": 1.15,
+          "CAWCC_MW": 1150.0,
+          "首失效": "max_wtw_utilization"
+        },
+        {
+          "a": 1.2,
+          "CAWCC_MW": 1150.0,
+          "首失效": "max_wtw_utilization"
+        }
+      ]
+    },
+    "co": {
+      "基准端点": {
+        "CAWCC_物理_MW": 1450.0,
+        "首失效约束_物理": "max_daily_average_grid_connection_ratio",
+        "身份_物理": "电网侧",
+        "CAWCC_联合_MW": 1450.0,
+        "身份_联合": "政策"
+      },
+      "身份计数_物理": {
+        "水侧": 50,
+        "电网侧": 31
+      },
+      "基线不可行格数": 0,
+      "有效格数": 81,
+      "分界线拟合": {
+        "斜率_MW_per_unit_a": -8.835570756402362e-14,
+        "截距_MW": 1500.0000000000005,
+        "n_points": 7,
+        "G星范围_MW": [
+          1500.0,
+          1500.0
+        ]
+      },
+      "CAWCC_物理_范围_MW": [
+        250.0,
+        1550.0
+      ],
+      "水侧容量随a变化": [
+        {
+          "a": 0.8,
+          "CAWCC_MW": 250.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 0.85,
+          "CAWCC_MW": 600.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 0.9,
+          "CAWCC_MW": 1000.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 0.95,
+          "CAWCC_MW": 1350.0,
+          "首失效": "max_source_abstraction_ratio"
+        },
+        {
+          "a": 1.0,
+          "CAWCC_MW": 1450.0,
+          "首失效": "max_daily_average_grid_connection_ratio"
+        },
+        {
+          "a": 1.05,
+          "CAWCC_MW": 1450.0,
+          "首失效": "max_daily_average_grid_connection_ratio"
+        },
+        {
+          "a": 1.1,
+          "CAWCC_MW": 1450.0,
+          "首失效": "max_daily_average_grid_connection_ratio"
+        },
+        {
+          "a": 1.15,
+          "CAWCC_MW": 1450.0,
+          "首失效": "max_daily_average_grid_connection_ratio"
+        },
+        {
+          "a": 1.2,
+          "CAWCC_MW": 1450.0,
+          "首失效": "max_daily_average_grid_connection_ratio"
+        }
+      ]
+    }
+  }
+}

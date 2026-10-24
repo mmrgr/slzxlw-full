@@ -1,0 +1,49 @@
+﻿情景,情景说明,域,替代率r,CAWCC_物理_MW,首失效约束_物理,侧别_物理,CAWCC_联合_MW,首失效约束_联合,侧别_联合
+G0,基准（原序列）,co,0.0,1450.0,max_daily_average_grid_connection_ratio,电网侧,,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,co,0.5,1450.0,max_daily_average_grid_connection_ratio,电网侧,1450.0,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,co,0.6,1450.0,max_daily_average_grid_connection_ratio,电网侧,1450.0,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,co,0.7,1450.0,max_daily_average_grid_connection_ratio,电网侧,1450.0,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,co,0.8,1450.0,max_daily_average_grid_connection_ratio,电网侧,1450.0,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,co,0.9,1400.0,max_local_connection_ratio,水侧,1400.0,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,ha,0.0,1200.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,ha,0.5,1200.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,ha,0.6,1150.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,ha,0.7,1150.0,max_source_abstraction_ratio,水侧,1150.0,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,ha,0.8,1100.0,max_source_abstraction_ratio,水侧,1100.0,reclaimed_water_substitution_ratio,政策
+G0,基准（原序列）,ha,0.9,1100.0,max_source_abstraction_ratio,水侧,1100.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,co,0.0,1400.0,max_daily_average_grid_connection_ratio,电网侧,,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,co,0.5,1400.0,max_daily_average_grid_connection_ratio,电网侧,1400.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,co,0.6,1400.0,max_daily_average_grid_connection_ratio,电网侧,1400.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,co,0.7,1400.0,max_wtw_utilization,水侧,1400.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,co,0.8,1350.0,max_wtw_utilization,水侧,1350.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,co,0.9,1300.0,max_wtw_utilization,水侧,1300.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,ha,0.0,1050.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,ha,0.5,1050.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,ha,0.6,1050.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,ha,0.7,1000.0,max_source_abstraction_ratio,水侧,1000.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,ha,0.8,1000.0,max_source_abstraction_ratio,水侧,1000.0,reclaimed_water_substitution_ratio,政策
+G1,高温（夏季 +4 ℃）,ha,0.9,950.0,max_source_abstraction_ratio,水侧,950.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,co,0.0,550.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,co,0.5,550.0,max_source_abstraction_ratio,水侧,550.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,co,0.6,550.0,max_source_abstraction_ratio,水侧,550.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,co,0.7,550.0,max_source_abstraction_ratio,水侧,550.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,co,0.8,550.0,max_source_abstraction_ratio,水侧,550.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,co,0.9,550.0,max_source_abstraction_ratio,水侧,550.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,ha,0.0,100.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,ha,0.5,100.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,ha,0.6,100.0,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,ha,0.7,100.0,max_source_abstraction_ratio,水侧,100.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,ha,0.8,100.0,max_source_abstraction_ratio,水侧,100.0,reclaimed_water_substitution_ratio,政策
+G2,干旱（汛期入流 ×0.65、取水能力 ×0.85）,ha,0.9,50.0,max_source_abstraction_ratio,水侧,50.0,reclaimed_water_substitution_ratio,政策
+G3,复合（高温+干旱+需求 ×1.12）,co,0.0,,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G3,复合（高温+干旱+需求 ×1.12）,co,0.5,,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G3,复合（高温+干旱+需求 ×1.12）,co,0.6,,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G3,复合（高温+干旱+需求 ×1.12）,co,0.7,,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G3,复合（高温+干旱+需求 ×1.12）,co,0.8,,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G3,复合（高温+干旱+需求 ×1.12）,co,0.9,,max_source_abstraction_ratio,水侧,,reclaimed_water_substitution_ratio,政策
+G3,复合（高温+干旱+需求 ×1.12）,ha,0.0,,domestic_unmet_ml,社会供水,,domestic_unmet_ml,社会供水
+G3,复合（高温+干旱+需求 ×1.12）,ha,0.5,,domestic_unmet_ml,社会供水,,domestic_unmet_ml,社会供水
+G3,复合（高温+干旱+需求 ×1.12）,ha,0.6,,domestic_unmet_ml,社会供水,,domestic_unmet_ml,社会供水
+G3,复合（高温+干旱+需求 ×1.12）,ha,0.7,,domestic_unmet_ml,社会供水,,domestic_unmet_ml,社会供水
+G3,复合（高温+干旱+需求 ×1.12）,ha,0.8,,domestic_unmet_ml,社会供水,,domestic_unmet_ml,社会供水
+G3,复合（高温+干旱+需求 ×1.12）,ha,0.9,,domestic_unmet_ml,社会供水,,domestic_unmet_ml,社会供水

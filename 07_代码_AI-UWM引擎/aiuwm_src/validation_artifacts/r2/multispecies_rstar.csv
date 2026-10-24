@@ -1,0 +1,4 @@
+﻿物种,单位,L,C_p,C_r,CoC_d,r星,情形,r≤1内有效,是否主结果,参数来源
+TDS,mg/L,2200.0,180.0,650.0,5.0,0.5531914893617021,II（区间内阈值）,True,True,project.json cooling.water_quality_limits.TDS / water_sources.*.quality.TDS
+chloride,mg/L,500.0,35.0,130.0,5.0,0.6842105263157895,II（区间内阈值）,True,True,project.json cooling.water_quality_limits.chloride / water_sources.*.quality.chloride
+hardness_CaCO3,mg/L as CaCO3,1200.0,120.0,350.0,5.0,0.5217391304347826,II（区间内阈值）,True,False,需核实：取循环冷却水工程常见区间，作为第三组分压力测试，非项目原配置

@@ -107,7 +107,7 @@ ax.legend(fontsize=6.2, loc="lower right")
 ax.grid(axis="y", color="0.92", lw=0.5)
 ax.set_axisbelow(True)
 
-fig.suptitle("图 6 | 城市梯度与政策情景：连续性 + 政策达标只改善年尺度 estimand",
+fig.suptitle("图 5　城市梯度与政策情景：连续性 + 政策达标只改善年尺度 estimand",
              x=0.01, ha="left", fontsize=9.2)
 fig.text(
     0.008, -0.06,

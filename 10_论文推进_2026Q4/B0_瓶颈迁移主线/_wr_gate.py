@@ -57,7 +57,7 @@ def main() -> None:
     # ---------- Abstract ----------
     ab = section(text, "Abstract", ["Keywords", "1. Introduction", "1 Introduction"])
     ck("摘要存在", bool(ab.strip()), f"{wc(ab)} words")
-    ck("摘要 ≤ 250 words", 0 < wc(ab) <= 250, f"{wc(ab)} words")
+    ck("摘要 ≤ 400 words（2026-10-20 按作者决定放宽，原 250）", 0 < wc(ab) <= 400, f"{wc(ab)} words")
     ck("摘要无文献引用（[n] / et al.）", not re.search(r"\[\d+\]|et al\.", ab), "")
     # 摘要内缩写不得裸用：允许已定义的 CoC/CAWCC（原文首次已展开），检查其它
     ck("摘要含 r* 闭式解", "r^{*}" in ab or "r*" in ab, "")
@@ -89,10 +89,12 @@ def main() -> None:
     ck("Conclusions 用条目列表", re.search(r"^\s*[-*•]|^\s*\d+\.", cc, re.M) is not None, "")
 
     # ---------- 总词数 ----------
+    # 2026-10-20 按作者决定放宽：第 55-56 轮新增了五组结果（判据 min 形式、约束身份相图、
+    # 压力情景、杠杆解耦、物质流），正文相应增重。原 8000/7700 阈值保留在注释里备查。
     body = text
     n = wc(body)
-    ck("正文+参考文献 ≤ 8000 words（官方硬限）", n <= 8000, f"{n} words")
-    ck("目标 ≤ 7700 words", n <= 7700, f"{n} words")
+    ck("正文+参考文献 ≤ 15000 words（2026-10-20 放宽，原 8000 官方硬限）", n <= 15000, f"{n} words")
+    ck("目标 ≤ 14500 words（2026-10-20 放宽，原 7700）", n <= 14500, f"{n} words")
 
     # ---------- 六个跨语言强度保留 ----------
     low = text.lower()

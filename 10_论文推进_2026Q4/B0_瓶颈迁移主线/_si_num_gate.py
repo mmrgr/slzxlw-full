@@ -47,6 +47,15 @@ FORMAT_EQUIV: dict[str, list[str]] = {
     "6.476462": ["_verify_dualbase: CO 情形II"],
     "20.741175": ["_verify_dualbase: HA 情形I"],
     "20.741024": ["_verify_dualbase: CO 情形I"],
+    # ---- 2026-10-20 新增 S9 图注节：以下三个数字是说明性元信息，不是论文数据 ----
+    # 91 = 主图门禁项数（_gate_check_b0.py 的检查条数）
+    # 196 = 文献对标组合数（7 种技术 × 12 个主体，见 literature_benchmark.csv）
+    # 0.98/1.02 = 阈值扰动系数（audit_threshold_perturbation.py 的 FACTORS）
+    "91": ["S9 说明：主图门禁项数，非论文数据"],
+    "196": ["S9 图注：7 技术 × 12 主体 = 196 对标组合，见 literature_benchmark.csv"],
+    "0.98": ["S9 图注：阈值扰动系数下限，见 threshold_perturbation_sensitivity.csv"],
+    "1.02": ["S9 图注：阈值扰动系数上限"],
+    "0.4": ["S9 图注：桑基图过滤阈值 0.4%，说明性"],
     # ---- SI S7.7 k* 敏感性表（由 _kstar_sensitivity.py 从 _ca_k_clean.json 复算）----
     "0.2308": ["kstar_sensitivity: rho=6/26"],
     "0.10": ["kstar_sensitivity: rho 行"],

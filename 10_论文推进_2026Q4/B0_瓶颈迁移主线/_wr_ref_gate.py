@@ -43,8 +43,12 @@ def main() -> None:
     body = re.sub(r"^\*\*Source of numbers:\*\*.*?\n", "", body, flags=re.M)
 
     cited: set[int] = set()
+    # 2026-10-20 修复：数学环境里的方括号（如 $r\in[0,1]$）不是文献引用，须先剔除。
+    # 否则 "$r\in[0,1]$" 会被解析成引用 [0]，报"正文引用了不存在的 [0]"。
+    body_for_cites = re.sub(r"\$[^$]*\$", " MATH ", body)
+    body_for_cites = re.sub(r"\\\([^)]*\\\)", " MATH ", body_for_cites)
     # 支持 [3]、[1,9,13]、[1, 9, 13]、[1-3] 多种写法
-    for mm in re.finditer(r"\[([\d,\s\-–]+)\]", body):
+    for mm in re.finditer(r"\[([\d,\s\-–]+)\]", body_for_cites):
         chunk = mm.group(1)
         for part in chunk.split(","):
             part = part.strip()

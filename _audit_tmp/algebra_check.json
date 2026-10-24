@@ -1,0 +1,13 @@
+{
+ "max_identity_residual_ml": 0.0,
+ "max_upper_bound_excess_ml": 0.0,
+ "max_inc_minus_pool_at_dp0_ml": 0.0,
+ "n_scenarios_checked": 80,
+ "n_upper_bound_violations": 0,
+ "n_identity_violations": 0,
+ "dp0_positive_count": 2,
+ "dp0_nonpositive_count": 698,
+ "dp0_max_ml": 3.637978807091713e-12,
+ "dp0_abs_over_dp1_abs_median": 0.019616538653925736,
+ "dp0_knife_edge_share_1e-9": 0.45714285714285713
+}

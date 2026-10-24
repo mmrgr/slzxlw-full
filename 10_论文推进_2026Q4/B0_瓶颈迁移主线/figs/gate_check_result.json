@@ -5,62 +5,62 @@
     {
       "name": "文件存在 Fig1_framework.pdf",
       "ok": true,
-      "detail": "186639 bytes"
+      "detail": "186643 bytes"
     },
     {
       "name": "文件存在 Fig1_framework.png",
       "ok": true,
-      "detail": "456848 bytes"
+      "detail": "275043 bytes"
     },
     {
       "name": "文件存在 Fig2_bottleneck_migration.pdf",
       "ok": true,
-      "detail": "80136 bytes"
+      "detail": "81205 bytes"
     },
     {
       "name": "文件存在 Fig2_bottleneck_migration.png",
       "ok": true,
-      "detail": "240385 bytes"
+      "detail": "150288 bytes"
     },
     {
       "name": "文件存在 Fig3_constraint_trajectories.pdf",
       "ok": true,
-      "detail": "94484 bytes"
+      "detail": "95867 bytes"
     },
     {
       "name": "文件存在 Fig3_constraint_trajectories.png",
       "ok": true,
-      "detail": "240683 bytes"
+      "detail": "223761 bytes"
     },
     {
       "name": "文件存在 Fig4_interventions.pdf",
       "ok": true,
-      "detail": "77649 bytes"
+      "detail": "82294 bytes"
     },
     {
       "name": "文件存在 Fig4_interventions.png",
       "ok": true,
-      "detail": "200569 bytes"
+      "detail": "123157 bytes"
     },
     {
       "name": "文件存在 Fig5_city_gradient_policy.pdf",
       "ok": true,
-      "detail": "95391 bytes"
+      "detail": "95394 bytes"
     },
     {
       "name": "文件存在 Fig5_city_gradient_policy.png",
       "ok": true,
-      "detail": "151617 bytes"
+      "detail": "151820 bytes"
     },
     {
       "name": "文件存在 Fig6_timescale_reservoir.pdf",
       "ok": true,
-      "detail": "95790 bytes"
+      "detail": "95788 bytes"
     },
     {
       "name": "文件存在 Fig6_timescale_reservoir.png",
       "ok": true,
-      "detail": "142422 bytes"
+      "detail": "142419 bytes"
     },
     {
       "name": "Fig2 数值溯源 HA 水源取水首失效 = 1200",

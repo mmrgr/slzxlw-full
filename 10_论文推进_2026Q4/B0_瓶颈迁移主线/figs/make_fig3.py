@@ -117,22 +117,28 @@ for row, domain in enumerate(("ha", "co")):
 axes[1][0].set_xlabel("AI 装机容量 (MW)")
 
 fig.suptitle(
-    "图 3 | 容量扫描轨迹与约束信息量（日尺度，50–2000 MW）",
+    "图 3　容量扫描轨迹与约束信息量（日尺度，50–2000 MW）",
     x=0.01, ha="left", fontsize=9.5,
 )
 # 用 fig.text 而非负 y 坐标的 fig.text + bbox_inches='tight'，
 # 避免 tight bbox 把画布外推成超大图像。
 fig.text(
-    0.01, 0.012,
+    0.01, 0.075,
     "数据源：constraint_binding_diagnosis.csv（160 行，2026-10-18 扩展至 50–2000 MW）；"
     "estimand = 日尺度；n = 2 域 × 2 尺度 × 40 容量点；"
-    "归一化：<= 型取 v/thr，>= 型取 thr/v，故 >1 即失效。"
-    "非 informative 约束在整个扫描区间从未越界，不构成「系统安全」的证据，仅说明未触及。"
-    "0 MW 基线已排除（无 AI 时政策约束不适用）。",
-    fontsize=5.7, color="0.35", ha="left", va="bottom",
+    "归一化：≤ 型取 v/thr，≥ 型取 thr/v，故 >1 即失效。",
+    fontsize=5.9, color="0.35", ha="left", va="bottom",
 )
-fig.subplots_adjust(left=0.16, right=0.985, top=0.90, bottom=0.14, hspace=0.32,
-                    wspace=0.10)
+fig.text(
+    0.01, 0.025,
+    "非 informative 约束在整个扫描区间从未越界，不构成「系统安全」的证据，仅说明未触及；"
+    "0 MW 基线已排除（无 AI 时政策约束不适用）。",
+    fontsize=5.9, color="0.35", ha="left", va="bottom",
+)
+# 2026-10-20 审稿修复：wspace=0.10 过小，右面板的 y 轴中文标签压到左面板轨迹上，
+# 且 bottom=0.14 容纳不下两行长说明。分别加大到 0.42 / 0.22。
+fig.subplots_adjust(left=0.13, right=0.985, top=0.90, bottom=0.22, hspace=0.34,
+                    wspace=0.42)
 
 for p in save(fig, "Fig3_constraint_trajectories"):
     print(p)
